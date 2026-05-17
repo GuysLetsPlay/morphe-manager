@@ -795,6 +795,7 @@ private sealed interface OptionKind {
     data object PathWithPresets : OptionKind
     data object StringDropdown  : OptionKind
     data object Path            : OptionKind
+    data object FilePath        : OptionKind
     data object StringText      : OptionKind
     data object BooleanToggle   : OptionKind
     data object IntLong         : OptionKind
@@ -832,20 +833,27 @@ private fun resolveOptionKind(option: Option<*>, value: Any?): OptionKind {
         // String with presets: pure dropdown
         isString && option.presets?.isNotEmpty() == true -> OptionKind.StringDropdown
 
-        // Path/folder string without presets: file picker + optional creator buttons
+        // Individual file path string: file picker (not a folder)
+        isString && option.presets == null &&
+                option.description.contains("file path", ignoreCase = true) -> OptionKind.FilePath
+
+        // Path/folder string without presets: folder picker + optional creator buttons
         isString && option.key != "customName" && (
                 option.key.contains("icon",   ignoreCase = true) ||
                         option.key.contains("header", ignoreCase = true) ||
                         option.key.contains("custom", ignoreCase = true) ||
-                        option.description.contains("folder",   ignoreCase = true) ||
-                        option.description.contains("image",    ignoreCase = true) ||
-                        option.description.contains("mipmap",   ignoreCase = true) ||
-                        option.description.contains("drawable", ignoreCase = true)
+                        option.description.contains("folder",    ignoreCase = true) ||
+                        option.description.contains("image",     ignoreCase = true) ||
+                        option.description.contains("mipmap",    ignoreCase = true) ||
+                        option.description.contains("drawable",  ignoreCase = true)
                 ) -> OptionKind.Path
 
-        // Comma-separated string
-        isString && option.presets == null &&
-                (value is String && value.contains(",")) -> OptionKind.StringList
+        // Comma-separated string: detected by value content or explicit description hint
+        isString && option.presets == null && (
+                (value is String && value.contains(",")) ||
+                        option.description.contains("separated by commas", ignoreCase = true) ||
+                        option.description.contains("comma-separated",     ignoreCase = true)
+                ) -> OptionKind.StringList
 
         // Plain string text field
         isString -> OptionKind.StringText
@@ -1010,6 +1018,14 @@ private fun PatchOptionsDialog(
                         value = value?.toString() ?: "",
                         packageName = packageName,
                         isDefaultBundle = isDefaultBundle,
+                        required = option.required,
+                        onValueChange = { onValueChange(key, it) }
+                    )
+
+                    OptionKind.FilePath -> FilePathInputOption(
+                        title = option.title,
+                        description = option.description,
+                        value = value?.toString() ?: "",
                         required = option.required,
                         onValueChange = { onValueChange(key, it) }
                     )
@@ -1385,6 +1401,55 @@ private fun PathInputOption(
                 showHeaderCreator.value = false
             }
         )
+    }
+}
+
+/**
+ * Individual file path input with a file picker button.
+ * Used for options whose description mentions "file path".
+ */
+@Composable
+private fun FilePathInputOption(
+    title: String,
+    description: String,
+    value: String,
+    required: Boolean = false,
+    onValueChange: (String) -> Unit
+) {
+    val isInvalid = required && value.isBlank()
+
+    val filePicker = rememberAdaptiveFilePicker(
+        mimeTypes = arrayOf("*/*"),
+        chooserTitle = stringResource(R.string.patch_option_pick_file)
+    ) { uri ->
+        uri?.toFilePath()?.let { onValueChange(it) }
+    }
+
+    Column(
+        modifier = Modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        MorpheDialogTextField(
+            value = value,
+            onValueChange = onValueChange,
+            label = {
+                Text(if (required) "$title *" else title)
+            },
+            placeholder = {
+                Text("/storage/emulated/0/file")
+            },
+            isError = isInvalid,
+            showClearButton = true,
+            onFilePickerClick = { filePicker() }
+        )
+
+        if (description.isNotBlank()) {
+            Text(
+                text = description,
+                style = MaterialTheme.typography.bodySmall,
+                color = LocalDialogSecondaryTextColor.current
+            )
+        }
     }
 }
 

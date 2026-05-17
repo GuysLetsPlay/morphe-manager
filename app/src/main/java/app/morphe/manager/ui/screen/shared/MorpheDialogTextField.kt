@@ -15,6 +15,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.outlined.InsertDriveFile
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.outlined.*
 import androidx.compose.material3.*
@@ -49,6 +50,7 @@ fun MorpheDialogTextField(
     isPassword: Boolean = false,
     showClearButton: Boolean = false,
     onFolderPickerClick: (() -> Unit)? = null,
+    onFilePickerClick: (() -> Unit)? = null,
     keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
     keyboardActions: KeyboardActions = KeyboardActions.Default
 ) {
@@ -62,7 +64,7 @@ fun MorpheDialogTextField(
         placeholder = placeholder,
         leadingIcon = leadingIcon,
         trailingIcon = {
-            if (isPassword || showClearButton || onFolderPickerClick != null) {
+            if (isPassword || showClearButton || onFolderPickerClick != null || onFilePickerClick != null) {
                 Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
                     // Password visibility toggle
                     if (isPassword) {
@@ -100,6 +102,17 @@ fun MorpheDialogTextField(
                             Icon(
                                 imageVector = Icons.Outlined.FolderOpen,
                                 contentDescription = stringResource(R.string.patch_option_pick_folder),
+                                tint = textColor.copy(alpha = 0.7f)
+                            )
+                        }
+                    }
+
+                    // File picker button
+                    if (onFilePickerClick != null) {
+                        IconButton(onClick = onFilePickerClick) {
+                            Icon(
+                                imageVector = Icons.AutoMirrored.Outlined.InsertDriveFile,
+                                contentDescription = stringResource(R.string.patch_option_pick_file),
                                 tint = textColor.copy(alpha = 0.7f)
                             )
                         }
