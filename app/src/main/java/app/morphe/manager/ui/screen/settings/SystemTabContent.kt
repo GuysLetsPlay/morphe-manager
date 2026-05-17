@@ -6,7 +6,10 @@
 package app.morphe.manager.ui.screen.settings
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Build
+import android.os.PowerManager
+import android.provider.Settings
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -14,16 +17,17 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.*
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.core.net.toUri
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.lifecycle.repeatOnLifecycle
 import app.morphe.manager.R
 import app.morphe.manager.ui.screen.settings.system.*
 import app.morphe.manager.ui.screen.shared.*
@@ -36,7 +40,7 @@ import app.morphe.patcher.dex.BytecodeMode
  * System tab content.
  */
 @OptIn(ExperimentalMaterial3Api::class)
-@SuppressLint("LocalContextGetResourceValueCheck")
+@SuppressLint("LocalContextGetResourceValueCheck", "BatteryLife")
 @Composable
 fun SystemTabContent(
     settingsViewModel: SettingsViewModel,
@@ -61,6 +65,15 @@ fun SystemTabContent(
     val showBytecodeDialog = remember { mutableStateOf(false) }
     val showApkManagementDialog = remember { mutableStateOf<ApkManagementType?>(null) }
     val showPatchSelectionDialog = remember { mutableStateOf(false) }
+
+    val lifecycleOwner = LocalLifecycleOwner.current
+    val pm = remember { context.getSystemService(PowerManager::class.java) }
+    var isIgnoringBatteryOptimizations by remember { mutableStateOf(pm.isIgnoringBatteryOptimizations(context.packageName)) }
+    LaunchedEffect(lifecycleOwner) {
+        lifecycleOwner.lifecycle.repeatOnLifecycle(Lifecycle.State.RESUMED) {
+            isIgnoringBatteryOptimizations = pm.isIgnoringBatteryOptimizations(context.packageName)
+        }
+    }
 
     // Extract strings to avoid LocalContext issues
     val keystoreUnavailable = stringResource(R.string.settings_system_export_keystore_unavailable)
@@ -184,6 +197,38 @@ fun SystemTabContent(
                     subtitle = stringResource(bytecodeMode.labelRes()),
                     leadingContent = { MorpheIcon(icon = Icons.Outlined.Code) },
                     trailingContent = { MorpheIcon(icon = Icons.Outlined.ChevronRight) }
+                )
+
+                MorpheSettingsDivider()
+
+                RichSettingsItem(
+                    onClick = {
+                        context.startActivity(
+                            Intent(
+                                Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,
+                                "package:${context.packageName}".toUri()
+                            )
+                        )
+                    },
+                    title = stringResource(R.string.settings_system_battery_optimization),
+                    subtitle = stringResource(R.string.settings_system_battery_optimization_description),
+                    leadingContent = { MorpheIcon(icon = Icons.Outlined.BatterySaver) },
+                    trailingContent = {
+                        Row(
+                            horizontalArrangement = Arrangement.spacedBy(8.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            InfoBadge(
+                                text = if (isIgnoringBatteryOptimizations)
+                                    stringResource(R.string.settings_system_battery_optimization_excluded)
+                                else
+                                    stringResource(R.string.settings_system_battery_optimization_not_excluded),
+                                style = if (isIgnoringBatteryOptimizations) InfoBadgeStyle.Primary else InfoBadgeStyle.Warning,
+                                isCompact = true
+                            )
+                            MorpheIcon(icon = Icons.Outlined.ChevronRight)
+                        }
+                    }
                 )
             }
         }

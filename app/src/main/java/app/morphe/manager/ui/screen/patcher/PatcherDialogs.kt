@@ -361,6 +361,57 @@ fun StoragePermissionDialog(
 }
 
 /**
+ * Pre-flight dialog shown once when the app is not excluded from battery optimization.
+ * Directs the user to the system dialog to grant the exclusion.
+ */
+@SuppressLint("BatteryLife")
+@Composable
+fun BatteryOptimizationDialog(
+    onResult: () -> Unit,
+) {
+    val context = LocalContext.current
+
+    MorpheDialog(
+        onDismissRequest = onResult,
+        title = stringResource(R.string.battery_optimization_dialog_title),
+        footer = {
+            Column(
+                modifier = Modifier.fillMaxWidth(),
+                verticalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                MorpheDialogButton(
+                    text = stringResource(R.string.allow),
+                    onClick = {
+                        context.startActivity(
+                            Intent(
+                                Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,
+                                "package:${context.packageName}".toUri()
+                            )
+                        )
+                        onResult()
+                    },
+                    icon = Icons.Outlined.BatterySaver,
+                    modifier = Modifier.fillMaxWidth()
+                )
+                MorpheDialogOutlinedButton(
+                    text = stringResource(R.string.battery_optimization_not_now),
+                    onClick = onResult,
+                    modifier = Modifier.fillMaxWidth()
+                )
+            }
+        }
+    ) {
+        Text(
+            text = stringResource(R.string.battery_optimization_dialog_description),
+            style = MaterialTheme.typography.bodyLarge,
+            color = LocalDialogSecondaryTextColor.current,
+            textAlign = TextAlign.Center,
+            modifier = Modifier.fillMaxWidth()
+        )
+    }
+}
+
+/**
  * Full-screen error dialog shown when patching fails.
  */
 @SuppressLint("LocalContextGetResourceValueCall")

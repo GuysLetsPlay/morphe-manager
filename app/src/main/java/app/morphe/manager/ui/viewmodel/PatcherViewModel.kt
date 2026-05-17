@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.pm.PackageInfo
 import android.net.Uri
 import android.os.ParcelUuid
+import android.os.PowerManager
 import android.util.Log
 import androidx.activity.result.ActivityResult
 import androidx.compose.runtime.*
@@ -38,7 +39,6 @@ import app.morphe.manager.ui.model.State
 import app.morphe.manager.ui.model.navigation.Patcher
 import app.morphe.manager.ui.screen.patcher.PatcherErrorInfo
 import app.morphe.manager.util.*
-import app.morphe.manager.util.snapshotStateListSaver
 import app.morphe.manager.worker.UpdateCheckWorker
 import io.github.z4kn4fein.semver.Version
 import kotlinx.coroutines.*
@@ -123,6 +123,9 @@ class PatcherViewModel(
     var missingPatchWarning by mutableStateOf<MissingPatchWarningState?>(null)
         private set
 
+    var batteryOptimizationDialog by mutableStateOf(false)
+        private set
+
     /**
      * Non-null when one or more patch option paths cannot be read before patching starts.
      */
@@ -164,6 +167,18 @@ class PatcherViewModel(
     fun retryAfterPermission() {
         inaccessibleOptionPaths = null
         viewModelScope.launch {
+            runPreflightCheck()
+        }
+    }
+
+    /**
+     * Called when the user dismisses the battery optimization pre-flight dialog.
+     * Marks the preference so the dialog is never shown again and resumes the preflight check.
+     */
+    fun onBatteryOptimizationDialogResult() {
+        viewModelScope.launch {
+            prefs.batteryOptimizationRequested.update(true)
+            batteryOptimizationDialog = false
             runPreflightCheck()
         }
     }
@@ -448,6 +463,12 @@ class PatcherViewModel(
         val pathFailures = withContext(Dispatchers.IO) { validateOptionPaths(optionsToValidate) }
         if (pathFailures.isNotEmpty()) {
             inaccessibleOptionPaths = InaccessibleOptionPathsState(pathFailures)
+            return
+        }
+
+        val powerManager = app.getSystemService(PowerManager::class.java)
+        if (prefs.useExpertMode.get() && !powerManager.isIgnoringBatteryOptimizations(app.packageName) && !prefs.batteryOptimizationRequested.get()) {
+            batteryOptimizationDialog = true
             return
         }
 

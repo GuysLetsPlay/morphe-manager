@@ -58,6 +58,9 @@ class PreferencesManager(
     /** Tracks whether the POST_NOTIFICATIONS runtime permission dialog has already been shown at least once on first launch (Android 13+). */
     val notificationPermissionRequested = booleanPreference("notification_permission_requested", false)
 
+    /** Tracks whether the battery optimization exclusion dialog has been shown at least once. */
+    val batteryOptimizationRequested = booleanPreference("battery_optimization_requested", false)
+
     val useExpertMode = booleanPreference("use_expert_mode", false)
 
     val stripUnusedNativeLibs = booleanPreference("strip_unused_native_libs", false)

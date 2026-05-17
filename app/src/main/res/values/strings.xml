@@ -316,6 +316,11 @@ Uninstalling will permanently erase all app data"</string>
     <string name="patcher_step_write_patched">Writing patched APK file</string>
     <string name="patcher_step_sign_apk">Signing patched APK file</string>
 
+    <!-- Battery optimization pre-flight dialog -->
+    <string name="battery_optimization_dialog_title">Background patching protection</string>
+    <string name="battery_optimization_dialog_description">Some devices may stop the patcher when the app is minimized. Allow Morphe to run without battery restrictions to ensure patching completes reliably</string>
+    <string name="battery_optimization_not_now">Not now</string>
+
     <!-- Patcher Screen - Patcher Worker -->
     <string name="patcher_notification_title">Patching in progress…</string>
     <string name="patcher_notification_text">Tap to return to the patcher</string>
@@ -607,6 +612,10 @@ The image dimensions must be as follows:
     <string name="settings_prompt_installer_on_install_description">Show installer selection dialog each time you install a patched app</string>
 
     <!-- Settings - System Tab - Performance Section -->
+    <string name="settings_system_battery_optimization">Battery optimization</string>
+    <string name="settings_system_battery_optimization_description">Prevents the system from stopping the patcher when Morphe is minimized</string>
+    <string name="settings_system_battery_optimization_excluded">Excluded</string>
+    <string name="settings_system_battery_optimization_not_excluded">Not excluded</string>
     <string name="settings_system_performance">Performance</string>
     <string name="settings_system_process_runtime">Process runtime</string>
     <string name="settings_system_process_runtime_description">Run patching in separate process for better stability</string>

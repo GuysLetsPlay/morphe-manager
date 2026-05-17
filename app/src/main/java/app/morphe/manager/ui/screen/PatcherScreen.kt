@@ -360,6 +360,14 @@ fun PatcherScreen(
         )
     }
 
+    // Battery optimization pre-flight dialog.
+    // Shown once when the app is not excluded from battery optimization
+    if (patcherViewModel.batteryOptimizationDialog) {
+        BatteryOptimizationDialog(
+            onResult = patcherViewModel::onBatteryOptimizationDialogResult
+        )
+    }
+
     // Error dialog
     if (state.showErrorDialog) {
         PatcherErrorDialog(
