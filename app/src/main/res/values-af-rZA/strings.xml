@@ -105,6 +105,7 @@
     <string name="home_apk_availability_yes">Ja, help my om \'n APK te vind</string>
     <string name="home_apk_availability_no">Nee, ek het reeds \'n APK</string>
     <string name="home_apk_use_saved_with_version">Gebruik gestoorde APK (v%s)</string>
+    <string name="home_apk_use_installed_with_version">Gebruik geïnstalleerde APK (v%s)</string>
     <string name="home_app_info_no_saved_apk">Geen gestoorde APK nie. Verandering sal vereis dat jy die APK vyl weer kies</string>
     <string name="home_version_requires_android">Vereis Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">Nie op hierdie toestel ondersteun nie</string>
@@ -263,6 +264,11 @@ Vir die beste resultate beveel hierdie app aan om 'n &lt;b&gt;volle APK&lt;/b&gt
     <string name="patcher_unknown_error">Onbekende fout het voorgekom</string>
     <string name="patcher_conflict_title">Pakket konflik</string>
     <string name="patcher_conflict_subtitle">Jy moet die bestaande weergawe deïnstalleer</string>
+    <string name="patcher_conflict_hint">Die aangepaste app gebruik \'n ander sertifikaat as die geïnstalleerde weergawe. Deïnstallering sal alle app-data uitwis.</string>
+    <string name="patcher_installed_conflict_title">Vereeniging vereis</string>
+    <string name="patcher_installed_conflict_body">"Morphe teken gepatchte toepassings met sy eie sertifikaat, wat verskil van die oorspronklike. Android vereis om die bestaande weergawe te verwyder voordat die gepatchte toepassing geïnstalleer kan word.
+
+Deïnstallering sal alle toepassingsdata permanent uitwis."</string>
     <string name="patcher_install_error_title">Installasiefout</string>
     <string name="patcher_install_error_subtitle">Probeer deïnstalleer en weer installeer</string>
     <string name="patcher_ready_to_install_subtitle">Druk op die knoppie hieronder om te installeer</string>

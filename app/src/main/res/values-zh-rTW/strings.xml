@@ -3,7 +3,7 @@
     <!-- Home Screen -->
     <string name="home_other_apps">其他應用程式</string>
     <string name="home_not_patched_yet">尚未修補</string>
-    <string name="home_no_patches_available">沒有可用的修補</string>
+    <string name="home_no_patches_available">沒有可用的修補程式</string>
     <string name="home_app_hide_title">要隱藏這個應用程式嗎？</string>
     <string name="home_app_hide_message">此應用程式將從主螢幕隱藏。您可以稍後透過清單底部的按鈕從隱藏的應用程式中將其還原</string>
     <string name="home_app_will_be_hidden">這個應用程式將被隱藏</string>
@@ -105,6 +105,7 @@
     <string name="home_apk_availability_yes">是，協助我尋找 APK</string>
     <string name="home_apk_availability_no">否，我已經有 APK 了</string>
     <string name="home_apk_use_saved_with_version">使用儲存的 APK (v%s)</string>
+    <string name="home_apk_use_installed_with_version">使用已安裝的 APK (v%s)</string>
     <string name="home_app_info_no_saved_apk">沒有儲存的 APK。修補將需要再次選取 APK 檔案</string>
     <string name="home_version_requires_android">需要 Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">在此裝置上不支援</string>
@@ -263,6 +264,11 @@
     <string name="patcher_unknown_error">發生未知錯誤</string>
     <string name="patcher_conflict_title">套件衝突</string>
     <string name="patcher_conflict_subtitle">你需要解除安裝現有版本</string>
+    <string name="patcher_conflict_hint">修補後的應用程式使用的憑證與已安裝版本不同。解除安裝會清除所有應用程式資料</string>
+    <string name="patcher_installed_conflict_title">需要解除安裝</string>
+    <string name="patcher_installed_conflict_body">"Morphe 會使用其自己的憑證來簽署已修補的應用程式，這與原始憑證不同。Android 要求在安裝已修補的應用程式之前移除現有版本。
+
+解除安裝將永久刪除所有應用程式資料"</string>
     <string name="patcher_install_error_title">安裝錯誤</string>
     <string name="patcher_install_error_subtitle">嘗試解除安裝並重新安裝</string>
     <string name="patcher_ready_to_install_subtitle">點擊下方的按鈕進行安裝</string>

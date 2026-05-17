@@ -105,6 +105,7 @@
     <string name="home_apk_availability_yes">Ναι, βοήθησέ με να βρω ένα APK</string>
     <string name="home_apk_availability_no">Όχι, ήδη έχω ένα APK</string>
     <string name="home_apk_use_saved_with_version">Χρήση αποθηκευμένου APK (v%s)</string>
+    <string name="home_apk_use_installed_with_version">Χρήση εγκατεστημένου APK (v%s)</string>
     <string name="home_app_info_no_saved_apk">Δεν υπάρχει αποθηκευμένο APK. Η τροποποίηση κώδικα θα απαιτήσει την επιλογή του αρχείου APK ξανά</string>
     <string name="home_version_requires_android">Απαιτείται Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">Δεν υποστηρίζεται σε αυτή τη συσκευή</string>
@@ -263,6 +264,11 @@
     <string name="patcher_unknown_error">Παρουσιάστηκε άγνωστο σφάλμα</string>
     <string name="patcher_conflict_title">Σύγκρουση πακέτου</string>
     <string name="patcher_conflict_subtitle">Πρέπει να απεγκαταστήσετε την υπάρχουσα έκδοση</string>
+    <string name="patcher_conflict_hint">Η τροποποιημένη εφαρμογή χρησιμοποιεί διαφορετικό πιστοποιητικό από την εγκατεστημένη έκδοση. Η απεγκατάσταση θα διαγράψει όλα τα δεδομένα της εφαρμογής.</string>
+    <string name="patcher_installed_conflict_title">Απαιτείται απεγκατάσταση</string>
+    <string name="patcher_installed_conflict_body">"Η Morphe υπογράφει τις τροποποιημένες εφαρμογές με το δικό της πιστοποιητικό, το οποίο διαφέρει από το αρχικό. Το Android απαιτεί την κατάργηση της υπάρχουσας έκδοσης πριν από την εγκατάσταση της τροποποιημένης εφαρμογής.
+
+Η απεγκατάσταση θα διαγράψει οριστικά όλα τα δεδομένα της εφαρμογής."</string>
     <string name="patcher_install_error_title">Σφάλμα εγκατάστασης</string>
     <string name="patcher_install_error_subtitle">Δοκιμάστε να απεγκαταστήσετε και να εγκαταστήσετε ξανά</string>
     <string name="patcher_ready_to_install_subtitle">Πατήστε το παρακάτω κουμπί για εγκατάσταση</string>

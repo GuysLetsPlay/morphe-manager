@@ -105,6 +105,7 @@
     <string name="home_apk_availability_yes">Ano, pomozte mi najít APK</string>
     <string name="home_apk_availability_no">Ne, už mám APK</string>
     <string name="home_apk_use_saved_with_version">Použít uložené APK (v%s)</string>
+    <string name="home_apk_use_installed_with_version">Použijte nainstalovaný APK (v%s)</string>
     <string name="home_app_info_no_saved_apk">Není uložené žádné APK. Pro záplatování bude potřeba vybrat soubor APK znovu</string>
     <string name="home_version_requires_android">Vyžaduje Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">Není podporováno na tomto zařízení</string>
@@ -263,6 +264,11 @@ Pro nejlepší výsledky doporučujeme záplatovat &lt;b&gt;úplný APK&lt;/b&gt
     <string name="patcher_unknown_error">Došlo k neznámé chybě</string>
     <string name="patcher_conflict_title">Konflikt balíčku</string>
     <string name="patcher_conflict_subtitle">Musíte odinstalovat stávající verzi</string>
+    <string name="patcher_conflict_hint">Opravená aplikace používá jiný certifikát než nainstalovaná verze. Odinstalování smaže všechna data aplikace.</string>
+    <string name="patcher_installed_conflict_title">Odinstalace je vyžadována</string>
+    <string name="patcher_installed_conflict_body">"Morphe podepisuje opravené aplikace vlastním certifikátem, který se liší od původního. Android vyžaduje odstranění stávající verze před instalací opravené aplikace.
+
+Odinstalace trvale smaže všechna data aplikace"</string>
     <string name="patcher_install_error_title">Chyba instalace</string>
     <string name="patcher_install_error_subtitle">Zkuste odinstalovat a nainstalovat znovu</string>
     <string name="patcher_ready_to_install_subtitle">Stiskněte tlačítko níže pro instalaci</string>

@@ -105,6 +105,7 @@
     <string name="home_apk_availability_yes">Sí, ayúdame a encontrar un APK</string>
     <string name="home_apk_availability_no">No, ya tengo un APK</string>
     <string name="home_apk_use_saved_with_version">Usar APK guardado (v%s)</string>
+    <string name="home_apk_use_installed_with_version">Usar APK instalada (v%s)</string>
     <string name="home_app_info_no_saved_apk">No hay APK guardado. Para aplicar los parches será necesario seleccionar el archivo APK nuevamente.</string>
     <string name="home_version_requires_android">Requiere Android %s o superior</string>
     <string name="home_apk_no_compatible_versions_title">No compatible en este dispositivo</string>
@@ -263,6 +264,11 @@ Para obtener los mejores resultados, esta aplicación recomienda parchear un &lt
     <string name="patcher_unknown_error">Ocurrió un error desconocido</string>
     <string name="patcher_conflict_title">Conflicto de paquete</string>
     <string name="patcher_conflict_subtitle">Debe desinstalar la versión existente</string>
+    <string name="patcher_conflict_hint">La aplicación parcheada utiliza un certificado diferente al de la versión instalada. Al desinstalarla, se borrarán todos los datos de la aplicación.</string>
+    <string name="patcher_installed_conflict_title">Desinstalación requerida</string>
+    <string name="patcher_installed_conflict_body">"Morphe firma las aplicaciones parcheadas con su propio certificado, que es diferente del original. Android requiere eliminar la versión existente antes de que se pueda instalar la aplicación parcheada.
+
+Desinstalar borrará permanentemente todos los datos de la aplicación."</string>
     <string name="patcher_install_error_title">Error de instalación</string>
     <string name="patcher_install_error_subtitle">Intente desinstalar y volver a instalar</string>
     <string name="patcher_ready_to_install_subtitle">Pulse el botón de abajo para instalar</string>

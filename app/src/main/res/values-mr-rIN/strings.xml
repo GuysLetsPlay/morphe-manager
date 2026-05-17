@@ -103,6 +103,7 @@
     <string name="home_apk_availability_yes">हो, मला APK शोधण्यात मदत करा.</string>
     <string name="home_apk_availability_no">नाही, माझ्याकडे आधीपासूनच APK आहे.</string>
     <string name="home_apk_use_saved_with_version">आधीच साठवलेली APK (v%s) वापरा</string>
+    <string name="home_apk_use_installed_with_version">इंस्टॉल केलेली APK (v%s) वापरा</string>
     <string name="home_app_info_no_saved_apk">कोणतीही साठवलेली APK नाही. तुम्हाला पुन्हा एकदा APK फाईल निवडावी लागेल.</string>
     <string name="home_version_requires_android">Android %s+ आवश्यक आहे</string>
     <string name="home_apk_no_compatible_versions_title">या डिव्हाइसवर समर्थित नाही</string>
@@ -143,6 +144,11 @@
     <!-- Home Screen - Root Mode -->
     <!-- Patcher Screen -->
     <string name="patcher_error_dialog_app_info">ॲप माहिती</string>
+    <string name="patcher_conflict_hint">पॅच केलेले ॲप इंस्टॉल केलेल्या आवृत्तीपेक्षा वेगळे प्रमाणपत्र वापरते. अनइंस्टॉल केल्याने ॲपचा सर्व डेटा पुसला जाईल.</string>
+    <string name="patcher_installed_conflict_title">अस्थापित करणे आवश्यक आहे</string>
+    <string name="patcher_installed_conflict_body">"Morphe तुमच्या स्थापित ॲप्सना स्वतःच्या प्रमाणपत्राने प्रमाणित करते, जे मूळ प्रमाणपत्रापेक्षा वेगळे आहे. प्रमाणित ॲप स्थापित करण्यापूर्वी, Android ला विद्यमान आवृत्ती काढणे आवश्यक आहे.
+
+अस्थिर केल्याने ॲपचा सर्व डेटा कायमचा नष्ट होईल."</string>
     <string name="patcher_incompatible_patcher_title">अद्यतन आवश्यक आहे</string>
     <string name="patcher_incompatible_patcher_description">बंडल &lt;b&gt;%1$s&lt;/b&gt; ला पॅचर व्हर्जन &lt;b&gt;%2$s&lt;/b&gt; किंवा नवीनची आवश्यकता आहे. कृपया हे ॲप पॅच करण्यासाठी Morphe अपडेट करा.</string>
     <string name="patcher_incompatible_patcher_update_button">Morphe डाउनलोड आणि अपडेट करा</string>

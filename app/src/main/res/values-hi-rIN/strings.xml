@@ -105,6 +105,7 @@
     <string name="home_apk_availability_yes">हाँ, मुझे APK ढूंढने में मदद करें</string>
     <string name="home_apk_availability_no">नहीं, मेरे पास पहले से ही एक एपीके है</string>
     <string name="home_apk_use_saved_with_version">प्रतिलिपि APK (v%s) का उपयोग करें</string>
+    <string name="home_apk_use_installed_with_version">इंस्टॉल किए गए APK (v%s) का उपयोग करें</string>
     <string name="home_app_info_no_saved_apk">कोई प्रतिलिपि APK नहीं है। पट्च करना पुनः APK फ़ाइल का चयन करना आवश्यक होगा</string>
     <string name="home_version_requires_android">Android %s+ की आवश्यकता है</string>
     <string name="home_apk_no_compatible_versions_title">इस डिवाइस पर समर्थित नहीं है</string>
@@ -263,6 +264,11 @@
     <string name="patcher_unknown_error">Unknown error occurred</string>
     <string name="patcher_conflict_title">Package conflict</string>
     <string name="patcher_conflict_subtitle">You need to uninstall the existing version</string>
+    <string name="patcher_conflict_hint">पैच किया गया ऐप इंस्टॉल किए गए संस्करण से अलग प्रमाणपत्र का उपयोग करता है। अनइंस्टॉल करने से सभी ऐप डेटा मिट जाएगा।</string>
+    <string name="patcher_installed_conflict_title">अनइंस्टॉल आवश्यक है</string>
+    <string name="patcher_installed_conflict_body">"Morphe अपने स्वयं के प्रमाणपत्र के साथ पैच्ड ऐप्स पर हस्ताक्षर करता है, जो मूल से अलग है। Android को पैच्ड ऐप को इंस्टॉल करने से पहले मौजूदा संस्करण को हटाने की आवश्यकता होती है।
+
+अनइंस्टॉल करने से सभी ऐप डेटा स्थायी रूप से मिट जाएगा।"</string>
     <string name="patcher_install_error_title">Installation error</string>
     <string name="patcher_install_error_subtitle">Try uninstalling and installing again</string>
     <string name="patcher_ready_to_install_subtitle">Press the button below to install</string>

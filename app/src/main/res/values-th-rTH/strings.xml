@@ -105,6 +105,7 @@
     <string name="home_apk_availability_yes">ใช่, ช่วยฉันค้นหา APK</string>
     <string name="home_apk_availability_no">ไม่, ฉันมี APK แล้ว</string>
     <string name="home_apk_use_saved_with_version">ใช้ APK ที่ถูกบันทึก (เวอร์ชัน %s)</string>
+    <string name="home_apk_use_installed_with_version">ใช้ APK ที่ติดตั้งไว้ (v%s)</string>
     <string name="home_app_info_no_saved_apk">ไม่มี APK ที่ถูกบันทึก การแพตซ์จะต้องเลือกไฟล์ APK อีกครั้ง</string>
     <string name="home_version_requires_android">ต้องใช้ Android %s ขึ้นไป</string>
     <string name="home_apk_no_compatible_versions_title">ไม่รองรับบนอุปกรณ์นี้</string>
@@ -263,6 +264,11 @@
     <string name="patcher_unknown_error">เกิดข้อผิดพลาดที่ไม่รู้จัก</string>
     <string name="patcher_conflict_title">ข้อขัดแย้งของแพ็กเกจ</string>
     <string name="patcher_conflict_subtitle">คุณต้องถอนการติดตั้งเวอร์ชันที่มีอยู่ออกก่อน</string>
+    <string name="patcher_conflict_hint">แอปที่ปรับแก้แล้วใช้ใบรับรองที่แตกต่างจากเวอร์ชันที่ติดตั้ง การถอนการติดตั้งจะลบข้อมูลแอปทั้งหมด</string>
+    <string name="patcher_installed_conflict_title">ต้องถอนการติดตั้ง</string>
+    <string name="patcher_installed_conflict_body">"Morphe ลงนามแอปที่แพตช์ด้วยใบรับรองของตัวเอง ซึ่งแตกต่างจากใบรับรองเดิม Android กำหนดให้ถอนการติดตั้งแอปเวอร์ชันเดิมก่อนจึงจะสามารถติดตั้งแอปที่แพตช์แล้วได้
+
+การถอนการติดตั้งจะลบข้อมูลแอปทั้งหมดอย่างถาวร"</string>
     <string name="patcher_install_error_title">ข้อผิดพลาดในการติดตั้ง</string>
     <string name="patcher_install_error_subtitle">ลองถอนการติดตั้งแล้วติดตั้งใหม่อีกครั้ง</string>
     <string name="patcher_ready_to_install_subtitle">กดปุ่มด้านล่างเพื่อติดตั้ง</string>

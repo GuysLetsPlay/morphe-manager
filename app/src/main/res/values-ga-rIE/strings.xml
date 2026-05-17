@@ -105,6 +105,7 @@
     <string name="home_apk_availability_yes">Sea, cabhraigh liom APK a aimsiú</string>
     <string name="home_apk_availability_no">Níl, tá APK agam cheana féin</string>
     <string name="home_apk_use_saved_with_version">Úsáid an APK sábháilte (v%s)</string>
+    <string name="home_apk_use_installed_with_version">Úsáid APK suiteáilte (v%s)</string>
     <string name="home_app_info_no_saved_apk">Níl aon APK sábháilte. Beidh ort an comhad APK a roghnú arís le haghaidh paisteála.</string>
     <string name="home_version_requires_android">Éilíonn Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">Ní thacaítear leis ar an ngléas seo</string>
@@ -263,6 +264,11 @@ Chun na torthaí is fearr a fháil, molann an aip seo paiste a chur ar &lt;b&gt;
     <string name="patcher_unknown_error">Tharla earráid anaithnid</string>
     <string name="patcher_conflict_title">Coinbhleacht pacáiste</string>
     <string name="patcher_conflict_subtitle">Ní mór duit an leagan reatha a dhíshuiteáil</string>
+    <string name="patcher_conflict_hint">Tá deimhniú difriúil in úsáid ag an app patched ón deimhniú atá suiteáilte. Má díchóimeádtar, scriosfar gach sonraí app</string>
+    <string name="patcher_installed_conflict_title">Díshuiteáil ag teastáil</string>
+    <string name="patcher_installed_conflict_body">"Síníonn Morphe aipeanna patched lena deimhniú féin, atá difriúil ón ceann bunaidh. Teastaíonn ó Android an leagan comhaimseartha a bhaint roimh gur féidir an app patched a shuiteáil.
+
+Bainfidh díshuiteáil go buan ar ár láimhseáil ar gach sonraí app"</string>
     <string name="patcher_install_error_title">Earráid suiteála</string>
     <string name="patcher_install_error_subtitle">Déan iarracht é a dhíshuiteáil agus a shuiteáil arís</string>
     <string name="patcher_ready_to_install_subtitle">Brúigh an cnaipe thíos chun é a shuiteáil</string>

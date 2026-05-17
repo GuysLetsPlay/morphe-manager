@@ -1,21 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Home Screen -->
+    <string name="home_other_apps">ئەپەکانی تر</string>
+    <string name="home_not_patched_yet">پینە نەکراوە هێشتا</string>
+    <string name="home_no_patches_available">هیچ پینەیەک بەردەست نیە</string>
+    <string name="home_app_hide_title">شاردنەوەی ئەم ئەپە ؟</string>
+    <string name="home_app_hide_message">ئەم ئەپە لە شاشەی سەرەکی دەشاردرێتەوە.  دەتوانیت دواتر لە ئەپە شاراوەکانەوە بیگەڕێنیتەوە بە بەکارهێنانی دوگمەی خوارەوەی لیستەکە</string>
+    <string name="home_app_will_be_hidden">ئەم ئەپە دەبێتە شاراوە</string>
+    <string name="home_app_show_hidden">ئەپە شاردراوەکان نیشان بدە</string>
+    <string name="home_app_no_hidden">ئەپی شاراوە نیە</string>
+    <string name="home_app_hidden_apps_title">ئەپە شاراوەکان</string>
+    <string name="home_app_hidden_apps_hint">دەست لێبدە بۆ دەرخستنەوە</string>
+    <string name="android_11_bug_dialog_title">کەلێنی ئەندرۆید ١١ </string>
+    <string name="android_11_bug_dialog_description">پێویستە پێشوەختە مۆڵەتی دامەزراندنی ئەپەکە بدرێت بۆ ئەوەی هەڵەیەک لە سیستەمی ئەندرۆید ١١ ڕوونەدات کە کاریگەری نەرێنی لەسەر ئەزموونی بەکارهێنەر دەبێت</string>
+    <string name="deep_link_add_source_title">زیادکردنی سەرچاوە</string>
+    <string name="deep_link_add_source_message">دەتەوێت ئەم سەرچاوەی پاچە زیاد بکەیت بۆ Morphe؟</string>
+    <string name="deep_link_add_source_warning">تەنها ئەو سەرچاوانە زیاد بکە کە متمانەت پێیانە</string>
     <!-- Home Screen - Update Notifications -->
+    <string name="home_update_available">Morphe نوێکردنەوە بەردەستە</string>
+    <string name="home_update_available_subtitle">وەشانی نوێ ئامادەیە بۆ دابەزاندن</string>
+    <string name="home_update_error">نوێکردنەوە شکستس هێنا</string>
+    <string name="home_update_error_subtitle">هێڵەکەت بپشکنە وە دووبارە هەوڵ بدەرەوە</string>
+    <string name="home_update_skipped_metered">نوێکردنەوەکان پەڕێندرا</string>
+    <string name="home_update_skipped_metered_subtitle">داتای مۆبایل چاڵاکە</string>
+    <string name="home_updating_sources">نوێکردنەوەی سەرچاوەکان...</string>
+    <string name="home_update_progress_format">%s هاتووەبار</string>
+    <string name="home_update_success">نوێکردنەوەی سەرچاوە تەواوبوو</string>
+    <string name="home_update_success_subtitle">سەرچاوەکانت نوێن</string>
+    <string name="home_sources_are_loading">سەرچاوەکان باردەکرێن، تکایە چاوەڕوان بە...</string>
+    <string name="home_search_apps">گەڕانی ئەپەکان</string>
+    <string name="home_no_apps_title">هیچ ئەپێک بەردەست نیە</string>
+    <string name="home_no_apps_subtitle">سەرچاوەی پاچ زیاد بکە یان سەرچاوەیەکی هەبوو لە %s چالاک بکە</string>
+    <string name="home_no_apps_search_subtitle">هیچ ئەپێک ناگونجێ لەگەڵ \"%s\"</string>
+    <string name="home_all_apps_hidden_title">هەموو ئەپەکان شاراوەن</string>
+    <string name="home_all_apps_hidden_subtitle">هەموو ئەپەکانت لە شاشەی سەرەکی شاردووەتەوە</string>
     <!-- Home Screen - Home Greetings -->
+    <string name="home_greeting_1">دەتەوێت چی ئەپێک پینە بکەیت؟</string>
     <!-- Humorous hype message with light nostalgia -->
+    <string name="home_greeting_2">ئامادەیت بۆ ئەوەی جارێکی تر ئەپەکان بکەیتەوە ئەفسانەیی؟</string>
     <!-- "Buckle up" referring to fastening your vehicle seat belt. A light-hearted joke to build excitement -->
+    <string name="home_greeting_3">پشتێنەکەت ببەستە، خەریکە پینە دەبێ</string>
     <!-- Sarcastic joke about blocking ads, intentionally over-the-top -->
+    <string name="home_greeting_4">ڕۆژێکی تر، شاکارێکی تری ڕیکلام بلۆککراو</string>
     <!-- "Watch ads" refers to watching video ads in unpatched apps -->
+    <string name="home_greeting_5">دەتەوێت سەیری ڕیکلام بکەیت؟ منیش نا</string>
     <!-- Friendly, slightly mischievous joke about controlling app behavior -->
+    <string name="home_greeting_6">با وا لە ئەپەکانت بکەین ڕەفتار بکەن</string>
     <!-- Whimsical forecast-style joke, not meant literally -->
+    <string name="home_greeting_7">پێشبینییەکانی ئەمڕۆ: ١٠٠٪ ئەگەری پینەکردن</string>
     <!-- From mediocrity to amazing -->
+    <string name="home_greeting_8">ئامادەی بۆ گۆڕینی بێ هیوا بوون بۆ سەرسوڕهێنەر؟</string>
     <!-- Playful exaggeration, making patching feel heroic -->
+    <string name="home_greeting_9">پاشەکەوتکردنی ئەپەکان لە خۆیانەوە لە ئەمڕۆوە</string>
     <!-- Light sarcasm, casual and tech-savvy humor -->
+    <string name="home_greeting_10">بە کافایین و پینەی باش کاردەکات</string>
     <!-- Home Screen - Sources Management -->
+    <string name="sources_management_already_exists">ئەم سەرچاوەیە پێشتر زیاد کراوە</string>
     <!-- Home Screen - Sources Dialogs -->
+    <string name="sources_dialog_duplicate_name_error">سەرچاوەیەکی پینە بەم ناوە پێشتر بوونی هەیە</string>
+    <string name="sources_dialog_view_any_version">هەر وەشانێک</string>
+    <string name="sources_dialog_view_any_package">هەر پاکەتێک</string>
+    <string name="sources_dialog_add_source">سەرچاوەی پینە زیاد بکە</string>
+    <string name="sources_dialog_delete_confirm_message">سڕینەوای سەرچاوەی \"%s\"؟ ئەمە ناتوانرێت هەڵبوەشێتەوە</string>
+    <string name="sources_dialog_remote">دوورەدەست</string>
+    <string name="sources_dialog_remote_url">URLی سەرچاوە</string>
+    <string name="sources_dialog_remote_url_formats_title">نموونەکان:</string>
+    <string name="sources_dialog_local">ناوخۆ</string>
+    <string name="sources_dialog_local_file">پەڕگەی سەرچاوەی پینە هەڵبژێرە</string>
+    <string name="sources_dialog_local_file_tap_hint">بۆ گەڕان بەناو کۆگادا پەنجە بنێ</string>
+    <string name="sources_dialog_local_file_description">پەڕگەیەکی سەرچاوەی .mpp پینە لە کۆگا هەڵبژێرە</string>
+    <string name="sources_dialog_local_invalid_extension">پەڕگەکە دەبێت درێژکراوەی .mpp ی هەبێت</string>
+    <string name="sources_dialog_url_valid">عەمباری دروست یان URL JSON</string>
+    <string name="sources_dialog_url_invalid">بەستەرەکە دەبێت ئاماژە بە ڕیپۆیەکی GitHub/GitLab یان پەڕگەیەکی .json بکات</string>
+    <string name="sources_dialog_local_change_file">گۆڕینی پەڕگە</string>
+    <string name="sources_dialog_preinstalled">پێشوەختە دامەزراو</string>
+    <string name="sources_update_success">نوێکردنەوە سەرکەوتوو بوو</string>
+    <string name="sources_update_unavailable">نوێکردنەوە بەردەست نیە</string>
+    <string name="sources_download_fail">شکستس هێنا لە داگرتنی سەرچاوە: %s</string>
     <!-- Home Screen - Dialog 1: APK Availability -->
     <!-- Home Screen - Dialog 2: Download Instructions -->
+    <string name="home_download_instructions_title">APKی ڕەسەن دابەزێنە</string>
+    <string name="home_download_instructions_steps_title">ڕێنماییەکان:</string>
+    <string name="home_download_instructions_step1">دوگمەی \'%s\' لە خوارەوە داگرە</string>
+    <string name="home_download_instructions_step2_part1">لە ماڵپەڕەکە بچۆ خوارەوە و فشار بخەرە سەر</string>
+    <string name="home_download_instructions_download_button_toast">لە ماڵپەڕدا دەبەزاندن بکە، نەک لێرە 😊</string>
     <!-- Home Screen - Dialog 3: File Picker Prompt -->
     <!-- Home Screen - Dialog 4: Expert Mode Dialog -->
     <!-- Home Screen - Home Sub-Dialogs -->

@@ -105,6 +105,7 @@
     <string name="home_apk_availability_yes">是的，帮我找个 APK</string>
     <string name="home_apk_availability_no">不，我已经有APK了</string>
     <string name="home_apk_use_saved_with_version">使用保存的APK（v%s）</string>
+    <string name="home_apk_use_installed_with_version">使用已安装的 APK (v%s)</string>
     <string name="home_app_info_no_saved_apk">没有已保存的 APK 文件, 需要重新选择 APK 文件进行修补</string>
     <string name="home_version_requires_android">需要 Android %s+。</string>
     <string name="home_apk_no_compatible_versions_title">不支持此设备</string>
@@ -190,7 +191,7 @@
     <string name="patch_option_list_empty_state">尚未添加任何值</string>
     <string name="patch_option_required_missing">%s: 填写所有必填选项</string>
     <!-- Adaptive Icon Creator -->
-    <string name="adaptive_icon_create">创建适配图标</string>
+    <string name="adaptive_icon_create">创建自适应图标</string>
     <string name="adaptive_icon_instructions">选择一个前景图像，选择一个背景颜色，然后使用滑块或捏合手势调整预览</string>
     <string name="adaptive_icon_preview">自适应图标预览</string>
     <string name="adaptive_icon_preview_hint">为了获得最佳效果，请将图标保存在实心内圆内</string>
@@ -200,11 +201,11 @@
     <string name="adaptive_icon_reset_transform">重置位置和缩放</string>
     <string name="adaptive_icon_safe_zone_inner">安全区域（始终可见）</string>
     <string name="adaptive_icon_safe_zone_outer">遮罩区域（可能会被剪切）</string>
-    <string name="adaptive_icon_created_success">适配图标创建成功</string>
-    <string name="adaptive_icon_creation_failed">无法创建适配图标</string>
+    <string name="adaptive_icon_created_success">自适应图标创建成功</string>
+    <string name="adaptive_icon_creation_failed">创建自适应图标失败</string>
     <string name="adaptive_icon_folder_explanation">选择创建包含生成的图标文件的 \'%1$s/%2$s\' 文件夹的位置</string>
     <string name="notification_icon_preview">使用滑块调整大小。拖动以重新定位</string>
-    <string name="notification_icon_preview_hint">通知图标预览</string>
+    <string name="notification_icon_preview_hint">使用滑块调整大小。拖动以重新定位</string>
     <!-- Header Creator -->
     <string name="header_creator_create">创建自定义标头</string>
     <string name="header_creator_instructions">选择浅色和深色主题的图片，然后使用捏合缩放手势进行调整</string>
@@ -212,7 +213,7 @@
     <string name="header_creator_dark_theme">暗色主题标题</string>
     <string name="header_creator_no_image">未选择任何图像</string>
     <string name="header_creator_success">标题创建成功</string>
-    <string name="header_creator_failed">无法创建标题</string>
+    <string name="header_creator_failed">创建标题失败</string>
     <string name="header_creator_folder_explanation">选择创建包含生成的头文件的 \'%1$s/%2$s\' 文件夹的位置</string>
     <!-- Home Screen - App Info Screen -->
     <string name="home_app_info_uninstall_app_confirmation">是否要卸载此应用？</string>
@@ -263,6 +264,11 @@
     <string name="patcher_unknown_error">发生未知错误</string>
     <string name="patcher_conflict_title">包冲突</string>
     <string name="patcher_conflict_subtitle">您需要卸载现有版本</string>
+    <string name="patcher_conflict_hint">修补后的应用使用的证书与已安装版本不同。卸载将清除所有应用数据</string>
+    <string name="patcher_installed_conflict_title">需要卸载</string>
+    <string name="patcher_installed_conflict_body">"Morphe 使用自己的证书对已打补丁的应用进行签名，该证书与原始证书不同。Android 要求在安装已打补丁的应用之前，移除现有版本。
+
+卸载将永久删除所有应用数据"</string>
     <string name="patcher_install_error_title">安装错误</string>
     <string name="patcher_install_error_subtitle">尝试重新卸载并安装</string>
     <string name="patcher_ready_to_install_subtitle">按下方按钮安装</string>
@@ -409,7 +415,7 @@
     <string name="notification_manager_update_title">Morphe update available</string>
     <string name="notification_bundle_update_title">有新的补丁可用</string>
     <string name="notification_update_text">版本 %s 已准备好下载。</string>
-    <string name="notification_bundle_update_text_unversioned">Tap to open Morphe and update</string>
+    <string name="notification_bundle_update_text_unversioned">点按打开 Morphe 并更新</string>
     <string name="notification_permission_dialog_title">允许通知</string>
     <string name="notification_permission_dialog_description">Morphe needs notification permission to alert you when updates are available in the background</string>
     <string name="notification_post_patch_dialog_title">您是否希望在有更新时收到通知？</string>
@@ -630,7 +636,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_patch_selection_source_format">源 #%s</string>
     <string name="settings_system_patch_selection_will_delete">这将删除：</string>
     <string name="settings_system_patch_selection_reset_all_warning">这将永久删除所有保存的补丁选择，适用于所有包和源</string>
-    <string name="settings_system_patch_selection_reset_package_warning">这将永久删除 %s 的所有保存补丁选择，跨越所有源</string>
+    <string name="settings_system_patch_selection_reset_package_warning">这将永久删除所有源当中, 为 %s 保存的补丁选择</string>
     <string name="settings_system_patch_selection_reset_source_warning">这将永久删除已保存的补丁选择，包括 %1$s 在源 #%2$s 中</string>
     <string name="settings_system_export_source_data_fail">导出源数据失败</string>
     <string name="settings_system_export_source_data_success">源数据导出成功</string>

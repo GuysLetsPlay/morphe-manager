@@ -105,6 +105,7 @@
     <string name="home_apk_availability_yes">Да, помогите мне найти APK</string>
     <string name="home_apk_availability_no">Нет, у меня уже есть APK</string>
     <string name="home_apk_use_saved_with_version">Сохраненный APK (v%s)</string>
+    <string name="home_apk_use_installed_with_version">Установленный APK (v%s)</string>
     <string name="home_app_info_no_saved_apk">Нет сохраненного APK. Для патча нужно будет снова выбрать APK файл</string>
     <string name="home_version_requires_android">Требуется Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">Не поддерживается на этом устройстве</string>
@@ -263,6 +264,11 @@
     <string name="patcher_unknown_error">Произошла неизвестная ошибка</string>
     <string name="patcher_conflict_title">Конфликт пакетов</string>
     <string name="patcher_conflict_subtitle">Вам необходимо удалить существующую версию</string>
+    <string name="patcher_conflict_hint">Исправленный файл приложения использует другой сертификат, чем установленная версия. Удаление приведет к удалению всех данных приложения</string>
+    <string name="patcher_installed_conflict_title">Требуется удаление</string>
+    <string name="patcher_installed_conflict_body">"Morphe подписывает пропатченные приложения своим собственным сертификатом, который отличается от оригинального. Android требует удаления существующей версии перед установкой пропатченного приложения.
+
+Удаление приведет к безвозвратному удалению всех данных приложения"</string>
     <string name="patcher_install_error_title">Ошибка установки</string>
     <string name="patcher_install_error_subtitle">Попробуйте удалить и установить заново</string>
     <string name="patcher_ready_to_install_subtitle">Нажмите кнопку ниже, чтобы установить</string>

@@ -65,8 +65,8 @@
     <string name="sources_management_already_exists">Sumber ini sudah ditambahkan</string>
     <string name="sources_management_invalid_url">URL sumber tidak valid. Harap periksa alamatnya dan coba lagi</string>
     <string name="sources_management_metadata_unavailable">Metadata Tidak Tersedia</string>
-    <string name="sources_management_metadata_unavailable_hint">File metadata jarak jauh tidak tersedia. Penerapan dengan bundle yang terinstal masih berfungsi, tetapi pembaruan otomatis dinonaktifkan untuk sumber ini</string>
-    <string name="sources_management_metadata_unavailable_hint_missing">Bundle patch tidak dapat diunduh. URL sumber mungkin salah atau file tidak ada</string>
+    <string name="sources_management_metadata_unavailable_hint">Berkas metadata jarak jauh tidak tersedia. Penambalan dengan bundle yang terpasang masih berfungsi, tetapi pembaruan otomatis dinonaktifkan untuk sumber ini</string>
+    <string name="sources_management_metadata_unavailable_hint_missing">Bundle tambalan tidak dapat diunduh. URL sumber mungkin salah atau berkas tidak ada</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Nama tampilan</string>
     <string name="sources_dialog_rename">Ubah nama sumber tambalan</string>
@@ -81,18 +81,18 @@
     <string name="sources_dialog_remote_url_formats_title">Contoh:</string>
     <string name="sources_dialog_local">Lokal</string>
     <string name="sources_dialog_local_file">Pilih berkas sumber tambalan</string>
-    <string name="sources_dialog_local_file_tap_hint">Ketuk untuk menjelajahi penyimpanan</string>
+    <string name="sources_dialog_local_file_tap_hint">Ketuk untuk menelusuri penyimpanan</string>
     <string name="sources_dialog_local_file_description">Pilih berkas sumber tambalan .mpp dari penyimpanan</string>
-    <string name="sources_dialog_local_invalid_extension">File harus memiliki ekstensi .mpp</string>
-    <string name="sources_dialog_url_valid">Repositori atau URL JSON yang valid</string>
-    <string name="sources_dialog_url_invalid">URL harus mengarah ke repositori GitHub/GitLab atau file .json</string>
+    <string name="sources_dialog_local_invalid_extension">Berkas harus memiliki ekstensi .mpp</string>
+    <string name="sources_dialog_url_valid">Repositori atau URL JSON yang sah</string>
+    <string name="sources_dialog_url_invalid">URL harus mengarah ke repositori GitHub/GitLab atau berkas .json</string>
     <string name="sources_dialog_local_change_file">Ganti berkas</string>
     <string name="sources_dialog_preinstalled">Sudah dipasang sebelumnya</string>
     <string name="sources_update_success">Pembaruan berhasil</string>
     <string name="sources_update_unavailable">Tidak ada pembaruan tersedia</string>
     <string name="sources_download_fail">Gagal mengunduh sumber: %s</string>
-    <string name="sources_download_fail_named">\'%s\' tidak dapat diperbarui. Periksa koneksi internet Anda dan coba lagi</string>
-    <string name="sources_download_endpoint_not_found">\'%s\': metadata patch tidak ditemukan</string>
+    <string name="sources_download_fail_named">\'%s\' tidak dapat diperbarui. Periksa sambungan internet Anda dan coba lagi</string>
+    <string name="sources_download_endpoint_not_found">\'%s\': metadata tambalan tidak ditemukan</string>
     <string name="sources_patch_expert_badge">Ahli</string>
     <string name="sources_patch_expert_badge_tooltip">Aktifkan mode Ahli di Pengaturan untuk menyertakan tambalan ini secara manual</string>
     <!-- Home Screen - Dialog 1: APK Availability -->
@@ -105,6 +105,7 @@
     <string name="home_apk_availability_yes">Ya, bantu saya mencari APK</string>
     <string name="home_apk_availability_no">Tidak, saya sudah memiliki APK</string>
     <string name="home_apk_use_saved_with_version">Gunakan APK yang disimpan (v%s)</string>
+    <string name="home_apk_use_installed_with_version">Gunakan APK yang terpasang (v%s)</string>
     <string name="home_app_info_no_saved_apk">Tidak ada APK yang disimpan. Penambalan akan memerlukan memilih berkas APK lagi</string>
     <string name="home_version_requires_android">Membutuhkan Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">Tidak didukung di perangkat ini</string>
@@ -122,7 +123,7 @@
     <string name="home_download_instructions_continue">Lanjutkan ke APKMirror.com</string>
     <!-- Home Screen - Dialog 3: File Picker Prompt -->
     <string name="home_file_picker_prompt_title">Pilih APK yang telah diunduh</string>
-    <string name="home_file_picker_prompt_description">Pilih berkas &lt;b&gt;%s&lt;/b&gt; APK yang baru saja Anda unduh</string>
+    <string name="home_file_picker_prompt_description">Pilih berkas APK &lt;b&gt;%s&lt;/b&gt; yang baru saja Anda unduh</string>
     <string name="home_file_picker_prompt_open_apk">Buka berkas APK</string>
     <string name="home_recommended_version">Versi rekomendasi</string>
     <string name="home_selected_version">Versi terpilih</string>
@@ -177,7 +178,7 @@ Harap bersiap untuk perilaku aplikasi yang tidak biasa atau bug yang belum terid
     <string name="home_low_disk_space_dialog_title">Ruang penyimpanan sedikit</string>
     <string name="home_low_disk_space_dialog_message">Hanya %1$.2f GB ruang penyimpanan yang tersedia. Penambalan memerlukan setidaknya %2$.2f GB ruang kosong untuk berfungsi dengan baik</string>
     <string name="home_low_disk_space_dialog_warning">Melanjutkan dapat mengakibatkan kesalahan \"berkas tidak ditemukan\" atau menghasilkan APK yang rusak</string>
-    <string name="home_simple_bundle_select_title">Pilih berkas sumber tambalan</string>
+    <string name="home_simple_bundle_select_title">Pilih sumber tambalan</string>
     <!-- Patch Options -->
     <string name="custom_color">Warna Khusus</string>
     <string name="hex_color">Warna hex</string>
@@ -264,13 +265,18 @@ Harap bersiap untuk perilaku aplikasi yang tidak biasa atau bug yang belum terid
     <string name="patcher_unknown_error">Terjadi kesalahan yang tidak diketahui</string>
     <string name="patcher_conflict_title">Paket konflik</string>
     <string name="patcher_conflict_subtitle">Anda perlu mencopot pemasangan versi yang ada</string>
+    <string name="patcher_conflict_hint">Aplikasi yang dipatch menggunakan sertifikat yang berbeda dari versi yang terpasang. Mencopot pemasangan akan menghapus semua data aplikasi</string>
+    <string name="patcher_installed_conflict_title">Pemasangan ulang diperlukan</string>
+    <string name="patcher_installed_conflict_body">"Morphe menandatangani aplikasi yang dipatch dengan sertifikatnya sendiri, yang berbeda dari yang asli. Android mengharuskan penghapusan versi yang sudah ada sebelum aplikasi yang dipatch dapat dipasang.
+
+Menghapus aplikasi akan menghapus semua data aplikasi secara permanen"</string>
     <string name="patcher_install_error_title">Kesalahan pemasangan</string>
     <string name="patcher_install_error_subtitle">Coba copot pemasangan dan pasang lagi</string>
     <string name="patcher_ready_to_install_subtitle">Tekan tombol di bawah untuk memasang</string>
     <string name="patcher_ready_to_mount_subtitle">Tekan tombol di bawah untuk mount</string>
     <string name="patcher_storage_permission_dialog_title">Tidak dapat mengakses jalur penyimpanan</string>
     <string name="patcher_incompatible_patcher_title">Pembaruan diperlukan</string>
-    <string name="patcher_incompatible_patcher_description">Bundle &lt;b&gt;%1$s&lt;/b&gt; memerlukan versi penambal &lt;b&gt;%2$s&lt;/b&gt; atau lebih baru. Silakan perbarui Morphe untuk menambal aplikasi ini</string>
+    <string name="patcher_incompatible_patcher_description">Bundle &lt;b&gt;%1$s&lt;/b&gt; memerlukan versi penambal &lt;b&gt;%2$s&lt;/b&gt; atau lebih baru. Silahkan perbarui Morphe untuk menambal aplikasi ini</string>
     <string name="patcher_incompatible_patcher_update_button">Unduh dan perbarui Morphe</string>
     <string name="patcher_storage_permission_description_api30">Satu atau lebih pilihan tambalan yang mengarah pada jalur Morphe tidak dapat dibaca. Beri akses penyimpanan dan ketuk tombol lalu penambalan akan dimulai secara otomatis</string>
     <string name="patcher_storage_permission_description_legacy">Satu atau lebih pilihan tambalan yang mengarah ke jalur yang tidak dapat diakses. Perbarui jalur dalam pilihan tambalan dan coba lagi</string>

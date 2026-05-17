@@ -47,7 +47,7 @@
     <!-- Friendly, slightly mischievous joke about controlling app behavior -->
     <string name="home_greeting_6">Vamos fazer as tuas aplicações comportarem-se</string>
     <!-- Whimsical forecast-style joke, not meant literally -->
-    <string name="home_greeting_7">Previsão de hoje: 100% de chance de modificar</string>
+    <string name="home_greeting_7">Previsão para hoje: 100% de chance de modificar</string>
     <!-- From mediocrity to amazing -->
     <string name="home_greeting_8">Pronto para transformar o medíocre em incrível?</string>
     <!-- Playful exaggeration, making patching feel heroic -->
@@ -105,6 +105,7 @@
     <string name="home_apk_availability_yes">Sim, ajuda-me a encontrar um APK</string>
     <string name="home_apk_availability_no">Não, já tenho um APK</string>
     <string name="home_apk_use_saved_with_version">Utilizar APK guardado (v%s)</string>
+    <string name="home_apk_use_installed_with_version">Usar APK instalado (v%s)</string>
     <string name="home_app_info_no_saved_apk">Não existe um APK guardado. A modificação exigirá a seleção do ficheiro APK novamente</string>
     <string name="home_version_requires_android">Requer o Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">Não suportado neste dispositivo</string>
@@ -263,6 +264,11 @@ Para obteres os melhores resultados, este ficheiro recomenda a modificação de 
     <string name="patcher_unknown_error">Ocorreu um erro desconhecido</string>
     <string name="patcher_conflict_title">Conflito de pacote</string>
     <string name="patcher_conflict_subtitle">Precisas de desinstalar a versão já existente</string>
+    <string name="patcher_conflict_hint">O aplicativo corrigido usa um certificado diferente da versão instalada. Desinstalar irá apagar todos os dados do aplicativo</string>
+    <string name="patcher_installed_conflict_title">Desinstalação necessária</string>
+    <string name="patcher_installed_conflict_body">"Morphe assina aplicativos corrigidos com seu próprio certificado, que difere do original. O Android exige a remoção da versão existente antes que o aplicativo corrigido possa ser instalado.
+
+Desinstalar apagará permanentemente todos os dados do aplicativo."</string>
     <string name="patcher_install_error_title">Erro de instalação</string>
     <string name="patcher_install_error_subtitle">Tenta desinstalar e instalar de novo</string>
     <string name="patcher_ready_to_install_subtitle">Pressiona o botão em baixo para instalar</string>
@@ -652,7 +658,7 @@ As dimensões das imagens devem ser as seguintes:
     <!-- Shared strings -->
     <string name="patches">Modificações</string>
     <string name="home">Ecrã Principal</string>
-    <string name="settings">Definiçõe</string>
+    <string name="settings">D​efinições</string>
     <string name="yes">Sim</string>
     <string name="no">Não</string>
     <string name="all">Tudo</string>
@@ -692,7 +698,7 @@ As dimensões das imagens devem ser as seguintes:
     <string name="available">Disponível</string>
     <string name="continue_">Continuar</string>
     <string name="version">Versão</string>
-    <string name="patch">Modificação</string>
+    <string name="patch">Aplicar modificações</string>
     <string name="repatch">Modificar de novo</string>
     <string name="open">Abrir</string>
     <string name="mount">Montar</string>

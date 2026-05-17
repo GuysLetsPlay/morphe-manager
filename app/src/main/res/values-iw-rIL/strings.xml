@@ -57,7 +57,7 @@
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">מקורות תיקונים</string>
     <string name="sources_management_open_in_browser">פתח בדפדפן</string>
-    <string name="sources_management_failed_to_open_url">נכשל לפתוח כתובת אינטרנט</string>
+    <string name="sources_management_failed_to_open_url">כישלון בפתיחת כתובת אינטרנט</string>
     <string name="sources_management_prerelease_toggle">השתמש בתיקונים לפני הפצתם המלאה</string>
     <string name="sources_management_prerelease_toggle_description">קבל גישה מוקדמת לגרסה חדשה של תיקונים ניסיוניים</string>
     <string name="sources_management_experimental_versions_toggle">השתמש בגרסאות אפליקציה ניסיוניות</string>
@@ -105,6 +105,7 @@
     <string name="home_apk_availability_yes">כן, עזור לי למצוא APK</string>
     <string name="home_apk_availability_no">לא, אני כבר מחזיק APK</string>
     <string name="home_apk_use_saved_with_version">השתמש באפאק שמור (גרסה %s)</string>
+    <string name="home_apk_use_installed_with_version">השתמש ב-APK מותקן (v%s)</string>
     <string name="home_app_info_no_saved_apk">אין אפאק שמור. תיקון ידרש לבחור את קובץ האפאק שוב</string>
     <string name="home_version_requires_android">דורש Android %s+‎</string>
     <string name="home_apk_no_compatible_versions_title">לא נתמך במכשיר זה</string>
@@ -263,6 +264,11 @@
     <string name="patcher_unknown_error">אירעה שגיאה לא ידועה</string>
     <string name="patcher_conflict_title">התנגשות חבילה</string>
     <string name="patcher_conflict_subtitle">עליך להסיר את ההתקנה של הגרסה הקיימת</string>
+    <string name="patcher_conflict_hint">האפליקציה שעברה תיקון משתמשת בתעודה שונה מזו של הגרסה המותקנת. הסרת ההתקנה תמחק את כל נתוני האפליקציה.</string>
+    <string name="patcher_installed_conflict_title">יש להסיר התקנה</string>
+    <string name="patcher_installed_conflict_body">"Morphe חותם על אפליקציות שעברו שינוי באמצעות תעודה משלו, השונה מהמקורית. Android דורש הסרת הגרסה הקיימת לפני שאפשר להתקין את האפליקציה שעברה שינוי.
+
+הסרת ההתקנה תמחק לצמיתות את כל נתוני האפליקציה."</string>
     <string name="patcher_install_error_title">שגיאת התקנה</string>
     <string name="patcher_install_error_subtitle">נסה להסיר ולהתקין שוב</string>
     <string name="patcher_ready_to_install_subtitle">לחץ על הכפתור למטה כדי להתקין</string>

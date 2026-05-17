@@ -105,6 +105,7 @@
     <string name="home_apk_availability_yes">Da, pomagajte mi najti APK</string>
     <string name="home_apk_availability_no">Ne, že imam APK</string>
     <string name="home_apk_use_saved_with_version">Uporabite shranjeno APK (v%s)</string>
+    <string name="home_apk_use_installed_with_version">Uporabi nameščeno datoteko APK (v%s)</string>
     <string name="home_app_info_no_saved_apk">Ni shranjene APK. Popravilo bo zahtevalo ponovno izbiro datoteke APK.</string>
     <string name="home_version_requires_android">Zahteva Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">Ni podprto na tej napravi</string>
@@ -263,6 +264,11 @@ Za najboljše rezultate ta aplikacija priporoča popravljanje &lt;b&gt;polne APK
     <string name="patcher_unknown_error">Prišlo je do neznane napake</string>
     <string name="patcher_conflict_title">Konflikt paketov</string>
     <string name="patcher_conflict_subtitle">Morate odstraniti obstoječo različico</string>
+    <string name="patcher_conflict_hint">Popravljena aplikacija uporablja drug certifikat kot nameščena različica. Odstranitev jo bo izbrisala vse podatke aplikacije.</string>
+    <string name="patcher_installed_conflict_title">Zahtevana je odstranitev</string>
+    <string name="patcher_installed_conflict_body">"Morphe podpisuje spremenjene aplikacije z lastnim potrdilom, ki se razlikuje od prvotnega. Android zahteva odstranitev obstoječe različice, preden je mogoče namestiti spremenjeno aplikacijo.
+
+Odstranitev bo trajno izbrisala vse podatke aplikacije."</string>
     <string name="patcher_install_error_title">Napaka pri namestitvi</string>
     <string name="patcher_install_error_subtitle">Poskusite ponovno odstraniti in namestiti</string>
     <string name="patcher_ready_to_install_subtitle">Pritisnite gumb spodaj za namestitev</string>

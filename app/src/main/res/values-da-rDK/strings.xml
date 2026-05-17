@@ -105,6 +105,7 @@
     <string name="home_apk_availability_yes">Ja, hjælp med at finde en APK</string>
     <string name="home_apk_availability_no">Nej, jeg har allerede en APK</string>
     <string name="home_apk_use_saved_with_version">Brug gemt APK (v%s)</string>
+    <string name="home_apk_use_installed_with_version">Brug installeret APK (v%s)</string>
     <string name="home_app_info_no_saved_apk">Ingen gemt APK. Patchning kræver at du vælger APK-filen igen</string>
     <string name="home_version_requires_android">Kræver Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">Ikke understøttet på denne enhed</string>
@@ -263,6 +264,11 @@ For de bedste resultater anbefaler denne app at patche en &lt;b&gt;fuld APK&lt;/
     <string name="patcher_unknown_error">Ukendt fejl opstod</string>
     <string name="patcher_conflict_title">Pakke konflikt</string>
     <string name="patcher_conflict_subtitle">Du skal afinstallere den eksisterende version</string>
+    <string name="patcher_conflict_hint">Den patched app bruger et andet certifikat end den installerede version. Afinstallation vil slette alle app-data</string>
+    <string name="patcher_installed_conflict_title">Afinstallation påkrævet</string>
+    <string name="patcher_installed_conflict_body">"Morphe signerer patched apps med sit eget certifikat, hvilket adskiller sig fra det originale. Android kræver, at den eksisterende version fjernes, før den patched app kan installeres.
+
+Afinstallation sletter permanent alle appdata."</string>
     <string name="patcher_install_error_title">Installationsfejl</string>
     <string name="patcher_install_error_subtitle">Prøv at afinstallere og installere igen</string>
     <string name="patcher_ready_to_install_subtitle">Tryk på knappen nedenfor for at installere</string>

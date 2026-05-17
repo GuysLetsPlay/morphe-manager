@@ -10,7 +10,7 @@
     <string name="home_app_show_hidden">Pokaż ukryte aplikacje</string>
     <string name="home_app_no_hidden">Brak ukrytych aplikacji</string>
     <string name="home_app_hidden_apps_title">Ukryte aplikacje</string>
-    <string name="home_app_hidden_apps_hint">Stuknij, aby pokazać</string>
+    <string name="home_app_hidden_apps_hint">Dotknij, aby pokazać</string>
     <string name="android_11_bug_dialog_title">Błąd Androida 11</string>
     <string name="android_11_bug_dialog_description">Uprawnienie do instalowania aplikacji musi zostać nadane wcześniej, aby uniknąć błędu w systemie Android 11, który negatywnie wpływa na działanie aplikacji</string>
     <string name="deep_link_add_source_title">Dodaj źródło</string>
@@ -63,10 +63,10 @@
     <string name="sources_management_experimental_versions_toggle">Używaj eksperymentalnych wersji aplikacji</string>
     <string name="sources_management_experimental_versions_toggle_description">Modyfikuj wersje eksperymentalne, jeśli są dostępne</string>
     <string name="sources_management_already_exists">To źródło zostało już dodane</string>
-    <string name="sources_management_invalid_url">Nieprawidłowy adres URL źródła. Sprawdź adres i spróbuj ponownie</string>
+    <string name="sources_management_invalid_url">Nieprawidłowy adres źródła. Sprawdź adres i spróbuj ponownie</string>
     <string name="sources_management_metadata_unavailable">Brak metadanych</string>
     <string name="sources_management_metadata_unavailable_hint">Zdalny plik metadanych jest niedostępny. Modyfikowanie przy użyciu zainstalowanego pakietu nadal działa, ale automatyczna aktualizacja dla tego źródła została wyłączona</string>
-    <string name="sources_management_metadata_unavailable_hint_missing">Nie udało się pobrać pakietu modyfikacji. Adres URL źródła może być nieprawidłowy lub plik nie istnieje</string>
+    <string name="sources_management_metadata_unavailable_hint_missing">Nie udało się pobrać pakietu modyfikacji. Adres źródła może być nieprawidłowy lub plik nie istnieje</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Nazwa wyświetlana</string>
     <string name="sources_dialog_rename">Zmień nazwę źródła modyfikacji</string>
@@ -77,15 +77,15 @@
     <string name="sources_dialog_add_source">Dodaj źródło modyfikacji</string>
     <string name="sources_dialog_delete_confirm_message">Usunąć źródło \"%s\"? Tej operacji nie da się cofnąć</string>
     <string name="sources_dialog_remote">Zdalne</string>
-    <string name="sources_dialog_remote_url">Adres URL źródła</string>
+    <string name="sources_dialog_remote_url">Adres źródła</string>
     <string name="sources_dialog_remote_url_formats_title">Przykłady:</string>
     <string name="sources_dialog_local">Lokalne</string>
     <string name="sources_dialog_local_file">Wybierz plik źródłowy modyfikacji</string>
-    <string name="sources_dialog_local_file_tap_hint">Stuknij, aby przeglądać pliki</string>
+    <string name="sources_dialog_local_file_tap_hint">Dotknij, aby przeglądać pliki</string>
     <string name="sources_dialog_local_file_description">Wybierz plik źródłowy .mpp z pamięci urządzenia</string>
     <string name="sources_dialog_local_invalid_extension">Plik musi mieć rozszerzenie .mpp</string>
-    <string name="sources_dialog_url_valid">Prawidłowe repozytorium lub adres URL pliku JSON</string>
-    <string name="sources_dialog_url_invalid">Adres URL musi wskazywać na repozytorium GitHub/GitLab lub plik .json</string>
+    <string name="sources_dialog_url_valid">Prawidłowe repozytorium lub adres pliku JSON</string>
+    <string name="sources_dialog_url_invalid">Adres musi wskazywać na repozytorium GitHub/GitLab lub plik .json</string>
     <string name="sources_dialog_local_change_file">Zmień plik</string>
     <string name="sources_dialog_preinstalled">Wbudowane</string>
     <string name="sources_update_success">Aktualizacja zakończona pomyślnie</string>
@@ -105,6 +105,7 @@
     <string name="home_apk_availability_yes">Tak, pomóż mi znaleźć plik APK</string>
     <string name="home_apk_availability_no">Nie, mam już plik APK</string>
     <string name="home_apk_use_saved_with_version">Użyj zapisanego pliku APK (v%s)</string>
+    <string name="home_apk_use_installed_with_version">Użyj zainstalowanego pliku APK (v%s)</string>
     <string name="home_app_info_no_saved_apk">Brak zapisanego pliku APK. Modyfikacja będzie wymagać ponownego wybrania pliku</string>
     <string name="home_version_requires_android">Wymaga Androida %s+</string>
     <string name="home_apk_no_compatible_versions_title">Niewspierane na tym urządzeniu</string>
@@ -127,7 +128,7 @@
     <string name="home_recommended_version">Zalecana wersja</string>
     <string name="home_selected_version">Wybrana wersja</string>
     <string name="home_select_apk_title">Wybierz plik APK</string>
-    <string name="home_select_any_apk_description">Stuknij przycisk poniżej, aby wybrać plik APK dowolnej aplikacji do modyfikacji</string>
+    <string name="home_select_any_apk_description">Dotknij przycisk poniżej, aby wybrać plik APK dowolnej aplikacji do modyfikacji</string>
     <string name="home_invalid_apk_unreadable">Nie udało się odczytać pliku. Sprawdź, czy \"Pamięć zewnętrzna\" nie ma włączonych ograniczeń baterii</string>
     <string name="home_invalid_apk_not_an_apk">Wybrany plik nie jest prawidłowym plikiem APK</string>
     <string name="home_invalid_apk_io_error">Nie udało się otworzyć pliku. Spróbuj ponownie</string>
@@ -263,6 +264,11 @@ Aby uzyskać najlepszy efekt, zalecamy zmodyfikowanie &lt;b&gt;pełnego pliku AP
     <string name="patcher_unknown_error">Wystąpił nieznany błąd</string>
     <string name="patcher_conflict_title">Konflikt pakietów</string>
     <string name="patcher_conflict_subtitle">Musisz odinstalować obecną wersję</string>
+    <string name="patcher_conflict_hint">Zmodyfikowana aplikacja używa innego certyfikatu niż zainstalowana wersja. Odinstalowanie wyczyści wszystkie dane aplikacji</string>
+    <string name="patcher_installed_conflict_title">Wymagane odinstalowanie</string>
+    <string name="patcher_installed_conflict_body">"Morphe podpisuje zmodyfikowane aplikacje własnym certyfikatem, który różni się od oryginalnego. Android wymaga usunięcia istniejącej wersji, zanim będzie można zainstalować zmodyfikowaną aplikację.
+
+Odinstalowanie bezpowrotnie usunie wszystkie dane aplikacji"</string>
     <string name="patcher_install_error_title">Błąd instalacji</string>
     <string name="patcher_install_error_subtitle">Spróbuj odinstalować aplikację i zainstalować ją ponownie</string>
     <string name="patcher_ready_to_install_subtitle">Naciśnij przycisk poniżej, aby zainstalować</string>
@@ -271,7 +277,7 @@ Aby uzyskać najlepszy efekt, zalecamy zmodyfikowanie &lt;b&gt;pełnego pliku AP
     <string name="patcher_incompatible_patcher_title">Wymagana aktualizacja</string>
     <string name="patcher_incompatible_patcher_description">Pakiet &lt;b&gt;%1$s&lt;/b&gt; wymaga modyfikatora w wersji &lt;b&gt;%2$s&lt;/b&gt; lub nowszej. Zaktualizuj Morphe, aby zmodyfikować tę aplikację</string>
     <string name="patcher_incompatible_patcher_update_button">Pobierz i zaktualizuj Morphe</string>
-    <string name="patcher_storage_permission_description_api30">Przynajmniej jedna opcja modyfikacji wskazuje na ścieżki, których Morphe nie może odczytać. Przyznaj dostęp do pamięci i stuknij przycisk, a modyfikowanie rozpocznie się automatycznie</string>
+    <string name="patcher_storage_permission_description_api30">Przynajmniej jedna opcja modyfikacji wskazuje na ścieżki, których Morphe nie może odczytać. Przyznaj dostęp do pamięci i dotknij przycisk, a modyfikowanie rozpocznie się automatycznie</string>
     <string name="patcher_storage_permission_description_legacy">Przynajmniej jedna opcji modyfikacji wskazuje na ścieżki, do których nie można uzyskać dostępu. Zaktualizuj ścieżki w opcjach i spróbuj ponownie</string>
     <string name="patcher_storage_permission_grant">Przyznaj uprawnienia dostępu do pamięci</string>
     <string name="patcher_storage_permission_denied_warning">Odmówiono uprawnień do pamięci. Przyznaj uprawnienia, aby korzystać z tej ścieżki, lub przenieś pliki do prywatnego folderu aplikacji</string>
@@ -290,7 +296,7 @@ Aby uzyskać najlepszy efekt, zalecamy zmodyfikowanie &lt;b&gt;pełnego pliku AP
     <string name="patcher_step_sign_apk">Podpisywanie zmodyfikowanego pliku APK</string>
     <!-- Patcher Screen - Patcher Worker -->
     <string name="patcher_notification_title">Modyfikowanie w toku…</string>
-    <string name="patcher_notification_text">Stuknij, aby wrócić do modyfikatora</string>
+    <string name="patcher_notification_text">Dotknij, aby wrócić do modyfikatora</string>
     <string name="patcher_stop_confirm_title">Zatrzymaj modyfikator</string>
     <string name="patcher_stop_confirm_description">Czy na pewno chcesz zatrzymać proces modyfikowania?</string>
     <!-- Patcher Screen - Patcher Messages -->
@@ -409,7 +415,7 @@ Aby uzyskać najlepszy efekt, zalecamy zmodyfikowanie &lt;b&gt;pełnego pliku AP
     <string name="notification_manager_update_title">Dostępna aktualizacja Morphe</string>
     <string name="notification_bundle_update_title">Dostępne nowe modyfikacje</string>
     <string name="notification_update_text">Wersja %s jest gotowa do pobrania</string>
-    <string name="notification_bundle_update_text_unversioned">Stuknij, aby otworzyć Morphe i zaktualizować</string>
+    <string name="notification_bundle_update_text_unversioned">Dotknij, aby otworzyć Morphe i zaktualizować</string>
     <string name="notification_permission_dialog_title">Zezwól na powiadomienia</string>
     <string name="notification_permission_dialog_description">Morphe wymaga uprawnień do powiadomień, aby informować Cię o dostępnych aktualizacjach w tle</string>
     <string name="notification_post_patch_dialog_title">Czy chcesz otrzymywać powiadomienia o dostępnych aktualizacjach?</string>

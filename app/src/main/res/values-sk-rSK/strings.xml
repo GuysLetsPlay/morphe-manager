@@ -105,6 +105,7 @@
     <string name="home_apk_availability_yes">Áno, pomôžte mi nájsť APK súbor</string>
     <string name="home_apk_availability_no">Nie, už mám APK súbor</string>
     <string name="home_apk_use_saved_with_version">Použiť uložený APK súbor (v%s)</string>
+    <string name="home_apk_use_installed_with_version">Použite nainštalovaný APK súbor (v%s)</string>
     <string name="home_app_info_no_saved_apk">Nie je uložený žiadny súbor APK. Na zaplátanie bude potrebné znova vybrať APK súbor</string>
     <string name="home_version_requires_android">Vyžaduje Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">Nepodporované na tomto zariadení</string>
@@ -263,6 +264,11 @@ Pre najlepšie výsledky sa odporúča záplatovať &lt;b&gt;úplný APK&lt;/b&g
     <string name="patcher_unknown_error">Vyskytla sa neznáma chyba</string>
     <string name="patcher_conflict_title">Konflikt balíkov</string>
     <string name="patcher_conflict_subtitle">Musíte odinštalovať existujúcu verziu</string>
+    <string name="patcher_conflict_hint">Upravená aplikácia používa iný certifikát ako nainštalovaná verzia. Odinštalovaním sa vymažú všetky údaje aplikácie.</string>
+    <string name="patcher_installed_conflict_title">Vyžaduje sa odinštalovanie</string>
+    <string name="patcher_installed_conflict_body">"Aplikácia Morphe podpisuje upravené aplikácie vlastným certifikátom, ktorý sa líši od pôvodného. Android vyžaduje odstránenie existujúcej verzie pred inštaláciou upravenej aplikácie.
+
+Odinštalovanie trvalo vymaže všetky údaje aplikácie."</string>
     <string name="patcher_install_error_title">Chyba pri inštalácii</string>
     <string name="patcher_install_error_subtitle">Skúste odinštalovať a znovu nainštalovať</string>
     <string name="patcher_ready_to_install_subtitle">Stlačte tlačidlo nižšie pre inštaláciu</string>

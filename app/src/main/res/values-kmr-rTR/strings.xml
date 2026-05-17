@@ -105,6 +105,7 @@
     <string name="home_apk_availability_yes">Ew, min alîkarê dîtina APK-yê bikîn</string>
     <string name="home_apk_availability_no">Na, ez APK-yek heznikim</string>
     <string name="home_apk_use_saved_with_version">APK a vekirî te (v%s) bejin</string>
+    <string name="home_apk_use_installed_with_version">APK-ya sazkirî (v%s) bikar bîne</string>
     <string name="home_app_info_no_saved_apk">APK kume ne. Berî ev, wê APK ava beke</string>
     <string name="home_version_requires_android">Android %s+ hewce dike.</string>
     <string name="home_apk_no_compatible_versions_title">Li vê cihazê de ne piştgirîkirî</string>
@@ -261,6 +262,11 @@ Ji bo mezgînî, ev sepan pêşniyar dike ku paketek &lt;b&gt;full APK&lt;/b&gt;
     <string name="patcher_unknown_error">Xetalî nenas çê bû</string>
     <string name="patcher_conflict_title">Tengava pakêt</string>
     <string name="patcher_conflict_subtitle">Divê hûn guhertoyek hebin</string>
+    <string name="patcher_conflict_hint">Serîlêdana rasterkirî sertîfîka jûda li gorî guhertoya sazkirî bikar tîne. Rakirin dê hemû daneyên serîlêdanê tune bike</string>
+    <string name="patcher_installed_conflict_title">Navê ku lazim e bê dîtin</string>
+    <string name="patcher_installed_conflict_body">"Morphe serîlêdanên guhertî bi şehadeya xwe ya taybet îmza dike, ku ji ya orjînal cûda ye. Android hewce dike ku veguherîna heyî berî veguherîna serîlêdanê were neqişandin.
+
+Neqişandin dê hemî daneyên serîlêdanê bi awayê daîmî tune bike"</string>
     <string name="patcher_install_error_title">Xetalî sazkirinê</string>
     <string name="patcher_install_error_subtitle">Heke hewce bike, saz bike û dîsa saz bike</string>
     <string name="patcher_ready_to_install_subtitle">Ji bo saz kirinê ser  duxwe bikşînin</string>

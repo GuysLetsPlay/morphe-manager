@@ -102,6 +102,7 @@
     <string name="home_apk_availability_yes">হ্যাঁ, আমাকে একটি APK খুঁজতে সাহায্য করুন</string>
     <string name="home_apk_availability_no">না, আমি ইতিমধ্যে একটি APK পেয়েছি</string>
     <string name="home_apk_use_saved_with_version">বর্তমান সংরক্ষিত APK (v%s) ব্যবহার করুন</string>
+    <string name="home_apk_use_installed_with_version">APK (v%s) ব্যবহার করুন</string>
     <string name="home_app_info_no_saved_apk">কোন সংরক্ষিত APK নেই। প্যাচিংয়ের জন্য আবার APK ফাইল নির্বাচন করতে হবে</string>
     <string name="home_version_requires_android">Android %s+ প্রয়োজন</string>
     <string name="home_apk_no_compatible_versions_title">এই ডিভাইসে সমর্থিত নয়</string>
@@ -260,6 +261,11 @@
     <string name="patcher_unknown_error">অজানা ত্রুটি ঘটেছে</string>
     <string name="patcher_conflict_title">প্যাকেজ দ্বন্দ্ব</string>
     <string name="patcher_conflict_subtitle">আপনাকে বিদ্যমান সংস্করণটি আনইনস্টল করতে হবে</string>
+    <string name="patcher_conflict_hint">প্যাচ করা অ্যাপটি ইনস্টল করা সংস্করণের চেয়ে আলাদা সার্টিফিকেট ব্যবহার করে। আনইনস্টল করলে অ্যাপের সমস্ত ডেটা মুছে যাবে।</string>
+    <string name="patcher_installed_conflict_title">আনইনস্টল করা প্রয়োজন</string>
+    <string name="patcher_installed_conflict_body">"Morphe তার নিজস্ব সার্টিফিকেট দিয়ে প্যাচ করা অ্যাপগুলিতে স্বাক্ষর করে, যা মূলটির থেকে আলাদা। প্যাচ করা অ্যাপ ইনস্টল করার আগে, বিদ্যমান সংস্করণটি সরিয়ে ফেলতে Android-এর প্রয়োজন।
+
+আনইনস্টল করলে সমস্ত অ্যাপের ডেটা স্থায়ীভাবে মুছে যাবে"</string>
     <string name="patcher_install_error_title">ইনস্টলেশন ত্রুটি</string>
     <string name="patcher_install_error_subtitle">আনইনস্টল করে আবার ইনস্টল করার চেষ্টা করুন</string>
     <string name="patcher_ready_to_install_subtitle">ইনস্টল করতে নিচের বোতামটি টিপুন</string>

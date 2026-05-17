@@ -105,6 +105,7 @@
     <string name="home_apk_availability_yes">نعم، ساعدني في العثور على ملف APK</string>
     <string name="home_apk_availability_no">لا، لدي ملف APK بالفعل</string>
     <string name="home_apk_use_saved_with_version">استخدام ملف APK المحفوظ (v%s)</string>
+    <string name="home_apk_use_installed_with_version">استخدام ملف APK المثبت (v%s)</string>
     <string name="home_app_info_no_saved_apk">لا يوجد ملف APK محفوظ. ستتطلب عملية التعديل إعادة اختيار ملف APK</string>
     <string name="home_version_requires_android">يتطلب Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">غير مدعوم على هذا الجهاز</string>
@@ -263,6 +264,11 @@
     <string name="patcher_unknown_error">حدث خطأ غير معروف</string>
     <string name="patcher_conflict_title">تعارض الحزمة</string>
     <string name="patcher_conflict_subtitle">تحتاج إلى إلغاء تثبيت الإصدار الحالي</string>
+    <string name="patcher_conflict_hint">يستخدم التطبيق الذي تم تعديله شهادة مختلفة عن الإصدار المثبت. سيؤدي إلغاء التثبيت إلى محو جميع بيانات التطبيق.</string>
+    <string name="patcher_installed_conflict_title">يتطلب إلغاء التثبيت</string>
+    <string name="patcher_installed_conflict_body">"يقوم Morphe بتوقيع التطبيقات التي تم تعديلها بشهادته الخاصة، والتي تختلف عن الأصلية. يتطلب Android إزالة الإصدار الحالي قبل تثبيت التطبيق الذي تم تعديله.
+
+سيؤدي إلغاء التثبيت إلى محو جميع بيانات التطبيق بشكل دائم"</string>
     <string name="patcher_install_error_title">خطأ في التثبيت</string>
     <string name="patcher_install_error_subtitle">جرب إلغاء التثبيت والتثبيت مرة أخرى</string>
     <string name="patcher_ready_to_install_subtitle">اضغط على الزر أدناه للتثبيت</string>
@@ -290,7 +296,7 @@
     <string name="patcher_step_sign_apk">جارٍ توقيع ملف APK المعدل</string>
     <!-- Patcher Screen - Patcher Worker -->
     <string name="patcher_notification_title">جارٍ التعديل…</string>
-    <string name="patcher_notification_text">اضغط للعودة إلى أداة التعديل</string>
+    <string name="patcher_notification_text">انقر للعودة إلى أداة التعديل</string>
     <string name="patcher_stop_confirm_title">إيقاف أداة التعديل</string>
     <string name="patcher_stop_confirm_description">هل أنت متأكد أنك تريد إيقاف عملية التعديل؟</string>
     <!-- Patcher Screen - Patcher Messages -->
@@ -629,9 +635,9 @@ morphe_adaptive_monochrome_custom.xml
     <string name="settings_system_patch_selection_patches_in_sources_format">%1$s في %2$s</string>
     <string name="settings_system_patch_selection_source_format">مصدر #%s</string>
     <string name="settings_system_patch_selection_will_delete">هذا سيحذف:</string>
-    <string name="settings_system_patch_selection_reset_all_warning">هذا سيحذف كل تحديدات التعديلات محفوظة بشكل دائم لجميع الحزم والمصادر</string>
-    <string name="settings_system_patch_selection_reset_package_warning">هذا سيحذف كل تحديدات التعديلات المحفوظة بشكل دائم لـ %s عبر جميع المصادر</string>
-    <string name="settings_system_patch_selection_reset_source_warning">هذا سيحذف تحديدات التعديلات المحفوظة لـ %1$s في مصدر #%2$s</string>
+    <string name="settings_system_patch_selection_reset_all_warning">هذا سيحذف كل التعديلات المحددة المحفوظة بشكل دائم لجميع الحزم والمصادر</string>
+    <string name="settings_system_patch_selection_reset_package_warning">هذا سيحذف كل التعديلات المحددة المحفوظة بشكل دائم لـ %s عبر جميع المصادر</string>
+    <string name="settings_system_patch_selection_reset_source_warning">هذا سيحذف التعديلات المحددة المحفوظة لـ %1$s في مصدر #%2$s</string>
     <string name="settings_system_export_source_data_fail">فشل تصدير بيانات المصدر</string>
     <string name="settings_system_export_source_data_success">تم تصدير بيانات المصدر بنجاح</string>
     <string name="settings_system_import_source_data_fail">فشل استيراد بيانات المصدر</string>
@@ -639,7 +645,7 @@ morphe_adaptive_monochrome_custom.xml
     <string name="settings_system_patch_details_title">تفاصيل التعديل</string>
     <string name="settings_system_selected_patches_title">التعديلات المحددة (%s)</string>
     <string name="settings_system_patch_options_title">خيارات التعديل (%s)</string>
-    <string name="settings_system_no_patches_or_options">لا يوجد معدلات أو خيارات محفوظة</string>
+    <string name="settings_system_no_patches_or_options">لا يوجد تعديلات أو خيارات محفوظة</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">لمحة</string>
     <string name="settings_system_share_website">مشاركة الموقع الإلكتروني</string>

@@ -5,7 +5,7 @@
     <string name="home_not_patched_yet">Inte modifierad än</string>
     <string name="home_no_patches_available">Inga tillägg är tillgängliga</string>
     <string name="home_app_hide_title">Dölj den här appen?</string>
-    <string name="home_app_hide_message">Den här appen döljs från startsidan. Du kan återställa den senare från de dolda apparna med knappen längst ned i listan</string>
+    <string name="home_app_hide_message">Den här appen döljs från startskärmen. Du kan återställa den senare från de dolda apparna med knappen längst ned i listan</string>
     <string name="home_app_will_be_hidden">Den här appen döljs</string>
     <string name="home_app_show_hidden">Visa dolda appar</string>
     <string name="home_app_no_hidden">Inga dolda appar</string>
@@ -33,7 +33,7 @@
     <string name="home_no_apps_subtitle">Lägg till en källa eller aktivera en befintlig i %s</string>
     <string name="home_no_apps_search_subtitle">Inga appar matchar \"%s\"</string>
     <string name="home_all_apps_hidden_title">Alla appar är dolda</string>
-    <string name="home_all_apps_hidden_subtitle">Du har dolt alla appar från startsidan</string>
+    <string name="home_all_apps_hidden_subtitle">Du har dolt alla appar från startskärmen</string>
     <!-- Home Screen - Home Greetings -->
     <string name="home_greeting_1">Vilken app vill du modifiera?</string>
     <!-- Humorous hype message with light nostalgia -->
@@ -255,7 +255,7 @@ För bästa resultat rekommenderar den här appen att du modifierar en &lt;b&gt;
     <string name="patcher_long_step_warning">Det här steget kan ta en stund. Vänta …</string>
     <string name="patcher_installing_subtitle">Nästan redo att rocka loss! 🎸</string>
     <string name="patcher_success_title">Klart! 🎉</string>
-    <string name="patcher_success_subtitle">Din app är modifierad och installerad!</string>
+    <string name="patcher_success_subtitle">Appen är modifierad och installerad!</string>
     <string name="patcher_complete_title">Modifieringen är klar! ✨</string>
     <string name="patcher_failed_title">Hoppsan! Något gick fel</string>
     <string name="patcher_failed_subtitle">Kontrollera felinformationen nedan</string>
@@ -294,9 +294,9 @@ För bästa resultat rekommenderar den här appen att du modifierar en &lt;b&gt;
     <string name="patcher_stop_confirm_title">Stoppa modifieringen</string>
     <string name="patcher_stop_confirm_description">Är du säker på att du vill stoppa modifieringsprocessen?</string>
     <!-- Patcher Screen - Patcher Messages -->
-    <string name="patcher_message_1">Omvandlar din app till något fantastiskt … 🏆</string>
+    <string name="patcher_message_1">Omvandlar appen till något fantastiskt … 🏆</string>
     <string name="patcher_message_2">Lär gamla appar att sitta … 🎩</string>
-    <string name="patcher_message_3">Ger din app en digital trimning … 🔧</string>
+    <string name="patcher_message_3">Trimmar appen digitalt … 🔧</string>
     <string name="patcher_message_4">Brygger digital magi … ☕</string>
     <string name="patcher_message_5">Kaffepaus rekommenderas … ☕</string>
     <string name="patcher_message_6">Titta ut, det är fint där ute … 🌤️</string>
@@ -307,7 +307,7 @@ För bästa resultat rekommenderar den här appen att du modifierar en &lt;b&gt;
     <string name="patcher_message_10">Bra tillägg är värda att vänta på … ⏳</string>
     <string name="patcher_message_11">Polerar pixlarna tills de glänser … 💎</string>
     <string name="patcher_message_12">Vänligen sitt kvar tills kaptenen har släckt skylten \"Modifiering pågår\" … 💺✈️</string>
-    <string name="patcher_message_13">Tillreder din modifierade app, varm och färsk … 🍳</string>
+    <string name="patcher_message_13">Tillreder den modifierade appen, varm och färsk … 🍳</string>
     <!-- "bytecode" can be translated from "the app code" -->
     <string name="patcher_message_14">Förhandlar artigt med bytekoden … 🤝</string>
     <!-- Space flight communications callout. -->
@@ -317,7 +317,7 @@ För bästa resultat rekommenderar den här appen att du modifierar en &lt;b&gt;
     <!-- Quantum physics (box emoji is a reference to Schrodinger's cat). -->
     <string name="patcher_message_18">Ändrar appens superposition från omodifierad till modifierad … 📦⚛️</string>
     <!-- Throw away reference to a Saturday Night Live sketch. "fever" means sickness or the flu. "prescription" means medical treatment or can be translated from "cure" -->
-    <string name="patcher_message_19">Din app har feber, och det enda botemedlet är fler tillägg … 🩺🔔</string>
+    <string name="patcher_message_19">Appen är sjuk, och det enda botemedlet är fler tillägg … 🩺🔔</string>
     <string name="patcher_message_20">Tar bort nonsens. Vänligen vänta … 🗑️</string>
     <!-- Expert patcher Screen -->
     <string name="patching_app">Modifierar appen</string>
@@ -347,7 +347,7 @@ För bästa resultat rekommenderar den här appen att du modifierar en &lt;b&gt;
     <string name="settings_appearance_background_circles">Cirklar</string>
     <string name="settings_appearance_background_rings">Ringar</string>
     <string name="settings_appearance_background_mesh">Nät</string>
-    <string name="settings_appearance_background_space">Rymden</string>
+    <string name="settings_appearance_background_space">Rymd</string>
     <string name="settings_appearance_background_shapes">Former</string>
     <string name="settings_appearance_background_snow">Snö</string>
     <string name="settings_appearance_background_grid">Rutnät</string>
@@ -374,9 +374,9 @@ För bästa resultat rekommenderar den här appen att du modifierar en &lt;b&gt;
     <string name="settings_appearance_translations_info_title">Översättningar till vissa språk kan saknas eller vara ofullständiga</string>
     <string name="settings_appearance_translations_info_text">Om du vill översätta till nya språk eller förbättra de befintliga översättningarna besöker du %s</string>
     <!-- Settings - Appearance Tab - Home Screen Section -->
-    <string name="settings_appearance_home_screen">Startsida</string>
+    <string name="settings_appearance_home_screen">Startskärm</string>
     <string name="settings_appearance_greeting_phrases">Hälsningsfraser</string>
-    <string name="settings_appearance_greeting_phrases_subtitle">Visa ett hälsningsmeddelande på startsidan</string>
+    <string name="settings_appearance_greeting_phrases_subtitle">Visa ett hälsningsmeddelande på startskärmen</string>
     <!-- Settings - Appearance Tab - App Icon Selector -->
     <string name="settings_appearance_app_icon_selector_title">Appikon</string>
     <string name="settings_appearance_app_icon_default">Standard</string>
@@ -427,7 +427,7 @@ För bästa resultat rekommenderar den här appen att du modifierar en &lt;b&gt;
     <string name="settings_advanced_strip_unused_libs_description">"Hoppa över delade APK-moduler för CPU-arkitekturer, språk och skärmupplösningar som inte stöds vid sammanslagning.
 Tar bort inbyggda bibliotek för arkitekturer som inte stöds från vanliga APK-filer efter att appen har modifierats "</string>
     <!-- Bytecode mode -->
-    <string name="settings_advanced_bytecode_mode">Läge för bytekodbearbetning</string>
+    <string name="settings_advanced_bytecode_mode">Bearbetningsläge för bytekod</string>
     <string name="settings_advanced_bytecode_mode_dialog_description">Kontrollerar hur bytekoden bearbetas när appar modifieras. Detta påverkar modifieringshastighet, minnesanvändning och den slutliga APK-filens storlek</string>
     <string name="settings_advanced_bytecode_mode_strip_fast_label">Snabbt (Rekommenderas)</string>
     <string name="settings_advanced_bytecode_mode_strip_fast">Snabbt</string>
@@ -527,7 +527,7 @@ Bildernas mått ska vara följande:
     <string name="installer">Installerare</string>
     <string name="installer_title">Välj installerare</string>
     <string name="installer_internal_name">Systemets installerare</string>
-    <string name="installer_internal_description">Använd Androids pakethanterare</string>
+    <string name="installer_internal_description">Använd Androids paketinstallerare</string>
     <string name="installer_auto_saved_name">Rootad monteringsinstallerare</string>
     <string name="installer_auto_saved_description">Monterar den modifierade APK-filen över den installerade appen</string>
     <string name="installer_shizuku_description">Installera tyst med Shizuku eller Sui</string>

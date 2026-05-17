@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <plurals name="patch_count">
-        <item quantity="one">%s popravilo</item>
-        <item quantity="two">%s popravka</item>
+        <item quantity="one">%s Popravek</item>
+        <item quantity="two">%s Popravka</item>
         <item quantity="few">%s popravki</item>
-        <item quantity="other">%s popravki</item>
+        <item quantity="other">%s Popravkih</item>
     </plurals>
     <plurals name="option_count">
         <item quantity="one">%s možnost</item>
         <item quantity="two">%s možnosti popravka</item>
-        <item quantity="few">%s možnosti popravkov</item>
+        <item quantity="few">%s Možnosti popravkov</item>
         <item quantity="other">%s možnosti popravka</item>
     </plurals>
     <plurals name="source_count">
         <item quantity="one">%s vir</item>
-        <item quantity="two">%s vira</item>
+        <item quantity="two">%s Vira</item>
         <item quantity="few">%s viri</item>
-        <item quantity="other">%s virov</item>
+        <item quantity="other">%s Virov</item>
     </plurals>
     <plurals name="package_count">
         <item quantity="one">%s paket</item>
-        <item quantity="two">%s paketa</item>
+        <item quantity="two">%s Paketa</item>
         <item quantity="few">%s paketi</item>
         <item quantity="other">%s paketi</item>
     </plurals>

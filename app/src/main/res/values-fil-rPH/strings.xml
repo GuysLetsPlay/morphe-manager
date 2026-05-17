@@ -105,6 +105,7 @@
     <string name="home_apk_availability_yes">Oo, tulungan mo akong hanapin ang APK</string>
     <string name="home_apk_availability_no">Hindi, mayroon na akong APK</string>
     <string name="home_apk_use_saved_with_version">Gamitin ang nakaimbak na APK (v%s)</string>
+    <string name="home_apk_use_installed_with_version">Gamitin ang naka-install na APK (v%s)</string>
     <string name="home_app_info_no_saved_apk">Walang nakaimbak na APK. Ang pag-patch na ito ay mangangailangan ng muling pagpili ng APK file</string>
     <string name="home_version_requires_android">Nangangailangan ng Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">Hindi suportado sa aparatong ito</string>
@@ -263,6 +264,11 @@ Para sa pinakamahusay na resulta, nirerekomenda ng app na ito na i-patch ang isa
     <string name="patcher_unknown_error">May hindi kilalang pagkakamali na naganap</string>
     <string name="patcher_conflict_title">Salungatan sa pakete</string>
     <string name="patcher_conflict_subtitle">Kailangan mong burahin ang umiiral na bersyon</string>
+    <string name="patcher_conflict_hint">Gumagamit ang patched app ng ibang certificate kaysa sa naka-install na bersyon. Ang pag-uninstall ay magbubura ng lahat ng data ng app.</string>
+    <string name="patcher_installed_conflict_title">Kinakailangan ang pag-uninstall</string>
+    <string name="patcher_installed_conflict_body">"Nilalagdaan ng Morphe ang mga patched app gamit ang sarili nitong sertipiko, na naiiba sa orihinal. Kinakailangan ng Android na alisin ang kasalukuyang bersyon bago mai-install ang patched app.
+
+Ang pag-uninstall ay permanenteng bubura sa lahat ng data ng app."</string>
     <string name="patcher_install_error_title">Pagkakamali sa pag-install</string>
     <string name="patcher_install_error_subtitle">Subukan mong burahin at i-install muli</string>
     <string name="patcher_ready_to_install_subtitle">Pindutin ang button sa ibaba upang ma-install</string>

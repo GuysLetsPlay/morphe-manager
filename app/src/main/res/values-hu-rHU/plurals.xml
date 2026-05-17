@@ -5,8 +5,8 @@
         <item quantity="other">%s módosítás</item>
     </plurals>
     <plurals name="option_count">
-        <item quantity="one">%s módosítási beállítás</item>
-        <item quantity="other">%s módosítási beállítás</item>
+        <item quantity="one">%s módosítási opció</item>
+        <item quantity="other">%s módosítási opció</item>
     </plurals>
     <plurals name="source_count">
         <item quantity="one">%s forrás</item>
@@ -17,16 +17,16 @@
         <item quantity="other">%s csomag</item>
     </plurals>
     <plurals name="patches_executed">
-        <item quantity="one">%s módosítás végrehajtása</item>
-        <item quantity="other">%s módosítások végrehajtása</item>
+        <item quantity="one">%s módosítás alkalmazva</item>
+        <item quantity="other">%s módosítás alkalmazva</item>
     </plurals>
     <plurals name="settings_system_apks_count">
         <item quantity="one">%s APK fájl</item>
         <item quantity="other">%s APK fájl</item>
     </plurals>
     <plurals name="home_app_info_repatch_cleaned_invalid_data">
-        <item quantity="one">%s elavult módosítás eltávolítva a mentett összeállításból</item>
-        <item quantity="other">%s elavult módosítás eltávolítva a mentett összeállításból</item>
+        <item quantity="one">%s elavult módosítás eltávolítva a mentett kiválasztásból</item>
+        <item quantity="other">%s elavult módosítás eltávolítva a mentett kiválasztásból</item>
     </plurals>
     <plurals name="sources_management_subtitle">
         <item quantity="one">%s forrás telepítve</item>
@@ -37,11 +37,11 @@
         <item quantity="other">%s módosítás kiválasztva</item>
     </plurals>
     <plurals name="home_app_show_selected">
-        <item quantity="one">Mutassa a(z) %s alkalmazást</item>
-        <item quantity="other">Mutassa a(z) %s alkalmazásokat</item>
+        <item quantity="one">%s alkalmazás megjelenítése</item>
+        <item quantity="other">%s alkalmazás megjelenítése</item>
     </plurals>
     <plurals name="home_app_show_hidden_count">
         <item quantity="one">%s rejtett alkalmazás</item>
-        <item quantity="other">%s rejtett alkalmazások</item>
+        <item quantity="other">%s rejtett alkalmazás</item>
     </plurals>
 </resources>

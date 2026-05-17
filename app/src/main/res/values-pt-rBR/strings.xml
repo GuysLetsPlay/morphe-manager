@@ -53,9 +53,9 @@
     <!-- Playful exaggeration, making patching feel heroic -->
     <string name="home_greeting_9">Salvando apps de si mesmos desde hoje</string>
     <!-- Light sarcasm, casual and tech-savvy humor -->
-    <string name="home_greeting_10">Movido a cafeína e boas correções</string>
+    <string name="home_greeting_10">Movido a cafeína e bons patches</string>
     <!-- Home Screen - Sources Management -->
-    <string name="sources_management_title">Fontes de correção</string>
+    <string name="sources_management_title">Fontes de patches</string>
     <string name="sources_management_open_in_browser">Abrir links no navegador</string>
     <string name="sources_management_failed_to_open_url">Falha ao abrir URL</string>
     <string name="sources_management_prerelease_toggle">Usar correções de pré-lançamento</string>
@@ -105,6 +105,7 @@
     <string name="home_apk_availability_yes">Sim, me ajude a encontrar um APK</string>
     <string name="home_apk_availability_no">Não, eu já tenho um APK</string>
     <string name="home_apk_use_saved_with_version">Use saved APK (v%s)</string>
+    <string name="home_apk_use_installed_with_version">Usar APK instalado (v%s)</string>
     <string name="home_app_info_no_saved_apk">Não há APK salvo. O patch exigirá a seleção do arquivo APK novamente</string>
     <string name="home_version_requires_android">Requer Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">Não suportado neste dispositivo</string>
@@ -263,6 +264,11 @@ Para obter os melhores resultados, este aplicativo recomenda corrigir um(a) &lt;
     <string name="patcher_unknown_error">Ocorreu um erro desconhecido</string>
     <string name="patcher_conflict_title">Conflito de pacote</string>
     <string name="patcher_conflict_subtitle">Você precisa desinstalar a versão existente</string>
+    <string name="patcher_conflict_hint">O aplicativo corrigido usa um certificado diferente da versão instalada. Desinstalar irá apagar todos os dados do aplicativo.</string>
+    <string name="patcher_installed_conflict_title">Desinstalação necessária</string>
+    <string name="patcher_installed_conflict_body">"O Morphe assina aplicativos corrigidos com seu próprio certificado, que é diferente do original. O Android exige a remoção da versão existente antes que o aplicativo corrigido possa ser instalado.
+
+A desinstalação apagará permanentemente todos os dados do aplicativo."</string>
     <string name="patcher_install_error_title">Erro de instalação</string>
     <string name="patcher_install_error_subtitle">Tente desinstalar e instalar novamente</string>
     <string name="patcher_ready_to_install_subtitle">Pressione o botão abaixo para instalar</string>
@@ -650,7 +656,7 @@ As dimensões das imagens devem ser as seguintes:
     <string name="credits_prior_development">Desenvolvimento anterior</string>
     <string name="opensource_licenses">Licenças de código aberto</string>
     <!-- Shared strings -->
-    <string name="patches">Remendos</string>
+    <string name="patches">Patches</string>
     <string name="home">Início</string>
     <string name="settings">Configurações</string>
     <string name="yes">Sim</string>

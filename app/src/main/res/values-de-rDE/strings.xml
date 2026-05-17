@@ -105,6 +105,7 @@
     <string name="home_apk_availability_yes">Ja, hilf mir eine APK zu finden</string>
     <string name="home_apk_availability_no">Nein, ich habe bereits eine APK</string>
     <string name="home_apk_use_saved_with_version">Verwende die gespeicherte APK (v%s)</string>
+    <string name="home_apk_use_installed_with_version">Verwende die installierte APK (v%s)</string>
     <string name="home_app_info_no_saved_apk">Keine gespeicherte APK. Das Patchen erfordert die erneute Auswahl der APK-Datei</string>
     <string name="home_version_requires_android">Benötigt Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">Wird auf diesem Gerät nicht unterstützt</string>
@@ -263,6 +264,11 @@ Für optimale Ergebnisse empfiehlt diese App eine &lt;b&gt;vollständige APK&lt;
     <string name="patcher_unknown_error">Ein unbekannter Fehler ist aufgetreten</string>
     <string name="patcher_conflict_title">Paketkonflikt</string>
     <string name="patcher_conflict_subtitle">Du musst die vorhandene Version deinstallieren</string>
+    <string name="patcher_conflict_hint">Die gepatchte App verwendet ein anderes Zertifikat als die installierte Version. Die Deinstallation löscht alle App-Daten.</string>
+    <string name="patcher_installed_conflict_title">Deinstallation erforderlich</string>
+    <string name="patcher_installed_conflict_body">"Morphe signiert gepatchte Apps mit seinem eigenen Zertifikat, das sich vom Original unterscheidet. Android erfordert, dass die vorhandene Version entfernt wird, bevor die gepatchte App installiert werden kann.
+
+Durch die Deinstallation werden alle App-Daten dauerhaft gelöscht."</string>
     <string name="patcher_install_error_title">Installationsfehler</string>
     <string name="patcher_install_error_subtitle">Versuchen Sie die App zu deinstallieren und erneut zu installieren</string>
     <string name="patcher_ready_to_install_subtitle">Drücken Sie die Schaltfläche unten zum Installieren</string>

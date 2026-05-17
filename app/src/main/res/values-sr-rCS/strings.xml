@@ -105,6 +105,7 @@
     <string name="home_apk_availability_yes">Da, pomozi mi da pronađem APK</string>
     <string name="home_apk_availability_no">Ne, već imam APK</string>
     <string name="home_apk_use_saved_with_version">Koristišć saćuvani APK (v%s)</string>
+    <string name="home_apk_use_installed_with_version">Koristite instalovanu APK datoteku (v%s)</string>
     <string name="home_app_info_no_saved_apk">Nema sačuvanog APK-a. Krpljenje će zahtevati ponovni odabir APK datoteke</string>
     <string name="home_version_requires_android">Zahteva Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">Nije podržano na ovom uređaju</string>
@@ -263,6 +264,11 @@ Da li ste sigurni da želite nastaviti?"</string>
     <string name="patcher_unknown_error">Dogodila se nepoznata greška</string>
     <string name="patcher_conflict_title">Konflikt paketa</string>
     <string name="patcher_conflict_subtitle">Morate deinstalirati postojeću verziju</string>
+    <string name="patcher_conflict_hint">Popravljena aplikacija koristi drugačiji sertifikat od instalirane verzije. Deinstalacija će obrisati sve podatke aplikacije.</string>
+    <string name="patcher_installed_conflict_title">Potrebno je deinstalirati</string>
+    <string name="patcher_installed_conflict_body">"Morphe potpisuje modifikovane aplikacije sopstvenim sertifikatom, koji se razlikuje od originalnog. Android zahteva uklanjanje postojeće verzije pre instalacije modifikovane aplikacije.
+
+Deinstalacija će trajno obrisati sve podatke aplikacije"</string>
     <string name="patcher_install_error_title">Greška pri instalaciji</string>
     <string name="patcher_install_error_subtitle">Pokušajte deinstalirati pa ponovo instalirati</string>
     <string name="patcher_ready_to_install_subtitle">Pritisnite dugme ispod za instalaciju</string>

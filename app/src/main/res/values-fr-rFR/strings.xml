@@ -96,8 +96,8 @@
     <string name="sources_patch_expert_badge">Expert</string>
     <string name="sources_patch_expert_badge_tooltip">Activer le mode Expert dans les Paramètres pour inclure ce patch manuellement</string>
     <!-- Home Screen - Dialog 1: APK Availability -->
-    <string name="home_apk_availability_dialog_title">Besoin d’aide pour trouver un APK original non patché ?</string>
-    <string name="home_apk_availability_dialog_simple">Pour patcher &lt;b&gt;%s&lt;/b&gt;, vous avez besoin de la version APK originale non patché :</string>
+    <string name="home_apk_availability_dialog_title">Besoin d’aide pour trouver un APK d\'origine non patché ?</string>
+    <string name="home_apk_availability_dialog_simple">Pour patcher &lt;b&gt;%s&lt;/b&gt;, vous avez besoin de la version APK non patchée :</string>
     <string name="home_apk_availability_dialog_expert">Pour patcher &lt;b&gt;%s&lt;/b&gt;, vous avez besoin d’un APK non patché des versions :</string>
     <string name="home_apk_availability_recommended_label">Recommandé</string>
     <string name="home_apk_availability_unpatched_label">Non patchée</string>
@@ -105,12 +105,13 @@
     <string name="home_apk_availability_yes">Oui, aidez-moi à trouver un APK</string>
     <string name="home_apk_availability_no">Non, j\'ai déjà un APK</string>
     <string name="home_apk_use_saved_with_version">Utiliser l’APK enregistré (v%s)</string>
+    <string name="home_apk_use_installed_with_version">Utiliser l’APK installé (v%s)</string>
     <string name="home_app_info_no_saved_apk">Aucun APK enregistré. Le patchage nécessitera de sélectionner à nouveau le fichier APK</string>
     <string name="home_version_requires_android">Nécessite Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">Non pris en charge sur cet appareil</string>
     <string name="home_apk_no_compatible_versions_message">&lt;b&gt;%1$s&lt;/b&gt; n\'a pas de versions compatibles pour Android %2$d (API %3$d). Toutes les versions déclarées nécessitent une version Android plus récente</string>
     <!-- Home Screen - Dialog 2: Download Instructions -->
-    <string name="home_download_instructions_title">Télécharger l\'APK original</string>
+    <string name="home_download_instructions_title">Télécharger l\'APK d\'origine</string>
     <string name="home_download_instructions_steps_title">Instructions :</string>
     <string name="home_download_instructions_step1">Appuyez sur le bouton \'%s\' ci-dessous</string>
     <string name="home_download_instructions_step2_part1">Faites défiler la page Web et appuyez sur</string>
@@ -118,7 +119,7 @@
     <string name="home_download_instructions_step3">Attendez que le téléchargement se termine, et &lt;b&gt;n\'installez pas&lt;/b&gt; l\'APK</string>
     <string name="home_download_instructions_step3_mount">Attendez que le téléchargement ce terminé, puis &lt;b&gt;installez l\'APK&lt;/b&gt;</string>
     <string name="home_download_instructions_step4">Une fois le téléchargement terminé, revenez sur Morphe</string>
-    <string name="home_download_instructions_step4_mount">Après avoir installé l’APK original, revenez sur Morphe</string>
+    <string name="home_download_instructions_step4_mount">Après avoir installé l’APK d\'origine, revenez sur Morphe</string>
     <string name="home_download_instructions_continue">Continuer vers APKMirror.com</string>
     <!-- Home Screen - Dialog 3: File Picker Prompt -->
     <string name="home_file_picker_prompt_title">Sélectionner l\'APK téléchargé</string>
@@ -149,7 +150,7 @@ Voulez-vous vraiment continuer ?"</string>
     <!-- Home Screen - Home Sub-Dialogs -->
     <string name="home_invalid_signature_title">APK non vérifié</string>
     <string name="home_invalid_signature_message">L’APK que vous avez sélectionné pour &lt;b&gt;%s&lt;/b&gt; ne correspond pas au certificat de signature attendu. Il peut avoir été modifié ou provenir d’une source non fiable</string>
-    <string name="home_invalid_signature_badge">Cet APK pourrait ne pas être l\'original</string>
+    <string name="home_invalid_signature_badge">Cet APK n’est peut-être pas celui d’origine</string>
     <string name="home_split_apk_warning_title">APK fractionné détecté</string>
     <string name="home_split_apk_warning_message">"Ce fichier est un bundle APK (&lt;b&gt;APKM / APKS / XAPK&lt;/b&gt;).
 
@@ -218,13 +219,13 @@ Pour de meilleurs résultats, cette application recommande de patcher un &lt;b&g
     <string name="home_app_info_remove_app_warning">Cela supprimera définitivement :</string>
     <string name="home_app_info_delete_item_database">Entrée de base de données</string>
     <string name="home_app_info_delete_item_patched_apk">Fichier APK patché</string>
-    <string name="home_app_info_delete_item_original_apk">Fichier APK original</string>
+    <string name="home_app_info_delete_item_original_apk">Fichier APK d’origine</string>
     <string name="home_app_info_delete_preservation_note">Votre sélection de patch et vos options seront conservées pour les futurs patchage</string>
     <string name="home_app_info_patches_name_default">Patchs</string>
     <string name="home_app_info_patches_name_fallback">Sans nom</string>
     <string name="home_app_info_patches_replace_fail">Échec de l\'importation des patchs : %s</string>
-    <string name="home_app_info_repatch_no_original_apk">APK original introuvable. Impossible de repatcher cette application</string>
-    <string name="home_app_info_original_package_name">Nom de package original</string>
+    <string name="home_app_info_repatch_no_original_apk">APK d’origine introuvable. Impossible de repatcher cette application</string>
+    <string name="home_app_info_original_package_name">Nom de package d\'origine</string>
     <string name="home_app_info_applied_patches">Patchs appliqués</string>
     <string name="home_app_info_patch_source_used">Source de patchs utilisée</string>
     <string name="home_app_info_install_type">Type d\'installation</string>
@@ -237,7 +238,7 @@ Pour de meilleurs résultats, cette application recommande de patcher un &lt;b&g
     <string name="home_app_info_app_deleted_description">Cette application a été désinstallée en dehors de Morphe. Repatchez-la pour restaurer les fonctionnalités</string>
     <string name="home_app_info_apk_size">Taille de l\'APK</string>
     <!-- Home Screen - Root Mode -->
-    <string name="root_install_apk_required">Le mode root nécessite que l\'APK original soit installé sur votre appareil avant le patchage</string>
+    <string name="root_install_apk_required">Le mode root nécessite que l’APK d’origine soit installé sur votre appareil avant le patchage</string>
     <string name="root_gmscore_excluded">Le patch de support GmsCore est exclu en mode root</string>
     <string name="root_pre_patch_installer_title">Choisir la méthode d\'installation</string>
     <string name="root_pre_patch_installer_description">Votre appareil dispose d\'un accès root. Choisissez comment vous souhaitez installer l\'application patchée</string>
@@ -262,6 +263,11 @@ Pour de meilleurs résultats, cette application recommande de patcher un &lt;b&g
     <string name="patcher_unknown_error">Une erreur inconnue s\'est produite</string>
     <string name="patcher_conflict_title">Package en conflit</string>
     <string name="patcher_conflict_subtitle">Vous devez désinstaller la version existante</string>
+    <string name="patcher_conflict_hint">L’application patchée utilise un certificat différent de celui de la version installée. La désinstallation effacera toutes les données de l’application</string>
+    <string name="patcher_installed_conflict_title">Désinstallation nécessaire</string>
+    <string name="patcher_installed_conflict_body">"Morphe signe les applications patchées avec son propre certificat, différent de celui de l’application d’origine. Android exige de supprimer la version existante avant de pouvoir installer l’application patchée.
+
+La désinstallation effacera définitivement toutes les données de l’application"</string>
     <string name="patcher_install_error_title">Erreur d\'installation</string>
     <string name="patcher_install_error_subtitle">Essayez de désinstaller puis de réinstaller</string>
     <string name="patcher_ready_to_install_subtitle">Appuyez sur le bouton ci-dessous pour installer</string>
@@ -607,19 +613,19 @@ Les dimensions des images doivent respecter les valeurs suivantes :
     <string name="settings_system_storage_management">Gestion du stockage</string>
     <string name="settings_system_apks_size">Taille totale : %s</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
-    <string name="settings_system_patched_apks_title">APKs patchés</string>
-    <string name="settings_system_patched_apks_description">Gérer les fichiers d’application patchés enregistrés</string>
-    <string name="settings_system_patched_apks_empty">Aucun APKs patchés enregistrés pour l’instant</string>
+    <string name="settings_system_patched_apks_title">APK patchés</string>
+    <string name="settings_system_patched_apks_description">Gérer les fichiers d’applications patchées enregistrés</string>
+    <string name="settings_system_patched_apks_empty">Aucun APK patchés enregistrés pour l’instant</string>
     <string name="settings_system_patched_apks_delete_title">Supprimer l’APK patché ?</string>
     <string name="settings_system_patched_apks_delete_confirm">Êtes-vous sûr de vouloir supprimer l\'APK patché enregistré pour %s ?</string>
-    <string name="settings_system_patched_apks_deleted">APK patché supprimé avec succès</string>
+    <string name="settings_system_patched_apks_deleted">L\'APK patché supprimé avec succès</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
-    <string name="settings_system_original_apks_title">APKs originaux</string>
-    <string name="settings_system_original_apks_description">Les fichiers APK originaux sont enregistrés pour un repatchage. Seule la version la plus récente est conservée pour chaque application</string>
-    <string name="settings_system_original_apks_empty">Pas d\'APKs originaux enregistrés</string>
-    <string name="settings_system_original_apks_deleted">APK original supprimé avec succès</string>
-    <string name="settings_system_original_apks_delete_title">Supprimer l’APK original ?</string>
-    <string name="settings_system_original_apks_delete_confirm">Supprimer l\'APK original pour %s ? Vous ne pourrez pas repatcher sans fournir un nouvel APK</string>
+    <string name="settings_system_original_apks_title">APK d’origine</string>
+    <string name="settings_system_original_apks_description">Les fichiers APK d’origine sont enregistrés pour le repatchage. Seule la version la plus récente est conservée pour chaque application</string>
+    <string name="settings_system_original_apks_empty">Aucun APK d’origine enregistré</string>
+    <string name="settings_system_original_apks_deleted">L\'APK d\'origine supprimé avec succès</string>
+    <string name="settings_system_original_apks_delete_title">Supprimer l’APK d\'origine ?</string>
+    <string name="settings_system_original_apks_delete_confirm">Supprimer l\'APK d\'origine pour %s ? Vous ne pourrez pas repatcher sans fournir un nouvel APK</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">Sélections de patch</string>
     <string name="settings_system_patch_selections_description">Gérer les sélections et options de patch enregistrées. Celles-ci persistent après la désinstallation de l’application</string>

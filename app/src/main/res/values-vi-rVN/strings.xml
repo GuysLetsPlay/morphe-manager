@@ -105,6 +105,7 @@
     <string name="home_apk_availability_yes">Có, giúp tôi vs</string>
     <string name="home_apk_availability_no">Không, tôi có APK rồi</string>
     <string name="home_apk_use_saved_with_version">Dùng APK đã lưu (v%s)</string>
+    <string name="home_apk_use_installed_with_version">Sử dụng APK đã cài đặt (v%s)</string>
     <string name="home_app_info_no_saved_apk">Chưa lưu APK nào. Bạn sẽ phải chọn lại APK khi vá</string>
     <string name="home_version_requires_android">Yêu cầu Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">Không hỗ trợ trên thiết bị này</string>
@@ -263,6 +264,11 @@ Tốt nhất bạn nên chuyển sang &lt;b&gt;APK đầy đủ&lt;/b&gt; để 
     <string name="patcher_unknown_error">Đã xảy ra lỗi không xác định</string>
     <string name="patcher_conflict_title">Phát hiện xung đột</string>
     <string name="patcher_conflict_subtitle">Bạn cần gỡ cài đặt phiên bản hiện có</string>
+    <string name="patcher_conflict_hint">Ứng dụng đã vá sử dụng chứng chỉ khác với phiên bản đã cài đặt. Gỡ cài đặt sẽ xóa tất cả dữ liệu ứng dụng</string>
+    <string name="patcher_installed_conflict_title">Cần gỡ cài đặt</string>
+    <string name="patcher_installed_conflict_body">"Morphe ký các ứng dụng đã vá bằng chứng chỉ của riêng mình, khác với bản gốc. Android yêu cầu xóa phiên bản hiện tại trước khi ứng dụng đã vá có thể được cài đặt.
+
+Gỡ cài đặt sẽ xóa vĩnh viễn tất cả dữ liệu ứng dụng."</string>
     <string name="patcher_install_error_title">Lỗi rồiii</string>
     <string name="patcher_install_error_subtitle">Hãy thử gỡ và cài đặt lại</string>
     <string name="patcher_ready_to_install_subtitle">Bấm nút bên dưới để cài đặt</string>

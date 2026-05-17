@@ -103,6 +103,7 @@
     <string name="home_apk_availability_yes">Ja, help me een APK te vinden</string>
     <string name="home_apk_availability_no">Nee, ik heb al een .APK</string>
     <string name="home_apk_use_saved_with_version">Gebruik opgeslagen .APK-bestand (v%s)</string>
+    <string name="home_apk_use_installed_with_version">Gebruik geïnstalleerde APK (v%s)</string>
     <string name="home_app_info_no_saved_apk">Er is geen APK opgeslagen. Om de patch uit te voeren, moet u het APK opnieuw selecteren</string>
     <string name="home_version_requires_android">Vereist Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">Niet ondersteund voor dit apparaat</string>
@@ -260,6 +261,11 @@ Voor de beste resultaten beveelt deze app aan om een &lt;b&gt;volledig APK&lt;/b
     <string name="patcher_unknown_error">Onbekende fout opgetreden</string>
     <string name="patcher_conflict_title">Pakketconflict</string>
     <string name="patcher_conflict_subtitle">Je moet de bestaande versie verwijderen</string>
+    <string name="patcher_conflict_hint">De aangepaste app gebruikt een ander certificaat dan de geïnstalleerde versie. Door het verwijderen worden alle app-gegevens gewist.</string>
+    <string name="patcher_installed_conflict_title">Vereiste deïnstallatie</string>
+    <string name="patcher_installed_conflict_body">"Morphe ondertekent gepatchte apps met zijn eigen certificaat, dat verschilt van het origineel. Android vereist dat de bestaande versie wordt verwijderd voordat de gepatchte app kan worden geïnstalleerd.
+
+Deïnstalleren wist alle app-gegevens permanent."</string>
     <string name="patcher_install_error_title">Installatiefout</string>
     <string name="patcher_install_error_subtitle">Probeer opnieuw te verwijderen en te installeren</string>
     <string name="patcher_ready_to_install_subtitle">Druk op de onderstaande knop om te installeren</string>

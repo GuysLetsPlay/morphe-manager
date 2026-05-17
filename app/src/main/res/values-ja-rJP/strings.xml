@@ -105,6 +105,7 @@
     <string name="home_apk_availability_yes">はい、 APK を探すのを手伝ってください</string>
     <string name="home_apk_availability_no">いいえ、既に APK を持っています</string>
     <string name="home_apk_use_saved_with_version">保存済みの APK (v%s) を使用する</string>
+    <string name="home_apk_use_installed_with_version">インストール済みの APK (v%s) を使用する</string>
     <string name="home_app_info_no_saved_apk">保存済みの APK がありません。パッチを適用するには、 APK ファイルを再度選択してください</string>
     <string name="home_version_requires_android">Android %s 以降が必要です</string>
     <string name="home_apk_no_compatible_versions_title">このデバイスではサポートされていません</string>
@@ -263,6 +264,11 @@
     <string name="patcher_unknown_error">不明なエラーが発生しました</string>
     <string name="patcher_conflict_title">パッケージの競合</string>
     <string name="patcher_conflict_subtitle">既存のバージョンをアンインストールする必要があります</string>
+    <string name="patcher_conflict_hint">パッチを適用したアプリは、インストールされているバージョンとは異なる証明書を使用しています。アンインストールすると、すべてのアプリデータが消去されます</string>
+    <string name="patcher_installed_conflict_title">アンインストールが必要です</string>
+    <string name="patcher_installed_conflict_body">"Morpheは、パッチされたアプリを元のものとは異なる独自の証明書で署名します。Androidでは、パッチされたアプリをインストールする前に、既存のバージョンを削除する必要があります。
+
+アンインストールすると、アプリのデータがすべて完全に消去されます。"</string>
     <string name="patcher_install_error_title">インストールエラー</string>
     <string name="patcher_install_error_subtitle">一度アンインストールしてから、再度インストールしてください</string>
     <string name="patcher_ready_to_install_subtitle">インストールするには以下のボタンを押してください</string>
