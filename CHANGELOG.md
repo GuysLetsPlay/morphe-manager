@@ -1,3 +1,11 @@
+# [1.18.0-dev.6](https://github.com/MorpheApp/morphe-manager/compare/v1.18.0-dev.5...v1.18.0-dev.6) (2026-05-18)
+
+
+### Bug Fixes
+
+* Exclude device state preferences from settings export/import ([f29a158](https://github.com/MorpheApp/morphe-manager/commit/f29a158a15ef1bd912e1fd08dd8ede62035cd6c5))
+* Retry patcher process on exit code 139 (SIGSEGV) as low-memory failure ([608b8d5](https://github.com/MorpheApp/morphe-manager/commit/608b8d51ae0e547fa00b66a4db2a0b62b748f8e2))
+
 # [1.18.0-dev.5](https://github.com/MorpheApp/morphe-manager/compare/v1.18.0-dev.4...v1.18.0-dev.5) (2026-05-18)
 
 

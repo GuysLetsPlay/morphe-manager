@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-05-18T07:10:24",
-  "description": "# [1.18.0-dev.5](https://github.com/MorpheApp/morphe-manager/compare/v1.18.0-dev.4...v1.18.0-dev.5) (2026-05-18)\n\n\n### Features\n\n* Add battery optimization exclusion prompt before patching ([1b95a87](https://github.com/MorpheApp/morphe-manager/commit/1b95a87123be035d99a42123773fb9a9f5945b87))\n* Open expert dialog when APK shared from file manager ([#559](https://github.com/MorpheApp/morphe-manager/issues/559)) ([35b0d4d](https://github.com/MorpheApp/morphe-manager/commit/35b0d4dd44f2a280e93beb1d5b80fb119b52e172))",
-  "download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.18.0-dev.5/morphe-manager-1.18.0-dev.5.apk",
-  "signature_download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.18.0-dev.5/morphe-manager-1.18.0-dev.5.apk.asc",
-  "version": "1.18.0-dev.5"
+  "created_at": "2026-05-18T13:19:23",
+  "description": "# [1.18.0-dev.6](https://github.com/MorpheApp/morphe-manager/compare/v1.18.0-dev.5...v1.18.0-dev.6) (2026-05-18)\n\n\n### Bug Fixes\n\n* Exclude device state preferences from settings export/import ([f29a158](https://github.com/MorpheApp/morphe-manager/commit/f29a158a15ef1bd912e1fd08dd8ede62035cd6c5))\n* Retry patcher process on exit code 139 (SIGSEGV) as low-memory failure ([608b8d5](https://github.com/MorpheApp/morphe-manager/commit/608b8d51ae0e547fa00b66a4db2a0b62b748f8e2))",
+  "download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.18.0-dev.6/morphe-manager-1.18.0-dev.6.apk",
+  "signature_download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.18.0-dev.6/morphe-manager-1.18.0-dev.6.apk.asc",
+  "version": "1.18.0-dev.6"
 }
