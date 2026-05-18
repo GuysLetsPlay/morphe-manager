@@ -11,6 +11,7 @@ import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
@@ -150,7 +151,8 @@ private fun DialogContent(
     if (noPadding) {
         CompositionLocalProvider(
             LocalDialogTextColor provides textColor,
-            LocalDialogSecondaryTextColor provides secondaryTextColor
+            LocalDialogSecondaryTextColor provides secondaryTextColor,
+            LocalContentColor provides textColor
         ) {
             Column(
                 modifier = Modifier
@@ -207,7 +209,8 @@ private fun DialogContent(
                     if (titleTrailingContent != null) {
                         CompositionLocalProvider(
                             LocalDialogTextColor provides textColor,
-                            LocalDialogSecondaryTextColor provides secondaryTextColor
+                            LocalDialogSecondaryTextColor provides secondaryTextColor,
+                            LocalContentColor provides textColor
                         ) {
                             titleTrailingContent()
                         }
@@ -218,7 +221,8 @@ private fun DialogContent(
             // Content area with conditional scrolling
             CompositionLocalProvider(
                 LocalDialogTextColor provides textColor,
-                LocalDialogSecondaryTextColor provides secondaryTextColor
+                LocalDialogSecondaryTextColor provides secondaryTextColor,
+                LocalContentColor provides textColor
             ) {
                 if (scrollable) {
                     // Automatic scroll for regular content

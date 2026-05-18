@@ -22,6 +22,7 @@ import androidx.compose.material.icons.automirrored.outlined.List
 import androidx.compose.material.icons.outlined.*
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -31,7 +32,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
-import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.pluralStringResource
@@ -337,6 +337,7 @@ fun InstalledAppInfoDialog(
                                     appliedPatches = appliedPatches,
                                     bundlesUsedSummary = bundlesUsedSummary,
                                     onShowPatches = { showAppliedPatchesDialog.value = true },
+                                    accentColor = appAccentColor
                                 )
                             }
                         }
@@ -368,6 +369,7 @@ fun InstalledAppInfoDialog(
                                     onClick = {
                                         onTriggerPatchFlow(installedApp.originalPackageName)
                                     },
+                                    accentColor = appAccentColor,
                                     isError = true
                                 )
                             }
@@ -387,6 +389,7 @@ fun InstalledAppInfoDialog(
                                     onClick = {
                                         onTriggerPatchFlow(installedApp.originalPackageName)
                                     },
+                                    accentColor = appAccentColor,
                                     isError = false
                                 )
                             }
@@ -468,6 +471,7 @@ fun InstalledAppInfoDialog(
                                             onClick = {
                                                 onTriggerPatchFlow(installedApp.originalPackageName)
                                             },
+                                            accentColor = appAccentColor,
                                             isError = true,
                                             modifier = Modifier.padding(horizontal = 20.dp)
                                         )
@@ -491,6 +495,7 @@ fun InstalledAppInfoDialog(
                                             onClick = {
                                                 onTriggerPatchFlow(installedApp.originalPackageName)
                                             },
+                                            accentColor = appAccentColor,
                                             isError = false,
                                             modifier = Modifier.padding(horizontal = 20.dp)
                                         )
@@ -510,6 +515,7 @@ fun InstalledAppInfoDialog(
                                     appliedPatches = appliedPatches,
                                     bundlesUsedSummary = bundlesUsedSummary,
                                     onShowPatches = { showAppliedPatchesDialog.value = true },
+                                    accentColor = appAccentColor
                                 )
                             }
                         }
@@ -571,6 +577,12 @@ fun InstalledAppInfoDialog(
     }
 }
 
+@Composable
+private fun Color.accentContentColor(alpha: Float): Color =
+    if (isExtremeAccent()) MaterialTheme.colorScheme.onSurfaceVariant
+    else if (compositeOver(MaterialTheme.colorScheme.surface, alpha)
+        .requiresLightContent()) Color.White else Color.Black
+
 /**
  * Unified banner component for warnings and updates.
  */
@@ -582,20 +594,13 @@ private fun WarningBanner(
     buttonText: String,
     buttonIcon: ImageVector,
     onClick: () -> Unit,
+    accentColor: Color,
     modifier: Modifier = Modifier,
     isError: Boolean = false
 ) {
-    val containerColor = if (isError) {
-        MaterialTheme.colorScheme.errorContainer
-    } else {
-        MaterialTheme.colorScheme.primaryContainer
-    }
-
-    val contentColor = if (isError) {
-        MaterialTheme.colorScheme.onErrorContainer
-    } else {
-        MaterialTheme.colorScheme.onPrimaryContainer
-    }
+    val baseColor = if (isError) MaterialTheme.colorScheme.error else accentColor
+    val containerColor = if (baseColor.isExtremeAccent()) MaterialTheme.colorScheme.surfaceVariant else baseColor.copy(alpha = 0.15f)
+    val contentColor = baseColor.accentContentColor(0.15f)
 
     Column(
         modifier = modifier
@@ -638,7 +643,8 @@ private fun WarningBanner(
         // Action button
         PrimaryActionButton(
             action = ActionItem(text = buttonText, icon = buttonIcon, onClick = onClick),
-            accentColor = if (isError) MaterialTheme.colorScheme.error else MaterialTheme.colorScheme.primary,
+            accentColor = baseColor,
+            contentColorOverride = contentColor,
             modifier = Modifier.fillMaxWidth()
         )
     }
@@ -657,8 +663,7 @@ private fun AppHeroHeader(
     compact: Boolean = false
 ) {
     val onHero = MaterialTheme.colorScheme.onBackground
-    val isExtremeAccent = accentColor.luminance() !in 0.04f..0.92f
-    val chipBg = if (isExtremeAccent) onHero.copy(alpha = 0.12f) else accentColor.copy(alpha = 0.18f)
+    val chipBg = if (accentColor.isExtremeAccent()) onHero.copy(alpha = 0.12f) else accentColor.copy(alpha = 0.18f)
 
     val iconSize = if (compact) 56.dp else 88.dp
     val iconCorner = if (compact) 14.dp else 22.dp
@@ -895,6 +900,7 @@ private fun InfoSection(
     appliedPatches: Map<Int, Set<String>>?,
     bundlesUsedSummary: String,
     onShowPatches: () -> Unit,
+    accentColor: Color,
     modifier: Modifier = Modifier
 ) {
     val totalPatches = appliedPatches?.values?.sumOf { it.size } ?: 0
@@ -947,6 +953,7 @@ private fun InfoSection(
                 icon = Icons.Outlined.DoneAll,
                 label = stringResource(R.string.home_app_info_applied_patches),
                 value = pluralStringResource(R.plurals.patch_count, totalPatches, totalPatches),
+                accentColor = accentColor,
                 onAction = onShowPatches
             )
         }
@@ -1004,6 +1011,7 @@ private fun InfoRowWithAction(
     icon: ImageVector,
     label: String,
     value: String,
+    accentColor: Color,
     onAction: () -> Unit,
 ) {
     Row(
@@ -1038,7 +1046,11 @@ private fun InfoRowWithAction(
         ActionPillButton(
             onClick = onAction,
             icon = Icons.AutoMirrored.Outlined.List,
-            contentDescription = stringResource(R.string.view)
+            contentDescription = stringResource(R.string.view),
+            colors = IconButtonDefaults.filledTonalIconButtonColors(
+                containerColor = accentColor.copy(alpha = 0.18f),
+                contentColor = accentColor.accentContentColor(0.18f)
+            )
         )
     }
 }
@@ -1287,16 +1299,11 @@ private fun LoadingOrIcon(isLoading: Boolean, action: ActionItem, tint: Color) {
 private fun PrimaryActionButton(
     action: ActionItem,
     accentColor: Color,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    contentColorOverride: Color? = null
 ) {
-    // Match the header background level: tinted surface instead of full accent
-    val isExtremeAccent = accentColor.luminance() !in 0.04f..0.92f
-    val buttonColor = if (isExtremeAccent) {
-        MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.9f)
-    } else {
-        accentColor.copy(alpha = 0.18f)
-    }
-    val contentColor = MaterialTheme.colorScheme.onSurface
+    val buttonColor = if (accentColor.isExtremeAccent()) MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.9f) else accentColor.copy(alpha = 0.18f)
+    val contentColor = contentColorOverride ?: accentColor.accentContentColor(0.18f)
     Surface(
         onClick = action.onClick,
         enabled = action.enabled && !action.isLoading,
