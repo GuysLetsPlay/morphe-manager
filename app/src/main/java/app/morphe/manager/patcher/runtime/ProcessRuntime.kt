@@ -138,7 +138,7 @@ class ProcessRuntime(
                 return@coroutineScope
             } catch (e: Exception) {
                 val isMemoryFailure = when (e) {
-                    is ProcessExitException -> e.exitCode == OOM_EXIT_CODE || e.exitCode == SIGKILL_EXIT_CODE
+                    is ProcessExitException -> e.exitCode == OOM_EXIT_CODE || e.exitCode == SIGKILL_EXIT_CODE || e.exitCode == SIGSEGV_EXIT_CODE
                     is RemoteFailureException -> e.originalStackTrace.contains("OutOfMemoryError", ignoreCase = true)
                     else -> false
                 }
@@ -290,6 +290,7 @@ class ProcessRuntime(
         private const val APP_PROCESS_BIN_PATH_32 = "/system/bin/app_process32"
         const val OOM_EXIT_CODE = 134
         const val SIGKILL_EXIT_CODE = 137
+        const val SIGSEGV_EXIT_CODE = 139
 
         const val CONNECT_TO_APP_ACTION = "CONNECT_TO_APP_ACTION"
         const val INTENT_BUNDLE_KEY = "BUNDLE"
