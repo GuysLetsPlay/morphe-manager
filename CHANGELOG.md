@@ -1,3 +1,11 @@
+# [1.18.0-dev.5](https://github.com/MorpheApp/morphe-manager/compare/v1.18.0-dev.4...v1.18.0-dev.5) (2026-05-18)
+
+
+### Features
+
+* Add battery optimization exclusion prompt before patching ([1b95a87](https://github.com/MorpheApp/morphe-manager/commit/1b95a87123be035d99a42123773fb9a9f5945b87))
+* Open expert dialog when APK shared from file manager ([#559](https://github.com/MorpheApp/morphe-manager/issues/559)) ([35b0d4d](https://github.com/MorpheApp/morphe-manager/commit/35b0d4dd44f2a280e93beb1d5b80fb119b52e172))
+
 # [1.18.0-dev.4](https://github.com/MorpheApp/morphe-manager/compare/v1.18.0-dev.3...v1.18.0-dev.4) (2026-05-17)
 
 

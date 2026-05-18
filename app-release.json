@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-05-17T16:41:31",
-  "description": "# [1.18.0-dev.4](https://github.com/MorpheApp/morphe-manager/compare/v1.18.0-dev.3...v1.18.0-dev.4) (2026-05-17)\n\n\n### Bug Fixes\n\n* Don't flag blank-default required options as missing ([9a6fa0c](https://github.com/MorpheApp/morphe-manager/commit/9a6fa0c55a84d6fb92807ee7241bc916429a5b2e))\n* Reduce icon button spacing in dialog text fields ([251f839](https://github.com/MorpheApp/morphe-manager/commit/251f8395cd390e9903b78a0effcdd0663ef76cd2))\n\n\n### Features\n\n* Add file picker for file path patch options ([18620ed](https://github.com/MorpheApp/morphe-manager/commit/18620edd988e85c9966088daa83808e220da35a0))",
-  "download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.18.0-dev.4/morphe-manager-1.18.0-dev.4.apk",
-  "signature_download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.18.0-dev.4/morphe-manager-1.18.0-dev.4.apk.asc",
-  "version": "1.18.0-dev.4"
+  "created_at": "2026-05-18T07:10:24",
+  "description": "# [1.18.0-dev.5](https://github.com/MorpheApp/morphe-manager/compare/v1.18.0-dev.4...v1.18.0-dev.5) (2026-05-18)\n\n\n### Features\n\n* Add battery optimization exclusion prompt before patching ([1b95a87](https://github.com/MorpheApp/morphe-manager/commit/1b95a87123be035d99a42123773fb9a9f5945b87))\n* Open expert dialog when APK shared from file manager ([#559](https://github.com/MorpheApp/morphe-manager/issues/559)) ([35b0d4d](https://github.com/MorpheApp/morphe-manager/commit/35b0d4dd44f2a280e93beb1d5b80fb119b52e172))",
+  "download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.18.0-dev.5/morphe-manager-1.18.0-dev.5.apk",
+  "signature_download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.18.0-dev.5/morphe-manager-1.18.0-dev.5.apk.asc",
+  "version": "1.18.0-dev.5"
 }
