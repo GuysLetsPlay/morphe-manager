@@ -147,9 +147,13 @@
     <string name="expert_mode_search">Search patches</string>
     <string name="expert_mode_proceed">Proceed to patching</string>
     <string name="expert_mode_disable_all">Disable all</string>
+    <string name="expert_mode_disable_all_done">All patches disabled</string>
     <string name="expert_mode_enable_all">Enable all</string>
+    <string name="expert_mode_enable_all_done">All patches enabled</string>
     <string name="expert_mode_reset_to_default">Enable recommended patches</string>
+    <string name="expert_mode_reset_to_default_done">Recommended patches applied</string>
     <string name="expert_mode_restore_saved">Restore saved selection</string>
+    <string name="expert_mode_restore_saved_done">Saved selection restored</string>
     <string name="expert_mode_no_results">No patches found</string>
     <string name="expert_mode_universal_patches">Universal patches</string>
     <string name="expert_mode_new_patches">New</string>

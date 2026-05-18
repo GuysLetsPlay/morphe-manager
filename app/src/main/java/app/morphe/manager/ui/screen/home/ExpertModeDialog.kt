@@ -549,9 +549,9 @@ private fun BundlePatchControls(
 ) {
     val context = LocalContext.current
 
-    // Returns a lambda that shows a toast with [label] and then executes [action].
-    fun withToast(label: String, action: () -> Unit): () -> Unit = {
-        context.toast(label)
+    // Shows a confirmation toast with [doneMessage] and then executes [action]
+    fun withToast(doneMessage: String, action: () -> Unit): () -> Unit = {
+        context.toast(doneMessage)
         action()
     }
 
@@ -560,12 +560,17 @@ private fun BundlePatchControls(
     val restoreLabel = stringResource(R.string.expert_mode_restore_saved)
     val deselectAllLabel = stringResource(R.string.expert_mode_disable_all)
 
+    val enabledDone = stringResource(R.string.expert_mode_enable_all_done)
+    val disabledDone = stringResource(R.string.expert_mode_disable_all_done)
+    val resetDone = stringResource(R.string.expert_mode_reset_to_default_done)
+    val restoredDone = stringResource(R.string.expert_mode_restore_saved_done)
+
     Row(
         modifier = modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.spacedBy(12.dp, Alignment.CenterHorizontally)
     ) {
         ActionPillButton(
-            onClick = withToast(selectAllLabel, onSelectAll),
+            onClick = withToast(enabledDone, onSelectAll),
             icon = Icons.Outlined.DoneAll,
             contentDescription = selectAllLabel,
             tooltip = selectAllLabel,
@@ -578,7 +583,7 @@ private fun BundlePatchControls(
             )
         )
         ActionPillButton(
-            onClick = withToast(defaultLabel, onResetToDefault),
+            onClick = withToast(resetDone, onResetToDefault),
             icon = Icons.Outlined.Recommend,
             contentDescription = defaultLabel,
             tooltip = defaultLabel,
@@ -590,7 +595,7 @@ private fun BundlePatchControls(
             )
         )
         ActionPillButton(
-            onClick = withToast(restoreLabel, onRestoreSaved),
+            onClick = withToast(restoredDone, onRestoreSaved),
             icon = Icons.Outlined.History,
             contentDescription = restoreLabel,
             tooltip = restoreLabel,
@@ -603,7 +608,7 @@ private fun BundlePatchControls(
             )
         )
         ActionPillButton(
-            onClick = withToast(deselectAllLabel, onDeselectAll),
+            onClick = withToast(disabledDone, onDeselectAll),
             icon = Icons.Outlined.ClearAll,
             contentDescription = deselectAllLabel,
             tooltip = deselectAllLabel,
@@ -617,7 +622,6 @@ private fun BundlePatchControls(
         )
     }
 }
-
 
 /**
  * Individual patch card with toggle and options button.
