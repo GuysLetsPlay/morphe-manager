@@ -16,12 +16,16 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.*
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
 import androidx.lifecycle.Lifecycle
@@ -242,69 +246,50 @@ fun SystemTabContent(
 
             SectionCard {
                 Column {
-                    // Keystore Import
-                    BaseSettingsItem(
-                        onClick = onImportKeystore,
+                    // Keystore
+                    ImportExportRow(
                         leadingContent = { MorpheIcon(icon = Icons.Outlined.Key) },
-                        title = stringResource(R.string.settings_system_import_keystore),
-                        description = stringResource(R.string.settings_system_import_keystore_description)
-                    )
-
-                    MorpheSettingsDivider()
-
-                    // Keystore Export
-                    BaseSettingsItem(
-                        onClick = {
+                        title = stringResource(R.string.settings_system_keystore),
+                        description = stringResource(R.string.settings_system_import_keystore_description),
+                        onImport = onImportKeystore,
+                        onExport = {
                             if (!importExportViewModel.canExport()) {
                                 context.toast(keystoreUnavailable)
                             } else {
                                 onExportKeystore()
                             }
-                        },
-                        leadingContent = { MorpheIcon(icon = Icons.Outlined.Upload) },
-                        title = stringResource(R.string.settings_system_export_keystore),
-                        description = stringResource(R.string.settings_system_export_keystore_description)
-                    )
-                }
-            }
-
-            SectionCard {
-                Column {
-                    // Manager Settings Import
-                    BaseSettingsItem(
-                        onClick = onImportSettings,
-                        leadingContent = { MorpheIcon(icon = Icons.Outlined.Download) },
-                        title = stringResource(R.string.settings_system_import_manager_settings),
-                        description = stringResource(R.string.settings_system_import_manager_settings_description)
+                        }
                     )
 
                     MorpheSettingsDivider()
 
-                    // Manager Settings Export
-                    BaseSettingsItem(
-                        onClick = onExportSettings,
-                        leadingContent = { MorpheIcon(icon = Icons.Outlined.Upload) },
-                        title = stringResource(R.string.settings_system_export_manager_settings),
-                        description = stringResource(R.string.settings_system_export_manager_settings_description)
+                    // Manager Settings
+                    ImportExportRow(
+                        leadingContent = {
+                            Icon(
+                                painter = painterResource(R.drawable.ic_notification),
+                                contentDescription = null,
+                                tint = MaterialTheme.colorScheme.primary,
+                                modifier = Modifier.size(24.dp)
+                            )
+                        },
+                        title = stringResource(R.string.settings_system_morphe_settings),
+                        description = stringResource(R.string.settings_system_import_manager_settings_description),
+                        onImport = onImportSettings,
+                        onExport = onExportSettings
+                    )
+
+                    MorpheSettingsDivider()
+
+                    // Debug Logs
+                    ImportExportRow(
+                        leadingContent = { MorpheIcon(icon = Icons.Outlined.BugReport) },
+                        title = stringResource(R.string.settings_system_debug),
+                        description = stringResource(R.string.settings_system_export_debug_logs_description),
+                        onImport = null,
+                        onExport = onExportDebugLogs
                     )
                 }
-            }
-        }
-
-        // Debug Logs (Expert mode only)
-        if (useExpertMode) {
-            SectionTitle(
-                text = stringResource(R.string.settings_system_debug),
-                icon = Icons.Outlined.BugReport
-            )
-
-            SectionCard {
-                BaseSettingsItem(
-                    onClick = onExportDebugLogs,
-                    leadingContent = { MorpheIcon(icon = Icons.Outlined.Upload) },
-                    title = stringResource(R.string.settings_system_export_debug_logs),
-                    description = stringResource(R.string.settings_system_export_debug_logs_description)
-                )
             }
         }
 
@@ -410,6 +395,73 @@ fun SystemTabContent(
                 onAboutClick = onAboutClick,
                 onChangelogClick = onChangelogClick
             )
+        }
+    }
+}
+
+/**
+ * A settings row with a title, optional description, and import/export action buttons.
+ */
+@Composable
+private fun ImportExportRow(
+    leadingContent: @Composable () -> Unit,
+    title: String,
+    description: String? = null,
+    onImport: (() -> Unit)?,
+    onExport: (() -> Unit)?
+) {
+    val hasBoth = onImport != null && onExport != null
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 12.dp),
+        verticalArrangement = Arrangement.spacedBy(10.dp)
+    ) {
+        Row(
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            leadingContent()
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = title,
+                    style = MaterialTheme.typography.bodyMedium,
+                    fontWeight = FontWeight.Medium,
+                    color = MaterialTheme.colorScheme.onSurface
+                )
+                if (description != null) {
+                    Text(
+                        text = description,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            }
+        }
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = if (hasBoth) Arrangement.spacedBy(8.dp) else Arrangement.Center
+        ) {
+            if (onImport != null) {
+                ActionPillButton(
+                    onClick = onImport,
+                    icon = Icons.Outlined.Download,
+                    contentDescription = stringResource(R.string.import_),
+                    modifier = if (hasBoth) Modifier.weight(1f) else Modifier.fillMaxWidth(0.5f),
+                    large = true,
+                    label = stringResource(R.string.import_)
+                )
+            }
+            if (onExport != null) {
+                ActionPillButton(
+                    onClick = onExport,
+                    icon = Icons.Outlined.Upload,
+                    contentDescription = stringResource(R.string.export),
+                    modifier = if (hasBoth) Modifier.weight(1f) else Modifier.fillMaxWidth(0.5f),
+                    large = true,
+                    label = stringResource(R.string.export)
+                )
+            }
         }
     }
 }

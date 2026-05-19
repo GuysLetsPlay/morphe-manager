@@ -633,40 +633,30 @@ The image dimensions must be as follows:
     <string name="settings_system_process_runtime_disabled_description">Click to configure</string>
     <string name="settings_system_process_runtime_description_not_available">This feature requires Android 11 or greater</string>
 
-    <!-- Settings - System Tab - Import and export keystore -->
+    <!-- Settings - System Tab - Import and Export Section -->
     <string name="settings_system_import_export">Import &amp; export</string>
-    <string name="settings_system_import_keystore">Import keystore</string>
-    <string name="settings_system_import_keystore_description">Import a custom keystore</string>
+    <string name="settings_system_keystore">Keystore</string>
+    <string name="settings_system_import_keystore_description">Import or export your signing keystore</string>
     <string name="settings_system_import_keystore_dialog_title">Enter keystore credentials</string>
     <string name="settings_system_import_keystore_dialog_description">You\'ll need enter the keystore\'s credentials to import it</string>
     <string name="settings_system_import_keystore_dialog_alias_field">Username (Alias)</string>
     <string name="settings_system_import_keystore_dialog_password_field">Password</string>
-    <string name="settings_system_import_keystore_dialog_button">Import</string>
     <string name="settings_system_import_keystore_dialog_format_field">Keystore format</string>
     <string name="settings_system_import_keystore_wrong_credentials">Incorrect keystore credentials</string>
     <string name="settings_system_import_keystore_success">Keystore imported</string>
     <string name="settings_system_import_keystore_failed">Failed to import keystore</string>
-    <string name="settings_system_export_keystore">Export keystore</string>
-    <string name="settings_system_export_keystore_description">Export the current keystore</string>
     <string name="settings_system_export_keystore_unavailable">No keystore available to export</string>
     <string name="settings_system_export_keystore_success">Keystore exported</string>
     <string name="settings_system_export_keystore_failed">Failed to export keystore</string>
     <string name="settings_system_show_password_field">Show password</string>
     <string name="settings_system_hide_password_field">Hide password</string>
-
-    <!-- Settings - System Tab - Import and Export Manager Settings -->
-    <string name="settings_system_import_manager_settings">Import Morphe settings</string>
-    <string name="settings_system_import_manager_settings_description">Restore Morphe settings from a JSON file</string>
+    <string name="settings_system_morphe_settings">Morphe settings</string>
+    <string name="settings_system_import_manager_settings_description">Backup and restore your Morphe settings</string>
     <string name="settings_system_import_manager_settings_fail">Failed to import Morphe settings: %s</string>
     <string name="settings_system_import_manager_settings_success">Morphe settings imported</string>
-    <string name="settings_system_export_manager_settings">Export Morphe settings</string>
-    <string name="settings_system_export_manager_settings_description">Save Morphe settings to a JSON file</string>
     <string name="settings_system_export_manager_settings_fail">Failed to export Morphe settings: %s</string>
     <string name="settings_system_export_manager_settings_success">Morphe settings exported</string>
-
-    <!-- Settings - System Tab - Debug Section -->
     <string name="settings_system_debug">Debug</string>
-    <string name="settings_system_export_debug_logs">Export debug logs</string>
     <string name="settings_system_export_debug_logs_description">Save system logs for troubleshooting</string>
     <string name="settings_system_export_debug_logs_export_read_failed">Failed to read logs (exit code %s)</string>
     <string name="settings_system_export_debug_logs_export_failed">Failed to export logs</string>
