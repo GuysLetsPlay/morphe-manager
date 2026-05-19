@@ -138,9 +138,13 @@
     <string name="expert_mode_search">Претражи печеве</string>
     <string name="expert_mode_proceed">Продужи ка поправљању</string>
     <string name="expert_mode_disable_all">Онемогући све</string>
+    <string name="expert_mode_disable_all_done">Сви закрпе су деактивиране</string>
     <string name="expert_mode_enable_all">Омогући све</string>
+    <string name="expert_mode_enable_all_done">Све закрпе су активиране</string>
     <string name="expert_mode_reset_to_default">Омогући препоручене исправке</string>
+    <string name="expert_mode_reset_to_default_done">Примењене препоручене закрпе</string>
     <string name="expert_mode_restore_saved">Поврати сачувани избор</string>
+    <string name="expert_mode_restore_saved_done">Враћена сачувана селекција</string>
     <string name="expert_mode_no_results">Нema пронађених печева</string>
     <string name="expert_mode_universal_patches">Универзалне површине</string>
     <string name="expert_mode_new_patches">Ново</string>
@@ -695,6 +699,8 @@ morphe_header_custom_dark.png
     <string name="disabled">Онемогућен</string>
     <string name="selected">Одабрано</string>
     <string name="not_selected">Није одбрано</string>
+    <string name="select_all">Изаберите све</string>
+    <string name="deselect_all">Поништи све изборе</string>
     <string name="rename">Преименуј</string>
     <string name="import_">Увоз</string>
     <string name="export">Извези</string>

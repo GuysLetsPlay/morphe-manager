@@ -138,9 +138,13 @@
     <string name="expert_mode_search">Paqejî bîne lêgeran</string>
     <string name="expert_mode_proceed">Bela serîyê berêşî bibe</string>
     <string name="expert_mode_disable_all">Hemû çêbake</string>
+    <string name="expert_mode_disable_all_done">Hemû pelikên guherînê neçalak hatin kirin</string>
     <string name="expert_mode_enable_all">Hemû çêbakîne</string>
+    <string name="expert_mode_enable_all_done">Hemû pelikên guherînê aktîv hatin kirin</string>
     <string name="expert_mode_reset_to_default">Pêşdixeşinên pêşniyar kirî çêbêje</string>
+    <string name="expert_mode_reset_to_default_done">Pelîkên ku hatine pêşniyar kirin hatin çêkirin</string>
     <string name="expert_mode_restore_saved">Şêvikî serdest vegerîne</string>
+    <string name="expert_mode_restore_saved_done">Hilbijartina ku hatî parastin</string>
     <string name="expert_mode_no_results">Paqejiyê ne hebin</string>
     <string name="expert_mode_universal_patches">Pêtên hevpar.</string>
     <string name="expert_mode_new_patches">Nû</string>
@@ -692,6 +696,8 @@ Qasîyên wêneyan divê wiha bin:
     <string name="disabled">Ne destûrxast kirin</string>
     <string name="selected">Hilbijartin</string>
     <string name="not_selected">Ne hilbijartin</string>
+    <string name="select_all">Hemûyan hilbijêre</string>
+    <string name="deselect_all">Hemûyan hilbijêre</string>
     <string name="rename">Navê nû bigere</string>
     <string name="import_">Hez kirin</string>
     <string name="export">Dernake</string>

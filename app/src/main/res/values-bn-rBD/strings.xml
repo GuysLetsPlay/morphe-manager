@@ -135,9 +135,13 @@
     <string name="expert_mode_search">প্যাচ খুঁজুন</string>
     <string name="expert_mode_proceed">প্যাচিং শুরু করুন</string>
     <string name="expert_mode_disable_all">সবকিছু নিষ্ক্রিয় করুন</string>
+    <string name="expert_mode_disable_all_done">সমস্ত প্যাচ নিষ্ক্রিয় করা হয়েছে</string>
     <string name="expert_mode_enable_all">সবকিছুক্ষমতাকার্তা করুন</string>
+    <string name="expert_mode_enable_all_done">সমস্ত প্যাচ সক্রিয় করা হয়েছে</string>
     <string name="expert_mode_reset_to_default">প্রস্তাবিত প্যাচগুলি সক্ষম করুন</string>
+    <string name="expert_mode_reset_to_default_done">সুপারিশ করা প্যাচগুলি প্রয়োগ করা হয়েছে</string>
     <string name="expert_mode_restore_saved">সংরক্ষিত নির্বাচন পুনরুদ্ধার করুন</string>
+    <string name="expert_mode_restore_saved_done">সংরক্ষিত নির্বাচন পুনরুদ্ধার করা হয়েছে</string>
     <string name="expert_mode_no_results">কোনো প্যাচ পাওয়া যায়নি</string>
     <string name="expert_mode_universal_patches">সার্বজনীন প্যাচ</string>
     <string name="expert_mode_new_patches">নতুন</string>
@@ -684,6 +688,8 @@ morphe_adaptive_monochrome_custom.xml
     <string name="disabled">নিষ্ক্রিয় হয়েছে</string>
     <string name="selected">নির্বাচিত</string>
     <string name="not_selected">নির্বাচিত নয়</string>
+    <string name="select_all">সবগুলি নির্বাচন করুন</string>
+    <string name="deselect_all">সবগুলি নির্বাচন বাতিল করুন</string>
     <string name="rename">রেনেম করুন</string>
     <string name="import_">আমদানি করুন</string>
     <string name="export">এক্সপোর্ট করুন</string>

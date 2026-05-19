@@ -138,9 +138,13 @@
     <string name="expert_mode_search">Pesquisar modificações</string>
     <string name="expert_mode_proceed">Iniciar a modificação</string>
     <string name="expert_mode_disable_all">Desativar todas</string>
+    <string name="expert_mode_disable_all_done">Todas as modificações desativadas</string>
     <string name="expert_mode_enable_all">Ativar todas</string>
+    <string name="expert_mode_enable_all_done">Todas as modificações atividades</string>
     <string name="expert_mode_reset_to_default">Ativar modificações recomendadas</string>
+    <string name="expert_mode_reset_to_default_done">Modificações recomendadas aplicadas</string>
     <string name="expert_mode_restore_saved">Restaurar seleção guardada</string>
+    <string name="expert_mode_restore_saved_done">Seleção guardada restaurada</string>
     <string name="expert_mode_no_results">Nenhuma modificação encontrada</string>
     <string name="expert_mode_universal_patches">Modificações universais</string>
     <string name="expert_mode_new_patches">Novo</string>
@@ -696,6 +700,8 @@ As dimensões das imagens devem ser as seguintes:
     <string name="disabled">Desativado</string>
     <string name="selected">Selecionado</string>
     <string name="not_selected">Não selecionado</string>
+    <string name="select_all">Selecionar tudo</string>
+    <string name="deselect_all">Desmarcar tudo</string>
     <string name="rename">Mudar o nome</string>
     <string name="import_">Importar</string>
     <string name="export">Exportar</string>

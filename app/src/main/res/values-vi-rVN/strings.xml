@@ -26,7 +26,7 @@
     <string name="home_updating_sources">Đang cập nhật nguồn…</string>
     <string name="home_update_progress_format">Đã xử lý %s</string>
     <string name="home_update_success">Cập nhật nguồn hoàn tất</string>
-    <string name="home_update_success_subtitle">Đã cập nhật tất cả các nguồn lên mới nhất</string>
+    <string name="home_update_success_subtitle">Đã cập nhật tất cả nguồn lên mới nhất</string>
     <string name="home_sources_are_loading">Đang tải nguồn, vui lòng chờ…</string>
     <string name="home_search_apps">Tìm ứng dụng</string>
     <string name="home_no_apps_title">Không có ứng dụng nào có sẵn</string>
@@ -65,7 +65,7 @@
     <string name="sources_management_already_exists">Nguồn này đã được thêm vào rồi</string>
     <string name="sources_management_invalid_url">URL nguồn không hợp lệ. Vui lòng kiểm tra địa chỉ và thử lại</string>
     <string name="sources_management_metadata_unavailable">Không có metadata</string>
-    <string name="sources_management_metadata_unavailable_hint">Không thể truy cập file metadata từ máy chủ. Bạn vẫn có thể vá bằng gói ứng dụng đã cài, nhưng tính năng tự động cập nhật sẽ bị tắt cho nguồn này</string>
+    <string name="sources_management_metadata_unavailable_hint">Không thể truy cập tệp metadata từ máy chủ. Bạn vẫn có thể vá bằng gói ứng dụng đã cài, nhưng tính năng tự động cập nhật sẽ bị tắt cho nguồn này</string>
     <string name="sources_management_metadata_unavailable_hint_missing">Không thể tải gói vá. URL nguồn có thể không đúng hoặc file không tồn tại</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Tên hiển thị</string>
@@ -132,15 +132,19 @@
     <string name="home_invalid_apk_unreadable">Không thể đọc tệp. Hãy kiểm tra xem \"Bộ nhớ ngoài\" có bị hạn chế pin hay không</string>
     <string name="home_invalid_apk_not_an_apk">Tệp đã chọn không phải là tệp APK hợp lệ</string>
     <string name="home_invalid_apk_io_error">Không thể mở tệp. Vui lòng thử lại</string>
-    <string name="home_external_apk_expert_mode_required">Tính năng này chỉ khả dụng ở chế độ Chuyên gia</string>
+    <string name="home_external_apk_expert_mode_required">Tính năng này chỉ có ở chế độ Chuyên gia</string>
     <!-- Home Screen - Dialog 4: Expert Mode Dialog -->
     <string name="expert_mode_title">Chế độ chuyên gia</string>
     <string name="expert_mode_search">Tìm kiếm</string>
     <string name="expert_mode_proceed">Tiến hành vá</string>
     <string name="expert_mode_disable_all">Tắt tất cả</string>
+    <string name="expert_mode_disable_all_done">Đã tắt tất cả bản vá</string>
     <string name="expert_mode_enable_all">Bật tất cả</string>
+    <string name="expert_mode_enable_all_done">Đã bật tất cả bản vá</string>
     <string name="expert_mode_reset_to_default">Bật các bản vá đề xuất</string>
+    <string name="expert_mode_reset_to_default_done">Đã áp dụng các bản vá đề xuất</string>
     <string name="expert_mode_restore_saved">Khôi phục lựa chọn đã lưu</string>
+    <string name="expert_mode_restore_saved_done">Đã khôi phục bản vá đã chọn được lưu</string>
     <string name="expert_mode_no_results">Không tìm thấy bản vá nào</string>
     <string name="expert_mode_universal_patches">Bản vá phổ quát</string>
     <string name="expert_mode_new_patches">Mới</string>
@@ -297,9 +301,9 @@ Gỡ cài đặt sẽ xóa vĩnh viễn toàn bộ dữ liệu ứng dụng"</st
     <string name="patcher_step_write_patched">Đang viết APK đã vá</string>
     <string name="patcher_step_sign_apk">Đang ký APK đã vá</string>
     <!-- Battery optimization pre-flight dialog -->
-    <string name="battery_optimization_dialog_title">Bảo vệ khi vá lỗi nền</string>
-    <string name="battery_optimization_dialog_description">Một số thiết bị có thể dừng bộ vá lỗi khi ứng dụng bị thu nhỏ. Cho phép Morphe chạy mà không có giới hạn pin để đảm bảo quá trình vá lỗi hoàn tất một cách đáng tin cậy.</string>
-    <string name="battery_optimization_not_now">Không phải bây giờ</string>
+    <string name="battery_optimization_dialog_title">Bảo vệ khi vá nền</string>
+    <string name="battery_optimization_dialog_description">Một số thiết bị có thể tắt trình vá khi ứng dụng bị thu nhỏ. Cho phép Morphe chạy không giới hạn pin để quá trình vá hoàn thành ổn định</string>
+    <string name="battery_optimization_not_now">Từ từ</string>
     <!-- Patcher Screen - Patcher Worker -->
     <string name="patcher_notification_title">Đang vá…</string>
     <string name="patcher_notification_text">Bấm để quay trở lại trình vá</string>
@@ -568,9 +572,9 @@ Kích thước hình ảnh yêu cầu:
     <string name="settings_prompt_installer_on_install_description">Luôn hiện hộp thoại chọn trình cài đặt khi cài ứng dụng đã vá</string>
     <!-- Settings - System Tab - Performance Section -->
     <string name="settings_system_battery_optimization">Tối ưu hóa pin</string>
-    <string name="settings_system_battery_optimization_description">Ngăn hệ thống dừng chương trình vá lỗi khi Morphe được thu nhỏ</string>
-    <string name="settings_system_battery_optimization_excluded">Đã loại trừ</string>
-    <string name="settings_system_battery_optimization_not_excluded">Chưa loại trừ</string>
+    <string name="settings_system_battery_optimization_description">Ngăn hệ thống dừng trình vá khi Morphe bị thu nhỏ</string>
+    <string name="settings_system_battery_optimization_excluded">Đã tối ưu</string>
+    <string name="settings_system_battery_optimization_not_excluded">Chưa tối ưu</string>
     <string name="settings_system_performance">Hiệu suất</string>
     <string name="settings_system_process_runtime">Tiến trình riêng</string>
     <string name="settings_system_process_runtime_description">Chạy quá trình vá trong tiến trình riêng biệt để cải thiện độ ổn định</string>
@@ -697,6 +701,8 @@ Kích thước hình ảnh yêu cầu:
     <string name="disabled">Đang tắt</string>
     <string name="selected">Đã chọn</string>
     <string name="not_selected">Không chọn</string>
+    <string name="select_all">Chọn tất cả</string>
+    <string name="deselect_all">Bỏ chọn tất cả</string>
     <string name="rename">Đổi tên</string>
     <string name="import_">Nhập</string>
     <string name="export">Xuất</string>

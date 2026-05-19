@@ -138,9 +138,13 @@
     <string name="expert_mode_search">Rechercher des patchs</string>
     <string name="expert_mode_proceed">Passer au patchage</string>
     <string name="expert_mode_disable_all">Tout désactiver</string>
+    <string name="expert_mode_disable_all_done">Tous les patchs désactivés</string>
     <string name="expert_mode_enable_all">Tout activer</string>
+    <string name="expert_mode_enable_all_done">Tous les patchs activés</string>
     <string name="expert_mode_reset_to_default">Activer les patchs recommandés</string>
+    <string name="expert_mode_reset_to_default_done">Patchs recommandés appliqués</string>
     <string name="expert_mode_restore_saved">Restaurer la sélection enregistrée</string>
+    <string name="expert_mode_restore_saved_done">Sélection enregistrée restaurée</string>
     <string name="expert_mode_no_results">Aucun patch trouvé</string>
     <string name="expert_mode_universal_patches">Patchs universels</string>
     <string name="expert_mode_new_patches">Nouveau</string>
@@ -186,7 +190,7 @@ Pour de meilleurs résultats, cette application recommande de patcher un &lt;b&g
     <string name="patch_option_enter_number">Entrer un nombre</string>
     <string name="patch_option_enter_decimal">Entrer un décimal</string>
     <string name="patch_option_pick_folder">Choisir un dossier</string>
-    <string name="patch_option_pick_file">Choisir un fichier</string>
+    <string name="patch_option_pick_file">Sélectionner un fichier</string>
     <string name="patch_option_list_duplicate">Cette valeur existe déjà</string>
     <string name="patch_option_list_empty">La valeur ne peut pas être vide</string>
     <string name="patch_option_list_empty_state">Aucune valeur ajoutée pour le moment</string>
@@ -296,8 +300,8 @@ La désinstallation effacera définitivement toutes les données de l’applicat
     <string name="patcher_step_write_patched">Écriture du fichier APK patché</string>
     <string name="patcher_step_sign_apk">Signature du fichier APK patché</string>
     <!-- Battery optimization pre-flight dialog -->
-    <string name="battery_optimization_dialog_title">Protection contre les correctifs en arrière-plan</string>
-    <string name="battery_optimization_dialog_description">Certains appareils peuvent arrêter le correctif lorsque l\'application est minimisée. Autorisez Morphe à fonctionner sans restrictions de batterie pour garantir que le correctif est terminé de manière fiable.</string>
+    <string name="battery_optimization_dialog_title">Protection contre le patchage en arrière-plan</string>
+    <string name="battery_optimization_dialog_description">Certains appareils peuvent arrêter le patcheur lorsque l’application est minimisée. Autorisez Morphe à fonctionner sans restriction de batterie afin de garantir que le patchage s’effectue correctement</string>
     <string name="battery_optimization_not_now">Pas maintenant</string>
     <!-- Patcher Screen - Patcher Worker -->
     <string name="patcher_notification_title">Patchage en cours…</string>
@@ -569,7 +573,7 @@ Les dimensions des images doivent respecter les valeurs suivantes :
     <string name="settings_prompt_installer_on_install_description">Afficher la boîte de dialogue de sélection de l’installateur à chaque fois que vous installez une application patchée</string>
     <!-- Settings - System Tab - Performance Section -->
     <string name="settings_system_battery_optimization">Optimisation de la batterie</string>
-    <string name="settings_system_battery_optimization_description">Empêche le système d\'arrêter le patcher lorsque Morphe est minimisé</string>
+    <string name="settings_system_battery_optimization_description">Empêche le système d’arrêter le patcheur lorsque Morphe est minimisée</string>
     <string name="settings_system_battery_optimization_excluded">Exclu</string>
     <string name="settings_system_battery_optimization_not_excluded">Non exclu</string>
     <string name="settings_system_performance">Performance</string>
@@ -698,6 +702,8 @@ Les dimensions des images doivent respecter les valeurs suivantes :
     <string name="disabled">Désactivé</string>
     <string name="selected">Sélectionné</string>
     <string name="not_selected">Non sélectionné</string>
+    <string name="select_all">Tout sélectionner</string>
+    <string name="deselect_all">Tout désélectionner</string>
     <string name="rename">Renommer</string>
     <string name="import_">Importer</string>
     <string name="export">Exporter</string>

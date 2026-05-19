@@ -10,7 +10,7 @@
     <string name="home_app_show_hidden">Vis skjulte apper</string>
     <string name="home_app_no_hidden">Ingen skjulte apper</string>
     <string name="home_app_hidden_apps_title">Skjulte apper</string>
-    <string name="home_app_hidden_apps_hint">Trykk for å slutte å skjule</string>
+    <string name="home_app_hidden_apps_hint">Trykk for å vise</string>
     <string name="android_11_bug_dialog_title">Android 11-feil</string>
     <string name="android_11_bug_dialog_description">Appinstallasjonstillatelse må gis på forhånd for å unngå en feil i Android 11-systemet som vil påvirke brukeropplevelsen negativt</string>
     <string name="deep_link_add_source_title">Legg til kilde</string>
@@ -132,15 +132,19 @@
     <string name="home_invalid_apk_unreadable">Kunne ikke lese filen. Sjekk at \'Ekstern lagring\' ikke er batteribegrenset</string>
     <string name="home_invalid_apk_not_an_apk">Den valgte filen er ikke en gyldig APK-fil</string>
     <string name="home_invalid_apk_io_error">Kunne ikke åpne filen. Prøv igjen</string>
-    <string name="home_external_apk_expert_mode_required">Denne funksjonen er kun tilgjengelig i ekspertmodus</string>
+    <string name="home_external_apk_expert_mode_required">Denne funksjonen er bare tilgjengelig i ekspertmodus</string>
     <!-- Home Screen - Dialog 4: Expert Mode Dialog -->
     <string name="expert_mode_title">Ekspertmodus</string>
     <string name="expert_mode_search">Søk etter patcher</string>
     <string name="expert_mode_proceed">Fortsett til patching</string>
     <string name="expert_mode_disable_all">Deaktiver alle</string>
+    <string name="expert_mode_disable_all_done">Alle patcher deaktivert</string>
     <string name="expert_mode_enable_all">Aktiver alle</string>
+    <string name="expert_mode_enable_all_done">Alle patcher aktivert</string>
     <string name="expert_mode_reset_to_default">Aktiver anbefalte patches</string>
+    <string name="expert_mode_reset_to_default_done">Anbefalte patcher påført</string>
     <string name="expert_mode_restore_saved">Gjenopprett lagret valg</string>
+    <string name="expert_mode_restore_saved_done">Lagret utvalg gjenopprettet</string>
     <string name="expert_mode_no_results">Ingen patcher funnet</string>
     <string name="expert_mode_universal_patches">Universelle patches</string>
     <string name="expert_mode_new_patches">Ny</string>
@@ -696,6 +700,8 @@ morphe_header_custom_dark.png
     <string name="disabled">Deaktivert</string>
     <string name="selected">Valgt</string>
     <string name="not_selected">Ikke valgt</string>
+    <string name="select_all">Velg alle</string>
+    <string name="deselect_all">Fjern markeringen fra alle</string>
     <string name="rename">Gi nytt navn</string>
     <string name="import_">Importer</string>
     <string name="export">Eksporter</string>

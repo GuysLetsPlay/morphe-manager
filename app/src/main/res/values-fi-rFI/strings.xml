@@ -138,9 +138,13 @@
     <string name="expert_mode_search">Hae lisäosia</string>
     <string name="expert_mode_proceed">Jatka muokkaamiseen</string>
     <string name="expert_mode_disable_all">Poista kaikki käytöstä</string>
+    <string name="expert_mode_disable_all_done">Kaikki korjaukset poistettu käytöstä</string>
     <string name="expert_mode_enable_all">Ota kaikki käyttöön</string>
+    <string name="expert_mode_enable_all_done">Kaikki korjaukset käytössä</string>
     <string name="expert_mode_reset_to_default">Ota suositellut lisäosat käyttöön</string>
+    <string name="expert_mode_reset_to_default_done">Suositellut korjaukset asennettu</string>
     <string name="expert_mode_restore_saved">Palauta tallennettu valinta</string>
+    <string name="expert_mode_restore_saved_done">Tallennusvalinta palautettu</string>
     <string name="expert_mode_no_results">Lisäosia ei löytynyt</string>
     <string name="expert_mode_universal_patches">Yleispätevät lisäosat</string>
     <string name="expert_mode_new_patches">Uusi</string>
@@ -695,6 +699,8 @@ Kuvien mittojen on oltava seuraavat:
     <string name="disabled">Pois käytöstä</string>
     <string name="selected">Valittu</string>
     <string name="not_selected">Ei valittu</string>
+    <string name="select_all">Valitse kaikki</string>
+    <string name="deselect_all">Poista kaikki valinnat</string>
     <string name="rename">Nimeä uudelleen</string>
     <string name="import_">Tuo</string>
     <string name="export">Vie</string>

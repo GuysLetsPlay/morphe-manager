@@ -138,9 +138,13 @@
     <string name="expert_mode_search">Paistí cuardaigh</string>
     <string name="expert_mode_proceed">Lean ar aghaidh leis an bpaisteáil</string>
     <string name="expert_mode_disable_all">Díchumasaigh gach rud</string>
+    <string name="expert_mode_disable_all_done">Paistí uilíocha díchumasaithe</string>
     <string name="expert_mode_enable_all">Cumasaigh gach rud</string>
+    <string name="expert_mode_enable_all_done">Paistí uilíocha cumasaithe</string>
     <string name="expert_mode_reset_to_default">Cumasaigh paistí molta</string>
+    <string name="expert_mode_reset_to_default_done">Paistí molta curtha i bhfeidhm</string>
     <string name="expert_mode_restore_saved">Athchóirigh an rogha sábháilte</string>
+    <string name="expert_mode_restore_saved_done">Athbhunaigh an rogha sábháilte</string>
     <string name="expert_mode_no_results">Níor aimsíodh aon phaistí</string>
     <string name="expert_mode_universal_patches">Paistí uilíocha</string>
     <string name="expert_mode_new_patches">Nua</string>
@@ -694,6 +698,8 @@ Ní mór toisí na híomhá a bheith mar seo a leanas:
     <string name="disabled">Díchumasaithe</string>
     <string name="selected">Roghnaithe</string>
     <string name="not_selected">Níor roghnaíodh</string>
+    <string name="select_all">Roghnaigh gach ceann</string>
+    <string name="deselect_all">Dícheallú ar fad</string>
     <string name="rename">Athainmnigh</string>
     <string name="import_">Iompórtáil</string>
     <string name="export">Easpórtáil</string>

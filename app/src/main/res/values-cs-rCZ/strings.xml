@@ -138,9 +138,13 @@
     <string name="expert_mode_search">Vyhledat záplaty</string>
     <string name="expert_mode_proceed">Pokračovat v záplatování</string>
     <string name="expert_mode_disable_all">Vypnout vše</string>
+    <string name="expert_mode_disable_all_done">Všechny záplaty vypnuté</string>
     <string name="expert_mode_enable_all">Zapnout vše</string>
+    <string name="expert_mode_enable_all_done">Všechny záplaty zapnuté</string>
     <string name="expert_mode_reset_to_default">Povolit doporučené záplaty</string>
+    <string name="expert_mode_reset_to_default_done">Doporučené záplaty aplikovány</string>
     <string name="expert_mode_restore_saved">Obnovit uloženou hodnotu</string>
+    <string name="expert_mode_restore_saved_done">Obnovená uložená volba</string>
     <string name="expert_mode_no_results">Nebyly nalezeny žádné záplaty</string>
     <string name="expert_mode_universal_patches">Univerzální záplaty</string>
     <string name="expert_mode_new_patches">Nový</string>
@@ -696,6 +700,8 @@ Rozměry obrázků musí být následující:
     <string name="disabled">Vypnuto</string>
     <string name="selected">Vybráno</string>
     <string name="not_selected">Nevybráno</string>
+    <string name="select_all">Vybrat vše</string>
+    <string name="deselect_all">Zrušit výběr všech</string>
     <string name="rename">Přejmenovat</string>
     <string name="import_">Importovat</string>
     <string name="export">Exportovat</string>

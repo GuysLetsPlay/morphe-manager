@@ -138,9 +138,13 @@
     <string name="expert_mode_search">搜尋修補程式</string>
     <string name="expert_mode_proceed">繼續修補</string>
     <string name="expert_mode_disable_all">全部停用</string>
+    <string name="expert_mode_disable_all_done">所有修補程式已停用</string>
     <string name="expert_mode_enable_all">全部啟用</string>
+    <string name="expert_mode_enable_all_done">所有修補程式已啟用</string>
     <string name="expert_mode_reset_to_default">啟用推薦的修補程式</string>
+    <string name="expert_mode_reset_to_default_done">已套用建議修補程式</string>
     <string name="expert_mode_restore_saved">還原儲存的選取範圍</string>
+    <string name="expert_mode_restore_saved_done">已儲存的選取已還原</string>
     <string name="expert_mode_no_results">找不到修補程式</string>
     <string name="expert_mode_universal_patches">通用修補程式</string>
     <string name="expert_mode_new_patches">新增</string>
@@ -696,6 +700,8 @@ morphe_header_custom_dark.png
     <string name="disabled">已停用</string>
     <string name="selected">已選取</string>
     <string name="not_selected">未選取</string>
+    <string name="select_all">選取全部</string>
+    <string name="deselect_all">取消全選</string>
     <string name="rename">重新命名</string>
     <string name="import_">匯入</string>
     <string name="export">匯出</string>

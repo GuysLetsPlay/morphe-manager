@@ -138,9 +138,13 @@
     <string name="expert_mode_search">Cari tambalan</string>
     <string name="expert_mode_proceed">Lanjutkan ke Penambalan</string>
     <string name="expert_mode_disable_all">Nonaktifkan semua</string>
+    <string name="expert_mode_disable_all_done">Semua tambalan dinonaktifkan</string>
     <string name="expert_mode_enable_all">Aktifkan semua</string>
+    <string name="expert_mode_enable_all_done">Semua tambalan diaktifkan</string>
     <string name="expert_mode_reset_to_default">Aktifkan tambalan yang direkomendasikan</string>
+    <string name="expert_mode_reset_to_default_done">Tambalan yang direkomendasikan diterapkan</string>
     <string name="expert_mode_restore_saved">Pulihkan pemilihan yang disimpan</string>
+    <string name="expert_mode_restore_saved_done">Pemilihan yang disimpan dipulihkan</string>
     <string name="expert_mode_no_results">Tidak ada tambalan ditemukan</string>
     <string name="expert_mode_universal_patches">Tambalan universal</string>
     <string name="expert_mode_new_patches">Baru</string>
@@ -188,7 +192,7 @@ Harap bersiap untuk perilaku aplikasi yang tidak biasa atau bug yang belum terid
     <string name="patch_option_enter_number">Masukkan nomor</string>
     <string name="patch_option_enter_decimal">Masukkan desimal</string>
     <string name="patch_option_pick_folder">Pilih folder</string>
-    <string name="patch_option_pick_file">Pilih file</string>
+    <string name="patch_option_pick_file">Pilih berkas</string>
     <string name="patch_option_list_duplicate">Nilai ini sudah ada</string>
     <string name="patch_option_list_empty">Nilai tidak boleh kosong</string>
     <string name="patch_option_list_empty_state">Belum ada nilai yang ditambahkan</string>
@@ -299,7 +303,7 @@ Mencopot pemasangannya akan menghapus semua data aplikasi secara permanen"</stri
     <string name="patcher_step_sign_apk">Menandatangani berkas APK yang ditambal</string>
     <!-- Battery optimization pre-flight dialog -->
     <string name="battery_optimization_dialog_title">Perlindungan penambalan latar belakang</string>
-    <string name="battery_optimization_dialog_description">Beberapa perangkat mungkin menghentikan penambal saat aplikasi diminimalkan. Izinkan Morphe berjalan tanpa pembatasan baterai untuk memastikan penambalan selesai dengan andal</string>
+    <string name="battery_optimization_dialog_description">Beberapa perangkat mungkin menghentikan proses penambal ketika aplikasi diminimalkan. Izinkan Morphe berjalan tanpa batasan penggunaan baterai agar proses penambalan dapat diselesaikan dengan lancar</string>
     <string name="battery_optimization_not_now">Nanti saja</string>
     <!-- Patcher Screen - Patcher Worker -->
     <string name="patcher_notification_title">Penyematan sedang berlangsung…</string>
@@ -568,7 +572,7 @@ Dimensi gambar harus sebagai berikut:
     <string name="settings_prompt_installer_on_install_description">Tampilkan dialog pemilihan pemasang setiap kali Anda memasang aplikasi yang ditambal</string>
     <!-- Settings - System Tab - Performance Section -->
     <string name="settings_system_battery_optimization">Optimisasi baterai</string>
-    <string name="settings_system_battery_optimization_description">Mencegah sistem menghentikan patcher saat Morphe diminimalkan</string>
+    <string name="settings_system_battery_optimization_description">Mencegah sistem menghentikan penambal ketika Morphe diminimalkan</string>
     <string name="settings_system_battery_optimization_excluded">Dikecualikan</string>
     <string name="settings_system_battery_optimization_not_excluded">Tidak dikecualikan</string>
     <string name="settings_system_performance">Performa</string>
@@ -697,6 +701,8 @@ Dimensi gambar harus sebagai berikut:
     <string name="disabled">Dinonaktifkan</string>
     <string name="selected">Dipilih</string>
     <string name="not_selected">Tidak dipilih</string>
+    <string name="select_all">Pilih semua</string>
+    <string name="deselect_all">Batal pilih semua</string>
     <string name="rename">Ganti nama</string>
     <string name="import_">Impor</string>
     <string name="export">Ekspor</string>

@@ -138,9 +138,13 @@
     <string name="expert_mode_search">搜索补丁</string>
     <string name="expert_mode_proceed">开始打补丁</string>
     <string name="expert_mode_disable_all">禁用所有</string>
+    <string name="expert_mode_disable_all_done">所有补丁已禁用</string>
     <string name="expert_mode_enable_all">启用所有</string>
+    <string name="expert_mode_enable_all_done">所有补丁已启用</string>
     <string name="expert_mode_reset_to_default">启用推荐补丁</string>
+    <string name="expert_mode_reset_to_default_done">已应用推荐补丁</string>
     <string name="expert_mode_restore_saved">还原已保存的选择</string>
+    <string name="expert_mode_restore_saved_done">已保存的选择已恢复</string>
     <string name="expert_mode_no_results">未找到修补的应用</string>
     <string name="expert_mode_universal_patches">通用补丁</string>
     <string name="expert_mode_new_patches">新</string>
@@ -696,6 +700,8 @@ morphe_header_custom_dark.png
     <string name="disabled">已禁用</string>
     <string name="selected">已选择</string>
     <string name="not_selected">未选择</string>
+    <string name="select_all">全选</string>
+    <string name="deselect_all">取消全选</string>
     <string name="rename">重命名</string>
     <string name="import_">导入</string>
     <string name="export">导出</string>

@@ -138,9 +138,13 @@
     <string name="expert_mode_search">パッチを検索</string>
     <string name="expert_mode_proceed">パッチ処理に進む</string>
     <string name="expert_mode_disable_all">全て無効化</string>
+    <string name="expert_mode_disable_all_done">すべてのパッチが無効になりました</string>
     <string name="expert_mode_enable_all">全て有効化</string>
+    <string name="expert_mode_enable_all_done">すべてのパッチが有効になりました</string>
     <string name="expert_mode_reset_to_default">推奨パッチの有効化</string>
+    <string name="expert_mode_reset_to_default_done">推奨パッチが適用されました</string>
     <string name="expert_mode_restore_saved">保存済みのパッチセレクションの復元</string>
+    <string name="expert_mode_restore_saved_done">保存された選択が復元されました</string>
     <string name="expert_mode_no_results">パッチが見つかりません</string>
     <string name="expert_mode_universal_patches">ユニバーサルパッチ</string>
     <string name="expert_mode_new_patches">新規</string>
@@ -696,6 +700,8 @@ morphe_header_custom_dark.png
     <string name="disabled">無効</string>
     <string name="selected">選択中</string>
     <string name="not_selected">選択されていません</string>
+    <string name="select_all">すべて選択</string>
+    <string name="deselect_all">すべて選択解除</string>
     <string name="rename">名前を変更する</string>
     <string name="import_">インポート</string>
     <string name="export">エクスポート</string>

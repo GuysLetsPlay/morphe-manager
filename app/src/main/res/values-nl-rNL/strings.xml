@@ -135,9 +135,13 @@
     <string name="expert_mode_search">Zoek patches</string>
     <string name="expert_mode_proceed">Doorgaan met patchen</string>
     <string name="expert_mode_disable_all">Alles uitschakelen</string>
+    <string name="expert_mode_disable_all_done">Alle patches uitgeschakeld</string>
     <string name="expert_mode_enable_all">Alles inschakelen</string>
+    <string name="expert_mode_enable_all_done">Alle patches ingeschakeld</string>
     <string name="expert_mode_reset_to_default">Aanbevolen patches inschakelen</string>
+    <string name="expert_mode_reset_to_default_done">Aanbevolen patches toegepast</string>
     <string name="expert_mode_restore_saved">Selectie opslaan herstellen</string>
+    <string name="expert_mode_restore_saved_done">Herstelde selectie is teruggezet</string>
     <string name="expert_mode_no_results">Geen patches gevonden</string>
     <string name="expert_mode_universal_patches">Universele patches</string>
     <string name="expert_mode_new_patches">Nieuw</string>
@@ -693,6 +697,8 @@ De afbeelddimensionen moeten als volgt zijn:
     <string name="disabled">Uitgeschakeld</string>
     <string name="selected">Geselecteerd</string>
     <string name="not_selected">Niet geselecteerd</string>
+    <string name="select_all">Alles selecteren</string>
+    <string name="deselect_all">Alles deselecteren</string>
     <string name="rename">Hernoemen</string>
     <string name="import_">Importeren</string>
     <string name="export">Exporteren</string>

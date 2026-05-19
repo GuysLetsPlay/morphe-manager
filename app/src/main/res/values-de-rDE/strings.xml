@@ -138,9 +138,13 @@
     <string name="expert_mode_search">Suche nach Patches</string>
     <string name="expert_mode_proceed">Fortfahren zum Patchen</string>
     <string name="expert_mode_disable_all">Deaktiviere alle</string>
+    <string name="expert_mode_disable_all_done">Alle Patches deaktiviert</string>
     <string name="expert_mode_enable_all">Aktiviere alle</string>
+    <string name="expert_mode_enable_all_done">Alle Patches aktiviert</string>
     <string name="expert_mode_reset_to_default">Empfohlene Patches aktivieren</string>
+    <string name="expert_mode_reset_to_default_done">Empfohlene Patches angewendet</string>
     <string name="expert_mode_restore_saved">Gespeicherte Auswahl wiederherstellen</string>
+    <string name="expert_mode_restore_saved_done">Wiederhergestellte Auswahl gespeichert</string>
     <string name="expert_mode_no_results">Keine Patches gefunden</string>
     <string name="expert_mode_universal_patches">Universelle Patches</string>
     <string name="expert_mode_new_patches">Neu</string>
@@ -696,6 +700,8 @@ Die Bildgrößen müssen wie folgt sein:
     <string name="disabled">Deaktiviert</string>
     <string name="selected">Ausgewählt</string>
     <string name="not_selected">Nicht ausgewählt</string>
+    <string name="select_all">Alles auswählen</string>
+    <string name="deselect_all">Alles abwählen</string>
     <string name="rename">Umbenennen</string>
     <string name="import_">Importieren</string>
     <string name="export">Exportieren</string>

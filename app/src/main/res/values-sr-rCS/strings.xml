@@ -138,9 +138,13 @@
     <string name="expert_mode_search">Pretraži patchove</string>
     <string name="expert_mode_proceed">Pokreni krpljenje</string>
     <string name="expert_mode_disable_all">Onemogući sve</string>
+    <string name="expert_mode_disable_all_done">Sve zakrpe su isključene</string>
     <string name="expert_mode_enable_all">Omogući sve</string>
+    <string name="expert_mode_enable_all_done">Sve zakrpe su uključene</string>
     <string name="expert_mode_reset_to_default">Омогући препоручене пакете</string>
+    <string name="expert_mode_reset_to_default_done">Preporučene zakrpe su primenjene</string>
     <string name="expert_mode_restore_saved">Ponovi poslednji izbor</string>
+    <string name="expert_mode_restore_saved_done">Vraćena sačuvana selekcija</string>
     <string name="expert_mode_no_results">Nema pronađenih zakrpa</string>
     <string name="expert_mode_universal_patches">Univerzalne zakrpe </string>
     <string name="expert_mode_new_patches">Novo</string>
@@ -680,6 +684,8 @@ Opciono, putanja sadrži ikonu obaveštenja u jednom od sledećih formata:
     <string name="disabled">Onemogućen</string>
     <string name="selected">Odabrano</string>
     <string name="not_selected">Nije odabrano</string>
+    <string name="select_all">Izaberi sve</string>
+    <string name="deselect_all">Poništi izbor svih</string>
     <string name="rename">Preimenovanje</string>
     <string name="import_">Uvoz</string>
     <string name="export">Izvezi</string>

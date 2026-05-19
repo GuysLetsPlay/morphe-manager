@@ -138,9 +138,13 @@
     <string name="expert_mode_search">패치 검색</string>
     <string name="expert_mode_proceed">패치 진행</string>
     <string name="expert_mode_disable_all">모두 비활성화하였습니다</string>
+    <string name="expert_mode_disable_all_done">모든 패치를 비활성화하였습니다</string>
     <string name="expert_mode_enable_all">모두 활성화하였습니다</string>
+    <string name="expert_mode_enable_all_done">모든 패치를 활성화하였습니다</string>
     <string name="expert_mode_reset_to_default">패치 기본값으로 초기화하였습니다</string>
+    <string name="expert_mode_reset_to_default_done">권장 패치를 적용하였습니다</string>
     <string name="expert_mode_restore_saved">저장된 선택 목록으로 복원하였습니다</string>
+    <string name="expert_mode_restore_saved_done">저장된 선택 목록을 복원하였습니다</string>
     <string name="expert_mode_no_results">패치를 찾을 수 없습니다</string>
     <string name="expert_mode_universal_patches">유니버셜 패치</string>
     <string name="expert_mode_new_patches">신규</string>
@@ -697,6 +701,8 @@ morphe_header_custom_dark.png
     <string name="disabled">비활성화됨</string>
     <string name="selected">선택됨</string>
     <string name="not_selected">선택 안 함</string>
+    <string name="select_all">모두 선택</string>
+    <string name="deselect_all">모두 선택 해제</string>
     <string name="rename">이름 변경</string>
     <string name="import_">가져오기</string>
     <string name="export">내보내기</string>

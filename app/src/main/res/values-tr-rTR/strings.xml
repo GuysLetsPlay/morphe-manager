@@ -138,9 +138,13 @@
     <string name="expert_mode_search">Yamaları ara</string>
     <string name="expert_mode_proceed">Yamalamaya başla</string>
     <string name="expert_mode_disable_all">Hepsini devre dışı bırak</string>
+    <string name="expert_mode_disable_all_done">Tüm yamalar devre dışı bırakıldı</string>
     <string name="expert_mode_enable_all">Hepsini etkinleştir</string>
+    <string name="expert_mode_enable_all_done">Tüm yamalar etkinleştirildi</string>
     <string name="expert_mode_reset_to_default">Önerilen yamaları etkinleştir</string>
+    <string name="expert_mode_reset_to_default_done">Önerilen yamalar uygulandı</string>
     <string name="expert_mode_restore_saved">Kaydedilen seçimi geri yükle</string>
+    <string name="expert_mode_restore_saved_done">Kaydedilmiş seçim geri yüklendi</string>
     <string name="expert_mode_no_results">Yama bulunamadı</string>
     <string name="expert_mode_universal_patches">Evrensel yamalar</string>
     <string name="expert_mode_new_patches">Yeni</string>
@@ -298,7 +302,7 @@ Kaldırma işlemi tüm uygulama verilerini kalıcı olarak silecektir"</string>
     <string name="patcher_step_sign_apk">Yamalanmış APK dosyası imzalanıyor</string>
     <!-- Battery optimization pre-flight dialog -->
     <string name="battery_optimization_dialog_title">Arka plan yama koruması</string>
-    <string name="battery_optimization_dialog_description">Bazı cihazlar uygulama küçültüldüğünde yamayı durdurabilir. Yamaların güvenilir bir şekilde tamamlanmasını sağlamak için Morphe uygulamasının pil kısıtlamaları olmadan çalışmasına izin verin.</string>
+    <string name="battery_optimization_dialog_description">Bazı cihazlar, uygulama küçültüldüğünde patcher\'ı durdurabilir. Yamalamanın güvenilir bir şekilde tamamlanmasını sağlamak için Morphe\'nin pil kısıtlamaları olmadan çalışmasına izin verin</string>
     <string name="battery_optimization_not_now">Şimdi değil</string>
     <!-- Patcher Screen - Patcher Worker -->
     <string name="patcher_notification_title">Yamalama devam ediyor…</string>
@@ -567,7 +571,7 @@ Resim boyutları şu şekilde olmalıdır:
     <string name="settings_prompt_installer_on_install_description">Yamalanmış bir uygulamayı her yüklediğinizde yükleyici seçim penceresini gösterin</string>
     <!-- Settings - System Tab - Performance Section -->
     <string name="settings_system_battery_optimization">Pil optimizasyonu</string>
-    <string name="settings_system_battery_optimization_description">Morphe küçültüldüğünde, sistemin yamalayıcıyı durdurmasını engeller</string>
+    <string name="settings_system_battery_optimization_description">Morphe küçültüldüğünde, sistemin patcher\'ı durdurmasını engeller</string>
     <string name="settings_system_battery_optimization_excluded">Hariç tutuldu</string>
     <string name="settings_system_battery_optimization_not_excluded">Hariç tutulmadı</string>
     <string name="settings_system_performance">Performans</string>
@@ -696,6 +700,8 @@ Resim boyutları şu şekilde olmalıdır:
     <string name="disabled">Devre dışı</string>
     <string name="selected">Seçildi</string>
     <string name="not_selected">Seçilmedi</string>
+    <string name="select_all">Tümünü seç</string>
+    <string name="deselect_all">Tümünü kaldır</string>
     <string name="rename">Yeniden adlandır</string>
     <string name="import_">İçe aktar</string>
     <string name="export">Dışa aktar</string>

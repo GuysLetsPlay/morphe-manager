@@ -138,9 +138,13 @@
     <string name="expert_mode_search">Išči popravke</string>
     <string name="expert_mode_proceed">Pojdi na popravilo</string>
     <string name="expert_mode_disable_all">Onemogoči vse</string>
+    <string name="expert_mode_disable_all_done">Vse popravke so onemogočene</string>
     <string name="expert_mode_enable_all">Omogoči vse</string>
+    <string name="expert_mode_enable_all_done">Vse popravke so omogočene</string>
     <string name="expert_mode_reset_to_default">Omogoči priporočene popravke</string>
+    <string name="expert_mode_reset_to_default_done">Uporabljene priporočene popravke</string>
     <string name="expert_mode_restore_saved">Obnovi izbrano izbiro</string>
+    <string name="expert_mode_restore_saved_done">Obnovljena shranjena izbira</string>
     <string name="expert_mode_no_results">Ni najdenih popravkov</string>
     <string name="expert_mode_universal_patches">Univerzalne popravki</string>
     <string name="expert_mode_new_patches">Novo</string>
@@ -696,6 +700,8 @@ Dimenzije slike morajo biti naslednje:
     <string name="disabled">Onemogočeno</string>
     <string name="selected">Izbrano</string>
     <string name="not_selected">Ni izbrano</string>
+    <string name="select_all">Izberi vse</string>
+    <string name="deselect_all">Odpoberi vse</string>
     <string name="rename">Preimenuj</string>
     <string name="import_">Uvozi</string>
     <string name="export">Izvozi</string>

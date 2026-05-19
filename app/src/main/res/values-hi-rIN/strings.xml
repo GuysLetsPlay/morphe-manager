@@ -138,9 +138,13 @@
     <string name="expert_mode_search">पैच खोजें</string>
     <string name="expert_mode_proceed">पैचिंग के लिए आगे बढ़ें</string>
     <string name="expert_mode_disable_all">सभी को असक्षम करें</string>
+    <string name="expert_mode_disable_all_done">सभी पैच अक्षम किए गए</string>
     <string name="expert_mode_enable_all">सभी को सक्षम करें</string>
+    <string name="expert_mode_enable_all_done">सभी पैच सक्षम किए गए</string>
     <string name="expert_mode_reset_to_default">अनुशंसित पैच सक्षम करें</string>
+    <string name="expert_mode_reset_to_default_done">अनुशंसित पैच लागू किए गए</string>
     <string name="expert_mode_restore_saved">चयन पुनर्स्थापित करें</string>
+    <string name="expert_mode_restore_saved_done">सहेजे गए चयन को पुनर्स्थापित किया गया</string>
     <string name="expert_mode_no_results">कोई पैच नहीं मिला</string>
     <string name="expert_mode_universal_patches">सार्वभौमिक पैच</string>
     <string name="expert_mode_new_patches">नया</string>
@@ -696,6 +700,8 @@ morphe_header_custom_dark.png
     <string name="disabled">असक्षम</string>
     <string name="selected">चयनित</string>
     <string name="not_selected">चयनित नहीं</string>
+    <string name="select_all">सब चुनें</string>
+    <string name="deselect_all">सभी का चयन रद्द करें</string>
     <string name="rename">रename</string>
     <string name="import_">आयात करें</string>
     <string name="export">निर्यात करें</string>

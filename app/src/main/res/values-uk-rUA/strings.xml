@@ -138,9 +138,13 @@
     <string name="expert_mode_search">Пошук патчів</string>
     <string name="expert_mode_proceed">Перейти до патчінгу</string>
     <string name="expert_mode_disable_all">Вимкнути всі</string>
+    <string name="expert_mode_disable_all_done">Усі патчі вимкнено</string>
     <string name="expert_mode_enable_all">Увімкнути всі</string>
+    <string name="expert_mode_enable_all_done">Усі патчі ввімкнено</string>
     <string name="expert_mode_reset_to_default">Увімкнути рекомендовані патчі</string>
+    <string name="expert_mode_reset_to_default_done">Рекомендовані патчі застосовано</string>
     <string name="expert_mode_restore_saved">Відновити збережений вибір</string>
+    <string name="expert_mode_restore_saved_done">Збережений вибір відновлено</string>
     <string name="expert_mode_no_results">Патчі не знайдено</string>
     <string name="expert_mode_universal_patches">Універсальні патчі</string>
     <string name="expert_mode_new_patches">Новий</string>
@@ -696,6 +700,8 @@ morphe_header_custom_dark.png
     <string name="disabled">Вимкнено</string>
     <string name="selected">Вибрано</string>
     <string name="not_selected">Не вибрано</string>
+    <string name="select_all">Вибрати все</string>
+    <string name="deselect_all">Скасувати вибір усіх</string>
     <string name="rename">Перейменувати</string>
     <string name="import_">Імпорт</string>
     <string name="export">Експорт</string>

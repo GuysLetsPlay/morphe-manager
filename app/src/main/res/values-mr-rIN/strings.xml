@@ -130,8 +130,12 @@
     <string name="home_invalid_apk_io_error">फाईल उघडण्यात अयशस्वी. कृपया पुन्हा प्रयत्न करा</string>
     <string name="home_external_apk_expert_mode_required">हे वैशिष्ट्य फक्त तज्ञ मोडमध्ये उपलब्ध आहे</string>
     <!-- Home Screen - Dialog 4: Expert Mode Dialog -->
+    <string name="expert_mode_disable_all_done">सर्व पॅच अक्षम केले</string>
+    <string name="expert_mode_enable_all_done">सर्व पॅच सक्षम केले</string>
     <string name="expert_mode_reset_to_default">शिफारस केलेले पॅचेस सक्षम करा</string>
+    <string name="expert_mode_reset_to_default_done">शिफारस केलेले पॅच लागू केले</string>
     <string name="expert_mode_restore_saved">निवडलेला डेटा पुनर्संचयित करा</string>
+    <string name="expert_mode_restore_saved_done">निवड जतन केली पुनर्स्थापित</string>
     <string name="expert_mode_new_patches">नवीन</string>
     <!-- Home Screen - Home Sub-Dialogs -->
     <string name="home_low_disk_space_dialog_message">फक्त %1$.2f GB मोफत स्टोरेज उपलब्ध आहे. पॅचिंगसाठी योग्यरित्या कार्य करण्यासाठी किमान %2$.2f GB मोफत जागा आवश्यक आहे.</string>
@@ -227,6 +231,8 @@
     <!-- Shared strings -->
     <string name="all">सर्व</string>
     <string name="filter">गाळण</string>
+    <string name="select_all">सर्व निवडा</string>
+    <string name="deselect_all">सर्व निवड रद्द करा</string>
     <string name="unmount">डिमाउंट</string>
     <string name="hidden">लपलेले</string>
     <string name="unhide">उघड करा</string>

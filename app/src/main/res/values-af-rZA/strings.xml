@@ -138,9 +138,13 @@
     <string name="expert_mode_search">Soek patchings</string>
     <string name="expert_mode_proceed">Gaan voort met pleister</string>
     <string name="expert_mode_disable_all">Deaktiveer alles</string>
+    <string name="expert_mode_disable_all_done">Alle pleisters gedeaktiveer</string>
     <string name="expert_mode_enable_all">Aktiveer alles</string>
+    <string name="expert_mode_enable_all_done">Alle pleisters geaktiveer</string>
     <string name="expert_mode_reset_to_default">Aktiveer aanbevole pleisters</string>
+    <string name="expert_mode_reset_to_default_done">Aanbevole pleisters toegepas</string>
     <string name="expert_mode_restore_saved">Ingevoeg suksesvol</string>
+    <string name="expert_mode_restore_saved_done">Gestoorde keuse herstel</string>
     <string name="expert_mode_no_results">Geen patchings gevind</string>
     <string name="expert_mode_universal_patches">Universele pleisters</string>
     <string name="expert_mode_new_patches">Nuwe</string>
@@ -696,6 +700,8 @@ Die beeld afmetings moet soos volg wees:
     <string name="disabled">Gedeaktiveer</string>
     <string name="selected">Gekies</string>
     <string name="not_selected">Nie gekies nie</string>
+    <string name="select_all">Kies alles</string>
+    <string name="deselect_all">Deselekteer alles</string>
     <string name="rename">Hernoem</string>
     <string name="import_">Importeer</string>
     <string name="export">Uitvoer</string>

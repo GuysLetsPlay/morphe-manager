@@ -105,6 +105,7 @@
     <string name="home_apk_availability_yes">Ja, hjälp mig att hitta en APK-fil</string>
     <string name="home_apk_availability_no">Nej, jag har redan en APK-fil</string>
     <string name="home_apk_use_saved_with_version">Använd den sparade APK-filen (v%s)</string>
+    <string name="home_apk_use_installed_with_version">Använd den installerade APK-filen (v%s)</string>
     <string name="home_app_info_no_saved_apk">Ingen sparad APK-fil. Modifieringen kräver att du väljer APK-filen igen</string>
     <string name="home_version_requires_android">Kräver Android %s eller senare</string>
     <string name="home_apk_no_compatible_versions_title">Stöds inte på den här enheten</string>
@@ -131,6 +132,7 @@
     <string name="home_invalid_apk_unreadable">Det gick inte att läsa filen. Kontrollera att Extern lagring inte har batteribegränsningar</string>
     <string name="home_invalid_apk_not_an_apk">Den valda filen är inte en giltig APK-fil</string>
     <string name="home_invalid_apk_io_error">Det gick inte att öppna filen. Försök igen</string>
+    <string name="home_external_apk_expert_mode_required">Den här funktionen är endast tillgänglig i expertläget</string>
     <!-- Home Screen - Dialog 4: Expert Mode Dialog -->
     <string name="expert_mode_title">Expertläge</string>
     <string name="expert_mode_search">Sök efter tillägg</string>
@@ -185,6 +187,7 @@ För bästa resultat rekommenderar den här appen att du modifierar en &lt;b&gt;
     <string name="patch_option_enter_number">Ange tal</string>
     <string name="patch_option_enter_decimal">Ange decimaltal</string>
     <string name="patch_option_pick_folder">Välj mapp</string>
+    <string name="patch_option_pick_file">Välj fil</string>
     <string name="patch_option_list_duplicate">Det här värdet finns redan</string>
     <string name="patch_option_list_empty">Värdet kan inte vara tomt</string>
     <string name="patch_option_list_empty_state">Inga värden har lagts till ännu</string>
@@ -263,6 +266,9 @@ För bästa resultat rekommenderar den här appen att du modifierar en &lt;b&gt;
     <string name="patcher_unknown_error">Okänt fel uppstod</string>
     <string name="patcher_conflict_title">Paketkonflikt</string>
     <string name="patcher_conflict_subtitle">Du måste avinstallera den befintliga versionen</string>
+    <string name="patcher_conflict_hint">Den modifierade appen använder ett annat certifikat än den installerade versionen. Om du avinstallerar raderas alla appdata</string>
+    <string name="patcher_installed_conflict_title">Avinstallation krävs</string>
+    <string name="patcher_installed_conflict_body">"Morphe signerar modifierade appar med sitt eget certifikat, vilket skiljer sig från det ursprungliga. Android kräver att du tar bort den befintliga versionen innan den modifierade appen kan installeras."</string>
     <string name="patcher_install_error_title">Installationsfel</string>
     <string name="patcher_install_error_subtitle">Försök att avinstallera och installera igen</string>
     <string name="patcher_ready_to_install_subtitle">Tryck på knappen nedan för att installera</string>
@@ -289,6 +295,9 @@ För bästa resultat rekommenderar den här appen att du modifierar en &lt;b&gt;
     <string name="patcher_step_write_patched">Skriver modifierad APK-fil</string>
     <string name="patcher_step_sign_apk">Signerar modifierad APK-fil</string>
     <!-- Battery optimization pre-flight dialog -->
+    <string name="battery_optimization_dialog_title">Skydd för modifiering i bakgrunden</string>
+    <string name="battery_optimization_dialog_description">Vissa enheter kan stoppa modifieringsverktyget när appen minimeras. Tillåt att Morphe körs utan batteribegränsningar för att säkerställa att modifieringen slutförs tillförlitligt</string>
+    <string name="battery_optimization_not_now">Inte nu</string>
     <!-- Patcher Screen - Patcher Worker -->
     <string name="patcher_notification_title">Modifiering pågår …</string>
     <string name="patcher_notification_text">Tryck för att återgå till modifieringen</string>
@@ -555,6 +564,10 @@ Bildernas mått ska vara följande:
     <string name="settings_prompt_installer_on_install">Be om installerare vid installation</string>
     <string name="settings_prompt_installer_on_install_description">Visa en dialogruta för att välja en installerare varje gång du installerar en modifierad app</string>
     <!-- Settings - System Tab - Performance Section -->
+    <string name="settings_system_battery_optimization">Batterioptimering</string>
+    <string name="settings_system_battery_optimization_description">Förhindrar att systemet stoppar modifieringsverktyget när Morphe minimeras </string>
+    <string name="settings_system_battery_optimization_excluded">Undantagen</string>
+    <string name="settings_system_battery_optimization_not_excluded">Inte undantagen</string>
     <string name="settings_system_performance">Prestanda</string>
     <string name="settings_system_process_runtime">Processexekvering</string>
     <string name="settings_system_process_runtime_description">Kör modifieringen i en separat process för bättre stabilitet</string>

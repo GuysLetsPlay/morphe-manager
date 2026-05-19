@@ -138,9 +138,13 @@
     <string name="expert_mode_search">Módosítások keresése</string>
     <string name="expert_mode_proceed">Módosítás indítása</string>
     <string name="expert_mode_disable_all">Minden módosítás letiltása</string>
+    <string name="expert_mode_disable_all_done">Az összes patch le van tiltva</string>
     <string name="expert_mode_enable_all">Minden módosítás engedélyezése</string>
+    <string name="expert_mode_enable_all_done">Az összes patch engedélyezve van</string>
     <string name="expert_mode_reset_to_default">Ajánlott módosítások engedélyezése</string>
+    <string name="expert_mode_reset_to_default_done">A javasolt patch-ek alkalmazva</string>
     <string name="expert_mode_restore_saved">Mentett összeállítás visszaállítása</string>
+    <string name="expert_mode_restore_saved_done">A mentett kijelölés visszaállítva</string>
     <string name="expert_mode_no_results">Nem találhatók módosítások</string>
     <string name="expert_mode_universal_patches">Univerzális módosítások</string>
     <string name="expert_mode_new_patches">Új</string>
@@ -697,6 +701,8 @@ Forrás: #%2$s</string>
     <string name="disabled">Kikapcsolva</string>
     <string name="selected">Kiválasztott</string>
     <string name="not_selected">Nincs kiválasztva</string>
+    <string name="select_all">Összes kiválasztása</string>
+    <string name="deselect_all">Összes kijelölés visszavonása</string>
     <string name="rename">Átnevezés</string>
     <string name="import_">Importálás</string>
     <string name="export">Exportálás</string>

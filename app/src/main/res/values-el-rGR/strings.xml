@@ -138,9 +138,13 @@
     <string name="expert_mode_search">Αναζήτηση τροποποιήσεων</string>
     <string name="expert_mode_proceed">Προχωρήστε στην τροποποίηση</string>
     <string name="expert_mode_disable_all">Απενεργοποίηση όλων</string>
+    <string name="expert_mode_disable_all_done">Όλες οι διορθώσεις απενεργοποιήθηκαν</string>
     <string name="expert_mode_enable_all">Ενεργοποίηση όλων</string>
+    <string name="expert_mode_enable_all_done">Όλες οι διορθώσεις ενεργοποιήθηκαν</string>
     <string name="expert_mode_reset_to_default">Ενεργοποίηση συνιστώμενων διορθώσεων</string>
+    <string name="expert_mode_reset_to_default_done">Εφαρμόστηκαν οι προτεινόμενες διορθώσεις</string>
     <string name="expert_mode_restore_saved">Επαναφορά αποθηκευμένης επιλογής</string>
+    <string name="expert_mode_restore_saved_done">Επαναφορά επιλεγμένων αποθηκευμένων στοιχείων</string>
     <string name="expert_mode_no_results">Δε βρέθηκαν τροποποιήσεις </string>
     <string name="expert_mode_universal_patches">Γενικές τροποποιήσεις </string>
     <string name="expert_mode_new_patches">Νέο</string>
@@ -696,6 +700,8 @@ morphe_header_custom_dark.png
     <string name="disabled">Απενεργοποιημένο</string>
     <string name="selected">Επιλεγμένη</string>
     <string name="not_selected">Μη επιλεγμένη</string>
+    <string name="select_all">Επιλογή όλων</string>
+    <string name="deselect_all">Κατάργηση επιλογής όλων</string>
     <string name="rename">Μετονομασία</string>
     <string name="import_">Εισαγωγή</string>
     <string name="export">Εξαγωγή</string>

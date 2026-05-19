@@ -138,9 +138,13 @@
     <string name="expert_mode_search">Szukaj modyfikacji</string>
     <string name="expert_mode_proceed">Przejdź do modyfikowania</string>
     <string name="expert_mode_disable_all">Wyłącz wszystkie</string>
+    <string name="expert_mode_disable_all_done">Wyłączono wszystkie modyfikacje</string>
     <string name="expert_mode_enable_all">Włącz wszystkie</string>
+    <string name="expert_mode_enable_all_done">Włączono wszystkie modyfikacje</string>
     <string name="expert_mode_reset_to_default">Włącz zalecane modyfikacje</string>
+    <string name="expert_mode_reset_to_default_done">Zastosowano zalecane modyfikacje</string>
     <string name="expert_mode_restore_saved">Przywróć zapisany wybór</string>
+    <string name="expert_mode_restore_saved_done">Przywrócono zapisany wybór</string>
     <string name="expert_mode_no_results">Nie znaleziono modyfikacji</string>
     <string name="expert_mode_universal_patches">Uniwersalne modyfikacje</string>
     <string name="expert_mode_new_patches">Nowe</string>
@@ -696,6 +700,8 @@ Wymagane są następujące wymiary obrazów:
     <string name="disabled">Wyłączone</string>
     <string name="selected">Wybrano</string>
     <string name="not_selected">Nie wybrano</string>
+    <string name="select_all">Zaznacz wszystko</string>
+    <string name="deselect_all">Odznacz wszystko</string>
     <string name="rename">Zmień nazwę</string>
     <string name="import_">Importuj</string>
     <string name="export">Eksportuj</string>
