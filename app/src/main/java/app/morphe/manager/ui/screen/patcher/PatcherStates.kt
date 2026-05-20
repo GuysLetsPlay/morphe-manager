@@ -617,7 +617,7 @@ private fun InstallActionButton(
         if (isInstalling) {
             CircularProgressIndicator(
                 modifier = Modifier.size(24.dp),
-                color = MaterialTheme.colorScheme.onPrimary,
+                color = LocalContentColor.current,
                 strokeWidth = 2.dp
             )
             Spacer(Modifier.width(12.dp))
@@ -636,7 +636,8 @@ private fun InstallActionButton(
                     isConflict -> Icons.Default.DeleteForever
                     usingMountInstall -> Icons.Outlined.Link
                     else -> Icons.Outlined.InstallMobile
-                }
+                },
+                tint = LocalContentColor.current
             )
             Spacer(Modifier.width(12.dp))
             Text(
