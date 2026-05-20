@@ -84,24 +84,17 @@ fun IncompatiblePatcherVersionDialog(
             }
         }
     ) {
-        val secondaryColor = LocalDialogSecondaryTextColor.current
-
-        Column(
-            modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ItemSpacing)
-        ) {
-            Text(
-                text = htmlAnnotatedString(stringResource(
-                    R.string.patcher_incompatible_patcher_description,
-                    bundleName,
-                    requiredVersion
-                )),
-                style = MaterialTheme.typography.bodyLarge,
-                color = secondaryColor,
-                textAlign = TextAlign.Center,
-                modifier = Modifier.fillMaxWidth()
-            )
-        }
+        Text(
+            text = htmlAnnotatedString(stringResource(
+                R.string.patcher_incompatible_patcher_description,
+                bundleName,
+                requiredVersion
+            )),
+            style = MaterialTheme.typography.bodyLarge,
+            color = LocalDialogSecondaryTextColor.current,
+            textAlign = TextAlign.Center,
+            modifier = Modifier.fillMaxWidth()
+        )
     }
 }
 
