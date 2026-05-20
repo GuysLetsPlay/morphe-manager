@@ -58,15 +58,18 @@
     <string name="sources_management_title">Fuentes de parches</string>
     <string name="sources_management_open_in_browser">Abrir en el navegador</string>
     <string name="sources_management_failed_to_open_url">No se pudo abrir la URL</string>
-    <string name="sources_management_prerelease_toggle">Usar versiones preliminares de parches</string>
+    <string name="sources_management_prerelease_toggle">Parches pre-lanzamiento</string>
     <string name="sources_management_prerelease_toggle_description">Recibe acceso anticipado a nuevas versiones experimentales de parches</string>
-    <string name="sources_management_experimental_versions_toggle">Usar versiones experimentales</string>
+    <string name="sources_management_experimental_versions_toggle">Versiones experimentales de la aplicación</string>
     <string name="sources_management_experimental_versions_toggle_description">Parchea las versiones experimentales de la aplicación, si están disponibles</string>
     <string name="sources_management_already_exists">Esta fuente ya ha sido añadida</string>
     <string name="sources_management_invalid_url">URL de fuente no válida. Compruebe la dirección e inténtelo de nuevo</string>
     <string name="sources_management_metadata_unavailable">Metadatos no disponibles</string>
     <string name="sources_management_metadata_unavailable_hint">El archivo de metadatos remoto no está disponible. La aplicación de parches con el paquete instalado sigue funcionando, pero la actualización automática está desactivada para esta fuente</string>
     <string name="sources_management_metadata_unavailable_hint_missing">No se ha podido descargar el paquete de parches. Es posible que la URL de la fuente sea incorrecta o que el archivo no exista</string>
+    <string name="sources_management_source_enabled">Origen habilitado</string>
+    <string name="sources_management_source_disabled">Origen deshabilitado</string>
+    <string name="sources_management_source_updating">Actualizando origen</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Nombre para mostrar</string>
     <string name="sources_dialog_rename">Agregar fuente de parches</string>
@@ -690,7 +693,9 @@ Las dimensiones de la imagen deben ser las siguientes:
     <string name="selected">Seleccionado</string>
     <string name="not_selected">No seleccionado</string>
     <string name="select_all">Seleccionar todo</string>
+    <string name="select_all_done">Todo seleccionado</string>
     <string name="deselect_all">Desmarcar todo</string>
+    <string name="deselect_all_done">Todo deseleccionado</string>
     <string name="rename">Renombrar</string>
     <string name="import_">Importar</string>
     <string name="export">Exportar</string>

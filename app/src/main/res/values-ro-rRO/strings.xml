@@ -58,15 +58,18 @@
     <string name="sources_management_title">Surse de patch-uri</string>
     <string name="sources_management_open_in_browser">Deschide în browser</string>
     <string name="sources_management_failed_to_open_url">Eroarea la deschiderea URL-ului</string>
-    <string name="sources_management_prerelease_toggle">Folosiți patch-uri pre-lansare</string>
+    <string name="sources_management_prerelease_toggle">Patch-uri pre-lansare</string>
     <string name="sources_management_prerelease_toggle_description">Primești acces anticipat la versiuni noi experimentale de patch-uri</string>
-    <string name="sources_management_experimental_versions_toggle">Utilizează versiuni experimentale</string>
+    <string name="sources_management_experimental_versions_toggle">Versiuni experimentale ale aplicației</string>
     <string name="sources_management_experimental_versions_toggle_description">Patch-uiește aplicații experimentale dacă e disponibil</string>
     <string name="sources_management_already_exists">Sursă deja adăugată</string>
     <string name="sources_management_invalid_url">URL sursă invalidă. Vă rugăm să verificați adresa și încercați din nou</string>
     <string name="sources_management_metadata_unavailable">Metadate indisponibile</string>
     <string name="sources_management_metadata_unavailable_hint">Fișierul de metadate de la distanță nu este disponibil. Aplicarea pachetului instalat funcționează în continuare, dar actualizarea automată este dezactivată pentru această sursă</string>
     <string name="sources_management_metadata_unavailable_hint_missing">Pachetul de corecție nu a putut fi descărcat. URL-ul sursă poate fi incorect sau fișierul nu există</string>
+    <string name="sources_management_source_enabled">Sursă activată</string>
+    <string name="sources_management_source_disabled">Sursă dezactivată</string>
+    <string name="sources_management_source_updating">Se actualizează sursa</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Nume afișat</string>
     <string name="sources_dialog_rename">Redenumire surse de patch-uri</string>
@@ -690,7 +693,9 @@ Dimensiunile imaginilor trebuie să fie următoarele:
     <string name="selected">Selectat</string>
     <string name="not_selected">Neselectat</string>
     <string name="select_all">Selectează tot</string>
+    <string name="select_all_done">Toate selectate</string>
     <string name="deselect_all">Deselecteazã totul</string>
+    <string name="deselect_all_done">Toate deselectorizate</string>
     <string name="rename">Redenumește</string>
     <string name="import_">Importă</string>
     <string name="export">Exportă</string>

@@ -50,8 +50,6 @@
     <string name="sources_management_title">منابع پچ </string>
     <string name="sources_management_open_in_browser">باز کردن در مرورگر</string>
     <string name="sources_management_failed_to_open_url">باز کردن لینک ناموفق بود</string>
-    <string name="sources_management_prerelease_toggle">از پچ های پیش انتشار استفاده کنید</string>
-    <string name="sources_management_experimental_versions_toggle">استفاده از نسخه‌های آزمایشی برنامه</string>
     <string name="sources_management_already_exists">این منبع قبلاً اضافه شده است</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">نام نمایشی</string>

@@ -58,15 +58,18 @@
     <string name="sources_management_title">Patchbronnen</string>
     <string name="sources_management_open_in_browser">Openen in browser</string>
     <string name="sources_management_failed_to_open_url">Kan URL niet openen</string>
-    <string name="sources_management_prerelease_toggle">Gebruik patches van vóór de release</string>
+    <string name="sources_management_prerelease_toggle">Patches van vóór de release</string>
     <string name="sources_management_prerelease_toggle_description">Krijg vroegtijdige toegang tot nieuwe experimentele patchversies</string>
-    <string name="sources_management_experimental_versions_toggle">Experimentele app-versies gebruiken</string>
+    <string name="sources_management_experimental_versions_toggle">Experimentele app-versies</string>
     <string name="sources_management_experimental_versions_toggle_description">Patches experimentele app targets indien beschikbaar</string>
     <string name="sources_management_already_exists">Deze bron is al toegevoegd</string>
     <string name="sources_management_invalid_url">Ongeldige bron-URL. Controleer het adres en probeer het opnieuw</string>
     <string name="sources_management_metadata_unavailable">Metadata niet beschikbaar</string>
     <string name="sources_management_metadata_unavailable_hint">Het externe metadabestand is niet beschikbaar. Patchen met het geïnstalleerde bundel werkt nog steeds, maar automatische update is uitgeschakeld voor deze bron</string>
     <string name="sources_management_metadata_unavailable_hint_missing">De patch-bundel kon niet worden gedownload. De bron-URL is mogelijk onjuist of het bestand bestaat niet</string>
+    <string name="sources_management_source_enabled">Bron ingeschakeld</string>
+    <string name="sources_management_source_disabled">Bron uitgeschakeld</string>
+    <string name="sources_management_source_updating">Bron bijwerken</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Weergavenaam</string>
     <string name="sources_dialog_rename">Patchbron toevoegen</string>
@@ -687,7 +690,9 @@ De afbeelddimensionen moeten als volgt zijn:
     <string name="selected">Geselecteerd</string>
     <string name="not_selected">Niet geselecteerd</string>
     <string name="select_all">Alles selecteren</string>
+    <string name="select_all_done">Alles geselecteerd</string>
     <string name="deselect_all">Alles deselecteren</string>
+    <string name="deselect_all_done">Alles gedeselecteerd</string>
     <string name="rename">Hernoemen</string>
     <string name="import_">Importeren</string>
     <string name="export">Exporteren</string>

@@ -58,8 +58,6 @@
     <string name="sources_management_title">سەرچاوەکانی پینە</string>
     <string name="sources_management_open_in_browser">کردنەوە لە وێبگەڕ</string>
     <string name="sources_management_failed_to_open_url">شکستی هێنا لەکردنەوەی بەستەر</string>
-    <string name="sources_management_prerelease_toggle">بەکارهێنانی پینەی پێش بڵاوکرندەوە</string>
-    <string name="sources_management_experimental_versions_toggle">بەکارهێنانی وەشانەکانی ئەپی تاقیکاری</string>
     <string name="sources_management_already_exists">ئەم سەرچاوەیە پێشتر زیاد کراوە</string>
     <string name="sources_management_invalid_url">بەستەری سەرچاوەی نادروستە. تکایە ناونیشانەکە بپشکنە و دووبارە هەوڵدەوە</string>
     <string name="sources_management_metadata_unavailable">مێتاداتا N/A</string>

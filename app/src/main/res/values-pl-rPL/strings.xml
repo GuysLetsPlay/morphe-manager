@@ -58,15 +58,18 @@
     <string name="sources_management_title">Źródła modyfikacji</string>
     <string name="sources_management_open_in_browser">Otwórz w przeglądarce</string>
     <string name="sources_management_failed_to_open_url">Nie udało się otworzyć strony</string>
-    <string name="sources_management_prerelease_toggle">Użyj przedpremierowych modyfikacji</string>
+    <string name="sources_management_prerelease_toggle">Płatki przedpremierowe</string>
     <string name="sources_management_prerelease_toggle_description">Zapewnia wczesny dostęp do nowych, eksperymentalnych wersji modyfikacji</string>
-    <string name="sources_management_experimental_versions_toggle">Używaj eksperymentalnych wersji aplikacji</string>
+    <string name="sources_management_experimental_versions_toggle">Eksperymentalne wersje aplikacji</string>
     <string name="sources_management_experimental_versions_toggle_description">Modyfikuje wersje eksperymentalne aplikacji, jeśli są dostępne</string>
     <string name="sources_management_already_exists">To źródło zostało już dodane</string>
     <string name="sources_management_invalid_url">Nieprawidłowy adres źródła. Sprawdź adres i spróbuj ponownie</string>
     <string name="sources_management_metadata_unavailable">Brak metadanych</string>
     <string name="sources_management_metadata_unavailable_hint">Zdalny plik metadanych jest niedostępny. Modyfikowanie przy użyciu zainstalowanego pakietu nadal działa, ale automatyczna aktualizacja dla tego źródła została wyłączona</string>
     <string name="sources_management_metadata_unavailable_hint_missing">Nie udało się pobrać pakietu modyfikacji. Adres źródła może być nieprawidłowy lub plik nie istnieje</string>
+    <string name="sources_management_source_enabled">Źródło włączone</string>
+    <string name="sources_management_source_disabled">Źródło wyłączone</string>
+    <string name="sources_management_source_updating">Aktualizowanie źródła</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Nazwa wyświetlana</string>
     <string name="sources_dialog_rename">Zmień nazwę źródła modyfikacji</string>
@@ -690,7 +693,9 @@ Wymagane są następujące wymiary obrazów:
     <string name="selected">Wybrano</string>
     <string name="not_selected">Nie wybrano</string>
     <string name="select_all">Zaznacz wszystko</string>
+    <string name="select_all_done">Wszystkie wybrane</string>
     <string name="deselect_all">Odznacz wszystko</string>
+    <string name="deselect_all_done">Wszystkie odznaczone</string>
     <string name="rename">Zmień nazwę</string>
     <string name="import_">Importuj</string>
     <string name="export">Eksportuj</string>

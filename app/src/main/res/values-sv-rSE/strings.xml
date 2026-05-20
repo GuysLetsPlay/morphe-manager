@@ -58,8 +58,6 @@
     <string name="sources_management_title">Tilläggskällor</string>
     <string name="sources_management_open_in_browser">Öppna i webbläsaren</string>
     <string name="sources_management_failed_to_open_url">Det gick inte att öppna webbadressen</string>
-    <string name="sources_management_prerelease_toggle">Använd förhandsversioner av tillägg</string>
-    <string name="sources_management_experimental_versions_toggle">Använd experimentella appversioner</string>
     <string name="sources_management_already_exists">Den här källan har redan lagts till</string>
     <string name="sources_management_invalid_url">Ogiltig källadress. Kontrollera adressen och försök igen</string>
     <string name="sources_management_metadata_unavailable">Metadata är inte tillgängliga</string>

@@ -58,15 +58,18 @@
     <string name="sources_management_title">Источники патчей</string>
     <string name="sources_management_open_in_browser">Открыть в браузере</string>
     <string name="sources_management_failed_to_open_url">Не удалось открыть URL</string>
-    <string name="sources_management_prerelease_toggle">Использовать пред релиз патчи</string>
+    <string name="sources_management_prerelease_toggle">Предрелизные патчи</string>
     <string name="sources_management_prerelease_toggle_description">Получает ранний доступ к новым экспериментальным версиям патча</string>
-    <string name="sources_management_experimental_versions_toggle">Использовать экспериментальные версии приложения</string>
+    <string name="sources_management_experimental_versions_toggle">Экспериментальные версии приложений</string>
     <string name="sources_management_experimental_versions_toggle_description">Патч экспериментальных целевых параметров программы, если доступны</string>
     <string name="sources_management_already_exists">Этот источник уже добавлен</string>
     <string name="sources_management_invalid_url">Недопустимый URL-адрес источника. Пожалуйста, проверьте адрес и попробуйте еще раз</string>
     <string name="sources_management_metadata_unavailable">Метаданные недоступны</string>
     <string name="sources_management_metadata_unavailable_hint">Удаленный файл метаданных недоступен. Применение патча к установленному пакету по-прежнему работает, но автоматическое обновление для этого источника отключено</string>
     <string name="sources_management_metadata_unavailable_hint_missing">Не удалось загрузить пакет патчей. URL-адрес источника может быть указан неверно или файл не существует</string>
+    <string name="sources_management_source_enabled">Источник включен</string>
+    <string name="sources_management_source_disabled">Источник отключен</string>
+    <string name="sources_management_source_updating">Обновление источника</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Отображаемое имя</string>
     <string name="sources_dialog_rename">Переименовать источник патча</string>
@@ -690,7 +693,9 @@ morphe_header_custom_dark.png
     <string name="selected">Выбрано</string>
     <string name="not_selected">Не выбрано</string>
     <string name="select_all">Выбрать все</string>
+    <string name="select_all_done">Все выбрано</string>
     <string name="deselect_all">Снять выделение со всех</string>
+    <string name="deselect_all_done">Все снято</string>
     <string name="rename">Переименовать</string>
     <string name="import_">Импортировать</string>
     <string name="export">Экспорт</string>

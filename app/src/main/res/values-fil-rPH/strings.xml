@@ -58,15 +58,18 @@
     <string name="sources_management_title">I-patch ang mapagkukunan</string>
     <string name="sources_management_open_in_browser">Buksan sa browser</string>
     <string name="sources_management_failed_to_open_url">Nabigong buksan ang URL</string>
-    <string name="sources_management_prerelease_toggle">Gumamit ng mga pre-release patches</string>
+    <string name="sources_management_prerelease_toggle">Mga patch na pre-release</string>
     <string name="sources_management_prerelease_toggle_description">Tumatanggap ng maagang pag-access sa mga bagong bersyon ng patch na pang-eksperimento</string>
-    <string name="sources_management_experimental_versions_toggle">Gamitin ang mga eksperimental na bersyon ng app</string>
+    <string name="sources_management_experimental_versions_toggle">Mga bersyon ng app na pang-eksperimento</string>
     <string name="sources_management_experimental_versions_toggle_description">Naglalagay ng mga target na app na pang-eksperimento kung mayroon</string>
     <string name="sources_management_already_exists">Ang pinagmulang ito ay naidagdag na.</string>
     <string name="sources_management_invalid_url">Hindi balido ang source URL. Pakisuri ang address at subukang muli.</string>
     <string name="sources_management_metadata_unavailable">Hindi available ang Metadata</string>
     <string name="sources_management_metadata_unavailable_hint">Hindi available ang remote metadata file. Gumagana pa rin ang pag-patch gamit ang naka-install na bundle, ngunit hindi pinagana ang auto-update para sa source na ito.</string>
     <string name="sources_management_metadata_unavailable_hint_missing">Hindi ma-download ang patch bundle. Maaaring mali ang source URL o hindi umiiral ang file.</string>
+    <string name="sources_management_source_enabled">Pinagana ang pagkuha</string>
+    <string name="sources_management_source_disabled">Hindi pinagana ang pagkuha</string>
+    <string name="sources_management_source_updating">Inu-update ang pagkuha</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Pangalan na ipapakita</string>
     <string name="sources_dialog_rename">Baguhin ang mapagkukunan ng patch</string>
@@ -690,7 +693,9 @@ Dapat ang mga sumusunod na sukat ng larawan ay:
     <string name="selected">Napili</string>
     <string name="not_selected">Hindi pinili</string>
     <string name="select_all">Piliin lahat</string>
+    <string name="select_all_done">Lahat ay napili</string>
     <string name="deselect_all">Alisin ang pagpili sa lahat</string>
+    <string name="deselect_all_done">Lahat ay hindi napili</string>
     <string name="rename">Palitan</string>
     <string name="import_">I-import</string>
     <string name="export">I-export</string>

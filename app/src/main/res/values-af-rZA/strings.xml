@@ -58,15 +58,18 @@
     <string name="sources_management_title">Verandering oorspronge</string>
     <string name="sources_management_open_in_browser">Maak oop in blaaier</string>
     <string name="sources_management_failed_to_open_url">Mislukking om URL oop te maak</string>
-    <string name="sources_management_prerelease_toggle">Gebruik voorvrystelling-veranderinge</string>
+    <string name="sources_management_prerelease_toggle">Voorvrystellings-veranderinge</string>
     <string name="sources_management_prerelease_toggle_description">Ontvang vroegtydige toegang tot nuwe eksperimentele weergawe-opdaterings</string>
-    <string name="sources_management_experimental_versions_toggle">Gebruik eksperimentele program-weergawes</string>
+    <string name="sources_management_experimental_versions_toggle">Eksperimentele program-weergawes</string>
     <string name="sources_management_experimental_versions_toggle_description">Pleister eksperimentele app-teikens indien beskikbaar</string>
     <string name="sources_management_already_exists">Hierdie oorsprong is reeds bygevoeg</string>
     <string name="sources_management_invalid_url">Ongeldige bron-URL. Gaan asseblief die adres na en probeer weer</string>
     <string name="sources_management_metadata_unavailable">Metadata Nie beskikbaar nie</string>
     <string name="sources_management_metadata_unavailable_hint">Die afstandmetadata lêer is nie beskikbaar nie. Patches met die geïnstalleerde bundel werk steeds, maar outo-opdatering is vir hierdie bron afgeskakel</string>
     <string name="sources_management_metadata_unavailable_hint_missing">Die patch bundel kon nie afgelaai word nie. Die bron-URL kan verkeerd wees of die lêer bestaan ​​nie</string>
+    <string name="sources_management_source_enabled">Bron geaktiveer</string>
+    <string name="sources_management_source_disabled">Bron gedeaktiveer</string>
+    <string name="sources_management_source_updating">Bron besig om op te dateer</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Wys naam</string>
     <string name="sources_dialog_rename">Hernoem verandering oorsprong</string>
@@ -690,7 +693,9 @@ Die beeld afmetings moet soos volg wees:
     <string name="selected">Gekies</string>
     <string name="not_selected">Nie gekies nie</string>
     <string name="select_all">Kies alles</string>
+    <string name="select_all_done">Alles gekies</string>
     <string name="deselect_all">Deselekteer alles</string>
+    <string name="deselect_all_done">Alles ontkies</string>
     <string name="rename">Hernoem</string>
     <string name="import_">Importeer</string>
     <string name="export">Uitvoer</string>

@@ -58,9 +58,7 @@
     <string name="sources_management_title">Yamaq mənbələri</string>
     <string name="sources_management_open_in_browser">Brauzerdə açın</string>
     <string name="sources_management_failed_to_open_url">URL açmaq uğursuzdu</string>
-    <string name="sources_management_prerelease_toggle">İlkin-buraxılış yamaqları istifadə et</string>
     <string name="sources_management_prerelease_toggle_description">Yeni təcrübi yamaq versiyalarına erkən keçid əldə edilir</string>
-    <string name="sources_management_experimental_versions_toggle">Təcrübi tətbiq versiyaların istifadə et</string>
     <string name="sources_management_experimental_versions_toggle_description">Əlçatandırsa təcrübi tətbiq hədəflərin yamaqlayır</string>
     <string name="sources_management_already_exists">Bu mənbə artıq əlavə edilib</string>
     <string name="sources_management_invalid_url">Etibarsız mənbə URL-si. Xahiş olunur, ünvanı yoxla və təkrar cəhd et</string>

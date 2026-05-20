@@ -58,15 +58,18 @@
     <string name="sources_management_title">Foinsí paiste</string>
     <string name="sources_management_open_in_browser">Oscail sa bhrabhsálaí</string>
     <string name="sources_management_failed_to_open_url">Teip ar URL a oscailt</string>
-    <string name="sources_management_prerelease_toggle">Bain úsáid as paistí réamh-eisiúna</string>
+    <string name="sources_management_prerelease_toggle">Paistí réamh-eisiúna</string>
     <string name="sources_management_prerelease_toggle_description">Faigh rochtain luath ar leagan nua paistí turgnamhacha</string>
-    <string name="sources_management_experimental_versions_toggle">Úsáid leaganacha turgnamhacha d’aipeanna</string>
+    <string name="sources_management_experimental_versions_toggle">Leaganacha turgnamhacha d’aipeanna</string>
     <string name="sources_management_experimental_versions_toggle_description">Paiste spriocanna aipeanna turgnamhacha más féidir</string>
     <string name="sources_management_already_exists">Tá an fhoinse seo curtha leis cheana féin</string>
     <string name="sources_management_invalid_url">URL foinse neamhbhailí. Seiceáil an seoladh agus bain triail eile as</string>
     <string name="sources_management_metadata_unavailable">Meiteashonraí N/B</string>
     <string name="sources_management_metadata_unavailable_hint">Níl an cianchomhad meiteashonraí ar fáil. Oibríonn paistí leis an mbeart suiteáilte fós, ach tá uath-nuashonrú díchumasaithe don fhoinse seo</string>
     <string name="sources_management_metadata_unavailable_hint_missing">Níorbh fhéidir an pacáiste paiste a íoslódáil. B’fhéidir go bhfuil an URL foinse mícheart nó nach bhfuil an comhad ann.</string>
+    <string name="sources_management_source_enabled">Foinse cumasaithe</string>
+    <string name="sources_management_source_disabled">Foinse díchumasaithe</string>
+    <string name="sources_management_source_updating">Foinse á nuashonrú</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Ainm taispeána</string>
     <string name="sources_dialog_rename">Athainmnigh foinse an phaiste</string>
@@ -688,7 +691,9 @@ Ní mór toisí na híomhá a bheith mar seo a leanas:
     <string name="selected">Roghnaithe</string>
     <string name="not_selected">Níor roghnaíodh</string>
     <string name="select_all">Roghnaigh gach ceann</string>
+    <string name="select_all_done">Go léir roghnaithe</string>
     <string name="deselect_all">Dícheallú ar fad</string>
+    <string name="deselect_all_done">Go léir díchumasaithe</string>
     <string name="rename">Athainmnigh</string>
     <string name="import_">Iompórtáil</string>
     <string name="export">Easpórtáil</string>

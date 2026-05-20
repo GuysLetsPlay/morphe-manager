@@ -58,15 +58,18 @@
     <string name="sources_management_title">Nguồn vá</string>
     <string name="sources_management_open_in_browser">Mở trong trình duyệt</string>
     <string name="sources_management_failed_to_open_url">Không thể mở URL</string>
-    <string name="sources_management_prerelease_toggle">Dùng bản vá thử nghiệm</string>
+    <string name="sources_management_prerelease_toggle">Các bản vá phát hành trước</string>
     <string name="sources_management_prerelease_toggle_description">Nhận quyền truy cập sớm vào các phiên bản patch thử nghiệm mới</string>
-    <string name="sources_management_experimental_versions_toggle">Dùng phiên bản thử nghiệm</string>
+    <string name="sources_management_experimental_versions_toggle">Các phiên bản ứng dụng thử nghiệm</string>
     <string name="sources_management_experimental_versions_toggle_description">Patch các mục tiêu ứng dụng thử nghiệm nếu có</string>
     <string name="sources_management_already_exists">Nguồn này đã được thêm vào rồi</string>
     <string name="sources_management_invalid_url">URL nguồn không hợp lệ. Vui lòng kiểm tra địa chỉ và thử lại</string>
     <string name="sources_management_metadata_unavailable">Không có metadata</string>
     <string name="sources_management_metadata_unavailable_hint">Không thể truy cập tệp metadata từ máy chủ. Bạn vẫn có thể vá bằng gói ứng dụng đã cài, nhưng tính năng tự động cập nhật sẽ bị tắt cho nguồn này</string>
     <string name="sources_management_metadata_unavailable_hint_missing">Không thể tải gói vá. URL nguồn có thể không đúng hoặc file không tồn tại</string>
+    <string name="sources_management_source_enabled">Nguồn đã bật</string>
+    <string name="sources_management_source_disabled">Nguồn đã tắt</string>
+    <string name="sources_management_source_updating">Đang cập nhật nguồn</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Tên hiển thị</string>
     <string name="sources_dialog_rename">Đổi tên nguồn vá</string>
@@ -686,7 +689,9 @@ Kích thước hình ảnh yêu cầu:
     <string name="selected">Đã chọn</string>
     <string name="not_selected">Không chọn</string>
     <string name="select_all">Chọn tất cả</string>
+    <string name="select_all_done">Đã chọn tất cả</string>
     <string name="deselect_all">Bỏ chọn tất cả</string>
+    <string name="deselect_all_done">Đã bỏ chọn tất cả</string>
     <string name="rename">Đổi tên</string>
     <string name="import_">Nhập</string>
     <string name="export">Xuất</string>

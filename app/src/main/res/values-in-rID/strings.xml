@@ -58,15 +58,18 @@
     <string name="sources_management_title">Sumber tambalan</string>
     <string name="sources_management_open_in_browser">Buka di peramban</string>
     <string name="sources_management_failed_to_open_url">Gagal membuka URL</string>
-    <string name="sources_management_prerelease_toggle">Gunakan tambalan pra-rilis</string>
+    <string name="sources_management_prerelease_toggle">Patch pra-rilis</string>
     <string name="sources_management_prerelease_toggle_description">Menerima akses awal ke versi tambalan baru eksperimental</string>
-    <string name="sources_management_experimental_versions_toggle">Gunakan versi aplikasi eksperimental</string>
+    <string name="sources_management_experimental_versions_toggle">Versi aplikasi eksperimental</string>
     <string name="sources_management_experimental_versions_toggle_description">Menambal target aplikasi eksperimental jika tersedia</string>
     <string name="sources_management_already_exists">Sumber ini sudah ditambahkan</string>
     <string name="sources_management_invalid_url">URL sumber tidak valid. Harap periksa alamatnya dan coba lagi</string>
     <string name="sources_management_metadata_unavailable">Metadata Tidak Tersedia</string>
     <string name="sources_management_metadata_unavailable_hint">Berkas metadata jarak jauh tidak tersedia. Penambalan dengan bundle yang terpasang masih berfungsi, tetapi pembaruan otomatis dinonaktifkan untuk sumber ini</string>
     <string name="sources_management_metadata_unavailable_hint_missing">Bundle tambalan tidak dapat diunduh. URL sumber mungkin salah atau berkas tidak ada</string>
+    <string name="sources_management_source_enabled">Sumber diaktifkan</string>
+    <string name="sources_management_source_disabled">Sumber dinonaktifkan</string>
+    <string name="sources_management_source_updating">Memperbarui sumber</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Nama tampilan</string>
     <string name="sources_dialog_rename">Ubah nama sumber tambalan</string>
@@ -691,7 +694,9 @@ Dimensi gambar harus sebagai berikut:
     <string name="selected">Dipilih</string>
     <string name="not_selected">Tidak dipilih</string>
     <string name="select_all">Pilih semua</string>
+    <string name="select_all_done">Semua dipilih</string>
     <string name="deselect_all">Batal pilih semua</string>
+    <string name="deselect_all_done">Semua dibatalkan</string>
     <string name="rename">Ganti nama</string>
     <string name="import_">Impor</string>
     <string name="export">Ekspor</string>

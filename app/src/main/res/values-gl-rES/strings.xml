@@ -49,7 +49,6 @@
     <string name="sources_management_title">Fonte de parches</string>
     <string name="sources_management_open_in_browser">Abrir no navegador</string>
     <string name="sources_management_failed_to_open_url">Erro ao abrir o URL</string>
-    <string name="sources_management_prerelease_toggle">Empregar versións preliminares dos parches</string>
     <string name="sources_management_already_exists">Esta fonte xa foi engadida</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Nome a amosar</string>

@@ -58,9 +58,7 @@
     <string name="sources_management_title">Izvori patcheva</string>
     <string name="sources_management_open_in_browser">Otvori u pregledniku</string>
     <string name="sources_management_failed_to_open_url">Nije moguće otvoriti poveznicu</string>
-    <string name="sources_management_prerelease_toggle">Koristi predizdanja patcheva</string>
     <string name="sources_management_prerelease_toggle_description">Primite rani pristup novoj verziji eksperimentalnih patcheva</string>
-    <string name="sources_management_experimental_versions_toggle">Koristi eksperimentalne verzije aplikacija</string>
     <string name="sources_management_experimental_versions_toggle_description">Patchaj eksperimentalne ciljeve aplikacije ako su dostupni</string>
     <string name="sources_management_already_exists">Ovaj izvor je već dodan</string>
     <string name="sources_management_invalid_url">Nevažeći izvor poveznice. Molimo provjerite adresu i pokušajte ponovno</string>

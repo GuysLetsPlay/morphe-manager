@@ -58,15 +58,18 @@
     <string name="sources_management_title">מקורות תיקונים</string>
     <string name="sources_management_open_in_browser">פתח בדפדפן</string>
     <string name="sources_management_failed_to_open_url">כישלון בפתיחת כתובת אינטרנט</string>
-    <string name="sources_management_prerelease_toggle">השתמש בתיקונים לפני הפצתם המלאה</string>
+    <string name="sources_management_prerelease_toggle">תיקונים לפני הפצה</string>
     <string name="sources_management_prerelease_toggle_description">מקבל גישה מוקדמת לגרסאות תיקונים ניסיוניות חדשות</string>
-    <string name="sources_management_experimental_versions_toggle">השתמש בגרסאות אפליקציה ניסיוניות</string>
+    <string name="sources_management_experimental_versions_toggle">גרסאות אפליקציה ניסיוניות</string>
     <string name="sources_management_experimental_versions_toggle_description">תקן גרסאות אפליקציה ניסיוניות זמינות</string>
     <string name="sources_management_already_exists">מקור זה כבר נוסף</string>
     <string name="sources_management_invalid_url">כתובת URL מקור לא תקינה. אנא בדוק את הכתובת ונסה שוב</string>
     <string name="sources_management_metadata_unavailable">מטא-נתונים לא זמינים</string>
     <string name="sources_management_metadata_unavailable_hint">קובץ המטא-נתונים המרוחק לא זמין. תיקון באמצעות החבילה המותקנת עדיין עובד, אך עדכון אוטומטי מושבת עבור מקור זה</string>
     <string name="sources_management_metadata_unavailable_hint_missing">לא ניתן להוריד את חבילת התיקון. כתובת ה-URL של המקור עשויה להיות שגויה או שהקובץ אינו קיים</string>
+    <string name="sources_management_source_enabled">מקור מופעל</string>
+    <string name="sources_management_source_disabled">מקור מושבת</string>
+    <string name="sources_management_source_updating">עדכון מקור</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">הצג שם</string>
     <string name="sources_dialog_rename">שנה את שם מקור התיקונים</string>
@@ -674,7 +677,9 @@ morphe_adaptive_monochrome_custom.xml
     <string name="selected">נבחר</string>
     <string name="not_selected">לא נבחר</string>
     <string name="select_all">בחר הכל</string>
+    <string name="select_all_done">הכל נבחר</string>
     <string name="deselect_all">בטל בחירה של הכל</string>
+    <string name="deselect_all_done">הכל בוטל</string>
     <string name="rename">שנה שם</string>
     <string name="import_">ייבוא</string>
     <string name="export">יְצוּא</string>

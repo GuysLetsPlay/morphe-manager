@@ -58,15 +58,18 @@
     <string name="sources_management_title">Πηγές τροποποίησης</string>
     <string name="sources_management_open_in_browser">Άνοιγμα σε περιηγητή</string>
     <string name="sources_management_failed_to_open_url">Αποτυχία ανοίγματος URL</string>
-    <string name="sources_management_prerelease_toggle">Χρησιμοποιήστε προεκδόσεις τροποποιήσεων</string>
+    <string name="sources_management_prerelease_toggle">Ενημερώσεις πριν την κυκλοφορία</string>
     <string name="sources_management_prerelease_toggle_description">Λάβετε πρόωρη πρόσβαση σε νέες πειραματικές εκδόσεις τροποποιήσεων</string>
-    <string name="sources_management_experimental_versions_toggle">Χρησιμοποιήστε πειραματικές εκδόσεις εφαρμογών</string>
+    <string name="sources_management_experimental_versions_toggle">Πειραματικές εκδόσεις εφαρμογών</string>
     <string name="sources_management_experimental_versions_toggle_description">Τροποποιήστε πειραματικές εκδόσεις εφαρμογών εάν υπάρχουν</string>
     <string name="sources_management_already_exists">Αυτή η πηγή έχει ήδη προστεθεί</string>
     <string name="sources_management_invalid_url">Μη έγκυρη διεύθυνση URL πηγής. Ελέγξτε τη διεύθυνση και προσπαθήστε ξανά</string>
     <string name="sources_management_metadata_unavailable">Μεταδεδομένα μη διαθέσιμα</string>
     <string name="sources_management_metadata_unavailable_hint">Το απομακρυσμένο αρχείο μεταδεδομένων δεν είναι διαθέσιμο. Η επιδιόρθωση με το εγκατεστημένο πακέτο εξακολουθεί να λειτουργεί, αλλά η αυτόματη ενημέρωση είναι απενεργοποιημένη για αυτήν την πηγή</string>
     <string name="sources_management_metadata_unavailable_hint_missing">Το πακέτο επιδιόρθωσης δεν κατέβηκε. Η διεύθυνση URL της πηγής ενδέχεται να είναι λανθασμένη ή το αρχείο να μην υπάρχει</string>
+    <string name="sources_management_source_enabled">Ενεργοποιημένη πηγή</string>
+    <string name="sources_management_source_disabled">Απενεργοποιημένη πηγή</string>
+    <string name="sources_management_source_updating">Ενημέρωση πηγής</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Εμφανιζόμενο όνομα</string>
     <string name="sources_dialog_rename">Αλλαγή ονόματος πηγής τροποποίησης</string>
@@ -690,7 +693,9 @@ morphe_header_custom_dark.png
     <string name="selected">Επιλεγμένη</string>
     <string name="not_selected">Μη επιλεγμένη</string>
     <string name="select_all">Επιλογή όλων</string>
+    <string name="select_all_done">Όλα επιλέχθηκαν</string>
     <string name="deselect_all">Κατάργηση επιλογής όλων</string>
+    <string name="deselect_all_done">Όλα αποεπιλέχθηκαν</string>
     <string name="rename">Μετονομασία</string>
     <string name="import_">Εισαγωγή</string>
     <string name="export">Εξαγωγή</string>

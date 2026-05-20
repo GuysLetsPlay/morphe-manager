@@ -58,15 +58,18 @@
     <string name="sources_management_title">Módosításforrások</string>
     <string name="sources_management_open_in_browser">Megnyitás böngészőben</string>
     <string name="sources_management_failed_to_open_url">Hiba történt az URL megnyitásakor</string>
-    <string name="sources_management_prerelease_toggle">Kiadás előtti módosítások használata</string>
+    <string name="sources_management_prerelease_toggle">Kiadás előtti javítások</string>
     <string name="sources_management_prerelease_toggle_description">Korai hozzáférés kísérleti új javításverziókhoz</string>
-    <string name="sources_management_experimental_versions_toggle">Kísérleti alkalmazásverziók használata</string>
+    <string name="sources_management_experimental_versions_toggle">Kísérleti alkalmazásverziók</string>
     <string name="sources_management_experimental_versions_toggle_description">Módosítsa a kísérleti alkalmazás célpontjait, ha elérhetők</string>
     <string name="sources_management_already_exists">Ez a forrás már hozzá lett adva</string>
     <string name="sources_management_invalid_url">Érvénytelen forrás URL. Kérjük, ellenőrizze a címet, és próbálja újra.</string>
     <string name="sources_management_metadata_unavailable">Metaadatok nem állnak rendelkezésre.</string>
     <string name="sources_management_metadata_unavailable_hint">A távoli metaadatfájl nem érhető el. A telepített csomaggal történő javítás továbbra is működik, de az automatikus frissítés le van tiltva ehhez a forráshoz.</string>
     <string name="sources_management_metadata_unavailable_hint_missing">A javítócsomag letöltése nem sikerült. A forrás URL helytelen lehet, vagy a fájl nem létezik.</string>
+    <string name="sources_management_source_enabled">Forrás engedélyezve</string>
+    <string name="sources_management_source_disabled">Forrás letiltva</string>
+    <string name="sources_management_source_updating">Forrás frissítése</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Megjelenítendő név</string>
     <string name="sources_dialog_rename">Módosításforrás átnevezése</string>
@@ -691,7 +694,9 @@ Forrás: #%2$s</string>
     <string name="selected">Kiválasztott</string>
     <string name="not_selected">Nincs kiválasztva</string>
     <string name="select_all">Összes kiválasztása</string>
+    <string name="select_all_done">Mind kiválasztva</string>
     <string name="deselect_all">Összes kijelölés visszavonása</string>
+    <string name="deselect_all_done">Mind törölve</string>
     <string name="rename">Átnevezés</string>
     <string name="import_">Importálás</string>
     <string name="export">Exportálás</string>

@@ -58,15 +58,18 @@
     <string name="sources_management_title">مصادر التعديل</string>
     <string name="sources_management_open_in_browser">فتح في المتصفح</string>
     <string name="sources_management_failed_to_open_url">فشل في فتح الرابط</string>
-    <string name="sources_management_prerelease_toggle">استخدام إصدارات تعديلات ما قبل الإطلاق</string>
+    <string name="sources_management_prerelease_toggle">إصدارات ما قبل الإطلاق</string>
     <string name="sources_management_prerelease_toggle_description">احصل على وصول مبكر إلى إصدارات التعديل التجريبية الجديدة</string>
-    <string name="sources_management_experimental_versions_toggle">استخدام إصدارات تجريبية للتطبيقات</string>
+    <string name="sources_management_experimental_versions_toggle">إصدارات تجريبية للتطبيقات</string>
     <string name="sources_management_experimental_versions_toggle_description">تعديل الإصدارات التجريبية للتطبيقات المستهدفة إن توفرت</string>
     <string name="sources_management_already_exists">تمت إضافة هذا المصدر بالفعل</string>
     <string name="sources_management_invalid_url">عنوان URL المصدر غير صالح. يرجى التحقق من العنوان والمحاولة مرة أخرى</string>
     <string name="sources_management_metadata_unavailable">البيانات الوصفية غير متوفرة</string>
     <string name="sources_management_metadata_unavailable_hint">ملف البيانات الوصفية عن بعد غير متوفر. لا يزال التعديل بالحزمة المثبتة يعمل، ولكن التحديث التلقائي معطل لهذا المصدر.</string>
     <string name="sources_management_metadata_unavailable_hint_missing">تعذر تنزيل حزمة التعديل. قد يكون عنوان URL المصدر غير صحيح أو أن الملف غير موجود.</string>
+    <string name="sources_management_source_enabled">تم تمكين المصدر</string>
+    <string name="sources_management_source_disabled">تم تعطيل المصدر</string>
+    <string name="sources_management_source_updating">جارٍ تحديث المصدر</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">الاسم المعروض</string>
     <string name="sources_dialog_rename">إعادة تسمية مصدر التعديل</string>
@@ -691,7 +694,9 @@ morphe_adaptive_monochrome_custom.xml
     <string name="selected">محدد</string>
     <string name="not_selected">غير محدد</string>
     <string name="select_all">تحديد الكل</string>
+    <string name="select_all_done">تم تحديد الكل</string>
     <string name="deselect_all">إلغاء تحديد الكل</string>
+    <string name="deselect_all_done">تم إلغاء تحديد الكل</string>
     <string name="rename">إعادة تسمية</string>
     <string name="import_">استيراد</string>
     <string name="export">تصدير</string>

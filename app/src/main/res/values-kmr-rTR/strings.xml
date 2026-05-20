@@ -58,15 +58,18 @@
     <string name="sources_management_title">Kanalan saz bike</string>
     <string name="sources_management_open_in_browser">Di ragirinê de vebêje</string>
     <string name="sources_management_failed_to_open_url">Serokê URL nefirote</string>
-    <string name="sources_management_prerelease_toggle">Dirûtinên pêşbirî bikar bîne</string>
+    <string name="sources_management_prerelease_toggle">Patch-ên pêş-bernameyê</string>
     <string name="sources_management_prerelease_toggle_description">Bi destê pêşîn bigihîje guhertoyên nû yên ceribandinê</string>
-    <string name="sources_management_experimental_versions_toggle">Bi navbera sepanedanên sepaneyan sererî bikarêne</string>
+    <string name="sources_management_experimental_versions_toggle">Werzîyonên sepanê yên eksperîmental</string>
     <string name="sources_management_experimental_versions_toggle_description">Daxwazên sepanê yên ceribandinê yên hewce ne heger hebin</string>
     <string name="sources_management_already_exists">Evîn pêştirîye, berê zêdekirine.</string>
     <string name="sources_management_invalid_url">URL-a çavkaniyê nebaş e. Ji kerema xwe navnîşanê kontrol bikin û dîsa biceribîn</string>
     <string name="sources_management_metadata_unavailable">Metadata N/A</string>
     <string name="sources_management_metadata_unavailable_hint">Pelgeya metadateya dûr nepehwîze. Lê dîsa jî nûkirina bi pakêta ku hatiye saz kirin dixebite, lê nûvekirina otomatîkî ji bo vê çavkaniyê nehate çalak kirin</string>
     <string name="sources_management_metadata_unavailable_hint_missing">Pakêta paşîn nikaribû were dakêşîn. URL-a çavkaniyê dikare ne rast be an pelge ne heye</string>
+    <string name="sources_management_source_enabled">Çavkanî aktîv kirin</string>
+    <string name="sources_management_source_disabled">Çavkanî ne aktîv kirin</string>
+    <string name="sources_management_source_updating">Çavkanî nûkirin</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Navnê nîşankêr</string>
     <string name="sources_dialog_rename">Ji bo guherîna çavkaniyê navê nû</string>
@@ -686,7 +689,9 @@ Qasîyên wêneyan divê wiha bin:
     <string name="selected">Hilbijartin</string>
     <string name="not_selected">Ne hilbijartin</string>
     <string name="select_all">Hemûyan hilbijêre</string>
+    <string name="select_all_done">Hemûyan hilbijartin</string>
     <string name="deselect_all">Hemûyan hilbijêre</string>
+    <string name="deselect_all_done">Hemûyan bêhilbijartin</string>
     <string name="rename">Navê nû bigere</string>
     <string name="import_">Hez kirin</string>
     <string name="export">Dernake</string>

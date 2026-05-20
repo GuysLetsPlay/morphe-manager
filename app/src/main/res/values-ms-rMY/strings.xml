@@ -54,8 +54,6 @@
     <string name="sources_management_title">Tampalan sumber-sumber</string>
     <string name="sources_management_open_in_browser">Buka dalam pelayar web</string>
     <string name="sources_management_failed_to_open_url">Gagal untuk membuka URL</string>
-    <string name="sources_management_prerelease_toggle">Guna tampalan pra-keluaran</string>
-    <string name="sources_management_experimental_versions_toggle">Guna aplikasi versi uji kaji</string>
     <string name="sources_management_already_exists">Sumber ini sudah ditambah sebelumnya</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Nama paparan</string>

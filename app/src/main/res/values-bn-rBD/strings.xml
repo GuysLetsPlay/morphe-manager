@@ -58,15 +58,18 @@
     <string name="sources_management_title">প্যাচ সোর্সগুলো</string>
     <string name="sources_management_open_in_browser">ব্রাউজারে ওপেন করুন</string>
     <string name="sources_management_failed_to_open_url">URL খুলতে ব্যর্থ হয়েছে</string>
-    <string name="sources_management_prerelease_toggle">পূর্ব-প্রকাশিত প্যাচ ব্যবহার করুন</string>
+    <string name="sources_management_prerelease_toggle">প্রি-রিলিজ প্যাচ</string>
     <string name="sources_management_prerelease_toggle_description">নতুন পরীক্ষামূলক প্যাচ সংস্করণে প্রাথমিক অ্যাক্সেস গ্রহণ করে</string>
-    <string name="sources_management_experimental_versions_toggle">\'\'</string>
+    <string name="sources_management_experimental_versions_toggle">পরীক্ষামূলক অ্যাপ সংস্করণ</string>
     <string name="sources_management_experimental_versions_toggle_description">উপलब्ध থাকলে পরীক্ষামূলক অ্যাপ টার্গেট প্যাচ করে</string>
     <string name="sources_management_already_exists">এই উৎসটি ইতিমধ্যেই যোগ করা হয়েছে</string>
     <string name="sources_management_invalid_url">অবৈধ উৎস URL। অনুগ্রহ করে ঠিকানাটি পরীক্ষা করুন এবং পুনরায় চেষ্টা করুন</string>
     <string name="sources_management_metadata_unavailable">মেটাডেটা উপলব্ধ নয়</string>
     <string name="sources_management_metadata_unavailable_hint">রিমোট মেটাডেটা ফাইলটি পাওয়া যাচ্ছে না। ইনস্টল করা বান্ডেলের সাথে প্যাচিং এখনও কাজ করে, তবে এই উৎসের জন্য স্বয়ংক্রিয় আপডেট নিষ্ক্রিয় করা হয়েছে</string>
     <string name="sources_management_metadata_unavailable_hint_missing">প্যাচ বান্ডেল ডাউনলোড করা যায়নি। উৎস URL ভুল হতে পারে অথবা ফাইলটি বিদ্যমান নেই</string>
+    <string name="sources_management_source_enabled">সোর্স সক্রিয় করা হয়েছে</string>
+    <string name="sources_management_source_disabled">সোর্স নিষ্ক্রিয় করা হয়েছে</string>
+    <string name="sources_management_source_updating">সোর্স আপডেট করা হচ্ছে</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">প্রদর্শিত নাম</string>
     <string name="sources_dialog_rename">প্যাচের নাম পরিবর্তন করুন</string>
@@ -679,7 +682,9 @@ morphe_adaptive_monochrome_custom.xml
     <string name="selected">নির্বাচিত</string>
     <string name="not_selected">নির্বাচিত নয়</string>
     <string name="select_all">সবগুলি নির্বাচন করুন</string>
+    <string name="select_all_done">সব নির্বাচন করা হয়েছে</string>
     <string name="deselect_all">সবগুলি নির্বাচন বাতিল করুন</string>
+    <string name="deselect_all_done">সব ডি-সিলেক্ট করা হয়েছে</string>
     <string name="rename">রেনেম করুন</string>
     <string name="import_">আমদানি করুন</string>
     <string name="export">এক্সপোর্ট করুন</string>

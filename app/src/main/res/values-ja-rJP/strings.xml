@@ -67,6 +67,9 @@
     <string name="sources_management_metadata_unavailable">メタデータなし</string>
     <string name="sources_management_metadata_unavailable_hint">リモートのメタデータファイルは利用できません。インストール済みのバンドルでのパッチ適用は可能ですが、このソースの自動更新は無効になります。</string>
     <string name="sources_management_metadata_unavailable_hint_missing">パッチバンドルのダウンロードに失敗しました。ソースURLが正しくないか、ファイルが存在しない可能性があります。</string>
+    <string name="sources_management_source_enabled">ソースが有効</string>
+    <string name="sources_management_source_disabled">ソースが無効</string>
+    <string name="sources_management_source_updating">ソースを更新中</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">表示名</string>
     <string name="sources_dialog_rename">パッチソースの名前を変更</string>
@@ -690,7 +693,9 @@ morphe_header_custom_dark.png
     <string name="selected">選択中</string>
     <string name="not_selected">選択されていません</string>
     <string name="select_all">すべて選択</string>
+    <string name="select_all_done">すべて選択</string>
     <string name="deselect_all">すべて選択解除</string>
+    <string name="deselect_all_done">すべて選択解除</string>
     <string name="rename">名前を変更する</string>
     <string name="import_">インポート</string>
     <string name="export">エクスポート</string>

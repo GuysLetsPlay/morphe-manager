@@ -58,15 +58,18 @@
     <string name="sources_management_title">Извор печовања</string>
     <string name="sources_management_open_in_browser">Отвори у прегледачу</string>
     <string name="sources_management_failed_to_open_url">Неуспешно отварање URL адресе</string>
-    <string name="sources_management_prerelease_toggle">Користите пре-издавачке пакете</string>
+    <string name="sources_management_prerelease_toggle">Предвершајуће закрпе</string>
     <string name="sources_management_prerelease_toggle_description">Примање ране приступности новим експерименталним верзијама пача</string>
-    <string name="sources_management_experimental_versions_toggle">Користите експерименталне верзије апликација</string>
+    <string name="sources_management_experimental_versions_toggle">Експерименталне верзије апликације</string>
     <string name="sources_management_experimental_versions_toggle_description">Пачује експерименталне циљеве апликација ако су доступни</string>
     <string name="sources_management_already_exists">Ovaj izvor je već dodan</string>
     <string name="sources_management_invalid_url">Невалидна УРЛ адреса извора. Молимо проверите адресу и покушајте поново</string>
     <string name="sources_management_metadata_unavailable">Метаподаци нису доступни</string>
     <string name="sources_management_metadata_unavailable_hint">Датотека метаподатка са удаљеног извора није доступна. Поправка са инсталираним пакетом и даље функционише, али аутоматска ажурирања су искључена за овај извор</string>
     <string name="sources_management_metadata_unavailable_hint_missing">Пакест за поправку није могао да се преузме. УРЛ адреса извора може бити неисправна или датотека не постоји</string>
+    <string name="sources_management_source_enabled">Извор омогућен</string>
+    <string name="sources_management_source_disabled">Извор онемогућен</string>
+    <string name="sources_management_source_updating">Ажурирање извора</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Назив за приказ</string>
     <string name="sources_dialog_rename">Преименујте изворни извор</string>
@@ -689,7 +692,9 @@ morphe_header_custom_dark.png
     <string name="selected">Одабрано</string>
     <string name="not_selected">Није одбрано</string>
     <string name="select_all">Изаберите све</string>
+    <string name="select_all_done">Све изабрано</string>
     <string name="deselect_all">Поништи све изборе</string>
+    <string name="deselect_all_done">Све поништено</string>
     <string name="rename">Преименуј</string>
     <string name="import_">Увоз</string>
     <string name="export">Извези</string>

@@ -58,15 +58,18 @@
     <string name="sources_management_title">Zdroje záplat</string>
     <string name="sources_management_open_in_browser">Otevřít v prohlížeči</string>
     <string name="sources_management_failed_to_open_url">Nepodařilo se otevřít URL</string>
-    <string name="sources_management_prerelease_toggle">Použít předběžné záplaty</string>
+    <string name="sources_management_prerelease_toggle">Předběžné záplaty</string>
     <string name="sources_management_prerelease_toggle_description">Získáte předběžný přístup k novým experimentálním verzím záplat</string>
-    <string name="sources_management_experimental_versions_toggle">Použít experimentální verze aplikace</string>
+    <string name="sources_management_experimental_versions_toggle">Experimentální verze aplikací</string>
     <string name="sources_management_experimental_versions_toggle_description">Záplatovat experimentální verze aplikací, jsou-li k dispozici</string>
     <string name="sources_management_already_exists">Tento zdroj byl již přidán</string>
     <string name="sources_management_invalid_url">Neplatná adresa URL zdroje. Zkontrolujte adresu a zkuste to znovu</string>
     <string name="sources_management_metadata_unavailable">Metadata N/A</string>
     <string name="sources_management_metadata_unavailable_hint">Soubor s metadaty na vzdáleném serveru není dostupný. Oprava pomocí nainstalovaného balíčku stále funguje, ale automatická aktualizace je pro tento zdroj zakázána</string>
     <string name="sources_management_metadata_unavailable_hint_missing">Balíček oprav nemohl být stažen. Adresa URL zdroje může být neplatná nebo soubor nemusí existovat</string>
+    <string name="sources_management_source_enabled">Zdroj aktivován</string>
+    <string name="sources_management_source_disabled">Zdroj deaktivován</string>
+    <string name="sources_management_source_updating">Aktualizace zdroje</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Zobrazit název</string>
     <string name="sources_dialog_rename">Přejmenovat zdroj záplat</string>
@@ -690,7 +693,9 @@ Rozměry obrázků musí být následující:
     <string name="selected">Vybráno</string>
     <string name="not_selected">Nevybráno</string>
     <string name="select_all">Vybrat vše</string>
+    <string name="select_all_done">Vše vybráno</string>
     <string name="deselect_all">Zrušit výběr všech</string>
+    <string name="deselect_all_done">Vše zrušeno</string>
     <string name="rename">Přejmenovat</string>
     <string name="import_">Importovat</string>
     <string name="export">Exportovat</string>

@@ -60,13 +60,16 @@
     <string name="sources_management_failed_to_open_url">Nepodarilo sa otvoriť URL</string>
     <string name="sources_management_prerelease_toggle">Použiť predbežne vydané záplaty</string>
     <string name="sources_management_prerelease_toggle_description">Získajte skorší prístup k novým experimentálnym verziám záplat</string>
-    <string name="sources_management_experimental_versions_toggle">Použiť experimentálne verzie aplikácií</string>
+    <string name="sources_management_experimental_versions_toggle">Experimentálne verzie aplikácie</string>
     <string name="sources_management_experimental_versions_toggle_description">Nainštaluje experimentálne verzie aplikácie, ak sú dostupné</string>
     <string name="sources_management_already_exists">Tento zdroj už bol pridaný</string>
     <string name="sources_management_invalid_url">Neplatná URL adresa zdroja. Skontrolujte adresu a skúste to znova</string>
     <string name="sources_management_metadata_unavailable">Metadáta N/A</string>
     <string name="sources_management_metadata_unavailable_hint">Diaľkový metaúdajový súbor nie je dostupný. Oprava pomocou nainštalovaného balíka stále funguje, ale automatická aktualizácia je pre tento zdroj zakázaná</string>
     <string name="sources_management_metadata_unavailable_hint_missing">Balík opráv sa nepodarilo stiahnuť. URL adresa zdroja môže byť nesprávna alebo súbor neexistuje</string>
+    <string name="sources_management_source_enabled">Zdroj povolený</string>
+    <string name="sources_management_source_disabled">Zdroj zakázaný</string>
+    <string name="sources_management_source_updating">Aktualizácia zdroja</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Zobrazovaný názov</string>
     <string name="sources_dialog_rename">Premenovať zdroj záplaty</string>
@@ -690,7 +693,9 @@ Rozmery obrázka musia byť nasledovné:
     <string name="selected">Vybrané</string>
     <string name="not_selected">Nevybrané</string>
     <string name="select_all">Vybrať všetko</string>
+    <string name="select_all_done">Všetko vybrané</string>
     <string name="deselect_all">Zrušiť výber všetkých</string>
+    <string name="deselect_all_done">Všetko zrušené</string>
     <string name="rename">Premenovať</string>
     <string name="import_">Importovať</string>
     <string name="export">Exportovať</string>

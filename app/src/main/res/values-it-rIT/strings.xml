@@ -58,15 +58,18 @@
     <string name="sources_management_title">Fonti delle patch</string>
     <string name="sources_management_open_in_browser">Apri nel browser</string>
     <string name="sources_management_failed_to_open_url">Impossibile aprire l’URL</string>
-    <string name="sources_management_prerelease_toggle">Usa le patch di anteprima</string>
+    <string name="sources_management_prerelease_toggle">Patch di pre-rilascio</string>
     <string name="sources_management_prerelease_toggle_description">Ottieni l\'accesso anticipato alle nuove versioni sperimentali delle patch.</string>
-    <string name="sources_management_experimental_versions_toggle">Utilizza le versioni sperimentali delle app</string>
+    <string name="sources_management_experimental_versions_toggle">Versioni sperimentali delle app</string>
     <string name="sources_management_experimental_versions_toggle_description">Patcha le versioni sperimentali delle app, se disponibili</string>
     <string name="sources_management_already_exists">Questa fonte è già stata aggiunta</string>
     <string name="sources_management_invalid_url">URL di origine non valido. Controlla l\'indirizzo e riprova</string>
     <string name="sources_management_metadata_unavailable">Metadati non disponibili</string>
     <string name="sources_management_metadata_unavailable_hint">Il file dei metadati remoto non è disponibile. L\'applicazione della patch con il bundle installato funziona ancora, ma l\'aggiornamento automatico è disabilitato per questa sorgente</string>
     <string name="sources_management_metadata_unavailable_hint_missing">Impossibile scaricare il bundle di patch. L\'URL di origine potrebbe essere errato oppure il file non esiste</string>
+    <string name="sources_management_source_enabled">Sorgente abilitata</string>
+    <string name="sources_management_source_disabled">Sorgente disabilitata</string>
+    <string name="sources_management_source_updating">Aggiornamento sorgente</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Nome visualizzato</string>
     <string name="sources_dialog_rename">Rinomina la fonte delle patch</string>
@@ -679,7 +682,9 @@ Le dimensioni delle immagini devono essere le seguenti:
     <string name="selected">Selezionato</string>
     <string name="not_selected">Non selezionata</string>
     <string name="select_all">Seleziona tutto</string>
+    <string name="select_all_done">Tutto selezionato</string>
     <string name="deselect_all">Deseleziona tutto</string>
+    <string name="deselect_all_done">Tutto deselezionato</string>
     <string name="rename">Rinomina</string>
     <string name="import_">Importa</string>
     <string name="export">Esporta</string>

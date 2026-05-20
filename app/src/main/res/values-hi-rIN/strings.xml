@@ -58,15 +58,18 @@
     <string name="sources_management_title">पैच स्रोत</string>
     <string name="sources_management_open_in_browser">खोल में खोल करना</string>
     <string name="sources_management_failed_to_open_url">URL खोलने में विफल रहा</string>
-    <string name="sources_management_prerelease_toggle">प्रिलीस रिलीज़ पथचों को उपयोग करें</string>
+    <string name="sources_management_prerelease_toggle">प्री-रिलीज़ पैच</string>
     <string name="sources_management_prerelease_toggle_description">नए प्रायोगिक पैच संस्करणों तक जल्दी पहुँच प्राप्त करता है</string>
-    <string name="sources_management_experimental_versions_toggle">प्रयोगशील ऐप संस्करणों का उपयोग करें</string>
+    <string name="sources_management_experimental_versions_toggle">प्रायोगिक ऐप संस्करण</string>
     <string name="sources_management_experimental_versions_toggle_description">यदि उपलब्ध हों तो प्रायोगिक ऐप लक्ष्यों को पैच करता है</string>
     <string name="sources_management_already_exists">यह स्रोत पहले से ही जोड़ा गया है</string>
     <string name="sources_management_invalid_url">अमान्य स्रोत URL। कृपया पता जांचें और फिर प्रयास करें</string>
     <string name="sources_management_metadata_unavailable">मेटाडेटा उपलब्ध नहीं है</string>
     <string name="sources_management_metadata_unavailable_hint">रिमोट मेटाडेटा फ़ाइल अनुपलब्ध है। स्थापित बंडल के साथ पैचिंग अभी भी काम करती है, लेकिन इस स्रोत के लिए ऑटो-अपडेट अक्षम कर दिया गया है</string>
     <string name="sources_management_metadata_unavailable_hint_missing">पैच बंडल डाउनलोड नहीं किया जा सका। स्रोत URL गलत हो सकता है या फ़ाइल मौजूद नहीं है</string>
+    <string name="sources_management_source_enabled">स्रोत सक्षम किया गया</string>
+    <string name="sources_management_source_disabled">स्रोत अक्षम किया गया</string>
+    <string name="sources_management_source_updating">स्रोत अपडेट किया जा रहा है</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">नाम दर्जा करें</string>
     <string name="sources_dialog_rename">पैच स्रोत का नाम बदलें</string>
@@ -690,7 +693,9 @@ morphe_header_custom_dark.png
     <string name="selected">चयनित</string>
     <string name="not_selected">चयनित नहीं</string>
     <string name="select_all">सब चुनें</string>
+    <string name="select_all_done">सभी चयनित</string>
     <string name="deselect_all">सभी का चयन रद्द करें</string>
+    <string name="deselect_all_done">सभी अचयनित</string>
     <string name="rename">रename</string>
     <string name="import_">आयात करें</string>
     <string name="export">निर्यात करें</string>

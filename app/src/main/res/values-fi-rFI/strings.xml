@@ -58,15 +58,18 @@
     <string name="sources_management_title">Lisäosien lähteet</string>
     <string name="sources_management_open_in_browser">Avaa selaimessa</string>
     <string name="sources_management_failed_to_open_url">URL-osoitteen avaaminen epäonnistui</string>
-    <string name="sources_management_prerelease_toggle">Käytä lisäosien ennakkoversioita</string>
+    <string name="sources_management_prerelease_toggle">Ennakkojulkaisupäivitykset</string>
     <string name="sources_management_prerelease_toggle_description">Saat uusien kokeellisten lisäosaversioiden ennakkopääsyn</string>
-    <string name="sources_management_experimental_versions_toggle">Käytä kokeellisia sovellusversioita</string>
+    <string name="sources_management_experimental_versions_toggle">Kokeelliset sovellusversiot</string>
     <string name="sources_management_experimental_versions_toggle_description">Muokkaa kokeellisia sovelluskohteita, jos saatavilla</string>
     <string name="sources_management_already_exists">Tämä lähde on jo lisätty</string>
     <string name="sources_management_invalid_url">Virheellinen lähde-URL-osoite. Tarkista osoite ja yritä uudelleen</string>
     <string name="sources_management_metadata_unavailable">Metatietoja ei ole saatavilla</string>
     <string name="sources_management_metadata_unavailable_hint">Etämetatietotiedosto ei ole saatavilla. Muokkaaminen asennetulla lisäosapaketilla onnistuu edelleen, mutta automaattinen päivitys on poistettu käytöstä tässä lähteessä</string>
     <string name="sources_management_metadata_unavailable_hint_missing">Lisäosapaketin lataaminen epäonnistui. Lähteen URL-osoite saattaa olla virheellinen tai tiedostoa ei ole olemassa</string>
+    <string name="sources_management_source_enabled">Lähde käytössä</string>
+    <string name="sources_management_source_disabled">Lähde poistettu käytöstä</string>
+    <string name="sources_management_source_updating">Päivitetään lähdettä</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Näkyvä nimi</string>
     <string name="sources_dialog_rename">Nimeä lisäosien lähde uudelleen</string>
@@ -689,7 +692,9 @@ Kuvien mittojen on oltava seuraavat:
     <string name="selected">Valittu</string>
     <string name="not_selected">Ei valittu</string>
     <string name="select_all">Valitse kaikki</string>
+    <string name="select_all_done">Kaikki valittu</string>
     <string name="deselect_all">Poista kaikki valinnat</string>
+    <string name="deselect_all_done">Kaikki poistettu valinnasta</string>
     <string name="rename">Nimeä uudelleen</string>
     <string name="import_">Tuo</string>
     <string name="export">Vie</string>

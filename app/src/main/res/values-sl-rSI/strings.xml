@@ -58,15 +58,18 @@
     <string name="sources_management_title">Posodobi vire</string>
     <string name="sources_management_open_in_browser">Odprtje v brskalniku</string>
     <string name="sources_management_failed_to_open_url">Ni mogoče odpreti URL</string>
-    <string name="sources_management_prerelease_toggle">Uporabi pred-izidne popravke</string>
+    <string name="sources_management_prerelease_toggle">Popravki pred izdajo</string>
     <string name="sources_management_prerelease_toggle_description">Prejme zgodnji dostop do novih eksperimentalnih različic popravkov</string>
-    <string name="sources_management_experimental_versions_toggle">Uporaba eksperimentalnih različic aplikacij</string>
+    <string name="sources_management_experimental_versions_toggle">Eksperimentalne različice aplikacije</string>
     <string name="sources_management_experimental_versions_toggle_description">Popravi cilje eksperimentalnih aplikacij, če so na voljo</string>
     <string name="sources_management_already_exists">Ta vir že obstaja</string>
     <string name="sources_management_invalid_url">Neveljaven URL izvor. Preverite naslov in poskusite znova</string>
     <string name="sources_management_metadata_unavailable">Metapodatki N/A</string>
     <string name="sources_management_metadata_unavailable_hint">Dostop do datoteke metapodatkov na daljavi ni možen. Uporaba popravka z nameščenim paketom še vedno deluje, vendar je samodejno posodabljanje za ta vir onemogočeno.</string>
     <string name="sources_management_metadata_unavailable_hint_missing">Paket popravkov se ni dal prenesti. URL naslov izvora je lahko napačen ali datoteka ne obstaja.</string>
+    <string name="sources_management_source_enabled">Vir omogočen</string>
+    <string name="sources_management_source_disabled">Vir onemogočen</string>
+    <string name="sources_management_source_updating">Posodabljanje vira</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Prikazno ime</string>
     <string name="sources_dialog_rename">Preimenuj vir popravka</string>
@@ -691,7 +694,9 @@ Dimenzije slike morajo biti naslednje:
     <string name="selected">Izbrano</string>
     <string name="not_selected">Ni izbrano</string>
     <string name="select_all">Izberi vse</string>
+    <string name="select_all_done">Vse izbrano</string>
     <string name="deselect_all">Odpoberi vse</string>
+    <string name="deselect_all_done">Vse odstranjeno</string>
     <string name="rename">Preimenuj</string>
     <string name="import_">Uvozi</string>
     <string name="export">Izvozi</string>

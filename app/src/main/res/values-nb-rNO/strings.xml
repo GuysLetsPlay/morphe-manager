@@ -58,15 +58,18 @@
     <string name="sources_management_title">Patchkilder</string>
     <string name="sources_management_open_in_browser">Åpne i nettleser</string>
     <string name="sources_management_failed_to_open_url">Kunne ikke åpne URL</string>
-    <string name="sources_management_prerelease_toggle">Bruk prerelease patches</string>
+    <string name="sources_management_prerelease_toggle">Forhåndsutgitte oppdateringer</string>
     <string name="sources_management_prerelease_toggle_description">Mottar tidlig tilgang til nye eksperimentelle patchversjoner</string>
-    <string name="sources_management_experimental_versions_toggle">Bruk eksperimentelle appversjoner</string>
+    <string name="sources_management_experimental_versions_toggle">Eksperimentelle appversjoner</string>
     <string name="sources_management_experimental_versions_toggle_description">Patchene eksperimentelle appmål hvis tilgjengelig</string>
     <string name="sources_management_already_exists">Denne kilden er allerede lagt til</string>
     <string name="sources_management_invalid_url">Ugyldig kilde-URL. Vennligst sjekk adressen og prøv igjen</string>
     <string name="sources_management_metadata_unavailable">Metadata ikke tilgjengelig</string>
     <string name="sources_management_metadata_unavailable_hint">Den eksterne metadatafilen er ikke tilgjengelig. Patching med den installerte pakken fungerer fortsatt, men automatisk oppdatering er deaktivert for denne kilden</string>
     <string name="sources_management_metadata_unavailable_hint_missing">Patch-pakken kunne ikke lastes ned. Kilde-URL-en kan være feil eller filen finnes ikke</string>
+    <string name="sources_management_source_enabled">Kilde aktivert</string>
+    <string name="sources_management_source_disabled">Kilde deaktivert</string>
+    <string name="sources_management_source_updating">Oppdaterer kilde</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Visningsnavn</string>
     <string name="sources_dialog_rename">Gi nytt navn til patchkilde</string>
@@ -690,7 +693,9 @@ morphe_header_custom_dark.png
     <string name="selected">Valgt</string>
     <string name="not_selected">Ikke valgt</string>
     <string name="select_all">Velg alle</string>
+    <string name="select_all_done">Alle valgt</string>
     <string name="deselect_all">Fjern markeringen fra alle</string>
+    <string name="deselect_all_done">Alle fjernet valgt</string>
     <string name="rename">Gi nytt navn</string>
     <string name="import_">Importer</string>
     <string name="export">Eksporter</string>

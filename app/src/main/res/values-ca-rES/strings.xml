@@ -46,7 +46,6 @@
     <string name="sources_management_title">Fonts de pegats</string>
     <string name="sources_management_open_in_browser">Obrir al navegador</string>
     <string name="sources_management_failed_to_open_url">Error en obrir l\'URL</string>
-    <string name="sources_management_prerelease_toggle">Utilitza pegats de pre-llançament</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Nom mostrat</string>
     <string name="sources_dialog_rename">Canviar la font del pegat</string>

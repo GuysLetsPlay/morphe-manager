@@ -58,15 +58,18 @@
     <string name="sources_management_title">Fontes de patches</string>
     <string name="sources_management_open_in_browser">Abrir links no navegador</string>
     <string name="sources_management_failed_to_open_url">Falha ao abrir URL</string>
-    <string name="sources_management_prerelease_toggle">Usar correções de pré-lançamento</string>
+    <string name="sources_management_prerelease_toggle">Patches de pré-lançamento</string>
     <string name="sources_management_prerelease_toggle_description">Recebe acesso antecipado a novas versões experimentais de correções</string>
-    <string name="sources_management_experimental_versions_toggle">Usar versões experimentais do app</string>
+    <string name="sources_management_experimental_versions_toggle">Versões experimentais do app</string>
     <string name="sources_management_experimental_versions_toggle_description">Aplica patches nas versões experimentais do app, se disponíveis</string>
     <string name="sources_management_already_exists">Esta fonte já foi adicionada</string>
     <string name="sources_management_invalid_url">URL de origem inválida. Verifique o endereço e tente novamente.</string>
     <string name="sources_management_metadata_unavailable">Metadados N/A</string>
     <string name="sources_management_metadata_unavailable_hint">O arquivo de metadados remoto não está disponível. A aplicação do patch com o pacote instalado ainda funciona, mas a atualização automática está desativada para esta fonte.</string>
     <string name="sources_management_metadata_unavailable_hint_missing">O pacote de patch não pôde ser baixado. A URL de origem pode estar incorreta ou o arquivo não existir.</string>
+    <string name="sources_management_source_enabled">Fonte ativada</string>
+    <string name="sources_management_source_disabled">Fonte desativada</string>
+    <string name="sources_management_source_updating">Atualizando fonte</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Nome de exibição</string>
     <string name="sources_dialog_rename">Renomear origem de correção</string>
@@ -690,7 +693,9 @@ As dimensões das imagens devem ser as seguintes:
     <string name="selected">Selecionado</string>
     <string name="not_selected">Não selecionado</string>
     <string name="select_all">Selecionar tudo</string>
+    <string name="select_all_done">Todos selecionados</string>
     <string name="deselect_all">Desmarcar tudo</string>
+    <string name="deselect_all_done">Todos desmarcados</string>
     <string name="rename">Renomear</string>
     <string name="import_">Importar</string>
     <string name="export">Exportar</string>

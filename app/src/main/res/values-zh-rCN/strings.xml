@@ -58,15 +58,18 @@
     <string name="sources_management_title">补丁源</string>
     <string name="sources_management_open_in_browser">在浏览器中打开链接</string>
     <string name="sources_management_failed_to_open_url">无法打开URL</string>
-    <string name="sources_management_prerelease_toggle">使用预发布补丁</string>
+    <string name="sources_management_prerelease_toggle">预发布补丁</string>
     <string name="sources_management_prerelease_toggle_description">接收新实验性补丁版本的早期访问权限</string>
-    <string name="sources_management_experimental_versions_toggle">使用实验性应用版本</string>
+    <string name="sources_management_experimental_versions_toggle">实验版应用版本</string>
     <string name="sources_management_experimental_versions_toggle_description">如果可用，对实验性应用目标进行修补</string>
     <string name="sources_management_already_exists">此资源已添加</string>
     <string name="sources_management_invalid_url">无效的源URL。请检查地址并重试</string>
     <string name="sources_management_metadata_unavailable">元数据不可用</string>
     <string name="sources_management_metadata_unavailable_hint">远程元数据文件不可用。使用已安装的程序包进行修补仍然有效，但此源的自动更新已禁用</string>
     <string name="sources_management_metadata_unavailable_hint_missing">无法下载补丁包。源URL可能不正确或文件不存在</string>
+    <string name="sources_management_source_enabled">源已启用</string>
+    <string name="sources_management_source_disabled">源已禁用</string>
+    <string name="sources_management_source_updating">正在更新源</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">显示名称</string>
     <string name="sources_dialog_rename">重命名补丁配置文件</string>
@@ -690,7 +693,9 @@ morphe_header_custom_dark.png
     <string name="selected">已选择</string>
     <string name="not_selected">未选择</string>
     <string name="select_all">全选</string>
+    <string name="select_all_done">全部已选</string>
     <string name="deselect_all">取消全选</string>
+    <string name="deselect_all_done">全部已取消</string>
     <string name="rename">重命名</string>
     <string name="import_">导入</string>
     <string name="export">导出</string>

@@ -67,6 +67,9 @@
     <string name="sources_management_metadata_unavailable">Метадані недоступні</string>
     <string name="sources_management_metadata_unavailable_hint">Віддалений файл метаданих недоступний. Патчінг з встановленим джерелом все ще працює, але автоматичне оновлення цього джерела недоступне</string>
     <string name="sources_management_metadata_unavailable_hint_missing">Не вдалося завантажити пакет патчів. Можливо, URL-адреса джерела неправильна або файл не існує</string>
+    <string name="sources_management_source_enabled">Джерело увімкнено</string>
+    <string name="sources_management_source_disabled">Джерело вимкнено</string>
+    <string name="sources_management_source_updating">Оновлення джерела</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Назва</string>
     <string name="sources_dialog_rename">Перейменувати джерело патчів</string>
@@ -690,7 +693,9 @@ morphe_header_custom_dark.png
     <string name="selected">Вибрано</string>
     <string name="not_selected">Не вибрано</string>
     <string name="select_all">Вибрати все</string>
+    <string name="select_all_done">Всі вибрано</string>
     <string name="deselect_all">Скасувати вибір усіх</string>
+    <string name="deselect_all_done">Всі скасовано</string>
     <string name="rename">Перейменувати</string>
     <string name="import_">Імпорт</string>
     <string name="export">Експорт</string>

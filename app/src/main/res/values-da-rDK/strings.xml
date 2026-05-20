@@ -58,15 +58,18 @@
     <string name="sources_management_title">Patchkilder</string>
     <string name="sources_management_open_in_browser">Åbn links i browser</string>
     <string name="sources_management_failed_to_open_url">Kunne ikke åbne URL</string>
-    <string name="sources_management_prerelease_toggle">Brug pre-release patches</string>
+    <string name="sources_management_prerelease_toggle">Pre-release patches</string>
     <string name="sources_management_prerelease_toggle_description">Få tidlig adgang til nye eksperimentelle patch versioner</string>
-    <string name="sources_management_experimental_versions_toggle">Brug eksperimentelle app-versioner</string>
+    <string name="sources_management_experimental_versions_toggle">Eksperimentelle app-versioner</string>
     <string name="sources_management_experimental_versions_toggle_description">Patch eksperimentelle app-targets, hvis de er tilgængelige</string>
     <string name="sources_management_already_exists">Denne kilde er allerede tilføjet</string>
     <string name="sources_management_invalid_url">Ugyldig kilde-URL. Kontroller venligst adressen og prøv igen</string>
     <string name="sources_management_metadata_unavailable">Metadata ikke tilgængelig</string>
     <string name="sources_management_metadata_unavailable_hint">Den eksterne metadatafil er ikke tilgængelig. Opdatering med den installerede pakke fungerer stadig, men automatisk opdatering er deaktiveret for denne kilde</string>
     <string name="sources_management_metadata_unavailable_hint_missing">Opdateringspakken kunne ikke hentes. Kilde-URL\'en kan være forkert, eller filen findes ikke</string>
+    <string name="sources_management_source_enabled">Kilde aktiveret</string>
+    <string name="sources_management_source_disabled">Kilde deaktiveret</string>
+    <string name="sources_management_source_updating">Opdaterer kilde</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Visningsnavn</string>
     <string name="sources_dialog_rename">Omdøb navnet på patchkilde</string>
@@ -690,7 +693,9 @@ Størrelsesformatet skal være som følger:
     <string name="selected">Valgt</string>
     <string name="not_selected">Ikke valgt</string>
     <string name="select_all">Vælg alle</string>
+    <string name="select_all_done">Alle valgt</string>
     <string name="deselect_all">Fravælg alle</string>
+    <string name="deselect_all_done">Alle fjernet valget</string>
     <string name="rename">Omdøb</string>
     <string name="import_">Importer</string>
     <string name="export">Eksporter</string>

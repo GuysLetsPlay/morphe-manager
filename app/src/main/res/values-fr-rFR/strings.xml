@@ -58,15 +58,18 @@
     <string name="sources_management_title">Sources de patchs</string>
     <string name="sources_management_open_in_browser">Ouvrir dans le navigateur</string>
     <string name="sources_management_failed_to_open_url">Échec de l\'ouverture de l\'URL</string>
-    <string name="sources_management_prerelease_toggle">Utiliser les pré-versions des patchs</string>
+    <string name="sources_management_prerelease_toggle">Correctifs de prépublication</string>
     <string name="sources_management_prerelease_toggle_description">Reçoit un accès anticipé aux nouvelles versions expérimentales des patchs</string>
-    <string name="sources_management_experimental_versions_toggle">Utiliser les versions expérimentales de l’application</string>
+    <string name="sources_management_experimental_versions_toggle">Versions expérimentales de l’application</string>
     <string name="sources_management_experimental_versions_toggle_description">Patche les cibles de l’application expérimentale si disponibles</string>
     <string name="sources_management_already_exists">Cette source a déjà été ajoutée</string>
     <string name="sources_management_invalid_url">L’URL de la source est invalide. Vérifiez l’adresse puis réessayez</string>
     <string name="sources_management_metadata_unavailable">Métadonnées N/A</string>
     <string name="sources_management_metadata_unavailable_hint">Le fichier de métadonnées distant est indisponible. Le patchage avec le bundle installé fonctionne toujours, mais la mise à jour automatique est désactivée pour cette source</string>
     <string name="sources_management_metadata_unavailable_hint_missing">Le bundle de patch n’a pas pu être téléchargé. L’URL de la source est peut-être incorrecte ou le fichier n’existe pas</string>
+    <string name="sources_management_source_enabled">Source activée</string>
+    <string name="sources_management_source_disabled">Source désactivée</string>
+    <string name="sources_management_source_updating">Mise à jour de la source</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Nom d\'affichage</string>
     <string name="sources_dialog_rename">Renommer la source de patchs</string>
@@ -691,7 +694,9 @@ Les dimensions des images doivent respecter les valeurs suivantes :
     <string name="selected">Sélectionné</string>
     <string name="not_selected">Non sélectionné</string>
     <string name="select_all">Tout sélectionner</string>
+    <string name="select_all_done">Tous sélectionnés</string>
     <string name="deselect_all">Tout désélectionner</string>
+    <string name="deselect_all_done">Tous désélectionnés</string>
     <string name="rename">Renommer</string>
     <string name="import_">Importer</string>
     <string name="export">Exporter</string>

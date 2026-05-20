@@ -58,7 +58,7 @@
     <string name="sources_management_title">Yama kaynakları</string>
     <string name="sources_management_open_in_browser">Tarayıcıda aç</string>
     <string name="sources_management_failed_to_open_url">URL açılamadı</string>
-    <string name="sources_management_prerelease_toggle">Ön sürüm yamaları kullan</string>
+    <string name="sources_management_prerelease_toggle">Ön sürüm yamaları</string>
     <string name="sources_management_prerelease_toggle_description">Yeni deneysel sürüm yamalarına erken erişim sağlar</string>
     <string name="sources_management_experimental_versions_toggle">Deneysel uygulama sürümlerini kullan</string>
     <string name="sources_management_experimental_versions_toggle_description">Mevcutsa deneysel uygulama hedeflerini yamala</string>
@@ -67,6 +67,9 @@
     <string name="sources_management_metadata_unavailable">Metadata Yok</string>
     <string name="sources_management_metadata_unavailable_hint">Uzak metadata dosyası kullanılamıyor. Yüklü paketle yamalama hala çalışır, ancak bu kaynak için otomatik güncelleme devre dışı bırakıldı</string>
     <string name="sources_management_metadata_unavailable_hint_missing">Yama paketi indirilemedi. Kaynak URL\'si yanlış olabilir veya dosya mevcut olmayabilir</string>
+    <string name="sources_management_source_enabled">Kaynak etkinleştirildi</string>
+    <string name="sources_management_source_disabled">Kaynak devre dışı bırakıldı</string>
+    <string name="sources_management_source_updating">Kaynak güncelleniyor</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Görünen ad</string>
     <string name="sources_dialog_rename">Yama kaynağını yeniden adlandır</string>
@@ -476,7 +479,7 @@ Kaldırma işlemi tüm uygulama verilerini kalıcı olarak silecektir"</string>
     <string name="settings_advanced_patch_options_no_available">Bu yamaya ait hiçbir seçenek yok</string>
     <!-- Settings - Advanced Tab - Patch Options Section: Custom Branding -->
     <string name="settings_advanced_patch_options_custom_branding">Özel marka</string>
-    <string name="settings_advanced_patch_options_custom_branding_description">Uygulama görüntüleme adını değiştirir</string>
+    <string name="settings_advanced_patch_options_custom_branding_description">Görüntülenen uygulama adını değiştirir</string>
     <string name="settings_advanced_patch_options_custom_branding_app_name">Uygulama adı</string>
     <string name="settings_advanced_patch_options_custom_branding_app_name_hint">Özel ad girin</string>
     <string name="settings_advanced_patch_options_custom_branding_custom_icon">Özel filtre</string>
@@ -514,7 +517,7 @@ morphe_adaptive_monochrome_custom.xml
   drawable-xxxhdpi/morphe_notification_icon_custom.png (96x96 px)"</string>
     <!-- Settings - Advanced Tab - Patch Options Section: Custom Header -->
     <string name="settings_advanced_patch_options_custom_header">Özel başlık logosu</string>
-    <string name="settings_advanced_patch_options_custom_header_description">Üst bilgi logosunu değiştirir</string>
+    <string name="settings_advanced_patch_options_custom_header_description">Başlık logosunu değiştirir</string>
     <string name="settings_advanced_patch_options_custom_header_instruction">"Özel başlık logosu olarak kullanılacak resimlerin bulunduğu klasör.
 
 Klasör, cihazın DPI değerine bağlı olarak aşağıdaki klasörlerden birini veya daha fazlasını içermelidir:
@@ -535,9 +538,9 @@ Resim boyutları şu şekilde olmalıdır:
     <!-- Settings - Advanced Tab - Patch Options Section: Hide Shorts -->
     <string name="settings_advanced_patch_options_hide_shorts_features">Shorts özelliklerini gizle</string>
     <string name="settings_advanced_patch_options_hide_shorts_app_shortcut">Shorts uygulama kısayolunu gizle</string>
-    <string name="settings_advanced_patch_options_hide_shorts_app_shortcut_description">Launcher uzun basma menüsünden Shorts\'u kaldır</string>
+    <string name="settings_advanced_patch_options_hide_shorts_app_shortcut_description">Launcher uzun basma menüsünden Shorts\'u kaldırır</string>
     <string name="settings_advanced_patch_options_hide_shorts_widget">Shorts widget\'ını gizle</string>
-    <string name="settings_advanced_patch_options_hide_shorts_widget_description">Launcher widget\'ından Shorts düğmesini kaldır</string>
+    <string name="settings_advanced_patch_options_hide_shorts_widget_description">Launcher widget\'ından Shorts düğmesini kaldırır</string>
     <!-- Settings - System Tab - Installer Section -->
     <string name="installer">Yükleyici</string>
     <string name="installer_title">Yükleyici seçin</string>
@@ -567,13 +570,13 @@ Resim boyutları şu şekilde olmalıdır:
     <string name="installer_unavailable_shizuku_hint">Shizuku\'nun çalıştığından ve ve bu uygulama için izin verildiğinden emin olun</string>
     <string name="installer_use_standard">Standardı kullan</string>
     <string name="settings_prompt_installer_on_install">Yükleyici seçimi istemi</string>
-    <string name="settings_prompt_installer_on_install_description">Yamalanmış bir uygulamayı her yüklediğinizde yükleyici seçim penceresini gösterin</string>
+    <string name="settings_prompt_installer_on_install_description">Yamalanmış bir uygulama her yüklendiğinde yükleyici seçim penceresini gösterir</string>
     <!-- Settings - System Tab - Performance Section -->
     <string name="settings_system_battery_optimization">Pil optimizasyonu</string>
-    <string name="settings_system_battery_optimization_description">Uygulama küçültüldüğünde yamalayıcıyı çalışır durumda tutar</string>
+    <string name="settings_system_battery_optimization_description">Uygulama küçültüldüğünde patcher\'ı çalışır durumda tutar</string>
     <string name="settings_system_performance">Performans</string>
     <string name="settings_system_process_runtime">Çalışma süreci</string>
-    <string name="settings_system_process_runtime_description">Daha iyi istikrar için yamalamayı ayrı bir süreçte gerçekleştirin</string>
+    <string name="settings_system_process_runtime_description">Daha iyi istikrar için yamalamayı ayrı bir süreçte gerçekleştirir</string>
     <string name="settings_system_process_runtime_memory_limit">Bellek limiti</string>
     <string name="settings_system_process_runtime_memory_limit_description">Daha yüksek limitler, uygun cihazlarda yamalamayı hızlandırır</string>
     <string name="settings_system_process_runtime_enable">Çalışma sürecini etkinleştir</string>
@@ -629,7 +632,7 @@ Resim boyutları şu şekilde olmalıdır:
     <string name="settings_system_original_apks_delete_confirm">%s için orijinal APK silinsin mi? Yeni bir APK sağlamadan yeniden yama yapamazsınız</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">Yama seçenekleri</string>
-    <string name="settings_system_patch_selections_description">Kaldırıldıktan sonra korunan kaydedilmiş yama seçimleri</string>
+    <string name="settings_system_patch_selections_description">Kaydedilen yama seçimleri, kaldırıldıktan sonra saklanır</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">Tüm seçimler sıfırlansın mı?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">Paket seçimleri sıfırlansın mı?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">Kaynak seçimi sıfırlansın mı?</string>
@@ -690,7 +693,9 @@ Resim boyutları şu şekilde olmalıdır:
     <string name="selected">Seçildi</string>
     <string name="not_selected">Seçilmedi</string>
     <string name="select_all">Tümünü seç</string>
+    <string name="select_all_done">Hepsini seçili olarak işaretle</string>
     <string name="deselect_all">Tümünü kaldır</string>
+    <string name="deselect_all_done">Hepsini seçili işaretinden kaldırma</string>
     <string name="rename">Yeniden adlandır</string>
     <string name="import_">İçe aktar</string>
     <string name="export">Dışa aktar</string>

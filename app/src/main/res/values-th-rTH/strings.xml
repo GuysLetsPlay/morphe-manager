@@ -58,7 +58,7 @@
     <string name="sources_management_title">จัดการแหล่งที่มา</string>
     <string name="sources_management_open_in_browser">เปิดในเบราว์เซอร์</string>
     <string name="sources_management_failed_to_open_url">ไม่สามารถเปิด URL ได้</string>
-    <string name="sources_management_prerelease_toggle">ใช้แพทช์ก่อนปล่อยอย่างทางการ</string>
+    <string name="sources_management_prerelease_toggle">แพตช์ก่อนเปิดตัว</string>
     <string name="sources_management_prerelease_toggle_description">รับสิทธิ์เข้าถึงแพทช์ใหม่เวอร์ชันทดลองแต่เนิ่นๆ</string>
     <string name="sources_management_experimental_versions_toggle">ใช้แอปเวอร์ชันทดลอง</string>
     <string name="sources_management_experimental_versions_toggle_description">แพตซ์แอปเวอร์ชันทดลองของเป้าหมาย ถ้ามี</string>
@@ -67,6 +67,9 @@
     <string name="sources_management_metadata_unavailable">ไม่มีข้อมูล Metadata</string>
     <string name="sources_management_metadata_unavailable_hint">ไฟล์ Metadata ระยะไกลไม่พร้อมใช้งาน การแก้ไขด้วยชุดติดตั้งที่มีอยู่ยังคงทำงานได้ แต่การอัปเดตอัตโนมัติถูกปิดใช้งานสำหรับแหล่งที่มานี้</string>
     <string name="sources_management_metadata_unavailable_hint_missing">ไม่สามารถดาวน์โหลดชุดแก้ไขได้ URL แหล่งที่มาอาจไม่ถูกต้อง หรือไฟล์ไม่มีอยู่</string>
+    <string name="sources_management_source_enabled">แหล่งที่มาเปิดใช้งานแล้ว</string>
+    <string name="sources_management_source_disabled">แหล่งที่มาปิดใช้งานแล้ว</string>
+    <string name="sources_management_source_updating">กำลังอัปเดตแหล่งที่มา</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">ชื่อที่แสดง</string>
     <string name="sources_dialog_rename">เปลี่ยนชื่อแหล่งที่มา</string>
@@ -690,7 +693,9 @@ morphe_header_custom_dark.png
     <string name="selected">รีมอน</string>
     <string name="not_selected">ติดตั้ง</string>
     <string name="select_all">เลือกทั้งหมด</string>
+    <string name="select_all_done">เลือกทั้งหมดแล้ว</string>
     <string name="deselect_all">ยกเลิกการเลือกทั้งหมด</string>
+    <string name="deselect_all_done">ยกเลิกการเลือกทั้งหมดแล้ว</string>
     <string name="rename">เปลี่ยนชื่อ</string>
     <string name="import_">นำเข้า</string>
     <string name="export">ส่งออก</string>
