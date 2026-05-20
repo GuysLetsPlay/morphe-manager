@@ -535,6 +535,9 @@ private fun BundleSelectionItem(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterHorizontally)
         ) {
+            val exportLabel = stringResource(R.string.export)
+            val resetLabel = stringResource(R.string.reset)
+
             // Export button
             ActionPillButton(
                 onClick = {
@@ -544,14 +547,16 @@ private fun BundleSelectionItem(
                     exportLauncher.launch(fileName)
                 },
                 icon = Icons.Outlined.Upload,
-                contentDescription = stringResource(R.string.export)
+                contentDescription = exportLabel,
+                tooltip = exportLabel
             )
 
             // Reset button
             ActionPillButton(
                 onClick = onReset,
                 icon = Icons.Outlined.Delete,
-                contentDescription = stringResource(R.string.reset),
+                contentDescription = resetLabel,
+                tooltip = resetLabel,
                 colors = IconButtonDefaults.filledTonalIconButtonColors(
                     containerColor = MaterialTheme.colorScheme.errorContainer,
                     contentColor = MaterialTheme.colorScheme.onErrorContainer
