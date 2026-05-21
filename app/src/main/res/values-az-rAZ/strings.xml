@@ -206,9 +206,22 @@ Davam etmək istədiyinizə əminsiniz?"</string>
     <string name="adaptive_icon_reset_transform">Mövqeyi və miqyası qaytar</string>
     <string name="adaptive_icon_safe_zone_inner">Etibarlı yer (həmişə görünən)</string>
     <string name="adaptive_icon_safe_zone_outer">Örtük yeri (kəsilmiş ola bilər)</string>
+    <string name="adaptive_icon_no_transparency_warning">Şəklin pikselləri şəffaf deyil. Nəticə səhv görünə bilər</string>
     <string name="adaptive_icon_created_success">Uyğun simvol uğurla yaradıldı</string>
     <string name="adaptive_icon_creation_failed">Uyğun simvol yaratmaq olmadı</string>
+    <string name="adaptive_icon_label">Uyuşan</string>
+    <string name="adaptive_icon_monochrome_label">Saya</string>
+    <string name="adaptive_icon_guide">Simvol yaratma bələdçisi</string>
+    <string name="adaptive_icon_guide_png_title">Şəffaf fonu olan PNG istifadə et</string>
+    <string name="adaptive_icon_guide_png_body">Ön plan şəffaf fonu olan PNG faylı olmalıdır. Bütöv rəngli fon səhv görünəcək - fon rəngi aşağıdakı fon seçicisindən gəlməlidir.</string>
+    <string name="adaptive_icon_guide_safe_zones_title">Etibarlı sahələr</string>
+    <string name="adaptive_icon_guide_safe_zones_body">"Daxili sahə (bütöv): məzmun həmişə bütün başladıcı formalarında tam görünür.
+Xarici sahə (ştrixli): başladıcı örtüyündən kəsilə bilər - mühüm hissələri daxili zonanın içərisində saxla."</string>
     <string name="adaptive_icon_guide_notification_title">Bildiriş simvolu</string>
+    <string name="adaptive_icon_guide_notification_body">Ön plan şəklindən birbaşa olaraq yaradılır. Bildiriş sürüşdürməsi istifadə edərək ölçüsünü tənzimlə. Bütün görünən məzmun status tabelində ağ görünür.</string>
+    <string name="adaptive_icon_guide_monochrome_title">Saya simvol</string>
+    <string name="adaptive_icon_guide_monochrome_body">Eynilə uyuşan simvol dəyişmələrin istifadə edərək ön plan şəklindən birbaşa olaraq yaradılır. Bu, Android 13 və daha sonrakılarda divar kağızının cila rəngi ilə azca rənglənmiş görünür.</string>
+    <string name="notification_icon_preview">Bildiriş</string>
     <!-- Header Creator -->
     <string name="header_creator_create">Xüsusi sərlövhə yarat</string>
     <string name="header_creator_light_theme">İşıqlı kolorit sərlövhəsi</string>
@@ -216,6 +229,12 @@ Davam etmək istədiyinizə əminsiniz?"</string>
     <string name="header_creator_no_image">Seçilən şəkil yoxdur</string>
     <string name="header_creator_success">Sərlövhə uğurla yaradıldı</string>
     <string name="header_creator_failed">Sərlövhə yaratmaq olmadı</string>
+    <string name="header_creator_guide">Sərlövhə yaratma bələdçisi</string>
+    <string name="header_creator_guide_image_title">Şəkil tələbləri</string>
+    <string name="header_creator_guide_image_body">İstənilən şəkil faylın (PNG və ya JPEG) istifadə et. Ən yaxşı nəticələr üçün təqribən 2.7:1 tərəf nisbətinə malik geniş format şəklini istifadə edin. Şəffaf fonları olan PNG faylları tətbiq koloriti ilə təbii şəkildə qarışacaq.</string>
+    <string name="header_creator_guide_themes_title">İşıqlı və qaranlıq koloritlər</string>
+    <string name="header_creator_guide_themes_body">Əksər tətbiqlər işıqlı və qaranlıq koloritlər üçün ayrı şəkillər tələb edir. Bəzi tətbiqlər (məsələn, YouTube Music) yalnız qaranlıq kolorit istifadə edir, belə ki yalnız həmin bölmə görünür.</string>
+    <string name="header_creator_guide_positioning_title">Yerləşdirmə və ölçüləndirmə</string>
     <!-- Home Screen - App Info Screen -->
     <string name="home_app_info_uninstall_app_confirmation">Bu tətbiqi silmək istədiyinizə əminsiniz?</string>
     <string name="home_app_info_remove_app_warning">Bu, həmişəlik silinəcək:</string>

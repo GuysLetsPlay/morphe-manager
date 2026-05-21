@@ -206,21 +206,21 @@ En iyi sonuçlar için bu uygulama, &lt;b&gt;tam APK&lt;/b&gt; dosyasını yamal
     <string name="adaptive_icon_reset_transform">Pozisyon ve ölçeği sıfırla</string>
     <string name="adaptive_icon_safe_zone_inner">Güvenli alan (her zaman görünür)</string>
     <string name="adaptive_icon_safe_zone_outer">Maske alanı (kırpılabilir)</string>
-    <string name="adaptive_icon_no_transparency_warning">Görüntüde şeffaf piksel bulunmuyor. Sonuç doğru görünmeyebilir.</string>
+    <string name="adaptive_icon_no_transparency_warning">Görüntüde şeffaf piksel bulunmuyor. Sonuç doğru görünmeyebilir</string>
     <string name="adaptive_icon_created_success">Adaptif simge başarıyla oluşturuldu</string>
     <string name="adaptive_icon_creation_failed">Adaptif simge oluşturulamadı</string>
     <string name="adaptive_icon_label">Uyarlanabilir</string>
-    <string name="adaptive_icon_monochrome_label">Tek Renk</string>
-    <string name="adaptive_icon_guide">Simge Oluşturma Rehberi</string>
+    <string name="adaptive_icon_monochrome_label">Tek renk</string>
+    <string name="adaptive_icon_guide">Simge oluşturma rehberi</string>
     <string name="adaptive_icon_guide_png_title">Şeffaf arka plana sahip bir PNG kullanın</string>
-    <string name="adaptive_icon_guide_png_body">Ön plan, katı renkli bir arka plana sahip şeffaf bir arka plana sahip bir PNG dosyası olmalıdır. Katı renkli bir arka plan yanlış görünecektir - arka plan rengi aşağıdaki arka plan seçiciden gelmelidir.</string>
-    <string name="adaptive_icon_guide_safe_zones_title">Güvenli Bölgeler</string>
-    <string name="adaptive_icon_guide_safe_zones_body">"İç bölge (katı): içerik her zaman tüm başlatıcı şekillerinde tamamen görünür.
-Dış bölge (çizgili): başlatıcı maskesi tarafından kırpılabilir - önemli ayrıntıları iç bölgede tutun."</string>
+    <string name="adaptive_icon_guide_png_body">Ön plan, şeffaf arka plana sahip bir PNG dosyası olmalıdır. Düz renkli bir arka plan yanlış görünecektir - arka plan rengi aşağıdaki arka plan seçiciden gelmelidir.</string>
+    <string name="adaptive_icon_guide_safe_zones_title">Güvenli bölgeler</string>
+    <string name="adaptive_icon_guide_safe_zones_body">"İç bölge (düz): içerik her zaman tüm launcher şekillerinde tamamen görünür.
+Dış bölge (kesikli): launcher maskesi tarafından kırpılabilir - önemli ayrıntıları iç bölgede tutun."</string>
     <string name="adaptive_icon_guide_notification_title">Bildirim simgesi</string>
     <string name="adaptive_icon_guide_notification_body">Ön plan görüntüsünden otomatik olarak oluşturulur. Boyutunu Bildirim kaydırıcısını kullanarak ayarlayın. Durum çubuğunda görünen tüm içerik beyaz görünür.</string>
     <string name="adaptive_icon_guide_monochrome_title">Tek renkli simge</string>
-    <string name="adaptive_icon_guide_monochrome_body">Android 13 ve sonraki sürümlerde aynı uyarlanabilir simge dönüşümlerini kullanarak ön plan görüntüsünden otomatik olarak oluşturulur. Duvar kağıdı vurgu rengiyle tonlanır.</string>
+    <string name="adaptive_icon_guide_monochrome_body">Ön plan görüntüsünden aynı uyarlanabilir simge dönüşümleri kullanılarak otomatik olarak oluşturulur. Android 13 ve sonraki sürümlerde duvar kağıdının vurgu renginde görünür.</string>
     <string name="notification_icon_preview">Bildirim</string>
     <!-- Header Creator -->
     <string name="header_creator_create">Özel başlık oluştur</string>
@@ -229,16 +229,16 @@ Dış bölge (çizgili): başlatıcı maskesi tarafından kırpılabilir - önem
     <string name="header_creator_no_image">Seçilen görüntü yok</string>
     <string name="header_creator_success">Başlık başarıyla oluşturuldu</string>
     <string name="header_creator_failed">Başlık oluşturulamadı</string>
-    <string name="header_creator_guide">Başlık Oluşturma Rehberi</string>
-    <string name="header_creator_guide_image_title">Görüntü Gereksinimleri</string>
-    <string name="header_creator_guide_image_body">Herhangi bir görüntü dosyası (PNG veya JPEG) kullanın. En iyi sonuçlar için yaklaşık 2.7:1 en boy oranına sahip geniş formatlı bir görüntü kullanın. Şeffaf arka planlara sahip PNG dosyaları uygulama temasıyla doğal olarak bütünleşecektir.</string>
+    <string name="header_creator_guide">Başlık oluşturma rehberi</string>
+    <string name="header_creator_guide_image_title">Görüntü gereksinimleri</string>
+    <string name="header_creator_guide_image_body">Herhangi bir görüntü dosyası (PNG veya JPEG) kullanın. En iyi sonuçlar için yaklaşık 2.7:1 en boy oranına sahip geniş formatlı bir görüntü kullanın. Şeffaf arka plana sahip PNG dosyaları uygulama temasıyla doğal olarak bütünleşecektir.</string>
     <string name="header_creator_guide_themes_title">Açık ve koyu temalar</string>
     <string name="header_creator_guide_themes_body">Çoğu uygulama, açık ve koyu temalar için ayrı görüntüler gerektirir. Bazı uygulamalar (YouTube Music gibi) yalnızca koyu temayı kullanır, bu nedenle yalnızca o bölüm gösterilir.</string>
     <string name="header_creator_guide_positioning_title">Konumlandırma ve ölçeklendirme</string>
-    <string name="header_creator_guide_positioning_body">Görüntünüzü konumlandırmak ve ölçeklendirmek için önizleme içinde doğrudan kıskaçla yakınlaştırma ve sürükleme hareketlerini kullanın. Görüntü merkeze yaklaştığında kılavuzlar görünür. Ayrıca önizlemenin altındaki kaydırıcıyı da kullanabilirsiniz.</string>
+    <string name="header_creator_guide_positioning_body">Görüntünüzü konumlandırmak ve ölçeklendirmek için ön izlemede doğrudan yakınlaştırma ve sürükleme hareketlerini kullanın. Görüntü merkeze yaklaştığında hizalama kılavuzları görünür. Ön izlemenin altındaki kaydırıcıyı da kullanabilirsiniz.</string>
     <!-- Home Screen - App Info Screen -->
     <string name="home_app_info_uninstall_app_confirmation">Bu uygulamayı kaldırmak istediğinizden emin misiniz?</string>
-    <string name="home_app_info_remove_app_warning">Bu aşağıdakileri kalıcı olarak silecektir:</string>
+    <string name="home_app_info_remove_app_warning">Bu, aşağıdakileri kalıcı olarak silecektir:</string>
     <string name="home_app_info_delete_item_database">Veri tabanı girişi</string>
     <string name="home_app_info_delete_item_patched_apk">Yamalanmış APK dosyası</string>
     <string name="home_app_info_delete_item_original_apk">Orijinal APK dosyası</string>
@@ -420,7 +420,7 @@ Kaldırma işlemi tüm uygulama verilerini kalıcı olarak silecektir"</string>
     <!-- Settings - Advanced Tab - Updates Section -->
     <string name="settings_advanced_updates">Güncellemeler</string>
     <string name="settings_advanced_updates_use_prereleases">Ön sürüm güncellemeleri</string>
-    <string name="settings_advanced_updates_use_prereleases_description">Yeni Morphe uygulama sürümlerine erken erişim. Yama kaynaklarında her kaynaktan için ön sürümü etkinleştirin</string>
+    <string name="settings_advanced_updates_use_prereleases_description">Yeni Morphe uygulama sürümlerine erken erişim. Yama kaynaklarında her kaynak için ön sürümü etkinleştirin</string>
     <string name="settings_advanced_updates_allow_metered">Mobil veri güncellemeleri</string>
     <string name="settings_advanced_updates_allow_metered_description">Morphe ve yama güncellemelerinin mobil veri üzerinden indirilmesine izin verir</string>
     <string name="settings_advanced_updates_background_notifications">Arka plan güncelleme bildirimleri</string>
@@ -598,7 +598,7 @@ Resim boyutları şu şekilde olmalıdır:
     <!-- Settings - System Tab - Import and Export Section -->
     <string name="settings_system_import_export">İçe &amp; dışa aktar</string>
     <string name="settings_system_keystore">Anahtar deposu</string>
-    <string name="settings_system_import_keystore_description">İmzalama anahtar deponuzu içe ya da dışa aktarır</string>
+    <string name="settings_system_import_keystore_description">İmzalama anahtar deponuzu içe aktarır ya da dışa aktarır</string>
     <string name="settings_system_import_keystore_dialog_title">Anahtar deposu kimlik bilgilerini girin</string>
     <string name="settings_system_import_keystore_dialog_description">İçe aktarmak için anahtar deposu kimlik bilgilerini girmeniz gerekecek</string>
     <string name="settings_system_import_keystore_dialog_alias_field">Kullanıcı Adı (Takma Ad)</string>
@@ -704,7 +704,7 @@ Resim boyutları şu şekilde olmalıdır:
     <string name="not_selected">Seçilmedi</string>
     <string name="select_all">Tümünü seç</string>
     <string name="select_all_done">Hepsi seçildi</string>
-    <string name="deselect_all">Tümünü kaldır</string>
+    <string name="deselect_all">Hepsini kaldır</string>
     <string name="deselect_all_done">Hepsinin seçimi kaldırıldı</string>
     <string name="rename">Yeniden adlandır</string>
     <string name="import_">İçe aktar</string>

@@ -205,21 +205,21 @@ Pour de meilleurs résultats, cette application recommande de patcher un &lt;b&g
     <string name="adaptive_icon_reset_transform">Réinitialiser la position et la taille</string>
     <string name="adaptive_icon_safe_zone_inner">Zone de sécurité (toujours visible)</string>
     <string name="adaptive_icon_safe_zone_outer">Zone de masquage (peut être rognée)</string>
-    <string name="adaptive_icon_no_transparency_warning">L\'image ne contient pas de pixels transparents. Le résultat pourrait être incorrect.</string>
+    <string name="adaptive_icon_no_transparency_warning">L’image n’a aucun pixel transparent. Le résultat risque d’être incorrect</string>
     <string name="adaptive_icon_created_success">Icône adaptative créée avec succès</string>
     <string name="adaptive_icon_creation_failed">Échec de la création de l\'icône adaptative</string>
-    <string name="adaptive_icon_label">Adaptatif</string>
+    <string name="adaptive_icon_label">Adaptative</string>
     <string name="adaptive_icon_monochrome_label">Monochrome</string>
     <string name="adaptive_icon_guide">Guide de création d\'icônes</string>
-    <string name="adaptive_icon_guide_png_title">Utilisez une image PNG avec un fond transparent</string>
-    <string name="adaptive_icon_guide_png_body">Le premier plan doit être un fichier PNG avec un fond transparent. Un fond de couleur unie apparaîtra incorrectement : la couleur du fond doit provenir du sélecteur de fond ci-dessous.</string>
+    <string name="adaptive_icon_guide_png_title">Utilisez un PNG avec un arrière-plan transparent</string>
+    <string name="adaptive_icon_guide_png_body">Le premier plan doit être un fichier PNG avec un arrière-plan transparent. Un arrière-plan uni donnera un résultat incorrect - la couleur de fond doit être choisie à l’aide du sélecteur ci-dessous.</string>
     <string name="adaptive_icon_guide_safe_zones_title">Zones de sécurité</string>
-    <string name="adaptive_icon_guide_safe_zones_body">"Zone interne (pleine) : le contenu est toujours entièrement visible sur toutes les formes de lanceur.
-Zone externe (en pointillés) : peut être rognée par le masque du lanceur. Gardez les détails importants à l'intérieur de la zone interne."</string>
+    <string name="adaptive_icon_guide_safe_zones_body">"Zone intérieure (pleine) : le contenu est toujours entièrement visible sur toutes les formes de lanceur.
+Zone extérieure (pointillée) : peut être rognée par le masque du lanceur - gardez les éléments importants à l’intérieur de la zone intérieure."</string>
     <string name="adaptive_icon_guide_notification_title">Icône de notification</string>
-    <string name="adaptive_icon_guide_notification_body">Généré automatiquement à partir de l\'image du premier plan. Ajustez sa taille à l\'aide du curseur de notification. Tout le contenu visible apparaît en blanc dans la barre d\'état.</string>
+    <string name="adaptive_icon_guide_notification_body">Généré automatiquement à partir de l’image de premier plan. Ajustez sa taille à l’aide du curseur Notification. Tout le contenu visible apparaît en blanc dans la barre d’état.</string>
     <string name="adaptive_icon_guide_monochrome_title">Icône monochrome</string>
-    <string name="adaptive_icon_guide_monochrome_body">Générée automatiquement à partir de l\'image du premier plan en utilisant les mêmes transformations d\'icône adaptative. Elle apparaît teintée de la couleur d\'accent du fond d\'écran sur Android 13 et versions ultérieures.</string>
+    <string name="adaptive_icon_guide_monochrome_body">Généré automatiquement à partir de l’image de premier plan en utilisant les mêmes transformations que l’icône adaptative. Il apparaît teinté avec la couleur d’accent du fond d’écran sur Android 13 et versions ultérieures.</string>
     <string name="notification_icon_preview">Notification</string>
     <!-- Header Creator -->
     <string name="header_creator_create">Créer un en-tête personnalisé</string>
@@ -230,11 +230,11 @@ Zone externe (en pointillés) : peut être rognée par le masque du lanceur. Gar
     <string name="header_creator_failed">Échec de la création de l\'en-tête</string>
     <string name="header_creator_guide">Guide de création d\'en-tête</string>
     <string name="header_creator_guide_image_title">Exigences relatives à l\'image</string>
-    <string name="header_creator_guide_image_body">Utilisez n\'importe quel fichier image (PNG ou JPEG). Pour de meilleurs résultats, utilisez une image au format large avec un rapport hauteur/largeur d\'environ 2,7:1. Les fichiers PNG avec des fonds transparents se fondront naturellement dans le thème de l\'application.</string>
+    <string name="header_creator_guide_image_body">Utilisez n’importe quel fichier image (PNG ou JPEG). Pour de meilleurs résultats, utilisez une image au format large avec un ratio d’aspect d’environ 2.7:1. Les fichiers PNG avec un arrière-plan transparent s’intègrent naturellement au thème de l’application.</string>
     <string name="header_creator_guide_themes_title">Thèmes clair et sombre</string>
-    <string name="header_creator_guide_themes_body">La plupart des applications nécessitent des images distinctes pour les thèmes clair et sombre. Certaines applications (telles que YouTube Music) n\'utilisent que le thème sombre, donc seule cette section est affichée.</string>
+    <string name="header_creator_guide_themes_body">La plupart des applications nécessitent des images distinctes pour les thèmes clair et sombre. Certaines applications (comme YouTube Music) utilisent uniquement le thème sombre, donc seule cette section est affichée.</string>
     <string name="header_creator_guide_positioning_title">Positionnement et mise à l\'échelle</string>
-    <string name="header_creator_guide_positioning_body">Utilisez les gestes de pincement pour zoomer et de glisser directement dans l\'aperçu pour positionner et mettre à l\'échelle votre image. Des guides de snap s\'affichent lorsque l\'image est proche du centre. Vous pouvez également utiliser le curseur sous l\'aperçu.</string>
+    <string name="header_creator_guide_positioning_body">Utilisez les gestes de pincement pour zoomer et de glissement directement dans l’aperçu pour positionner et redimensionner votre image. Des guides d’alignement apparaissent lorsque l’image est proche du centre. Vous pouvez également utiliser le curseur sous l’aperçu.</string>
     <!-- Home Screen - App Info Screen -->
     <string name="home_app_info_uninstall_app_confirmation">Êtes-vous sûr de vouloir désinstaller cette application ?</string>
     <string name="home_app_info_remove_app_warning">Cela supprimera définitivement :</string>

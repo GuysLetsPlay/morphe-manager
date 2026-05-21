@@ -206,21 +206,21 @@ Aby uzyskać najlepszy efekt, zalecamy zmodyfikowanie &lt;b&gt;pełnego pliku AP
     <string name="adaptive_icon_reset_transform">Resetuj pozycję i skalę</string>
     <string name="adaptive_icon_safe_zone_inner">Strefa bezpieczna (zawsze widoczna)</string>
     <string name="adaptive_icon_safe_zone_outer">Strefa maskowania (może być przycięta)</string>
-    <string name="adaptive_icon_no_transparency_warning">Obraz nie zawiera pikseli przezroczystych. Wynik może wyglądać nieprawidłowo</string>
+    <string name="adaptive_icon_no_transparency_warning">Obraz nie zawiera przezroczystych pikseli. Ikona może wyświetlać się nieprawidłowo</string>
     <string name="adaptive_icon_created_success">Ikona adaptacyjna utworzona pomyślnie</string>
     <string name="adaptive_icon_creation_failed">Nie udało się utworzyć ikony adaptacyjnej</string>
-    <string name="adaptive_icon_label">Adaptacyjny</string>
-    <string name="adaptive_icon_monochrome_label">Monochromatyczny</string>
-    <string name="adaptive_icon_guide">Przewodnik tworzenia ikon</string>
+    <string name="adaptive_icon_label">Adaptacyjna</string>
+    <string name="adaptive_icon_monochrome_label">Monochromatyczna</string>
+    <string name="adaptive_icon_guide">Poradnik tworzenia ikon</string>
     <string name="adaptive_icon_guide_png_title">Użyj pliku PNG z przezroczystym tłem</string>
-    <string name="adaptive_icon_guide_png_body">Warstwa przednia musi być plikiem PNG z przezroczystym tłem. Jednolite tło będzie wyglądać niepoprawnie – kolor tła powinien pochodzić z selektora tła poniżej.</string>
-    <string name="adaptive_icon_guide_safe_zones_title">Strefy bezpieczeństwa</string>
-    <string name="adaptive_icon_guide_safe_zones_body">"Wewnętrzna strefa (jednolita): zawartość jest zawsze w pełni widoczna na wszystkich kształtach nakładki.
-Zewnętrzna strefa (przerywana): może być obcinana przez maskę nakładki – zachowaj ważne szczegóły wewnątrz wewnętrznej strefy."</string>
-    <string name="adaptive_icon_guide_notification_title">Ikona powiadomienia</string>
-    <string name="adaptive_icon_guide_notification_body">Generowana automatycznie z obrazu warstwy przedniej. Dostosuj jej rozmiar za pomocą suwaka Powiadomienia. Cała widoczna zawartość pojawia się na biało na pasku stanu.</string>
+    <string name="adaptive_icon_guide_png_body">Warstwa przednia musi być plikiem PNG z przezroczystym tłem. Jednolite tło obrazu będzie wyglądać nieprawidłowo - kolor tła powinien pochodzić z poniższego selektora.</string>
+    <string name="adaptive_icon_guide_safe_zones_title">Bezpieczne strefy</string>
+    <string name="adaptive_icon_guide_safe_zones_body">"Strefa wewnętrzna (linia ciągła): grafika jest zawsze w pełni widoczna, niezależnie od kształtu ikon w systemie.
+Strefa zewnętrzna (linia przerywana): może zostać przycięta - najważniejsze detale trzymaj w strefie wewnętrznej."</string>
+    <string name="adaptive_icon_guide_notification_title">Ikona powiadomień</string>
+    <string name="adaptive_icon_guide_notification_body">Generowana automatycznie z warstwy przedniej. Dostosuj jej rozmiar za pomocą suwaka powiadomienia. Cała widoczna grafika na pasku stanu będzie w kolorze białym.</string>
     <string name="adaptive_icon_guide_monochrome_title">Ikona monochromatyczna</string>
-    <string name="adaptive_icon_guide_monochrome_body">Generowana automatycznie z obrazu warstwy przedniej przy użyciu tych samych przekształceń ikony adaptacyjnej. Wyświetlana w odcieniu koloru akcentu tapety na Androidzie 13 i nowszych.</string>
+    <string name="adaptive_icon_guide_monochrome_body">Generowana automatycznie z warstwy przedniej na tych samych zasadach co ikona adaptacyjna. Na Androidzie 13 i nowszych dopasowuje swój kolor do motywu tapety.</string>
     <string name="notification_icon_preview">Powiadomienie</string>
     <!-- Header Creator -->
     <string name="header_creator_create">Utwórz własny nagłówek</string>
@@ -229,13 +229,13 @@ Zewnętrzna strefa (przerywana): może być obcinana przez maskę nakładki – 
     <string name="header_creator_no_image">Nie wybrano obrazu</string>
     <string name="header_creator_success">Nagłówek utworzony pomyślnie</string>
     <string name="header_creator_failed">Nie udało się utworzyć nagłówka</string>
-    <string name="header_creator_guide">Przewodnik tworzenia nagłówka</string>
-    <string name="header_creator_guide_image_title">Wymagania dotyczące obrazu</string>
-    <string name="header_creator_guide_image_body">Użyj dowolnego pliku obrazu (PNG lub JPEG). Aby uzyskać najlepsze wyniki, użyj obrazu w formacie szerokoekranowym o współczynniku proporcji około 2,7:1. Pliki PNG z przezroczystym tłem dobrze wpasują się w motyw aplikacji.</string>
-    <string name="header_creator_guide_themes_title">Tryby jasny i ciemny</string>
-    <string name="header_creator_guide_themes_body">Większość aplikacji wymaga oddzielnych obrazów dla trybów jasnego i ciemnego. Niektóre aplikacje (np. YouTube Music) używają tylko trybu ciemnego, więc wyświetlana jest tylko ta sekcja.</string>
+    <string name="header_creator_guide">Poradnik tworzenia nagłówka</string>
+    <string name="header_creator_guide_image_title">Wymagania obrazu</string>
+    <string name="header_creator_guide_image_body">Użyj dowolnego pliku obrazu (PNG lub JPEG). Dla najlepszego efektu wybierz szeroki format o proporcjach około 2,7:1. Pliki PNG z przezroczystym tłem naturalnie wtopią się w motyw aplikacji.</string>
+    <string name="header_creator_guide_themes_title">Jasny i ciemny motyw</string>
+    <string name="header_creator_guide_themes_body">Większość aplikacji wymaga oddzielnych obrazów dla jasnego i ciemnego motywu. Niektóre aplikacje (np. YouTube Music) używają tylko ciemnego motywu, dlatego wyświetlana jest tylko ta sekcja.</string>
     <string name="header_creator_guide_positioning_title">Pozycjonowanie i skalowanie</string>
-    <string name="header_creator_guide_positioning_body">Użyj gestów szczypania i przeciągania bezpośrednio w podglądzie, aby ustawić pozycję i skalę obrazu. Przewodniki przyciągania pojawiają się, gdy obraz jest w pobliżu środka. Możesz również użyć suwaka poniżej podglądu.</string>
+    <string name="header_creator_guide_positioning_body">Przesuwaj i powiększaj dwoma palcami bezpośrednio na podglądzie, aby dopasować i wykadrować obraz. Gdy obraz znajdzie się blisko środka, pojawią się linie pomocnicze. Możesz też użyć suwaka pod spodem.</string>
     <!-- Home Screen - App Info Screen -->
     <string name="home_app_info_uninstall_app_confirmation">Czy na pewno chcesz odinstalować tę aplikację?</string>
     <string name="home_app_info_remove_app_warning">Spowoduje to trwałe usunięcie:</string>

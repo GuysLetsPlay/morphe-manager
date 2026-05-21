@@ -57,10 +57,10 @@
     <string name="sources_management_title">Nguồn vá</string>
     <string name="sources_management_open_in_browser">Mở trong trình duyệt</string>
     <string name="sources_management_failed_to_open_url">Không thể mở URL</string>
-    <string name="sources_management_prerelease_toggle">Các bản vá phát hành trước</string>
-    <string name="sources_management_prerelease_toggle_description">Nhận quyền truy cập sớm vào các phiên bản patch thử nghiệm mới</string>
+    <string name="sources_management_prerelease_toggle">Bản vá phát hành trước</string>
+    <string name="sources_management_prerelease_toggle_description">Trải nghiệm sớm các bản vá thử nghiệm mới</string>
     <string name="sources_management_experimental_versions_toggle">Các phiên bản ứng dụng thử nghiệm</string>
-    <string name="sources_management_experimental_versions_toggle_description">Patch các mục tiêu ứng dụng thử nghiệm nếu có</string>
+    <string name="sources_management_experimental_versions_toggle_description">Vá phiên bản thử nghiệm (nếu có)</string>
     <string name="sources_management_already_exists">Nguồn này đã được thêm vào rồi</string>
     <string name="sources_management_invalid_url">URL nguồn không hợp lệ. Vui lòng kiểm tra địa chỉ và thử lại</string>
     <string name="sources_management_metadata_unavailable">Không có metadata</string>
@@ -213,14 +213,14 @@ Tốt nhất bạn nên chuyển sang &lt;b&gt;APK đầy đủ&lt;/b&gt; để 
     <string name="adaptive_icon_monochrome_label">Đơn sắc</string>
     <string name="adaptive_icon_guide">Hướng dẫn tạo biểu tượng</string>
     <string name="adaptive_icon_guide_png_title">Sử dụng tệp PNG có nền trong suốt</string>
-    <string name="adaptive_icon_guide_png_body">Phần trước phải là tệp PNG có nền trong suốt. Nền màu đồng nhất sẽ hiển thị không chính xác - màu nền nên được chọn từ trình chọn nền bên dưới.</string>
+    <string name="adaptive_icon_guide_png_body">Tiền cảnh phải là tệp PNG có nền trong suốt. Nền màu đồng nhất sẽ hiển thị không chính xác - màu nền nên được chọn từ trình chọn nền bên dưới.</string>
     <string name="adaptive_icon_guide_safe_zones_title">Vùng an toàn</string>
-    <string name="adaptive_icon_guide_safe_zones_body">"Vùng bên trong (đặc): nội dung luôn hiển thị đầy đủ trên tất cả các hình dạng trình khởi chạy.
-Vùng bên ngoài (đường đứt nét): có thể bị cắt bởi mặt nạ trình khởi chạy - hãy giữ các chi tiết quan trọng bên trong vùng bên trong."</string>
+    <string name="adaptive_icon_guide_safe_zones_body">"Vùng trong (nét liền): luôn hiển thị đầy đủ trên mọi hình dạng biểu tượng trình khởi chạy.
+Vùng ngoài (nét đứt): có thể bị cắt theo hình dạng biểu tượng trình khởi chạy, nên hãy đặt các chi tiết quan trọng bên trong nét liền."</string>
     <string name="adaptive_icon_guide_notification_title">Biểu tượng thông báo</string>
-    <string name="adaptive_icon_guide_notification_body">Được tạo tự động từ hình ảnh phần trước. Điều chỉnh kích thước bằng thanh trượt Thông báo. Tất cả nội dung hiển thị đều có màu trắng trên thanh trạng thái.</string>
+    <string name="adaptive_icon_guide_notification_body">Được tạo tự động từ ảnh tiền cảnh. Điều chỉnh kích thước bằng thanh trượt Thông báo. Tất cả nội dung hiển thị trên thanh trạng thái sẽ có màu trắng.</string>
     <string name="adaptive_icon_guide_monochrome_title">Biểu tượng đơn sắc</string>
-    <string name="adaptive_icon_guide_monochrome_body">Được tạo tự động từ hình ảnh phần trước bằng cách sử dụng các phép biến đổi biểu tượng thích ứng tương tự. Nó xuất hiện có màu sắc theo màu nhấn của hình nền trên Android 13 trở lên.</string>
+    <string name="adaptive_icon_guide_monochrome_body">Được tạo tự động từ ảnh tiền cảnh bằng cách sử dụng các phép biến đổi biểu tượng thích ứng tương tự. Từ Android 13 trở đi, biểu tượng sẽ có màu sắc theo màu nổi bật của hình nền.</string>
     <string name="notification_icon_preview">Thông báo</string>
     <!-- Header Creator -->
     <string name="header_creator_create">Tạo logo tùy chỉnh</string>
@@ -229,13 +229,13 @@ Vùng bên ngoài (đường đứt nét): có thể bị cắt bởi mặt nạ
     <string name="header_creator_no_image">Không có hình ảnh nào được chọn</string>
     <string name="header_creator_success">Đã tạo logo thành công</string>
     <string name="header_creator_failed">Không thể tạo logo</string>
-    <string name="header_creator_guide">Hướng dẫn tạo tiêu đề</string>
+    <string name="header_creator_guide">Hướng dẫn tạo logo đầu trang</string>
     <string name="header_creator_guide_image_title">Yêu cầu về hình ảnh</string>
-    <string name="header_creator_guide_image_body">Sử dụng bất kỳ tệp hình ảnh nào (PNG hoặc JPEG). Để có kết quả tốt nhất, hãy sử dụng hình ảnh định dạng rộng với tỷ lệ khung hình xấp xỉ 2,7:1. Các tệp PNG có nền trong suốt sẽ hòa trộn tự nhiên với chủ đề ứng dụng.</string>
+    <string name="header_creator_guide_image_body">Hỗ trợ bất kỳ ảnh PNG hoặc JPEG nào, nhưng để có kết quả tốt nhất bạn nên chọn những hình ảnh có định dạng ngang với tỷ lệ khoảng 2,7:1. Nếu chọn tệp PNG có nền trong suốt, logo trông sẽ tự nhiên với chủ đề ứng dụng.</string>
     <string name="header_creator_guide_themes_title">Chế độ sáng và tối</string>
-    <string name="header_creator_guide_themes_body">Hầu hết các ứng dụng yêu cầu hình ảnh riêng biệt cho chế độ sáng và tối. Một số ứng dụng (như YouTube Music) chỉ sử dụng chế độ tối, vì vậy chỉ phần đó mới được hiển thị.</string>
-    <string name="header_creator_guide_positioning_title">Định vị và tỷ lệ</string>
-    <string name="header_creator_guide_positioning_body">Sử dụng cử chỉ phóng to và kéo trực tiếp trên bản xem trước để định vị và thay đổi tỷ lệ hình ảnh của bạn. Các đường dẫn xuất hiện khi hình ảnh ở gần trung tâm. Bạn cũng có thể sử dụng thanh trượt bên dưới bản xem trước.</string>
+    <string name="header_creator_guide_themes_body">Hầu hết các ứng dụng yêu cầu hình ảnh riêng cho chế độ sáng và tối. Một số ứng dụng (như YouTube Music) chỉ sử dụng chế độ tối, vì vậy chỉ phần đó mới được hiển thị.</string>
+    <string name="header_creator_guide_positioning_title">Căn chỉnh và thu phóng</string>
+    <string name="header_creator_guide_positioning_body">Dùng cử chỉ chụm để thu phóng và kéo trực tiếp trong phần xem trước để căn chỉnh vị trí và kích thước hình ảnh. Các đường căn chỉnh sẽ xuất hiện khi hình ảnh ở gần trung tâm. Bạn cũng có thể dùng thanh trượt bên dưới phần xem trước.</string>
     <!-- Home Screen - App Info Screen -->
     <string name="home_app_info_uninstall_app_confirmation">Bạn có chắc muốn gỡ ứng dụng này không?</string>
     <string name="home_app_info_remove_app_warning">Thao tác này sẽ xóa vĩnh viễn:</string>
@@ -263,9 +263,9 @@ Vùng bên ngoài (đường đứt nét): có thể bị cắt bởi mặt nạ
     <string name="root_pre_patch_installer_title">Chọn phương thức cài đặt</string>
     <string name="root_pre_patch_installer_description">Thiết bị của bạn đã có quyền root. Hãy chọn cách bạn muốn cài đặt ứng dụng đã vá</string>
     <string name="root_pre_patch_installer_mount_title">Gắn kết bằng root</string>
-    <string name="root_pre_patch_installer_mount_description">Gắn APK đã patch đè lên ứng dụng gốc. Không cần dùng GmsCore</string>
+    <string name="root_pre_patch_installer_mount_description">Gắn APK đã vá đè lên ứng dụng gốc (không cần GmsCore nữa)</string>
     <string name="root_pre_patch_installer_standard_title">Cài đặt tiêu chuẩn</string>
-    <string name="root_pre_patch_installer_standard_description">Cài đặt như ứng dụng riêng, có hỗ trợ GmsCore. Sau khi vá xong, bạn có thể chọn trình cài đặt (Trình cài đặt hệ thống, Shizuku, v.v.)</string>
+    <string name="root_pre_patch_installer_standard_description">Cài đặt thành một ứng dụng riêng với hỗ trợ GmsCore. Sau khi vá xong, bạn có thể chọn trình cài đặt mình muốn</string>
     <string name="root_pre_patch_installer_hint">Phương thức cài đặt sẽ quyết định bản vá nào được áp dụng và không thể thay đổi sau khi vá</string>
     <!-- Patcher Screen -->
     <string name="patcher_error_copied">Đã sao chép lỗi vào bảng nhớ tạm</string>
@@ -396,7 +396,7 @@ Gỡ cài đặt sẽ xóa vĩnh viễn toàn bộ dữ liệu ứng dụng"</st
     <string name="settings_appearance_dynamic">Cá nhân hóa</string>
     <string name="settings_appearance_accent_color">Màu nổi bật</string>
     <string name="settings_appearance_pure_black">Đen tuyền</string>
-    <string name="settings_appearance_pure_black_description">Dùng nền đen thực sự</string>
+    <string name="settings_appearance_pure_black_description">Nền đen thực sự</string>
     <!-- Settings - Appearance Tab - Language Selector -->
     <string name="settings_appearance_app_language">Ngôn ngữ</string>
     <string name="settings_appearance_app_language_current">Ngôn ngữ hiện tại</string>
@@ -419,13 +419,13 @@ Gỡ cài đặt sẽ xóa vĩnh viễn toàn bộ dữ liệu ứng dụng"</st
     <string name="settings_appearance_app_icon_change_dialog_confirm">Chốt</string>
     <!-- Settings - Advanced Tab - Updates Section -->
     <string name="settings_advanced_updates">Cập nhật</string>
-    <string name="settings_advanced_updates_use_prereleases">Dùng phiên bản \"độ\" thử nghiệm</string>
-    <string name="settings_advanced_updates_use_prereleases_description">Truy cập sớm các phiên bản mới của ứng dụng Morphe. Bật bản \"độ\" thử nghiệm cho từng nguồn trong danh sách các nguồn vá</string>
-    <string name="settings_advanced_updates_allow_metered">Đang bật dữ liệu di động</string>
+    <string name="settings_advanced_updates_use_prereleases">Bản cập nhật trước</string>
+    <string name="settings_advanced_updates_use_prereleases_description">Trải nghiệm sớm các phiên bản mới của Morphe. Bạn có thể bật bản phát hành trước cho từng nguồn trong phần nguồn vá</string>
+    <string name="settings_advanced_updates_allow_metered">Cập nhật bằng dữ liệu di động</string>
     <string name="settings_advanced_updates_allow_metered_description">Cho phép tải Morphe và cập nhật bản vá qua dữ liệu di động</string>
     <string name="settings_advanced_updates_background_notifications">Thông báo cập nhật nền</string>
     <string name="settings_advanced_updates_background_notifications_description">Kiểm tra cập nhật định kỳ khi ứng dụng chạy nền và báo cho bạn khi có phiên bản mới.</string>
-    <string name="settings_advanced_updates_background_notifications_description_fcm">Nhận thông báo ngay khi có phiên bản mới, kể cả khi ứng dụng đang tắt</string>
+    <string name="settings_advanced_updates_background_notifications_description_fcm">Nhận ngay thông báo khi có phiên bản mới, kể cả khi ứng dụng đang tắt</string>
     <string name="settings_advanced_update_interval">Tần suất kiểm tra</string>
     <string name="settings_advanced_update_interval_dialog_title">Kiểm tra cập nhật</string>
     <string name="settings_advanced_update_interval_hourly">1 giờ/lần</string>
@@ -453,7 +453,7 @@ Gỡ cài đặt sẽ xóa vĩnh viễn toàn bộ dữ liệu ứng dụng"</st
     <string name="settings_advanced_expert_mode_dialog_title">Bật chế độ Chuyên gia?</string>
     <string name="settings_advanced_expert_mode_dialog_message">Chế độ chuyên gia cho phép bạn tùy chỉnh sâu hơn về cách các bản vá được áp dụng, nhưng nếu bạn chỉnh không đúng có thể khiến ứng dụng không hoạt động</string>
     <string name="settings_advanced_strip_unused_libs">Tối ưu theo kiến trúc thiết bị</string>
-    <string name="settings_advanced_strip_unused_libs_description">Gỡ các thư viện kiến trúc CPU không sử dụng và các mô-đun APK bị chia tách</string>
+    <string name="settings_advanced_strip_unused_libs_description">Xóa các thư viện CPU và mô-đun APK chia nhỏ không cần thiết</string>
     <!-- Bytecode mode -->
     <string name="settings_advanced_bytecode_mode">Chế độ xử lý bytecode</string>
     <string name="settings_advanced_bytecode_mode_dialog_description">Quy định cách xử lý bytecode trong quá trình vá. Ảnh hưởng đến tốc độ vá, mức dùng bộ nhớ và kích thước APK đầu ra</string>
@@ -528,7 +528,7 @@ Có thể thêm icon thông báo theo một trong các cách sau:
   drawable-xxxhdpi/morphe_notification_icon_custom.png (96x96 px)"</string>
     <!-- Settings - Advanced Tab - Patch Options Section: Custom Header -->
     <string name="settings_advanced_patch_options_custom_header">Logo đầu trang</string>
-    <string name="settings_advanced_patch_options_custom_header_description">Tùy chỉnh logo đầu trang</string>
+    <string name="settings_advanced_patch_options_custom_header_description">Đổi logo đầu trang</string>
     <string name="settings_advanced_patch_options_custom_header_instruction">"Thư mục chứa hình ảnh sử dụng làm logo đầu trang tùy chỉnh.
 
 Thư mục này phải chứa một hoặc nhiều thư mục sau, tùy theo DPI của thiết bị:
@@ -580,13 +580,16 @@ Kích thước hình ảnh yêu cầu:
     <string name="installer_unavailable_message">Trình cài đặt mà bạn ưu tiên (%s) hiện đang không khả dụng. Hãy thử lại sau khi sửa lỗi hoặc chuyển sang dùng trình cài đặt tiêu chuẩn</string>
     <string name="installer_unavailable_shizuku_hint">Hãy đảm bảo rằng Shizuku đang chạy và bạn đã cấp quyền cho ứng dụng này</string>
     <string name="installer_use_standard">Trình cài đặt tiêu chuẩn</string>
+    <string name="settings_prompt_installer_on_install">Hỏi chọn trình cài đặt</string>
     <string name="settings_prompt_installer_on_install_description">Luôn hiện hộp thoại chọn trình cài đặt khi cài ứng dụng đã vá</string>
     <!-- Settings - System Tab - Performance Section -->
     <string name="settings_system_battery_optimization">Tối ưu hóa pin</string>
+    <string name="settings_system_battery_optimization_description">Duy trì trình vá tiếp tục chạy khi ứng dụng bị thu nhỏ</string>
     <string name="settings_system_performance">Hiệu suất</string>
     <string name="settings_system_process_runtime">Tiến trình riêng</string>
     <string name="settings_system_process_runtime_description">Chạy quá trình vá trong tiến trình riêng biệt để cải thiện độ ổn định</string>
     <string name="settings_system_process_runtime_memory_limit">Giới hạn bộ nhớ</string>
+    <string name="settings_system_process_runtime_memory_limit_description">Tăng giới hạn có thể giúp vá nhanh hơn nếu thiết bị đủ mạnh</string>
     <string name="settings_system_process_runtime_enable">Bật tiến trình riêng</string>
     <string name="settings_system_memory_limit_subtitle">Bộ nhớ cho quá trình vá</string>
     <string name="settings_system_memory_limit_warning">Nếu bộ nhớ quá thấp có thể khiến bạn gặp lỗi trong quá trình vá ứng dụng lớn</string>
@@ -633,12 +636,14 @@ Kích thước hình ảnh yêu cầu:
     <string name="settings_system_patched_apks_deleted">Đã xóa APK đã vá thành công</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">APK gốc</string>
+    <string name="settings_system_original_apks_description">Lưu để vá lại sau này. Mỗi ứng dụng chỉ lưu một phiên bản</string>
     <string name="settings_system_original_apks_empty">Không có APK gốc nào được lưu</string>
     <string name="settings_system_original_apks_deleted">Đã xóa APK gốc thành công</string>
     <string name="settings_system_original_apks_delete_title">Xóa APK gốc?</string>
     <string name="settings_system_original_apks_delete_confirm">Bạn có muốn xóa tệp APK gốc của %s? Nếu không có APK mới, bạn sẽ không thể vá lại đâu</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">Bản vá đã chọn</string>
+    <string name="settings_system_patch_selections_description">Lưu các bản vá đã chọn khi vá, kể cả sau khi gỡ cài đặt</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">Đặt lại toàn bộ bản vá đã chọn?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">Đặt lại gói đã chọn?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">Đặt lại nguồn đã chọn?</string>
