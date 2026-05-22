@@ -99,15 +99,12 @@ fun SettingsScreen(
     val showInstallerDialog = remember { mutableStateOf(false) }
     val showChangelogDialog = remember { mutableStateOf(false) }
 
-    // Import pickers - GetContentWithChooser on phones, OpenDocument on Android TV
     val importKeystoreLauncher = rememberAdaptiveFilePicker(
-        mimeTypes = arrayOf("*/*"),
-        chooserTitle = stringResource(R.string.settings_system_import_keystore)
+        mimeTypes = arrayOf("*/*")
     ) { uri -> uri?.let { importExportViewModel.startKeystoreImport(it) } }
 
     val importSettingsLauncher = rememberAdaptiveFilePicker(
-        mimeTypes = arrayOf(JSON_MIMETYPE, TEXT_MIMETYPE),
-        chooserTitle = stringResource(R.string.settings_system_import_manager_settings)
+        mimeTypes = arrayOf(JSON_MIMETYPE, TEXT_MIMETYPE)
     ) { uri -> uri?.let { importExportViewModel.importManagerSettings(it) } }
 
     // Export launchers
@@ -301,6 +298,7 @@ private fun NavigationItem(
                 selected = isSelected
             },
         color = containerColor,
+        contentColor = contentColor,
         shape = RoundedCornerShape(24.dp)
     ) {
         Row(
@@ -313,7 +311,6 @@ private fun NavigationItem(
             Icon(
                 imageVector = tab.icon,
                 contentDescription = tabLabel,
-                tint = contentColor,
                 modifier = Modifier.size(24.dp)
             )
 
@@ -327,7 +324,6 @@ private fun NavigationItem(
                     Text(
                         text = tabLabel,
                         style = MaterialTheme.typography.labelLarge,
-                        color = contentColor,
                         fontWeight = FontWeight.Medium,
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis

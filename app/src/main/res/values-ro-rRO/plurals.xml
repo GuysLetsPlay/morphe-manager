@@ -45,11 +45,6 @@
         <item quantity="few">%s patch-uri selectate</item>
         <item quantity="other">%s de patch-uri selectate</item>
     </plurals>
-    <plurals name="home_app_show_selected">
-        <item quantity="one">Arată %s aplicație</item>
-        <item quantity="few">Arată %s aplicații</item>
-        <item quantity="other">Arată %s de aplicații</item>
-    </plurals>
     <plurals name="home_app_show_hidden_count">
         <item quantity="one">%s aplicație ascunsă</item>
         <item quantity="few">%s aplicații ascunse</item>

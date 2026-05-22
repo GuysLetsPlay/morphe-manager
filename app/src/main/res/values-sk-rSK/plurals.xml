@@ -54,12 +54,6 @@
         <item quantity="many">%s zvolených záplat</item>
         <item quantity="other">%s zvolených záplat</item>
     </plurals>
-    <plurals name="home_app_show_selected">
-        <item quantity="one">Zobraziť %s aplikáciu</item>
-        <item quantity="few">Zobraziť %s aplikácie</item>
-        <item quantity="many">Zobraziť %s aplikácie</item>
-        <item quantity="other">Zobraziť %s aplikácie</item>
-    </plurals>
     <plurals name="home_app_show_hidden_count">
         <item quantity="one">%s skrytá aplikácia</item>
         <item quantity="few">%s skryté aplikácie</item>

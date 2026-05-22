@@ -26,7 +26,7 @@ import kotlin.random.Random
 /**
  * Animated polygon mesh background with chaotic 3D motion.
  * Uses frame-based time so [speedMultiplier] changes smoothly without restarting animations.
- * On patching completion a circular ripple wave propagates from the mesh centre outward,
+ * On patching completion a circular ripple wave propagates from the mesh center outward,
  * displacing nodes along the Z-axis, then decays back to zero.
  */
 @Composable
@@ -55,7 +55,7 @@ fun MeshBackground(
     // time accumulates in ms at speed 1x - same effective period as the original 20 000 ms half-cycle
     val time = rememberAnimatedTime(speedMultiplier)
 
-    // rippleProgress 0→1: a circular pulse wave sweeps from mesh centre to edges,
+    // rippleProgress 0→1: a circular pulse wave sweeps from mesh center to edges,
     // lifting nodes along Z before settling. Linear easing keeps the wave front at constant speed.
     val rippleProgress = remember { Animatable(0f) }
 
@@ -108,7 +108,7 @@ fun MeshBackground(
             val x = node.baseX + node.offsetX * sin(t * xFreq + xPhase)
             val y = node.baseY + node.offsetY * cos(t * yFreq + yPhase)
 
-            // Ripple: a circular wave front sweeps from centre (0.5, 0.5).
+            // Ripple: a circular wave front sweeps from center (0.5, 0.5).
             // Wave front travels at 1.6 units/sec; width = 0.25 units.
             val distFromCentre = sqrt(
                 (node.baseX - 0.5f) * (node.baseX - 0.5f) +

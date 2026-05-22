@@ -7,7 +7,6 @@
     <string name="home_app_hide_title">이 앱을 숨기시겠습니까?</string>
     <string name="home_app_hide_message">이 앱은 홈 화면에서 숨겨집니다. 목록 하단에 있는 버튼을 사용하여 숨겨진 앱 목록에서 나중에 복원할 수 있습니다</string>
     <string name="home_app_will_be_hidden">이 앱이 숨겨집니다</string>
-    <string name="home_app_show_hidden">숨겨진 앱 보이기</string>
     <string name="home_app_no_hidden">숨겨진 앱이 없습니다</string>
     <string name="home_app_hidden_apps_title">숨겨진 앱</string>
     <string name="home_app_hidden_apps_hint">숨기기를 해제하려면 탭하세요</string>
@@ -47,7 +46,7 @@
     <!-- Friendly, slightly mischievous joke about controlling app behavior -->
     <string name="home_greeting_6">앱의 동작을 개선해 보죠</string>
     <!-- Whimsical forecast-style joke, not meant literally -->
-    <string name="home_greeting_7">오늘의 예보: 패치 확률 100%</string>
+    <string name="home_greeting_7" formatted="false">오늘의 예보: 패치 확률 100%</string>
     <!-- From mediocrity to amazing -->
     <string name="home_greeting_8">아쉬움을 놀라움으로 바꿀 준비 되셨나요?</string>
     <!-- Playful exaggeration, making patching feel heroic -->
@@ -58,15 +57,18 @@
     <string name="sources_management_title">패치 소스</string>
     <string name="sources_management_open_in_browser">브라우저에서 열기</string>
     <string name="sources_management_failed_to_open_url">URL을 열 수 없습니다</string>
-    <string name="sources_management_prerelease_toggle">패치 Pre-release 버전 사용</string>
+    <string name="sources_management_prerelease_toggle">Pre-release 패치</string>
     <string name="sources_management_prerelease_toggle_description">새 실험 패치 버전을 미리 받아보세요</string>
-    <string name="sources_management_experimental_versions_toggle">실험 앱 버전 사용</string>
-    <string name="sources_management_experimental_versions_toggle_description">사용 가능한 경우 실험 앱 버전으로 패치합니다</string>
+    <string name="sources_management_experimental_versions_toggle">실험 앱 버전</string>
+    <string name="sources_management_experimental_versions_toggle_description">사용 가능한 경우에 실험 앱 버전으로 패치합니다</string>
     <string name="sources_management_already_exists">이 소스는 이미 추가되어 있습니다</string>
     <string name="sources_management_invalid_url">잘못된 소스 URL입니다. 주소를 확인하고 다시 시도하세요</string>
     <string name="sources_management_metadata_unavailable">메타데이터 없음</string>
     <string name="sources_management_metadata_unavailable_hint">원격 메타데이터 파일을 사용할 수 없습니다. 설치된 번들로 패치는 계속 가능하지만, 이 소스에 대한 자동 업데이트는 비활성화됩니다</string>
     <string name="sources_management_metadata_unavailable_hint_missing">패치 번들을 다운로드할 수 없습니다. 소스 URL이 올바르지 않거나 파일이 존재하지 않을 수 있습니다</string>
+    <string name="sources_management_source_enabled">소스를 활성화하였습니다</string>
+    <string name="sources_management_source_disabled">소스를 비활성화하였습니다</string>
+    <string name="sources_management_source_updating">소스를 업데이트하는 중</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">표시 이름</string>
     <string name="sources_dialog_rename">패치 소스 이름 변경</string>
@@ -105,6 +107,7 @@
     <string name="home_apk_availability_yes">네, APK를 찾는데 도움을 주세요</string>
     <string name="home_apk_availability_no">아니요, 이미 APK를 가지고 있습니다</string>
     <string name="home_apk_use_saved_with_version">저장된 APK 사용 (v%s)</string>
+    <string name="home_apk_use_installed_with_version">설치된 APK 사용 (v%s)</string>
     <string name="home_app_info_no_saved_apk">저장된 APK가 없습니다. 패치하려면 APK 파일을 다시 선택하세요</string>
     <string name="home_version_requires_android">Android %s+ 필요</string>
     <string name="home_apk_no_compatible_versions_title">이 기기에서는 지원되지 않음</string>
@@ -131,14 +134,19 @@
     <string name="home_invalid_apk_unreadable">파일을 읽을 수 없습니다. \'외부 저장소\'가 배터리 제한되어 있는지 확인하세요</string>
     <string name="home_invalid_apk_not_an_apk">선택된 파일이 유효한 APK가 아닙니다</string>
     <string name="home_invalid_apk_io_error">파일을 열 수 없습니다. 다시 시도하세요</string>
+    <string name="home_external_apk_expert_mode_required">이 기능은 전문가 모드에서만 사용할 수 있습니다.</string>
     <!-- Home Screen - Dialog 4: Expert Mode Dialog -->
     <string name="expert_mode_title">전문가 모드</string>
     <string name="expert_mode_search">패치 검색</string>
     <string name="expert_mode_proceed">패치 진행</string>
     <string name="expert_mode_disable_all">모두 비활성화하였습니다</string>
+    <string name="expert_mode_disable_all_done">모든 패치를 비활성화하였습니다</string>
     <string name="expert_mode_enable_all">모두 활성화하였습니다</string>
+    <string name="expert_mode_enable_all_done">모든 패치를 활성화하였습니다</string>
     <string name="expert_mode_reset_to_default">패치 기본값으로 초기화하였습니다</string>
+    <string name="expert_mode_reset_to_default_done">권장 패치를 적용하였습니다</string>
     <string name="expert_mode_restore_saved">저장된 선택 목록으로 복원하였습니다</string>
+    <string name="expert_mode_restore_saved_done">저장된 선택 목록을 복원하였습니다</string>
     <string name="expert_mode_no_results">패치를 찾을 수 없습니다</string>
     <string name="expert_mode_universal_patches">유니버셜 패치</string>
     <string name="expert_mode_new_patches">신규</string>
@@ -185,35 +193,49 @@
     <string name="patch_option_enter_number">숫자 입력</string>
     <string name="patch_option_enter_decimal">소수점 입력</string>
     <string name="patch_option_pick_folder">폴더 선택</string>
+    <string name="patch_option_pick_file">파일 선택</string>
     <string name="patch_option_list_duplicate">이 값은 이미 존재합니다</string>
     <string name="patch_option_list_empty">값을 비워 둘 수 없습니다</string>
     <string name="patch_option_list_empty_state">아직 값이 추가되지 않았습니다</string>
     <string name="patch_option_required_missing">%s: 모든 필수 옵션을 입력하세요</string>
     <!-- Adaptive Icon Creator -->
     <string name="adaptive_icon_create">적응형 아이콘 만들기</string>
-    <string name="adaptive_icon_instructions">전경 이미지를 선택하고, 배경 색상을 선택한 다음 슬라이더 또는 핀치 제스처를 사용하여 미리보기를 조정하세요</string>
-    <string name="adaptive_icon_preview">적응형 아이콘 미리보기</string>
-    <string name="adaptive_icon_preview_hint">최상의 결과를 얻으려면 아이콘을 내부 실선 원 안에 유지하세요</string>
     <string name="adaptive_icon_select_image">이미지 선택</string>
     <string name="adaptive_icon_change_image">이미지 변경</string>
     <string name="adaptive_icon_background_color">배경 색상</string>
     <string name="adaptive_icon_reset_transform">위치 및 크기 초기화</string>
     <string name="adaptive_icon_safe_zone_inner">안전한 영역 (항상 표시됨)</string>
     <string name="adaptive_icon_safe_zone_outer">마스크 영역 (잘릴 수 있음)</string>
+    <string name="adaptive_icon_no_transparency_warning">이미지에 투명한 픽셀이 없습니다. 결과가 올바르지 않게 보일 수 있습니다</string>
     <string name="adaptive_icon_created_success">적응형 아이콘을 성공적으로 만들었습니다</string>
     <string name="adaptive_icon_creation_failed">적응형 아이콘을 만들 수 없습니다</string>
-    <string name="adaptive_icon_folder_explanation">생성된 아이콘 파일이 저장될 \'%1$s/%2$s\' 폴더의 위치를​​ 선택하세요</string>
-    <string name="notification_icon_preview">알림 아이콘 미리보기</string>
-    <string name="notification_icon_preview_hint">슬라이더를 사용하여 크기를 조정하고, 드래그하여 위치를 변경하세요</string>
+    <string name="adaptive_icon_label">적응형</string>
+    <string name="adaptive_icon_monochrome_label">흑백</string>
+    <string name="adaptive_icon_guide">아이콘 생성 가이드</string>
+    <string name="adaptive_icon_guide_png_title">투명한 배경의 PNG를 사용하세요</string>
+    <string name="adaptive_icon_guide_png_body">전경 이미지는 투명한 배경이 있는 PNG 파일이어야 합니다. 단색 배경을 사용하면 올바르게 표시되지 않을 수 있습니다. 배경 색상은 아래의 배경 색상 선택기에서 설정해야 합니다</string>
+    <string name="adaptive_icon_guide_safe_zones_title">안전한 영역</string>
+    <string name="adaptive_icon_guide_safe_zones_body">"내부 영역 (실선): 모든 런처 모양에서 콘텐츠가 항상 완전히 표시됩니다.
+외부 영역 (점선): 런처 마스크에 의해 잘릴 수 있으므로 중요한 요소는 내부 영역 안에 배치하세요."</string>
+    <string name="adaptive_icon_guide_notification_title">알림 아이콘</string>
+    <string name="adaptive_icon_guide_notification_body">전경 이미지로부터 자동 생성됩니다. 알림 슬라이더를 사용하여 크기를 조정할 수 있습니다. 표시되는 모든 콘텐츠는 상태바에서 흰색으로 표시됩니다.</string>
+    <string name="adaptive_icon_guide_monochrome_title">흑백 아이콘</string>
+    <string name="adaptive_icon_guide_monochrome_body">동일한 적응형 아이콘 변형을 사용하여 전경 이미지로부터 자동 생성됩니다. Android 13 이상에서는 배경화면의 강조 색상으로 색이 표시됩니다.</string>
+    <string name="notification_icon_preview">알림</string>
     <!-- Header Creator -->
     <string name="header_creator_create">커스텀 헤더 만들기</string>
-    <string name="header_creator_instructions">밝은 테마와 어두운 테마에 사용될 이미지를 선택한 다음에 손가락으로 확대하거나 축소하여 이미지 크기를 조절하세요</string>
     <string name="header_creator_light_theme">밝은 테마 헤더</string>
     <string name="header_creator_dark_theme">어두운 테마 헤더</string>
     <string name="header_creator_no_image">선택된 이미지가 없습니다</string>
     <string name="header_creator_success">헤더를 성공적으로 만들었습니다</string>
     <string name="header_creator_failed">헤더를 만들 수 없습니다</string>
-    <string name="header_creator_folder_explanation">생성된 헤더 파일이 저장될 \'%1$s/%2$s\' 폴더의 위치를​​ 선택하세요</string>
+    <string name="header_creator_guide">헤더 생성 가이드</string>
+    <string name="header_creator_guide_image_title">이미지 요구 사항</string>
+    <string name="header_creator_guide_image_body">PNG 또는 JPEG 이미지 파일을 사용할 수 있습니다. 최상의 결과를 얻으려면 약 2.7:1 비율의 와이드 형식 이미지를 사용하는 것이 좋습니다. 투명한 배경이 있는 PNG 파일은 앱 테마와 자연스럽게 어우러집니다.</string>
+    <string name="header_creator_guide_themes_title">밝은 테마 및 어두운 테마</string>
+    <string name="header_creator_guide_themes_body">대부분의 앱은 밝은 테마와 어두운 테마용 이미지를 각각 필요로 합니다. 일부 앱(예: YouTube Music)은 어두운 테마만 사용하므로 해당 섹션만 표시됩니다.</string>
+    <string name="header_creator_guide_positioning_title">위치 및 크기 조정</string>
+    <string name="header_creator_guide_positioning_body">미리보기에서 핀치 확대/축소 및 드래그 제스처를 사용하여 이미지 위치와 크기를 조정할 수 있습니다. 이미지가 중앙에 가까워지면 스냅 가이드가 표시됩니다. 미리보기 아래의 슬라이더로도 조정할 수 있습니다.</string>
     <!-- Home Screen - App Info Screen -->
     <string name="home_app_info_uninstall_app_confirmation">이 앱을 정말 제거하시겠습니까?</string>
     <string name="home_app_info_remove_app_warning">다음 항목들을 영구적으로 삭제합니다:</string>
@@ -228,10 +250,8 @@
     <string name="home_app_info_original_package_name">원본 패키지 이름</string>
     <string name="home_app_info_applied_patches">적용된 패치</string>
     <string name="home_app_info_patch_source_used">사용된 패치 소스</string>
-    <string name="home_app_info_install_type">설치 유형</string>
     <string name="home_app_info_install_type_custom_installer">커스텀 설치 프로그램</string>
     <string name="home_app_info_install_type_system_installer">시스템 설치 프로그램</string>
-    <string name="home_app_info_patched_at">패치 일자</string>
     <string name="home_app_info_patch_update_available">패치 업데이트 사용 가능</string>
     <string name="home_app_info_patch_update_available_description">새 버전의 패치가 있습니다. 최신 개선 사항 및 수정 사항을 적용하려면 앱을 다시 패치하세요</string>
     <string name="home_app_info_app_deleted_warning">앱이 제거되었습니다</string>
@@ -245,7 +265,7 @@
     <string name="root_pre_patch_installer_mount_title">루트 마운트</string>
     <string name="root_pre_patch_installer_mount_description">순정 앱 위에 패치된 APK를 마운트합니다. GmsCore가 필요하지 않습니다</string>
     <string name="root_pre_patch_installer_standard_title">표준 설치</string>
-    <string name="root_pre_patch_installer_standard_description">GmsCore support가 포함된 별도 앱으로 설치합니다. 패치 후에 설치 프로그램(시스템 설치 프로그램, Shizuku, etc.)을 선택하세요</string>
+    <string name="root_pre_patch_installer_standard_description">GmsCore를 지원하는 별도 앱으로 설치합니다. 패치 후에 설치 프로그램을 선택할 수 있습니다</string>
     <string name="root_pre_patch_installer_hint">설치 방법에 따라 포함되는 패치가 결정되며 패치 후에는 변경할 수 없습니다</string>
     <!-- Patcher Screen -->
     <string name="patcher_error_copied">오류 정보를 클립보드에 복사하였습니다</string>
@@ -263,6 +283,11 @@
     <string name="patcher_unknown_error">알 수 없는 오류가 발생하였습니다</string>
     <string name="patcher_conflict_title">패키지 충돌</string>
     <string name="patcher_conflict_subtitle">기존 버전을 제거해야 합니다</string>
+    <string name="patcher_conflict_hint">패치된 앱은 설치된 버전과 다른 인증서를 사용합니다. 제거하면 앱 데이터가 모두 삭제됩니다</string>
+    <string name="patcher_installed_conflict_title">제거가 필요합니다</string>
+    <string name="patcher_installed_conflict_body">"Morphe는 자체 인증서로 패치된 앱에 서명하므로 원본 앱과 인증서가 다릅니다. Android에서는 기존 버전을 제거해야 패치된 앱을 설치할 수 있습니다.
+
+앱을 제거하면 모든 앱 데이터가 영구적으로 삭제됩니다"</string>
     <string name="patcher_install_error_title">설치 오류</string>
     <string name="patcher_install_error_subtitle">앱을 제거한 후에 다시 설치하세요</string>
     <string name="patcher_ready_to_install_subtitle">설치하시려면 아래 버튼을 탭하세요</string>
@@ -288,6 +313,10 @@
     <string name="patcher_step_group_saving">저장하는 중</string>
     <string name="patcher_step_write_patched">패치된 APK 파일을 작성하는 중</string>
     <string name="patcher_step_sign_apk">패치된 APK 파일에 서명하는 중</string>
+    <!-- Battery optimization pre-flight dialog -->
+    <string name="battery_optimization_dialog_title">백그라운드 패치 보호</string>
+    <string name="battery_optimization_dialog_description">일부 기기에서는 앱이 최소화되면 패처가 중지될 수 있습니다. 패치가 안정적으로 완료되도록 Morphe가 배터리 제한 없이 실행되도록 허용하세요</string>
+    <string name="battery_optimization_not_now">나중에</string>
     <!-- Patcher Screen - Patcher Worker -->
     <string name="patcher_notification_title">패치를 진행하는 중…</string>
     <string name="patcher_notification_text">패처로 돌아가려면 여기를 탭하세요</string>
@@ -390,13 +419,13 @@
     <string name="settings_appearance_app_icon_change_dialog_confirm">앱 아이콘 변경</string>
     <!-- Settings - Advanced Tab - Updates Section -->
     <string name="settings_advanced_updates">업데이트</string>
-    <string name="settings_advanced_updates_use_prereleases">Morphe Pre-release 버전 사용</string>
-    <string name="settings_advanced_updates_use_prereleases_description">새 Morphe 기능을 미리 사용합니다. Pre-release 패치를 받으려면 각 패치 소스에서 Pre-release 토글을 개별적으로 활성화하세요</string>
+    <string name="settings_advanced_updates_use_prereleases">Pre-release 업데이트</string>
+    <string name="settings_advanced_updates_use_prereleases_description">새 Morphe 앱 버전에 미리 받아봅니다. 패치 소스는 소스별로 Pre-release 패치를 활성화하세요</string>
     <string name="settings_advanced_updates_allow_metered">모바일 데이터에서 업데이트</string>
-    <string name="settings_advanced_updates_allow_metered_description">모바일 데이터를 사용하여 Morphe 및 패치 업데이트를 다운로드하도록 허용합니다</string>
+    <string name="settings_advanced_updates_allow_metered_description">모바일 데이터를 사용하여 Morphe 및 패치 업데이트를 다운로드할 수 있도록 허용합니다</string>
     <string name="settings_advanced_updates_background_notifications">백그라운드 업데이트 알림</string>
     <string name="settings_advanced_updates_background_notifications_description">백그라운드에서 주기적으로 업데이트를 확인하고 업데이트가 있을 경우에 알림을 보냅니다</string>
-    <string name="settings_advanced_updates_background_notifications_description_fcm">앱이 닫혀 있어도 새 릴리스에 대한 푸시 알림을 즉시 받습니다</string>
+    <string name="settings_advanced_updates_background_notifications_description_fcm">앱이 닫혀 있어도 새 릴리스에 대한 푸시 알림을 받습니다</string>
     <string name="settings_advanced_update_interval">확인 빈도</string>
     <string name="settings_advanced_update_interval_dialog_title">업데이트 확인</string>
     <string name="settings_advanced_update_interval_hourly">한시간에 한번</string>
@@ -424,8 +453,7 @@
     <string name="settings_advanced_expert_mode_dialog_title">전문가 모드 활성화</string>
     <string name="settings_advanced_expert_mode_dialog_message">전문가 모드에서는 패치를 적용하는 방식을 더 세밀하게 조절할 수 있지만, 설정을 잘못 건드리면 앱이 정상적으로 작동하지 않을 수 있습니다</string>
     <string name="settings_advanced_strip_unused_libs">기기 아키텍처에 맞게 최적화</string>
-    <string name="settings_advanced_strip_unused_libs_description">"병합 과정에서 이 기기에서 지원되지 않는 CPU 아키텍처, 언어 및 화면 밀도에 대한 분할 APK 모듈을 건너뜁니다.
-일반 APK의 경우에는 패치 후에 지원되지 않는 아키텍처에 대한 네이티브 라이브러리를 제거합니다"</string>
+    <string name="settings_advanced_strip_unused_libs_description">사용하지 않는 CPU 아키텍처 라이브러리 및 분할 APK 모듈을 제거합니다</string>
     <!-- Bytecode mode -->
     <string name="settings_advanced_bytecode_mode">바이트코드 처리 모드</string>
     <string name="settings_advanced_bytecode_mode_dialog_description">패치 과정에서 바이트코드를 처리하는 방식을 제어합니다. 패치 속도, 메모리 사용량 및 출력 APK 크기에 영향을 줍니다</string>
@@ -433,11 +461,11 @@
     <string name="settings_advanced_bytecode_mode_strip_fast">빠름</string>
     <string name="settings_advanced_bytecode_mode_strip_fast_description">빠른 패치 속도와 낮은 메모리 사용량을 제공하지만, APK 크기가 커집니다. 저사양 또는 RAM이 적은 기기에 권장됩니다</string>
     <string name="settings_advanced_bytecode_mode_full">최대</string>
-    <string name="settings_advanced_bytecode_mode_full_description">느린 패치 속도로 기존 동작 방식과 동일하게 작동합니다. 빠른 모드에서 문제가 발생할 경우만 사용하세요</string>
+    <string name="settings_advanced_bytecode_mode_full_description">패치 속도가 느려지지만 기존 동작 방식과 동일하게 작동합니다. 빠름 모드에서 문제가 발생하는 경우에만 사용이 권장됩니다</string>
     <!-- Settings - Advanced Tab - GitHub PAT Settings -->
     <string name="settings_advanced_github_pat">GitHub 개인 액세스 토큰</string>
     <string name="settings_advanced_github_pat_description">풀 리퀘스트 소스에 필요합니다</string>
-    <string name="settings_advanced_github_pat_configured">토큰을 구성하였습니다</string>
+    <string name="settings_advanced_github_pat_configured">토큰을 설정하였습니다</string>
     <string name="settings_advanced_github_pat_how_to_get">토큰 얻는 방법</string>
     <string name="settings_advanced_github_pat_dialog_title">GitHub 개인 액세스 토큰 설정</string>
     <string name="settings_advanced_github_pat_dialog_description">풀 리퀘스트를 외부 소스로 사용하기 위해 GitHub 개인 액세스 토큰이 필요합니다.
@@ -528,7 +556,7 @@ morphe_header_custom_dark.png
     <string name="installer">설치 프로그램</string>
     <string name="installer_title">설치 프로그램 선택</string>
     <string name="installer_internal_name">시스템 설치 프로그램</string>
-    <string name="installer_internal_description">Android 패키지 설치 프로그램를 사용합니다</string>
+    <string name="installer_internal_description">Android 패키지 설치 프로그램을 사용합니다</string>
     <string name="installer_auto_saved_name">루팅된 마운트 설치 프로그램</string>
     <string name="installer_auto_saved_description">설치된 앱 위에 패치된 APK를 마운트합니다</string>
     <string name="installer_shizuku_description">Shizuku 또는 Sui를 사용하여 자동으로 설치합니다</string>
@@ -552,52 +580,46 @@ morphe_header_custom_dark.png
     <string name="installer_unavailable_message">선택된 설치 프로그램(%s)을 현재 사용할 수 없습니다. 문제를 해결하고 다시 시도하거나 표준 설치 프로그램을 사용해 보세요</string>
     <string name="installer_unavailable_shizuku_hint">Shizuku가 실행 중이고, 이 앱에 권한이 부여되었는지 확인하세요</string>
     <string name="installer_use_standard">표준을 사용합니다</string>
-    <string name="settings_prompt_installer_on_install">설치 시 설치 프로그램 안내</string>
+    <string name="settings_prompt_installer_on_install">설치 프로그램 선택 프롬프트</string>
     <string name="settings_prompt_installer_on_install_description">패치된 앱을 설치할 때마다 설치 프로그램 선택 다이얼로그를 표시합니다</string>
     <!-- Settings - System Tab - Performance Section -->
+    <string name="settings_system_battery_optimization">배터리 최적화</string>
+    <string name="settings_system_battery_optimization_description">앱이 최소화되어도 패처가 계속 실행되도록 유지합니다</string>
     <string name="settings_system_performance">성능</string>
     <string name="settings_system_process_runtime">프로세스 런타임</string>
-    <string name="settings_system_process_runtime_description">안정성 향상을 위해 패치를 별도의 프로세스에서 실행합니다</string>
+    <string name="settings_system_process_runtime_description">안정성 향상을 위해 별도의 프로세스에서 패치를 실행합니다</string>
     <string name="settings_system_process_runtime_memory_limit">메모리 제한</string>
-    <string name="settings_system_process_runtime_memory_limit_description">메모리 제한을 높이면 패치 속도가 빨라질 수 있지만 저사양 기기에서는 작동되지 않을 수 있습니다</string>
+    <string name="settings_system_process_runtime_memory_limit_description">메모리 제한 값을 높이면 지원되는 기기에서 패치 속도가 향상될 수 있습니다</string>
     <string name="settings_system_process_runtime_enable">프로세스 런타임 활성화</string>
     <string name="settings_system_memory_limit_subtitle">패치에 사용 가능한 메모리</string>
     <string name="settings_system_memory_limit_warning">메모리 제한이 낮으면 대용랑 앱을 패치할 경우에 오류가 발생할 수 있습니다</string>
     <string name="settings_system_process_runtime_enabled_description">%s MB 제한</string>
     <string name="settings_system_process_runtime_disabled_description">설정하려면 탭하세요</string>
     <string name="settings_system_process_runtime_description_not_available">이 기능은 Android 11 이상이 필요합니다</string>
-    <!-- Settings - System Tab - Import and export keystore -->
+    <!-- Settings - System Tab - Import and Export Section -->
     <string name="settings_system_import_export">가져오기 &amp; 내보내기</string>
-    <string name="settings_system_import_keystore">키스토어 가져오기</string>
-    <string name="settings_system_import_keystore_description">커스텀 키스토어를 가져옵니다</string>
+    <string name="settings_system_keystore">키스토어</string>
+    <string name="settings_system_import_keystore_description">서명된 키스토어를 가져오거나 내보냅니다</string>
     <string name="settings_system_import_keystore_dialog_title">키스토어 자격 증명 입력</string>
     <string name="settings_system_import_keystore_dialog_description">키스토어를 가져오려면 키스토어의 자격 증명을 입력해야 합니다</string>
     <string name="settings_system_import_keystore_dialog_alias_field">사용자 이름 (별칭)</string>
     <string name="settings_system_import_keystore_dialog_password_field">비밀번호</string>
-    <string name="settings_system_import_keystore_dialog_button">가져오기</string>
     <string name="settings_system_import_keystore_dialog_format_field">키스토어 형식</string>
     <string name="settings_system_import_keystore_wrong_credentials">키스토어 자격 증명이 잘못되었습니다</string>
     <string name="settings_system_import_keystore_success">키스토어를 가져왔습니다</string>
     <string name="settings_system_import_keystore_failed">키스토어를 가져올 수 없습니다</string>
-    <string name="settings_system_export_keystore">키스토어 내보내기</string>
-    <string name="settings_system_export_keystore_description">현재 사용되는 키스토어를 내보냅니다</string>
     <string name="settings_system_export_keystore_unavailable">내보낼 키스토어가 없습니다</string>
     <string name="settings_system_export_keystore_success">키스토어를 내보냈습니다</string>
     <string name="settings_system_export_keystore_failed">키스토어를 내보낼 수 없습니다</string>
     <string name="settings_system_show_password_field">비밀번호 표시</string>
     <string name="settings_system_hide_password_field">비밀번호 숨기기</string>
-    <!-- Settings - System Tab - Import and Export Manager Settings -->
-    <string name="settings_system_import_manager_settings">Morphe 설정 가져오기</string>
-    <string name="settings_system_import_manager_settings_description">Morphe 설정을 JSON 파일에서 가져옵니다</string>
+    <string name="settings_system_morphe_settings">Morphe 설정</string>
+    <string name="settings_system_import_manager_settings_description">Morphe 설정을 백업하고 복원합니다</string>
     <string name="settings_system_import_manager_settings_fail">Morphe 설정을 가져올 수 없습니다: %s</string>
     <string name="settings_system_import_manager_settings_success">Morphe 설정을 가져왔습니다</string>
-    <string name="settings_system_export_manager_settings">Morphe 설정 내보내기</string>
-    <string name="settings_system_export_manager_settings_description">Morphe 설정을 JSON 파일으로 내보냅니다</string>
     <string name="settings_system_export_manager_settings_fail">Morphe 설정을 내보낼 수 없습니다: %s</string>
     <string name="settings_system_export_manager_settings_success">Morphe 설정을 내보냈습니다</string>
-    <!-- Settings - System Tab - Debug Section -->
     <string name="settings_system_debug">디버그</string>
-    <string name="settings_system_export_debug_logs">디버그 로그 내보내기</string>
     <string name="settings_system_export_debug_logs_description">문제 해결을 위해 시스템 로그를 저장합니다</string>
     <string name="settings_system_export_debug_logs_export_read_failed">로그를 읽을 수 없습니다 (종료 코드 %s)</string>
     <string name="settings_system_export_debug_logs_export_failed">로그를 내보낼 수 없습니다</string>
@@ -614,14 +636,14 @@ morphe_header_custom_dark.png
     <string name="settings_system_patched_apks_deleted">패치된 APK를 성공적으로 삭제하였습니다</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">원본 APK</string>
-    <string name="settings_system_original_apks_description">원본 APK 파일을 다시 패치하기 위해 저장합니다. 앱마다 가장 최신 버전만 보관됩니다</string>
+    <string name="settings_system_original_apks_description">나중에 다시 패치할 경우를 위해 저장됩니다. 앱별로 한 개의 버전만 보관됩니다</string>
     <string name="settings_system_original_apks_empty">저장된 원본 APK가 없습니다</string>
     <string name="settings_system_original_apks_deleted">원본 APK를 성공적으로 삭제하였습니다</string>
     <string name="settings_system_original_apks_delete_title">원본 APK 삭제</string>
     <string name="settings_system_original_apks_delete_confirm">\'%s\'에 대한 원본 APK를 삭제하시겠습니까? 다시 패치할 경우에 새 APK를 제공해야 합니다.</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">패치 선택 목록</string>
-    <string name="settings_system_patch_selections_description">저장된 패치 선택 목록 및 옵션을 관리합니다. 앱을 제거한 후에도 유지됩니다</string>
+    <string name="settings_system_patch_selections_description">저장된 패치 선택 목록은 앱을 제거한 후에도 유지됩니다</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">모든 선택 목록 초기화</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">패키지 선택 목록 초기화</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">스소 선택 목록 초기화</string>
@@ -645,7 +667,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_about">정보</string>
     <string name="settings_system_share_website">웹사이트 공유</string>
     <string name="settings_system_share_website_description">공식 Morphe 웹사이트를 공유해 보세요</string>
-    <string name="settings_system_manager_description">"커뮤니티 피드백과 기여를 기반으로 인기 있는 Android 앱을 현대적이고 간소화된 방식으로 패치하기 위한 오픈소스 프로젝트입니다"</string>
+    <string name="settings_system_manager_description">커뮤니티 피드백과 기여를 기반으로 인기 있는 Android 앱을 현대적이고 간소화된 방식으로 패치하기 위한 오픈소스 프로젝트입니다</string>
     <string name="credits">크레딧</string>
     <string name="credits_current_development">현재 개발</string>
     <string name="credits_prior_development">이전 개발</string>
@@ -681,6 +703,10 @@ morphe_header_custom_dark.png
     <string name="disabled">비활성화됨</string>
     <string name="selected">선택됨</string>
     <string name="not_selected">선택 안 함</string>
+    <string name="select_all">모두 선택</string>
+    <string name="select_all_done">모두 선택하였습니다</string>
+    <string name="deselect_all">모두 선택 해제</string>
+    <string name="deselect_all_done">모두 선택 해제하였습니다</string>
     <string name="rename">이름 변경</string>
     <string name="import_">가져오기</string>
     <string name="export">내보내기</string>
@@ -701,6 +727,7 @@ morphe_header_custom_dark.png
     <string name="unmount">마운트 해제</string>
     <string name="unmounted">마운트 해제됨</string>
     <string name="remount">다시 마운트</string>
+    <string name="share">공유</string>
     <string name="install">설치</string>
     <string name="installed">설치됨</string>
     <string name="reinstall">다시 설치</string>
@@ -741,9 +768,4 @@ morphe_header_custom_dark.png
 
 그래도 계속하시겠습니까?"</string>
     <string name="download_update_confirmation">업데이트를 다운로드하시겠습니까?</string>
-    <string name="just_now">방금</string>
-    <string name="minutes_ago">%s분 전</string>
-    <string name="hours_ago">%s시간 전</string>
-    <string name="days_ago">%s일 전</string>
-    <string name="invalid_date">잘못된 날짜</string>
 </resources>

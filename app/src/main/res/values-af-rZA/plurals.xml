@@ -36,10 +36,6 @@
         <item quantity="one">%s verandering gekies</item>
         <item quantity="other">%s veeanderinge gekies</item>
     </plurals>
-    <plurals name="home_app_show_selected">
-        <item quantity="one">Vys %s program</item>
-        <item quantity="other">Vys %s programme</item>
-    </plurals>
     <plurals name="home_app_show_hidden_count">
         <item quantity="one">%s versteek program</item>
         <item quantity="other">%s versteek programme</item>

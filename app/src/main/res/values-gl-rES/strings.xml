@@ -6,7 +6,6 @@
     <string name="home_no_patches_available">Non hai parches dispoñibles</string>
     <string name="home_app_hide_title">Ocultar esta aplicación?</string>
     <string name="home_app_will_be_hidden">Ocultarase esta aplicación</string>
-    <string name="home_app_show_hidden">Mostrar aplicacións ocultas</string>
     <string name="home_app_no_hidden">Non hai aplicacións ocultas</string>
     <string name="home_app_hidden_apps_title">Aplicacións ocultas</string>
     <string name="android_11_bug_dialog_title">Erro de Android 11</string>
@@ -38,7 +37,7 @@
     <!-- Friendly, slightly mischievous joke about controlling app behavior -->
     <string name="home_greeting_6">Faga que as súas aplicacións se comporten</string>
     <!-- Whimsical forecast-style joke, not meant literally -->
-    <string name="home_greeting_7">Previsión do día: 100% de probabilidade de parcheo</string>
+    <string name="home_greeting_7" formatted="false">Previsión do día: 100% de probabilidade de parcheo</string>
     <!-- From mediocrity to amazing -->
     <string name="home_greeting_8">Listo para transformar o mediocre en algo incrible?</string>
     <!-- Playful exaggeration, making patching feel heroic -->
@@ -49,8 +48,6 @@
     <string name="sources_management_title">Fonte de parches</string>
     <string name="sources_management_open_in_browser">Abrir no navegador</string>
     <string name="sources_management_failed_to_open_url">Erro ao abrir o URL</string>
-    <string name="sources_management_prerelease_toggle">Empregar versións preliminares dos parches</string>
-    <string name="sources_management_prerelease_toggle_description">Recibir acceso anticipado a novas versións experimentales dos parches</string>
     <string name="sources_management_already_exists">Esta fonte xa foi engadida</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Nome a amosar</string>
@@ -147,10 +144,8 @@
     <string name="home_app_info_original_package_name">Nome orixinal do paquete</string>
     <string name="home_app_info_applied_patches">Parches aplicados</string>
     <string name="home_app_info_patch_source_used">Fonte de parche empregada</string>
-    <string name="home_app_info_install_type">Tipo de instalación</string>
     <string name="home_app_info_install_type_custom_installer">Instalador personalizado</string>
     <string name="home_app_info_install_type_system_installer">Instalador do sistema</string>
-    <string name="home_app_info_patched_at">Parcheado</string>
     <string name="home_app_info_patch_update_available">Actualización de parche dispoñible</string>
     <string name="home_app_info_app_deleted_description">Esta aplicación foi desinstalada fóra de Morphe. Volva a parchear para restaurar a súa funcionalidade</string>
     <!-- Home Screen - Root Mode -->
@@ -158,9 +153,7 @@
     <string name="root_pre_patch_installer_title">Escolla método de instalación</string>
     <string name="root_pre_patch_installer_description">O seu dispositivo ten acceso root. Escolla como quere instalar a aplicación parcheada</string>
     <string name="root_pre_patch_installer_mount_title">Montaxe root</string>
-    <string name="root_pre_patch_installer_mount_description">Montar APK parcheada sobre a app orixinal. Non se precisa Gms Core</string>
     <string name="root_pre_patch_installer_standard_title">Instalación Estándar</string>
-    <string name="root_pre_patch_installer_standard_description">Instalar coma aplicación separada con soporte para GmsCore. Escolla instalador (instalador del sistema, Shizuku, etc.) tras parchear</string>
     <!-- Patcher Screen -->
     <string name="patcher_error_copied">Error copiado ao portapapeis</string>
     <string name="patcher_error_log">Rexistro de erros</string>
@@ -175,6 +168,7 @@
     <string name="patcher_step_load_patches">Cargando parches</string>
     <string name="patcher_step_group_patching">Parcheando</string>
     <string name="patcher_step_group_saving">Gardando</string>
+    <!-- Battery optimization pre-flight dialog -->
     <!-- Patcher Screen - Patcher Worker -->
     <string name="patcher_notification_title">Parcheado en progreso...</string>
     <string name="patcher_notification_text">Toque para volver ao parcheador</string>
@@ -219,11 +213,8 @@
     <!-- Settings - Advanced Tab - Patch Options Section: Hide Shorts -->
     <!-- Settings - System Tab - Installer Section -->
     <!-- Settings - System Tab - Performance Section -->
-    <!-- Settings - System Tab - Import and export keystore -->
-    <string name="settings_system_import_keystore_dialog_button">Importar</string>
-    <!-- Settings - System Tab - Import and Export Manager Settings -->
-    <!-- Settings - System Tab - Debug Section -->
-    <string name="settings_system_export_debug_logs">Exportar rexistros de depuración</string>
+    <string name="settings_system_battery_optimization">Optimización de batería</string>
+    <!-- Settings - System Tab - Import and Export Section -->
     <string name="settings_system_export_debug_logs_export_failed">Fallo ao exportar rexistros</string>
     <!-- Settings - System Tab - Storage Management Section -->
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->

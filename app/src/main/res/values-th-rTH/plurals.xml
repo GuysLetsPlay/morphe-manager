@@ -27,9 +27,6 @@
     <plurals name="patch_selection_total_patches">
         <item quantity="other">%s แพตช์ถูกเลือก</item>
     </plurals>
-    <plurals name="home_app_show_selected">
-        <item quantity="other">แสดงแอป %s</item>
-    </plurals>
     <plurals name="home_app_show_hidden_count">
         <item quantity="other">แอปที่ซ่อนอยู่ %s</item>
     </plurals>

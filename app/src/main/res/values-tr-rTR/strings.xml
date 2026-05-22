@@ -7,7 +7,6 @@
     <string name="home_app_hide_title">Uygulama gizlensin mi?</string>
     <string name="home_app_hide_message">Bu uygulama ana ekrandan gizlenecektir. Daha sonra listenin altındaki düğmeyi kullanarak gizli uygulamalardan geri getirebilirsiniz</string>
     <string name="home_app_will_be_hidden">Bu uygulama gizlenecektir</string>
-    <string name="home_app_show_hidden">Gizli uygulamaları göster</string>
     <string name="home_app_no_hidden">Gizli uygulama yok</string>
     <string name="home_app_hidden_apps_title">Gizli uygulamalar</string>
     <string name="home_app_hidden_apps_hint">Gizliliği kaldırmak için dokunun</string>
@@ -47,7 +46,7 @@
     <!-- Friendly, slightly mischievous joke about controlling app behavior -->
     <string name="home_greeting_6">Uygulamalarınızın davranışlarını düzeltelim</string>
     <!-- Whimsical forecast-style joke, not meant literally -->
-    <string name="home_greeting_7">Bugünün tahmini: Yama yapma ihtimali %100</string>
+    <string name="home_greeting_7" formatted="false">Bugünün tahmini: Yama yapma ihtimali %100</string>
     <!-- From mediocrity to amazing -->
     <string name="home_greeting_8">Hayal kırıklığını harikaya dönüştürmeye hazır mısın?</string>
     <!-- Playful exaggeration, making patching feel heroic -->
@@ -58,15 +57,18 @@
     <string name="sources_management_title">Yama kaynakları</string>
     <string name="sources_management_open_in_browser">Tarayıcıda aç</string>
     <string name="sources_management_failed_to_open_url">URL açılamadı</string>
-    <string name="sources_management_prerelease_toggle">Ön sürüm yamaları kullan</string>
-    <string name="sources_management_prerelease_toggle_description">Yeni deneysel yamaların erken erişimine sahip olun</string>
-    <string name="sources_management_experimental_versions_toggle">Deneysel uygulama sürümlerini kullan</string>
+    <string name="sources_management_prerelease_toggle">Ön sürüm yamalar</string>
+    <string name="sources_management_prerelease_toggle_description">Yeni deneysel sürüm yamalarına erken erişim sağlar</string>
+    <string name="sources_management_experimental_versions_toggle">Deneysel uygulama sürümleri</string>
     <string name="sources_management_experimental_versions_toggle_description">Mevcutsa deneysel uygulama hedeflerini yamala</string>
     <string name="sources_management_already_exists">Bu kaynak zaten eklenmiş</string>
     <string name="sources_management_invalid_url">Geçersiz kaynak URL\'si. Lütfen adresi kontrol edin ve tekrar deneyin</string>
     <string name="sources_management_metadata_unavailable">Metadata Yok</string>
     <string name="sources_management_metadata_unavailable_hint">Uzak metadata dosyası kullanılamıyor. Yüklü paketle yamalama hala çalışır, ancak bu kaynak için otomatik güncelleme devre dışı bırakıldı</string>
     <string name="sources_management_metadata_unavailable_hint_missing">Yama paketi indirilemedi. Kaynak URL\'si yanlış olabilir veya dosya mevcut olmayabilir</string>
+    <string name="sources_management_source_enabled">Kaynak etkin</string>
+    <string name="sources_management_source_disabled">Kaynak devre dışı</string>
+    <string name="sources_management_source_updating">Kaynak güncelleniyor</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">Görünen ad</string>
     <string name="sources_dialog_rename">Yama kaynağını yeniden adlandır</string>
@@ -105,6 +107,7 @@
     <string name="home_apk_availability_yes">Evet, APK bulmama yardım et</string>
     <string name="home_apk_availability_no">Hayır, bende APK var</string>
     <string name="home_apk_use_saved_with_version">Kaydedilmiş APK (v%s) kullan</string>
+    <string name="home_apk_use_installed_with_version">Yüklenmiş APK (v%s) kullan</string>
     <string name="home_app_info_no_saved_apk">Kayıtlı APK yok. Yamayı uygulayabilmek için tekrar APK dosyasını seçmeniz gerekiyor</string>
     <string name="home_version_requires_android">Android %s+ gerektiriyor</string>
     <string name="home_apk_no_compatible_versions_title">Bu cihazda desteklenmiyor</string>
@@ -131,14 +134,19 @@
     <string name="home_invalid_apk_unreadable">Dosya okunamadı. \'Harici Depolama\'nın pil kısıtlaması olmadığından emin olun</string>
     <string name="home_invalid_apk_not_an_apk">Seçilen dosya geçerli bir APK değil</string>
     <string name="home_invalid_apk_io_error">Dosya açılamadı. Lütfen tekrar deneyin</string>
+    <string name="home_external_apk_expert_mode_required">Bu özellik yalnızca Uzman modunda kullanılabilir</string>
     <!-- Home Screen - Dialog 4: Expert Mode Dialog -->
     <string name="expert_mode_title">Uzman modu</string>
     <string name="expert_mode_search">Yamaları ara</string>
     <string name="expert_mode_proceed">Yamalamaya başla</string>
     <string name="expert_mode_disable_all">Hepsini devre dışı bırak</string>
+    <string name="expert_mode_disable_all_done">Tüm yamalar devre dışı bırakıldı</string>
     <string name="expert_mode_enable_all">Hepsini etkinleştir</string>
+    <string name="expert_mode_enable_all_done">Tüm yamalar etkinleştirildi</string>
     <string name="expert_mode_reset_to_default">Önerilen yamaları etkinleştir</string>
+    <string name="expert_mode_reset_to_default_done">Önerilen yamalar uygulandı</string>
     <string name="expert_mode_restore_saved">Kaydedilen seçimi geri yükle</string>
+    <string name="expert_mode_restore_saved_done">Kaydedilmiş seçim geri yüklendi</string>
     <string name="expert_mode_no_results">Yama bulunamadı</string>
     <string name="expert_mode_universal_patches">Evrensel yamalar</string>
     <string name="expert_mode_new_patches">Yeni</string>
@@ -185,38 +193,52 @@ En iyi sonuçlar için bu uygulama, &lt;b&gt;tam APK&lt;/b&gt; dosyasını yamal
     <string name="patch_option_enter_number">Sayı girin</string>
     <string name="patch_option_enter_decimal">Ondalık girin</string>
     <string name="patch_option_pick_folder">Klasör seçin</string>
+    <string name="patch_option_pick_file">Dosya seç</string>
     <string name="patch_option_list_duplicate">Bu değer zaten mevcut</string>
     <string name="patch_option_list_empty">Değer boş olamaz</string>
     <string name="patch_option_list_empty_state">Henüz hiçbir değer eklenmedi</string>
     <string name="patch_option_required_missing">%s: tüm gerekli seçenekleri doldurun</string>
     <!-- Adaptive Icon Creator -->
     <string name="adaptive_icon_create">Adaptif simge oluştur</string>
-    <string name="adaptive_icon_instructions">Bir ön plan görüntüsü seçin, arka plan rengini belirleyin, ardından kaydırıcıyı veya sıkıştırma hareketlerini kullanarak ön izlemeyi ayarlayın</string>
-    <string name="adaptive_icon_preview">Uyarlanabilir simge ön izlemesi</string>
-    <string name="adaptive_icon_preview_hint">En iyi sonuç için simgenizi ortadaki katı iç çemberin içinde tutun</string>
     <string name="adaptive_icon_select_image">Resim seç</string>
     <string name="adaptive_icon_change_image">Resmi değiştir</string>
     <string name="adaptive_icon_background_color">Arka plan rengi</string>
     <string name="adaptive_icon_reset_transform">Pozisyon ve ölçeği sıfırla</string>
     <string name="adaptive_icon_safe_zone_inner">Güvenli alan (her zaman görünür)</string>
     <string name="adaptive_icon_safe_zone_outer">Maske alanı (kırpılabilir)</string>
+    <string name="adaptive_icon_no_transparency_warning">Görüntüde şeffaf piksel bulunmuyor. Sonuç doğru görünmeyebilir</string>
     <string name="adaptive_icon_created_success">Adaptif simge başarıyla oluşturuldu</string>
     <string name="adaptive_icon_creation_failed">Adaptif simge oluşturulamadı</string>
-    <string name="adaptive_icon_folder_explanation">Oluşturulan simge dosyalarıyla \'%1$s/%2$s\' klasörünün nerede oluşturulacağını seçin</string>
-    <string name="notification_icon_preview">Bildirim simgesi ön izlemesi</string>
-    <string name="notification_icon_preview_hint">Yeniden boyutlandırmak için kaydırıcıyı kullanın. Yeniden konumlandırmak için sürükleyin</string>
+    <string name="adaptive_icon_label">Uyarlanabilir</string>
+    <string name="adaptive_icon_monochrome_label">Tek renk</string>
+    <string name="adaptive_icon_guide">Simge oluşturma rehberi</string>
+    <string name="adaptive_icon_guide_png_title">Şeffaf arka plana sahip bir PNG kullanın</string>
+    <string name="adaptive_icon_guide_png_body">Ön plan, şeffaf arka plana sahip bir PNG dosyası olmalıdır. Düz renkli bir arka plan yanlış görünecektir - arka plan rengi aşağıdaki arka plan seçiciden gelmelidir.</string>
+    <string name="adaptive_icon_guide_safe_zones_title">Güvenli bölgeler</string>
+    <string name="adaptive_icon_guide_safe_zones_body">"İç bölge (düz): içerik her zaman tüm launcher şekillerinde tamamen görünür.
+Dış bölge (kesikli): launcher maskesi tarafından kırpılabilir - önemli ayrıntıları iç bölgede tutun."</string>
+    <string name="adaptive_icon_guide_notification_title">Bildirim simgesi</string>
+    <string name="adaptive_icon_guide_notification_body">Ön plan görüntüsünden otomatik olarak oluşturulur. Boyutunu Bildirim kaydırıcısını kullanarak ayarlayın. Durum çubuğunda görünen tüm içerik beyaz görünür.</string>
+    <string name="adaptive_icon_guide_monochrome_title">Tek renkli simge</string>
+    <string name="adaptive_icon_guide_monochrome_body">Ön plan görüntüsünden aynı uyarlanabilir simge dönüşümleri kullanılarak otomatik olarak oluşturulur. Android 13 ve sonraki sürümlerde duvar kağıdının vurgu renginde görünür.</string>
+    <string name="notification_icon_preview">Bildirim</string>
     <!-- Header Creator -->
     <string name="header_creator_create">Özel başlık oluştur</string>
-    <string name="header_creator_instructions">Açık ve koyu temalar için görseller seçin, ardından yakınlaştırma/uzaklaştırma hareketleriyle ayarlamalar yapın</string>
     <string name="header_creator_light_theme">Açık tema başlığı</string>
     <string name="header_creator_dark_theme">Koyu tema başlığı</string>
     <string name="header_creator_no_image">Seçilen görüntü yok</string>
     <string name="header_creator_success">Başlık başarıyla oluşturuldu</string>
     <string name="header_creator_failed">Başlık oluşturulamadı</string>
-    <string name="header_creator_folder_explanation">Oluşturulan başlık dosyalarıyla \'%1$s/%2$s\' klasörünün nerede oluşturulacağını seçin</string>
+    <string name="header_creator_guide">Başlık oluşturma rehberi</string>
+    <string name="header_creator_guide_image_title">Görüntü gereksinimleri</string>
+    <string name="header_creator_guide_image_body">Herhangi bir görüntü dosyası (PNG veya JPEG) kullanın. En iyi sonuçlar için yaklaşık 2.7:1 en boy oranına sahip geniş formatlı bir görüntü kullanın. Şeffaf arka plana sahip PNG dosyaları uygulama temasıyla doğal olarak bütünleşecektir.</string>
+    <string name="header_creator_guide_themes_title">Açık ve koyu temalar</string>
+    <string name="header_creator_guide_themes_body">Çoğu uygulama, açık ve koyu temalar için ayrı görüntüler gerektirir. Bazı uygulamalar (YouTube Music gibi) yalnızca koyu temayı kullanır, bu nedenle yalnızca o bölüm gösterilir.</string>
+    <string name="header_creator_guide_positioning_title">Konumlandırma ve ölçeklendirme</string>
+    <string name="header_creator_guide_positioning_body">Görüntünüzü konumlandırmak ve ölçeklendirmek için ön izlemede doğrudan yakınlaştırma ve sürükleme hareketlerini kullanın. Görüntü merkeze yaklaştığında hizalama kılavuzları görünür. Ön izlemenin altındaki kaydırıcıyı da kullanabilirsiniz.</string>
     <!-- Home Screen - App Info Screen -->
     <string name="home_app_info_uninstall_app_confirmation">Bu uygulamayı kaldırmak istediğinizden emin misiniz?</string>
-    <string name="home_app_info_remove_app_warning">Bu aşağıdakileri kalıcı olarak silecektir:</string>
+    <string name="home_app_info_remove_app_warning">Bu, aşağıdakileri kalıcı olarak silecektir:</string>
     <string name="home_app_info_delete_item_database">Veri tabanı girişi</string>
     <string name="home_app_info_delete_item_patched_apk">Yamalanmış APK dosyası</string>
     <string name="home_app_info_delete_item_original_apk">Orijinal APK dosyası</string>
@@ -228,10 +250,8 @@ En iyi sonuçlar için bu uygulama, &lt;b&gt;tam APK&lt;/b&gt; dosyasını yamal
     <string name="home_app_info_original_package_name">Orijinal paket adı</string>
     <string name="home_app_info_applied_patches">Uygulanan yamalar</string>
     <string name="home_app_info_patch_source_used">Kullanılan yama kaynağı</string>
-    <string name="home_app_info_install_type">Yükleme türü</string>
     <string name="home_app_info_install_type_custom_installer">Özel yükleyici</string>
     <string name="home_app_info_install_type_system_installer">Sistem yükleyicisi</string>
-    <string name="home_app_info_patched_at">Yamalandı</string>
     <string name="home_app_info_patch_update_available">Yama paketi güncellemesi mevcut</string>
     <string name="home_app_info_patch_update_available_description">Daha yeni sürüm yamalar mevcut. En son iyileştirmeleri ve düzeltmeleri almak için uygulamayı yeniden yamalayın</string>
     <string name="home_app_info_app_deleted_warning">Uygulama kaldırıldı</string>
@@ -243,9 +263,9 @@ En iyi sonuçlar için bu uygulama, &lt;b&gt;tam APK&lt;/b&gt; dosyasını yamal
     <string name="root_pre_patch_installer_title">Yükleme yöntemini seçin</string>
     <string name="root_pre_patch_installer_description">Cihazınızın root erişimi var. Yamalanmış uygulamayı nasıl yüklemek istediğinizi seçin</string>
     <string name="root_pre_patch_installer_mount_title">Root ile Bağlama</string>
-    <string name="root_pre_patch_installer_mount_description">Yamalanmış APK\'yi stok uygulamaya bağlayın. GmsCore gerektirmez</string>
+    <string name="root_pre_patch_installer_mount_description">Yamalanmış APK\'yi stok uygulamaya bağlar. GmsCore gerektirmez</string>
     <string name="root_pre_patch_installer_standard_title">Standart Yükleme</string>
-    <string name="root_pre_patch_installer_standard_description">GmsCore desteğiyle ayrı bir uygulama olarak yükleyin. Yama işleminden sonra yükleyiciyi (Sistem yükleyicisi, Shizuku vb.) seçin</string>
+    <string name="root_pre_patch_installer_standard_description">GmsCore desteğiyle ayrı bir uygulama olarak yüklenir. Yamalamadan sonra bir yükleyici seçilebilir</string>
     <string name="root_pre_patch_installer_hint">Yükleme yöntemi, hangi yamaların dahil edileceğini belirler ve yama uygulandıktan sonra değiştirilemez</string>
     <!-- Patcher Screen -->
     <string name="patcher_error_copied">Hata panoya kopyalandı</string>
@@ -263,6 +283,11 @@ En iyi sonuçlar için bu uygulama, &lt;b&gt;tam APK&lt;/b&gt; dosyasını yamal
     <string name="patcher_unknown_error">Bilinmeyen bir hata oluştu</string>
     <string name="patcher_conflict_title">Paket çakışması</string>
     <string name="patcher_conflict_subtitle">Mevcut sürümü kaldırmanız gerekiyor</string>
+    <string name="patcher_conflict_hint">Yamalanmış uygulama, yüklü sürümden farklı bir sertifika kullanıyor. Kaldırma işlemi, tüm uygulama verilerini silecektir</string>
+    <string name="patcher_installed_conflict_title">Kaldırma gerekli</string>
+    <string name="patcher_installed_conflict_body">"Morphe, yamalanmış uygulamaları orijinalinden farklı olan kendi sertifikasıyla imzalar. Android, yamalanmış uygulamanın yüklenebilmesi için mevcut sürümün kaldırılmasını gerektirir.
+
+Kaldırma işlemi tüm uygulama verilerini kalıcı olarak silecektir"</string>
     <string name="patcher_install_error_title">Yükleme hatası</string>
     <string name="patcher_install_error_subtitle">Kaldırıp tekrar yüklemeyi deneyin</string>
     <string name="patcher_ready_to_install_subtitle">Yüklemek için aşağıdaki düğmeye basın</string>
@@ -288,6 +313,10 @@ En iyi sonuçlar için bu uygulama, &lt;b&gt;tam APK&lt;/b&gt; dosyasını yamal
     <string name="patcher_step_group_saving">Kaydediliyor</string>
     <string name="patcher_step_write_patched">Yamalanmış APK dosyası yazılıyor</string>
     <string name="patcher_step_sign_apk">Yamalanmış APK dosyası imzalanıyor</string>
+    <!-- Battery optimization pre-flight dialog -->
+    <string name="battery_optimization_dialog_title">Arka plan yama koruması</string>
+    <string name="battery_optimization_dialog_description">Bazı cihazlar, uygulama küçültüldüğünde patcher\'ı durdurabilir. Yamalamanın güvenilir bir şekilde tamamlanmasını sağlamak için Morphe\'nin pil kısıtlamaları olmadan çalışmasına izin verin</string>
+    <string name="battery_optimization_not_now">Şimdi değil</string>
     <!-- Patcher Screen - Patcher Worker -->
     <string name="patcher_notification_title">Yamalama devam ediyor…</string>
     <string name="patcher_notification_text">Patcher\'a dönmek için dokunun</string>
@@ -367,7 +396,7 @@ En iyi sonuçlar için bu uygulama, &lt;b&gt;tam APK&lt;/b&gt; dosyasını yamal
     <string name="settings_appearance_dynamic">Material You</string>
     <string name="settings_appearance_accent_color">Vurgu rengi</string>
     <string name="settings_appearance_pure_black">Saf Siyah</string>
-    <string name="settings_appearance_pure_black_description">Gerçek siyah arka planlar kullanın</string>
+    <string name="settings_appearance_pure_black_description">Gerçek siyah arka plan kullanır</string>
     <!-- Settings - Appearance Tab - Language Selector -->
     <string name="settings_appearance_app_language">Uygulama dili</string>
     <string name="settings_appearance_app_language_current">Mevcut dil</string>
@@ -390,13 +419,13 @@ En iyi sonuçlar için bu uygulama, &lt;b&gt;tam APK&lt;/b&gt; dosyasını yamal
     <string name="settings_appearance_app_icon_change_dialog_confirm">Simgeyi değiştir</string>
     <!-- Settings - Advanced Tab - Updates Section -->
     <string name="settings_advanced_updates">Güncellemeler</string>
-    <string name="settings_advanced_updates_use_prereleases">Ön sürüm Morphe kullan</string>
-    <string name="settings_advanced_updates_use_prereleases_description">Yeni Morphe özelliklerine erken erişim sağlayın. Ön sürüm yamaları almak için, her yama kaynağında ayrı ayrı ön sürüm seçeneğini etkinleştirin</string>
-    <string name="settings_advanced_updates_allow_metered">Mobil veri üzerinden güncelle</string>
-    <string name="settings_advanced_updates_allow_metered_description">Morphe ve yama güncellemelerinin mobil veri üzerinden indirilmesine izin verin</string>
+    <string name="settings_advanced_updates_use_prereleases">Ön sürüm güncellemeleri</string>
+    <string name="settings_advanced_updates_use_prereleases_description">Yeni Morphe uygulama sürümlerine erken erişim. Yama kaynaklarında her kaynak için ön sürümü etkinleştirin</string>
+    <string name="settings_advanced_updates_allow_metered">Mobil veri güncellemeleri</string>
+    <string name="settings_advanced_updates_allow_metered_description">Morphe ve yama güncellemelerinin mobil veri üzerinden indirilmesine izin verir</string>
     <string name="settings_advanced_updates_background_notifications">Arka plan güncelleme bildirimleri</string>
     <string name="settings_advanced_updates_background_notifications_description">Arka planda düzenli aralıklarla güncellemeleri kontrol edin ve güncellemeler mevcut olduğunda bildirim gönderin</string>
-    <string name="settings_advanced_updates_background_notifications_description_fcm">Uygulama kapalıyken bile yeni sürümler için anında bildirim alın</string>
+    <string name="settings_advanced_updates_background_notifications_description_fcm">Uygulama kapalıyken bile yeni sürümler için anlık bildirim alın</string>
     <string name="settings_advanced_update_interval">Güncelleme sıklığı</string>
     <string name="settings_advanced_update_interval_dialog_title">Güncellemeyi kontrol et</string>
     <string name="settings_advanced_update_interval_hourly">Saatte bir</string>
@@ -420,12 +449,11 @@ En iyi sonuçlar için bu uygulama, &lt;b&gt;tam APK&lt;/b&gt; dosyasını yamal
     <!-- Settings - Advanced Tab - Expert settings Section -->
     <string name="settings_advanced_expert">Uzman ayarları</string>
     <string name="settings_advanced_expert_mode">Uzman modu</string>
-    <string name="settings_advanced_expert_mode_description">Gelişmiş Morphe yama ayarlarını ve özelleştirme seçeneklerini etkinleştirin</string>
+    <string name="settings_advanced_expert_mode_description">Gelişmiş Morphe yama ayarları ve özelleştirme seçeneklerini etkinleştirir</string>
     <string name="settings_advanced_expert_mode_dialog_title">Uzman modu etkinleştirilsin mi?</string>
     <string name="settings_advanced_expert_mode_dialog_message">Uzman modu yamaların nasıl uygulanacağı konusunda daha fazla kontrol sağlar, ancak uzman modunda ayarların yanlış yapılandırılması işlevsiz bir uygulamayla sonuçlanabilir</string>
     <string name="settings_advanced_strip_unused_libs">Cihaz mimarisi için optimize et</string>
-    <string name="settings_advanced_strip_unused_libs_description">"Birleştirme sırasında desteklenmeyen CPU mimarileri, diller ve ekran yoğunluklarının bölünmüş APK modüllerini atlar.
-Basit APK'ler için, yamalamadan sonra desteklenmeyen mimarilere ait yerel kütüphaneleri temizler"</string>
+    <string name="settings_advanced_strip_unused_libs_description">Kullanılmayan CPU mimarisi kitaplıklarını ve bölünmüş APK modüllerini kaldırır</string>
     <!-- Bytecode mode -->
     <string name="settings_advanced_bytecode_mode">Bayt kodu işleme modu</string>
     <string name="settings_advanced_bytecode_mode_dialog_description">Yamalama sırasında bayt kodunun nasıl işleneceğini kontrol eder. Yama hızını, bellek kullanımını ve çıktı APK boyutunu etkiler</string>
@@ -433,7 +461,7 @@ Basit APK'ler için, yamalamadan sonra desteklenmeyen mimarilere ait yerel küt�
     <string name="settings_advanced_bytecode_mode_strip_fast">Hızlı</string>
     <string name="settings_advanced_bytecode_mode_strip_fast_description">Daha büyük bir APK pahasına daha hızlı yamalama ve daha düşük bellek kullanımı. Düşük RAM\'li veya eski cihazlar için önerilir</string>
     <string name="settings_advanced_bytecode_mode_full">Tam</string>
-    <string name="settings_advanced_bytecode_mode_full_description">Daha yavaş yamalama, eski davranışı tekrarlar. Yalnızca hızlı mod sorunlara neden olursa kullanın</string>
+    <string name="settings_advanced_bytecode_mode_full_description">Daha yavaş yamalama, eski davranışı tekrarlar. Yalnızca hızlı modun sorunlara yol açması durumunda önerilir</string>
     <!-- Settings - Advanced Tab - GitHub PAT Settings -->
     <string name="settings_advanced_github_pat">GitHub PAT</string>
     <string name="settings_advanced_github_pat_description">Çekme isteği kaynakları için gereklidir</string>
@@ -451,7 +479,7 @@ Basit APK'ler için, yamalamadan sonra desteklenmeyen mimarilere ait yerel küt�
     <string name="settings_advanced_patch_options_expert_mode_notice">Uzman modunda yama seçenekleri yama işlemi sırasında kullanılabilir olacaktır</string>
     <!-- Settings - Advanced Tab - Patch Options Section: Theme Colors -->
     <string name="settings_advanced_patch_options_theme_colors">Uygulama tema renkleri</string>
-    <string name="settings_advanced_patch_options_theme_colors_description">Arka plan rengini değiştir</string>
+    <string name="settings_advanced_patch_options_theme_colors_description">Arka plan rengini değiştirir</string>
     <string name="settings_advanced_patch_options_dark_theme_color">Koyu tema arka plan rengi</string>
     <string name="settings_advanced_patch_options_light_theme_color">Açık tema arka plan rengi</string>
     <string name="settings_advanced_patch_options_theme_color_description">Hex rengi (#RRGGBB) veya renk kaynağı referansı olabilir</string>
@@ -461,7 +489,7 @@ Basit APK'ler için, yamalamadan sonra desteklenmeyen mimarilere ait yerel küt�
     <string name="settings_advanced_patch_options_no_available">Bu yamaya ait hiçbir seçenek yok</string>
     <!-- Settings - Advanced Tab - Patch Options Section: Custom Branding -->
     <string name="settings_advanced_patch_options_custom_branding">Özel marka</string>
-    <string name="settings_advanced_patch_options_custom_branding_description">Görüntülenen uygulama adını değiştir</string>
+    <string name="settings_advanced_patch_options_custom_branding_description">Görüntülenen uygulama adını değiştirir</string>
     <string name="settings_advanced_patch_options_custom_branding_app_name">Uygulama adı</string>
     <string name="settings_advanced_patch_options_custom_branding_app_name_hint">Özel ad girin</string>
     <string name="settings_advanced_patch_options_custom_branding_custom_icon">Özel filtre</string>
@@ -499,7 +527,7 @@ morphe_adaptive_monochrome_custom.xml
   drawable-xxxhdpi/morphe_notification_icon_custom.png (96x96 px)"</string>
     <!-- Settings - Advanced Tab - Patch Options Section: Custom Header -->
     <string name="settings_advanced_patch_options_custom_header">Özel başlık logosu</string>
-    <string name="settings_advanced_patch_options_custom_header_description">Başlık logosunu değiştir</string>
+    <string name="settings_advanced_patch_options_custom_header_description">Başlık logosunu değiştirir</string>
     <string name="settings_advanced_patch_options_custom_header_instruction">"Özel başlık logosu olarak kullanılacak resimlerin bulunduğu klasör.
 
 Klasör, cihazın DPI değerine bağlı olarak aşağıdaki klasörlerden birini veya daha fazlasını içermelidir:
@@ -520,17 +548,17 @@ Resim boyutları şu şekilde olmalıdır:
     <!-- Settings - Advanced Tab - Patch Options Section: Hide Shorts -->
     <string name="settings_advanced_patch_options_hide_shorts_features">Shorts özelliklerini gizle</string>
     <string name="settings_advanced_patch_options_hide_shorts_app_shortcut">Shorts uygulama kısayolunu gizle</string>
-    <string name="settings_advanced_patch_options_hide_shorts_app_shortcut_description">Launcher uzun basma menüsünden Shorts\'u kaldır</string>
+    <string name="settings_advanced_patch_options_hide_shorts_app_shortcut_description">Launcher uzun basma menüsünden Shorts\'u kaldırır</string>
     <string name="settings_advanced_patch_options_hide_shorts_widget">Shorts widget\'ını gizle</string>
-    <string name="settings_advanced_patch_options_hide_shorts_widget_description">Launcher widget\'ından Shorts düğmesini kaldır</string>
+    <string name="settings_advanced_patch_options_hide_shorts_widget_description">Launcher widget\'ından Shorts düğmesini kaldırır</string>
     <!-- Settings - System Tab - Installer Section -->
     <string name="installer">Yükleyici</string>
     <string name="installer_title">Yükleyici seçin</string>
     <string name="installer_internal_name">Sistem yükleyicisi</string>
-    <string name="installer_internal_description">Android paket yükleyicisini kullanın</string>
+    <string name="installer_internal_description">Android paket yükleyicisini kullanır</string>
     <string name="installer_auto_saved_name">Rootlu bağlama yükleyicisi</string>
     <string name="installer_auto_saved_description">Yamalanmış APK\'yi yüklü uygulamaya bağlar</string>
-    <string name="installer_shizuku_description">Shizuku veya Sui kullanarak sessiz modda yükleyin</string>
+    <string name="installer_shizuku_description">Shizuku veya Sui kullanılarak sessiz modda yüklenir</string>
     <string name="installer_option_none">Yedek yok</string>
     <string name="installer_none_description">Yedek yükleyici yapılandırılmamış</string>
     <string name="installer_status_requires_root">Root erişimi gerektirir</string>
@@ -551,53 +579,47 @@ Resim boyutları şu şekilde olmalıdır:
     <string name="installer_unavailable_message">Tercih ettiğiniz yükleyici (%s) şu anda kullanılamıyor. Sorunu çözüp tekrar deneyebilir veya standart yükleyiciyi kullanabilirsiniz</string>
     <string name="installer_unavailable_shizuku_hint">Shizuku\'nun çalıştığından ve ve bu uygulama için izin verildiğinden emin olun</string>
     <string name="installer_use_standard">Standardı kullan</string>
-    <string name="settings_prompt_installer_on_install">Yüklemede yükleyiciyi sor</string>
-    <string name="settings_prompt_installer_on_install_description">Yamalanmış bir uygulamayı her yüklediğinizde yükleyici seçim penceresini gösterin</string>
+    <string name="settings_prompt_installer_on_install">Yükleyici seçimi istemi</string>
+    <string name="settings_prompt_installer_on_install_description">Yamalanmış bir uygulama her yüklendiğinde yükleyici seçim penceresini gösterir</string>
     <!-- Settings - System Tab - Performance Section -->
+    <string name="settings_system_battery_optimization">Pil optimizasyonu</string>
+    <string name="settings_system_battery_optimization_description">Uygulama küçültüldüğünde patcher\'ı çalışır durumda tutar</string>
     <string name="settings_system_performance">Performans</string>
     <string name="settings_system_process_runtime">Çalışma süreci</string>
-    <string name="settings_system_process_runtime_description">Daha iyi istikrar için yamalamayı ayrı bir süreçte gerçekleştirin</string>
+    <string name="settings_system_process_runtime_description">Daha iyi istikrar için yamalamayı ayrı bir süreçte gerçekleştirir</string>
     <string name="settings_system_process_runtime_memory_limit">Bellek limiti</string>
-    <string name="settings_system_process_runtime_memory_limit_description">Daha yüksek bellek limiti yamalamayı hızlandırabilir ancak eski cihazlarda çalışmayabilir</string>
+    <string name="settings_system_process_runtime_memory_limit_description">Daha yüksek limitler, uygun cihazlarda yamalamayı hızlandırır</string>
     <string name="settings_system_process_runtime_enable">Çalışma sürecini etkinleştir</string>
     <string name="settings_system_memory_limit_subtitle">Yamalama için kullanılabilir bellek</string>
     <string name="settings_system_memory_limit_warning">Düşük bellek limiti, daha büyük uygulamaları yamalarken hatalara neden olabilir</string>
     <string name="settings_system_process_runtime_enabled_description">%s MB limit</string>
     <string name="settings_system_process_runtime_disabled_description">Yapılandırmak için tıklayın</string>
     <string name="settings_system_process_runtime_description_not_available">Bu özellik Android 11 veya daha yüksek bir sürüm gerektirir</string>
-    <!-- Settings - System Tab - Import and export keystore -->
+    <!-- Settings - System Tab - Import and Export Section -->
     <string name="settings_system_import_export">İçe &amp; dışa aktar</string>
-    <string name="settings_system_import_keystore">Anahtar deposunu içe aktar</string>
-    <string name="settings_system_import_keystore_description">Özelleştirilmiş anahtar deposunu içe aktar</string>
+    <string name="settings_system_keystore">Anahtar deposu</string>
+    <string name="settings_system_import_keystore_description">İmzalama anahtar deponuzu içe aktarır ya da dışa aktarır</string>
     <string name="settings_system_import_keystore_dialog_title">Anahtar deposu kimlik bilgilerini girin</string>
     <string name="settings_system_import_keystore_dialog_description">İçe aktarmak için anahtar deposu kimlik bilgilerini girmeniz gerekecek</string>
     <string name="settings_system_import_keystore_dialog_alias_field">Kullanıcı Adı (Takma Ad)</string>
     <string name="settings_system_import_keystore_dialog_password_field">Parola</string>
-    <string name="settings_system_import_keystore_dialog_button">İçe aktar</string>
     <string name="settings_system_import_keystore_dialog_format_field">Anahtar deposu formatı</string>
     <string name="settings_system_import_keystore_wrong_credentials">Yanlış anahtar deposu kimlik bilgileri</string>
     <string name="settings_system_import_keystore_success">Anahtar deposu içe aktarıldı</string>
     <string name="settings_system_import_keystore_failed">Anahtar deposu içe aktarılamadı</string>
-    <string name="settings_system_export_keystore">Anahtar deposunu dışa aktar</string>
-    <string name="settings_system_export_keystore_description">Geçerli anahtar deposunu dışa aktar</string>
     <string name="settings_system_export_keystore_unavailable">Dışa aktarılacak anahtar deposu yok</string>
     <string name="settings_system_export_keystore_success">Anahtar deposu dışa aktarıldı</string>
     <string name="settings_system_export_keystore_failed">Anahtar deposu dışa aktarılamadı</string>
     <string name="settings_system_show_password_field">Parolayı göster</string>
     <string name="settings_system_hide_password_field">Parolayı gizle</string>
-    <!-- Settings - System Tab - Import and Export Manager Settings -->
-    <string name="settings_system_import_manager_settings">Morphe ayarlarını içe aktar</string>
-    <string name="settings_system_import_manager_settings_description">Morphe ayarlarını bir JSON dosyasından geri yükle</string>
+    <string name="settings_system_morphe_settings">Morphe ayarları</string>
+    <string name="settings_system_import_manager_settings_description">Morphe ayarlarınızı yedekler ve geri yükler</string>
     <string name="settings_system_import_manager_settings_fail">Morphe ayarları içe aktarılamadı: %s</string>
     <string name="settings_system_import_manager_settings_success">Morphe ayarları içe aktarıldı</string>
-    <string name="settings_system_export_manager_settings">Morphe ayarlarını dışa aktar</string>
-    <string name="settings_system_export_manager_settings_description">Morphe ayarlarını bir JSON dosyasına kaydet</string>
     <string name="settings_system_export_manager_settings_fail">Morphe ayarları dışa aktarılamadı: %s</string>
     <string name="settings_system_export_manager_settings_success">Morphe ayarları dışa aktarıldı</string>
-    <!-- Settings - System Tab - Debug Section -->
     <string name="settings_system_debug">Hata ayıklama</string>
-    <string name="settings_system_export_debug_logs">Hata ayıklama kayıtlarını dışa aktar</string>
-    <string name="settings_system_export_debug_logs_description">Hata ayıklama için sistem günlüklerini kaydet</string>
+    <string name="settings_system_export_debug_logs_description">Sorun gidermek için sistem günlüklerini kaydeder</string>
     <string name="settings_system_export_debug_logs_export_read_failed">Günlükler okunamadı (çıkış kodu %s)</string>
     <string name="settings_system_export_debug_logs_export_failed">Kayıtlar dışa aktarılamadı</string>
     <string name="settings_system_export_debug_logs_export_success">Günlükler dışa aktarıldı</string>
@@ -606,21 +628,21 @@ Resim boyutları şu şekilde olmalıdır:
     <string name="settings_system_apks_size">Toplam boyut: %s</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Yamalanmış APK\'ler</string>
-    <string name="settings_system_patched_apks_description">Kayıtlı yamalanmış uygulama dosyalarını yönet</string>
+    <string name="settings_system_patched_apks_description">Kayıtlı yamalanmış uygulama dosyalarını yönetir</string>
     <string name="settings_system_patched_apks_empty">Henüz hiç yamalanmış APK kaydedilmedi</string>
     <string name="settings_system_patched_apks_delete_title">Yamalanmış APK silinsin mi?</string>
     <string name="settings_system_patched_apks_delete_confirm">%s için kaydedilen yamalanmış APK\'yi silmek istediğinizden emin misiniz?</string>
     <string name="settings_system_patched_apks_deleted">Yamalanmış APK başarıyla silindi</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Orijinal APK\'ler</string>
-    <string name="settings_system_original_apks_description">Yeniden yamalama için orijinal APK dosyaları kaydedilir. Her uygulama için yalnızca en son sürüm saklanır</string>
+    <string name="settings_system_original_apks_description">Yeniden yamalamak için kaydedildi. Her uygulama için bir sürüm tutulur</string>
     <string name="settings_system_original_apks_empty">Hiç orijinal APK saklanmıyor</string>
     <string name="settings_system_original_apks_deleted">Orijinal APK başarıyla silindi</string>
     <string name="settings_system_original_apks_delete_title">Orijinal APK silinsin mi?</string>
     <string name="settings_system_original_apks_delete_confirm">%s için orijinal APK silinsin mi? Yeni bir APK sağlamadan yeniden yama yapamazsınız</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">Yama seçenekleri</string>
-    <string name="settings_system_patch_selections_description">Kayıtlı yama seçeneklerini yönetin. Bunlar uygulamanın kaldırılmasından sonra da kalır</string>
+    <string name="settings_system_patch_selections_description">Kayıtlı yama seçimleri, kaldırıldıktan sonra saklanır</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">Tüm seçimler sıfırlansın mı?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">Paket seçimleri sıfırlansın mı?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">Kaynak seçimi sıfırlansın mı?</string>
@@ -643,8 +665,8 @@ Resim boyutları şu şekilde olmalıdır:
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">Hakkında</string>
     <string name="settings_system_share_website">Web sitesini paylaş</string>
-    <string name="settings_system_share_website_description">Morphe resmi web sitesini paylaş</string>
-    <string name="settings_system_manager_description">"Popüler Android uygulamalarının modern ve verimli şekilde yamalanmasını sağlayan, topluluk geri bildirimleri ve katkılarıyla geliştirilen açık kaynaklı bir proje"</string>
+    <string name="settings_system_share_website_description">Resmi Morphe web sitesini paylaşır</string>
+    <string name="settings_system_manager_description">Popüler Android uygulamalarının modern ve verimli şekilde yamalanmasını sağlayan, topluluk geri bildirimleri ve katkılarıyla geliştirilen açık kaynaklı bir proje</string>
     <string name="credits">Takdir</string>
     <string name="credits_current_development">Mevcut geliştirme</string>
     <string name="credits_prior_development">Önceki geliştirme</string>
@@ -680,6 +702,10 @@ Resim boyutları şu şekilde olmalıdır:
     <string name="disabled">Devre dışı</string>
     <string name="selected">Seçildi</string>
     <string name="not_selected">Seçilmedi</string>
+    <string name="select_all">Tümünü seç</string>
+    <string name="select_all_done">Hepsi seçildi</string>
+    <string name="deselect_all">Hepsini kaldır</string>
+    <string name="deselect_all_done">Hepsinin seçimi kaldırıldı</string>
     <string name="rename">Yeniden adlandır</string>
     <string name="import_">İçe aktar</string>
     <string name="export">Dışa aktar</string>
@@ -700,6 +726,7 @@ Resim boyutları şu şekilde olmalıdır:
     <string name="unmount">Bağlamayı kaldır</string>
     <string name="unmounted">Bağlama kaldırıldı</string>
     <string name="remount">Yeniden bağla</string>
+    <string name="share">Paylaş</string>
     <string name="install">Yükle</string>
     <string name="installed">Yüklü</string>
     <string name="reinstall">Yeniden yükle</string>
@@ -740,9 +767,4 @@ Resim boyutları şu şekilde olmalıdır:
 
 Devam etmek istiyor musunuz?"</string>
     <string name="download_update_confirmation">Güncelleme indirilsin mi?</string>
-    <string name="just_now">Az önce</string>
-    <string name="minutes_ago">%sdk önce</string>
-    <string name="hours_ago">%ssa önce</string>
-    <string name="days_ago">%sg önce</string>
-    <string name="invalid_date">Geçersiz tarih</string>
 </resources>

@@ -45,11 +45,6 @@
         <item quantity="few">Odabrano je %s od  patcheva</item>
         <item quantity="other">Odabrano je %s od  patcheva</item>
     </plurals>
-    <plurals name="home_app_show_selected">
-        <item quantity="one">Prikaži %s aplikaciju</item>
-        <item quantity="few">Prikaži %s apliakcija</item>
-        <item quantity="other">Prikaži %s apliakcija</item>
-    </plurals>
     <plurals name="home_app_show_hidden_count">
         <item quantity="one">%s skrivena aplikacija</item>
         <item quantity="few">%s skrivenih aplikacija</item>

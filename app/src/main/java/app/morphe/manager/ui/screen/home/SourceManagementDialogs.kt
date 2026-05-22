@@ -13,6 +13,7 @@ import androidx.compose.animation.*
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -104,7 +105,7 @@ fun AddSourceDialog(
     ) {
         Column(
             modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.spacedBy(16.dp)
+            verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ContentPadding)
         ) {
             // Type selector cards
             Row(
@@ -126,7 +127,7 @@ fun AddSourceDialog(
                             MaterialTheme.colorScheme.surfaceVariant
                         else
                             Color.Transparent,
-                        border = androidx.compose.foundation.BorderStroke(
+                        border = BorderStroke(
                             width = if (isSelected) 1.5.dp else 0.5.dp,
                             color = if (isSelected)
                                 LocalDialogTextColor.current.copy(alpha = 0.5f)
@@ -139,10 +140,8 @@ fun AddSourceDialog(
                             horizontalAlignment = Alignment.CenterHorizontally,
                             verticalArrangement = Arrangement.spacedBy(8.dp)
                         ) {
-                            Icon(
-                                imageVector = icon,
-                                contentDescription = null,
-                                modifier = Modifier.size(24.dp),
+                            MorpheIcon(
+                                icon = icon,
                                 tint = if (isSelected)
                                     LocalDialogTextColor.current
                                 else
@@ -165,9 +164,7 @@ fun AddSourceDialog(
             // Tab content
             AnimatedContent(
                 targetState = selectedTab,
-                transitionSpec = {
-                    MorpheAnimations.fadeIn.togetherWith(MorpheAnimations.fadeOut)
-                }
+                transitionSpec = MorpheAnimations.fadeCrossfade()
             ) { tab ->
                 when (tab) {
                     0 -> RemoteTabContent(
@@ -317,7 +314,7 @@ private fun LocalTabContent(
                     .clickable { onPickFile() },
                 shape = RoundedCornerShape(16.dp),
                 color = Color.Transparent,
-                border = androidx.compose.foundation.BorderStroke(
+                border = BorderStroke(
                     1.dp, textColor.copy(alpha = 0.15f)
                 )
             ) {
@@ -410,6 +407,9 @@ private fun LocalTabContent(
     }
 }
 
+/**
+ * Dialog for confirming bundle deletion.
+ */
 @Composable
 fun BundleDeleteConfirmDialog(
     bundle: PatchBundleSource,
@@ -479,7 +479,7 @@ fun RenameBundleDialog(
         Column(
             modifier = Modifier.fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(16.dp)
+            verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ContentPadding)
         ) {
             Text(
                 text = stringResource(R.string.sources_dialog_rename),
@@ -498,9 +498,8 @@ fun RenameBundleDialog(
                     )
                 },
                 leadingIcon = {
-                    Icon(
-                        imageVector = Icons.Outlined.Edit,
-                        contentDescription = null,
+                    MorpheIcon(
+                        icon = Icons.Outlined.Edit,
                         tint = secondaryColor
                     )
                 },
@@ -821,8 +820,8 @@ fun BundlePatchesDialog(
                         } else null,
                         accentColor = accentColor,
                         modifier = Modifier.animateItem(
-                            fadeInSpec = tween(220),
-                            fadeOutSpec = tween(180),
+                            fadeInSpec = tween(MorpheDefaults.ANIMATION_DURATION),
+                            fadeOutSpec = tween(MorpheDefaults.ANIMATION_DURATION_SHORT),
                             placementSpec = spring(stiffness = 400f, dampingRatio = 0.8f)
                         )
                     )
@@ -916,7 +915,7 @@ fun PatchItemCard(
 
     val rotationAngle by animateFloatAsState(
         targetValue = if (expandOptions) 180f else 0f,
-        animationSpec = tween(300),
+        animationSpec = tween(MorpheDefaults.ANIMATION_DURATION),
         label = "expand_rotation"
     )
 
@@ -950,8 +949,8 @@ fun PatchItemCard(
         color = cardColor ?: MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f)
     ) {
         Column(
-            modifier = Modifier.padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp),
+            modifier = Modifier.padding(MorpheDefaults.ContentPadding),
+            verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ItemSpacing),
         ) {
             // Header
             Row(
@@ -968,16 +967,14 @@ fun PatchItemCard(
                 )
 
                 if (!patch.options.isNullOrEmpty()) {
-                    Icon(
-                        imageVector = Icons.Outlined.ExpandMore,
+                    MorpheIcon(
+                        icon = Icons.Outlined.ExpandMore,
                         contentDescription = if (expandOptions)
                             stringResource(R.string.collapse)
                         else
                             stringResource(R.string.expand),
                         tint = MaterialTheme.colorScheme.primary,
-                        modifier = Modifier
-                            .size(24.dp)
-                            .rotate(rotationAngle)
+                        modifier = Modifier.rotate(rotationAngle)
                     )
                 }
             }
@@ -1252,15 +1249,22 @@ fun BundleChangelogDialog(
             }
         }
     ) {
-        when (val current = state) {
-            BundleChangelogState.Loading -> ChangelogSectionLoading()
-            is BundleChangelogState.Error -> BundleChangelogError(error = current.throwable)
-            is BundleChangelogState.Entries -> ChangelogEntriesList(
-                entries = current.entries,
-                headerIcon = Icons.Outlined.History,
-                emptyText = stringResource(R.string.changelog_empty),
-                textColor = LocalDialogTextColor.current
-            )
+        AnimatedContent(
+            targetState = state,
+            transitionSpec = MorpheAnimations.fadeCrossfade(),
+            contentKey = { it::class },
+            label = "changelog_content"
+        ) { current ->
+            when (current) {
+                BundleChangelogState.Loading -> ChangelogSectionLoading()
+                is BundleChangelogState.Error -> BundleChangelogError(error = current.throwable)
+                is BundleChangelogState.Entries -> ChangelogEntriesList(
+                    entries = current.entries,
+                    headerIcon = Icons.Outlined.History,
+                    emptyText = stringResource(R.string.changelog_empty),
+                    textColor = LocalDialogTextColor.current
+                )
+            }
         }
     }
 }

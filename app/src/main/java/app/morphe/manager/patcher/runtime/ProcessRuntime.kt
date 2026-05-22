@@ -111,7 +111,7 @@ class ProcessRuntime(
         selectedPatches: PatchSelection,
         options: Options,
         logger: Logger,
-        onPatchCompleted: suspend () -> Unit,
+        onPatchCompleted: suspend (String) -> Unit,
         onProgress: ProgressEventHandler,
         skipUnneededSplits: Boolean,
         onMergedApkReady: (suspend (File) -> Unit)?,
@@ -138,7 +138,7 @@ class ProcessRuntime(
                 return@coroutineScope
             } catch (e: Exception) {
                 val isMemoryFailure = when (e) {
-                    is ProcessExitException -> e.exitCode == OOM_EXIT_CODE || e.exitCode == SIGKILL_EXIT_CODE
+                    is ProcessExitException -> e.exitCode == OOM_EXIT_CODE || e.exitCode == SIGKILL_EXIT_CODE || e.exitCode == SIGSEGV_EXIT_CODE
                     is RemoteFailureException -> e.originalStackTrace.contains("OutOfMemoryError", ignoreCase = true)
                     else -> false
                 }
@@ -162,7 +162,7 @@ class ProcessRuntime(
         options: Options,
         skipUnneededSplits: Boolean,
         logger: Logger,
-        onPatchCompleted: suspend () -> Unit,
+        onPatchCompleted: suspend (String) -> Unit,
         onProgress: ProgressEventHandler,
         onMergedApkReady: (suspend (File) -> Unit)?,
     ) = coroutineScope {
@@ -230,8 +230,8 @@ class ProcessRuntime(
             val eventHandler = object : IPatcherEvents.Stub() {
                 override fun log(level: String, msg: String) = logger.log(enumValueOf(level), msg)
 
-                override fun patchSucceeded() {
-                    scope.launch { onPatchCompleted() }
+                override fun patchSucceeded(patchName: String) {
+                    scope.launch { onPatchCompleted(patchName) }
                 }
 
                 override fun progress(name: String?, state: String?, msg: String?) =
@@ -290,12 +290,13 @@ class ProcessRuntime(
         private const val APP_PROCESS_BIN_PATH_32 = "/system/bin/app_process32"
         const val OOM_EXIT_CODE = 134
         const val SIGKILL_EXIT_CODE = 137
+        const val SIGSEGV_EXIT_CODE = 139
 
         const val CONNECT_TO_APP_ACTION = "CONNECT_TO_APP_ACTION"
         const val INTENT_BUNDLE_KEY = "BUNDLE"
         const val BUNDLE_BINDER_KEY = "BINDER"
 
-        private fun resolvePropOverride(context: Context) = findLibrary(context, "prop_override")
+        private fun resolvePropOverride(context: Context) = findPropOverrideLibrary(context)
         private fun resolveAppProcessBin(context: Context): String {
             val is64Bit = context.applicationInfo.nativeLibraryDir.contains("64")
             val preferred = if (is64Bit) APP_PROCESS_BIN_PATH_64 else APP_PROCESS_BIN_PATH_32

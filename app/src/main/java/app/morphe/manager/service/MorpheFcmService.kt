@@ -18,12 +18,12 @@ import org.koin.android.ext.android.inject
  *
  * High-priority FCM messages (sent with `"android": { "priority": "high" }`) are
  * delivered by Google Play Services even when the device is in Doze mode or the
- * app process is dead — unlike WorkManager, which can be suppressed by aggressive
- * vendor battery optimisations (Xiaomi, Huawei, Samsung, OnePlus, etc.).
+ * app process is dead - unlike WorkManager, which can be suppressed by aggressive
+ * vendor battery optimizations (Xiaomi, Huawei, Samsung, OnePlus, etc.).
  *
  * ## Four-topic model
  *
- * Manager and patches topics are independent — each has its own stable/dev pair:
+ * Manager and patches topics are independent - each has its own stable/dev pair:
  *
  * | Topic                        | Audience                                              |
  * |------------------------------|-------------------------------------------------------|
@@ -34,7 +34,7 @@ import org.koin.android.ext.android.inject
  * | *(none)*                     | Notifications OFF                                     |
  *
  * A device with a dev manager build and prereleases OFF subscribes to **both**
- * `morphe_updates` and `morphe_updates_dev` — a stable release (e.g. `1.5.0`) is
+ * `morphe_updates` and `morphe_updates_dev` - a stable release (e.g. `1.5.0`) is
  * a valid upgrade from a dev build (e.g. `1.5.0-dev.1`).
  *
  * The patches topic is determined solely by the "Use prereleases" preference,

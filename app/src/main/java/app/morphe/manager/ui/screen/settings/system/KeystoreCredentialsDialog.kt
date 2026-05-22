@@ -22,7 +22,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.dp
 import app.morphe.manager.R
 import app.morphe.manager.ui.screen.shared.*
 import app.morphe.manager.util.KeystoreInputFormat
@@ -46,7 +45,7 @@ fun KeystoreCredentialsDialog(
         title = stringResource(R.string.settings_system_import_keystore_dialog_title),
         footer = {
             MorpheDialogButtonRow(
-                primaryText = stringResource(R.string.settings_system_import_keystore_dialog_button),
+                primaryText = stringResource(R.string.import_),
                 onPrimaryClick = { onSubmit(alias, pass, format) },
                 secondaryText = stringResource(android.R.string.cancel),
                 onSecondaryClick = onDismiss
@@ -58,7 +57,7 @@ fun KeystoreCredentialsDialog(
 
         Column(
             modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.spacedBy(16.dp)
+            verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ContentPadding)
         ) {
             Text(
                 text = stringResource(R.string.settings_system_import_keystore_dialog_description),

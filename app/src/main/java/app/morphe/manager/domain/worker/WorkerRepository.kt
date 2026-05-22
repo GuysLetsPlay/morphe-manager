@@ -24,13 +24,13 @@ class WorkerRepository(app: Application) {
         return data as A
     }
 
-    inline fun <reified W : Worker<A>, A : Any> launchExpedited(name: String, input: A): UUID {
+    inline fun <reified W : Worker<A>, A : Any> launchExpedited(input: A): UUID {
         val request =
             OneTimeWorkRequest.Builder(W::class.java) // create Worker
                 .setExpedited(OutOfQuotaPolicy.RUN_AS_NON_EXPEDITED_WORK_REQUEST)
                 .build()
         workerInputs[request.id] = input
-        workManager.enqueueUniqueWork(name, ExistingWorkPolicy.REPLACE, request)
+        workManager.enqueueUniqueWork(W::class.java.simpleName, ExistingWorkPolicy.REPLACE, request)
         return request.id
     }
 }

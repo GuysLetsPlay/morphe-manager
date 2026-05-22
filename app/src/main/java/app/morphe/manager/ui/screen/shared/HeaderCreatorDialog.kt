@@ -27,6 +27,7 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.PathEffect
 import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.input.pointer.PointerEventPass
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
@@ -116,12 +117,10 @@ fun HeaderCreatorDialog(
     var darkOffsetY by remember { mutableFloatStateOf(0f) }
 
     val context = LocalContext.current
-    val selectImageTitle = stringResource(R.string.adaptive_icon_select_image)
 
     // Light header image picker
     val openLightHeaderPicker = rememberAdaptiveFilePicker(
-        mimeTypes = arrayOf("image/*"),
-        chooserTitle = selectImageTitle
+        mimeTypes = arrayOf("image/*")
     ) { uri ->
         uri?.let {
             lightHeaderUri = it
@@ -148,8 +147,7 @@ fun HeaderCreatorDialog(
 
     // Dark header image picker
     val openDarkHeaderPicker = rememberAdaptiveFilePicker(
-        mimeTypes = arrayOf("image/*"),
-        chooserTitle = selectImageTitle
+        mimeTypes = arrayOf("image/*")
     ) { uri ->
         uri?.let {
             darkHeaderUri = it
@@ -181,8 +179,11 @@ fun HeaderCreatorDialog(
     // Whether all required images are provided
     val canCreate = darkHeaderBitmap != null && (!showLightVariant || lightHeaderBitmap != null)
 
+    var isCreating by remember { mutableStateOf(false) }
+
     val openFolderPicker = rememberFolderPicker { uri ->
         scope.launch(Dispatchers.IO) {
+            withContext(Dispatchers.Main) { isCreating = true }
             try {
                 val success = createHeaderFiles(
                     context = context,
@@ -190,8 +191,6 @@ fun HeaderCreatorDialog(
                     packageName = packageName,
                     lightHeaderBitmap = if (showLightVariant) lightHeaderBitmap else null,
                     darkHeaderBitmap = darkHeaderBitmap!!,
-                    lightFileName = HeaderConfig.LIGHT_HEADER_FILE_NAME,
-                    darkFileName = HeaderConfig.DARK_HEADER_FILE_NAME,
                     lightScale = lightScale,
                     lightOffsetX = lightOffsetX,
                     lightOffsetY = lightOffsetY,
@@ -200,6 +199,7 @@ fun HeaderCreatorDialog(
                     darkOffsetY = darkOffsetY
                 )
                 withContext(Dispatchers.Main) {
+                    isCreating = false
                     if (success != null) {
                         context.toast(successMessage)
                         onHeaderCreated(success)
@@ -210,92 +210,165 @@ fun HeaderCreatorDialog(
                 }
             } catch (e: Exception) {
                 withContext(Dispatchers.Main) {
+                    isCreating = false
                     context.toast("Failed to create header: ${e.message}")
                 }
             }
         }
     }
 
-    MorpheDialog(
-        onDismissRequest = onDismiss,
-        title = stringResource(R.string.header_creator_create),
-        compactPadding = false,
-        footer = {
-            Column(
-                modifier = Modifier.fillMaxWidth(),
-                verticalArrangement = Arrangement.spacedBy(8.dp)
-            ) {
-                // Explanation text
-                AnimatedVisibility(
-                    visible = canCreate,
-                    enter = MorpheAnimations.expandFadeEnter,
-                    exit = MorpheAnimations.shrinkFadeExit
-                ) {
-                    InfoBadge(
-                        text = stringResource(
-                            R.string.header_creator_folder_explanation,
-                            HeaderConfig.BRANDING_FOLDER_NAME,
-                            HeaderConfig.headerFolderName(packageName)
-                        ),
-                        style = InfoBadgeStyle.Primary,
-                        icon = Icons.Outlined.Info
-                    )
-                }
+    val showInfoDialog = remember { mutableStateOf(false) }
 
-                // Create button
-                MorpheDialogButton(
-                    text = stringResource(R.string.header_creator_create),
-                    onClick = { openFolderPicker() },
-                    enabled = canCreate,
-                    icon = Icons.Outlined.Save,
-                    modifier = Modifier.fillMaxWidth()
+    MorpheDialog(
+        onDismissRequest = { if (!isCreating) onDismiss() },
+        title = stringResource(R.string.header_creator_create),
+        titleTrailingContent = {
+            IconButton(onClick = { showInfoDialog.value = true }) {
+                Icon(
+                    imageVector = Icons.Outlined.Info,
+                    contentDescription = stringResource(R.string.header_creator_guide),
+                    modifier = Modifier.size(24.dp),
+                    tint = LocalDialogTextColor.current
                 )
             }
+        },
+        compactPadding = false,
+        footer = {
+            MorpheDialogButton(
+                text = stringResource(R.string.header_creator_create),
+                onClick = { openFolderPicker() },
+                enabled = canCreate && !isCreating,
+                icon = Icons.Outlined.Save,
+                modifier = Modifier.fillMaxWidth()
+            )
         }
     ) {
-        Column(
-            modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.spacedBy(16.dp)
-        ) {
-            // Instructions
-            InfoBadge(
-                text = stringResource(R.string.header_creator_instructions),
-                style = InfoBadgeStyle.Primary,
-                icon = Icons.Outlined.Info
-            )
+        Box(modifier = Modifier.fillMaxWidth()) {
+            Column(
+                modifier = Modifier.fillMaxWidth(),
+                verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ContentPadding)
+            ) {
+                // Light header section
+                if (showLightVariant) {
+                    Text(
+                        text = stringResource(R.string.header_creator_light_theme),
+                        style = MaterialTheme.typography.titleSmall,
+                        fontWeight = FontWeight.Bold,
+                        color = LocalDialogTextColor.current
+                    )
 
-            // Light header section
-            if (showLightVariant) {
+                    MorpheDialogOutlinedButton(
+                        text = if (lightHeaderUri == null)
+                            stringResource(R.string.adaptive_icon_select_image)
+                        else
+                            stringResource(R.string.adaptive_icon_change_image),
+                        onClick = { openLightHeaderPicker() },
+                        icon = Icons.Outlined.LightMode,
+                        modifier = Modifier.fillMaxWidth()
+                    )
+
+                    HeaderPreview(
+                        headerBitmap = lightHeaderBitmap,
+                        scale = lightScale,
+                        offsetX = lightOffsetX,
+                        offsetY = lightOffsetY,
+                        isDarkTheme = false,
+                        onScaleChange = { newScale ->
+                            lightScale = newScale.coerceIn(HeaderConfig.MIN_SCALE, HeaderConfig.MAX_SCALE)
+                        },
+                        onOffsetChange = { newOffsetX, newOffsetY ->
+                            lightOffsetX = newOffsetX.coerceIn(-HeaderConfig.MAX_OFFSET, HeaderConfig.MAX_OFFSET)
+                            lightOffsetY = newOffsetY.coerceIn(-HeaderConfig.MAX_OFFSET, HeaderConfig.MAX_OFFSET)
+                        }
+                    )
+
+                    if (lightHeaderBitmap != null) {
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(horizontal = 4.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                        ) {
+                            Icon(
+                                imageVector = Icons.Outlined.Image,
+                                contentDescription = null,
+                                modifier = Modifier.size(16.dp),
+                                tint = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                            Spacer(Modifier.width(8.dp))
+                            Slider(
+                                value = lightScale,
+                                onValueChange = { lightScale = it.coerceIn(HeaderConfig.MIN_SCALE, HeaderConfig.MAX_SCALE) },
+                                valueRange = HeaderConfig.MIN_SCALE..HeaderConfig.MAX_SCALE,
+                                modifier = Modifier.weight(1f)
+                            )
+                            Spacer(Modifier.width(8.dp))
+                            Icon(
+                                imageVector = Icons.Outlined.Image,
+                                contentDescription = null,
+                                modifier = Modifier.size(22.dp),
+                                tint = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                            AnimatedVisibility(visible = lightScale != 1f || lightOffsetX != 0f || lightOffsetY != 0f) {
+                                Row {
+                                    Spacer(Modifier.width(8.dp))
+                                    IconButton(
+                                        onClick = { lightScale = 1f; lightOffsetX = 0f; lightOffsetY = 0f },
+                                        modifier = Modifier.size(40.dp)
+                                    ) {
+                                        Icon(
+                                            imageVector = Icons.Outlined.RestartAlt,
+                                            contentDescription = null,
+                                            modifier = Modifier.size(24.dp)
+                                        )
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    HorizontalDivider()
+                }
+
+                // Dark header section
                 Text(
-                    text = stringResource(R.string.header_creator_light_theme),
+                    text = stringResource(R.string.header_creator_dark_theme),
                     style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.Bold,
                     color = LocalDialogTextColor.current
                 )
 
+                MorpheDialogOutlinedButton(
+                    text = if (darkHeaderUri == null)
+                        stringResource(R.string.adaptive_icon_select_image)
+                    else
+                        stringResource(R.string.adaptive_icon_change_image),
+                    onClick = { openDarkHeaderPicker() },
+                    icon = Icons.Outlined.DarkMode,
+                    modifier = Modifier.fillMaxWidth()
+                )
+
                 HeaderPreview(
-                    headerBitmap = lightHeaderBitmap,
-                    scale = lightScale,
-                    offsetX = lightOffsetX,
-                    offsetY = lightOffsetY,
-                    isDarkTheme = false,
+                    headerBitmap = darkHeaderBitmap,
+                    scale = darkScale,
+                    offsetX = darkOffsetX,
+                    offsetY = darkOffsetY,
+                    isDarkTheme = true,
                     onScaleChange = { newScale ->
-                        lightScale = newScale.coerceIn(HeaderConfig.MIN_SCALE, HeaderConfig.MAX_SCALE)
+                        darkScale = newScale.coerceIn(HeaderConfig.MIN_SCALE, HeaderConfig.MAX_SCALE)
                     },
                     onOffsetChange = { newOffsetX, newOffsetY ->
-                        lightOffsetX = newOffsetX.coerceIn(-HeaderConfig.MAX_OFFSET, HeaderConfig.MAX_OFFSET)
-                        lightOffsetY = newOffsetY.coerceIn(-HeaderConfig.MAX_OFFSET, HeaderConfig.MAX_OFFSET)
+                        darkOffsetX = newOffsetX.coerceIn(-HeaderConfig.MAX_OFFSET, HeaderConfig.MAX_OFFSET)
+                        darkOffsetY = newOffsetY.coerceIn(-HeaderConfig.MAX_OFFSET, HeaderConfig.MAX_OFFSET)
                     }
                 )
 
-                // Scale slider and reset button for light header
-                if (lightHeaderBitmap != null) {
+                if (darkHeaderBitmap != null) {
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()
                             .padding(horizontal = 4.dp),
                         verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
                         Icon(
                             imageVector = Icons.Outlined.Image,
@@ -303,135 +376,105 @@ fun HeaderCreatorDialog(
                             modifier = Modifier.size(16.dp),
                             tint = MaterialTheme.colorScheme.onSurfaceVariant
                         )
+                        Spacer(Modifier.width(8.dp))
                         Slider(
-                            value = lightScale,
-                            onValueChange = { lightScale = it.coerceIn(HeaderConfig.MIN_SCALE, HeaderConfig.MAX_SCALE) },
+                            value = darkScale,
+                            onValueChange = { darkScale = it.coerceIn(HeaderConfig.MIN_SCALE, HeaderConfig.MAX_SCALE) },
                             valueRange = HeaderConfig.MIN_SCALE..HeaderConfig.MAX_SCALE,
                             modifier = Modifier.weight(1f)
                         )
+                        Spacer(Modifier.width(8.dp))
                         Icon(
                             imageVector = Icons.Outlined.Image,
                             contentDescription = null,
                             modifier = Modifier.size(22.dp),
                             tint = MaterialTheme.colorScheme.onSurfaceVariant
                         )
-                    }
-
-                    if (lightScale != 1f || lightOffsetX != 0f || lightOffsetY != 0f) {
-                        TextButton(
-                            onClick = {
-                                lightScale = 1f
-                                lightOffsetX = 0f
-                                lightOffsetY = 0f
-                            },
-                            modifier = Modifier.align(Alignment.CenterHorizontally)
-                        ) {
-                            Icon(
-                                imageVector = Icons.Outlined.RestartAlt,
-                                contentDescription = null,
-                                modifier = Modifier.size(18.dp)
-                            )
-                            Spacer(modifier = Modifier.width(8.dp))
-                            Text(stringResource(R.string.adaptive_icon_reset_transform))
+                        AnimatedVisibility(visible = darkScale != 1f || darkOffsetX != 0f || darkOffsetY != 0f) {
+                            Row {
+                                Spacer(Modifier.width(8.dp))
+                                IconButton(
+                                    onClick = { darkScale = 1f; darkOffsetX = 0f; darkOffsetY = 0f },
+                                    modifier = Modifier.size(40.dp)
+                                ) {
+                                    Icon(
+                                        imageVector = Icons.Outlined.RestartAlt,
+                                        contentDescription = null,
+                                        modifier = Modifier.size(24.dp)
+                                    )
+                                }
+                            }
                         }
                     }
                 }
+            }
+            if (isCreating) {
+                Box(
+                    modifier = Modifier
+                        .matchParentSize()
+                        .background(MaterialTheme.colorScheme.surface.copy(alpha = 0.8f))
+                        .pointerInput(Unit) {
+                            awaitPointerEventScope {
+                                while (true) {
+                                    awaitPointerEvent(PointerEventPass.Initial).changes.forEach { it.consume() }
+                                }
+                            }
+                        },
+                    contentAlignment = Alignment.Center
+                ) {
+                    CircularProgressIndicator()
+                }
+            }
+        }
+    }
 
+    if (showInfoDialog.value) {
+        MorpheDialog(
+            onDismissRequest = { showInfoDialog.value = false },
+            title = stringResource(R.string.header_creator_guide),
+            footer = {
                 MorpheDialogButton(
-                    text = if (lightHeaderUri == null)
-                        stringResource(R.string.adaptive_icon_select_image)
-                    else
-                        stringResource(R.string.adaptive_icon_change_image),
-                    onClick = { openLightHeaderPicker() },
-                    icon = Icons.Outlined.LightMode,
+                    text = stringResource(android.R.string.ok),
+                    onClick = { showInfoDialog.value = false },
                     modifier = Modifier.fillMaxWidth()
                 )
-
-                HorizontalDivider()
             }
-
-            // Dark header section
-            Text(
-                text = stringResource(R.string.header_creator_dark_theme),
-                style = MaterialTheme.typography.titleSmall,
-                fontWeight = FontWeight.Bold,
-                color = LocalDialogTextColor.current
-            )
-
-            HeaderPreview(
-                headerBitmap = darkHeaderBitmap,
-                scale = darkScale,
-                offsetX = darkOffsetX,
-                offsetY = darkOffsetY,
-                isDarkTheme = true,
-                onScaleChange = { newScale ->
-                    darkScale = newScale.coerceIn(HeaderConfig.MIN_SCALE, HeaderConfig.MAX_SCALE)
-                },
-                onOffsetChange = { newOffsetX, newOffsetY ->
-                    darkOffsetX = newOffsetX.coerceIn(-HeaderConfig.MAX_OFFSET, HeaderConfig.MAX_OFFSET)
-                    darkOffsetY = newOffsetY.coerceIn(-HeaderConfig.MAX_OFFSET, HeaderConfig.MAX_OFFSET)
-                }
-            )
-
-            // Scale slider and reset button for dark header
-            if (darkHeaderBitmap != null) {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 4.dp),
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    Icon(
-                        imageVector = Icons.Outlined.Image,
-                        contentDescription = null,
-                        modifier = Modifier.size(16.dp),
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                    Slider(
-                        value = darkScale,
-                        onValueChange = { darkScale = it.coerceIn(HeaderConfig.MIN_SCALE, HeaderConfig.MAX_SCALE) },
-                        valueRange = HeaderConfig.MIN_SCALE..HeaderConfig.MAX_SCALE,
-                        modifier = Modifier.weight(1f)
-                    )
-                    Icon(
-                        imageVector = Icons.Outlined.Image,
-                        contentDescription = null,
-                        modifier = Modifier.size(22.dp),
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-
-                if (darkScale != 1f || darkOffsetX != 0f || darkOffsetY != 0f) {
-                    TextButton(
-                        onClick = {
-                            darkScale = 1f
-                            darkOffsetX = 0f
-                            darkOffsetY = 0f
-                        },
-                        modifier = Modifier.align(Alignment.CenterHorizontally)
-                    ) {
-                        Icon(
-                            imageVector = Icons.Outlined.RestartAlt,
-                            contentDescription = null,
-                            modifier = Modifier.size(18.dp)
-                        )
-                        Spacer(modifier = Modifier.width(8.dp))
-                        Text(stringResource(R.string.adaptive_icon_reset_transform))
-                    }
-                }
+        ) {
+            Column(
+                modifier = Modifier.fillMaxWidth(),
+                verticalArrangement = Arrangement.spacedBy(16.dp)
+            ) {
+                HeaderCreatorGuideSection(
+                    title = stringResource(R.string.header_creator_guide_image_title),
+                    body = stringResource(R.string.header_creator_guide_image_body)
+                )
+                HeaderCreatorGuideSection(
+                    title = stringResource(R.string.header_creator_guide_themes_title),
+                    body = stringResource(R.string.header_creator_guide_themes_body)
+                )
+                HeaderCreatorGuideSection(
+                    title = stringResource(R.string.header_creator_guide_positioning_title),
+                    body = stringResource(R.string.header_creator_guide_positioning_body)
+                )
             }
-
-            MorpheDialogButton(
-                text = if (darkHeaderUri == null)
-                    stringResource(R.string.adaptive_icon_select_image)
-                else
-                    stringResource(R.string.adaptive_icon_change_image),
-                onClick = { openDarkHeaderPicker() },
-                icon = Icons.Outlined.DarkMode,
-                modifier = Modifier.fillMaxWidth()
-            )
         }
+    }
+}
+
+@Composable
+private fun HeaderCreatorGuideSection(title: String, body: String) {
+    Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+        Text(
+            text = title,
+            style = MaterialTheme.typography.bodyMedium,
+            fontWeight = FontWeight.SemiBold,
+            color = LocalDialogTextColor.current
+        )
+        Text(
+            text = body,
+            style = MaterialTheme.typography.bodySmall,
+            color = LocalDialogSecondaryTextColor.current
+        )
     }
 }
 
@@ -629,8 +672,6 @@ private suspend fun createHeaderFiles(
     packageName: String,
     lightHeaderBitmap: Bitmap?,
     darkHeaderBitmap: Bitmap,
-    lightFileName: String,
-    darkFileName: String,
     lightScale: Float,
     lightOffsetX: Float,
     lightOffsetY: Float,
@@ -682,8 +723,8 @@ private suspend fun createHeaderFiles(
                 offsetX = lightOffsetX,
                 offsetY = lightOffsetY
             )
-            val lightDocFile = drawableDocDir.findFile("$lightFileName.png")
-                ?: drawableDocDir.createFile("image/png", "$lightFileName.png")
+            val lightDocFile = drawableDocDir.findFile("${HeaderConfig.LIGHT_HEADER_FILE_NAME}.png")
+                ?: drawableDocDir.createFile("image/png", "${HeaderConfig.LIGHT_HEADER_FILE_NAME}.png")
             lightDocFile?.let {
                 context.contentResolver.openOutputStream(it.uri)?.use { out ->
                     lightScaled.compress(Bitmap.CompressFormat.PNG, 100, out)
@@ -702,8 +743,8 @@ private suspend fun createHeaderFiles(
             offsetX = darkOffsetX,
             offsetY = darkOffsetY
         )
-        val darkDocFile = drawableDocDir.findFile("$darkFileName.png")
-            ?: drawableDocDir.createFile("image/png", "$darkFileName.png")
+        val darkDocFile = drawableDocDir.findFile("${HeaderConfig.DARK_HEADER_FILE_NAME}.png")
+            ?: drawableDocDir.createFile("image/png", "${HeaderConfig.DARK_HEADER_FILE_NAME}.png")
         darkDocFile?.let {
             context.contentResolver.openOutputStream(it.uri)?.use { out ->
                 darkScaled.compress(Bitmap.CompressFormat.PNG, 100, out)

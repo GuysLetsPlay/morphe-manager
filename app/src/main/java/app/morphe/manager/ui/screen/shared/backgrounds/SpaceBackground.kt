@@ -103,7 +103,7 @@ fun SpaceBackground(
                     val adjustedProgress = ((baseProgress * star.speed) + star.initialOffset) % 1f
                     if (adjustedProgress !in 0.01f..0.98f) {
                         if (star.lastRegen != baseProgress.toInt()) {
-                            // Pick a new random position outside the centre exclusion zone
+                            // Pick a new random position outside the center exclusion zone
                             var newX: Float; var newY: Float; var newDistance: Float
                             do {
                                 val newAngle = Random.nextFloat() * 360f
@@ -251,7 +251,7 @@ private fun generateStarPool(): List<StarData> = List(300) { index ->
         val angleRad = angle * (Math.PI / 180f).toFloat()
         x = cos(angleRad) * distance
         y = sin(angleRad) * distance
-    } while (distance < 0.15f) // Exclude centre 10% area to avoid crowding the vanishing point
+    } while (distance < 0.15f) // Exclude center 10% area to avoid crowding the vanishing point
 
     StarData(
         x             = x,

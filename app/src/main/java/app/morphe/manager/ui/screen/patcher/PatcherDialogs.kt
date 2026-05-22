@@ -84,24 +84,47 @@ fun IncompatiblePatcherVersionDialog(
             }
         }
     ) {
-        val secondaryColor = LocalDialogSecondaryTextColor.current
+        Text(
+            text = htmlAnnotatedString(stringResource(
+                R.string.patcher_incompatible_patcher_description,
+                bundleName,
+                requiredVersion
+            )),
+            style = MaterialTheme.typography.bodyLarge,
+            color = LocalDialogSecondaryTextColor.current,
+            textAlign = TextAlign.Center,
+            modifier = Modifier.fillMaxWidth()
+        )
+    }
+}
 
-        Column(
-            modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.spacedBy(12.dp)
-        ) {
-            Text(
-                text = htmlAnnotatedString(stringResource(
-                    R.string.patcher_incompatible_patcher_description,
-                    bundleName,
-                    requiredVersion
-                )),
-                style = MaterialTheme.typography.bodyLarge,
-                color = secondaryColor,
-                textAlign = TextAlign.Center,
-                modifier = Modifier.fillMaxWidth()
+/**
+ * Shown when a conflict is detected after patching from the installed app (non-root).
+ * Explains why uninstall is needed and warns about data loss, then triggers system uninstall.
+ */
+@Composable
+fun InstalledSourceConflictDialog(
+    onUninstall: () -> Unit,
+    onDismiss: () -> Unit
+) {
+    MorpheDialog(
+        onDismissRequest = onDismiss,
+        title = stringResource(R.string.patcher_installed_conflict_title),
+        footer = {
+            MorpheDialogButtonRow(
+                primaryText = stringResource(R.string.uninstall),
+                onPrimaryClick = onUninstall,
+                isPrimaryDestructive = true,
+                secondaryText = stringResource(android.R.string.cancel),
+                onSecondaryClick = onDismiss
             )
         }
+    ) {
+        Text(
+            text = stringResource(R.string.patcher_installed_conflict_body),
+            style = MaterialTheme.typography.bodyLarge,
+            color = LocalDialogSecondaryTextColor.current
+        )
     }
 }
 
@@ -228,7 +251,7 @@ fun StoragePermissionDialog(
 
         Column(
             modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.spacedBy(16.dp)
+            verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ContentPadding)
         ) {
             Text(
                 text = stringResource(
@@ -331,6 +354,57 @@ fun StoragePermissionDialog(
 }
 
 /**
+ * Pre-flight dialog shown once when the app is not excluded from battery optimization.
+ * Directs the user to the system dialog to grant the exclusion.
+ */
+@SuppressLint("BatteryLife")
+@Composable
+fun BatteryOptimizationDialog(
+    onResult: () -> Unit,
+) {
+    val context = LocalContext.current
+
+    MorpheDialog(
+        onDismissRequest = onResult,
+        title = stringResource(R.string.battery_optimization_dialog_title),
+        footer = {
+            Column(
+                modifier = Modifier.fillMaxWidth(),
+                verticalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                MorpheDialogButton(
+                    text = stringResource(R.string.allow),
+                    onClick = {
+                        context.startActivity(
+                            Intent(
+                                Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,
+                                "package:${context.packageName}".toUri()
+                            )
+                        )
+                        onResult()
+                    },
+                    icon = Icons.Outlined.BatterySaver,
+                    modifier = Modifier.fillMaxWidth()
+                )
+                MorpheDialogOutlinedButton(
+                    text = stringResource(R.string.battery_optimization_not_now),
+                    onClick = onResult,
+                    modifier = Modifier.fillMaxWidth()
+                )
+            }
+        }
+    ) {
+        Text(
+            text = stringResource(R.string.battery_optimization_dialog_description),
+            style = MaterialTheme.typography.bodyLarge,
+            color = LocalDialogSecondaryTextColor.current,
+            textAlign = TextAlign.Center,
+            modifier = Modifier.fillMaxWidth()
+        )
+    }
+}
+
+/**
  * Full-screen error dialog shown when patching fails.
  */
 @SuppressLint("LocalContextGetResourceValueCall")
@@ -403,7 +477,7 @@ fun PatcherErrorDialog(
                     modifier = Modifier
                         .fillMaxSize()
                         .verticalScroll(rememberScrollState())
-                        .padding(horizontal = 16.dp, vertical = 4.dp),
+                        .padding(horizontal = MorpheDefaults.ContentPadding, vertical = 4.dp),
                 ) {
                     Text(
                         text = errorMessage,

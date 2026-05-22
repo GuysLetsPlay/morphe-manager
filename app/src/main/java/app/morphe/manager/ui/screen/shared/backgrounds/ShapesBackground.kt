@@ -59,9 +59,9 @@ fun ShapesBackground(
     )
 
     // Solid configurations
-    // cx/cy   - base centre in normalised screen space [0..1]
+    // cx/cy   - base center in normalized screen space [0..1]
     // fx1/fx2 - Lissajous X frequencies; fy1/fy2 - Lissajous Y frequencies
-    // ampX/Y  - wander amplitude (normalised screen units)
+    // ampX/Y  - wander amplitude (normalized screen units)
     // rotSpeeds - per-axis rotation speed multipliers (X=nod, Y=yaw, Z=roll)
     // solidType - which polyhedron to render
     // depth   - parallax depth (0=none, 1=max)
@@ -128,7 +128,7 @@ fun ShapesBackground(
             val baseCx = pos.x * size.width  + tiltX * parallaxStrength
             val baseCy = pos.y * size.height + tiltY * parallaxStrength
 
-            // Scatter: fly outward from screen centre
+            // Scatter: fly outward from screen center
             val dirX  = baseCx - screenCx
             val dirY  = baseCy - screenCy
             val eased = 1f - (1f - sp) * (1f - sp)
@@ -249,7 +249,7 @@ private fun DrawScope.drawSolid(
     // Avoid any per-face visibility check here - that causes flickering when a face
     // crosses the horizon (normalZ flips sign) and adjacent edges change alpha abruptly.
     // Instead, derive alpha smoothly from the average Z of the two endpoint vertices:
-    //   z ranges roughly -1..+1 after rotation; map to [backAlpha..frontAlpha] linearly.
+    //   z ranges roughly -1...+1 after rotation; map to [backAlpha...frontAlpha] linearly.
     solid.edges.forEach { (a, b) ->
         val avgZ      = (rotated[a].z + rotated[b].z) * 0.5f
         // Remap [-1,+1] → [0,1] then blend between ghost and solid alpha
@@ -266,7 +266,7 @@ private fun DrawScope.drawSolid(
 
 /**
  * A polyhedron defined by:
- * - [vertices]  - positions in normalised [-1,1] object space
+ * - [vertices]  - positions in normalized [-1,1] object space
  * - [faces]     - vertex index lists, each wound CCW when viewed from outside
  * - [edges]     - deduplicated pairs (a,b) with a<b, for wireframe drawing
  */
@@ -407,8 +407,8 @@ private enum class SolidType {
 }
 
 private data class SolidConfig(
-    val cx: Float,          // Base centre X (normalised 0..1)
-    val cy: Float,          // Base centre Y (normalised 0..1)
+    val cx: Float,          // Base center X (normalized 0..1)
+    val cy: Float,          // Base center Y (normalized 0..1)
     val fx1: Float,         // Primary X Lissajous frequency
     val fx2: Float,         // Secondary X Lissajous frequency
     val fy1: Float,         // Primary Y Lissajous frequency

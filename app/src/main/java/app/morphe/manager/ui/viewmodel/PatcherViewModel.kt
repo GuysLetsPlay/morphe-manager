@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.pm.PackageInfo
 import android.net.Uri
 import android.os.ParcelUuid
+import android.os.PowerManager
 import android.util.Log
 import androidx.activity.result.ActivityResult
 import androidx.compose.runtime.*
@@ -38,7 +39,6 @@ import app.morphe.manager.ui.model.State
 import app.morphe.manager.ui.model.navigation.Patcher
 import app.morphe.manager.ui.screen.patcher.PatcherErrorInfo
 import app.morphe.manager.util.*
-import app.morphe.manager.util.snapshotStateListSaver
 import app.morphe.manager.worker.UpdateCheckWorker
 import io.github.z4kn4fein.semver.Version
 import kotlinx.coroutines.*
@@ -92,6 +92,8 @@ class PatcherViewModel(
     private var appliedSelection: PatchSelection = input.selectedPatches.mapValues { it.value.toSet() }
     private var appliedOptions: Options = input.options
     val currentSelectedApp: SelectedApp get() = selectedApp
+    val patchedFromInstalledDevice: Boolean
+        get() = (selectedApp as? SelectedApp.Local)?.fromInstalledDevice == true
 
     private var currentActivityRequest: Pair<CompletableDeferred<Boolean>, String>? by mutableStateOf(
         null
@@ -119,6 +121,9 @@ class PatcherViewModel(
         val patchNames: List<String>
     )
     var missingPatchWarning by mutableStateOf<MissingPatchWarningState?>(null)
+        private set
+
+    var batteryOptimizationDialog by mutableStateOf(false)
         private set
 
     /**
@@ -162,6 +167,18 @@ class PatcherViewModel(
     fun retryAfterPermission() {
         inaccessibleOptionPaths = null
         viewModelScope.launch {
+            runPreflightCheck()
+        }
+    }
+
+    /**
+     * Called when the user dismisses the battery optimization pre-flight dialog.
+     * Marks the preference so the dialog is never shown again and resumes the preflight check.
+     */
+    fun onBatteryOptimizationDialogResult() {
+        viewModelScope.launch {
+            prefs.batteryOptimizationRequested.update(true)
+            batteryOptimizationDialog = false
             runPreflightCheck()
         }
     }
@@ -446,6 +463,12 @@ class PatcherViewModel(
         val pathFailures = withContext(Dispatchers.IO) { validateOptionPaths(optionsToValidate) }
         if (pathFailures.isNotEmpty()) {
             inaccessibleOptionPaths = InaccessibleOptionPathsState(pathFailures)
+            return
+        }
+
+        val powerManager = app.getSystemService(PowerManager::class.java)
+        if (prefs.useExpertMode.get() && !powerManager.isIgnoringBatteryOptimizations(app.packageName) && !prefs.batteryOptimizationRequested.get()) {
+            batteryOptimizationDialog = true
             return
         }
 
@@ -740,7 +763,6 @@ class PatcherViewModel(
 
     private fun launchWorker(): UUID =
         workerRepository.launchExpedited<PatcherWorker, PatcherWorker.Args>(
-            "patching",
             buildWorkerArgs()
         )
 
@@ -842,11 +864,7 @@ class PatcherViewModel(
                         } finally {
                             withContext(Dispatchers.Main) {
                                 // Delete temporary input file after saving
-                                if (input.selectedApp is SelectedApp.Local && input.selectedApp.temporary) {
-                                    inputFile?.takeIf { it.exists() }?.delete()
-                                    inputFile = null
-                                    updateSplitStepRequirement(null)
-                                }
+                                cleanupTemporaryInput()
                                 refreshExportMetadata()
                                 _patcherSucceeded.value = true
                             }
@@ -1022,15 +1040,18 @@ class PatcherViewModel(
         patcherWorkerId?.uuid?.let(workManager::cancelWorkById)
     }
 
-    override fun onCleared() {
-        super.onCleared()
-        patcherWorkerId?.uuid?.let(workManager::cancelWorkById)
-
+    private fun cleanupTemporaryInput() {
         if (input.selectedApp is SelectedApp.Local && input.selectedApp.temporary) {
             inputFile?.takeIf { it.exists() }?.delete()
             inputFile = null
             updateSplitStepRequirement(null)
         }
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        patcherWorkerId?.uuid?.let(workManager::cancelWorkById)
+        cleanupTemporaryInput()
 
         // Clean up the installer temp directory (contains output.apk and any intermediate files).
         // This covers the case where the user navigates away before installing/exporting,

@@ -19,6 +19,7 @@ import androidx.compose.material.icons.filled.DeleteForever
 import androidx.compose.material.icons.filled.Error
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.InstallMobile
+import androidx.compose.material.icons.outlined.Warning
 import androidx.compose.material.icons.outlined.Link
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -160,54 +161,52 @@ fun PatchingSuccess(
         else -> Icons.Default.Check
     }
 
-    Box(modifier = Modifier.fillMaxSize()) {
-        // Main content area
-        Column(
+    // Main content area
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .navigationBarsPadding()
+    ) {
+        // Content
+        Box(
             modifier = Modifier
-                .fillMaxSize()
-                .navigationBarsPadding()
+                .weight(1f)
+                .fillMaxWidth(),
+            contentAlignment = Alignment.Center
         ) {
-            // Content
-            Box(
-                modifier = Modifier
-                    .weight(1f)
-                    .fillMaxWidth(),
-                contentAlignment = Alignment.Center
-            ) {
-                AdaptiveSuccessContent(
-                    windowSize = windowSize,
-                    icon = icon,
-                    iconTint = iconTint,
-                    iconBackgroundColor = iconBackgroundColor,
-                    isInstalling = isInstalling,
-                    isInstalled = isInstalled,
-                    isError = isError,
-                    isConflict = isConflict,
-                    installedPackageName = installedPackageName,
-                    usingMountInstall = usingMountInstall,
-                    errorMessage = errorMessage,
-                    conflictPackageName = conflictPackageName,
-                    onInstall = onInstall,
-                    onUninstall = onUninstall,
-                    onOpen = onOpen
-                )
-            }
-
-            // Bottom action bar
-            PatcherBottomActionBar(
-                showCancelButton = false,
-                showLogsButton = isExpertMode,
-                showHomeButton = true,
-                showSaveButton = true,
-                showErrorButton = false,
-                onCancelClick = {},
-                onLogsClick = onLogsClick,
-                onHomeClick = onHomeClick,
-                onSaveClick = onSaveClick,
-                isSaving = isSaving,
-                onErrorClick = {}
+            AdaptiveSuccessContent(
+                windowSize = windowSize,
+                icon = icon,
+                iconTint = iconTint,
+                iconBackgroundColor = iconBackgroundColor,
+                isInstalling = isInstalling,
+                isInstalled = isInstalled,
+                isError = isError,
+                isConflict = isConflict,
+                installedPackageName = installedPackageName,
+                usingMountInstall = usingMountInstall,
+                errorMessage = errorMessage,
+                conflictPackageName = conflictPackageName,
+                onInstall = onInstall,
+                onUninstall = onUninstall,
+                onOpen = onOpen
             )
         }
+
+        // Bottom action bar
+        PatcherBottomActionBar(
+            showCancelButton = false,
+            showLogsButton = isExpertMode,
+            showHomeButton = true,
+            showSaveButton = true,
+            showErrorButton = false,
+            onCancelClick = {},
+            onLogsClick = onLogsClick,
+            onHomeClick = onHomeClick,
+            onSaveClick = onSaveClick,
+            isSaving = isSaving,
+            onErrorClick = {}
+        )
     }
 }
 
@@ -294,6 +293,8 @@ private fun AdaptiveSuccessContent(
                     isError = isError
                 )
 
+                SuccessConflictHint(isConflict = isConflict)
+
                 SuccessRootWarning(
                     usingMountInstall = usingMountInstall,
                     isReady = !isInstalling && !isInstalled && !isError && !isConflict
@@ -352,6 +353,8 @@ private fun AdaptiveSuccessContent(
                 errorMessage = errorMessage,
                 isError = isError
             )
+
+            SuccessConflictHint(isConflict = isConflict)
 
             SuccessRootWarning(
                 usingMountInstall = usingMountInstall,
@@ -500,6 +503,20 @@ private fun SuccessErrorMessage(
 }
 
 /**
+ * Success screen conflict hint.
+ */
+@Composable
+private fun SuccessConflictHint(isConflict: Boolean) {
+    SuccessHint(
+        visible = isConflict,
+        text = stringResource(R.string.patcher_conflict_hint),
+        icon = Icons.Outlined.Warning,
+        containerColor = MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.3f),
+        iconTint = MaterialTheme.colorScheme.error
+    )
+}
+
+/**
  * Success screen root warning.
  */
 @Composable
@@ -507,17 +524,51 @@ private fun SuccessRootWarning(
     usingMountInstall: Boolean,
     isReady: Boolean
 ) {
-    AnimatedVisibility(
+    SuccessHint(
         visible = usingMountInstall && isReady,
+        text = stringResource(R.string.root_gmscore_excluded),
+        icon = Icons.Outlined.Info,
+        containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f),
+        iconTint = MaterialTheme.colorScheme.primary
+    )
+}
+
+@Composable
+private fun SuccessHint(
+    visible: Boolean,
+    text: String,
+    icon: ImageVector,
+    containerColor: Color,
+    iconTint: Color
+) {
+    AnimatedVisibility(
+        visible = visible,
         enter = MorpheAnimations.fadeIn,
         exit = MorpheAnimations.fadeOut
     ) {
-        InfoBadge(
-            text = stringResource(R.string.root_gmscore_excluded),
-            style = InfoBadgeStyle.Primary,
-            icon = Icons.Outlined.Info,
-            isCentered = true
-        )
+        Surface(
+            modifier = Modifier.fillMaxWidth(),
+            shape = RoundedCornerShape(12.dp),
+            color = containerColor
+        ) {
+            Row(
+                modifier = Modifier.padding(16.dp),
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Icon(
+                    imageVector = icon,
+                    contentDescription = null,
+                    tint = iconTint,
+                    modifier = Modifier.size(20.dp)
+                )
+                Text(
+                    text = text,
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurface
+                )
+            }
+        }
     }
 }
 
@@ -537,16 +588,13 @@ private fun InstallActionButton(
     onOpen: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    val buttonColors = when {
-        isInstalled -> ButtonDefaults.buttonColors(
-            containerColor = MaterialTheme.colorScheme.primary,
-            contentColor = MaterialTheme.colorScheme.onPrimary
-        )
-        isConflict || isError -> ButtonDefaults.buttonColors(
+    val buttonColors = if (isConflict || isError) {
+        ButtonDefaults.buttonColors(
             containerColor = MaterialTheme.colorScheme.error,
             contentColor = MaterialTheme.colorScheme.onError
         )
-        else -> ButtonDefaults.buttonColors(
+    } else {
+        ButtonDefaults.buttonColors(
             containerColor = MaterialTheme.colorScheme.primary,
             contentColor = MaterialTheme.colorScheme.onPrimary
         )
@@ -557,7 +605,6 @@ private fun InstallActionButton(
             when {
                 isInstalled -> onOpen()
                 isConflict -> conflictPackageName?.let { onUninstall(it) }
-                isError -> onInstall()
                 else -> onInstall()
             }
         },
@@ -570,7 +617,7 @@ private fun InstallActionButton(
         if (isInstalling) {
             CircularProgressIndicator(
                 modifier = Modifier.size(24.dp),
-                color = MaterialTheme.colorScheme.onPrimary,
+                color = LocalContentColor.current,
                 strokeWidth = 2.dp
             )
             Spacer(Modifier.width(12.dp))
@@ -583,16 +630,14 @@ private fun InstallActionButton(
                 fontWeight = FontWeight.SemiBold
             )
         } else {
-            Icon(
-                imageVector = when {
+            MorpheIcon(
+                icon = when {
                     isInstalled -> Icons.AutoMirrored.Outlined.Launch
                     isConflict -> Icons.Default.DeleteForever
-                    isError -> Icons.Outlined.InstallMobile
                     usingMountInstall -> Icons.Outlined.Link
                     else -> Icons.Outlined.InstallMobile
                 },
-                contentDescription = null,
-                modifier = Modifier.size(24.dp)
+                tint = LocalContentColor.current
             )
             Spacer(Modifier.width(12.dp))
             Text(
@@ -600,7 +645,6 @@ private fun InstallActionButton(
                     when {
                         isInstalled -> R.string.open
                         isConflict -> R.string.uninstall
-                        isError -> R.string.install
                         usingMountInstall -> R.string.mount
                         else -> R.string.install
                     }
@@ -657,62 +701,60 @@ fun PatchingFailed(
 ) {
     val windowSize = rememberWindowSize()
 
-    Box(modifier = Modifier.fillMaxSize()) {
-        // Main content area
-        Column(
+    // Main content area
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .navigationBarsPadding()
+    ) {
+        // Content
+        Box(
             modifier = Modifier
-                .fillMaxSize()
-                .navigationBarsPadding()
+                .weight(1f)
+                .fillMaxWidth(),
+            contentAlignment = Alignment.Center
         ) {
-            // Content
-            Box(
+            Column(
                 modifier = Modifier
-                    .weight(1f)
-                    .fillMaxWidth(),
-                contentAlignment = Alignment.Center
+                    .fillMaxWidth()
+                    .padding(horizontal = windowSize.contentPadding),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(windowSize.itemSpacing * 2)
             ) {
-                Column(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = windowSize.contentPadding),
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.spacedBy(windowSize.itemSpacing * 2)
-                ) {
-                    SuccessIcon(
-                        icon = Icons.Default.Error,
-                        iconTint = MaterialTheme.colorScheme.error,
-                        iconBackgroundColor = MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.3f),
-                        windowSize = windowSize
-                    )
+                SuccessIcon(
+                    icon = Icons.Default.Error,
+                    iconTint = MaterialTheme.colorScheme.error,
+                    iconBackgroundColor = MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.3f),
+                    windowSize = windowSize
+                )
 
-                    Text(
-                        text = stringResource(R.string.patcher_failed_title),
-                        style = MaterialTheme.typography.headlineMedium,
-                        fontWeight = FontWeight.Bold,
-                        textAlign = TextAlign.Center,
-                        color = MaterialTheme.colorScheme.onBackground
-                    )
+                Text(
+                    text = stringResource(R.string.patcher_failed_title),
+                    style = MaterialTheme.typography.headlineMedium,
+                    fontWeight = FontWeight.Bold,
+                    textAlign = TextAlign.Center,
+                    color = MaterialTheme.colorScheme.onBackground
+                )
 
-                    Text(
-                        text = stringResource(R.string.patcher_failed_subtitle),
-                        style = MaterialTheme.typography.bodyLarge,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        textAlign = TextAlign.Center
-                    )
-                }
+                Text(
+                    text = stringResource(R.string.patcher_failed_subtitle),
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    textAlign = TextAlign.Center
+                )
             }
-
-            // Bottom action bar
-            PatcherBottomActionBar(
-                showCancelButton = false,
-                showHomeButton = true,
-                showSaveButton = false,
-                showErrorButton = true,
-                onCancelClick = {},
-                onHomeClick = onHomeClick,
-                onSaveClick = {},
-                onErrorClick = onErrorClick
-            )
         }
+
+        // Bottom action bar
+        PatcherBottomActionBar(
+            showCancelButton = false,
+            showHomeButton = true,
+            showSaveButton = false,
+            showErrorButton = true,
+            onCancelClick = {},
+            onHomeClick = onHomeClick,
+            onSaveClick = {},
+            onErrorClick = onErrorClick
+        )
     }
 }

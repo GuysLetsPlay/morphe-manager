@@ -7,6 +7,7 @@ package app.morphe.manager.ui.screen
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.media.RingtoneManager
 import android.util.Log
 import android.view.HapticFeedbackConstants
 import android.view.WindowManager
@@ -17,9 +18,6 @@ import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
-import androidx.compose.animation.fadeIn
-import androidx.compose.animation.fadeOut
-import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.statusBarsPadding
@@ -42,6 +40,7 @@ import app.morphe.manager.ui.model.State
 import app.morphe.manager.ui.screen.patcher.*
 import app.morphe.manager.ui.screen.settings.advanced.NotificationPermissionDialog
 import app.morphe.manager.ui.screen.settings.system.InstallerSelectionDialog
+import app.morphe.manager.ui.screen.shared.MorpheAnimations
 import app.morphe.manager.ui.viewmodel.InstallViewModel
 import app.morphe.manager.ui.viewmodel.PatcherViewModel
 import app.morphe.manager.util.APK_MIMETYPE
@@ -102,12 +101,12 @@ fun PatcherScreen(
     )
 
     // Drive background speed: ramps 1x→3x during patching, resets on completion/failure.
-    // Uses a coroutine loop so speed tracks displayProgress in real time without recomposition churn.
+    // Uses a coroutine loop so speed tracks displayProgress in real time without recomposition churn
     LaunchedEffect(patcherSucceeded) {
         if (patcherSucceeded == null) {
-            // Exponential moving average to smooths sudden progress jumps.
+            // Exponential moving average to smooths sudden progress jumps
             var movingAverage = 0.0f
-            // Lower factor has more abrupt animation changes.
+            // Lower factor has more abrupt animation changes
             val smoothingFactor = 0.25f
             // Patching in progress - poll displayProgress every 250ms (same cadence as progress loop)
             while (true) {
@@ -122,8 +121,10 @@ fun PatcherScreen(
             if (patcherSucceeded == true) {
                 delay(300) // small pause so speed resets before effect fires
                 onPatchingCompleted()
-                // Haptic feedback
+                // Haptic + audio feedback
                 view.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY)
+                val ringtoneUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
+                RingtoneManager.getRingtone(context, ringtoneUri)?.play()
             }
         }
     }
@@ -136,7 +137,7 @@ fun PatcherScreen(
     // Get output file from viewModel
     val outputFile = patcherViewModel.outputFile
 
-    // Progress animation logic: drives displayProgress and showSuccessScreen.
+    // Progress animation logic: drives displayProgress and showSuccessScreen
     LaunchedEffect(patcherSucceeded) {
         var lastProgressUpdate = 0.0f
         var currentStepStartTime = System.currentTimeMillis()
@@ -153,7 +154,7 @@ fun PatcherScreen(
                 }
             }
 
-            // When to stop using overcorrection of progress and always use the actual progress.
+            // When to stop using overcorrection of progress and always use the actual progress
             val maxOverCorrectPercentage = 0.97
 
             if (actualProgress >= maxOverCorrectPercentage) {
@@ -162,7 +163,7 @@ fun PatcherScreen(
                 // Overestimate the progress by about 1% per second, but decays to
                 // adding smaller adjustments each second until the current step completes
                 fun overEstimateProgressAdjustment(secondsElapsed: Double): Double {
-                    // Sigmoid curve. Give larger correct soon after the step starts but then flattens off.
+                    // Sigmoid curve. Give larger correct soon after the step starts but then flattens off
                     val maximumValue = 25.0 // Up to 25% over correct
                     val timeConstant = 50.0 // Larger value = longer time until plateau
                     return maximumValue * (1 - exp(-secondsElapsed / timeConstant))
@@ -242,15 +243,37 @@ fun PatcherScreen(
     val isInstalling by remember { derivedStateOf { installViewModel.installState is InstallViewModel.InstallState.Installing } }
     val isInstalled by remember { derivedStateOf { installViewModel.installState is InstallViewModel.InstallState.Installed } }
     val isError by remember { derivedStateOf { installViewModel.installState is InstallViewModel.InstallState.Error } }
-    val isConflict by remember { derivedStateOf { installViewModel.installState is InstallViewModel.InstallState.Conflict } }
+    // Conflict is expected when patching from installed (non-root): handled via dialog instead of UI state
+    val autoHandleConflict = patcherViewModel.patchedFromInstalledDevice && !usingMountInstall
+    val isConflict by remember { derivedStateOf {
+        installViewModel.installState is InstallViewModel.InstallState.Conflict && !autoHandleConflict
+    } }
     val installedPackageName by remember { derivedStateOf { installViewModel.installedPackageName } }
     val conflictPackageName by remember { derivedStateOf { (installViewModel.installState as? InstallViewModel.InstallState.Conflict)?.packageName } }
     val errorMessage by remember { derivedStateOf { (installViewModel.installState as? InstallViewModel.InstallState.Error)?.message } }
+
+    val showInstalledSourceConflictDialog = remember { mutableStateOf(false) }
 
     LaunchedEffect(installState) {
         if (installState is InstallViewModel.InstallState.Installed) {
             patcherViewModel.triggerNotificationPromptIfNeeded()
         }
+        if (installState is InstallViewModel.InstallState.Conflict && autoHandleConflict) {
+            showInstalledSourceConflictDialog.value = true
+        }
+    }
+
+    if (showInstalledSourceConflictDialog.value) {
+        InstalledSourceConflictDialog(
+            onUninstall = {
+                showInstalledSourceConflictDialog.value = false
+                conflictPackageName?.let { installViewModel.requestUninstall(it) }
+            },
+            onDismiss = {
+                showInstalledSourceConflictDialog.value = false
+                installViewModel.resetInstallState()
+            }
+        )
     }
 
     // Notification prompt dialog
@@ -315,7 +338,7 @@ fun PatcherScreen(
     }
 
     // Storage permission pre-flight dialog.
-    // Shown when a patch option points to an external path the app cannot read.
+    // Shown when a patch option points to an external path the app cannot read
     patcherViewModel.inaccessibleOptionPaths?.let { errorState ->
         StoragePermissionDialog(
             failures = errorState.failures,
@@ -328,7 +351,7 @@ fun PatcherScreen(
     }
 
     // Patcher version incompatibility pre-flight dialog.
-    // Shown when a bundle's Patcher-Version is newer than what the manager ships.
+    // Shown when a bundle's Patcher-Version is newer than what the manager ships
     patcherViewModel.incompatiblePatcherVersion?.let { state ->
         IncompatiblePatcherVersionDialog(
             bundleName = state.bundleName,
@@ -337,6 +360,14 @@ fun PatcherScreen(
                 patcherViewModel.dismissIncompatiblePatcherVersion()
                 onBackClick()
             }
+        )
+    }
+
+    // Battery optimization pre-flight dialog.
+    // Shown once when the app is not excluded from battery optimization
+    if (patcherViewModel.batteryOptimizationDialog) {
+        BatteryOptimizationDialog(
+            onResult = patcherViewModel::onBatteryOptimizationDialogResult
         )
     }
 
@@ -404,10 +435,7 @@ fun PatcherScreen(
 
         AnimatedContent(
             targetState = if (showSuccessScreen) state.currentPatcherState else PatcherState.IN_PROGRESS,
-            transitionSpec = {
-                fadeIn(animationSpec = tween(800)) togetherWith
-                        fadeOut(animationSpec = tween(800))
-            },
+            transitionSpec = MorpheAnimations.fadeCrossfade(800),
             label = "patcher_state_animation"
         ) { patcherState ->
             when (patcherState) {

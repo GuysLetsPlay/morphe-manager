@@ -64,15 +64,15 @@ object KnownApps {
      */
     data class Entry(
         val packageName: String,
-        val isPinnedByDefault: Boolean = false,
+        val isPinnedByDefault: Boolean = true,
         val brandColor: Color? = null,
     )
 
     /** All known app entries in display order. */
     val all: List<Entry> = listOf(
-        Entry(REDDIT,        isPinnedByDefault = true, brandColor = Color(0xFFFF4500)),
-        Entry(YOUTUBE,       isPinnedByDefault = true, brandColor = Color(0xFFFF0033)),
-        Entry(YOUTUBE_MUSIC, isPinnedByDefault = true, brandColor = Color(0xFFFF0000)),
+        Entry(REDDIT,        brandColor = Color(0xFFFF4500)),
+        Entry(YOUTUBE,       brandColor = Color(0xFFFF0033)),
+        Entry(YOUTUBE_MUSIC, brandColor = Color(0xFFFF0000)),
         // Entry(X_TWITTER, brandColor = Color(0xFF000000)),  // Uncomment when release
     )
 
@@ -160,3 +160,6 @@ val MPP_FILE_MIME_TYPES = arrayOf(
 //    "application/x-zip-compressed"
     "*/*"
 )
+
+/** File extensions recognized as APK-family archives that Morphe can patch. */
+val APK_EXTENSIONS = setOf("apk", "apks", "xapk", "apkm")

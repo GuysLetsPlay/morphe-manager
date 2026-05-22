@@ -34,7 +34,7 @@ object FcmTopics {
 }
 
 /**
- * Synchronises all four FCM topic subscriptions with the user's current preferences.
+ * Synchronizes all four FCM topic subscriptions with the user's current preferences.
  *
  * | Parameter             | stable topic | dev topic    |
  * |-----------------------|--------------|--------------|

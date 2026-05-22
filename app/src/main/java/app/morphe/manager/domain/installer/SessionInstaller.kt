@@ -41,6 +41,7 @@ private const val EXTRA_SESSION_ID = "session_id"
  *
  * Shizuku silent installation is handled via [ShizukuInstaller].
  */
+@Suppress("RedundantSuppression")
 class SessionInstaller(private val app: Application) {
 
     private val shizukuInstaller = ShizukuInstaller(app)

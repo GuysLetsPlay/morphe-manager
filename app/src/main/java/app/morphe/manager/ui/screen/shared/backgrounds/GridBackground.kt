@@ -24,9 +24,9 @@ import kotlin.math.sqrt
 
 /**
  * Breathing Grid background - a grid of dots pulses in concentric sine waves
- * radiating from the screen centre, like ripples on water.
+ * radiating from the screen center, like ripples on water.
  * Uses frame-based time so [speedMultiplier] changes smoothly without restarting animations.
- * On patching completion a strong shockwave burst radiates from centre, temporarily
+ * On patching completion a strong shockwave burst radiates from center, temporarily
  * expanding all dots before settling back.
  */
 @Composable
@@ -51,7 +51,7 @@ fun GridBackground(
 
     val time = rememberAnimatedTime(speedMultiplier)
 
-    // shockwaveProgress 0→1: a burst pulse radiates from centre on completion
+    // shockwaveProgress 0→1: a burst pulse radiates from center on completion
     val shockwaveProgress = remember { Animatable(0f) }
 
     CompletionEffect(patchingCompleted) {
@@ -84,7 +84,7 @@ fun GridBackground(
                 val baseX = col * cellW + tiltX * 12f
                 val baseY = row * cellH + tiltY * 12f
 
-                // Distance from screen centre - drives the ripple phase offset
+                // Distance from screen center - drives the ripple phase offset
                 val dx = baseX - size.width  * 0.5f
                 val dy = baseY - size.height * 0.5f
                 val dist = sqrt(dx * dx + dy * dy)

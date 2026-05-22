@@ -17,15 +17,20 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
-import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import app.morphe.manager.R
 import app.morphe.manager.domain.manager.PreferencesManager
 import app.morphe.manager.domain.repository.PatchBundleRepository
 import app.morphe.manager.ui.model.HomeAppItem
-import app.morphe.manager.ui.screen.home.*
+import app.morphe.manager.ui.screen.home.Android11Dialog
+import app.morphe.manager.ui.screen.home.HomeDialogs
+import app.morphe.manager.ui.screen.home.ManagerUpdateDetailsDialog
+import app.morphe.manager.ui.screen.home.SectionsLayout
 import app.morphe.manager.ui.screen.settings.system.PrePatchInstallerDialog
-import app.morphe.manager.ui.viewmodel.*
+import app.morphe.manager.ui.viewmodel.HomeAndPatcherMessages
+import app.morphe.manager.ui.viewmodel.HomeViewModel
+import app.morphe.manager.ui.viewmodel.QuickPatchParams
+import app.morphe.manager.ui.viewmodel.UpdateViewModel
 import app.morphe.manager.util.*
 import org.koin.androidx.compose.koinViewModel
 import org.koin.compose.koinInject
@@ -110,13 +115,11 @@ fun HomeScreen(
     }
 
     val openApkPicker = rememberAdaptiveFilePicker(
-        mimeTypes = APK_FILE_MIME_TYPES,
-        chooserTitle = stringResource(R.string.home_select_apk_title)
+        mimeTypes = APK_FILE_MIME_TYPES
     ) { uri -> uri?.let { homeViewModel.handleApkSelection(it) } }
 
     val openBundlePicker = rememberAdaptiveFilePicker(
-        mimeTypes = MPP_FILE_MIME_TYPES,
-        chooserTitle = stringResource(R.string.sources_dialog_local_file)
+        mimeTypes = MPP_FILE_MIME_TYPES
     ) { uri ->
         uri?.let {
             homeViewModel.selectedBundleUri = it

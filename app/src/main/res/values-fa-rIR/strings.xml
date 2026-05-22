@@ -6,7 +6,6 @@
     <string name="home_no_patches_available">هیچ پچ ای موجود نیست </string>
     <string name="home_app_hide_title">برنامه پنهان شود؟ </string>
     <string name="home_app_will_be_hidden">این برنامه پنهان میشود</string>
-    <string name="home_app_show_hidden">نمایش برنامه های پنهان شده</string>
     <string name="home_app_no_hidden">برنامه‌ی پنهانی ندارید</string>
     <string name="home_app_hidden_apps_title">برنامه های پنهان شده</string>
     <string name="home_app_hidden_apps_hint">برای پنهان کردن ضربه بزنید</string>
@@ -39,7 +38,7 @@
     <!-- Friendly, slightly mischievous joke about controlling app behavior -->
     <string name="home_greeting_6">بیا کاری کنیم اپ‌هات درست رفتار کنن</string>
     <!-- Whimsical forecast-style joke, not meant literally -->
-    <string name="home_greeting_7">پیش‌بینی امروز: ۱۰۰٪ احتمال اعمال پچ</string>
+    <string name="home_greeting_7" formatted="false">پیش‌بینی امروز: ۱۰۰٪ احتمال اعمال پچ</string>
     <!-- From mediocrity to amazing -->
     <string name="home_greeting_8">آماده‌ای که معمولی رو به بی‌نظیر تبدیل کنی؟</string>
     <!-- Playful exaggeration, making patching feel heroic -->
@@ -50,10 +49,6 @@
     <string name="sources_management_title">منابع پچ </string>
     <string name="sources_management_open_in_browser">باز کردن در مرورگر</string>
     <string name="sources_management_failed_to_open_url">باز کردن لینک ناموفق بود</string>
-    <string name="sources_management_prerelease_toggle">از پچ های پیش انتشار استفاده کنید</string>
-    <string name="sources_management_prerelease_toggle_description">دسترسی زودهنگام به نسخه جدید پچ های آزمایشی را دریافت کنید</string>
-    <string name="sources_management_experimental_versions_toggle">استفاده از نسخه‌های آزمایشی برنامه</string>
-    <string name="sources_management_experimental_versions_toggle_description">در صورت موجود بودن، هدف‌های پچ نسخه آزمایشی برنامه را اعمال کنید</string>
     <string name="sources_management_already_exists">این منبع قبلاً اضافه شده است</string>
     <!-- Home Screen - Sources Dialogs -->
     <string name="sources_dialog_display_name">نام نمایشی</string>
@@ -159,9 +154,6 @@
     <string name="patch_option_list_empty_state">هنوز هیچ مقداری اضافه نشده است</string>
     <!-- Adaptive Icon Creator -->
     <string name="adaptive_icon_create">ایجاد آیکون تطبیقی</string>
-    <string name="adaptive_icon_instructions">یک تصویر پیش‌زمینه انتخاب کنید، یک رنگ پس‌زمینه انتخاب کنید، سپس از نوار لغزنده یا ژست‌های بزرگ‌نمایی/کوچک‌نمایی برای تنظیم پیش‌نمایش استفاده کنید</string>
-    <string name="adaptive_icon_preview">پیش‌نمایش آیکون تطبیقی</string>
-    <string name="adaptive_icon_preview_hint">برای بهترین نتیجه، آیکون خود را درون دایره داخلی کامل نگه دارید</string>
     <string name="adaptive_icon_select_image">یک تصویر انتخاب کنید</string>
     <string name="adaptive_icon_change_image">تغییر تصویر</string>
     <string name="adaptive_icon_background_color">رنگ پس‌زمینه</string>
@@ -170,12 +162,12 @@
     <string name="adaptive_icon_safe_zone_outer">ناحیه ماسک (ممکن است بریده شود)</string>
     <string name="adaptive_icon_created_success">آیکون تطبیقی با موفقیت ایجاد شد</string>
     <string name="adaptive_icon_creation_failed">ایجاد آیکون تطبیقی موفقیت‌آمیز نبود</string>
-    <string name="adaptive_icon_folder_explanation">محل ایجاد پوشه \'%1$s/%2$s\' با فایل‌های آیکون تولید شده را انتخاب کنید</string>
     <!-- Header Creator -->
     <!-- Home Screen - App Info Screen -->
     <!-- Home Screen - Root Mode -->
     <!-- Patcher Screen -->
     <!-- Patcher Screen - Patcher Steps -->
+    <!-- Battery optimization pre-flight dialog -->
     <!-- Patcher Screen - Patcher Worker -->
     <!-- Patcher Screen - Patcher Messages -->
     <!-- Morphe patches fix YouTube bugs that Google still has not fixed. -->
@@ -204,9 +196,8 @@
     <!-- Settings - Advanced Tab - Patch Options Section: Hide Shorts -->
     <!-- Settings - System Tab - Installer Section -->
     <!-- Settings - System Tab - Performance Section -->
-    <!-- Settings - System Tab - Import and export keystore -->
-    <!-- Settings - System Tab - Import and Export Manager Settings -->
-    <!-- Settings - System Tab - Debug Section -->
+    <string name="settings_system_battery_optimization">بهینه‌سازی باتری</string>
+    <!-- Settings - System Tab - Import and Export Section -->
     <!-- Settings - System Tab - Storage Management Section -->
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->

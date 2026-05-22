@@ -765,7 +765,11 @@ class PatchBundleRepository(
                 val ready = state as? BundleState.Ready ?: return@dispatchAction state
                 val src = ready.sources[uid] ?: return@dispatchAction state
                 val updated = src.copy(displayName = normalized)
-                ready.copy(sources = ready.sources.put(uid, updated))
+                val updatedInfo = ready.info[uid]?.copy(name = updated.displayTitle)
+                ready.copy(
+                    sources = ready.sources.put(uid, updated),
+                    info = if (updatedInfo != null) ready.info.put(uid, updatedInfo) else ready.info
+                )
             }
         }
 

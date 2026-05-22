@@ -4,9 +4,9 @@ import android.content.Context
 import java.io.File
 
 abstract class LibraryResolver {
-    protected fun findLibrary(context: Context, searchTerm: String): File? =
+    protected fun findPropOverrideLibrary(context: Context): File? =
         File(context.applicationInfo.nativeLibraryDir).run {
-            list { _, f -> !File(f).isDirectory && f.contains(searchTerm) }?.firstOrNull()
+            list { _, f -> !File(f).isDirectory && f.contains("prop_override") }?.firstOrNull()
                 ?.let { resolve(it) }
         }
 

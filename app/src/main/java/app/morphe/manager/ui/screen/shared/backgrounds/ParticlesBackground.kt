@@ -26,7 +26,7 @@ import kotlin.random.Random
  * Nearby particles connect with faint lines (same as constellation but more dynamic and dense).
  * Uses a dedicated frame loop so physics run at display rate regardless of [speedMultiplier].
  * [speedMultiplier] controls the drift velocity scale.
- * On patching completion all particles explode outward from the screen centre then drift back.
+ * On patching completion all particles explode outward from the screen center then drift back.
  */
 @Composable
 fun ParticlesBackground(
@@ -78,7 +78,7 @@ fun ParticlesBackground(
     val targetSpeedState = remember { mutableFloatStateOf(speedMultiplier) }
     SideEffect { targetSpeedState.floatValue = speedMultiplier }
 
-    // explodeProgress 0→1: particles burst from centre, then drift back naturally
+    // explodeProgress 0→1: particles burst from center, then drift back naturally
     val explodeProgress = remember { Animatable(0f) }
 
     CompletionEffect(patchingCompleted) {
@@ -86,7 +86,7 @@ fun ParticlesBackground(
             explodeProgress.snapTo(0f)
             // Burst outward
             explodeProgress.animateTo(1f, tween(500, easing = FastOutSlowInEasing))
-            // Smooth return — ep goes 1→0 so push gradually decreases to zero
+            // Smooth return - ep goes 1→0 so push gradually decreases to zero
             explodeProgress.animateTo(0f, tween(800, easing = FastOutSlowInEasing))
         }
     }
@@ -150,7 +150,7 @@ fun ParticlesBackground(
             val baseX = p.x * size.width  + tiltX * parallaxStrength
             val baseY = p.y * size.height + tiltY * parallaxStrength
 
-            // During explosion push outward from centre — ep smoothly goes 0→1→0
+            // During explosion push outward from center - ep smoothly goes 0→1→0
             // so return is just the same offset shrinking back to zero (no snap)
             if (ep > 0f) {
                 val dirX  = baseX - cx

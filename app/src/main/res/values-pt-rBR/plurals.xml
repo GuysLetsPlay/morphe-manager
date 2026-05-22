@@ -36,10 +36,6 @@
         <item quantity="one">%s patch selecionado</item>
         <item quantity="other">%s patches selecionados</item>
     </plurals>
-    <plurals name="home_app_show_selected">
-        <item quantity="one">Mostrar %s aplicativo</item>
-        <item quantity="other">Mostrar %s aplicativos</item>
-    </plurals>
     <plurals name="home_app_show_hidden_count">
         <item quantity="one">%s aplicativo oculto</item>
         <item quantity="other">%s aplicativos ocultos</item>

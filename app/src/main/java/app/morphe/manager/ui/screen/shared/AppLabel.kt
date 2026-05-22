@@ -36,8 +36,8 @@ fun AppLabel(
     style: TextStyle = LocalTextStyle.current,
     defaultText: String? = stringResource(R.string.not_installed),
     preferredSource: AppDataSource = AppDataSource.INSTALLED,
-    maxLines: Int = Int.MAX_VALUE,
-    overflow: TextOverflow = TextOverflow.Clip
+    maxLines: Int = 1,
+    overflow: TextOverflow = TextOverflow.Ellipsis
 ) {
     // If PackageInfo is provided, use the simple implementation
     if (packageInfo != null) {
@@ -85,8 +85,8 @@ private fun SimpleAppLabel(
     modifier: Modifier = Modifier,
     style: TextStyle = LocalTextStyle.current,
     defaultText: String? = null,
-    maxLines: Int = Int.MAX_VALUE,
-    overflow: TextOverflow = TextOverflow.Clip
+    maxLines: Int = 1,
+    overflow: TextOverflow = TextOverflow.Ellipsis
 ) {
     val context = LocalContext.current
 
@@ -151,8 +151,8 @@ private fun ResolvedAppLabel(
     style: TextStyle = LocalTextStyle.current,
     defaultText: String? = null,
     preferredSource: AppDataSource = AppDataSource.INSTALLED,
-    maxLines: Int = Int.MAX_VALUE,
-    overflow: TextOverflow = TextOverflow.Clip
+    maxLines: Int = 1,
+    overflow: TextOverflow = TextOverflow.Ellipsis
 ) {
     val appDataResolver: AppDataResolver = koinInject()
 

@@ -36,10 +36,6 @@
         <item quantity="one">%s  सुधारणा निवडली</item>
         <item quantity="other">%s  सुधारणा निवडल्या</item>
     </plurals>
-    <plurals name="home_app_show_selected">
-        <item quantity="one">%s ॲप दाखवा</item>
-        <item quantity="other">%s ॲप्स दाखवा</item>
-    </plurals>
     <plurals name="home_app_show_hidden_count">
         <item quantity="one">%s लपवलेले ॲप</item>
         <item quantity="other">%s लपवलेले ॲप्स</item>

@@ -129,13 +129,12 @@ class MorpheAPI(
      * Fetches a raw file directly from GitHub (raw.githubusercontent.com).
      * Does not attach auth headers — raw files are always public.
      */
-    private suspend inline fun <reified T> rawFileRequest(
+    private suspend inline fun <reified T> rawPatchesBundleRequest(
         config: RepoConfig,
-        branch: String,
-        path: String
+        branch: String
     ): APIResponse<T> {
-        val url = config.rawFileUrl(branch, path)
-        Log.d(tag, "rawFileRequest: $url")
+        val url = config.rawFileUrl(branch, "patches-bundle.json")
+        Log.d(tag, "rawPatchesBundleRequest: $url")
         return client.request { url(url) }
     }
 
@@ -348,7 +347,7 @@ class MorpheAPI(
      */
     private suspend fun getPatchesFromJson(usePrerelease: Boolean): APIResponse<MorpheAsset> {
         val branch = if (usePrerelease) "dev" else "main"
-        return when (val r = rawFileRequest<PatchesReleaseInfo>(patchesConfig, branch, "patches-bundle.json")) {
+        return when (val r = rawPatchesBundleRequest<PatchesReleaseInfo>(patchesConfig, branch)) {
             is APIResponse.Success -> runCatching {
                 mapPatchesJsonToAsset(patchesConfig, r.data).also {
                     Log.d(tag, "Patches JSON ($branch): ${it.version} → ${it.downloadUrl}")

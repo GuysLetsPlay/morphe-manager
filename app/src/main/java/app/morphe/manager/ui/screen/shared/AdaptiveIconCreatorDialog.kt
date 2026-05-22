@@ -16,13 +16,9 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.gestures.detectTransformGestures
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.Image
-import androidx.compose.material.icons.outlined.Info
-import androidx.compose.material.icons.outlined.RestartAlt
-import androidx.compose.material.icons.outlined.Save
+import androidx.compose.material.icons.outlined.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -34,6 +30,7 @@ import androidx.compose.ui.graphics.ColorFilter.Companion.colorMatrix
 import androidx.compose.ui.graphics.PathEffect
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.input.pointer.PointerEventPass
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
@@ -43,6 +40,8 @@ import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import androidx.core.graphics.createBitmap
+import androidx.core.graphics.get
+import androidx.core.graphics.scale
 import androidx.documentfile.provider.DocumentFile
 import app.morphe.manager.R
 import app.morphe.manager.util.*
@@ -69,6 +68,8 @@ private object AdaptiveIconConfig {
     const val BACKGROUND_FILE_NAME = "morphe_adaptive_background_custom.png"
     const val FOREGROUND_FILE_NAME = "morphe_adaptive_foreground_custom.png"
     const val NOTIFICATION_FILE_NAME = "morphe_notification_icon_custom.png"
+    const val MONOCHROME_ADAPTIVE_FILE_NAME = "morphe_adaptive_monochrome_custom.xml"
+    const val DRAWABLE_FOLDER_NAME = "drawable"
 
     // Density folders and sizes
     val DENSITY_CONFIGS = listOf(
@@ -93,6 +94,8 @@ private object AdaptiveIconConfig {
     // Transform constraints
     const val MIN_SCALE = 0.5f
     const val MAX_SCALE = 3.0f
+    // Notification icon must not exceed the status bar slot boundary
+    const val MAX_NOTIFICATION_SCALE = 2.0f
     const val MAX_OFFSET = 200f
 
     // Snap to center thresholds (in pixels)
@@ -110,17 +113,20 @@ private object AdaptiveIconConfig {
     const val SNAP_GUIDE_STROKE_WIDTH = 1.5f
     const val SNAP_GUIDE_ALPHA = 0.6f
 
-    // Default background color
-    const val DEFAULT_BACKGROUND_COLOR = "#B3E5FC"
+    // Used only as a ratio reference for safe zone corner calculations
+    val PREVIEW_SIZE = 150.dp
 
-    // Preview sizes
-    val PREVIEW_SIZE = 200.dp
-    val NOTIFICATION_PREVIEW_SIZE = 40.dp
+    // Adaptive icon preview shape, squircle approximation matching Pixel launcher mask
+    val PREVIEW_CORNER_RADIUS = 28.dp
+
+    // Viewport sizes for XML VectorDrawable output
+    const val MONOCHROME_ADAPTIVE_VIEWPORT = 108
 }
 
 /**
  * Dialog for creating adaptive icons with foreground and background customization.
- * Generates icons in proper sizes for all screen densities.
+ * Generates icons in proper sizes for all screen densities, plus XML VectorDrawable
+ * files for the monochrome adaptive layer and notification icon.
  */
 @Composable
 fun AdaptiveIconCreatorDialog(
@@ -132,59 +138,59 @@ fun AdaptiveIconCreatorDialog(
 
     var foregroundUri by remember { mutableStateOf<Uri?>(null) }
     var foregroundBitmap by remember { mutableStateOf<Bitmap?>(null) }
-    var backgroundColor by remember { mutableStateOf(AdaptiveIconConfig.DEFAULT_BACKGROUND_COLOR) }
+    val primaryContainer = MaterialTheme.colorScheme.primaryContainer
+    var backgroundColor by remember {
+        mutableStateOf(rgbToHex(primaryContainer.red, primaryContainer.green, primaryContainer.blue))
+    }
     val showColorPicker = remember { mutableStateOf(false) }
+    val showInfoDialog = remember { mutableStateOf(false) }
 
-    // Scaling and positioning state (adaptive icon)
+    // Adaptive icon transform state
     var scale by remember { mutableFloatStateOf(1f) }
     var offsetX by remember { mutableFloatStateOf(0f) }
     var offsetY by remember { mutableFloatStateOf(0f) }
 
-    // Scaling and positioning state (notification icon)
+    // Notification/monochrome icon transform state
     var notificationScale by remember { mutableFloatStateOf(1f) }
-    var notificationOffsetX by remember { mutableFloatStateOf(0f) }
-    var notificationOffsetY by remember { mutableFloatStateOf(0f) }
+
+    var showTransparencyWarning by remember { mutableStateOf(false) }
 
     val context = LocalContext.current
 
-    // Foreground image picker
-    val openForegroundPicker = rememberAdaptiveFilePicker(
-        mimeTypes = arrayOf("image/*"),
-        chooserTitle = stringResource(R.string.adaptive_icon_select_image)
-    ) { uri ->
+    // Foreground image picker, resets all transforms when a new image is loaded
+    val openForegroundPicker = rememberAdaptiveFilePicker(mimeTypes = arrayOf("image/*")) { uri ->
         uri?.let {
             foregroundUri = it
+            showTransparencyWarning = false
             scope.launch(Dispatchers.IO) {
                 try {
                     val inputStream = context.contentResolver.openInputStream(it)
                     val bitmap = BitmapFactory.decodeStream(inputStream)
                     inputStream?.close()
                     foregroundBitmap = bitmap
+                    val hasTransparency = bitmap?.hasTransparentPixels() == true
                     // Reset transform when new image is loaded
                     withContext(Dispatchers.Main) {
-                        scale = 1f
-                        offsetX = 0f
-                        offsetY = 0f
+                        scale = 1f; offsetX = 0f; offsetY = 0f
                         notificationScale = 1f
-                        notificationOffsetX = 0f
-                        notificationOffsetY = 0f
+                        showTransparencyWarning = !hasTransparency
                     }
                 } catch (e: Exception) {
-                    withContext(Dispatchers.Main) {
-                        context.toast("Failed to load image: ${e.message}")
-                    }
+                    withContext(Dispatchers.Main) { context.toast("Failed to load image: ${e.message}") }
                 }
             }
         }
     }
 
-    // Folder picker for saving
     val successMessage = stringResource(R.string.adaptive_icon_created_success)
     val failureMessage = stringResource(R.string.adaptive_icon_creation_failed)
+
+    var isCreating by remember { mutableStateOf(false) }
 
     // Folder picker for saving
     val openFolderPicker = rememberFolderPicker { uri ->
         scope.launch(Dispatchers.IO) {
+            withContext(Dispatchers.Main) { isCreating = true }
             try {
                 val success = createAdaptiveIcons(
                     context = context,
@@ -195,11 +201,10 @@ fun AdaptiveIconCreatorDialog(
                     scale = scale,
                     offsetX = offsetX,
                     offsetY = offsetY,
-                    notificationScale = notificationScale,
-                    notificationOffsetX = notificationOffsetX,
-                    notificationOffsetY = notificationOffsetY
+                    notificationScale = notificationScale
                 )
                 withContext(Dispatchers.Main) {
+                    isCreating = false
                     if (success != null) {
                         context.toast(successMessage)
                         onIconCreated(success)
@@ -210,6 +215,7 @@ fun AdaptiveIconCreatorDialog(
                 }
             } catch (e: Exception) {
                 withContext(Dispatchers.Main) {
+                    isCreating = false
                     context.toast("Failed to create icon: ${e.message}")
                 }
             }
@@ -217,138 +223,329 @@ fun AdaptiveIconCreatorDialog(
     }
 
     MorpheDialog(
-        onDismissRequest = onDismiss,
+        onDismissRequest = { if (!isCreating) onDismiss() },
         title = stringResource(R.string.adaptive_icon_create),
+        titleTrailingContent = {
+            IconButton(onClick = { showInfoDialog.value = true }) {
+                Icon(
+                    imageVector = Icons.Outlined.Info,
+                    contentDescription = stringResource(R.string.adaptive_icon_guide),
+                    modifier = Modifier.size(24.dp),
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+        },
         compactPadding = true,
         footer = {
+            MorpheDialogButton(
+                text = stringResource(R.string.adaptive_icon_create),
+                onClick = { openFolderPicker() },
+                enabled = foregroundBitmap != null && !isCreating,
+                icon = Icons.Outlined.Save,
+                modifier = Modifier.fillMaxWidth()
+            )
+        }
+    ) {
+        Box(modifier = Modifier.fillMaxWidth()) {
             Column(
                 modifier = Modifier.fillMaxWidth(),
-                verticalArrangement = Arrangement.spacedBy(8.dp)
+                verticalArrangement = Arrangement.spacedBy(10.dp)
             ) {
-                // Explanation text
+                // Foreground image picker
+                MorpheDialogOutlinedButton(
+                    text = if (foregroundUri == null)
+                        stringResource(R.string.adaptive_icon_select_image)
+                    else
+                        stringResource(R.string.adaptive_icon_change_image),
+                    onClick = { openForegroundPicker() },
+                    icon = Icons.Outlined.Image,
+                    modifier = Modifier.fillMaxWidth()
+                )
+
+                // Transparency warning shown when the selected image has no transparent pixels
                 AnimatedVisibility(
-                    visible = foregroundBitmap != null,
+                    visible = showTransparencyWarning,
                     enter = MorpheAnimations.expandFadeEnter,
                     exit = MorpheAnimations.shrinkFadeExit
                 ) {
-                    InfoBadge(
-                        text = stringResource(
-                            R.string.adaptive_icon_folder_explanation,
-                            AdaptiveIconConfig.BRANDING_FOLDER_NAME,
-                            AdaptiveIconConfig.iconFolderName(packageName)
-                        ),
-                        style = InfoBadgeStyle.Primary,
-                        icon = Icons.Outlined.Info
-                    )
-                }
-
-                // Create button
-                MorpheDialogButton(
-                    text = stringResource(R.string.adaptive_icon_create),
-                    onClick = { openFolderPicker() },
-                    enabled = foregroundBitmap != null,
-                    icon = Icons.Outlined.Save,
-                    modifier = Modifier.fillMaxWidth()
-                )
-            }
-        }
-    ) {
-        Column(
-            modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.spacedBy(16.dp)
-        ) {
-            // Instructions
-            InfoBadge(
-                text = stringResource(R.string.adaptive_icon_instructions),
-                style = InfoBadgeStyle.Primary,
-                icon = Icons.Outlined.Info
-            )
-
-            // Adaptive icon preview with safe zones
-            AdaptiveIconPreview(
-                foregroundBitmap = foregroundBitmap,
-                backgroundColor = backgroundColor,
-                scale = scale,
-                offsetX = offsetX,
-                offsetY = offsetY,
-                onScaleChange = { newScale ->
-                    scale = newScale.coerceIn(AdaptiveIconConfig.MIN_SCALE, AdaptiveIconConfig.MAX_SCALE)
-                },
-                onOffsetChange = { newOffsetX, newOffsetY ->
-                    offsetX = newOffsetX.coerceIn(-AdaptiveIconConfig.MAX_OFFSET, AdaptiveIconConfig.MAX_OFFSET)
-                    offsetY = newOffsetY.coerceIn(-AdaptiveIconConfig.MAX_OFFSET, AdaptiveIconConfig.MAX_OFFSET)
-                },
-                onBackgroundColorClick = { showColorPicker.value = true }
-            )
-
-            // Reset adaptive transform button
-            if (foregroundBitmap != null && (scale != 1f || offsetX != 0f || offsetY != 0f)) {
-                TextButton(
-                    onClick = {
-                        scale = 1f
-                        offsetX = 0f
-                        offsetY = 0f
-                    },
-                    modifier = Modifier.align(Alignment.CenterHorizontally)
-                ) {
-                    Icon(
-                        imageVector = Icons.Outlined.RestartAlt,
-                        contentDescription = null,
-                        modifier = Modifier.size(18.dp)
-                    )
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text(stringResource(R.string.adaptive_icon_reset_transform))
-                }
-            }
-
-            // Notification icon preview
-            if (foregroundBitmap != null) {
-                HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp))
-
-                NotificationIconPreview(
-                    foregroundBitmap = foregroundBitmap!!,
-                    scale = notificationScale,
-                    offsetX = notificationOffsetX,
-                    offsetY = notificationOffsetY,
-                    onScaleChange = { newScale ->
-                        notificationScale = newScale.coerceIn(AdaptiveIconConfig.MIN_SCALE, AdaptiveIconConfig.MAX_SCALE)
-                    },
-                    onOffsetChange = { newOffsetX, newOffsetY ->
-                        notificationOffsetX = newOffsetX.coerceIn(-AdaptiveIconConfig.MAX_OFFSET, AdaptiveIconConfig.MAX_OFFSET)
-                        notificationOffsetY = newOffsetY.coerceIn(-AdaptiveIconConfig.MAX_OFFSET, AdaptiveIconConfig.MAX_OFFSET)
-                    }
-                )
-
-                if (notificationScale != 1f || notificationOffsetX != 0f || notificationOffsetY != 0f) {
-                    TextButton(
-                        onClick = {
-                            notificationScale = 1f
-                            notificationOffsetX = 0f
-                            notificationOffsetY = 0f
-                        },
-                        modifier = Modifier.align(Alignment.CenterHorizontally)
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        verticalAlignment = Alignment.CenterVertically
                     ) {
                         Icon(
-                            imageVector = Icons.Outlined.RestartAlt,
+                            imageVector = Icons.Outlined.Info,
                             contentDescription = null,
-                            modifier = Modifier.size(18.dp)
+                            modifier = Modifier.size(16.dp),
+                            tint = MaterialTheme.colorScheme.error
                         )
-                        Spacer(modifier = Modifier.width(8.dp))
-                        Text(stringResource(R.string.adaptive_icon_reset_transform))
+                        Text(
+                            text = stringResource(R.string.adaptive_icon_no_transparency_warning),
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.error
+                        )
+                    }
+                }
+
+                // 2. Preview row: adaptive on the left, monochrome on the right.
+                //    Each column takes equal weight so the previews fill available width side by side
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(MorpheDefaults.ContentPadding),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    // Adaptive icon preview, interactive
+                    Column(
+                        modifier = Modifier.weight(1f),
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.spacedBy(4.dp)
+                    ) {
+                        Text(
+                            text = stringResource(R.string.adaptive_icon_label),
+                            style = MaterialTheme.typography.labelSmall,
+                            color = LocalDialogSecondaryTextColor.current
+                        )
+                        AdaptiveIconPreview(
+                            foregroundBitmap = foregroundBitmap,
+                            backgroundColor = backgroundColor,
+                            scale = scale,
+                            offsetX = offsetX,
+                            offsetY = offsetY,
+                            onScaleChange = {
+                                scale = it.coerceIn(
+                                    AdaptiveIconConfig.MIN_SCALE,
+                                    AdaptiveIconConfig.MAX_SCALE
+                                )
+                            },
+                            onOffsetChange = { x, y ->
+                                offsetX = x.coerceIn(
+                                    -AdaptiveIconConfig.MAX_OFFSET,
+                                    AdaptiveIconConfig.MAX_OFFSET
+                                )
+                                offsetY = y.coerceIn(
+                                    -AdaptiveIconConfig.MAX_OFFSET,
+                                    AdaptiveIconConfig.MAX_OFFSET
+                                )
+                            }
+                        )
+                    }
+
+                    // Monochrome preview, mirrors adaptive transforms
+                    Column(
+                        modifier = Modifier.weight(1f),
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.spacedBy(4.dp)
+                    ) {
+                        Text(
+                            text = stringResource(R.string.adaptive_icon_monochrome_label),
+                            style = MaterialTheme.typography.labelSmall,
+                            color = LocalDialogSecondaryTextColor.current
+                        )
+                        MonochromeAdaptiveCanvas(
+                            bitmap = foregroundBitmap,
+                            scale = scale,
+                            offsetX = offsetX,
+                            offsetY = offsetY
+                        )
+                    }
+                }
+
+                // Safe zone legend
+                val legendColor = MaterialTheme.colorScheme.onSurface
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(start = 36.dp),
+                    verticalArrangement = Arrangement.spacedBy(4.dp)
+                ) {
+                    SafeZoneLegendItem(
+                        baseColor = legendColor,
+                        alpha = AdaptiveIconConfig.SAFE_ZONE_INNER_ALPHA,
+                        isDashed = false,
+                        text = stringResource(R.string.adaptive_icon_safe_zone_inner)
+                    )
+                    SafeZoneLegendItem(
+                        baseColor = legendColor,
+                        alpha = AdaptiveIconConfig.SAFE_ZONE_OUTER_ALPHA,
+                        isDashed = true,
+                        text = stringResource(R.string.adaptive_icon_safe_zone_outer)
+                    )
+                }
+
+                // Adaptive scale slider
+                if (foregroundBitmap != null) {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 4.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        Icon(
+                            imageVector = Icons.Outlined.Image,
+                            contentDescription = null,
+                            modifier = Modifier.size(14.dp),
+                            tint = LocalDialogSecondaryTextColor.current
+                        )
+                        Spacer(Modifier.width(8.dp))
+                        Slider(
+                            value = scale,
+                            onValueChange = {
+                                scale = it.coerceIn(
+                                    AdaptiveIconConfig.MIN_SCALE,
+                                    AdaptiveIconConfig.MAX_SCALE
+                                )
+                            },
+                            valueRange = AdaptiveIconConfig.MIN_SCALE..AdaptiveIconConfig.MAX_SCALE,
+                            modifier = Modifier.weight(1f)
+                        )
+                        Spacer(Modifier.width(8.dp))
+                        Icon(
+                            imageVector = Icons.Outlined.Image,
+                            contentDescription = null,
+                            modifier = Modifier.size(22.dp),
+                            tint = LocalDialogSecondaryTextColor.current
+                        )
+                        // Spacer inside AnimatedVisibility so the gap also animates away
+                        AnimatedVisibility(
+                            visible = scale != 1f || offsetX != 0f || offsetY != 0f
+                        ) {
+                            Row {
+                                Spacer(Modifier.width(8.dp))
+                                IconButton(
+                                    onClick = { scale = 1f; offsetX = 0f; offsetY = 0f },
+                                    modifier = Modifier.size(40.dp)
+                                ) {
+                                    Icon(
+                                        imageVector = Icons.Outlined.RestartAlt,
+                                        contentDescription = stringResource(R.string.adaptive_icon_reset_transform),
+                                        modifier = Modifier.size(24.dp),
+                                        tint = MaterialTheme.colorScheme.onSurfaceVariant
+                                    )
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // 3. Status bar notification preview
+                Column(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalArrangement = Arrangement.spacedBy(4.dp)
+                ) {
+                    Text(
+                        text = stringResource(R.string.notification_icon_preview),
+                        style = MaterialTheme.typography.labelSmall,
+                        color = LocalDialogSecondaryTextColor.current,
+                        modifier = Modifier.align(Alignment.CenterHorizontally)
+                    )
+                    StatusBarPreview(
+                        bitmap = foregroundBitmap,
+                        scale = notificationScale
+                    )
+                }
+
+                // Notification scale slider
+                if (foregroundBitmap != null) {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 4.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        Icon(
+                            imageVector = Icons.Outlined.Image,
+                            contentDescription = null,
+                            modifier = Modifier.size(14.dp),
+                            tint = LocalDialogSecondaryTextColor.current
+                        )
+                        Spacer(Modifier.width(8.dp))
+                        Slider(
+                            value = notificationScale,
+                            onValueChange = {
+                                notificationScale = it.coerceIn(
+                                    AdaptiveIconConfig.MIN_SCALE,
+                                    AdaptiveIconConfig.MAX_NOTIFICATION_SCALE
+                                )
+                            },
+                            valueRange = AdaptiveIconConfig.MIN_SCALE..AdaptiveIconConfig.MAX_NOTIFICATION_SCALE,
+                            modifier = Modifier.weight(1f)
+                        )
+                        Spacer(Modifier.width(8.dp))
+                        Icon(
+                            imageVector = Icons.Outlined.Image,
+                            contentDescription = null,
+                            modifier = Modifier.size(22.dp),
+                            tint = LocalDialogSecondaryTextColor.current
+                        )
+                        // Spacer inside AnimatedVisibility so the gap also animates away
+                        AnimatedVisibility(
+                            visible = notificationScale != 1f
+                        ) {
+                            Row {
+                                Spacer(Modifier.width(8.dp))
+                                IconButton(
+                                    onClick = { notificationScale = 1f },
+                                    modifier = Modifier.size(40.dp)
+                                ) {
+                                    Icon(
+                                        imageVector = Icons.Outlined.RestartAlt,
+                                        contentDescription = stringResource(R.string.adaptive_icon_reset_transform),
+                                        modifier = Modifier.size(24.dp),
+                                        tint = MaterialTheme.colorScheme.onSurfaceVariant
+                                    )
+                                }
+                            }
+                        }
+                    }
+                }
+
+                HorizontalDivider()
+
+                // 4. Background color swatch - tap to open picker
+                Text(
+                    text = stringResource(R.string.adaptive_icon_background_color),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = LocalDialogSecondaryTextColor.current,
+                    modifier = Modifier.fillMaxWidth(),
+                    textAlign = TextAlign.Center
+                )
+                val swatchColor = parseColorToRgb(backgroundColor).let { (r, g, b) -> Color(r, g, b) }
+                Surface(
+                    onClick = { showColorPicker.value = true },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(56.dp),
+                    shape = RoundedCornerShape(12.dp),
+                    color = swatchColor,
+                    border = BorderStroke(2.dp, MaterialTheme.colorScheme.outline)
+                ) {
+                    Box(contentAlignment = Alignment.Center) {
+                        Text(
+                            text = backgroundColor.uppercase(),
+                            style = MaterialTheme.typography.titleSmall,
+                            fontWeight = FontWeight.SemiBold,
+                            color = if (swatchColor.requiresLightContent()) Color.White else Color.Black
+                        )
                     }
                 }
             }
-
-            // Foreground selection
-            MorpheDialogButton(
-                text = if (foregroundUri == null)
-                    stringResource(R.string.adaptive_icon_select_image)
-                else
-                    stringResource(R.string.adaptive_icon_change_image),
-                onClick = { openForegroundPicker() },
-                icon = Icons.Outlined.Image,
-                modifier = Modifier.fillMaxWidth()
-            )
+            if (isCreating) {
+                Box(
+                    modifier = Modifier
+                        .matchParentSize()
+                        .background(MaterialTheme.colorScheme.surface.copy(alpha = 0.8f))
+                        .pointerInput(Unit) {
+                            awaitPointerEventScope {
+                                while (true) {
+                                    awaitPointerEvent(PointerEventPass.Initial).changes.forEach { it.consume() }
+                                }
+                            }
+                        },
+                    contentAlignment = Alignment.Center
+                ) {
+                    CircularProgressIndicator()
+                }
+            }
         }
     }
 
@@ -364,12 +561,49 @@ fun AdaptiveIconCreatorDialog(
             onDismiss = { showColorPicker.value = false }
         )
     }
+
+    // Icon creation guide dialog
+    if (showInfoDialog.value) {
+        MorpheDialog(
+            onDismissRequest = { showInfoDialog.value = false },
+            title = stringResource(R.string.adaptive_icon_guide),
+            footer = {
+                MorpheDialogButton(
+                    text = stringResource(android.R.string.ok),
+                    onClick = { showInfoDialog.value = false },
+                    modifier = Modifier.fillMaxWidth()
+                )
+            }
+        ) {
+            Column(
+                modifier = Modifier.fillMaxWidth(),
+                verticalArrangement = Arrangement.spacedBy(16.dp)
+            ) {
+                AdaptiveIconGuideSection(
+                    title = stringResource(R.string.adaptive_icon_guide_png_title),
+                    body = stringResource(R.string.adaptive_icon_guide_png_body)
+                )
+                AdaptiveIconGuideSection(
+                    title = stringResource(R.string.adaptive_icon_guide_safe_zones_title),
+                    body = stringResource(R.string.adaptive_icon_guide_safe_zones_body)
+                )
+                AdaptiveIconGuideSection(
+                    title = stringResource(R.string.adaptive_icon_guide_notification_title),
+                    body = stringResource(R.string.adaptive_icon_guide_notification_body)
+                )
+                AdaptiveIconGuideSection(
+                    title = stringResource(R.string.adaptive_icon_guide_monochrome_title),
+                    body = stringResource(R.string.adaptive_icon_guide_monochrome_body)
+                )
+            }
+        }
+    }
 }
 
 /**
- * Preview component showing adaptive icon with safe zones and transform gestures.
+ * Adaptive icon preview circle with safe-zone guides and pinch/pan gesture support.
+ * Scale slider and reset button are rendered by the caller below the preview row.
  */
-@SuppressLint("LocalContextResourcesRead")
 @Composable
 private fun AdaptiveIconPreview(
     foregroundBitmap: Bitmap?,
@@ -378,268 +612,155 @@ private fun AdaptiveIconPreview(
     offsetX: Float,
     offsetY: Float,
     onScaleChange: (Float) -> Unit,
-    onOffsetChange: (Float, Float) -> Unit,
-    onBackgroundColorClick: () -> Unit
+    onOffsetChange: (Float, Float) -> Unit
 ) {
-    // Color for guides and safe zones inside the preview canvas
+    // Guide color adapts to background brightness to keep circles visible
     val previewGuideColor = remember(backgroundColor) {
         val bgColor = backgroundColor.toColorOrNull()
-            ?: AdaptiveIconConfig.DEFAULT_BACKGROUND_COLOR.toColorOrNull()
             ?: Color.Black
         if (bgColor.isDarkBackground()) Color.White else Color.Black
     }
-
-    // Color for the legend
-    val legendColor = MaterialTheme.colorScheme.onSurface
-
     // Dashed effect for snap guides and outer safe zone
     val dashEffect = PathEffect.dashPathEffect(floatArrayOf(10f, 6f), 0f)
 
-    Column(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(12.dp)
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .aspectRatio(1f)
+            .clip(RoundedCornerShape(AdaptiveIconConfig.PREVIEW_CORNER_RADIUS))
+            .background(
+                parseColorToRgb(backgroundColor).let { (r, g, b) -> Color(r, g, b) }
+            )
+            .border(2.dp, MaterialTheme.colorScheme.outline, RoundedCornerShape(AdaptiveIconConfig.PREVIEW_CORNER_RADIUS)),
+        contentAlignment = Alignment.Center
     ) {
-        Text(
-            text = stringResource(R.string.adaptive_icon_preview),
-            style = MaterialTheme.typography.titleSmall,
-            fontWeight = FontWeight.Bold,
-            color = LocalDialogTextColor.current
-        )
-        Text(
-            text = stringResource(R.string.adaptive_icon_preview_hint),
-            style = MaterialTheme.typography.bodySmall,
-            color = LocalDialogSecondaryTextColor.current,
-            textAlign = TextAlign.Center,
-            modifier = Modifier.padding(horizontal = 8.dp)
-        )
-
-        Box(
-            modifier = Modifier
-                .size(AdaptiveIconConfig.PREVIEW_SIZE)
-                .clip(CircleShape)
-                .background(
-                    parseColorToRgb(backgroundColor).let { (r, g, b) ->
-                        Color(r, g, b)
-                    }
-                )
-                .border(2.dp, MaterialTheme.colorScheme.outline, CircleShape),
-            contentAlignment = Alignment.Center
-        ) {
-            if (foregroundBitmap != null) {
-                var currentScale by remember { mutableFloatStateOf(scale) }
-                var currentOffsetX by remember { mutableFloatStateOf(offsetX) }
-                var currentOffsetY by remember { mutableFloatStateOf(offsetY) }
-
-                // Sync with parent state
-                LaunchedEffect(scale, offsetX, offsetY) {
-                    currentScale = scale
-                    currentOffsetX = offsetX
-                    currentOffsetY = offsetY
-                }
-
-                Canvas(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .pointerInput(Unit) {
-                            detectTransformGestures { _, pan, zoom, _ ->
-                                // Apply zoom
-                                currentScale *= zoom
-
-                                // Apply pan
-                                var newOffsetX = currentOffsetX + pan.x
-                                var newOffsetY = currentOffsetY + pan.y
-
-                                // Snap to center when close
-                                if (abs(newOffsetX) < AdaptiveIconConfig.SNAP_THRESHOLD) newOffsetX = 0f
-                                if (abs(newOffsetY) < AdaptiveIconConfig.SNAP_THRESHOLD) newOffsetY = 0f
-
-                                currentOffsetX = newOffsetX
-                                currentOffsetY = newOffsetY
-
-                                // Update parent state
-                                onScaleChange(currentScale)
-                                onOffsetChange(currentOffsetX, currentOffsetY)
-                            }
-                        }
-                ) {
-                    val centerX = size.width / 2
-                    val centerY = size.height / 2
-
-                    // Draw foreground image
-                    val imageBitmap = foregroundBitmap.asImageBitmap()
-
-                    // Calculate base size by fitting image to canvas while maintaining aspect ratio
-                    val imageAspect = imageBitmap.width.toFloat() / imageBitmap.height.toFloat()
-                    val canvasAspect = size.width / size.height  // For square canvas this is 1.0
-
-                    val (baseWidth, baseHeight) = if (imageAspect > canvasAspect) {
-                        // Image is wider - fit to width
-                        size.width to (size.width / imageAspect)
-                    } else {
-                        // Image is taller - fit to height
-                        (size.height * imageAspect) to size.height
-                    }
-
-                    // Apply user scale to the fitted size
-                    val scaledWidth = baseWidth * currentScale
-                    val scaledHeight = baseHeight * currentScale
-
-                    // Calculate position with offset
-                    val left = centerX - (scaledWidth / 2) + currentOffsetX
-                    val top = centerY - (scaledHeight / 2) + currentOffsetY
-
-                    drawImage(
-                        image = imageBitmap,
-                        dstOffset = IntOffset(left.toInt(), top.toInt()),
-                        dstSize = IntSize(scaledWidth.toInt(), scaledHeight.toInt())
-                    )
-
-                    // Draw dashed snap guides when close to center
-                    if (abs(currentOffsetX) < AdaptiveIconConfig.SNAP_GUIDE_THRESHOLD ||
-                        abs(currentOffsetY) < AdaptiveIconConfig.SNAP_GUIDE_THRESHOLD) {
-
-                        // Vertical center line
-                        if (abs(currentOffsetX) < AdaptiveIconConfig.SNAP_GUIDE_THRESHOLD) {
-                            drawLine(
-                                color = previewGuideColor.copy(alpha = AdaptiveIconConfig.SNAP_GUIDE_ALPHA),
-                                start = Offset(centerX, 0f),
-                                end = Offset(centerX, size.height),
-                                strokeWidth = AdaptiveIconConfig.SNAP_GUIDE_STROKE_WIDTH,
-                                pathEffect = dashEffect
-                            )
-                        }
-
-                        // Horizontal center line
-                        if (abs(currentOffsetY) < AdaptiveIconConfig.SNAP_GUIDE_THRESHOLD) {
-                            drawLine(
-                                color = previewGuideColor.copy(alpha = AdaptiveIconConfig.SNAP_GUIDE_ALPHA),
-                                start = Offset(0f, centerY),
-                                end = Offset(size.width, centerY),
-                                strokeWidth = AdaptiveIconConfig.SNAP_GUIDE_STROKE_WIDTH,
-                                pathEffect = dashEffect
-                            )
-                        }
-                    }
-
-                    // Outer safe zone (66% – mask area)
-                    drawCircle(
-                        color = previewGuideColor.copy(alpha = AdaptiveIconConfig.SAFE_ZONE_OUTER_ALPHA),
-                        radius = size.width * AdaptiveIconConfig.SAFE_ZONE_OUTER / 2,
-                        center = Offset(centerX, centerY),
-                        style = Stroke(
-                            width = AdaptiveIconConfig.SAFE_ZONE_STROKE_WIDTH,
-                            pathEffect = dashEffect
-                        )
-                    )
-
-                    // Inner safe zone (42% – always visible)
-                    drawCircle(
-                        color = previewGuideColor.copy(alpha = AdaptiveIconConfig.SAFE_ZONE_INNER_ALPHA),
-                        radius = size.width * AdaptiveIconConfig.SAFE_ZONE_INNER / 2,
-                        center = Offset(centerX, centerY),
-                        style = Stroke(width = AdaptiveIconConfig.SAFE_ZONE_STROKE_WIDTH)
-                    )
-                }
-            } else {
-                // Empty state – show only safe zones
-                Canvas(modifier = Modifier.fillMaxSize()) {
-                    val centerX = size.width / 2
-                    val centerY = size.height / 2
-
-                    // Outer safe zone – dashed
-                    drawCircle(
-                        color = previewGuideColor.copy(alpha = AdaptiveIconConfig.SAFE_ZONE_OUTER_ALPHA),
-                        radius = size.width * AdaptiveIconConfig.SAFE_ZONE_OUTER / 2,
-                        center = Offset(centerX, centerY),
-                        style = Stroke(
-                            width = AdaptiveIconConfig.SAFE_ZONE_STROKE_WIDTH,
-                            pathEffect = dashEffect
-                        )
-                    )
-
-                    // Inner safe zone – solid
-                    drawCircle(
-                        color = previewGuideColor.copy(alpha = AdaptiveIconConfig.SAFE_ZONE_INNER_ALPHA),
-                        radius = size.width * AdaptiveIconConfig.SAFE_ZONE_INNER / 2,
-                        center = Offset(centerX, centerY),
-                        style = Stroke(width = AdaptiveIconConfig.SAFE_ZONE_STROKE_WIDTH)
-                    )
-                }
-            }
-        }
-
-        // Background color picker row
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 4.dp),
-            horizontalArrangement = Arrangement.spacedBy(12.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Text(
-                text = stringResource(R.string.adaptive_icon_background_color),
-                style = MaterialTheme.typography.bodyMedium,
-                fontWeight = FontWeight.Medium,
-                color = LocalDialogTextColor.current,
-                modifier = Modifier.weight(1f)
-            )
-            Surface(
-                onClick = onBackgroundColorClick,
-                modifier = Modifier.size(40.dp),
-                shape = CircleShape,
-                color = parseColorToRgb(backgroundColor).let { (r, g, b) -> Color(r, g, b) },
-                border = BorderStroke(2.dp, MaterialTheme.colorScheme.outline)
-            ) {}
-        }
-
-        // Safe zone legend
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 16.dp),
-            verticalArrangement = Arrangement.spacedBy(4.dp)
-        ) {
-            SafeZoneLegendItem(
-                baseColor = legendColor,
-                alpha = AdaptiveIconConfig.SAFE_ZONE_INNER_ALPHA,
-                isDashed = false,
-                text = stringResource(R.string.adaptive_icon_safe_zone_inner)
-            )
-            SafeZoneLegendItem(
-                baseColor = legendColor,
-                alpha = AdaptiveIconConfig.SAFE_ZONE_OUTER_ALPHA,
-                isDashed = true,
-                text = stringResource(R.string.adaptive_icon_safe_zone_outer)
-            )
-        }
-
-        // Scale slider
         if (foregroundBitmap != null) {
-            Row(
+            var currentScale by remember { mutableFloatStateOf(scale) }
+            var currentOffsetX by remember { mutableFloatStateOf(offsetX) }
+            var currentOffsetY by remember { mutableFloatStateOf(offsetY) }
+
+            LaunchedEffect(scale, offsetX, offsetY) {
+                currentScale = scale
+                currentOffsetX = offsetX
+                currentOffsetY = offsetY
+            }
+
+            Canvas(
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 4.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    .fillMaxSize()
+                    .pointerInput(Unit) {
+                        detectTransformGestures { _, pan, zoom, _ ->
+                            currentScale *= zoom
+                            var newOffsetX = currentOffsetX + pan.x
+                            var newOffsetY = currentOffsetY + pan.y
+                            if (abs(newOffsetX) < AdaptiveIconConfig.SNAP_THRESHOLD) newOffsetX = 0f
+                            if (abs(newOffsetY) < AdaptiveIconConfig.SNAP_THRESHOLD) newOffsetY = 0f
+                            currentOffsetX = newOffsetX
+                            currentOffsetY = newOffsetY
+                            onScaleChange(currentScale)
+                            onOffsetChange(currentOffsetX, currentOffsetY)
+                        }
+                    }
             ) {
-                Icon(
-                    imageVector = Icons.Outlined.Image,
-                    contentDescription = null,
-                    modifier = Modifier.size(16.dp),
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant
+                val centerX = size.width / 2
+                val centerY = size.height / 2
+
+                // Draw foreground image
+                val imageBitmap = foregroundBitmap.asImageBitmap()
+
+                // Calculate base size by fitting image to canvas while maintaining aspect ratio
+                val imageAspect = imageBitmap.width.toFloat() / imageBitmap.height.toFloat()
+                val canvasAspect = size.width / size.height  // For square canvas this is 1.0
+
+                val (baseWidth, baseHeight) = if (imageAspect > canvasAspect) {
+                    // Image is wider - fit to width
+                    size.width to (size.width / imageAspect)
+                } else {
+                    // Image is taller - fit to height
+                    (size.height * imageAspect) to size.height
+                }
+
+                // Apply user scale to the fitted size
+                val scaledWidth = baseWidth * currentScale
+                val scaledHeight = baseHeight * currentScale
+
+                // Calculate position with offset
+                val left = centerX - (scaledWidth / 2) + currentOffsetX
+                val top = centerY - (scaledHeight / 2) + currentOffsetY
+
+                drawImage(
+                    image = imageBitmap,
+                    dstOffset = IntOffset(left.toInt(), top.toInt()),
+                    dstSize = IntSize(scaledWidth.toInt(), scaledHeight.toInt())
                 )
-                Slider(
-                    value = scale,
-                    onValueChange = { onScaleChange(it) },
-                    valueRange = AdaptiveIconConfig.MIN_SCALE..AdaptiveIconConfig.MAX_SCALE,
-                    modifier = Modifier.weight(1f)
+
+                // Draw dashed snap guides when close to center
+                if (abs(currentOffsetX) < AdaptiveIconConfig.SNAP_GUIDE_THRESHOLD) {
+                    // Vertical center line
+                    drawLine(
+                        color = previewGuideColor.copy(alpha = AdaptiveIconConfig.SNAP_GUIDE_ALPHA),
+                        start = Offset(centerX, 0f),
+                        end = Offset(centerX, size.height),
+                        strokeWidth = AdaptiveIconConfig.SNAP_GUIDE_STROKE_WIDTH,
+                        pathEffect = dashEffect
+                    )
+                }
+                if (abs(currentOffsetY) < AdaptiveIconConfig.SNAP_GUIDE_THRESHOLD) {
+                    // Horizontal center line
+                    drawLine(
+                        color = previewGuideColor.copy(alpha = AdaptiveIconConfig.SNAP_GUIDE_ALPHA),
+                        start = Offset(0f, centerY),
+                        end = Offset(size.width, centerY),
+                        strokeWidth = AdaptiveIconConfig.SNAP_GUIDE_STROKE_WIDTH,
+                        pathEffect = dashEffect
+                    )
+                }
+
+                // Outer safe zone (66%, mask area)
+                val outerSize = size.width * AdaptiveIconConfig.SAFE_ZONE_OUTER
+                val outerCorner = outerSize * (AdaptiveIconConfig.PREVIEW_CORNER_RADIUS.value / AdaptiveIconConfig.PREVIEW_SIZE.value)
+                drawRoundRect(
+                    color = previewGuideColor.copy(alpha = AdaptiveIconConfig.SAFE_ZONE_OUTER_ALPHA),
+                    topLeft = Offset(centerX - outerSize / 2, centerY - outerSize / 2),
+                    size = androidx.compose.ui.geometry.Size(outerSize, outerSize),
+                    cornerRadius = androidx.compose.ui.geometry.CornerRadius(outerCorner),
+                    style = Stroke(width = AdaptiveIconConfig.SAFE_ZONE_STROKE_WIDTH, pathEffect = dashEffect)
                 )
-                Icon(
-                    imageVector = Icons.Outlined.Image,
-                    contentDescription = null,
-                    modifier = Modifier.size(22.dp),
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant
+                // Inner safe zone (42%, always visible)
+                val innerSize = size.width * AdaptiveIconConfig.SAFE_ZONE_INNER
+                val innerCorner = innerSize * (AdaptiveIconConfig.PREVIEW_CORNER_RADIUS.value / AdaptiveIconConfig.PREVIEW_SIZE.value)
+                drawRoundRect(
+                    color = previewGuideColor.copy(alpha = AdaptiveIconConfig.SAFE_ZONE_INNER_ALPHA),
+                    topLeft = Offset(centerX - innerSize / 2, centerY - innerSize / 2),
+                    size = androidx.compose.ui.geometry.Size(innerSize, innerSize),
+                    cornerRadius = androidx.compose.ui.geometry.CornerRadius(innerCorner),
+                    style = Stroke(width = AdaptiveIconConfig.SAFE_ZONE_STROKE_WIDTH)
+                )
+            }
+        } else {
+            // Empty state, show only safe zones
+            Canvas(modifier = Modifier.fillMaxSize()) {
+                val centerX = size.width / 2
+                val centerY = size.height / 2
+                // Outer safe zone, dashed
+                val outerSize = size.width * AdaptiveIconConfig.SAFE_ZONE_OUTER
+                val outerCorner = outerSize * (AdaptiveIconConfig.PREVIEW_CORNER_RADIUS.value / AdaptiveIconConfig.PREVIEW_SIZE.value)
+                drawRoundRect(
+                    color = previewGuideColor.copy(alpha = AdaptiveIconConfig.SAFE_ZONE_OUTER_ALPHA),
+                    topLeft = Offset(centerX - outerSize / 2, centerY - outerSize / 2),
+                    size = androidx.compose.ui.geometry.Size(outerSize, outerSize),
+                    cornerRadius = androidx.compose.ui.geometry.CornerRadius(outerCorner),
+                    style = Stroke(width = AdaptiveIconConfig.SAFE_ZONE_STROKE_WIDTH, pathEffect = dashEffect)
+                )
+                // Inner safe zone, solid
+                val innerSize = size.width * AdaptiveIconConfig.SAFE_ZONE_INNER
+                val innerCorner = innerSize * (AdaptiveIconConfig.PREVIEW_CORNER_RADIUS.value / AdaptiveIconConfig.PREVIEW_SIZE.value)
+                drawRoundRect(
+                    color = previewGuideColor.copy(alpha = AdaptiveIconConfig.SAFE_ZONE_INNER_ALPHA),
+                    topLeft = Offset(centerX - innerSize / 2, centerY - innerSize / 2),
+                    size = androidx.compose.ui.geometry.Size(innerSize, innerSize),
+                    cornerRadius = androidx.compose.ui.geometry.CornerRadius(innerCorner),
+                    style = Stroke(width = AdaptiveIconConfig.SAFE_ZONE_STROKE_WIDTH)
                 )
             }
         }
@@ -647,163 +768,196 @@ private fun AdaptiveIconPreview(
 }
 
 /**
- * Preview for the notification icon - dark background simulating the status bar.
- * The foreground is drawn white (alpha-preserving) to reflect how Android renders
- * notification small icons.
+ * Status bar simulation showing the notification icon at actual size with a dashed slot boundary.
+ * Accepts a nullable bitmap so the slot guide is visible before an image is selected.
  */
 @Composable
-private fun NotificationIconPreview(
-    foregroundBitmap: Bitmap,
-    scale: Float,
-    offsetX: Float,
-    offsetY: Float,
-    onScaleChange: (Float) -> Unit,
-    onOffsetChange: (Float, Float) -> Unit
+private fun StatusBarPreview(
+    bitmap: Bitmap?,
+    scale: Float
 ) {
-    Column(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(12.dp)
+    val contentColor = MaterialTheme.colorScheme.onSurface
+    val guideColor = contentColor.copy(alpha = 0.5f)
+    val dashEffect = remember { PathEffect.dashPathEffect(floatArrayOf(3f, 3f), 0f) }
+    val shape = RoundedCornerShape(12.dp)
+    // Capture RGB components for use inside Canvas DrawScope
+    val iconR = contentColor.red * 255f
+    val iconG = contentColor.green * 255f
+    val iconB = contentColor.blue * 255f
+
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(44.dp)
+            .clip(shape)
+            .background(MaterialTheme.colorScheme.surfaceContainer)
+            .border(1.dp, MaterialTheme.colorScheme.outlineVariant, shape)
+            .padding(horizontal = 16.dp),
     ) {
-        Text(
-            text = stringResource(R.string.notification_icon_preview),
-            style = MaterialTheme.typography.titleSmall,
-            fontWeight = FontWeight.Bold,
-            color = LocalDialogTextColor.current
-        )
-
-        // Status-bar context strip
+        // Left side: clock + notification icon
         Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .clip(RoundedCornerShape(10.dp))
-                .background(Color(0xFF1A1A1A))
-                .padding(horizontal = 16.dp, vertical = 10.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(12.dp)
+            modifier = Modifier.align(Alignment.CenterStart),
+            horizontalArrangement = Arrangement.spacedBy(6.dp),
+            verticalAlignment = Alignment.CenterVertically
         ) {
-            // The notification icon canvas
-            Box(
-                modifier = Modifier
-                    .size(AdaptiveIconConfig.NOTIFICATION_PREVIEW_SIZE)
-                    .clip(CircleShape)
-                    .background(Color(0xFF1A1A1A))
-                    .border(1.dp, Color.White.copy(alpha = 0.15f), CircleShape),
-                contentAlignment = Alignment.Center
-            ) {
-                var currentOffsetX by remember { mutableFloatStateOf(offsetX) }
-                var currentOffsetY by remember { mutableFloatStateOf(offsetY) }
-
-                LaunchedEffect(offsetX, offsetY) {
-                    currentOffsetX = offsetX
-                    currentOffsetY = offsetY
-                }
-
-                Canvas(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .pointerInput(Unit) {
-                            detectTransformGestures { _, pan, _, _ ->
-                                var newOffsetX = currentOffsetX + pan.x
-                                var newOffsetY = currentOffsetY + pan.y
-                                if (abs(newOffsetX) < AdaptiveIconConfig.SNAP_THRESHOLD) newOffsetX = 0f
-                                if (abs(newOffsetY) < AdaptiveIconConfig.SNAP_THRESHOLD) newOffsetY = 0f
-                                currentOffsetX = newOffsetX
-                                currentOffsetY = newOffsetY
-                                onOffsetChange(currentOffsetX, currentOffsetY)
-                            }
-                        }
-                ) {
+            // Simulated clock
+            Text(
+                text = "9:41",
+                style = MaterialTheme.typography.bodyMedium,
+                fontWeight = FontWeight.Medium,
+                color = contentColor
+            )
+            // Notification icon at actual status bar size (~20 dp) with slot boundary guide
+            Canvas(modifier = Modifier.size(20.dp)) {
+                // Dashed border marks the notification icon slot boundary; content outside
+                // this area is clipped by Android in the real status bar
+                val iconStroke = Stroke(width = 1.dp.toPx(), pathEffect = dashEffect)
+                drawRect(
+                    color = guideColor,
+                    topLeft = Offset(0.5f, 0.5f),
+                    size = androidx.compose.ui.geometry.Size(size.width - 1f, size.height - 1f),
+                    style = iconStroke
+                )
+                if (bitmap != null) {
                     val centerX = size.width / 2
                     val centerY = size.height / 2
-                    val imageBitmap = foregroundBitmap.asImageBitmap()
+                    val imageBitmap = bitmap.asImageBitmap()
                     val imageAspect = imageBitmap.width.toFloat() / imageBitmap.height.toFloat()
-
                     val (baseWidth, baseHeight) = if (imageAspect > 1f)
                         size.width to (size.width / imageAspect)
                     else
                         (size.height * imageAspect) to size.height
-
                     val scaledWidth = baseWidth * scale
                     val scaledHeight = baseHeight * scale
-                    val left = centerX - scaledWidth / 2 + currentOffsetX
-                    val top = centerY - scaledHeight / 2 + currentOffsetY
-
+                    val left = centerX - scaledWidth / 2
+                    val top = centerY - scaledHeight / 2
+                    // Recolor all pixels to match onSurface (alpha-preserving); simulates how
+                    // Android renders notification small icons in the status bar
                     drawImage(
                         image = imageBitmap,
                         dstOffset = IntOffset(left.toInt(), top.toInt()),
                         dstSize = IntSize(scaledWidth.toInt(), scaledHeight.toInt()),
                         colorFilter = colorMatrix(
                             androidx.compose.ui.graphics.ColorMatrix(floatArrayOf(
-                                0f, 0f, 0f, 0f, 255f,
-                                0f, 0f, 0f, 0f, 255f,
-                                0f, 0f, 0f, 0f, 255f,
+                                0f, 0f, 0f, 0f, iconR,
+                                0f, 0f, 0f, 0f, iconG,
+                                0f, 0f, 0f, 0f, iconB,
                                 0f, 0f, 0f, 1f, 0f
                             ))
                         )
                     )
                 }
             }
+        }
 
-            // Placeholder notification text to give context
-            Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                Box(
-                    modifier = Modifier
-                        .width(100.dp)
-                        .height(8.dp)
-                        .clip(RoundedCornerShape(4.dp))
-                        .background(Color.White.copy(alpha = 0.4f))
-                )
-                Box(
-                    modifier = Modifier
-                        .width(60.dp)
-                        .height(6.dp)
-                        .clip(RoundedCornerShape(3.dp))
-                        .background(Color.White.copy(alpha = 0.2f))
+        // Right side: system status icons
+        Row(
+            modifier = Modifier.align(Alignment.CenterEnd),
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Icon(
+                imageVector = Icons.Outlined.SignalCellular4Bar,
+                contentDescription = null,
+                modifier = Modifier.size(20.dp),
+                tint = contentColor
+            )
+            Icon(
+                imageVector = Icons.Outlined.Wifi,
+                contentDescription = null,
+                modifier = Modifier.size(20.dp),
+                tint = contentColor
+            )
+            Icon(
+                imageVector = Icons.Outlined.BatteryFull,
+                contentDescription = null,
+                modifier = Modifier.size(20.dp),
+                tint = contentColor
+            )
+        }
+    }
+}
+
+/**
+ * Non-interactive monochrome icon preview using theme accent colors to simulate launcher themed icons.
+ * Accepts a nullable bitmap so the colored background is visible before an image is selected.
+ */
+@Composable
+private fun MonochromeAdaptiveCanvas(
+    bitmap: Bitmap?,
+    scale: Float,
+    offsetX: Float,
+    offsetY: Float
+) {
+    val shape = RoundedCornerShape(AdaptiveIconConfig.PREVIEW_CORNER_RADIUS)
+    // Read accent colors outside Canvas; must be stable across recompositions.
+    // Icon uses primaryContainer so it reads as a cutout from the onPrimaryContainer background
+    val iconColor = MaterialTheme.colorScheme.primaryContainer
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .aspectRatio(1f)
+            .clip(shape)
+            .background(MaterialTheme.colorScheme.onPrimaryContainer)
+            .border(2.dp, MaterialTheme.colorScheme.outline, shape),
+        contentAlignment = Alignment.Center
+    ) {
+        if (bitmap != null) {
+            Canvas(modifier = Modifier.fillMaxSize()) {
+                // Image fitting mirrors AdaptiveIconPreview: fill the canvas dimension that matches
+                // the image's longer edge, then scale/offset using the shared state values
+                val imageBitmap = bitmap.asImageBitmap()
+                val imageAspect = imageBitmap.width.toFloat() / imageBitmap.height.toFloat()
+                val (baseWidth, baseHeight) = if (imageAspect > 1f)
+                    size.width to (size.width / imageAspect)
+                else
+                    (size.width * imageAspect) to size.width
+                val scaledWidth = baseWidth * scale
+                val scaledHeight = baseHeight * scale
+                val left = (size.width - scaledWidth) / 2 + offsetX
+                val top = (size.height - scaledHeight) / 2 + offsetY
+                // Force all channels to the accent foreground color (alpha-preserving);
+                // launchers apply the same tint at runtime
+                drawImage(
+                    image = imageBitmap,
+                    dstOffset = IntOffset(left.toInt(), top.toInt()),
+                    dstSize = IntSize(scaledWidth.toInt(), scaledHeight.toInt()),
+                    colorFilter = colorMatrix(
+                        androidx.compose.ui.graphics.ColorMatrix(floatArrayOf(
+                            0f, 0f, 0f, 0f, iconColor.red * 255,
+                            0f, 0f, 0f, 0f, iconColor.green * 255,
+                            0f, 0f, 0f, 0f, iconColor.blue * 255,
+                            0f, 0f, 0f, 1f, 0f
+                        ))
+                    )
                 )
             }
         }
+    }
+}
 
-        // Scale slider
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 4.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(8.dp)
-        ) {
-            Icon(
-                imageVector = Icons.Outlined.Image,
-                contentDescription = null,
-                modifier = Modifier.size(16.dp),
-                tint = LocalDialogSecondaryTextColor.current
-            )
-            Slider(
-                value = scale,
-                onValueChange = { onScaleChange(it) },
-                valueRange = AdaptiveIconConfig.MIN_SCALE..AdaptiveIconConfig.MAX_SCALE,
-                modifier = Modifier.weight(1f)
-            )
-            Icon(
-                imageVector = Icons.Outlined.Image,
-                contentDescription = null,
-                modifier = Modifier.size(22.dp),
-                tint = LocalDialogSecondaryTextColor.current
-            )
-        }
-
+/**
+ * One section of the icon creation guide: bold title followed by a description.
+ */
+@Composable
+private fun AdaptiveIconGuideSection(title: String, body: String) {
+    Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
         Text(
-            text = stringResource(R.string.notification_icon_preview_hint),
+            text = title,
+            style = MaterialTheme.typography.bodyMedium,
+            fontWeight = FontWeight.SemiBold,
+            color = LocalDialogTextColor.current
+        )
+        Text(
+            text = body,
             style = MaterialTheme.typography.bodySmall,
-            color = LocalDialogSecondaryTextColor.current,
-            textAlign = TextAlign.Center,
-            modifier = Modifier.padding(horizontal = 8.dp)
+            color = LocalDialogSecondaryTextColor.current
         )
     }
 }
 
 /**
- * Legend item for safe zones – shows a small circle with solid or dashed stroke.
+ * Legend item for safe zones, shows a small circle with solid or dashed stroke.
  */
 @Composable
 private fun SafeZoneLegendItem(
@@ -813,20 +967,17 @@ private fun SafeZoneLegendItem(
     text: String
 ) {
     val itemColor = baseColor.copy(alpha = alpha)
-
     Row(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         Canvas(modifier = Modifier.size(16.dp)) {
             val dashEffect = if (isDashed) PathEffect.dashPathEffect(floatArrayOf(8f, 6f), 0f) else null
-            drawCircle(
+            val corner = size.minDimension * 0.25f
+            drawRoundRect(
                 color = itemColor,
-                radius = size.minDimension / 2,
-                style = Stroke(
-                    width = 2.5f,
-                    pathEffect = dashEffect
-                )
+                cornerRadius = androidx.compose.ui.geometry.CornerRadius(corner),
+                style = Stroke(width = 2.5f, pathEffect = dashEffect)
             )
         }
         Text(
@@ -859,14 +1010,12 @@ private suspend fun createAdaptiveIcons(
     scale: Float,
     offsetX: Float,
     offsetY: Float,
-    notificationScale: Float,
-    notificationOffsetX: Float,
-    notificationOffsetY: Float
+    notificationScale: Float
 ): String? = withContext(Dispatchers.IO) {
     try {
         val baseDocDir = DocumentFile.fromTreeUri(context, baseUri) ?: return@withContext null
 
-        // Create directory structure: morphe_branding/morphe_icons_youtube or morphe_icons_music
+        // Create directory structure: BRANDING_FOLDER_NAME/YOUTUBE_ICONS_FOLDER_NAME or YTM_ICONS_FOLDER_NAME
         val brandingDocDir = baseDocDir.getOrCreateDir(AdaptiveIconConfig.BRANDING_FOLDER_NAME)
             ?: return@withContext null
 
@@ -881,7 +1030,7 @@ private suspend fun createAdaptiveIcons(
         // Get preview density for offset calculations
         val previewDensity = context.resources.displayMetrics.density
 
-        // Create icons for all densities
+        // Generate adaptive icon PNGs (foreground + background) for all densities
         AdaptiveIconConfig.DENSITY_CONFIGS.forEach { densityConfig ->
             createIconsForDensity(
                 context = context,
@@ -896,20 +1045,44 @@ private suspend fun createAdaptiveIcons(
             )
         }
 
-        // Create notification icons for all densities.
-        // The notification icon is the foreground with the same transforms applied,
-        // recolored to solid white to match Material Design guidelines for notification icons
+        // Monochrome and notification outputs are always derived from the foreground bitmap
+        val monochromeSrc = foregroundBitmap
+
+        // Generate notification icon PNGs for all densities
         AdaptiveIconConfig.NOTIFICATION_DENSITY_CONFIGS.forEach { densityConfig ->
             createNotificationIconForDensity(
                 context = context,
                 iconsDocDir = iconsDocDir,
                 densityConfig = densityConfig,
-                foregroundBitmap = foregroundBitmap,
+                sourceBitmap = monochromeSrc,
                 scale = notificationScale,
-                offsetX = notificationOffsetX,
-                offsetY = notificationOffsetY,
                 previewDensity = previewDensity
             )
+        }
+
+        // Generate XML VectorDrawable files in a 'drawable' folder
+        val drawableDocDir = iconsDocDir.getOrCreateDir(AdaptiveIconConfig.DRAWABLE_FOLDER_NAME)
+        if (drawableDocDir != null) {
+            val plainPaint = Paint().apply { isAntiAlias = true; isFilterBitmap = true; isDither = true }
+
+            // Monochrome adaptive layer: render at 16x oversample (1728x1728) so each scanline
+            // is 0.0625 viewport units tall, making stair-stepping sub-pixel on all densities.
+            val monoOversample = 16
+            val adaptiveMonoBmp = renderBitmapWithAdaptiveTransforms(
+                sourceBitmap = monochromeSrc,
+                targetSize = AdaptiveIconConfig.MONOCHROME_ADAPTIVE_VIEWPORT * monoOversample,
+                scale = scale,
+                offsetX = offsetX,
+                offsetY = offsetY,
+                previewDensity = previewDensity,
+                paint = plainPaint
+            )
+            val adaptiveMonoXml = createMonochromeVectorXml(
+                bitmap = adaptiveMonoBmp,
+                coordinateScale = 1f / monoOversample
+            )
+            adaptiveMonoBmp.recycle()
+            saveXmlToDocFile(context, drawableDocDir, adaptiveMonoXml)
         }
 
         // Convert back to a real path so the patcher can reference it as a patch option value
@@ -921,7 +1094,7 @@ private suspend fun createAdaptiveIcons(
 }
 
 /**
- * Create icon files for a specific density.
+ * Create foreground and background icon files for a specific density.
  */
 private fun createIconsForDensity(
     context: Context,
@@ -951,111 +1124,46 @@ private fun createIconsForDensity(
     canvas.drawRect(0f, 0f, targetSize.toFloat(), targetSize.toFloat(), paint)
 
     // Create foreground bitmap with scaling and offset
-    val foregroundScaled = createBitmap(targetSize, targetSize)
-    val foregroundCanvas = Canvas(foregroundScaled)
-
-    // Preview canvas size in pixels
-    val previewCanvasSize = AdaptiveIconConfig.PREVIEW_SIZE.value * previewDensity
-
-    // Calculate base size by fitting image to canvas (same logic as preview)
-    val imageAspect = foregroundBitmap.width.toFloat() / foregroundBitmap.height.toFloat()
-
-    val (baseWidth, baseHeight) = if (imageAspect > 1.0f) {
-        // Image is wider - fit to width
-        previewCanvasSize to (previewCanvasSize / imageAspect)
-    } else {
-        // Image is taller - fit to height
-        (previewCanvasSize * imageAspect) to previewCanvasSize
-    }
-
-    // Apply user scale to the fitted size
-    val scaledWidth = baseWidth * scale
-    val scaledHeight = baseHeight * scale
-
-    // Convert to target bitmap coordinates
-    val targetScaledWidth = scaledWidth * (targetSize / previewCanvasSize)
-    val targetScaledHeight = scaledHeight * (targetSize / previewCanvasSize)
-
-    // Convert offsets from preview canvas pixels to target bitmap pixels
-    val targetOffsetX = offsetX * (targetSize / previewCanvasSize)
-    val targetOffsetY = offsetY * (targetSize / previewCanvasSize)
-
-    val left = (targetSize - targetScaledWidth) / 2 + targetOffsetX
-    val top = (targetSize - targetScaledHeight) / 2 + targetOffsetY
-
-    // Create Paint with antialiasing and bicubic filtering for high-quality scaling
-    val bitmapPaint = Paint().apply {
-        isAntiAlias = true
-        isFilterBitmap = true
-        isDither = true
-    }
-    foregroundCanvas.drawBitmap(foregroundBitmap, null, RectF(left, top, left + targetScaledWidth, top + targetScaledHeight), bitmapPaint)
+    // Paint with antialiasing and bicubic filtering for high-quality scaling
+    val bitmapPaint = Paint().apply { isAntiAlias = true; isFilterBitmap = true; isDither = true }
+    val foregroundScaled = renderBitmapWithAdaptiveTransforms(
+        sourceBitmap = foregroundBitmap,
+        targetSize = targetSize,
+        scale = scale,
+        offsetX = offsetX,
+        offsetY = offsetY,
+        previewDensity = previewDensity,
+        paint = bitmapPaint
+    )
 
     mipmapDocDir.getOrCreateFile("image/png", AdaptiveIconConfig.BACKGROUND_FILE_NAME)
-        ?.let { context.contentResolver.openOutputStream(it.uri)?.use { out
-            -> backgroundBitmap.compress(Bitmap.CompressFormat.PNG, 100, out) } }
+        ?.let { context.contentResolver.openOutputStream(it.uri)?.use { out ->
+            backgroundBitmap.compress(Bitmap.CompressFormat.PNG, 100, out) } }
 
     mipmapDocDir.getOrCreateFile("image/png", AdaptiveIconConfig.FOREGROUND_FILE_NAME)
-        ?.let { context.contentResolver.openOutputStream(it.uri)?.use { out
-            -> foregroundScaled.compress(Bitmap.CompressFormat.PNG, 100, out) } }
+        ?.let { context.contentResolver.openOutputStream(it.uri)?.use { out ->
+            foregroundScaled.compress(Bitmap.CompressFormat.PNG, 100, out) } }
 
     backgroundBitmap.recycle()
     foregroundScaled.recycle()
 }
 
 /**
- * Create a notification icon for a specific density.
- *
- * Takes the foreground with the same scale/offset transforms applied and recolors
- * all pixels to solid white (preserving alpha) to match Material Design guidelines
- * for notification small icons.
+ * Create a notification icon PNG for a specific density.
+ * The source bitmap is recolored white (alpha-preserving) per Material Design guidelines.
  */
 private fun createNotificationIconForDensity(
     context: Context,
     iconsDocDir: DocumentFile,
     densityConfig: AdaptiveIconConfig.DensityConfig,
-    foregroundBitmap: Bitmap,
+    sourceBitmap: Bitmap,
     scale: Float,
-    offsetX: Float,
-    offsetY: Float,
     previewDensity: Float
 ) {
     val targetSize = densityConfig.size
 
     // Create drawable-<dpi> directory inside the icons folder
     val drawableDocDir = iconsDocDir.getOrCreateDir(densityConfig.folderName) ?: return
-
-    val notificationBitmap = createBitmap(targetSize, targetSize)
-    val canvas = Canvas(notificationBitmap)
-
-    // The notification icon should fill its small canvas the same way the foreground
-    // fills the adaptive icon safe zone. We therefore express the user's transform
-    // relative to the safe zone size and then map it onto the full notification canvas
-    val previewCanvasSize = AdaptiveIconConfig.PREVIEW_SIZE.value * previewDensity
-    val imageAspect = foregroundBitmap.width.toFloat() / foregroundBitmap.height.toFloat()
-
-    // Size of the outer safe zone in preview canvas pixels
-    val safeZoneSize = previewCanvasSize * AdaptiveIconConfig.SAFE_ZONE_OUTER
-
-    // Base fitted size - fitted to safe zone, not the full canvas
-    val (baseWidth, baseHeight) = if (imageAspect > 1.0f) {
-        safeZoneSize to (safeZoneSize / imageAspect)
-    } else {
-        (safeZoneSize * imageAspect) to safeZoneSize
-    }
-
-    // Apply user scale, then map to target notification canvas size
-    val scaledWidth = baseWidth * scale
-    val scaledHeight = baseHeight * scale
-    val targetScaledWidth = scaledWidth * (targetSize / safeZoneSize)
-    val targetScaledHeight = scaledHeight * (targetSize / safeZoneSize)
-
-    // Offset is also relative to the safe zone so that the same visual shift
-    // the user sees in the preview is preserved in the notification icon
-    val targetOffsetX = offsetX * (targetSize / safeZoneSize)
-    val targetOffsetY = offsetY * (targetSize / safeZoneSize)
-    val left = (targetSize - targetScaledWidth) / 2 + targetOffsetX
-    val top = (targetSize - targetScaledHeight) / 2 + targetOffsetY
 
     // ColorMatrix that turns every pixel white while keeping its alpha channel intact:
     //   R = 1, G = 1, B = 1, A = original alpha
@@ -1071,11 +1179,174 @@ private fun createNotificationIconForDensity(
         )))
     }
 
-    canvas.drawBitmap(foregroundBitmap, null, RectF(left, top, left + targetScaledWidth, top + targetScaledHeight), whitePaint)
+    val notificationBitmap = renderBitmapWithNotificationTransforms(
+        sourceBitmap = sourceBitmap,
+        targetSize = targetSize,
+        scale = scale,
+        previewDensity = previewDensity,
+        paint = whitePaint
+    )
 
     drawableDocDir.getOrCreateFile("image/png", AdaptiveIconConfig.NOTIFICATION_FILE_NAME)
-        ?.let { context.contentResolver.openOutputStream(it.uri)?.use { out
-            -> notificationBitmap.compress(Bitmap.CompressFormat.PNG, 100, out) } }
+        ?.let { context.contentResolver.openOutputStream(it.uri)?.use { out ->
+            notificationBitmap.compress(Bitmap.CompressFormat.PNG, 100, out) } }
 
     notificationBitmap.recycle()
+}
+
+/**
+ * Render [sourceBitmap] into a [targetSize]×[targetSize] canvas using the same
+ * coordinate mapping as the adaptive icon preview (fitted to full preview canvas).
+ */
+private fun renderBitmapWithAdaptiveTransforms(
+    sourceBitmap: Bitmap,
+    targetSize: Int,
+    scale: Float,
+    offsetX: Float,
+    offsetY: Float,
+    previewDensity: Float,
+    paint: Paint = Paint().apply { isAntiAlias = true; isFilterBitmap = true }
+): Bitmap {
+    val result = createBitmap(targetSize, targetSize)
+    val canvas = Canvas(result)
+    // Preview canvas size in pixels, the coordinate origin for scale/offset values
+    val previewCanvasSize = AdaptiveIconConfig.PREVIEW_SIZE.value * previewDensity
+    // Calculate base size by fitting image to canvas (same logic as preview composable)
+    val imageAspect = sourceBitmap.width.toFloat() / sourceBitmap.height.toFloat()
+    val (baseWidth, baseHeight) = if (imageAspect > 1f) {
+        // Image is wider - fit to width
+        previewCanvasSize to (previewCanvasSize / imageAspect)
+    } else {
+        // Image is taller - fit to height
+        (previewCanvasSize * imageAspect) to previewCanvasSize
+    }
+    // Apply user scale to the fitted size
+    val scaledWidth = baseWidth * scale
+    val scaledHeight = baseHeight * scale
+    // Map from preview-canvas coordinates to target-bitmap coordinates
+    val ratio = targetSize / previewCanvasSize
+    val targetScaledWidth = scaledWidth * ratio
+    val targetScaledHeight = scaledHeight * ratio
+    // Convert offsets from preview-canvas pixels to target-bitmap pixels
+    val targetOffsetX = offsetX * ratio
+    val targetOffsetY = offsetY * ratio
+    val left = (targetSize - targetScaledWidth) / 2 + targetOffsetX
+    val top = (targetSize - targetScaledHeight) / 2 + targetOffsetY
+    canvas.drawBitmap(sourceBitmap, null, RectF(left, top, left + targetScaledWidth, top + targetScaledHeight), paint)
+    return result
+}
+
+/**
+ * Render [sourceBitmap] into a [targetSize]×[targetSize] canvas using the notification
+ * icon coordinate mapping (fitted to the outer safe zone region).
+ */
+private fun renderBitmapWithNotificationTransforms(
+    sourceBitmap: Bitmap,
+    targetSize: Int,
+    scale: Float,
+    previewDensity: Float,
+    paint: Paint = Paint().apply { isAntiAlias = true; isFilterBitmap = true }
+): Bitmap {
+    val result = createBitmap(targetSize, targetSize)
+    val canvas = Canvas(result)
+    // The notification icon should fill its small canvas the same way the foreground
+    // fills the adaptive icon safe zone. We therefore express the user's transform
+    // relative to the safe zone size and then map it onto the full notification canvas
+    val previewCanvasSize = AdaptiveIconConfig.PREVIEW_SIZE.value * previewDensity
+    // Size of the outer safe zone in preview canvas pixels
+    val safeZoneSize = previewCanvasSize * AdaptiveIconConfig.SAFE_ZONE_OUTER
+    // Base fitted size, fitted to safe zone, not the full canvas
+    val imageAspect = sourceBitmap.width.toFloat() / sourceBitmap.height.toFloat()
+    val (baseWidth, baseHeight) = if (imageAspect > 1f) {
+        safeZoneSize to (safeZoneSize / imageAspect)
+    } else {
+        (safeZoneSize * imageAspect) to safeZoneSize
+    }
+    // Apply user scale, then map to target notification canvas size
+    val scaledWidth = baseWidth * scale
+    val scaledHeight = baseHeight * scale
+    val ratio = targetSize / safeZoneSize
+    val targetScaledWidth = scaledWidth * ratio
+    val targetScaledHeight = scaledHeight * ratio
+    val left = (targetSize - targetScaledWidth) / 2
+    val top = (targetSize - targetScaledHeight) / 2
+    canvas.drawBitmap(sourceBitmap, null, RectF(left, top, left + targetScaledWidth, top + targetScaledHeight), paint)
+    return result
+}
+
+/**
+ * Convert a bitmap's alpha channel to SVG/VectorDrawable path data using scanline spans.
+ * Each row of opaque pixels (alpha > 127) is encoded as one or more horizontal rect commands.
+ * [coordinateScale] maps bitmap pixel coordinates to viewport units (use 1f/oversampleFactor for oversampled bitmaps).
+ */
+private fun bitmapToVectorPathData(bitmap: Bitmap, coordinateScale: Float = 1f): String {
+    val width = bitmap.width
+    val height = bitmap.height
+    val sb = StringBuilder()
+    // Each row is scanned left-to-right; adjacent opaque pixels are merged into spans,
+    // so the number of path commands equals the number of horizontal spans, not pixels
+    for (y in 0 until height) {
+        var spanStart = -1
+        for (x in 0 until width) {
+            val opaque = android.graphics.Color.alpha(bitmap[x, y]) > 127
+            if (opaque && spanStart == -1) {
+                spanStart = x
+            } else if (!opaque && spanStart != -1) {
+                val sx = spanStart * coordinateScale
+                val sy = y * coordinateScale
+                val sw = (x - spanStart) * coordinateScale
+                sb.append("M$sx,${sy}h${sw}v${coordinateScale}h-${sw}z")
+                spanStart = -1
+            }
+        }
+        if (spanStart != -1) {
+            val sx = spanStart * coordinateScale
+            val sy = y * coordinateScale
+            val sw = (width - spanStart) * coordinateScale
+            sb.append("M$sx,${sy}h${sw}v${coordinateScale}h-${sw}z")
+        }
+    }
+    return sb.toString()
+}
+
+/**
+ * Create an Android VectorDrawable XML string from a pre-rendered monochrome bitmap.
+ * The bitmap's alpha channel defines the icon shape.
+ * [coordinateScale] is forwarded to [bitmapToVectorPathData] for oversampled bitmaps.
+ */
+private fun createMonochromeVectorXml(bitmap: Bitmap, coordinateScale: Float = 1f): String {
+    val viewportSize = AdaptiveIconConfig.MONOCHROME_ADAPTIVE_VIEWPORT
+    val pathData = bitmapToVectorPathData(bitmap, coordinateScale)
+    return """<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="${viewportSize}dp"
+    android:height="${viewportSize}dp"
+    android:viewportWidth="$viewportSize"
+    android:viewportHeight="$viewportSize">
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="$pathData" />
+</vector>"""
+}
+
+/**
+ * Write an XML string to a DocumentFile, truncating any previous content.
+ */
+private fun saveXmlToDocFile(context: Context, dir: DocumentFile, content: String) {
+    val file = dir.getOrCreateFile("text/xml", AdaptiveIconConfig.MONOCHROME_ADAPTIVE_FILE_NAME) ?: return
+    context.contentResolver.openOutputStream(file.uri, "wt")?.use { out ->
+        out.write(content.toByteArray(Charsets.UTF_8))
+    }
+}
+
+// Checks a scaled-down sample of the bitmap to determine if any pixel has transparency
+private fun Bitmap.hasTransparentPixels(): Boolean {
+    if (!hasAlpha()) return false
+    val sampleWidth = minOf(width, 64)
+    val sampleHeight = minOf(height, 64)
+    val scaled = this.scale(sampleWidth, sampleHeight, false)
+    val pixels = IntArray(sampleWidth * sampleHeight)
+    scaled.getPixels(pixels, 0, sampleWidth, 0, 0, sampleWidth, sampleHeight)
+    if (scaled !== this) scaled.recycle()
+    return pixels.any { android.graphics.Color.alpha(it) < 255 }
 }
