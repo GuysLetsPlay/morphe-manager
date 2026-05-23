@@ -103,6 +103,13 @@ class PreferencesManager(
     val installationTime = LongPreference(dataStore, "manager_installation_time", 0L)
     val disablePatchVersionCompatCheck = booleanPreference("disable_patch_version_compatibility_check", false)
 
+    val useCustomFilePicker = booleanPreference("use_custom_file_picker", false)
+    val lastFilePickerPath = stringPreference("last_file_picker_path", "")
+    val filePickerSortMode = stringPreference("file_picker_sort_mode", "NAME_ASC")
+
+    /** Tracks whether the user has explicitly toggled the custom file picker preference. */
+    val customFilePickerUserConfigured = booleanPreference("custom_file_picker_user_configured", false)
+
     /**  Hidden preference to track if prerelease was auto-enabled. */
     private val prereleaseAutoEnabled = booleanPreference("prerelease_auto_enabled", false)
 
@@ -121,6 +128,13 @@ class PreferencesManager(
                 )
                 Log.d(tag, "Initializing process memory limit to $adaptive MB (device RAM-based)")
                 patcherProcessMemoryLimit.update(adaptive)
+            }
+
+            // TODO: remove after 1.18.0 stable - migrates expert mode users who upgraded before
+            //  custom file picker toggle existed; without this they'd get the new default (false)
+            //  even though they should have it on.
+            if (useExpertMode.get() && !customFilePickerUserConfigured.get()) {
+                useCustomFilePicker.update(true)
             }
 
             // Auto-enable prereleases for dev versions
