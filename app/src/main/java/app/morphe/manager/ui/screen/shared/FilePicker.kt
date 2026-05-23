@@ -244,7 +244,13 @@ fun FilePicker(
     }
 
     MorpheDialog(
-        onDismissRequest = { if (currentDir != null) navigateBack() else onDismiss() },
+        onDismissRequest = {
+            when {
+                showSearch -> { showSearch = false; searchQuery = "" }
+                currentDir != null -> navigateBack()
+                else -> onDismiss()
+            }
+        },
         title = null,
         noPadding = true,
         scrollable = false,
