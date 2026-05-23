@@ -121,7 +121,6 @@
     <string name="patch_option_enter_value">Inserir valor</string>
     <string name="patch_option_enter_number">Inserir número</string>
     <string name="patch_option_enter_decimal">Inserir decimal</string>
-    <string name="patch_option_pick_folder">Escoller cartafol</string>
     <string name="patch_option_list_duplicate">Este valor xa existe</string>
     <string name="patch_option_list_empty">O valor non pode estar baleiro</string>
     <string name="patch_option_list_empty_state">Non hai valores engadidos aínda</string>

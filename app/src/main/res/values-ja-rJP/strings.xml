@@ -192,8 +192,6 @@
     <string name="patch_option_enter_value">値を入力してください</string>
     <string name="patch_option_enter_number">数値を入力してください</string>
     <string name="patch_option_enter_decimal">小数点を入力してください</string>
-    <string name="patch_option_pick_folder">フォルダーを選択する</string>
-    <string name="patch_option_pick_file">ファイルを選択</string>
     <string name="patch_option_list_duplicate">この値はすでに存在します</string>
     <string name="patch_option_list_empty">値は空にできません</string>
     <string name="patch_option_list_empty_state">まだ値が追加されていません</string>
@@ -666,10 +664,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_custom_file_picker">カスタムファイルピッカー</string>
     <string name="settings_system_custom_file_picker_description">システムのデフォルトではなく、Morpheの組み込みファイルピッカーでストレージを参照する</string>
     <!-- File Picker -->
-    <string name="file_picker_title">ファイルを選択</string>
-    <string name="file_picker_title_folder">フォルダーを選択</string>
     <string name="file_picker_previous_directory">前のディレクトリ</string>
-    <string name="file_picker_select">選択</string>
     <string name="file_picker_no_files">ファイルが見つかりません</string>
     <string name="file_picker_internal_storage">内部ストレージ</string>
     <string name="file_picker_sd_card">SDカード</string>
@@ -689,6 +684,8 @@ morphe_header_custom_dark.png
     <string name="credits_prior_development">過去の開発</string>
     <string name="opensource_licenses">オープンソースライセンス</string>
     <!-- Shared strings -->
+    <string name="select_file">ファイルを選択</string>
+    <string name="select_folder">フォルダーを選択</string>
     <string name="patches">パッチ</string>
     <string name="home">ホーム</string>
     <string name="settings">設定</string>

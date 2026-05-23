@@ -189,8 +189,6 @@
     <string name="patch_option_enter_value">মান দিন</string>
     <string name="patch_option_enter_number">সংখ্যা দিন</string>
     <string name="patch_option_enter_decimal">ডেসিমাল দিন</string>
-    <string name="patch_option_pick_folder">ফোল্ডার নির্বাচন করুন</string>
-    <string name="patch_option_pick_file">ফাইল নির্বাচন করুন</string>
     <string name="patch_option_list_duplicate">এই মানটি ইতিমধ্যে বিদ্যমান</string>
     <string name="patch_option_list_empty">মানটি খালি হতে পারে না</string>
     <string name="patch_option_list_empty_state">এখনো কোনো মান যোগ করা হয়নি</string>
@@ -655,10 +653,7 @@ morphe_adaptive_monochrome_custom.xml
     <string name="settings_system_custom_file_picker">কাস্টম ফাইল পিকার</string>
     <string name="settings_system_custom_file_picker_description">সিস্টেম ডিফল্টের পরিবর্তে Morphe-এর বিল্ট-ইন ফাইল পিকার দিয়ে স্টোরেজ ব্রাউজ করুন</string>
     <!-- File Picker -->
-    <string name="file_picker_title">ফাইল নির্বাচন করুন</string>
-    <string name="file_picker_title_folder">ফোল্ডার নির্বাচন করুন</string>
     <string name="file_picker_previous_directory">আগের ডিরেক্টরি</string>
-    <string name="file_picker_select">নির্বাচন করুন</string>
     <string name="file_picker_no_files">এখানে কোন ফাইল নেই</string>
     <string name="file_picker_internal_storage">অভ্যন্তরীণ স্টোরেজ</string>
     <string name="file_picker_sd_card">এসডি কার্ড</string>
@@ -678,6 +673,8 @@ morphe_adaptive_monochrome_custom.xml
     <string name="credits_prior_development">পূর্ববর্তী উন্নয়ন</string>
     <string name="opensource_licenses">ওপেন-সোর্স লাইসেন্স।</string>
     <!-- Shared strings -->
+    <string name="select_file">ফাইল নির্বাচন করুন</string>
+    <string name="select_folder">ফোল্ডার নির্বাচন করুন</string>
     <string name="patches">প্যাচ</string>
     <string name="home">হোম</string>
     <string name="settings">সেটিংস</string>

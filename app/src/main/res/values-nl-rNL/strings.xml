@@ -189,8 +189,6 @@ Voor de beste resultaten beveelt deze app aan om een &lt;b&gt;volledig APK&lt;/b
     <string name="patch_option_enter_value">Waarde invoeren</string>
     <string name="patch_option_enter_number">Getal invoeren</string>
     <string name="patch_option_enter_decimal">Decimaal invoeren</string>
-    <string name="patch_option_pick_folder">Map selecteren</string>
-    <string name="patch_option_pick_file">Bestand selecteren</string>
     <string name="patch_option_list_duplicate">Deze waarde bestaat al</string>
     <string name="patch_option_list_empty">Waarde mag niet leeg zijn</string>
     <string name="patch_option_list_empty_state">Nog geen waarden toegevoegd</string>
@@ -663,10 +661,7 @@ De afbeelddimensionen moeten als volgt zijn:
     <string name="settings_system_custom_file_picker">Aangepaste bestandsselector</string>
     <string name="settings_system_custom_file_picker_description">Gebruik de ingebouwde bestandsselector van Morphe in plaats van de standaardinstelling van het systeem</string>
     <!-- File Picker -->
-    <string name="file_picker_title">Selecteer bestand</string>
-    <string name="file_picker_title_folder">Map folder</string>
     <string name="file_picker_previous_directory">Vorige map</string>
-    <string name="file_picker_select">Selecteren</string>
     <string name="file_picker_no_files">Geen bestanden hier</string>
     <string name="file_picker_internal_storage">Interne opslag</string>
     <string name="file_picker_sd_card">SD-kaart</string>
@@ -686,6 +681,8 @@ De afbeelddimensionen moeten als volgt zijn:
     <string name="credits_prior_development">Eerdere ontwikkeling</string>
     <string name="opensource_licenses">Open-source licenties</string>
     <!-- Shared strings -->
+    <string name="select_file">Selecteer bestand</string>
+    <string name="select_folder">Map selecteren</string>
     <string name="patches">Patches</string>
     <string name="home">Home</string>
     <string name="settings">Instellingen</string>

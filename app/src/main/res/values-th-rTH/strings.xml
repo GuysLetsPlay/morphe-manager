@@ -192,8 +192,6 @@
     <string name="patch_option_enter_value">ป้อนค่า</string>
     <string name="patch_option_enter_number">ป้อนตัวเลข</string>
     <string name="patch_option_enter_decimal">ป้อนตัวเลขทศนิยม</string>
-    <string name="patch_option_pick_folder">เลือกโฟลเดอร์</string>
-    <string name="patch_option_pick_file">เลือกไฟล์</string>
     <string name="patch_option_list_duplicate">ค่านี้มีอยู่แล้ว</string>
     <string name="patch_option_list_empty">ไม่สามารถเว้นว่างได้</string>
     <string name="patch_option_list_empty_state">ยังไม่ได้เพิ่มค่าใดๆ</string>
@@ -666,10 +664,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_custom_file_picker">ตัวเลือกไฟล์แบบกำหนดเอง</string>
     <string name="settings_system_custom_file_picker_description">เรียกดูพื้นที่จัดเก็บด้วยตัวเลือกไฟล์ในตัวของ Morphe แทนค่าเริ่มต้นของระบบ</string>
     <!-- File Picker -->
-    <string name="file_picker_title">เลือกไฟล์</string>
-    <string name="file_picker_title_folder">เลือกโฟลเดอร์</string>
     <string name="file_picker_previous_directory">ไดเรกทอรีก่อนหน้า</string>
-    <string name="file_picker_select">เลือก</string>
     <string name="file_picker_no_files">ไม่มีไฟล์อยู่ที่นี่</string>
     <string name="file_picker_internal_storage">หน่วยความจำภายใน</string>
     <string name="file_picker_sd_card">การ์ด SD</string>
@@ -689,6 +684,8 @@ morphe_header_custom_dark.png
     <string name="credits_prior_development">การพัฒนาที่ผ่านมา</string>
     <string name="opensource_licenses">สัญญาอนุญาตโอเพนซอร์ส</string>
     <!-- Shared strings -->
+    <string name="select_file">เลือกไฟล์</string>
+    <string name="select_folder">เลือกโฟลเดอร์</string>
     <string name="patches">แพตช์</string>
     <string name="home">หน้าแรก</string>
     <string name="settings">การตั้งค่า</string>

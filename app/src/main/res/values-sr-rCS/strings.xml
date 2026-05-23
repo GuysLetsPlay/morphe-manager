@@ -192,8 +192,6 @@ Da li ste sigurni da želite nastaviti?"</string>
     <string name="patch_option_enter_value">Unesite vrednost</string>
     <string name="patch_option_enter_number">Unesite broj</string>
     <string name="patch_option_enter_decimal">Unesite decimalni broj</string>
-    <string name="patch_option_pick_folder">Odaberite folder</string>
-    <string name="patch_option_pick_file">Izaberi datoteku</string>
     <string name="patch_option_list_duplicate">Ova vrednost već postoji</string>
     <string name="patch_option_list_empty">Vrednost ne može biti prazna</string>
     <string name="patch_option_list_empty_state">Još nisu dodate vrednosti</string>
@@ -650,10 +648,7 @@ Opciono, putanja sadrži ikonu obaveštenja u jednom od sledećih formata:
     <string name="settings_system_custom_file_picker">Prilagođeni odabir datoteka</string>
     <string name="settings_system_custom_file_picker_description">Koristite ugrađeni odabir datoteka u Morpheu umesto fabričkog sistema</string>
     <!-- File Picker -->
-    <string name="file_picker_title">Izaberi datoteku</string>
-    <string name="file_picker_title_folder">Izaberi folder</string>
     <string name="file_picker_previous_directory">Prethodna direktorijum</string>
-    <string name="file_picker_select">Izaberi</string>
     <string name="file_picker_no_files">Ovde nema datoteka</string>
     <string name="file_picker_internal_storage">Interna memorija</string>
     <string name="file_picker_sd_card">SD kartica</string>
@@ -673,6 +668,8 @@ Opciono, putanja sadrži ikonu obaveštenja u jednom od sledećih formata:
     <string name="credits_prior_development">Претходни развој</string>
     <string name="opensource_licenses">Open-source licence</string>
     <!-- Shared strings -->
+    <string name="select_file">Izaberi datoteku</string>
+    <string name="select_folder">Izaberi folder</string>
     <string name="patches">Zakrpe</string>
     <string name="home">Početna</string>
     <string name="settings">Podešavanja</string>

@@ -152,7 +152,6 @@ Teruskannya mungkin boleh menyebabkan aplikasi tidak dapat berfungsi</string>
     <string name="patch_option_enter_value">Masukkan nilai</string>
     <string name="patch_option_enter_number">Masukkan nombor</string>
     <string name="patch_option_enter_decimal">Masukkan perpuluhan</string>
-    <string name="patch_option_pick_folder">Pilih folder </string>
     <string name="patch_option_list_duplicate">Nilai ini sudah wujud</string>
     <string name="patch_option_list_empty">Nilai tidak boleh kosong</string>
     <string name="patch_option_list_empty_state">Tiada nilai ditambah lagi</string>

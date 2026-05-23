@@ -192,8 +192,6 @@ Para sa pinakamahusay na resulta, nirerekomenda ng app na ito na i-patch ang isa
     <string name="patch_option_enter_value">Ilagay ang halaga</string>
     <string name="patch_option_enter_number">Ilagay ang numero</string>
     <string name="patch_option_enter_decimal">Ilagay ang decimal</string>
-    <string name="patch_option_pick_folder">Piliin ang folder</string>
-    <string name="patch_option_pick_file">Pumili ng file</string>
     <string name="patch_option_list_duplicate">May umiiral na ang halagang ito</string>
     <string name="patch_option_list_empty">Hindi maaaring walang laman ang halaga</string>
     <string name="patch_option_list_empty_state">Walang idinagdag na halaga pa</string>
@@ -666,10 +664,7 @@ Dapat ang mga sumusunod na sukat ng larawan ay:
     <string name="settings_system_custom_file_picker">Pasadyang pumili ng file</string>
     <string name="settings_system_custom_file_picker_description">Gumamit ng file picker na binuo ng Morphe sa halip na ang default ng sistema</string>
     <!-- File Picker -->
-    <string name="file_picker_title">Piliin ang file</string>
-    <string name="file_picker_title_folder">Piliin ang folder</string>
     <string name="file_picker_previous_directory">Nakaraang direktoryo</string>
-    <string name="file_picker_select">Piliin</string>
     <string name="file_picker_no_files">Walang mga file dito</string>
     <string name="file_picker_internal_storage">Imbakan ng telepono</string>
     <string name="file_picker_sd_card">SD card</string>
@@ -689,6 +684,8 @@ Dapat ang mga sumusunod na sukat ng larawan ay:
     <string name="credits_prior_development">Naunang pag-unlad</string>
     <string name="opensource_licenses">Open-source licenses</string>
     <!-- Shared strings -->
+    <string name="select_file">Pumili ng file</string>
+    <string name="select_folder">Piliin ang folder</string>
     <string name="patches">Mga patch</string>
     <string name="home">Bahay</string>
     <string name="settings">Mga pagpipilian</string>

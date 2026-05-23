@@ -192,8 +192,6 @@ För bästa resultat rekommenderar den här appen att du modifierar en &lt;b&gt;
     <string name="patch_option_enter_value">Ange värde</string>
     <string name="patch_option_enter_number">Ange tal</string>
     <string name="patch_option_enter_decimal">Ange decimaltal</string>
-    <string name="patch_option_pick_folder">Välj mapp</string>
-    <string name="patch_option_pick_file">Välj fil</string>
     <string name="patch_option_list_duplicate">Det här värdet finns redan</string>
     <string name="patch_option_list_empty">Värdet kan inte vara tomt</string>
     <string name="patch_option_list_empty_state">Inga värden har lagts till ännu</string>

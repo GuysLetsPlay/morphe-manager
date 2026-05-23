@@ -192,8 +192,6 @@ Chun na torthaí is fearr a fháil, molann an aip seo paiste a chur ar &lt;b&gt;
     <string name="patch_option_enter_value">Cuir isteach luach</string>
     <string name="patch_option_enter_number">Cuir isteach uimhir</string>
     <string name="patch_option_enter_decimal">Cuir isteach deachúil</string>
-    <string name="patch_option_pick_folder">Roghnaigh fillteán</string>
-    <string name="patch_option_pick_file">Roghnaigh comhad</string>
     <string name="patch_option_list_duplicate">Tá an luach seo ann cheana féin</string>
     <string name="patch_option_list_empty">Ní féidir luach a fhágáil folamh</string>
     <string name="patch_option_list_empty_state">Níl aon luachanna curtha leis fós</string>
@@ -664,10 +662,7 @@ Ní mór toisí na híomhá a bheith mar seo a leanas:
     <string name="settings_system_custom_file_picker">Roghaitheoir comhaighde sainmhúnaithe</string>
     <string name="settings_system_custom_file_picker_description">Brabhsaigh stóras le roghaitheoir comhaighde tógtha isteach Morphe in ionad an réamhshocraithe córais</string>
     <!-- File Picker -->
-    <string name="file_picker_title">Roghnaigh comhad</string>
-    <string name="file_picker_title_folder">Roghnaigh eolaire</string>
     <string name="file_picker_previous_directory">Eolaire roimhe seo</string>
-    <string name="file_picker_select">Roghnaigh</string>
     <string name="file_picker_no_files">Níl comhaid ann</string>
     <string name="file_picker_internal_storage">Stóras inmheánach</string>
     <string name="file_picker_sd_card">Cárta SD</string>
@@ -687,6 +682,8 @@ Ní mór toisí na híomhá a bheith mar seo a leanas:
     <string name="credits_prior_development">Forbairt roimhe seo</string>
     <string name="opensource_licenses">Ceadúnais foinse oscailte</string>
     <!-- Shared strings -->
+    <string name="select_file">Roghnaigh comhad</string>
+    <string name="select_folder">Roghnaigh folduisc</string>
     <string name="patches">Paistí</string>
     <string name="home">Baile</string>
     <string name="settings">Socruithe</string>

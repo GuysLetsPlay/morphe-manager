@@ -192,8 +192,6 @@ Pentru cele mai bune rezultate, această aplicație recomandă patch-uirea unui 
     <string name="patch_option_enter_value">Introduceți valoarea</string>
     <string name="patch_option_enter_number">Introduceți numărul</string>
     <string name="patch_option_enter_decimal">Introduceți decimal</string>
-    <string name="patch_option_pick_folder">Alege folder</string>
-    <string name="patch_option_pick_file">Alege fișier</string>
     <string name="patch_option_list_duplicate">Această valoare există deja</string>
     <string name="patch_option_list_empty">Valoarea nu poate fi goală</string>
     <string name="patch_option_list_empty_state">Nu au fost adăugate valori încă</string>
@@ -666,10 +664,7 @@ Dimensiunile imaginilor trebuie să fie următoarele:
     <string name="settings_system_custom_file_picker">Selector de fișiere personalizat</string>
     <string name="settings_system_custom_file_picker_description">Răsfoiește stocarea cu selectorul de fișiere integrat Morphe în loc de cel implicit al sistemului</string>
     <!-- File Picker -->
-    <string name="file_picker_title">Selectează fișier</string>
-    <string name="file_picker_title_folder">Selectează folder</string>
     <string name="file_picker_previous_directory">Director anterior</string>
-    <string name="file_picker_select">Selectează</string>
     <string name="file_picker_no_files">Nu există fișiere aici</string>
     <string name="file_picker_internal_storage">Stocare internă</string>
     <string name="file_picker_sd_card">Card SD</string>
@@ -689,6 +684,8 @@ Dimensiunile imaginilor trebuie să fie următoarele:
     <string name="credits_prior_development">Dezvoltare anterioară</string>
     <string name="opensource_licenses">Licențe open-source</string>
     <!-- Shared strings -->
+    <string name="select_file">Selectează fișierul</string>
+    <string name="select_folder">Selecteazã folderul</string>
     <string name="patches">Patch-uri</string>
     <string name="home">Acasă</string>
     <string name="settings">Setări</string>

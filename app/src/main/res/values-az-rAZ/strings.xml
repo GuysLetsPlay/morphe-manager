@@ -192,8 +192,6 @@ Davam etmək istədiyinizə əminsiniz?"</string>
     <string name="patch_option_enter_value">Dəyər qeyd edin</string>
     <string name="patch_option_enter_number">Sayı qeyd edin</string>
     <string name="patch_option_enter_decimal">Onluq qeyd edin</string>
-    <string name="patch_option_pick_folder">Qovluq seçin</string>
-    <string name="patch_option_pick_file">Fayl seç</string>
     <string name="patch_option_list_duplicate">Bu dəyər artıq var</string>
     <string name="patch_option_list_empty">Dəyər boş ola bilməz</string>
     <string name="patch_option_list_empty_state">Hələ dəyər əlavə edilməyib</string>
@@ -273,7 +271,7 @@ Xarici sahə (ştrixli): başladıcı örtüyündən kəsilə bilər - mühüm h
     <string name="patcher_error_technical">Texniki təfsilatlar</string>
     <string name="patcher_error_dialog_app_info">Tətbiq məlumatı</string>
     <string name="patcher_long_step_warning">Bu keçid bir müddət çəkə bilər. Zəhmət olmasa, gözləyin...</string>
-    <string name="patcher_installing_subtitle">Təqribən coşdurmağa hazırdır! 🎸</string>
+    <string name="patcher_installing_subtitle">Təqribən silkələnməyə hazırdır! 🎸</string>
     <string name="patcher_success_title">Hamısı Bitdi! 🎉</string>
     <string name="patcher_success_subtitle">Tətbiqiniz yamaqlanıb və quraşdırılıb!</string>
     <string name="patcher_complete_title">Yamaqlanma Tamamlandı! ✨</string>
@@ -336,7 +334,7 @@ Quraşdırma ləğvi bütün tətbiq məlumatını qalıcı siləcək"</string>
     <string name="patcher_message_10">Əla yamaqlar, gözləməyə dəyər... ⏳ </string>
     <string name="patcher_message_11">Piksellər parıldayana qədər cilalanır... 💎 </string>
     <string name="patcher_message_12">Kapitan \"Yamaqlama irəliləyişdədir\" işarəsini söndürənə qədər yerinizdə qalın... 💺✈️ </string>
-    <string name="patcher_message_13">Yamalanan tətbiqinizi hazırlayırıq, isti və təzə... 🍳</string>
+    <string name="patcher_message_13">Yamaqlanan tətbiqinizi hazırlayırıq, isti və təzə... 🍳</string>
     <!-- "bytecode" can be translated from "the app code" -->
     <string name="patcher_message_14">Bayt-kodla nəzakətlə şərtlər müzakirə olunur... 🤝 </string>
     <!-- Space flight communications callout. -->
@@ -623,6 +621,7 @@ morphe_header_custom_light.png morphe_header_custom_dark.png
     <string name="settings_system_export_debug_logs_export_failed">Jurnalları ixrac etmək olmadı</string>
     <string name="settings_system_export_debug_logs_export_success">Jurnallar ixrac olundu</string>
     <!-- Settings - System Tab - Files & Storage Section -->
+    <string name="settings_system_files">Fayllar &amp; saxlanc</string>
     <string name="settings_system_apks_size">Tam həcm: %s</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Yamaqlanan APK-lar</string>
@@ -661,7 +660,19 @@ morphe_header_custom_light.png morphe_header_custom_dark.png
     <string name="settings_system_patch_options_title">Yamaq seçimləri (%s)</string>
     <string name="settings_system_no_patches_or_options">Yamaqlar və ya seçimlər saxlanılmayıb</string>
     <!-- Settings - System Tab - Custom file picker -->
+    <string name="settings_system_custom_file_picker">Fərdi fayl seçici</string>
+    <string name="settings_system_custom_file_picker_description">Sistem standartı əvəzində Morphe-nin qurulu fayl seçicisi ilə yaddaşı araşdır</string>
     <!-- File Picker -->
+    <string name="file_picker_previous_directory">Əvvəlki kataloq</string>
+    <string name="file_picker_no_files">Burada fayl yoxdur</string>
+    <string name="file_picker_internal_storage">Daxili yaddaş</string>
+    <string name="file_picker_sd_card">SD kart</string>
+    <string name="file_picker_sort_name_asc">Ad (A–Z)</string>
+    <string name="file_picker_sort_name_desc">Ad (Z–A)</string>
+    <string name="file_picker_sort_size_desc">Həcm (əvvəlcə ən çox)</string>
+    <string name="file_picker_sort_size_asc">Həcm (əvvəlcə ən az)</string>
+    <string name="file_picker_sort_date_desc">Tarix (öncə ən yeni)</string>
+    <string name="file_picker_sort_date_asc">Tarix (öncə ən köhnə)</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">Haqqında</string>
     <string name="settings_system_share_website">Veb saytı paylaş</string>
@@ -672,6 +683,8 @@ morphe_header_custom_light.png morphe_header_custom_dark.png
     <string name="credits_prior_development">Əvvəlki inkişaf</string>
     <string name="opensource_licenses">Açıq mənbə lisenziyaları</string>
     <!-- Shared strings -->
+    <string name="select_file">Faylı seç</string>
+    <string name="select_folder">Qovluq seç</string>
     <string name="patches">Yamaqlar</string>
     <string name="home">Əsas səhifə</string>
     <string name="settings">Tənzimləmələr</string>

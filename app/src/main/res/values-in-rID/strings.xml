@@ -193,8 +193,6 @@ Harap bersiap untuk perilaku aplikasi yang tidak biasa atau bug yang belum terid
     <string name="patch_option_enter_value">Masukkan nilai</string>
     <string name="patch_option_enter_number">Masukkan nomor</string>
     <string name="patch_option_enter_decimal">Masukkan desimal</string>
-    <string name="patch_option_pick_folder">Pilih folder</string>
-    <string name="patch_option_pick_file">Pilih berkas</string>
     <string name="patch_option_list_duplicate">Nilai ini sudah ada</string>
     <string name="patch_option_list_empty">Nilai tidak boleh kosong</string>
     <string name="patch_option_list_empty_state">Belum ada nilai yang ditambahkan</string>
@@ -667,10 +665,7 @@ Dimensi gambar harus sebagai berikut:
     <string name="settings_system_custom_file_picker">Pemilih file khusus</string>
     <string name="settings_system_custom_file_picker_description">Telusuri penyimpanan dengan pemilih file bawaan Morphe, bukan pemilih file bawaan sistem</string>
     <!-- File Picker -->
-    <string name="file_picker_title">Pilih berkas</string>
-    <string name="file_picker_title_folder">Pilih folder</string>
     <string name="file_picker_previous_directory">Direktori sebelumnya</string>
-    <string name="file_picker_select">Pilih</string>
     <string name="file_picker_no_files">Tidak ada berkas di sini</string>
     <string name="file_picker_internal_storage">Memori internal</string>
     <string name="file_picker_sd_card">Kartu SD</string>
@@ -690,6 +685,8 @@ Dimensi gambar harus sebagai berikut:
     <string name="credits_prior_development">Pengembangan sebelumnya</string>
     <string name="opensource_licenses">Lisensi sumber terbuka</string>
     <!-- Shared strings -->
+    <string name="select_file">Pilih berkas</string>
+    <string name="select_folder">Pilih folder</string>
     <string name="patches">Tambalan</string>
     <string name="home">Beranda</string>
     <string name="settings">Pengaturan</string>

@@ -192,8 +192,6 @@
     <string name="patch_option_enter_value">Введіть значення</string>
     <string name="patch_option_enter_number">Введіть число</string>
     <string name="patch_option_enter_decimal">Введіть десяткове число</string>
-    <string name="patch_option_pick_folder">Вибрати теку</string>
-    <string name="patch_option_pick_file">Вибрати файл</string>
     <string name="patch_option_list_duplicate">Це значення вже існує</string>
     <string name="patch_option_list_empty">Значення не може бути порожнім</string>
     <string name="patch_option_list_empty_state">Значень ще не додано</string>
@@ -666,10 +664,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_custom_file_picker">Власний вибір файлів</string>
     <string name="settings_system_custom_file_picker_description">Переглядайте сховище за допомогою вбудованого у Morphe вибору файлів замість системного</string>
     <!-- File Picker -->
-    <string name="file_picker_title">Оберіть файл</string>
-    <string name="file_picker_title_folder">Оберіть теку</string>
     <string name="file_picker_previous_directory">Попередня тека</string>
-    <string name="file_picker_select">Вибрати</string>
     <string name="file_picker_no_files">Тут немає файлів</string>
     <string name="file_picker_internal_storage">Внутрішнє сховище</string>
     <string name="file_picker_sd_card">SD-карта</string>
@@ -689,6 +684,8 @@ morphe_header_custom_dark.png
     <string name="credits_prior_development">Попередня розробка</string>
     <string name="opensource_licenses">Ліцензії відкритого коду</string>
     <!-- Shared strings -->
+    <string name="select_file">Оберіть файл</string>
+    <string name="select_folder">Оберіть теку</string>
     <string name="patches">Патчі</string>
     <string name="home">Головна</string>
     <string name="settings">Налаштування</string>

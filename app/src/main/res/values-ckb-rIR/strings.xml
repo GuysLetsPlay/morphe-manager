@@ -184,8 +184,6 @@
     <string name="patch_option_enter_value">بەها بنووسە</string>
     <string name="patch_option_enter_number">ژمارە بنووسە</string>
     <string name="patch_option_enter_decimal">ژمارەی دەیی بنووسە</string>
-    <string name="patch_option_pick_folder">فۆڵدەر هەڵبژێرە</string>
-    <string name="patch_option_pick_file">پەڕگە هەڵبژێرە</string>
     <string name="patch_option_list_duplicate">ئەم بەهایە بوونی هەیە</string>
     <string name="patch_option_list_empty">بەها ناتواندرێ بەتاڵ بێت</string>
     <string name="patch_option_list_empty_state">هیج بەهایەک زیادنەکراوە هێشتا</string>

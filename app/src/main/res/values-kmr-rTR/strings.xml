@@ -190,8 +190,6 @@ Ji bo mezgînî, ev sepan pêşniyar dike ku paketek &lt;b&gt;full APK&lt;/b&gt;
     <string name="patch_option_enter_value">Qîmet biqîze</string>
     <string name="patch_option_enter_number">Hejmar biqîze</string>
     <string name="patch_option_enter_decimal">Desîmal biqîze</string>
-    <string name="patch_option_pick_folder">Folder safînak</string>
-    <string name="patch_option_pick_file">Pelê hilbijêre</string>
     <string name="patch_option_list_duplicate">Ev nirx e jixye heye</string>
     <string name="patch_option_list_empty">Qîymet nikare boçagî be</string>
     <string name="patch_option_list_empty_state">Heta niha tiştek zêde nabe</string>
@@ -662,10 +660,7 @@ Qasîyên wêneyan divê wiha bin:
     <string name="settings_system_custom_file_picker">Hilbijêrkê pelan yê xwerû</string>
     <string name="settings_system_custom_file_picker_description">Li şûna hilbijêrkê pelan yê serî yê sîstemê, hilbijêrkê pelan yê têne çêkirin yê Morphe bikar bîne</string>
     <!-- File Picker -->
-    <string name="file_picker_title">Pelê hilbijêre</string>
-    <string name="file_picker_title_folder">Pelge hilbijêre</string>
     <string name="file_picker_previous_directory">Pêşîya rêgehê</string>
-    <string name="file_picker_select">Hilbijêre</string>
     <string name="file_picker_no_files">Li vir pel nehatine dîtin</string>
     <string name="file_picker_internal_storage">Hêlîna navî</string>
     <string name="file_picker_sd_card">Kartê SD</string>
@@ -685,6 +680,8 @@ Qasîyên wêneyan divê wiha bin:
     <string name="credits_prior_development">Gelişîna berê</string>
     <string name="opensource_licenses">Lîsansên çavkaniyê vekirî</string>
     <!-- Shared strings -->
+    <string name="select_file">Pelê hilbijêre</string>
+    <string name="select_folder">Pêvekê hilbijêre</string>
     <string name="patches">Saxkirin</string>
     <string name="home">Mal</string>
     <string name="settings">Sazî</string>

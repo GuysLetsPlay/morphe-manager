@@ -143,7 +143,6 @@
     <string name="home_low_disk_space_dialog_message">फक्त %1$.2f GB मोफत स्टोरेज उपलब्ध आहे. पॅचिंगसाठी योग्यरित्या कार्य करण्यासाठी किमान %2$.2f GB मोफत जागा आवश्यक आहे.</string>
     <string name="home_simple_bundle_select_title">सुधारणा मूळ स्त्रोत निवडा</string>
     <!-- Patch Options -->
-    <string name="patch_option_pick_file">फाईल निवडा</string>
     <string name="patch_option_required_missing">%s: आवश्यक पर्याय भरा</string>
     <!-- Adaptive Icon Creator -->
     <string name="adaptive_icon_no_transparency_warning">प्रतिमेत कोणताही पारदर्शक पिक्सेल नाही. परिणाम चुकीचा दिसू शकतो</string>
@@ -277,10 +276,7 @@
     <string name="settings_system_custom_file_picker">कस्टम फाइल पिकर</string>
     <string name="settings_system_custom_file_picker_description">सिस्टम डिफॉल्ट ऐवजी मोर्फच्या बिल्ट-इन फाइल पिकरने स्टोरेज ब्राउझ करा</string>
     <!-- File Picker -->
-    <string name="file_picker_title">फाईल निवडा</string>
-    <string name="file_picker_title_folder">फोल्डर निवडा</string>
     <string name="file_picker_previous_directory">मागील निर्देशिका</string>
-    <string name="file_picker_select">निवडा</string>
     <string name="file_picker_no_files">येथे कोणतीही फाईल नाही</string>
     <string name="file_picker_internal_storage"> अंतर्गत स्टोरेज</string>
     <string name="file_picker_sd_card">एसडी कार्ड</string>
@@ -295,6 +291,8 @@
     <string name="settings_system_manager_description">हे लोकप्रिय Android ॲप्सच्या आधुनिक, सुव्यवस्थित पॅचिंगसाठी एक मुक्त-स्रोत प्रकल्प आहे, जो समुदाय अभिप्राय आणि योगदानातून चालतो.</string>
     <string name="opensource_licenses">मुक्त-स्रोत परवाने</string>
     <!-- Shared strings -->
+    <string name="select_file">फाईल निवडा</string>
+    <string name="select_folder">फोल्डर निवडा</string>
     <string name="all">सर्व</string>
     <string name="filter">गाळण</string>
     <string name="select_all">सर्व निवडा</string>

@@ -192,8 +192,6 @@ A legjobb eredmény érdekében az alkalmazás javasolja a &lt;b&gt;teljes APK&l
     <string name="patch_option_enter_value">Érték megadása</string>
     <string name="patch_option_enter_number">Szám megadása</string>
     <string name="patch_option_enter_decimal">Tizedes megadása</string>
-    <string name="patch_option_pick_folder">Mappa kiválasztása</string>
-    <string name="patch_option_pick_file">Fájl kiválasztása</string>
     <string name="patch_option_list_duplicate">Ez az érték már létezik</string>
     <string name="patch_option_list_empty">Az érték nem lehet üres</string>
     <string name="patch_option_list_empty_state">Még nincsenek hozzáadott értékek</string>
@@ -667,10 +665,7 @@ Forrás: #%2$s</string>
     <string name="settings_system_custom_file_picker">Egyéni fájlválasztó</string>
     <string name="settings_system_custom_file_picker_description">A Morphe beépített fájlválasztóját használja a rendszer alapértelmezett helyett.</string>
     <!-- File Picker -->
-    <string name="file_picker_title">Fájl kiválasztása</string>
-    <string name="file_picker_title_folder">Mappa kiválasztása</string>
     <string name="file_picker_previous_directory">Előző mappa</string>
-    <string name="file_picker_select">Kiválasztás</string>
     <string name="file_picker_no_files">Nincs itt fájl</string>
     <string name="file_picker_internal_storage">Belső tárhely</string>
     <string name="file_picker_sd_card">SD-kártya</string>
@@ -690,6 +685,8 @@ Forrás: #%2$s</string>
     <string name="credits_prior_development">Korábbi fejlesztők</string>
     <string name="opensource_licenses">Nyílt forráskódú licencek</string>
     <!-- Shared strings -->
+    <string name="select_file">Fájl kiválasztása</string>
+    <string name="select_folder">Mappa kiválasztása</string>
     <string name="patches">Módosítások</string>
     <string name="home">Főoldal</string>
     <string name="settings">Beállítások</string>

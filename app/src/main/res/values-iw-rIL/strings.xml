@@ -192,8 +192,6 @@
     <string name="patch_option_enter_value">הזן ערך</string>
     <string name="patch_option_enter_number">הזן מספר</string>
     <string name="patch_option_enter_decimal">הזן ספרתי</string>
-    <string name="patch_option_pick_folder">בחר תיקיה</string>
-    <string name="patch_option_pick_file">בחר קובץ</string>
     <string name="patch_option_list_duplicate">ערך זה כבר קיים</string>
     <string name="patch_option_list_empty">ערך לא יכול להיות ריק</string>
     <string name="patch_option_list_empty_state">עדיין לא נוספו ערכים</string>
@@ -650,10 +648,7 @@ morphe_adaptive_monochrome_custom.xml
     <string name="settings_system_custom_file_picker">בחירת קבצים מותאמת אישית</string>
     <string name="settings_system_custom_file_picker_description">דפדף אחסון באמצעות בוחר הקבצים המובנה של Morphe במקום ברירת המערכת</string>
     <!-- File Picker -->
-    <string name="file_picker_title">בחר קובץ</string>
-    <string name="file_picker_title_folder">בחר תיקייה</string>
     <string name="file_picker_previous_directory">ספרייה קודמת</string>
-    <string name="file_picker_select">בחר</string>
     <string name="file_picker_no_files">אין קבצים כאן</string>
     <string name="file_picker_internal_storage">אחסון פנימי</string>
     <string name="file_picker_sd_card">כרטיס SD</string>
@@ -673,6 +668,8 @@ morphe_adaptive_monochrome_custom.xml
     <string name="credits_prior_development">פיתוח קודם</string>
     <string name="opensource_licenses">רישיונות קוד פתוח</string>
     <!-- Shared strings -->
+    <string name="select_file">בחר קובץ</string>
+    <string name="select_folder">בחר תיקייה</string>
     <string name="patches">תיקונים</string>
     <string name="home">בית</string>
     <string name="settings">הגדרות</string>

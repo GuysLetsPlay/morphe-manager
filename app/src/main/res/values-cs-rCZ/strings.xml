@@ -192,8 +192,6 @@ Pro nejlepší výsledky doporučujeme záplatovat &lt;b&gt;úplný APK&lt;/b&gt
     <string name="patch_option_enter_value">Zadejte hodnotu</string>
     <string name="patch_option_enter_number">Zadejte číslo</string>
     <string name="patch_option_enter_decimal">Zadejte desetinné číslo</string>
-    <string name="patch_option_pick_folder">Vybrat složku</string>
-    <string name="patch_option_pick_file">Vyberte soubor</string>
     <string name="patch_option_list_duplicate">Tato hodnota již existuje</string>
     <string name="patch_option_list_empty">Hodnota nesmí být prázdná</string>
     <string name="patch_option_list_empty_state">Ještě jste nepřidali žádné hodnoty</string>
@@ -666,10 +664,7 @@ Rozměry obrázků musí být následující:
     <string name="settings_system_custom_file_picker">Vlastní výběr souborů</string>
     <string name="settings_system_custom_file_picker_description">Procházet úložiště pomocí vestavěného výběru souborů Morphe místo výchozího systému.</string>
     <!-- File Picker -->
-    <string name="file_picker_title">Vybrat soubor</string>
-    <string name="file_picker_title_folder">Vybrat složku</string>
     <string name="file_picker_previous_directory">Předchozí adresář</string>
-    <string name="file_picker_select">Vybrat</string>
     <string name="file_picker_no_files">Zde nejsou žádné soubory</string>
     <string name="file_picker_internal_storage">Interní úložiště</string>
     <string name="file_picker_sd_card">SD karta</string>
@@ -689,6 +684,8 @@ Rozměry obrázků musí být následující:
     <string name="credits_prior_development">Předchozí vývoj</string>
     <string name="opensource_licenses">Open-source licence</string>
     <!-- Shared strings -->
+    <string name="select_file">Vyberte soubor</string>
+    <string name="select_folder">Vyberte složku</string>
     <string name="patches">Záplaty</string>
     <string name="home">Domů</string>
     <string name="settings">Nastavení</string>

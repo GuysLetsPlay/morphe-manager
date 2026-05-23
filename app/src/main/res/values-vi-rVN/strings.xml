@@ -192,8 +192,6 @@ Tốt nhất bạn nên chuyển sang &lt;b&gt;APK đầy đủ&lt;/b&gt; để 
     <string name="patch_option_enter_value">Nhập giá trị</string>
     <string name="patch_option_enter_number">Nhập số</string>
     <string name="patch_option_enter_decimal">Nhập số thập phân</string>
-    <string name="patch_option_pick_folder">Chọn thư mục</string>
-    <string name="patch_option_pick_file">Chọn tệp</string>
     <string name="patch_option_list_duplicate">Giá trị này đã tồn tại rồi</string>
     <string name="patch_option_list_empty">Không được để trống</string>
     <string name="patch_option_list_empty_state">Chưa thêm giá trị nào</string>
@@ -667,10 +665,7 @@ Kích thước hình ảnh yêu cầu:
     <string name="settings_system_custom_file_picker">Bộ chọn tệp tùy chỉnh</string>
     <string name="settings_system_custom_file_picker_description">Duyệt bộ nhớ bằng trình chọn tệp tích hợp của Morphe thay vì trình chọn mặc định của hệ thống</string>
     <!-- File Picker -->
-    <string name="file_picker_title">Chọn tệp</string>
-    <string name="file_picker_title_folder">Chọn thư mục</string>
     <string name="file_picker_previous_directory">Thư mục trước đó</string>
-    <string name="file_picker_select">Chọn</string>
     <string name="file_picker_no_files">Không có tệp nào ở đây</string>
     <string name="file_picker_internal_storage">Bộ nhớ trong</string>
     <string name="file_picker_sd_card">Thẻ SD</string>
@@ -690,6 +685,8 @@ Kích thước hình ảnh yêu cầu:
     <string name="credits_prior_development">Trước đây</string>
     <string name="opensource_licenses">Giấy phép mã nguồn mở</string>
     <!-- Shared strings -->
+    <string name="select_file">Chọn tệp</string>
+    <string name="select_folder">Chọn thư mục</string>
     <string name="patches">Số bản vá</string>
     <string name="home">Trang chủ</string>
     <string name="settings">Cài đặt</string>

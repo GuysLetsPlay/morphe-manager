@@ -192,8 +192,6 @@ For de beste resultatene anbefaler denne appen å patche en &lt;b&gt;full APK-fi
     <string name="patch_option_enter_value">Skriv inn verdi</string>
     <string name="patch_option_enter_number">Skriv inn tall</string>
     <string name="patch_option_enter_decimal">Skriv inn desimaltall</string>
-    <string name="patch_option_pick_folder">Velg mappe</string>
-    <string name="patch_option_pick_file">Velg fil</string>
     <string name="patch_option_list_duplicate">Denne verdien finnes allerede</string>
     <string name="patch_option_list_empty">Verdien kan ikke være tom</string>
     <string name="patch_option_list_empty_state">Ingen verdier lagt til ennå</string>
@@ -666,10 +664,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_custom_file_picker">Egendefinert filvelger</string>
     <string name="settings_system_custom_file_picker_description">Bruk Morphés innebygde filvelger i stedet for systemets standardfilvelger.</string>
     <!-- File Picker -->
-    <string name="file_picker_title">Velg fil</string>
-    <string name="file_picker_title_folder">Velg mappe</string>
     <string name="file_picker_previous_directory">Forrige mappe</string>
-    <string name="file_picker_select">Velg</string>
     <string name="file_picker_no_files">Ingen filer her</string>
     <string name="file_picker_internal_storage">Intern lagringsplass</string>
     <string name="file_picker_sd_card">SD-kort</string>
@@ -689,6 +684,8 @@ morphe_header_custom_dark.png
     <string name="credits_prior_development">Tidligere utvikling</string>
     <string name="opensource_licenses">Lisenser med åpen kildekode</string>
     <!-- Shared strings -->
+    <string name="select_file">Velg fil</string>
+    <string name="select_folder">Velg mappe</string>
     <string name="patches">Patcher</string>
     <string name="home">Hjem</string>
     <string name="settings">Innstillinger</string>

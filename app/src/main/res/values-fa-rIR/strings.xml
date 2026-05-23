@@ -148,7 +148,6 @@
     <string name="patch_option_enter_value">مقدار را وارد کنید</string>
     <string name="patch_option_enter_number">عدد را وارد کنید</string>
     <string name="patch_option_enter_decimal">عدد اعشاری را وارد کنید</string>
-    <string name="patch_option_pick_folder">یک پوشه انتخاب کنید</string>
     <string name="patch_option_list_duplicate">این مقدار قبلاً وجود دارد</string>
     <string name="patch_option_list_empty">مقدار نمی‌تواند خالی باشد</string>
     <string name="patch_option_list_empty_state">هنوز هیچ مقداری اضافه نشده است</string>

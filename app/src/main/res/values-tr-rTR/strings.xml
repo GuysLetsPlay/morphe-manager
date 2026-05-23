@@ -192,8 +192,6 @@ En iyi sonuçlar için bu uygulama, &lt;b&gt;tam APK&lt;/b&gt; dosyasını yamal
     <string name="patch_option_enter_value">Değer girin</string>
     <string name="patch_option_enter_number">Sayı girin</string>
     <string name="patch_option_enter_decimal">Ondalık girin</string>
-    <string name="patch_option_pick_folder">Klasör seçin</string>
-    <string name="patch_option_pick_file">Dosya seç</string>
     <string name="patch_option_list_duplicate">Bu değer zaten mevcut</string>
     <string name="patch_option_list_empty">Değer boş olamaz</string>
     <string name="patch_option_list_empty_state">Henüz hiçbir değer eklenmedi</string>
@@ -664,12 +662,9 @@ Resim boyutları şu şekilde olmalıdır:
     <string name="settings_system_no_patches_or_options">Hiçbir yama veya seçenek kaydedilmedi</string>
     <!-- Settings - System Tab - Custom file picker -->
     <string name="settings_system_custom_file_picker">Özel dosya seçici</string>
-    <string name="settings_system_custom_file_picker_description">Morphe\'nin yerleşik dosya seçicisini sistem varsayılanı yerine kullanarak depolamayı göz atın</string>
+    <string name="settings_system_custom_file_picker_description">Sistem varsayılanı yerine Morphe\'nin yerleşik dosya seçicisini kullanarak depolamaya göz atın</string>
     <!-- File Picker -->
-    <string name="file_picker_title">Dosya seç</string>
-    <string name="file_picker_title_folder">Klasör seç</string>
     <string name="file_picker_previous_directory">Önceki dizin</string>
-    <string name="file_picker_select">Seç</string>
     <string name="file_picker_no_files">Burada dosya yok</string>
     <string name="file_picker_internal_storage">Dahili depolama</string>
     <string name="file_picker_sd_card">SD kart</string>
@@ -689,6 +684,8 @@ Resim boyutları şu şekilde olmalıdır:
     <string name="credits_prior_development">Önceki geliştirme</string>
     <string name="opensource_licenses">Açık kaynak lisansları</string>
     <!-- Shared strings -->
+    <string name="select_file">Dosya seç</string>
+    <string name="select_folder">Klasör seç</string>
     <string name="patches">Yamalar</string>
     <string name="home">Ana Sayfa</string>
     <string name="settings">Ayarlar</string>

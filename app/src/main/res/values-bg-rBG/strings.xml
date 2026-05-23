@@ -192,8 +192,6 @@
     <string name="patch_option_enter_value">Въведете стойност</string>
     <string name="patch_option_enter_number">Въведете число</string>
     <string name="patch_option_enter_decimal">Въведете десетично число</string>
-    <string name="patch_option_pick_folder">Избор на папка</string>
-    <string name="patch_option_pick_file">Избери файл</string>
     <string name="patch_option_list_duplicate">Тази стойност вече съществува</string>
     <string name="patch_option_list_empty">Стойността не може да бъде празна</string>
     <string name="patch_option_list_empty_state">Още не са добавени стойности</string>
@@ -666,10 +664,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_custom_file_picker">Персонализиран избор на файлове</string>
     <string name="settings_system_custom_file_picker_description">Използвайте вградения файлов мениджър на Morphe вместо системния.</string>
     <!-- File Picker -->
-    <string name="file_picker_title">Избери файл</string>
-    <string name="file_picker_title_folder">Избери папка</string>
     <string name="file_picker_previous_directory">Предишна директория</string>
-    <string name="file_picker_select">Избери</string>
     <string name="file_picker_no_files">Няма файлове тук</string>
     <string name="file_picker_internal_storage">Вътрешна памет</string>
     <string name="file_picker_sd_card">SD карта</string>
@@ -689,6 +684,8 @@ morphe_header_custom_dark.png
     <string name="credits_prior_development">Предишно развитие</string>
     <string name="opensource_licenses">Лицензи с отворен код</string>
     <!-- Shared strings -->
+    <string name="select_file">Избери файл</string>
+    <string name="select_folder">Избери папка</string>
     <string name="patches">Пачове</string>
     <string name="home">Начало</string>
     <string name="settings">Настройки</string>

@@ -191,8 +191,6 @@ Parhaan tuloksen saavuttamiseksi sovellus suosittelee &lt;b&gt;kokonaisen APK:n&
     <string name="patch_option_enter_value">Anna arvo</string>
     <string name="patch_option_enter_number">Anna luku</string>
     <string name="patch_option_enter_decimal">Anna desimaaliluku</string>
-    <string name="patch_option_pick_folder">Valitse kansio</string>
-    <string name="patch_option_pick_file">Valitse tiedosto</string>
     <string name="patch_option_list_duplicate">Tämä arvo on jo olemassa</string>
     <string name="patch_option_list_empty">Arvo ei voi olla tyhjä</string>
     <string name="patch_option_list_empty_state">Arvoja ei ole vielä lisätty</string>
@@ -665,10 +663,7 @@ Kuvien mittojen on oltava seuraavat:
     <string name="settings_system_custom_file_picker">Mukautettu tiedostonvalitsin</string>
     <string name="settings_system_custom_file_picker_description">Käytä Morphen sisäänrakennettua tiedostonvalitsinta järjestelmän oletusarvon sijaan</string>
     <!-- File Picker -->
-    <string name="file_picker_title">Valitse tiedosto</string>
-    <string name="file_picker_title_folder">Valitse asennusohjelma</string>
     <string name="file_picker_previous_directory">Edellinen hakemisto</string>
-    <string name="file_picker_select">Valitse</string>
     <string name="file_picker_no_files">Täällä ei ole tiedostoja</string>
     <string name="file_picker_internal_storage">Sisäinen tallennustila</string>
     <string name="file_picker_sd_card">SD-kortti</string>
@@ -688,6 +683,8 @@ Kuvien mittojen on oltava seuraavat:
     <string name="credits_prior_development">Aikaisempi kehitys</string>
     <string name="opensource_licenses">Avoimen lähdekoodin lisenssit</string>
     <!-- Shared strings -->
+    <string name="select_file">Valitse tiedosto</string>
+    <string name="select_folder">Valitse kansio</string>
     <string name="patches">Korjaustiedostot</string>
     <string name="home">Koti</string>
     <string name="settings">Asetukset</string>

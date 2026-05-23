@@ -192,8 +192,6 @@ For de bedste resultater anbefaler denne app at patche en &lt;b&gt;fuld APK&lt;/
     <string name="patch_option_enter_value">Angiv værdi</string>
     <string name="patch_option_enter_number">Angiv tal</string>
     <string name="patch_option_enter_decimal">Angiv decimal</string>
-    <string name="patch_option_pick_folder">Vælg mappe</string>
-    <string name="patch_option_pick_file">Vælg fil</string>
     <string name="patch_option_list_duplicate">Denne værdi eksisterer allerede</string>
     <string name="patch_option_list_empty">Værdien må ikke være tom</string>
     <string name="patch_option_list_empty_state">Ingen værdier tilføjet endnu</string>
@@ -666,10 +664,7 @@ Størrelsesformatet skal være som følger:
     <string name="settings_system_custom_file_picker">Brugerdefineret filvælger</string>
     <string name="settings_system_custom_file_picker_description">Brug Morphes indbyggede filvælger i stedet for systemstandardindstillingen</string>
     <!-- File Picker -->
-    <string name="file_picker_title">Vælg fil</string>
-    <string name="file_picker_title_folder">Vælg mappe</string>
     <string name="file_picker_previous_directory">Forrige mappe</string>
-    <string name="file_picker_select">Vælg</string>
     <string name="file_picker_no_files">Ingen filer her</string>
     <string name="file_picker_internal_storage">Intern lagring</string>
     <string name="file_picker_sd_card">SD-kort</string>
@@ -689,6 +684,8 @@ Størrelsesformatet skal være som følger:
     <string name="credits_prior_development">Prior development</string>
     <string name="opensource_licenses">Open-source licenser</string>
     <!-- Shared strings -->
+    <string name="select_file">Vælg fil</string>
+    <string name="select_folder">Vælg mappe</string>
     <string name="patches">Patches</string>
     <string name="home">Hjem</string>
     <string name="settings">Indstillinger</string>

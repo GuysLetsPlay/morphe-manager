@@ -192,8 +192,6 @@ Para obter os melhores resultados, este app recomenda aplicar os patches em um &
     <string name="patch_option_enter_value">Digite o valor</string>
     <string name="patch_option_enter_number">Digite um número</string>
     <string name="patch_option_enter_decimal">Digite um decimal</string>
-    <string name="patch_option_pick_folder">Selecionar pasta</string>
-    <string name="patch_option_pick_file">Selecionar arquivo</string>
     <string name="patch_option_list_duplicate">Este valor já existe</string>
     <string name="patch_option_list_empty">Valor não pode estar vazio</string>
     <string name="patch_option_list_empty_state">Nenhum valor adicionado ainda</string>
@@ -666,10 +664,7 @@ As dimensões das imagens devem ser as seguintes:
     <string name="settings_system_custom_file_picker">Seletor de arquivos personalizado</string>
     <string name="settings_system_custom_file_picker_description">Navegue pelo armazenamento com o seletor de arquivos integrado do Morphe, em vez do padrão do sistema.</string>
     <!-- File Picker -->
-    <string name="file_picker_title">Selecionar arquivo</string>
-    <string name="file_picker_title_folder">Selecionar pasta</string>
     <string name="file_picker_previous_directory">Diretório anterior</string>
-    <string name="file_picker_select">Selecionar</string>
     <string name="file_picker_no_files">Nenhum arquivo aqui</string>
     <string name="file_picker_internal_storage">Armazenamento interno</string>
     <string name="file_picker_sd_card">Cartão SD</string>
@@ -689,6 +684,8 @@ As dimensões das imagens devem ser as seguintes:
     <string name="credits_prior_development">Desenvolvimento anterior</string>
     <string name="opensource_licenses">Licenças de código aberto</string>
     <!-- Shared strings -->
+    <string name="select_file">Selecionar arquivo</string>
+    <string name="select_folder">Selecionar pasta</string>
     <string name="patches">Patches</string>
     <string name="home">Início</string>
     <string name="settings">Configurações</string>

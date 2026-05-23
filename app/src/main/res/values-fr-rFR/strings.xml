@@ -191,8 +191,6 @@ Pour de meilleurs résultats, cette application recommande de patcher un &lt;b&g
     <string name="patch_option_enter_value">Entrer une valeur</string>
     <string name="patch_option_enter_number">Entrer un nombre</string>
     <string name="patch_option_enter_decimal">Entrer un décimal</string>
-    <string name="patch_option_pick_folder">Choisir un dossier</string>
-    <string name="patch_option_pick_file">Sélectionner un fichier</string>
     <string name="patch_option_list_duplicate">Cette valeur existe déjà</string>
     <string name="patch_option_list_empty">La valeur ne peut pas être vide</string>
     <string name="patch_option_list_empty_state">Aucune valeur ajoutée pour le moment</string>
@@ -625,7 +623,7 @@ Les dimensions des images doivent respecter les valeurs suivantes :
     <string name="settings_system_export_debug_logs_export_failed">Échec de l\'exportation des journaux </string>
     <string name="settings_system_export_debug_logs_export_success">Journaux exportés</string>
     <!-- Settings - System Tab - Files & Storage Section -->
-    <string name="settings_system_files">Fichiers et stockage</string>
+    <string name="settings_system_files">Fichiers &amp; stockage</string>
     <string name="settings_system_apks_size">Taille totale : %s</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">APK patchés</string>
@@ -665,21 +663,18 @@ Les dimensions des images doivent respecter les valeurs suivantes :
     <string name="settings_system_no_patches_or_options">Aucun patch ou option enregistré</string>
     <!-- Settings - System Tab - Custom file picker -->
     <string name="settings_system_custom_file_picker">Sélecteur de fichiers personnalisé</string>
-    <string name="settings_system_custom_file_picker_description">Utiliser le navigateur de fichiers intégré de Morphe au lieu de celui du système.</string>
+    <string name="settings_system_custom_file_picker_description">Parcourez le stockage avec le sélecteur de fichiers intégré de Morphe au lieu de celui par défaut du système</string>
     <!-- File Picker -->
-    <string name="file_picker_title">Sélectionner un fichier</string>
-    <string name="file_picker_title_folder">Sélectionner un dossier</string>
     <string name="file_picker_previous_directory">Dossier précédent</string>
-    <string name="file_picker_select">Sélectionner</string>
     <string name="file_picker_no_files">Aucun fichier ici</string>
     <string name="file_picker_internal_storage">Stockage interne</string>
     <string name="file_picker_sd_card">Carte SD</string>
     <string name="file_picker_sort_name_asc">Nom (A–Z)</string>
     <string name="file_picker_sort_name_desc">Nom (Z–A)</string>
-    <string name="file_picker_sort_size_desc">Taille (la plus grande en premier)</string>
-    <string name="file_picker_sort_size_asc">Taille (la plus petite en premier)</string>
-    <string name="file_picker_sort_date_desc">Date (la plus récente en premier)</string>
-    <string name="file_picker_sort_date_asc">Date (la plus ancienne en premier)</string>
+    <string name="file_picker_sort_size_desc">Taille (du plus grand au plus petit)</string>
+    <string name="file_picker_sort_size_asc">Taille (du plus petit au plus grand)</string>
+    <string name="file_picker_sort_date_desc">Date (du plus récent au plus ancien)</string>
+    <string name="file_picker_sort_date_asc">Date (du plus ancien au plus récent)</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">À propos</string>
     <string name="settings_system_share_website">Partager le site web</string>
@@ -690,6 +685,8 @@ Les dimensions des images doivent respecter les valeurs suivantes :
     <string name="credits_prior_development">Développements antérieurs</string>
     <string name="opensource_licenses">Licences open-source</string>
     <!-- Shared strings -->
+    <string name="select_file">Sélectionner un fichier</string>
+    <string name="select_folder">Sélectionner un dossier</string>
     <string name="patches">Patchs</string>
     <string name="home">Accueil</string>
     <string name="settings">Paramètres</string>

@@ -192,8 +192,6 @@
     <string name="patch_option_enter_value">Εισαγωγή τιμής</string>
     <string name="patch_option_enter_number">Εισαγωγή αριθμού</string>
     <string name="patch_option_enter_decimal">Εισαγωγή δεκαδικού</string>
-    <string name="patch_option_pick_folder">Επιλογή φακέλου</string>
-    <string name="patch_option_pick_file">Επιλογή αρχείου</string>
     <string name="patch_option_list_duplicate">Αυτή η τιμή υπάρχει ήδη</string>
     <string name="patch_option_list_empty">Η τιμή δεν μπορεί να είναι κενή</string>
     <string name="patch_option_list_empty_state">Δεν έχουν προστεθεί τιμές ακόμη</string>
@@ -666,10 +664,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_custom_file_picker">Προσαρμοσμένη επιλογή αρχείων</string>
     <string name="settings_system_custom_file_picker_description">Χρησιμοποιήστε την ενσωματωμένη επιλογή αρχείων του Morphe αντί για την προεπιλεγμένη του συστήματος</string>
     <!-- File Picker -->
-    <string name="file_picker_title">Επιλογή αρχείου</string>
-    <string name="file_picker_title_folder">Επιλογή φακέλου</string>
     <string name="file_picker_previous_directory">Προηγούμενος κατάλογος</string>
-    <string name="file_picker_select">Επιλογή</string>
     <string name="file_picker_no_files">Δεν υπάρχουν αρχεία εδώ</string>
     <string name="file_picker_internal_storage">Εσωτερική αποθήκευση</string>
     <string name="file_picker_sd_card">Κάρτα SD</string>
@@ -689,6 +684,8 @@ morphe_header_custom_dark.png
     <string name="credits_prior_development">Προηγούμενη ανάπτυξη</string>
     <string name="opensource_licenses">Άδειες ανοικτού κώδικα</string>
     <!-- Shared strings -->
+    <string name="select_file">Επιλογή αρχείου</string>
+    <string name="select_folder">Επιλογή φακέλου</string>
     <string name="patches">Τροποποιήσεις</string>
     <string name="home">Αρχική</string>
     <string name="settings">Ρυθμίσεις</string>

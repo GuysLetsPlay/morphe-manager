@@ -192,8 +192,6 @@ Vir die beste resultate beveel hierdie app aan om 'n &lt;b&gt;volle APK&lt;/b&gt
     <string name="patch_option_enter_value">Gee waarde in</string>
     <string name="patch_option_enter_number">Gee getal in</string>
     <string name="patch_option_enter_decimal">Gee desimaal in</string>
-    <string name="patch_option_pick_folder">Kies vouer</string>
-    <string name="patch_option_pick_file">Kies lêer</string>
     <string name="patch_option_list_duplicate">Hierdie waarde bestaan ​​reeds</string>
     <string name="patch_option_list_empty">Waarde kan nie leeg wees nie</string>
     <string name="patch_option_list_empty_state">Geen waardes bygevoeg nie</string>
@@ -666,10 +664,7 @@ Die beeld afmetings moet soos volg wees:
     <string name="settings_system_custom_file_picker">Pasgemaakte lêerkeurder</string>
     <string name="settings_system_custom_file_picker_description">Gebruik Morphe se ingeboude lêerkeurder in plaas van die stelsel se verstek</string>
     <!-- File Picker -->
-    <string name="file_picker_title">Kies lêer</string>
-    <string name="file_picker_title_folder">Kies vouer</string>
     <string name="file_picker_previous_directory">Vorige gids</string>
-    <string name="file_picker_select">Kies</string>
     <string name="file_picker_no_files">Geen lêers hier</string>
     <string name="file_picker_internal_storage">Interne stoorplek</string>
     <string name="file_picker_sd_card">SD-kaart</string>
@@ -689,6 +684,8 @@ Die beeld afmetings moet soos volg wees:
     <string name="credits_prior_development">Vorige ontwikkeling</string>
     <string name="opensource_licenses">Open-source lisensies</string>
     <!-- Shared strings -->
+    <string name="select_file">Kies lêer</string>
+    <string name="select_folder">Kies vouer</string>
     <string name="patches">Veranderinge</string>
     <string name="home">Tuis</string>
     <string name="settings">Instellings</string>

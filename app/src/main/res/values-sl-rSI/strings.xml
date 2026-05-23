@@ -192,8 +192,6 @@ Za najboljše rezultate ta aplikacija priporoča popravljanje &lt;b&gt;polne APK
     <string name="patch_option_enter_value">Vnesi vrednost</string>
     <string name="patch_option_enter_number">Vnesi številko</string>
     <string name="patch_option_enter_decimal">Vnesi decimalno mesto</string>
-    <string name="patch_option_pick_folder">Izberi mapo</string>
-    <string name="patch_option_pick_file">Izberi datoteko</string>
     <string name="patch_option_list_duplicate">Ta vrednost že obstaja</string>
     <string name="patch_option_list_empty">Vrednost ne more biti prazna</string>
     <string name="patch_option_list_empty_state">Še nobene vrednosti ni dodano</string>
@@ -667,10 +665,7 @@ Dimenzije slike morajo biti naslednje:
     <string name="settings_system_custom_file_picker">Izbira datoteke po meri</string>
     <string name="settings_system_custom_file_picker_description">Uporabi vgrajeno izbiro datotek programa Morphe namesto sistemske privzete</string>
     <!-- File Picker -->
-    <string name="file_picker_title">Izberite datoteko</string>
-    <string name="file_picker_title_folder">Izberite mapo</string>
     <string name="file_picker_previous_directory">Prejšnji imenik</string>
-    <string name="file_picker_select">Izberi</string>
     <string name="file_picker_no_files">Ni datotek tukaj</string>
     <string name="file_picker_internal_storage">Notranji pomnilnik</string>
     <string name="file_picker_sd_card">SD kartica</string>
@@ -690,6 +685,8 @@ Dimenzije slike morajo biti naslednje:
     <string name="credits_prior_development">Prejšnja razvojanost</string>
     <string name="opensource_licenses">Odprtokodna dovoljenja</string>
     <!-- Shared strings -->
+    <string name="select_file">Izberi datoteko</string>
+    <string name="select_folder">Izberi mapo</string>
     <string name="patches">Popravki</string>
     <string name="home">Domov</string>
     <string name="settings">Nastavitve</string>

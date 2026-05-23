@@ -192,8 +192,6 @@
     <string name="patch_option_enter_value">मूल्य दर्ज करें</string>
     <string name="patch_option_enter_number">नंबर दर्ज करें</string>
     <string name="patch_option_enter_decimal">दशमलव दर्ज करें</string>
-    <string name="patch_option_pick_folder">फ़ोल्डर चुनें</string>
-    <string name="patch_option_pick_file">फ़ाइल चुनें</string>
     <string name="patch_option_list_duplicate">यह मान पहले से मौजूद है</string>
     <string name="patch_option_list_empty">मान खाली नहीं हो सकता</string>
     <string name="patch_option_list_empty_state">अभी तक कोई मान नहीं जोड़ा गया है</string>
@@ -666,10 +664,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_custom_file_picker">कस्टम फ़ाइल पिकर</string>
     <string name="settings_system_custom_file_picker_description">सिस्टम डिफ़ॉल्ट के बजाय मोरफे के बिल्ट-इन फ़ाइल पिकर के साथ संग्रहण ब्राउज़ करें</string>
     <!-- File Picker -->
-    <string name="file_picker_title">फ़ाइल चुनें</string>
-    <string name="file_picker_title_folder">फ़ोल्डर चुनें</string>
     <string name="file_picker_previous_directory">पिछली निर्देशिका</string>
-    <string name="file_picker_select">चुनें</string>
     <string name="file_picker_no_files">यहां कोई फ़ाइलें नहीं हैं</string>
     <string name="file_picker_internal_storage">आंतरिक संग्रहण</string>
     <string name="file_picker_sd_card">एसडी कार्ड</string>
@@ -689,6 +684,8 @@ morphe_header_custom_dark.png
     <string name="credits_prior_development">पिछला विकास</string>
     <string name="opensource_licenses">ओपन-सोर्स लाइसेंस</string>
     <!-- Shared strings -->
+    <string name="select_file">फ़ाइल चुनें</string>
+    <string name="select_folder">फ़ोल्डर चुनें</string>
     <string name="patches">पैच</string>
     <string name="home">घर</string>
     <string name="settings">सेटिंग्स</string>

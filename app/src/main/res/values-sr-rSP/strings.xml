@@ -192,8 +192,6 @@
     <string name="patch_option_enter_value">Унесите вредност</string>
     <string name="patch_option_enter_number">Унесите број</string>
     <string name="patch_option_enter_decimal">Унесите децимално</string>
-    <string name="patch_option_pick_folder">Изаберите фасциклу</string>
-    <string name="patch_option_pick_file">Изаберите датотеку</string>
     <string name="patch_option_list_duplicate">Ova vrednost već postoji</string>
     <string name="patch_option_list_empty">Vrednost ne može biti prazna</string>
     <string name="patch_option_list_empty_state">Nisu dodate nijedne vrednosti</string>
@@ -665,10 +663,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_custom_file_picker">Подешавач фајлова по мери</string>
     <string name="settings_system_custom_file_picker_description">Прегледајте складиште користећи уграђени изабирач фајлова у Morphe-у уместо подразумеваног у систему</string>
     <!-- File Picker -->
-    <string name="file_picker_title">Изаберите фајл</string>
-    <string name="file_picker_title_folder">Изаберите фолдер</string>
     <string name="file_picker_previous_directory">Претходни директоријум</string>
-    <string name="file_picker_select">Изаберите</string>
     <string name="file_picker_no_files">Нема фајлова овде</string>
     <string name="file_picker_internal_storage">Интерна складиште</string>
     <string name="file_picker_sd_card">SD картица</string>
@@ -688,6 +683,8 @@ morphe_header_custom_dark.png
     <string name="credits_prior_development">Претходни развој</string>
     <string name="opensource_licenses">Лиценце отвореног кода</string>
     <!-- Shared strings -->
+    <string name="select_file">Изаберите датотеку</string>
+    <string name="select_folder">Изаберите фолдер</string>
     <string name="patches">Флатери</string>
     <string name="home">Почетак</string>
     <string name="settings">Поставке</string>

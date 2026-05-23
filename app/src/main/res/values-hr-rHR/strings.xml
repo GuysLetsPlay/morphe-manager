@@ -192,8 +192,6 @@ Za najbolje rezultate,  patchanje ove aplikacija preporučuje &lt;b&gt;cijeli AP
     <string name="patch_option_enter_value">Unesite vrijednost</string>
     <string name="patch_option_enter_number">Unesite broj</string>
     <string name="patch_option_enter_decimal">Unesite decimalu</string>
-    <string name="patch_option_pick_folder">Odaberite mapu</string>
-    <string name="patch_option_pick_file">Odaberite datoteku</string>
     <string name="patch_option_list_duplicate">Ova vrijednost već postoji</string>
     <string name="patch_option_list_empty">Vrijednost ne može biti prazna</string>
     <string name="patch_option_list_empty_state">Još nema dodanih vrijednosti</string>

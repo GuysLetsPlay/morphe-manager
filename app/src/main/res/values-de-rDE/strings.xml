@@ -192,8 +192,6 @@ Für optimale Ergebnisse empfiehlt diese App eine &lt;b&gt;vollständige APK&lt;
     <string name="patch_option_enter_value">Wert eingeben</string>
     <string name="patch_option_enter_number">Zahl eingeben</string>
     <string name="patch_option_enter_decimal">Dezimalzahl eingeben</string>
-    <string name="patch_option_pick_folder">Ordner auswählen</string>
-    <string name="patch_option_pick_file">Datei auswählen</string>
     <string name="patch_option_list_duplicate">Dieser Wert existiert bereits</string>
     <string name="patch_option_list_empty">Wert darf nicht leer sein</string>
     <string name="patch_option_list_empty_state">Noch keine Werte hinzugefügt</string>
@@ -666,10 +664,7 @@ Die Bildgrößen müssen wie folgt sein:
     <string name="settings_system_custom_file_picker">Benutzerdefinierter Dateiauswahldialog</string>
     <string name="settings_system_custom_file_picker_description">Durchsuchen Sie den Speicher mit dem integrierten Dateiauswahldialog von Morphe anstelle der systemspezifischen Standardeinstellung.</string>
     <!-- File Picker -->
-    <string name="file_picker_title">Datei auswählen</string>
-    <string name="file_picker_title_folder">Ordner auswählen</string>
     <string name="file_picker_previous_directory">Vorheriges Verzeichnis</string>
-    <string name="file_picker_select">Auswählen</string>
     <string name="file_picker_no_files">Keine Dateien hier</string>
     <string name="file_picker_internal_storage">Interner Speicher</string>
     <string name="file_picker_sd_card">SD-Karte</string>
@@ -689,6 +684,8 @@ Die Bildgrößen müssen wie folgt sein:
     <string name="credits_prior_development">Frühere Entwicklung</string>
     <string name="opensource_licenses">Open-Source-Lizenzen</string>
     <!-- Shared strings -->
+    <string name="select_file">Datei auswählen</string>
+    <string name="select_folder">Ordner auswählen</string>
     <string name="patches">Patches</string>
     <string name="home">Startseite</string>
     <string name="settings">Einstellungen</string>

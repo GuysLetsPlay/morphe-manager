@@ -192,8 +192,6 @@ Per ottenere i risultati migliori, questa app raccomanda di applicare una patch 
     <string name="patch_option_enter_value">Inserisci il valore</string>
     <string name="patch_option_enter_number">Inserisci il numero</string>
     <string name="patch_option_enter_decimal">Inserisci il decimale</string>
-    <string name="patch_option_pick_folder">Scegli la cartella</string>
-    <string name="patch_option_pick_file">Scegli file</string>
     <string name="patch_option_list_duplicate">Questo valore esiste già</string>
     <string name="patch_option_list_empty">Il valore non può essere vuoto</string>
     <string name="patch_option_list_empty_state">Nessun valore aggiunto ancora</string>
@@ -655,10 +653,7 @@ Le dimensioni delle immagini devono essere le seguenti:
     <string name="settings_system_custom_file_picker">Selettore di file personalizzato</string>
     <string name="settings_system_custom_file_picker_description">Utilizza il selettore di file integrato di Morphe invece di quello predefinito del sistema</string>
     <!-- File Picker -->
-    <string name="file_picker_title">Seleziona file</string>
-    <string name="file_picker_title_folder">Seleziona cartella</string>
     <string name="file_picker_previous_directory">Directory precedente</string>
-    <string name="file_picker_select">Seleziona</string>
     <string name="file_picker_no_files">Nessun file qui</string>
     <string name="file_picker_internal_storage">Memoria interna</string>
     <string name="file_picker_sd_card">Scheda SD</string>
@@ -678,6 +673,8 @@ Le dimensioni delle immagini devono essere le seguenti:
     <string name="credits_prior_development">Sviluppo precedente</string>
     <string name="opensource_licenses">Licenze open-source</string>
     <!-- Shared strings -->
+    <string name="select_file">Seleziona file</string>
+    <string name="select_folder">Seleziona cartella</string>
     <string name="patches">Patch</string>
     <string name="home">Home</string>
     <string name="settings">Impostazioni</string>
