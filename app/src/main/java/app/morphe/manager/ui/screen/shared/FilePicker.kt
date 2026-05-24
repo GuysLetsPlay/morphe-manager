@@ -51,6 +51,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import com.topjohnwu.superuser.Shell
 import org.koin.compose.koinInject
 import java.io.File
 import java.text.SimpleDateFormat
@@ -99,7 +100,7 @@ internal fun resolveAllowedExtensions(mimeTypes: Array<String>): Set<String>? {
     return extensions.ifEmpty { null }
 }
 
-private fun storageRoots(context: Context): List<Pair<String, File>> {
+private fun storageRoots(context: Context, hasRoot: Boolean): List<Pair<String, File>> {
     val roots = mutableListOf<Pair<String, File>>()
     val primary = Environment.getExternalStorageDirectory()
     if (primary.exists()) roots += context.getString(R.string.file_picker_internal_storage) to primary
@@ -107,6 +108,7 @@ private fun storageRoots(context: Context): List<Pair<String, File>> {
         if (!dir.isDirectory || dir.name == "emulated" || dir.name == "self") return@forEach
         if (dir.canRead()) roots += context.getString(R.string.file_picker_sd_card) to dir
     }
+    if (hasRoot) roots += context.getString(R.string.file_picker_root) to File("/")
     return roots
 }
 
@@ -207,7 +209,8 @@ fun FilePicker(
             bmp.asImageBitmap()
         }.getOrNull()
     }
-    val roots = remember { storageRoots(context) }
+    val hasRoot = remember { Shell.isAppGrantedRoot() == true }
+    val roots = remember(hasRoot) { storageRoots(context, hasRoot) }
 
     val downloadsDir = remember {
         Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
