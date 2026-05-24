@@ -11,9 +11,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.detectDragGestures
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.Refresh
-import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
@@ -175,7 +172,7 @@ fun Game2048Board(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
-            ScoreRow(score = state.score, progress = progress, onRestart = state::restart, extraActions = extraActions)
+            GameScoreRow(score = state.score, progress = progress, onRestart = state::restart, extraActions = extraActions)
 
             BoardGrid(state = state, size = boardSize)
 
@@ -188,38 +185,6 @@ fun Game2048Board(
                 )
             }
         }
-    }
-}
-
-@Composable
-private fun ScoreRow(
-    score: Int,
-    progress: Float?,
-    onRestart: () -> Unit,
-    extraActions: @Composable (() -> Unit)? = null
-) {
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        GameChip(verticalPadding = 8.dp) {
-            Text(stringResource(R.string.mini_game_score, score),
-                style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.SemiBold)
-        }
-        if (progress != null) {
-            GameChip(verticalPadding = 8.dp) {
-                Text("${(progress * 100).toInt()}%",
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.SemiBold)
-            }
-        }
-        Spacer(Modifier.weight(1f))
-        GameChip(onClick = onRestart) {
-            Icon(Icons.Outlined.Refresh, contentDescription = null, modifier = Modifier.size(20.dp))
-        }
-        extraActions?.invoke()
     }
 }
 

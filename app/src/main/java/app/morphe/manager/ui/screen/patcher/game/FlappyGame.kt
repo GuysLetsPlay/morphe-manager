@@ -10,9 +10,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.Refresh
-import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
@@ -146,7 +143,7 @@ fun FlappyBirdGame(
     }
 
     Column(modifier = modifier) {
-        FlappyScoreRow(
+        GameScoreRow(
             score = state.score,
             progress = progress,
             onRestart = state::restart,
@@ -154,42 +151,6 @@ fun FlappyBirdGame(
         )
         Spacer(Modifier.height(8.dp))
         FlappyCanvas(state = state, modifier = Modifier.weight(1f).fillMaxWidth())
-    }
-}
-
-@Composable
-private fun FlappyScoreRow(
-    score: Int,
-    progress: Float?,
-    onRestart: () -> Unit,
-    extraActions: @Composable (() -> Unit)?
-) {
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        GameChip(verticalPadding = 8.dp) {
-            Text(
-                stringResource(R.string.mini_game_score, score),
-                style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.SemiBold
-            )
-        }
-        if (progress != null) {
-            GameChip(verticalPadding = 8.dp) {
-                Text(
-                    "${(progress * 100).toInt()}%",
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.SemiBold
-                )
-            }
-        }
-        Spacer(Modifier.weight(1f))
-        GameChip(onClick = onRestart) {
-            Icon(Icons.Outlined.Refresh, contentDescription = null, modifier = Modifier.size(20.dp))
-        }
-        extraActions?.invoke()
     }
 }
 

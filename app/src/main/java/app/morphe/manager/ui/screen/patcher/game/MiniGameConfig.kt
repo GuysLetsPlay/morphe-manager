@@ -30,6 +30,7 @@ import app.morphe.manager.ui.screen.shared.GradientCircleIcon
 import app.morphe.manager.ui.screen.shared.MorpheCard
 import app.morphe.manager.ui.screen.shared.MorpheDefaults
 
+/** Available mini-games that can be played during patching. */
 enum class MiniGame {
     GAME_2048,
     FLAPPY,
@@ -49,6 +50,7 @@ class MiniGameState {
     val dino = DinoGameState()
     var selectedGame by mutableStateOf<MiniGame?>(null)
 
+    /** Restarts and selects [game], replacing any currently active game. */
     fun selectGame(game: MiniGame) {
         when (game) {
             MiniGame.GAME_2048 -> game2048.restart()
@@ -59,6 +61,7 @@ class MiniGameState {
         selectedGame = game
     }
 
+    /** Pauses the currently selected game if it is active (started and not game-over). */
     fun pauseActiveGame() {
         when (selectedGame) {
             MiniGame.GAME_2048 -> game2048.pause()
@@ -280,6 +283,48 @@ internal fun MiniGameContent(
     }
 }
 
+/**
+ * Shared score row shown at the top of every mini-game.
+ * Displays the [score], an optional patching [progress] percentage chip, a restart button,
+ * and any [extraActions] (e.g. game-picker and back-to-host chips).
+ */
+@Composable
+internal fun GameScoreRow(
+    score: Int,
+    progress: Float?,
+    onRestart: () -> Unit,
+    extraActions: (@Composable () -> Unit)? = null
+) {
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        GameChip(verticalPadding = 8.dp) {
+            Text(
+                stringResource(R.string.mini_game_score, score),
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.SemiBold
+            )
+        }
+        if (progress != null) {
+            GameChip(verticalPadding = 8.dp) {
+                Text(
+                    "${(progress * 100).toInt()}%",
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.SemiBold
+                )
+            }
+        }
+        Spacer(Modifier.weight(1f))
+        GameChip(onClick = onRestart) {
+            Icon(Icons.Outlined.Refresh, contentDescription = null, modifier = Modifier.size(20.dp))
+        }
+        extraActions?.invoke()
+    }
+}
+
+/** Full-screen overlay shown when a game ends, displaying the final [score] and a restart button. */
 @Composable
 internal fun GameOverOverlay(score: Int, onRestart: () -> Unit, modifier: Modifier = Modifier) {
     Box(
@@ -311,6 +356,7 @@ internal fun GameOverOverlay(score: Int, onRestart: () -> Unit, modifier: Modifi
     }
 }
 
+/** Full-screen overlay shown when a game is paused, with a Continue button that calls [onResume]. */
 @Composable
 internal fun GamePauseOverlay(onResume: () -> Unit, modifier: Modifier = Modifier) {
     Box(
@@ -336,6 +382,7 @@ internal fun GamePauseOverlay(onResume: () -> Unit, modifier: Modifier = Modifie
     }
 }
 
+/** Fires a double-buzz haptic pattern once when [isGameOver] transitions to `true`. */
 @Composable
 internal fun GameOverHaptic(isGameOver: Boolean) {
     val context = LocalContext.current
