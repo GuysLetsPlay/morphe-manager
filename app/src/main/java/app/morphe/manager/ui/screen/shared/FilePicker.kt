@@ -47,11 +47,11 @@ import app.morphe.manager.domain.manager.PreferencesManager
 import app.morphe.manager.util.APK_EXTENSIONS
 import app.morphe.manager.util.PM
 import app.morphe.manager.util.formatBytes
+import com.topjohnwu.superuser.Shell
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import com.topjohnwu.superuser.Shell
 import org.koin.compose.koinInject
 import java.io.File
 import java.text.SimpleDateFormat
@@ -179,8 +179,12 @@ private fun applySort(files: List<File>, mode: SortMode): List<File> {
     return dirs.sortedBy { it.name.lowercase() } + sortedFiles
 }
 
+private val modDateFormatter = ThreadLocal.withInitial {
+    SimpleDateFormat("dd.MM.yyyy, HH:mm", Locale.getDefault())
+}
+
 private fun formatModDate(timestamp: Long): String =
-    SimpleDateFormat("dd.MM.yyyy, HH:mm", Locale.getDefault()).format(Date(timestamp))
+    modDateFormatter.get()!!.format(Date(timestamp))
 
 /**
  * Fullscreen file browser dialog styled to match the Morphe design system.
@@ -498,11 +502,12 @@ fun FilePicker(
                     } else {
                         items(displayedContents, key = { it.absolutePath }) { file ->
                             val isDir = file.isDirectory
-                            val isApk = !isDir && file.extension.lowercase() in APK_EXTENSIONS
+                            val ext = if (isDir) "" else file.extension.lowercase()
+                            val isApk = ext in APK_EXTENSIONS
                             // Only standard .apk supports getPackageArchiveInfo; bundles (.apkm/.apks/.xapk) are ZIPs
-                            val canLoadIcon = !isDir && file.extension.lowercase() == "apk"
-                            val isImage = !isDir && file.extension.lowercase() in IMAGE_EXTENSIONS
-                            val isSplitBundle = !isDir && file.extension.lowercase() in SPLIT_ICON_EXTENSIONS
+                            val canLoadIcon = ext == "apk"
+                            val isImage = ext in IMAGE_EXTENSIONS
+                            val isSplitBundle = ext in SPLIT_ICON_EXTENSIONS
 
                             val packageInfo by produceState<PackageInfo?>(null, file) {
                                 if (canLoadIcon) {
@@ -543,9 +548,9 @@ fun FilePicker(
                                 }
                             }
 
-                            val isMpp = !isDir && file.extension.lowercase() == "mpp"
-                            val isKeystore = !isDir && file.extension.lowercase() in KEYSTORE_EXTENSIONS
-                            val isJson = !isDir && file.extension.lowercase() == "json"
+                            val isMpp = ext == "mpp"
+                            val isKeystore = ext in KEYSTORE_EXTENSIONS
+                            val isJson = ext == "json"
                             val icon = when {
                                 isDir -> Icons.Outlined.Folder
                                 canLoadIcon && packageInfo == null -> Icons.Outlined.Android
@@ -667,8 +672,7 @@ private fun FilePickerRow(
             Text(
                 text = name,
                 style = MaterialTheme.typography.bodyLarge,
-                color = LocalDialogTextColor.current,
-                fontWeight = FontWeight.Normal
+                color = LocalDialogTextColor.current
             )
             if (detail != null) {
                 Text(
