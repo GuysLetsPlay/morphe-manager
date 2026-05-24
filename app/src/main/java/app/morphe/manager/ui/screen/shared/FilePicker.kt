@@ -12,6 +12,9 @@ import android.graphics.Canvas
 import android.os.Environment
 import android.util.LruCache
 import androidx.appcompat.content.res.AppCompatResources
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.Crossfade
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -305,165 +308,179 @@ fun FilePicker(
         footer = null
     ) {
         Column(modifier = Modifier.fillMaxSize()) {
-            Row(
+            Crossfade(
+                targetState = showSearch,
+                animationSpec = tween(100),
                 modifier = Modifier
                     .fillMaxWidth()
                     .statusBarsPadding()
-                    .padding(start = 4.dp, end = 8.dp, top = 4.dp, bottom = 4.dp),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                if (showSearch) {
-                    IconButton(onClick = { showSearch = false; searchQuery = "" }) {
-                        Icon(
-                            imageVector = Icons.AutoMirrored.Outlined.ArrowBack,
-                            contentDescription = null,
-                            tint = LocalDialogTextColor.current
-                        )
-                    }
-                    Box(
-                        modifier = Modifier
-                            .weight(1f)
-                            .padding(horizontal = 4.dp),
-                        contentAlignment = Alignment.CenterStart
-                    ) {
-                        if (searchQuery.isEmpty()) {
-                            Text(
-                                text = stringResource(R.string.search),
-                                style = MaterialTheme.typography.bodyLarge,
-                                color = LocalDialogTextColor.current.copy(alpha = 0.45f)
-                            )
-                        }
-                        BasicTextField(
-                            value = searchQuery,
-                            onValueChange = { searchQuery = it },
-                            singleLine = true,
-                            textStyle = MaterialTheme.typography.bodyLarge.copy(
-                                color = LocalDialogTextColor.current
-                            ),
-                            cursorBrush = SolidColor(MaterialTheme.colorScheme.primary),
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .focusRequester(searchFocusRequester)
-                        )
-                    }
-                } else {
-                    Text(
-                        text = stringResource(
-                            if (allowFolderSelection) R.string.select_folder
-                            else R.string.select_file
-                        ),
-                        style = MaterialTheme.typography.titleLarge,
-                        fontWeight = FontWeight.Bold,
-                        color = LocalDialogTextColor.current,
-                        modifier = Modifier
-                            .weight(1f)
-                            .padding(start = 16.dp)
-                    )
-                    Box {
-                        IconButton(onClick = { showSortMenu = true }) {
+                    .padding(start = 4.dp, end = 8.dp, top = 4.dp, bottom = 4.dp)
+            ) { isSearching ->
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    if (isSearching) {
+                        IconButton(onClick = { showSearch = false; searchQuery = "" }) {
                             Icon(
-                                imageVector = Icons.AutoMirrored.Outlined.Sort,
+                                imageVector = Icons.AutoMirrored.Outlined.ArrowBack,
                                 contentDescription = null,
                                 tint = LocalDialogTextColor.current
                             )
                         }
-                        DropdownMenu(
-                            expanded = showSortMenu,
-                            onDismissRequest = { showSortMenu = false }
+                        Box(
+                            modifier = Modifier
+                                .weight(1f)
+                                .padding(horizontal = 4.dp),
+                            contentAlignment = Alignment.CenterStart
                         ) {
-                            SortMode.entries.forEach { mode ->
-                                DropdownMenuItem(
-                                    text = { Text(stringResource(mode.labelRes())) },
-                                    trailingIcon = if (sortMode == mode) {
-                                        { Icon(Icons.Outlined.Check, contentDescription = null) }
-                                    } else null,
-                                    onClick = {
-                                        sortMode = mode
-                                        showSortMenu = false
-                                        coroutineScope.launch { prefs.filePickerSortMode.update(mode.name) }
-                                    }
+                            if (searchQuery.isEmpty()) {
+                                Text(
+                                    text = stringResource(R.string.search),
+                                    style = MaterialTheme.typography.bodyLarge,
+                                    color = LocalDialogTextColor.current.copy(alpha = 0.45f)
                                 )
                             }
+                            BasicTextField(
+                                value = searchQuery,
+                                onValueChange = { searchQuery = it },
+                                singleLine = true,
+                                textStyle = MaterialTheme.typography.bodyLarge.copy(
+                                    color = LocalDialogTextColor.current
+                                ),
+                                cursorBrush = SolidColor(MaterialTheme.colorScheme.primary),
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .focusRequester(searchFocusRequester)
+                            )
                         }
-                    }
-                    IconButton(onClick = { refreshKey++ }) {
-                        Icon(
-                            imageVector = Icons.Outlined.Refresh,
-                            contentDescription = null,
-                            tint = LocalDialogTextColor.current
+                    } else {
+                        Text(
+                            text = stringResource(
+                                if (allowFolderSelection) R.string.select_folder
+                                else R.string.select_file
+                            ),
+                            style = MaterialTheme.typography.titleLarge,
+                            fontWeight = FontWeight.Bold,
+                            color = LocalDialogTextColor.current,
+                            modifier = Modifier
+                                .weight(1f)
+                                .padding(start = 16.dp)
                         )
-                    }
-                    IconButton(onClick = { showSearch = true }) {
-                        Icon(
-                            imageVector = Icons.Outlined.Search,
-                            contentDescription = null,
-                            tint = LocalDialogTextColor.current
-                        )
+                        Box {
+                            IconButton(onClick = { showSortMenu = true }) {
+                                Icon(
+                                    imageVector = Icons.AutoMirrored.Outlined.Sort,
+                                    contentDescription = null,
+                                    tint = LocalDialogTextColor.current
+                                )
+                            }
+                            DropdownMenu(
+                                expanded = showSortMenu,
+                                onDismissRequest = { showSortMenu = false }
+                            ) {
+                                SortMode.entries.forEach { mode ->
+                                    DropdownMenuItem(
+                                        text = { Text(stringResource(mode.labelRes())) },
+                                        trailingIcon = if (sortMode == mode) {
+                                            { Icon(Icons.Outlined.Check, contentDescription = null) }
+                                        } else null,
+                                        onClick = {
+                                            sortMode = mode
+                                            showSortMenu = false
+                                            coroutineScope.launch { prefs.filePickerSortMode.update(mode.name) }
+                                        }
+                                    )
+                                }
+                            }
+                        }
+                        IconButton(onClick = { refreshKey++ }) {
+                            Icon(
+                                imageVector = Icons.Outlined.Refresh,
+                                contentDescription = null,
+                                tint = LocalDialogTextColor.current
+                            )
+                        }
+                        IconButton(onClick = { showSearch = true }) {
+                            Icon(
+                                imageVector = Icons.Outlined.Search,
+                                contentDescription = null,
+                                tint = LocalDialogTextColor.current
+                            )
+                        }
                     }
                 }
             }
 
             HorizontalDivider(color = LocalDialogTextColor.current.copy(alpha = 0.08f))
 
-            if (currentDir != null) {
-                Box {
-                    Text(
-                        text = displayPath,
-                        style = MaterialTheme.typography.labelSmall,
-                        color = LocalDialogSecondaryTextColor.current,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .clickable { showBreadcrumbs = true }
-                            .padding(horizontal = 16.dp, vertical = 6.dp)
-                    )
-                    DropdownMenu(
-                        expanded = showBreadcrumbs,
-                        onDismissRequest = { showBreadcrumbs = false }
-                    ) {
-                        breadcrumbs.forEachIndexed { index, (label, dir) ->
-                            val isRoot = index == 0
-                            val isCurrent = index == breadcrumbs.lastIndex
-                            DropdownMenuItem(
-                                text = { Text(label) },
-                                leadingIcon = {
-                                    Icon(
-                                        imageVector = if (isRoot) Icons.Outlined.Storage else Icons.Outlined.Folder,
-                                        contentDescription = null
-                                    )
-                                },
-                                trailingIcon = if (isCurrent) {
-                                    { Icon(Icons.Outlined.Check, contentDescription = null) }
-                                } else null,
-                                onClick = {
-                                    currentDir = dir
-                                    showBreadcrumbs = false
-                                }
-                            )
-                        }
-                        val otherRoots = roots.filter { (_, root) -> breadcrumbs.none { (_, dir) -> dir == root } }
-                        if (otherRoots.isNotEmpty()) {
-                            HorizontalDivider()
-                            otherRoots.forEach { (label, root) ->
+            AnimatedVisibility(
+                visible = currentDir != null,
+                enter = MorpheAnimations.expandFadeEnter,
+                exit = MorpheAnimations.shrinkFadeExit
+            ) {
+                Column {
+                    Box {
+                        Text(
+                            text = displayPath,
+                            style = MaterialTheme.typography.labelSmall,
+                            color = LocalDialogSecondaryTextColor.current,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .clickable { showBreadcrumbs = true }
+                                .padding(horizontal = 16.dp, vertical = 6.dp)
+                        )
+                        DropdownMenu(
+                            expanded = showBreadcrumbs,
+                            onDismissRequest = { showBreadcrumbs = false }
+                        ) {
+                            breadcrumbs.forEachIndexed { index, (label, dir) ->
+                                val isRoot = index == 0
+                                val isCurrent = index == breadcrumbs.lastIndex
                                 DropdownMenuItem(
                                     text = { Text(label) },
                                     leadingIcon = {
-                                        Icon(Icons.Outlined.Storage, contentDescription = null)
+                                        Icon(
+                                            imageVector = if (isRoot) Icons.Outlined.Storage else Icons.Outlined.Folder,
+                                            contentDescription = null
+                                        )
                                     },
+                                    trailingIcon = if (isCurrent) {
+                                        { Icon(Icons.Outlined.Check, contentDescription = null) }
+                                    } else null,
                                     onClick = {
-                                        currentDir = root
+                                        currentDir = dir
                                         showBreadcrumbs = false
                                     }
                                 )
                             }
+                            val otherRoots = roots.filter { (_, root) -> breadcrumbs.none { (_, dir) -> dir == root } }
+                            if (otherRoots.isNotEmpty()) {
+                                HorizontalDivider()
+                                otherRoots.forEach { (label, root) ->
+                                    DropdownMenuItem(
+                                        text = { Text(label) },
+                                        leadingIcon = {
+                                            Icon(Icons.Outlined.Storage, contentDescription = null)
+                                        },
+                                        onClick = {
+                                            currentDir = root
+                                            showBreadcrumbs = false
+                                        }
+                                    )
+                                }
+                            }
                         }
                     }
+                    HorizontalDivider(color = LocalDialogTextColor.current.copy(alpha = 0.06f))
                 }
-                HorizontalDivider(color = LocalDialogTextColor.current.copy(alpha = 0.06f))
             }
 
-            LazyColumn(modifier = Modifier.weight(1f)) {
+            LazyColumn(modifier = Modifier
+                .weight(1f)
+                .fillMaxWidth()) {
                 if (currentDir == null) {
                     items(roots, key = { it.second.absolutePath }) { (label, root) ->
                         FilePickerRow(
