@@ -38,10 +38,12 @@ class Game2048State : MiniGameStateBase {
     private var _isGameOver by mutableStateOf(false)
     private var _hasWon by mutableStateOf(false)
     private var _isPaused by mutableStateOf(false)
+    private var _highScore by mutableIntStateOf(0)
 
     // board is read-only from outside; only accessed within this file via BoardGrid
     val board: Array<IntArray> get() = _board
     override val score: Int get() = _score
+    override val highScore: Int get() = _highScore
     val isGameOver: Boolean get() = _isGameOver
     // hasWon stays true even after game over so the win message persists until restart
     val hasWon: Boolean get() = _hasWon
@@ -142,6 +144,7 @@ class Game2048State : MiniGameStateBase {
             if (c + 1 < BOARD_SIZE && _board[r][c + 1] == v) return
             if (r + 1 < BOARD_SIZE && _board[r + 1][c] == v) return
         }
+        if (_score > _highScore) _highScore = _score
         _isGameOver = true
     }
 
@@ -217,7 +220,7 @@ private fun BoardGrid(state: Game2048State, size: Dp) {
         }
 
         if (state.isGameOver) {
-            GameOverOverlay(score = state.score, onRestart = state::restart, modifier = Modifier.matchParentSize())
+            GameOverOverlay(score = state.score, highScore = state.highScore, onRestart = state::restart, modifier = Modifier.matchParentSize())
         }
         if (state.isPaused) {
             GamePauseOverlay(onResume = state::resume, modifier = Modifier.matchParentSize())

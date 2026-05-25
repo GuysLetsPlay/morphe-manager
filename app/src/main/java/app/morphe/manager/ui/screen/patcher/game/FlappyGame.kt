@@ -40,7 +40,7 @@ private const val PIPE_GAP = 0.30f         // gap height as fraction of canvas h
 private const val PIPE_SPEED = 0.32f       // canvas-widths per second
 private const val PIPE_SPAWN_MS = 2000L
 private const val GRAVITY = 2.0f           // height-fraction per second squared
-private const val TAP_IMPULSE = -1.0f      // height-fraction per second, upward
+private const val TAP_IMPULSE = -0.65f     // height-fraction per second, upward
 // Collision radius is smaller than the visual radius to be forgiving
 private const val HIT_SHRINK = 0.75f
 
@@ -59,6 +59,8 @@ class FlappyGameState : MiniGameStateBase {
     var pipes by mutableStateOf<List<FlappyPipe>>(emptyList())
         private set
     override var score by mutableIntStateOf(0)
+        private set
+    override var highScore by mutableIntStateOf(0)
         private set
     var isGameOver by mutableStateOf(false)
         private set
@@ -85,6 +87,7 @@ class FlappyGameState : MiniGameStateBase {
         birdY += velocity * dt
 
         if (birdY - BIRD_RADIUS < 0f || birdY + BIRD_RADIUS > 1f) {
+            if (score > highScore) highScore = score
             isGameOver = true; return
         }
 
@@ -109,7 +112,10 @@ class FlappyGameState : MiniGameStateBase {
             }
             pipe.copy(x = nx, passed = pipe.passed || nowPassed)
         }
-        if (hit) isGameOver = true
+        if (hit) {
+            if (score > highScore) highScore = score
+            isGameOver = true
+        }
     }
 
     override fun restart() {
@@ -231,7 +237,7 @@ private fun FlappyCanvas(state: FlappyGameState, modifier: Modifier) {
 
         // Game over overlay
         if (state.isGameOver) {
-            GameOverOverlay(score = state.score, onRestart = state::restart, modifier = Modifier.fillMaxSize())
+            GameOverOverlay(score = state.score, highScore = state.highScore, onRestart = state::restart, modifier = Modifier.fillMaxSize())
         }
         if (state.isPaused) {
             GamePauseOverlay(onResume = state::resume, modifier = Modifier.fillMaxSize())

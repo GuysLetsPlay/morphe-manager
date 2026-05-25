@@ -70,6 +70,8 @@ class DinoGameState : MiniGameStateBase {
         private set
     override var score by mutableIntStateOf(0)
         private set
+    override var highScore by mutableIntStateOf(0)
+        private set
     var isGameOver by mutableStateOf(false)
         private set
     var isStarted by mutableStateOf(false)
@@ -140,7 +142,10 @@ class DinoGameState : MiniGameStateBase {
             moved += obs.copy(x = nx)
         }
         obstacles = moved
-        if (hit) isGameOver = true
+        if (hit) {
+            if (score > highScore) highScore = score
+            isGameOver = true
+        }
 
         // Clouds: slow decorative background elements
         if (lastCloudMs == 0L) lastCloudMs = nowMs
@@ -330,7 +335,7 @@ private fun DinoCanvas(state: DinoGameState, modifier: Modifier) {
         }
 
         if (state.isGameOver) {
-            GameOverOverlay(score = state.score, onRestart = state::restart, modifier = Modifier.fillMaxSize())
+            GameOverOverlay(score = state.score, highScore = state.highScore, onRestart = state::restart, modifier = Modifier.fillMaxSize())
         }
         if (state.isPaused) {
             GamePauseOverlay(onResume = state::resume, modifier = Modifier.fillMaxSize())

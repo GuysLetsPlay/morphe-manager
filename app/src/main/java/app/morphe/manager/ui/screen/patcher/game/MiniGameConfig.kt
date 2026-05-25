@@ -43,6 +43,7 @@ enum class MiniGame {
 /** Common state contract for all mini-games — exposes only what the shared UI layer needs. */
 interface MiniGameStateBase {
     val score: Int
+    val highScore: Int
     fun restart()
 }
 
@@ -376,7 +377,7 @@ internal fun GameScoreRow(
 
 /** Full-screen overlay shown when a game ends, displaying the final [score] and a restart button. */
 @Composable
-internal fun GameOverOverlay(score: Int, onRestart: () -> Unit, modifier: Modifier = Modifier) {
+internal fun GameOverOverlay(score: Int, highScore: Int, onRestart: () -> Unit, modifier: Modifier = Modifier) {
     Box(
         modifier = modifier
             .clip(RoundedCornerShape(12.dp))
@@ -399,6 +400,14 @@ internal fun GameOverOverlay(score: Int, onRestart: () -> Unit, modifier: Modifi
                 fontWeight = FontWeight.SemiBold,
                 color = MaterialTheme.colorScheme.onSurface
             )
+            if (score < highScore) {
+                Text(
+                    text = stringResource(R.string.mini_game_best, highScore),
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Normal,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
             Button(onClick = onRestart) {
                 Text(stringResource(R.string.mini_game_try_again))
             }
