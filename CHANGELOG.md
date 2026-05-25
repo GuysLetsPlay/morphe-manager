@@ -1,3 +1,11 @@
+# [1.19.0-dev.10](https://github.com/MorpheApp/morphe-manager/compare/v1.19.0-dev.9...v1.19.0-dev.10) (2026-05-25)
+
+
+### Features
+
+* Add bird rotation, fix accidental restart on game-over tap in Flappy and Dino ([1d3b1ff](https://github.com/MorpheApp/morphe-manager/commit/1d3b1ff1030a29756837385a58b66f0879cea1d7))
+* Add per-session high score to all mini-games; reduce Flappy Bird tap impulse ([d8f2d79](https://github.com/MorpheApp/morphe-manager/commit/d8f2d79f697bc65107d03c1b1a5d0d950b06bcda))
+
 # [1.19.0-dev.9](https://github.com/MorpheApp/morphe-manager/compare/v1.19.0-dev.8...v1.19.0-dev.9) (2026-05-24)
 
 
