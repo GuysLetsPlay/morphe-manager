@@ -451,9 +451,14 @@ class ImportExportViewModel(
         val internalDir = app.filesDir
         val toMbL = { bytes: Long -> bytes / 1024 / 1024 }
         writer.write("Internal   : ${toMbL(internalDir.freeSpace)} MB free / ${toMbL(internalDir.totalSpace)} MB total\n")
-        val externalDir = app.getExternalFilesDir(null)
-        if (externalDir != null) {
-            writer.write("External   : ${toMbL(externalDir.freeSpace)} MB free / ${toMbL(externalDir.totalSpace)} MB total\n")
+        var sdCardIndex = 1
+        app.externalStorageVolumes().forEach { (isPrimary, root) ->
+            if (isPrimary) {
+                writer.write("External   : ${toMbL(root.freeSpace)} MB free / ${toMbL(root.totalSpace)} MB total\n")
+            } else {
+                writer.write("SD Card $sdCardIndex  : ${toMbL(root.freeSpace)} MB free / ${toMbL(root.totalSpace)} MB total\n")
+                sdCardIndex++
+            }
         }
 
         writer.write("\n--- Environment ---\n")

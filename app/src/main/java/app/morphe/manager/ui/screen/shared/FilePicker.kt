@@ -48,6 +48,7 @@ import app.morphe.manager.R
 import app.morphe.manager.domain.manager.PreferencesManager
 import app.morphe.manager.util.APK_EXTENSIONS
 import app.morphe.manager.util.PM
+import app.morphe.manager.util.externalStorageVolumes
 import app.morphe.manager.util.formatBytes
 import com.topjohnwu.superuser.Shell
 import kotlinx.coroutines.Dispatchers
@@ -104,11 +105,17 @@ internal fun resolveAllowedExtensions(mimeTypes: Array<String>): Set<String>? {
 
 private fun storageRoots(context: Context, hasRoot: Boolean): List<Pair<String, File>> {
     val roots = mutableListOf<Pair<String, File>>()
-    val primary = Environment.getExternalStorageDirectory()
-    if (primary.exists()) roots += context.getString(R.string.file_picker_internal_storage) to primary
-    File("/storage").listFiles()?.forEach { dir ->
-        if (!dir.isDirectory || dir.name == "emulated" || dir.name == "self") return@forEach
-        if (dir.canRead()) roots += context.getString(R.string.file_picker_sd_card) to dir
+    val volumes = context.externalStorageVolumes()
+    val sdCardCount = volumes.count { !it.first }
+    var sdCardIndex = 1
+    volumes.forEach { (isPrimary, root) ->
+        if (!root.exists()) return@forEach
+        val label = when {
+            isPrimary -> context.getString(R.string.file_picker_internal_storage)
+            sdCardCount > 1 -> "${context.getString(R.string.file_picker_sd_card)} ${sdCardIndex++}"
+            else -> context.getString(R.string.file_picker_sd_card)
+        }
+        roots += label to root
     }
     if (hasRoot) roots += context.getString(R.string.file_picker_root) to File("/")
     return roots
