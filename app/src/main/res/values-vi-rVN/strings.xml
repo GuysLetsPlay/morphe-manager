@@ -130,7 +130,13 @@
     <string name="home_recommended_version">Phiên bản đề xuất</string>
     <string name="home_selected_version">Phiên bản đã chọn</string>
     <string name="home_select_apk_title">Chọn APK</string>
-    <string name="home_select_any_apk_description">Bấm nút bên dưới để chọn tệp APK của bất kỳ ứng dụng nào để vá</string>
+    <string name="home_select_any_apk_description">Chọn một tệp APK của bất kỳ ứng dụng nào, hoặc chọn một ứng dụng đã được cài đặt trên máy bạn</string>
+    <string name="home_use_installed_app">Dùng ứng dụng đã cài</string>
+    <string name="home_installed_app_picker_title">Chọn ứng dụng đã cài</string>
+    <string name="home_installed_app_picker_empty">Không tìm thấy ứng dụng nào</string>
+    <string name="home_installed_app_picker_filter_all">Tất cả ứng dụng</string>
+    <string name="home_installed_app_picker_filter_user">Chỉ ứng dụng đã cài</string>
+    <string name="home_installed_app_picker_filter_system">Chỉ ứng dụng hệ thống</string>
     <string name="home_invalid_apk_unreadable">Không thể đọc tệp. Hãy kiểm tra xem \"Bộ nhớ ngoài\" có bị hạn chế pin hay không</string>
     <string name="home_invalid_apk_not_an_apk">Tệp đã chọn không phải là tệp APK hợp lệ</string>
     <string name="home_invalid_apk_io_error">Không thể mở tệp. Vui lòng thử lại</string>
@@ -368,7 +374,6 @@ Gỡ cài đặt sẽ xóa vĩnh viễn toàn bộ dữ liệu ứng dụng"</st
     <string name="failed_to_mount">Không thể gắn: %s</string>
     <string name="failed_to_unmount">Không thể gỡ gắn: %s</string>
     <!-- Patcher Screen - Mini-games -->
-    <string name="mini_game_picker_title">Chọn trò chơi</string>
     <string name="mini_game_score">Điểm: %d</string>
     <string name="mini_game_best">Cao nhất %d</string>
     <string name="mini_game_new_record">Kỷ lục mới!</string>

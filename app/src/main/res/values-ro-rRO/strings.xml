@@ -130,7 +130,13 @@
     <string name="home_recommended_version">Versiune recomandată</string>
     <string name="home_selected_version">Versiune selectată</string>
     <string name="home_select_apk_title">Selectează APK</string>
-    <string name="home_select_any_apk_description">Apasă butonul de mai jos pentru a selecta un fișier APK al oricărei aplicații pentru patch-uire</string>
+    <string name="home_select_any_apk_description">Selectați un fișier APK al oricărei aplicații sau alege o aplicație deja instalată pe acest dispozitiv</string>
+    <string name="home_use_installed_app">Utilizează aplicația instalată</string>
+    <string name="home_installed_app_picker_title">Selectează aplicația instalată</string>
+    <string name="home_installed_app_picker_empty">Nu au fost găsite aplicații</string>
+    <string name="home_installed_app_picker_filter_all">Toate aplicațiile</string>
+    <string name="home_installed_app_picker_filter_user">Doar aplicații de utilizator</string>
+    <string name="home_installed_app_picker_filter_system">Doar aplicații de sistem</string>
     <string name="home_invalid_apk_unreadable">Nu s-a putut citi fișierul. Verificați dacă \'Stocare Externă\' nu este restricționată de baterie</string>
     <string name="home_invalid_apk_not_an_apk">Fișierul selectat nu este un APK valid</string>
     <string name="home_invalid_apk_io_error">Nu s-a putut deschide fișierul. Vă rugăm încercați din nou</string>
@@ -271,7 +277,7 @@ Zona exterioară (întreruptă): poate fi decupată de masca lansatorului - păs
     <string name="patcher_error_technical">Detalii tehnice</string>
     <string name="patcher_error_dialog_app_info">Informații aplicație</string>
     <string name="patcher_tab_logs">Jurnale patcher</string>
-    <string name="patcher_tab_game">Joc</string>
+    <string name="patcher_tab_game">Jocuri</string>
     <string name="patcher_long_step_warning">Acest pas poate dura ceva timp. Vă rugăm să așteptați…</string>
     <string name="patcher_installing_subtitle">Aproape gata de distracție! 🎸</string>
     <string name="patcher_success_title">Totul gata! 🎉</string>
@@ -368,7 +374,6 @@ Dezinstalarea va șterge definitiv toate datele aplicației."</string>
     <string name="failed_to_mount">Montare eșuată: %s</string>
     <string name="failed_to_unmount">Demontare eșuată: %s</string>
     <!-- Patcher Screen - Mini-games -->
-    <string name="mini_game_picker_title">Alege un joc</string>
     <string name="mini_game_score">Punctaj %d</string>
     <string name="mini_game_best">Cel mai bun %d</string>
     <string name="mini_game_new_record">Record nou!</string>

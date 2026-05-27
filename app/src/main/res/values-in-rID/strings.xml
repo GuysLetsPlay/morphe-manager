@@ -6,11 +6,11 @@
     <string name="home_no_patches_available">Tidak ada tambalan yang tersedia</string>
     <string name="home_app_hide_title">Sembunyikan aplikasi ini?</string>
     <string name="home_app_hide_message">Aplikasi ini akan disembunyikan dari layar utama. Anda dapat mengembalikannya nanti dari aplikasi tersembunyi menggunakan tombol di bagian bawah daftar</string>
-    <string name="home_app_will_be_hidden">Aplikasi ini akan disembunyikan.</string>
+    <string name="home_app_will_be_hidden">Aplikasi ini akan disembunyikan</string>
     <string name="home_app_no_hidden">Tidak ada aplikasi tersembunyi</string>
     <string name="home_app_hidden_apps_title">Aplikasi tersembunyi</string>
     <string name="home_app_hidden_apps_hint">Ketuk untuk menampilkan kembali</string>
-    <string name="android_11_bug_dialog_title">Bug Android 11</string>
+    <string name="android_11_bug_dialog_title">Kekutu Android 11</string>
     <string name="android_11_bug_dialog_description">Izin pemasangan aplikasi harus diberikan terlebih dahulu untuk menghindari bug pada sistem Android 11 yang akan berdampak negatif pada pengalaman pengguna</string>
     <string name="deep_link_add_source_title">Tambah sumber</string>
     <string name="deep_link_add_source_message">Apakah Anda ingin menambahkan sumber tambalan ini ke Morphe?</string>
@@ -20,12 +20,12 @@
     <string name="home_update_available_subtitle">Versi baru siap dipasang</string>
     <string name="home_update_error">Pembaruan gagal</string>
     <string name="home_update_error_subtitle">Periksa koneksi internet Anda dan coba lagi</string>
-    <string name="home_update_skipped_metered">Pembaruan diabaikan</string>
+    <string name="home_update_skipped_metered">Pembaruan dilewati</string>
     <string name="home_update_skipped_metered_subtitle">Data seluler aktif</string>
     <string name="home_updating_sources">Memperbarui sumber…</string>
     <string name="home_update_progress_format">%s diproses</string>
     <string name="home_update_success">Pembaruan sumber selesai</string>
-    <string name="home_update_success_subtitle">Sumber Anda sudah terbaru</string>
+    <string name="home_update_success_subtitle">Sumber Anda sudah yang terbaru</string>
     <string name="home_sources_are_loading">Sumber sedang dimuat, harap tunggu…</string>
     <string name="home_search_apps">Cari aplikasi</string>
     <string name="home_no_apps_title">Tidak ada aplikasi yang tersedia</string>
@@ -36,17 +36,17 @@
     <!-- Home Screen - Home Greetings -->
     <string name="home_greeting_1">Aplikasi apa yang ingin Anda tambal?</string>
     <!-- Humorous hype message with light nostalgia -->
-    <string name="home_greeting_2">Siap untuk menjadikan aplikasi legendaris lagi?</string>
+    <string name="home_greeting_2">Siap untuk membuat aplikasi legendaris lagi?</string>
     <!-- "Buckle up" referring to fastening your vehicle seat belt. A light-hearted joke to build excitement -->
     <string name="home_greeting_3">Bersiaplah, waktunya menambal</string>
     <!-- Sarcastic joke about blocking ads, intentionally over-the-top -->
-    <string name="home_greeting_4">Hari lain, mahakarya tanpa iklan lainnya</string>
+    <string name="home_greeting_4">Tanpa iklan setiap harinya</string>
     <!-- "Watch ads" refers to watching video ads in unpatched apps -->
-    <string name="home_greeting_5">Mau nonton iklan? Saya pun tidak</string>
+    <string name="home_greeting_5">Mau nonton iklan? Aku pun tidak</string>
     <!-- Friendly, slightly mischievous joke about controlling app behavior -->
-    <string name="home_greeting_6">Ayo membuat aplikasi Anda berperilaku baik</string>
+    <string name="home_greeting_6">Ayo buat aplikasimu berjalan dengan semestinya</string>
     <!-- Whimsical forecast-style joke, not meant literally -->
-    <string name="home_greeting_7" formatted="false">Prediksi cuaca hari ini: 100% kemungkinan menambal</string>
+    <string name="home_greeting_7" formatted="false">Prediksi cuaca hari ini: 100% kemungkinan tanpa iklan</string>
     <!-- From mediocrity to amazing -->
     <string name="home_greeting_8">Siap mengubah yang biasa saja menjadi luar biasa?</string>
     <!-- Playful exaggeration, making patching feel heroic -->
@@ -58,14 +58,14 @@
     <string name="sources_management_open_in_browser">Buka di peramban</string>
     <string name="sources_management_failed_to_open_url">Gagal membuka URL</string>
     <string name="sources_management_prerelease_toggle">Tambalan pra-rilis</string>
-    <string name="sources_management_prerelease_toggle_description">Menerima akses awal ke versi tambalan baru eksperimental</string>
+    <string name="sources_management_prerelease_toggle_description">Menerima akses dini ke versi eksperimental tambalan baru</string>
     <string name="sources_management_experimental_versions_toggle">Versi aplikasi eksperimental</string>
-    <string name="sources_management_experimental_versions_toggle_description">Menambal target aplikasi eksperimental jika tersedia</string>
+    <string name="sources_management_experimental_versions_toggle_description">Menambal aplikasi eksperimental jika tersedia</string>
     <string name="sources_management_already_exists">Sumber ini sudah ditambahkan</string>
-    <string name="sources_management_invalid_url">URL sumber tidak valid. Harap periksa alamatnya dan coba lagi</string>
+    <string name="sources_management_invalid_url">URL tidak valid. Harap periksa alamatnya dan coba lagi</string>
     <string name="sources_management_metadata_unavailable">Metadata Tidak Tersedia</string>
-    <string name="sources_management_metadata_unavailable_hint">Berkas metadata jarak jauh tidak tersedia. Penambalan dengan bundle yang terpasang masih berfungsi, tetapi pembaruan otomatis dinonaktifkan untuk sumber ini</string>
-    <string name="sources_management_metadata_unavailable_hint_missing">Bundle tambalan tidak dapat diunduh. URL sumber mungkin salah atau berkas tidak ada</string>
+    <string name="sources_management_metadata_unavailable_hint">Berkas metadata daring tidak tersedia. Penambalan dengan bundel yang terpasang masih berfungsi, tetapi pembaruan otomatis dinonaktifkan untuk sumber ini</string>
+    <string name="sources_management_metadata_unavailable_hint_missing">Bundel tambalan tidak dapat diunduh. Sumber URL mungkin salah atau berkas tidak ada</string>
     <string name="sources_management_source_enabled">Sumber diaktifkan</string>
     <string name="sources_management_source_disabled">Sumber dinonaktifkan</string>
     <string name="sources_management_source_updating">Memperbarui sumber</string>
@@ -77,26 +77,26 @@
     <string name="sources_dialog_view_any_version">Versi apapun</string>
     <string name="sources_dialog_view_any_package">Paket apapun</string>
     <string name="sources_dialog_add_source">Tambah sumber tambalan</string>
-    <string name="sources_dialog_delete_confirm_message">Hapus sumber \"%s\"? Ini tidak dapat dibatalkan</string>
+    <string name="sources_dialog_delete_confirm_message">Hapus sumber \"%s\"? Ini tidak dapat dikembalikan</string>
     <string name="sources_dialog_remote">Daring</string>
-    <string name="sources_dialog_remote_url">URL sumber</string>
+    <string name="sources_dialog_remote_url">Sumber URL</string>
     <string name="sources_dialog_remote_url_formats_title">Contoh:</string>
     <string name="sources_dialog_local">Lokal</string>
     <string name="sources_dialog_local_file">Pilih berkas sumber tambalan</string>
     <string name="sources_dialog_local_file_tap_hint">Ketuk untuk menelusuri penyimpanan</string>
-    <string name="sources_dialog_local_file_description">Pilih berkas sumber tambalan .mpp dari penyimpanan</string>
+    <string name="sources_dialog_local_file_description">Pilih berkas .mpp dari penyimpanan</string>
     <string name="sources_dialog_local_invalid_extension">Berkas harus memiliki ekstensi .mpp</string>
-    <string name="sources_dialog_url_valid">Repositori atau URL JSON yang sah</string>
+    <string name="sources_dialog_url_valid">Repositori atau URL JSON valid</string>
     <string name="sources_dialog_url_invalid">URL harus mengarah ke repositori GitHub/GitLab atau berkas .json</string>
     <string name="sources_dialog_local_change_file">Ganti berkas</string>
     <string name="sources_dialog_preinstalled">Sudah dipasang sebelumnya</string>
     <string name="sources_update_success">Pembaruan berhasil</string>
     <string name="sources_update_unavailable">Tidak ada pembaruan tersedia</string>
     <string name="sources_download_fail">Gagal mengunduh sumber: %s</string>
-    <string name="sources_download_fail_named">\'%s\' tidak dapat diperbarui. Periksa sambungan internet Anda dan coba lagi</string>
-    <string name="sources_download_endpoint_not_found">\'%s\': metadata tambalan tidak ditemukan</string>
+    <string name="sources_download_fail_named">\'%s\' tidak dapat diperbarui. Periksa internet Anda dan coba lagi</string>
+    <string name="sources_download_endpoint_not_found">\'%s\': metadata tidak ditemukan</string>
     <string name="sources_patch_expert_badge">Ahli</string>
-    <string name="sources_patch_expert_badge_tooltip">Aktifkan mode Ahli di Pengaturan untuk menyertakan tambalan ini secara manual</string>
+    <string name="sources_patch_expert_badge_tooltip">Aktifkan mode Ahli di Pengaturan untuk menambahkan tambalan ini secara manual</string>
     <!-- Home Screen - Dialog 1: APK Availability -->
     <string name="home_apk_availability_dialog_title">Butuh bantuan mencari APK asli yang belum ditambal?</string>
     <string name="home_apk_availability_dialog_simple">Untuk menambal &lt;b&gt;%s&lt;/b&gt;, Anda membutuhkan versi APK yang belum ditambal:</string>
@@ -106,19 +106,19 @@
     <string name="home_apk_availability_incompatible_label">Tidak kompatibel</string>
     <string name="home_apk_availability_yes">Ya, bantu saya mencari APK</string>
     <string name="home_apk_availability_no">Tidak, saya sudah memiliki APK</string>
-    <string name="home_apk_use_saved_with_version">Gunakan APK yang disimpan (v%s)</string>
+    <string name="home_apk_use_saved_with_version">Gunakan APK yang tersimpan (v%s)</string>
     <string name="home_apk_use_installed_with_version">Gunakan APK yang terpasang (v%s)</string>
     <string name="home_app_info_no_saved_apk">Tidak ada APK yang disimpan. Penambalan akan memerlukan memilih berkas APK lagi</string>
     <string name="home_version_requires_android">Membutuhkan Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">Tidak didukung di perangkat ini</string>
-    <string name="home_apk_no_compatible_versions_message">&lt;b&gt;%1$s&lt;/b&gt; tidak memiliki versi yang didukung untuk Android %2$d (API %3$d). Semua versi yang dideklarasikan memerlukan versi Android yang lebih tinggi</string>
+    <string name="home_apk_no_compatible_versions_message">&lt;b&gt;%1$s&lt;/b&gt; tidak memiliki versi yang didukung untuk Android %2$d (API %3$d). Semua versi yang tersedia memerlukan versi Android yang lebih tinggi</string>
     <!-- Home Screen - Dialog 2: Download Instructions -->
     <string name="home_download_instructions_title">Unduh APK asli</string>
     <string name="home_download_instructions_steps_title">Petunjuk:</string>
     <string name="home_download_instructions_step1">Tekan tombol \'%s\' di bawah ini</string>
-    <string name="home_download_instructions_step2_part1">Gulir halaman web ke bawah dan tekan</string>
+    <string name="home_download_instructions_step2_part1">Geser halaman web ke bawah dan tekan</string>
     <string name="home_download_instructions_download_button_toast">Tekan unduh di situs web, dan bukan di sini 😊</string>
-    <string name="home_download_instructions_step3">Tunggu hingga unduhan selesai, dan &lt;b&gt;jangan memasang&lt;/b&gt; APK</string>
+    <string name="home_download_instructions_step3">Tunggu hingga unduhan selesai, dan &lt;b&gt;jangan pasang&lt;/b&gt; APK</string>
     <string name="home_download_instructions_step3_mount">Tunggu hingga unduhan selesai, kemudian &lt;b&gt;pasang APK&lt;/b&gt;</string>
     <string name="home_download_instructions_step4">Setelah proses unduh selesai, kembali ke Morphe</string>
     <string name="home_download_instructions_step4_mount">Setelah memasang APK asli, kembali ke Morphe</string>
@@ -127,10 +127,16 @@
     <string name="home_file_picker_prompt_title">Pilih APK yang telah diunduh</string>
     <string name="home_file_picker_prompt_description">Pilih berkas APK &lt;b&gt;%s&lt;/b&gt; yang baru saja Anda unduh</string>
     <string name="home_file_picker_prompt_open_apk">Buka berkas APK</string>
-    <string name="home_recommended_version">Versi rekomendasi</string>
-    <string name="home_selected_version">Versi terpilih</string>
+    <string name="home_recommended_version">Rekomendasi versi</string>
+    <string name="home_selected_version">Versi yang terpilih</string>
     <string name="home_select_apk_title">Pilih APK</string>
-    <string name="home_select_any_apk_description">Ketuk tombol di bawah untuk memilih berkas APK apapun untuk ditambal</string>
+    <string name="home_select_any_apk_description">Pilih file APK aplikasi apa pun, atau pilih aplikasi yang sudah terpasang di perangkat ini</string>
+    <string name="home_use_installed_app">Gunakan aplikasi yang terpasang</string>
+    <string name="home_installed_app_picker_title">Pilih aplikasi terpasang</string>
+    <string name="home_installed_app_picker_empty">Tidak ada aplikasi yang ditemukan</string>
+    <string name="home_installed_app_picker_filter_all">Semua aplikasi</string>
+    <string name="home_installed_app_picker_filter_user">Aplikasi pengguna saja</string>
+    <string name="home_installed_app_picker_filter_system">Aplikasi sistem saja</string>
     <string name="home_invalid_apk_unreadable">Tidak dapat membaca berkas. Periksa apakah \'Penyimpanan Eksternal\' tidak dibatasi baterai</string>
     <string name="home_invalid_apk_not_an_apk">Berkas yang dipilih bukan APK yang sah</string>
     <string name="home_invalid_apk_io_error">Gagal membuka berkas. Silakan coba lagi</string>
@@ -145,18 +151,18 @@
     <string name="expert_mode_enable_all_done">Semua tambalan diaktifkan</string>
     <string name="expert_mode_reset_to_default">Aktifkan tambalan yang direkomendasikan</string>
     <string name="expert_mode_reset_to_default_done">Tambalan yang direkomendasikan diterapkan</string>
-    <string name="expert_mode_restore_saved">Pulihkan pemilihan yang disimpan</string>
-    <string name="expert_mode_restore_saved_done">Pemilihan yang disimpan dipulihkan</string>
-    <string name="expert_mode_no_results">Tidak ada tambalan ditemukan</string>
+    <string name="expert_mode_restore_saved">Pulihkan pilihan yang tersimpan</string>
+    <string name="expert_mode_restore_saved_done">Pilihan yang disimpan dipulihkan</string>
+    <string name="expert_mode_no_results">Tambalan tidak ditemukan</string>
     <string name="expert_mode_universal_patches">Tambalan universal</string>
     <string name="expert_mode_new_patches">Baru</string>
-    <string name="expert_mode_multiple_sources_warning_title">Berbagai sumber tambalan telah dipilih</string>
+    <string name="expert_mode_multiple_sources_warning_title">Beberapa sumber tambalan telah dipilih</string>
     <string name="expert_mode_multiple_sources_warning_message">"Anda telah memilih tambalan dari berbagai sumber. Hal ini dapat menyebabkan masalah kompatibilitas atau masalah yang tidak terduga.
 
 Apakah Anda yakin ingin melanjutkan?"</string>
     <!-- Home Screen - Home Sub-Dialogs -->
     <string name="home_invalid_signature_title">APK Tidak Terverifikasi</string>
-    <string name="home_invalid_signature_message">APK yang Anda pilih untuk &lt;b&gt;%s&lt;/b&gt; tidak sesuai dengan sertifikat penandatanganan yang diharapkan. Ini mungkin telah dimodifikasi atau berasal dari sumber yang tidak terpercaya</string>
+    <string name="home_invalid_signature_message">APK yang Anda pilih untuk &lt;b&gt;%s&lt;/b&gt; tidak sesuai dengan sertifikat yang diharapkan. Ini mungkin telah dimodifikasi atau berasal dari sumber yang tidak terpercaya</string>
     <string name="home_invalid_signature_badge">APK ini mungkin bukan versi aslinya</string>
     <string name="home_split_apk_warning_title">APK terpisah terdeteksi</string>
     <string name="home_split_apk_warning_message">"Berkas ini adalah bundel APK
@@ -167,10 +173,10 @@ Untuk hasil terbaik, aplikasi ini merekomendasikan untuk menambal &lt;b&gt;APK l
     <string name="home_dialog_unsupported_version_experimental_label">Eksperimental</string>
     <string name="home_dialog_unsupported_version_experimental_description">Versi ini memiliki dukungan eksperimental dan mungkin tidak stabil atau tidak lengkap</string>
     <string name="morphe_experimental_app_version_dialog_title">Apakah Anda ingin bereksperimen? 🧪</string>
-    <string name="morphe_experimental_app_version_dialog_message">Versi &lt;b&gt;%s&lt;/b&gt; ini memiliki dukungan eksperimental awal&lt;br/&gt;&lt;br/&gt;🔧
-Harap bersiap untuk perilaku aplikasi yang tidak biasa atau bug yang belum teridentifikasi karena tambalan untuk versi aplikasi ini masih dalam tahap penyempurnaan</string>
+    <string name="morphe_experimental_app_version_dialog_message">Versi &lt;b&gt;%s&lt;/b&gt; ini memiliki dukungan eksperimental dini&lt;br/&gt;&lt;br/&gt;🔧
+Bersiap untuk perilaku aplikasi yang tidak biasa atau bug yang belum teridentifikasi karena tambalan untuk versi aplikasi ini masih dalam tahap penyempurnaan</string>
     <string name="home_dialog_unsupported_version_dialog_title">Versi tidak didukung</string>
-    <string name="home_dialog_unsupported_version_dialog_description">APK ini bukan versi aplikasi yang direkomendasikan. Tetap melanjutkan mungkin membuat aplikasi menjadi tidak berfungsi</string>
+    <string name="home_dialog_unsupported_version_dialog_description">APK ini bukan versi aplikasi yang direkomendasikan. Jika dilanjutkan mungkin akan membuat aplikasi menjadi tidak berfungsi</string>
     <string name="home_dialog_unsupported_version_dialog_proceed">Tetap lanjutkan</string>
     <string name="home_dialog_unsupported_version_compatible_versions">Versi yang cocok:</string>
     <string name="home_dialog_unsupported_version_unsupported_label">Tidak didukung</string>
@@ -271,7 +277,7 @@ Zona luar (putus-putus): mungkin terpotong oleh masker launcher - jaga detail pe
     <string name="patcher_error_log">Catatan kesalahan</string>
     <string name="patcher_error_technical">Rincian teknis</string>
     <string name="patcher_error_dialog_app_info">Info aplikasi</string>
-    <string name="patcher_tab_logs">Log Penambal</string>
+    <string name="patcher_tab_logs">Catatan Penambal</string>
     <string name="patcher_tab_game">Permainan</string>
     <string name="patcher_long_step_warning">Langkah ini mungkin memerlukan waktu. Harap tunggu…</string>
     <string name="patcher_installing_subtitle">Hampir siap! 🎸</string>
@@ -369,7 +375,6 @@ Mencopot pemasangannya akan menghapus semua data aplikasi secara permanen"</stri
     <string name="failed_to_mount">Gagal mount: %s</string>
     <string name="failed_to_unmount">Gagal unmount: %s</string>
     <!-- Patcher Screen - Mini-games -->
-    <string name="mini_game_picker_title">Pilih permainan</string>
     <string name="mini_game_score">Skor %d</string>
     <string name="mini_game_best">Terbaik %d</string>
     <string name="mini_game_new_record">Rekor baru!</string>
@@ -377,11 +382,11 @@ Mencopot pemasangannya akan menghapus semua data aplikasi secara permanen"</stri
     <string name="mini_game_try_again">Coba Lagi</string>
     <string name="mini_game_paused">Dijeda</string>
     <string name="mini_game_resume">Lanjutkan</string>
-    <string name="mini_game_2048_picker_subtitle">Geser ubin untuk digabungkan</string>
+    <string name="mini_game_2048_picker_subtitle">Geser balok untuk menggabungkan</string>
     <string name="mini_game_flappy_picker_subtitle">Ketuk untuk terbang melewati pipa</string>
     <string name="mini_game_flappy_tap_to_start">Ketuk untuk terbang</string>
     <string name="mini_game_snake_picker_subtitle">Makan makanan, jangan menabrak diri sendiri</string>
-    <string name="mini_game_snake_swipe_to_start">Gesek untuk memulai</string>
+    <string name="mini_game_snake_swipe_to_start">Usap untuk memulai</string>
     <string name="mini_game_dino_picker_subtitle">Ketuk untuk melompati kaktus</string>
     <string name="mini_game_dino_tap_to_start">Ketuk untuk berlari</string>
     <!-- Settings -->

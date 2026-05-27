@@ -102,7 +102,6 @@
     <string name="home_recommended_version">Versi yang disyorkan</string>
     <string name="home_selected_version">Versi terpilih</string>
     <string name="home_select_apk_title">Pilih APK</string>
-    <string name="home_select_any_apk_description">Tekan butang dibawah untuk pilih fail APK apa-apa aplikasi untuk ditampal</string>
     <!-- Home Screen - Dialog 4: Expert Mode Dialog -->
     <string name="expert_mode_title">Mod mahir</string>
     <string name="expert_mode_search">Cari tampalan</string>

@@ -124,7 +124,6 @@
     <string name="home_recommended_version">وەشانی پێشنیارکراو</string>
     <string name="home_selected_version">وەشانی دیاریکراو</string>
     <string name="home_select_apk_title">دیاریکردنی APK</string>
-    <string name="home_select_any_apk_description">دەست لێبدە لەم دوگمەی خوارەوە بۆ دیاریکردنی فایلی APK لە هەر ئەپێک بۆ پینەکردن</string>
     <string name="home_invalid_apk_unreadable">نەیتوانی فایلەکە بخوێنێتەوە. بپشکنە کە خەزنکردنی دەرەکی پاتری سنوردار نیە</string>
     <string name="home_invalid_apk_not_an_apk">پەڕگەی دیاریکراو APK بڕوادار نییە</string>
     <string name="home_invalid_apk_io_error">شکستی هێنا لە کردنەوەی فایلەکە. تکایە دووبارە هەوڵ بدە</string>

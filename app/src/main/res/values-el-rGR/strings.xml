@@ -130,7 +130,13 @@
     <string name="home_recommended_version">Προτεινόμενη έκδοση</string>
     <string name="home_selected_version">Επιλεγμένη έκδοση</string>
     <string name="home_select_apk_title">Επιλογή APK</string>
-    <string name="home_select_any_apk_description">Πατήστε το παρακάτω κουμπί για να επιλέξετε ένα αρχείο APK οποιασδήποτε εφαρμογής για τροποποίηση</string>
+    <string name="home_select_any_apk_description">Επιλέξτε ένα αρχείο APK οποιασδήποτε εφαρμογής ή επιλέξτε μια εφαρμογή που είναι ήδη εγκατεστημένη σε αυτήν τη συσκευή</string>
+    <string name="home_use_installed_app">Χρήση εγκατεστημένης εφαρμογής</string>
+    <string name="home_installed_app_picker_title">Επιλέξτε εγκατεστημένη εφαρμογή</string>
+    <string name="home_installed_app_picker_empty">Δεν βρέθηκαν εφαρμογές</string>
+    <string name="home_installed_app_picker_filter_all">Όλες οι εφαρμογές</string>
+    <string name="home_installed_app_picker_filter_user">Μόνο εφαρμογές χρήστη</string>
+    <string name="home_installed_app_picker_filter_system">Μόνο εφαρμογές συστήματος</string>
     <string name="home_invalid_apk_unreadable">Δεν ήταν δυνατή η ανάγνωση του αρχείου. Ελέγξτε ότι ο \'Εξωτερικός χώρος αποθήκευσης\' δεν περιορίζεται από την μπαταρία</string>
     <string name="home_invalid_apk_not_an_apk">Το επιλεγμένο αρχείο δεν είναι ένα έγκυρο APK</string>
     <string name="home_invalid_apk_io_error">Αποτυχία ανοίγματος του αρχείου. Παρακαλώ προσπαθήστε ξανά</string>
@@ -271,7 +277,7 @@
     <string name="patcher_error_technical">Τεχνικές λεπτομέρειες</string>
     <string name="patcher_error_dialog_app_info">Πληροφορίες εφαρμογής</string>
     <string name="patcher_tab_logs">Καταγραφές Εφαρμογής</string>
-    <string name="patcher_tab_game">Παιχνίδι</string>
+    <string name="patcher_tab_game">Παιχνίδια</string>
     <string name="patcher_long_step_warning">Αυτό το βήμα μπορεί να διαρκέσει λίγο. Παρακαλώ περιμένετε…</string>
     <string name="patcher_installing_subtitle">Σχεδόν έτοιμο για δράση! 🎸</string>
     <string name="patcher_success_title">Ολοκληρώθηκε! 🎉</string>
@@ -368,7 +374,6 @@
     <string name="failed_to_mount">Αδυναμία προσάρτησης: %s</string>
     <string name="failed_to_unmount">Αποτυχία αποπροσάρτησης: %s</string>
     <!-- Patcher Screen - Mini-games -->
-    <string name="mini_game_picker_title">Επιλέξτε ένα παιχνίδι</string>
     <string name="mini_game_score">Βαθμολογία %d</string>
     <string name="mini_game_best">Καλύτερο %d</string>
     <string name="mini_game_new_record">Νέο ρεκόρ!</string>

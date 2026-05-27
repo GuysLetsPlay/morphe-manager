@@ -130,7 +130,13 @@
     <string name="home_recommended_version">Рекомендуемая версия</string>
     <string name="home_selected_version">Выбранная версия</string>
     <string name="home_select_apk_title">Выбрать APK</string>
-    <string name="home_select_any_apk_description">Нажмите кнопку ниже, чтобы выбрать APK файл любого приложения для патчинга</string>
+    <string name="home_select_any_apk_description">Выберите APK-файл любого приложения или выберите приложение, уже установленное на этом устройстве</string>
+    <string name="home_use_installed_app">Использовать установленное приложение</string>
+    <string name="home_installed_app_picker_title">Выберите установленное приложение</string>
+    <string name="home_installed_app_picker_empty">Приложения не найдены</string>
+    <string name="home_installed_app_picker_filter_all">Все приложения</string>
+    <string name="home_installed_app_picker_filter_user">Только пользовательские приложения</string>
+    <string name="home_installed_app_picker_filter_system">Только системные приложения</string>
     <string name="home_invalid_apk_unreadable">Не удалось прочитать файл. Убедитесь, что \'Внешнее хранилище\' не ограничено по энергопотреблению</string>
     <string name="home_invalid_apk_not_an_apk">Выбранный файл не является допустимым APK</string>
     <string name="home_invalid_apk_io_error">Не удалось открыть файл. Пожалуйста, попробуйте еще раз</string>
@@ -271,7 +277,7 @@
     <string name="patcher_error_technical">Технические детали</string>
     <string name="patcher_error_dialog_app_info">Информация о приложении</string>
     <string name="patcher_tab_logs">Журналы патчера</string>
-    <string name="patcher_tab_game">Игра</string>
+    <string name="patcher_tab_game">Игры</string>
     <string name="patcher_long_step_warning">Этот шаг может занять некоторое время. Пожалуйста, подождите…</string>
     <string name="patcher_installing_subtitle">Почти готово к работе! 🎸</string>
     <string name="patcher_success_title">Все готово! 🎉</string>
@@ -368,7 +374,6 @@
     <string name="failed_to_mount">Не удалось смонтировать: %s</string>
     <string name="failed_to_unmount">Не удалось размонтировать: %s</string>
     <!-- Patcher Screen - Mini-games -->
-    <string name="mini_game_picker_title">Выберите игру</string>
     <string name="mini_game_score">Счет %d</string>
     <string name="mini_game_best">Лучший %d</string>
     <string name="mini_game_new_record">Новый рекорд!</string>

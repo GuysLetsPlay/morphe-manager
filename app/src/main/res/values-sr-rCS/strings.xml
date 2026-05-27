@@ -130,7 +130,13 @@
     <string name="home_recommended_version">Preporučena verzija</string>
     <string name="home_selected_version">Izabrana verzija</string>
     <string name="home_select_apk_title">Izaberi APK</string>
-    <string name="home_select_any_apk_description">Kliknite dugme ispod da odaberete APK datoteku bilo koje aplikacije za patchiranje</string>
+    <string name="home_select_any_apk_description">Odaberite APK datoteku bilo koje aplikacije ili odaberite aplikaciju koja je već instalirana na ovom uređaju</string>
+    <string name="home_use_installed_app">Koristi instaliranu aplikaciju</string>
+    <string name="home_installed_app_picker_title">Odabir instalirane aplikacije</string>
+    <string name="home_installed_app_picker_empty">Nema pronađenih aplikacija</string>
+    <string name="home_installed_app_picker_filter_all">Sve aplikacije</string>
+    <string name="home_installed_app_picker_filter_user">Samo korisničke aplikacije</string>
+    <string name="home_installed_app_picker_filter_system">Samo sistemske aplikacije</string>
     <string name="home_invalid_apk_unreadable">Nije moguće pročitati datoteku. Proverite da \'Eksternu memoriju\' ne ograničava baterija</string>
     <string name="home_invalid_apk_not_an_apk">Odabrana datoteka nije validan APK</string>
     <string name="home_invalid_apk_io_error">Nije uspelo otvaranje datoteke. Molimo pokušajte ponovo</string>
@@ -271,7 +277,7 @@ Spoljna zona (isprekidana): može biti isečena maskom pokretača – držite va
     <string name="patcher_error_technical">Tehničke informacije</string>
     <string name="patcher_error_dialog_app_info">Informacije o aplikaciji</string>
     <string name="patcher_tab_logs">Evidencije zakrpa</string>
-    <string name="patcher_tab_game">Igra</string>
+    <string name="patcher_tab_game">Igre</string>
     <string name="patcher_long_step_warning">Ovaj korak može potrajati. Molimo sačekajte…</string>
     <string name="patcher_installing_subtitle">Skoro spremni za akciju! 🎸</string>
     <string name="patcher_success_title">Sve je završeno! 🎉</string>
@@ -368,7 +374,6 @@ Deinstalacija će trajno obrisati sve podatke aplikacije"</string>
     <string name="failed_to_mount">Nije moguće montirati: %s</string>
     <string name="failed_to_unmount">Nije moguće demontirati: %s</string>
     <!-- Patcher Screen - Mini-games -->
-    <string name="mini_game_picker_title">Izaberi igru</string>
     <string name="mini_game_score">Rezultat %d</string>
     <string name="mini_game_best">Najbolji %d</string>
     <string name="mini_game_new_record">Novi rekord!</string>

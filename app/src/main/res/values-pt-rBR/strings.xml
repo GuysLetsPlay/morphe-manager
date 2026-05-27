@@ -130,7 +130,13 @@
     <string name="home_recommended_version">Versão recomendada</string>
     <string name="home_selected_version">Versão selecionada</string>
     <string name="home_select_apk_title">Selecionar APK</string>
-    <string name="home_select_any_apk_description">Toque no botão abaixo para selecionar um arquivo APK de qualquer app para aplicar os patches</string>
+    <string name="home_select_any_apk_description">Selecione um arquivo APK de qualquer aplicativo, ou escolha um aplicativo já instalado neste dispositivo</string>
+    <string name="home_use_installed_app">Usar aplicativo instalado</string>
+    <string name="home_installed_app_picker_title">Selecionar aplicativo instalado</string>
+    <string name="home_installed_app_picker_empty">Nenhum aplicativo encontrado</string>
+    <string name="home_installed_app_picker_filter_all">Todos os aplicativos</string>
+    <string name="home_installed_app_picker_filter_user">Apenas aplicativos do usuário</string>
+    <string name="home_installed_app_picker_filter_system">Apenas aplicativos do sistema</string>
     <string name="home_invalid_apk_unreadable">Não foi possível ler o arquivo. Verifique se o \'Armazenamento Externo\' não está com o uso da bateria restrito</string>
     <string name="home_invalid_apk_not_an_apk">O arquivo selecionado não é um APK válido</string>
     <string name="home_invalid_apk_io_error">Falha ao abrir o arquivo. Tente novamente</string>
@@ -271,7 +277,7 @@ Zona externa (tracejada): pode ser recortada pela máscara do launcher - mantenh
     <string name="patcher_error_technical">Detalhes técnicos</string>
     <string name="patcher_error_dialog_app_info">Informações do app</string>
     <string name="patcher_tab_logs">Logs do Patcher</string>
-    <string name="patcher_tab_game">Jogo</string>
+    <string name="patcher_tab_game">Jogos</string>
     <string name="patcher_long_step_warning">Esta etapa pode demorar um pouco. Por favor, aguarde…</string>
     <string name="patcher_installing_subtitle">Quase pronto para arrasar! 🎸</string>
     <string name="patcher_success_title">Tudo pronto! 🎉</string>
@@ -368,7 +374,6 @@ A desinstalação apagará permanentemente todos os dados do aplicativo."</strin
     <string name="failed_to_mount">Falha ao montar: %s</string>
     <string name="failed_to_unmount">Falha ao desmontar: %s</string>
     <!-- Patcher Screen - Mini-games -->
-    <string name="mini_game_picker_title">Escolha um jogo</string>
     <string name="mini_game_score">Pontuação: %d</string>
     <string name="mini_game_best">Melhor %d</string>
     <string name="mini_game_new_record">Novo recorde!</string>

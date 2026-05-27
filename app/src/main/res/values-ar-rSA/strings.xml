@@ -130,7 +130,13 @@
     <string name="home_recommended_version">الإصدار الموصى به</string>
     <string name="home_selected_version">الإصدار المحدد</string>
     <string name="home_select_apk_title">تحديد ملف APK</string>
-    <string name="home_select_any_apk_description">انقر على الزر أدناه لتحديد ملف APK لأي تطبيق لتعديله</string>
+    <string name="home_select_any_apk_description">اختر ملف APK لأي تطبيق، أو اختر تطبيقًا مثبتًا بالفعل على هذا الجهاز</string>
+    <string name="home_use_installed_app">استخدم التطبيق المثبت</string>
+    <string name="home_installed_app_picker_title">اختر التطبيق المثبت</string>
+    <string name="home_installed_app_picker_empty">لم يتم العثور على تطبيقات</string>
+    <string name="home_installed_app_picker_filter_all">جميع التطبيقات</string>
+    <string name="home_installed_app_picker_filter_user">تطبيقات المستخدم فقط</string>
+    <string name="home_installed_app_picker_filter_system">تطبيقات النظام فقط</string>
     <string name="home_invalid_apk_unreadable">⁯لا يمكن قراءة الملف. تحقق من أن \'وحدة التخزين الخارجية\' غير مقيدة بالبطارية</string>
     <string name="home_invalid_apk_not_an_apk">الملف المحدد ليس ملف APK صالحًا</string>
     <string name="home_invalid_apk_io_error">فشل فتح الملف. الرجاء المحاولة مرة أخرى</string>
@@ -271,7 +277,7 @@
     <string name="patcher_error_technical">التفاصيل التقنية</string>
     <string name="patcher_error_dialog_app_info">معلومات التطبيق</string>
     <string name="patcher_tab_logs">سجلات أداة التعديل</string>
-    <string name="patcher_tab_game">اللعبة</string>
+    <string name="patcher_tab_game">ألعاب</string>
     <string name="patcher_long_step_warning">قد تستغرق هذه الخطوة بعض الوقت. يرجى الانتظار…</string>
     <string name="patcher_installing_subtitle">على وشك أن نكون جاهزين للانطلاق! 🎸</string>
     <string name="patcher_success_title">تم الانتهاء! 🎉</string>
@@ -369,10 +375,9 @@
     <string name="failed_to_mount">فشل تركيب: %s</string>
     <string name="failed_to_unmount">فشل فك تركيب: %s</string>
     <!-- Patcher Screen - Mini-games -->
-    <string name="mini_game_picker_title">اختر لعبة</string>
     <string name="mini_game_score">النتيجة %d</string>
     <string name="mini_game_best">الأفضل %d</string>
-    <string name="mini_game_new_record">سجل جديد!</string>
+    <string name="mini_game_new_record">رقم قياسي جديد!</string>
     <string name="mini_game_game_over">انتهت اللعبة</string>
     <string name="mini_game_try_again">حاول مرة أخرى</string>
     <string name="mini_game_paused">متوقفة</string>

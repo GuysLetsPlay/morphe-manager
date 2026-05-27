@@ -130,7 +130,13 @@
     <string name="home_recommended_version">Рекомендована версія</string>
     <string name="home_selected_version">Вибрана версія</string>
     <string name="home_select_apk_title">Вибрати APK файл</string>
-    <string name="home_select_any_apk_description">Натисніть кнопку нижче, щоб вибрати APK файл будь-якого застосунку для патчінгу</string>
+    <string name="home_select_any_apk_description">Оберіть APK-файл будь-якого застосунку або виберіть застосунок, уже встановлений на цьому пристрої</string>
+    <string name="home_use_installed_app">Використати встановлений застосунок</string>
+    <string name="home_installed_app_picker_title">Вибрати встановлений застосунок</string>
+    <string name="home_installed_app_picker_empty">Не знайдено застосунків</string>
+    <string name="home_installed_app_picker_filter_all">Усі застосунки</string>
+    <string name="home_installed_app_picker_filter_user">Лише користувацькі застосунки</string>
+    <string name="home_installed_app_picker_filter_system">Лише системні застосунки</string>
     <string name="home_invalid_apk_unreadable">Не вдалося прочитати файл. Перевірте, чи не обмежено використання батареї для \"Зовнішньої пам’яті\"</string>
     <string name="home_invalid_apk_not_an_apk">Вибраний файл не є дійсним APK</string>
     <string name="home_invalid_apk_io_error">Не вдалося відкрити файл. Будь ласка, спробуйте ще раз</string>
@@ -271,7 +277,7 @@
     <string name="patcher_error_technical">Технічні деталі</string>
     <string name="patcher_error_dialog_app_info">Інформація про застосунок</string>
     <string name="patcher_tab_logs">Журнали патчера</string>
-    <string name="patcher_tab_game">Гра</string>
+    <string name="patcher_tab_game">Ігри</string>
     <string name="patcher_long_step_warning">Цей крок може тривати деякий час. Будь ласка, зачекайте…</string>
     <string name="patcher_installing_subtitle">Майже готово до драйву! 🎸</string>
     <string name="patcher_success_title">Все готово! 🎉</string>
@@ -368,7 +374,6 @@
     <string name="failed_to_mount">Не вдалося змонтувати: %s</string>
     <string name="failed_to_unmount">Не вдалося демонтувати: %s</string>
     <!-- Patcher Screen - Mini-games -->
-    <string name="mini_game_picker_title">Оберіть гру</string>
     <string name="mini_game_score">Рахунок %d</string>
     <string name="mini_game_best">Найкращий %d</string>
     <string name="mini_game_new_record">Новий рекорд!</string>

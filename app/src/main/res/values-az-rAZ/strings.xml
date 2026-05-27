@@ -130,7 +130,6 @@
     <string name="home_recommended_version">Tövsiyə olunan versiya</string>
     <string name="home_selected_version">Seçilən versiya</string>
     <string name="home_select_apk_title">APK Seçin</string>
-    <string name="home_select_any_apk_description">Hər hansı tətbiqin APK faylını yamaqlama məqsədilə seçmək üçün aşağıda düyməyə toxun</string>
     <string name="home_invalid_apk_unreadable">Faylı oxumaq mümkün olmadı. \'Xarici Yaddaş\'ın batareya məhdudiyyətli olmadığını yoxlayın</string>
     <string name="home_invalid_apk_not_an_apk">Seçilən fayl yararlı APK deyil</string>
     <string name="home_invalid_apk_io_error">Faylı açmaq olmadı. Xahiş olunur, təkrar cəhd et</string>
@@ -271,7 +270,7 @@ Xarici sahə (ştrixli): başladıcı örtüyündən kəsilə bilər - mühüm h
     <string name="patcher_error_technical">Texniki təfsilatlar</string>
     <string name="patcher_error_dialog_app_info">Tətbiq məlumatı</string>
     <string name="patcher_tab_logs">Yamaqlayıcı Qeydləri</string>
-    <string name="patcher_tab_game">Oyun</string>
+    <string name="patcher_tab_game">Oyunlar</string>
     <string name="patcher_long_step_warning">Bu keçid bir müddət çəkə bilər. Zəhmət olmasa, gözləyin...</string>
     <string name="patcher_installing_subtitle">Təqribən rok-a hazırdır! 🎸</string>
     <string name="patcher_success_title">Hamısı Bitdi! 🎉</string>
@@ -368,9 +367,9 @@ Quraşdırma ləğvi bütün tətbiq məlumatını qalıcı siləcək"</string>
     <string name="failed_to_mount">Montajlama uğursuzdu: %s</string>
     <string name="failed_to_unmount">Montajı silmək olmadı: %s</string>
     <!-- Patcher Screen - Mini-games -->
-    <string name="mini_game_picker_title">Oyun seç</string>
     <string name="mini_game_score">Hesab %d</string>
     <string name="mini_game_best">Ən yaxşı %d</string>
+    <string name="mini_game_new_record">Yeni rekord!</string>
     <string name="mini_game_game_over">Oyun Bitdi</string>
     <string name="mini_game_try_again">Təkrar cəhd et</string>
     <string name="mini_game_paused">Fasilə edildi</string>

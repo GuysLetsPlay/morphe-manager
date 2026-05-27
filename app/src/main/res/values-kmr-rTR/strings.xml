@@ -130,7 +130,13 @@
     <string name="home_recommended_version">Versyona ku tê pêşniyar kirin</string>
     <string name="home_selected_version">Versiyona hilbijartî</string>
     <string name="home_select_apk_title">APK safînak</string>
-    <string name="home_select_any_apk_description">Seroki pêşniyar be ku APK entê antî ek şêwaziyê sazkirinê ji her aplikasyonê pêş andazeşîne</string>
+    <string name="home_select_any_apk_description">Hilbijartina dosyeyekê APK yê ji her programê, yan jî programa ku berê li ser vê cîhazê hatiye saz kirin hilbijartin</string>
+    <string name="home_use_installed_app">Programa saz kirî bikar bîne</string>
+    <string name="home_installed_app_picker_title">Programa saz kirî hilbijartin</string>
+    <string name="home_installed_app_picker_empty">Çêbî app nayê dîtin</string>
+    <string name="home_installed_app_picker_filter_all">Hemû app</string>
+    <string name="home_installed_app_picker_filter_user">Tenê app\'ên bikarîner</string>
+    <string name="home_installed_app_picker_filter_system">Tenê app\'ên sîstemê</string>
     <string name="home_invalid_apk_unreadable">İspasara xwêndik nebîn. Çavkanîya \'External Storage\'ê ji bateriyê qedexe nebîn</string>
     <string name="home_invalid_apk_not_an_apk">Pelê ku hilbijartin, APK-ya rast nîne</string>
     <string name="home_invalid_apk_io_error">Rast nakin ku pel vebîn. Ji kerema xwe dîcare biceribîne</string>
@@ -366,7 +372,6 @@ Neqişandin dê hemî daneyên serîlêdanê bi awayê daîmî tune bike"</strin
     <string name="failed_to_mount">Serketina çêkirinê: %s</string>
     <string name="failed_to_unmount">Serketina nebûyîna çêkirinê: %s</string>
     <!-- Patcher Screen - Mini-games -->
-    <string name="mini_game_picker_title">Lîstikek hilbijêre</string>
     <string name="mini_game_score">Pêvan %d</string>
     <string name="mini_game_best">Çêtirîn %d</string>
     <string name="mini_game_new_record">Rekord nû!</string>

@@ -130,7 +130,13 @@
     <string name="home_recommended_version">Рекомендирана версия</string>
     <string name="home_selected_version">Избрана версия</string>
     <string name="home_select_apk_title">Избор на APK</string>
-    <string name="home_select_any_apk_description">Натиснете бутона отдолу, за да изберете APK файл на всякакви приложения за пачове</string>
+    <string name="home_select_any_apk_description">Изберете APK файл на което и да е приложение или изберете приложение, вече инсталирано на това устройство</string>
+    <string name="home_use_installed_app">Използвай инсталирано приложение</string>
+    <string name="home_installed_app_picker_title">Избор на инсталирано приложение</string>
+    <string name="home_installed_app_picker_empty">Не са намерени приложения</string>
+    <string name="home_installed_app_picker_filter_all">Всички приложения</string>
+    <string name="home_installed_app_picker_filter_user">Само потребителски приложения</string>
+    <string name="home_installed_app_picker_filter_system">Само системни приложения</string>
     <string name="home_invalid_apk_unreadable">Не успях да прочета файла. Проверете дали \'Външно хранилище\' не е ограничено от батерията</string>
     <string name="home_invalid_apk_not_an_apk">Избраният файл не е валиден APK</string>
     <string name="home_invalid_apk_io_error">Не успях да отворя файла. Моля, опитайте отново</string>
@@ -271,7 +277,7 @@
     <string name="patcher_error_technical">Технически детайли</string>
     <string name="patcher_error_dialog_app_info">Информация за приложението</string>
     <string name="patcher_tab_logs">Дневници на пачера</string>
-    <string name="patcher_tab_game">Игра</string>
+    <string name="patcher_tab_game">Игри</string>
     <string name="patcher_long_step_warning">Този стъпка може да отнеме време. Моля, изчакайте…</string>
     <string name="patcher_installing_subtitle">Готворе се да рокне! 🎸</string>
     <string name="patcher_success_title">Всичко е готово! 🎉</string>
@@ -368,7 +374,6 @@
     <string name="failed_to_mount">Неуспешно монтиране: %s</string>
     <string name="failed_to_unmount">Неуспешно откачване: %s</string>
     <!-- Patcher Screen - Mini-games -->
-    <string name="mini_game_picker_title">Избери игра</string>
     <string name="mini_game_score">Резултат %d</string>
     <string name="mini_game_best">Най-добър %d</string>
     <string name="mini_game_new_record">Нов рекорд!</string>

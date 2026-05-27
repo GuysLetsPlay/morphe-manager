@@ -130,7 +130,13 @@
     <string name="home_recommended_version">Ajánlott verzió</string>
     <string name="home_selected_version">Kiválasztott verzió</string>
     <string name="home_select_apk_title">APK kiválasztása</string>
-    <string name="home_select_any_apk_description">Koppints az alábbi gombra a módosítani kívánt APK-fájl kiválasztásához.</string>
+    <string name="home_select_any_apk_description">Válasszon egy APK fájlt bármely alkalmazásból, vagy válasszon egy alkalmazást, amely már telepítve van ezen az eszközön</string>
+    <string name="home_use_installed_app">Telepített alkalmazás használata</string>
+    <string name="home_installed_app_picker_title">Telepített alkalmazás kiválasztása</string>
+    <string name="home_installed_app_picker_empty">Nincs alkalmazás található</string>
+    <string name="home_installed_app_picker_filter_all">Összes alkalmazás</string>
+    <string name="home_installed_app_picker_filter_user">Csak felhasználói alkalmazások</string>
+    <string name="home_installed_app_picker_filter_system">Csak rendszeralkalmazások</string>
     <string name="home_invalid_apk_unreadable">Nem sikerült olvasni a fájlt. Ellenőrizd, hogy a \'Külső tároló\' nincs-e akkumulátorkorlátozás alatt</string>
     <string name="home_invalid_apk_not_an_apk">A kiválasztott fájl nem egy érvényes APK</string>
     <string name="home_invalid_apk_io_error">Nem sikerült megnyitni a fájlt. Kérjük, próbáld újra</string>
@@ -271,7 +277,7 @@ Külső zóna (szaggatott): az indító maszk levághatja – tartsa a fontos r�
     <string name="patcher_error_technical">Technikai részletek</string>
     <string name="patcher_error_dialog_app_info">Alkalmazásinformáció</string>
     <string name="patcher_tab_logs">Patcher naplók</string>
-    <string name="patcher_tab_game">Játék</string>
+    <string name="patcher_tab_game">Játékok</string>
     <string name="patcher_long_step_warning">Ez a lépés eltarthat egy ideig. Kérjük várj…</string>
     <string name="patcher_installing_subtitle">Majdnem készen állunk! 🎸</string>
     <string name="patcher_success_title">Minden kész! 🎉</string>
@@ -368,7 +374,6 @@ Az eltávolítás véglegesen törli az alkalmazás összes adatát."</string>
     <string name="failed_to_mount">Nem sikerült csatlakoztatni: %s</string>
     <string name="failed_to_unmount">Nem sikerült leválasztani: %s</string>
     <!-- Patcher Screen - Mini-games -->
-    <string name="mini_game_picker_title">Válassz egy játékot</string>
     <string name="mini_game_score">Pontszám: %d</string>
     <string name="mini_game_best">A legjobb %d</string>
     <string name="mini_game_new_record">Új rekord!</string>

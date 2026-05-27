@@ -130,7 +130,6 @@
     <string name="home_recommended_version">Versión recomendada</string>
     <string name="home_selected_version">Versión seleccionada</string>
     <string name="home_select_apk_title">Seleccionar APK</string>
-    <string name="home_select_any_apk_description">Toca no botón de abaixo para seleccionar un ficheiro APK de calquera aplicación para parchear</string>
     <string name="home_invalid_apk_unreadable">Non se puido ler o ficheiro. Comprobe que \'Almacenamento externo\' non ten restricións de batería</string>
     <string name="home_invalid_apk_not_an_apk">O ficheiro seleccionado non é un APK válido</string>
     <string name="home_invalid_apk_io_error">Fallo ao abrir o arquivo. Por favor, inténtao de novo</string>

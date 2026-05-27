@@ -130,7 +130,13 @@
     <string name="home_recommended_version">версия для рекомендации</string>
     <string name="home_selected_version">נבחר</string>
     <string name="home_select_apk_title">בחר APK</string>
-    <string name="home_select_any_apk_description">לחץ על הכפתור למטה כדי לבחור קובץ APK של כל אפליקציה לתיקון</string>
+    <string name="home_select_any_apk_description">בחר קובץ APK של כל אפליקציה, או בחר אפליקציה שכבר מותקנת במכשיר זה</string>
+    <string name="home_use_installed_app">השתמש באפליקציה מותקנת</string>
+    <string name="home_installed_app_picker_title">בחר אפליקציה מותקנת</string>
+    <string name="home_installed_app_picker_empty">לא נמצאו אפליקציות</string>
+    <string name="home_installed_app_picker_filter_all">כל האפליקציות</string>
+    <string name="home_installed_app_picker_filter_user">אפליקציות משתמש בלבד</string>
+    <string name="home_installed_app_picker_filter_system">אפליקציות מערכת בלבד</string>
     <string name="home_invalid_apk_unreadable">לא ניתן לקרוא את הקובץ. בדוק ש\'אחסון חיצוני\' אינו מוגבל על ידי הסוללה</string>
     <string name="home_invalid_apk_not_an_apk">הקובץ שנבחר אינו קובץ APK תקין</string>
     <string name="home_invalid_apk_io_error">נכשל בפתיחת הקובץ. אנא נסה שוב</string>
@@ -271,7 +277,7 @@
     <string name="patcher_error_technical">פרטי טכניים</string>
     <string name="patcher_error_dialog_app_info">מידע על האפליקציה</string>
     <string name="patcher_tab_logs">יומני תיקונים</string>
-    <string name="patcher_tab_game">משחק</string>
+    <string name="patcher_tab_game">משחקים</string>
     <string name="patcher_long_step_warning">שלב זה עשוי לקחת זמן. אנא המתן…</string>
     <string name="patcher_installing_subtitle">כמעט מוכן לרוק! 🎸</string>
     <string name="patcher_success_title">הכל מוכן! 🎉</string>
@@ -368,7 +374,6 @@
     <string name="failed_to_mount">כשל בהרכבה: %s</string>
     <string name="failed_to_unmount">כשל בפירוק: %s</string>
     <!-- Patcher Screen - Mini-games -->
-    <string name="mini_game_picker_title">בחר משחק</string>
     <string name="mini_game_score">נקודות %d</string>
     <string name="mini_game_best">הטוב ביותר %d</string>
     <string name="mini_game_new_record">רשומה חדשה!</string>

@@ -130,7 +130,13 @@
     <string name="home_recommended_version">Inirerekomendang bersyon</string>
     <string name="home_selected_version">Piniling bersyon</string>
     <string name="home_select_apk_title">Piliin ang APK</string>
-    <string name="home_select_any_apk_description">Pindutin ang button sa ibaba upang pillin ang APK file ng anumang aplikasyon para sa pagpa-patch</string>
+    <string name="home_select_any_apk_description">Pumili ng APK file ng anumang app, o pumili ng app na naka-install na sa device na ito.</string>
+    <string name="home_use_installed_app">Gamitin ang naka-install na app</string>
+    <string name="home_installed_app_picker_title">Piliin ang naka-install na app</string>
+    <string name="home_installed_app_picker_empty">Walang aplikasyon na natagpuan</string>
+    <string name="home_installed_app_picker_filter_all">Lahat ng aplikasyon</string>
+    <string name="home_installed_app_picker_filter_user">Mga aplikasyon ng gumagamit lamang</string>
+    <string name="home_installed_app_picker_filter_system">Mga aplikasyon ng sistema lamang</string>
     <string name="home_invalid_apk_unreadable">Hindi mabasa ang file. Siguraduhing hindi pinagbabawalan ng baterya ang \'External Storage\'</string>
     <string name="home_invalid_apk_not_an_apk">Ang napiling file ay hindi isang valid na APK</string>
     <string name="home_invalid_apk_io_error">Hindi mabuksan ang file. Pakisubukan muli</string>
@@ -271,7 +277,7 @@ Panlabas na zone (dashed): maaaring i-clip ng launcher mask—panatilihin ang ma
     <string name="patcher_error_technical">Teknikal na detalye</string>
     <string name="patcher_error_dialog_app_info">Impormasyon ng app</string>
     <string name="patcher_tab_logs">Mga Log ng Patcher</string>
-    <string name="patcher_tab_game">Laro</string>
+    <string name="patcher_tab_game">Mga Laro</string>
     <string name="patcher_long_step_warning">Maaaring magtagal ang hakbang ito. Mangyaring maghintay…</string>
     <string name="patcher_installing_subtitle">Halos handa na sa rock! 🎸</string>
     <string name="patcher_success_title">Tapos na lahat! 🎉</string>
@@ -368,7 +374,6 @@ Ang pag-uninstall ay permanenteng bubura sa lahat ng data ng app."</string>
     <string name="failed_to_mount">Nabigong i-mount: %s</string>
     <string name="failed_to_unmount">Nabigong i-unmount: %s</string>
     <!-- Patcher Screen - Mini-games -->
-    <string name="mini_game_picker_title">Pumili ng laro</string>
     <string name="mini_game_score">Marka %d</string>
     <string name="mini_game_best">Pinakamahusay na %d</string>
     <string name="mini_game_new_record">Bagong rekord!</string>

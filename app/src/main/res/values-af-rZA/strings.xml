@@ -130,7 +130,13 @@
     <string name="home_recommended_version">Aanbevole weergawe</string>
     <string name="home_selected_version">Geen opdatering beskikbaar</string>
     <string name="home_select_apk_title">Kies APK</string>
-    <string name="home_select_any_apk_description">Tik op die knoppie hieronder om \'n APK lêer van enige app vir patching te kies</string>
+    <string name="home_select_any_apk_description">Kies \'n APK-lêer van enige toepassing, of kies \'n toepassing wat reeds op hierdie toestel geïnstalleer is</string>
+    <string name="home_use_installed_app">Gebruik geïnstalleerde toepassing</string>
+    <string name="home_installed_app_picker_title">Kies geïnstalleerde toepassing</string>
+    <string name="home_installed_app_picker_empty">Geen toepings gevind</string>
+    <string name="home_installed_app_picker_filter_all">Alle toepings</string>
+    <string name="home_installed_app_picker_filter_user">Slegs gebruikerstoepings</string>
+    <string name="home_installed_app_picker_filter_system">Slegs stelseltoepings</string>
     <string name="home_invalid_apk_unreadable">Kon nie die lêer lees nie. Gaan na of \'Eksterne stoorplek\' nie beperk is vir die battery nie</string>
     <string name="home_invalid_apk_not_an_apk">Die gekose lêer is nie \'n geldige APK nie</string>
     <string name="home_invalid_apk_io_error">Kon die lêer nie oopmaak nie. Probeer weer</string>
@@ -271,7 +277,7 @@ Outerlike sone (gestippel): kan deur die lanseerder masker afgesny word - hou be
     <string name="patcher_error_technical">Tegniese besonderhede</string>
     <string name="patcher_error_dialog_app_info">App-inligting</string>
     <string name="patcher_tab_logs">Patcher Logs</string>
-    <string name="patcher_tab_game">Speletjie</string>
+    <string name="patcher_tab_game">Speletjies</string>
     <string name="patcher_long_step_warning">Hierdie stap kan \'n rukkie neem. Wag asseblief…</string>
     <string name="patcher_installing_subtitle">Byna gereed om te rock! 🎸</string>
     <string name="patcher_success_title">Klaar! 🎉</string>
@@ -368,7 +374,6 @@ Deïnstallering sal alle toepassingsdata permanent uitwis."</string>
     <string name="failed_to_mount">Kon nie monteer nie: %s</string>
     <string name="failed_to_unmount">Kon nie dedemonteer nie: %s</string>
     <!-- Patcher Screen - Mini-games -->
-    <string name="mini_game_picker_title">Kies \'n speletjie</string>
     <string name="mini_game_score">Punt %d</string>
     <string name="mini_game_best">Beste %d</string>
     <string name="mini_game_new_record">Nuwe rekord!</string>

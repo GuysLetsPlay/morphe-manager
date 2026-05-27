@@ -130,7 +130,13 @@
     <string name="home_recommended_version">सुझाई गई संस्करण</string>
     <string name="home_selected_version">चयन किया गया संस्करण</string>
     <string name="home_select_apk_title">APK चुनें</string>
-    <string name="home_select_any_apk_description">पैचिंग के लिए किसी भी ऐप के लिए APK फ़ाइल चुनने के लिए नीचे दिए गए बटन पर टैप करें</string>
+    <string name="home_select_any_apk_description">किसी भी ऐप की APK फ़ाइल चुनें, या इस डिवाइस पर पहले से इंस्टॉल किए गए ऐप को चुनें</string>
+    <string name="home_use_installed_app">इंस्टॉल किए गए ऐप का उपयोग करें</string>
+    <string name="home_installed_app_picker_title">इंस्टॉल किया गया ऐप चुनें</string>
+    <string name="home_installed_app_picker_empty">कोई ऐप नहीं मिला</string>
+    <string name="home_installed_app_picker_filter_all">सभी ऐप</string>
+    <string name="home_installed_app_picker_filter_user">केवल उपयोगकर्ता ऐप</string>
+    <string name="home_installed_app_picker_filter_system">केवल सिस्टम ऐप</string>
     <string name="home_invalid_apk_unreadable">फ़ाइल पढ़ने में असमर्थ। जाँच करें कि \'External Storage\' बैटरी द्वारा प्रतिबंधित तो नहीं है</string>
     <string name="home_invalid_apk_not_an_apk">चयनित फ़ाइल एक वैध APK नहीं है</string>
     <string name="home_invalid_apk_io_error">फ़ाइल खोलने में विफल। कृपया फिर से प्रयास करें</string>
@@ -271,7 +277,7 @@
     <string name="patcher_error_technical">तकनीकी विवरण</string>
     <string name="patcher_error_dialog_app_info">ऐप जानकारी</string>
     <string name="patcher_tab_logs">पैचर लॉग्स</string>
-    <string name="patcher_tab_game">गेम</string>
+    <string name="patcher_tab_game">खेल</string>
     <string name="patcher_long_step_warning">This step may take a while. Please wait…</string>
     <string name="patcher_installing_subtitle">Almost ready to rock! 🎸</string>
     <string name="patcher_success_title">All Done! 🎉</string>
@@ -368,7 +374,6 @@
     <string name="failed_to_mount">%s को माउंट करने में विफल</string>
     <string name="failed_to_unmount">%s को अनमाउंट करने में विफल।</string>
     <!-- Patcher Screen - Mini-games -->
-    <string name="mini_game_picker_title">खेल चुनें</string>
     <string name="mini_game_score">अंक %d</string>
     <string name="mini_game_best">सर्वश्रेष्ठ %d</string>
     <string name="mini_game_new_record">नया रिकॉर्ड!</string>

@@ -98,7 +98,6 @@
     <string name="home_recommended_version">نسخه پیشنهادی</string>
     <string name="home_selected_version">نسخه منتخب</string>
     <string name="home_select_apk_title">انتخاب APK</string>
-    <string name="home_select_any_apk_description">دکمه زیر را لمس کنید تا فایل APK هر برنامه ای را برای وصله انتخاب کنید</string>
     <!-- Home Screen - Dialog 4: Expert Mode Dialog -->
     <string name="expert_mode_title">حالت متخصص</string>
     <string name="expert_mode_search">جستجوی پچ ها</string>

@@ -130,7 +130,13 @@
     <string name="home_recommended_version">Versión recomendada</string>
     <string name="home_selected_version">Versión seleccionada</string>
     <string name="home_select_apk_title">Seleccionar APK</string>
-    <string name="home_select_any_apk_description">Toca el botón de abajo para seleccionar un archivo APK de cualquier aplicación para parchear</string>
+    <string name="home_select_any_apk_description">Selecciona un archivo APK de cualquier aplicación o elige una aplicación que ya esté instalada en este dispositivo</string>
+    <string name="home_use_installed_app">Usar aplicación instalada</string>
+    <string name="home_installed_app_picker_title">Seleccionar aplicación instalada</string>
+    <string name="home_installed_app_picker_empty">No se encontraron aplicaciones</string>
+    <string name="home_installed_app_picker_filter_all">Todas las aplicaciones</string>
+    <string name="home_installed_app_picker_filter_user">Solo aplicaciones de usuario</string>
+    <string name="home_installed_app_picker_filter_system">Solo aplicaciones del sistema</string>
     <string name="home_invalid_apk_unreadable">No se pudo leer el archivo. Verifique que \'Almacenamiento externo\' no esté restringido por la batería</string>
     <string name="home_invalid_apk_not_an_apk">El archivo seleccionado no es un APK válido</string>
     <string name="home_invalid_apk_io_error">No se pudo abrir el archivo. Intente nuevamente</string>
@@ -271,7 +277,7 @@ Zona exterior (discontinua): puede quedar recortada por la máscara del launcher
     <string name="patcher_error_technical">Detalles técnicos</string>
     <string name="patcher_error_dialog_app_info">Información de la app</string>
     <string name="patcher_tab_logs">Registros del parcheador</string>
-    <string name="patcher_tab_game">Juego</string>
+    <string name="patcher_tab_game">Juegos</string>
     <string name="patcher_long_step_warning">Este paso puede tardar un tiempo. Por favor, espere…</string>
     <string name="patcher_installing_subtitle">¡Casi listo para empezar! 🎸</string>
     <string name="patcher_success_title">¡Todo listo! 🎉</string>
@@ -368,7 +374,6 @@ Desinstalar borrará permanentemente todos los datos de la aplicación."</string
     <string name="failed_to_mount">Error al montar: %s</string>
     <string name="failed_to_unmount">Error al desmontar: %s</string>
     <!-- Patcher Screen - Mini-games -->
-    <string name="mini_game_picker_title">Elige un juego</string>
     <string name="mini_game_score">Puntuación %d</string>
     <string name="mini_game_best">Mejor %d</string>
     <string name="mini_game_new_record">¡Nuevo récord!</string>

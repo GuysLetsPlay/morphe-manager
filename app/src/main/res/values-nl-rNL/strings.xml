@@ -24,7 +24,7 @@
     <string name="home_update_skipped_metered_subtitle">Mobiele gegevens zijn actief</string>
     <string name="home_updating_sources">Bronnen worden geüpdatet…</string>
     <string name="home_update_progress_format">%s verwerkt</string>
-    <string name="home_update_success">Bronnen worden geüpdatet</string>
+    <string name="home_update_success">Bronnen geüpdatet</string>
     <string name="home_update_success_subtitle">Uw bronnen zijn up-to-date</string>
     <string name="home_sources_are_loading">Bronnen worden geladen, even geduld…</string>
     <string name="home_search_apps">Apps zoeken</string>
@@ -127,7 +127,13 @@
     <string name="home_recommended_version">Aanbevolen versie</string>
     <string name="home_selected_version">Geselecteerde versie</string>
     <string name="home_select_apk_title">Selecteer APK</string>
-    <string name="home_select_any_apk_description">Tik op de knop hieronder om een APK-bestand van een app te selecteren voor het patchen.</string>
+    <string name="home_select_any_apk_description">Selecteer een APK-bestand van een app, of kies een app die al op dit apparaat is geïnstalleerd</string>
+    <string name="home_use_installed_app">Geïnstalleerde app gebruiken</string>
+    <string name="home_installed_app_picker_title">Geïnstalleerde app selecteren</string>
+    <string name="home_installed_app_picker_empty">Geen apps gevonden</string>
+    <string name="home_installed_app_picker_filter_all">Alle apps</string>
+    <string name="home_installed_app_picker_filter_user">Alleen gebruikersapps</string>
+    <string name="home_installed_app_picker_filter_system">Alleen systeemapps</string>
     <string name="home_invalid_apk_unreadable">Kon het bestand niet lezen. Controleer of \'Opslag\' niet beperkt is qua batterijgebruik</string>
     <string name="home_invalid_apk_not_an_apk">Het geselecteerde bestand is geen geldig APK-bestand</string>
     <string name="home_invalid_apk_io_error">Het bestand kon niet worden geopend. Probeer het opnieuw</string>
@@ -268,7 +274,7 @@ Buitenste zone (gestippeld): kan worden afgesneden door het launcher-masker - ho
     <string name="patcher_error_technical">Technische details</string>
     <string name="patcher_error_dialog_app_info">App-info</string>
     <string name="patcher_tab_logs">Patcher Logs</string>
-    <string name="patcher_tab_game">Game</string>
+    <string name="patcher_tab_game">Spellen</string>
     <string name="patcher_long_step_warning">Deze stap kan even duren. Een ogenblik geduld...</string>
     <string name="patcher_installing_subtitle">Bijna klaar om te knallen! 🎸</string>
     <string name="patcher_success_title">Klaar! 🎉</string>
@@ -365,7 +371,6 @@ Deïnstalleren wist alle app-gegevens permanent."</string>
     <string name="failed_to_mount">Kon %s niet koppelen</string>
     <string name="failed_to_unmount">Mislukt om te demonteer: %s</string>
     <!-- Patcher Screen - Mini-games -->
-    <string name="mini_game_picker_title">Kies een spel</string>
     <string name="mini_game_score">Score %d</string>
     <string name="mini_game_best">Beste %d</string>
     <string name="mini_game_new_record">Nieuw record!</string>

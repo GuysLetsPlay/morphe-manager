@@ -130,7 +130,13 @@
     <string name="home_recommended_version">Препоручена верзија</string>
     <string name="home_selected_version">Одабрана верзија</string>
     <string name="home_select_apk_title">Изаберите APK</string>
-    <string name="home_select_any_apk_description">Кликните на дугме испод да изаберете APK фајл било ког апликација за печеве</string>
+    <string name="home_select_any_apk_description">Изаберите APK фајл било које апликације или изаберите апликацију која је већ инсталирана на овом уређају</string>
+    <string name="home_use_installed_app">Користи инсталирану апликацију</string>
+    <string name="home_installed_app_picker_title">Изаберите инсталирану апликацију</string>
+    <string name="home_installed_app_picker_empty">Нема пронађених апликација</string>
+    <string name="home_installed_app_picker_filter_all">Све апликације</string>
+    <string name="home_installed_app_picker_filter_user">Само корисничке апликације</string>
+    <string name="home_installed_app_picker_filter_system">Само системске апликације</string>
     <string name="home_invalid_apk_unreadable">Није могуће прочитати датотеку. Проверите да \'Екстерна складишта\' није ограничено од стране батерије</string>
     <string name="home_invalid_apk_not_an_apk">Избрана датотека није валидан APK.</string>
     <string name="home_invalid_apk_io_error">Није успело отварање датотеке. Поново покушајте.</string>
@@ -270,7 +276,7 @@
     <string name="patcher_error_technical">Техничке информације</string>
     <string name="patcher_error_dialog_app_info">Информације о апликацији</string>
     <string name="patcher_tab_logs">Евиденција закрпа</string>
-    <string name="patcher_tab_game">Игра</string>
+    <string name="patcher_tab_game">Игре</string>
     <string name="patcher_long_step_warning">Овај корак може потрајати. Молимо сачекајте…</string>
     <string name="patcher_installing_subtitle">Скоро спремно за рад! 🎸</string>
     <string name="patcher_success_title">Све готово! 🎉</string>
@@ -367,7 +373,6 @@
     <string name="failed_to_mount">Није успело монтирање: %s</string>
     <string name="failed_to_unmount">Није успело демонтирање: %s</string>
     <!-- Patcher Screen - Mini-games -->
-    <string name="mini_game_picker_title">Изабери игру</string>
     <string name="mini_game_score">Резултат %d</string>
     <string name="mini_game_best">Најбоља %d</string>
     <string name="mini_game_new_record">Нови рекорд!</string>

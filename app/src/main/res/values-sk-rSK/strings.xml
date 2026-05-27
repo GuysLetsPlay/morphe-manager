@@ -130,7 +130,13 @@
     <string name="home_recommended_version">Odporúčaná verzia</string>
     <string name="home_selected_version">Vybraná verzia:</string>
     <string name="home_select_apk_title">Vybrať APK súbor</string>
-    <string name="home_select_any_apk_description">Ťuknite na tlačidlo nižšie, aby ste vybrali APK súbor aplikácie, ktorú chcete zaplátať</string>
+    <string name="home_select_any_apk_description">Vyberte APK súbor ľubovoľnej aplikácie, alebo vyberte aplikáciu, ktorá je už nainštalovaná v tomto zariadení</string>
+    <string name="home_use_installed_app">Použiť nainštalovanú aplikáciu</string>
+    <string name="home_installed_app_picker_title">Vybrať nainštalovanú aplikáciu</string>
+    <string name="home_installed_app_picker_empty">Nenašli sa žiadne aplikácie</string>
+    <string name="home_installed_app_picker_filter_all">Všetky aplikácie</string>
+    <string name="home_installed_app_picker_filter_user">Iba používateľské aplikácie</string>
+    <string name="home_installed_app_picker_filter_system">Iba systémové aplikácie</string>
     <string name="home_invalid_apk_unreadable">Nepodarilo sa prečítať súbor. Skontrolujte, či \'Externé úložisko\' nie je obmedzené v spotrebe batérie</string>
     <string name="home_invalid_apk_not_an_apk">Vybraný súbor nie je platný APK</string>
     <string name="home_invalid_apk_io_error">Nepodarilo sa otvoriť súbor. Skúste to znova</string>
@@ -271,7 +277,7 @@ Vnútorná zóna (čiarkovaná): môže byť orezaná maskou spúšťača – uc
     <string name="patcher_error_technical">Technické detaily</string>
     <string name="patcher_error_dialog_app_info">Informácie o aplikácii</string>
     <string name="patcher_tab_logs">Logy záplat</string>
-    <string name="patcher_tab_game">Hra</string>
+    <string name="patcher_tab_game">Hry</string>
     <string name="patcher_long_step_warning">Tento krok môže chvíľu trvať. Čakajte prosím…</string>
     <string name="patcher_installing_subtitle">Ešte chvíľu a môžeme to naplno roztočiť! 🎸</string>
     <string name="patcher_success_title">Všetko je hotové! 🎉</string>
@@ -368,7 +374,6 @@ Odinštalovanie trvalo vymaže všetky údaje aplikácie."</string>
     <string name="failed_to_mount">Nepodarilo sa pripojiť: %s</string>
     <string name="failed_to_unmount">Nepodarilo sa odpojiť: %s</string>
     <!-- Patcher Screen - Mini-games -->
-    <string name="mini_game_picker_title">Vyberte hru</string>
     <string name="mini_game_score">Skóre %d</string>
     <string name="mini_game_best">Najlepšie %d</string>
     <string name="mini_game_new_record">Nový rekord!</string>

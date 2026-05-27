@@ -130,7 +130,13 @@
     <string name="home_recommended_version">Önerilen sürüm</string>
     <string name="home_selected_version">Seçilen sürüm</string>
     <string name="home_select_apk_title">APK seç</string>
-    <string name="home_select_any_apk_description">Herhangi bir uygulamanın APK dosyasını seçmek için aşağıdaki düğmeye tıklayın</string>
+    <string name="home_select_any_apk_description">Herhangi bir uygulamanın APK dosyasını seçin veya bu cihazda zaten yüklü olan bir uygulamayı seçin</string>
+    <string name="home_use_installed_app">Yüklenmiş uygulamayı kullan</string>
+    <string name="home_installed_app_picker_title">Yüklü uygulamayı seç</string>
+    <string name="home_installed_app_picker_empty">Uygulama bulunamadı</string>
+    <string name="home_installed_app_picker_filter_all">Tüm uygulamalar</string>
+    <string name="home_installed_app_picker_filter_user">Yalnızca kullanıcı uygulamaları</string>
+    <string name="home_installed_app_picker_filter_system">Yalnızca sistem uygulamaları</string>
     <string name="home_invalid_apk_unreadable">Dosya okunamadı. \'Harici Depolama\'nın pil kısıtlaması olmadığından emin olun</string>
     <string name="home_invalid_apk_not_an_apk">Seçilen dosya geçerli bir APK değil</string>
     <string name="home_invalid_apk_io_error">Dosya açılamadı. Lütfen tekrar deneyin</string>
@@ -271,7 +277,7 @@ Dış bölge (kesikli): launcher maskesi tarafından kırpılabilir - önemli ay
     <string name="patcher_error_technical">Teknik ayrıntılar</string>
     <string name="patcher_error_dialog_app_info">Uygulama bilgisi</string>
     <string name="patcher_tab_logs">Yama Günlükleri</string>
-    <string name="patcher_tab_game">Oyun</string>
+    <string name="patcher_tab_game">Oyunlar</string>
     <string name="patcher_long_step_warning">Bu adım biraz zaman alabilir. Lütfen bekleyin…</string>
     <string name="patcher_installing_subtitle">Neredeyse hazırız! 🎸</string>
     <string name="patcher_success_title">Hepsi Bitti! 🎉</string>
@@ -368,7 +374,6 @@ Kaldırma işlemi tüm uygulama verilerini kalıcı olarak silecektir"</string>
     <string name="failed_to_mount">Bağlanamadı: %s</string>
     <string name="failed_to_unmount">Bağlama kaldırılamadı: %s</string>
     <!-- Patcher Screen - Mini-games -->
-    <string name="mini_game_picker_title">Bir oyun seç</string>
     <string name="mini_game_score">%d puan</string>
     <string name="mini_game_best">En iyisi %d</string>
     <string name="mini_game_new_record">Yeni rekor!</string>

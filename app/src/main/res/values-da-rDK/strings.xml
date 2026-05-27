@@ -130,7 +130,13 @@
     <string name="home_recommended_version">Anbefalet version</string>
     <string name="home_selected_version">Valgt version</string>
     <string name="home_select_apk_title">Vælg APK</string>
-    <string name="home_select_any_apk_description">Tryk på knappen nedenfor for at vælge en APK-fil for en hvilket som helst app for at patche</string>
+    <string name="home_select_any_apk_description">Vælg en APK-fil fra en hvilken som helst app, eller vælg en app, der allerede er installeret på denne enhed</string>
+    <string name="home_use_installed_app">Brug installeret app</string>
+    <string name="home_installed_app_picker_title">Vælg installeret app</string>
+    <string name="home_installed_app_picker_empty">Ingen apps fundet</string>
+    <string name="home_installed_app_picker_filter_all">Alle apps</string>
+    <string name="home_installed_app_picker_filter_user">Kun brugerapps</string>
+    <string name="home_installed_app_picker_filter_system">Kun systemapps</string>
     <string name="home_invalid_apk_unreadable">Kunne ikke læse filen. Tjek at \'Ekstern lagerplads\' ikke er batteribegrænset</string>
     <string name="home_invalid_apk_not_an_apk">Den valgte fil er ikke en gyldig APK</string>
     <string name="home_invalid_apk_io_error">Kunne ikke åbne filen. Prøv igen</string>
@@ -368,7 +374,6 @@ Afinstallation sletter permanent alle appdata."</string>
     <string name="failed_to_mount">Kunne ikke montere: %s</string>
     <string name="failed_to_unmount">Kunne ikke afmontere: %s</string>
     <!-- Patcher Screen - Mini-games -->
-    <string name="mini_game_picker_title">Vælg et spil</string>
     <string name="mini_game_score">Score %d</string>
     <string name="mini_game_best">Bedste %d</string>
     <string name="mini_game_new_record">Ny rekord!</string>

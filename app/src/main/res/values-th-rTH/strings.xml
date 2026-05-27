@@ -130,7 +130,13 @@
     <string name="home_recommended_version">เวอร์ชันแนะนำ</string>
     <string name="home_selected_version">เลือกเวอร์ชัน</string>
     <string name="home_select_apk_title">เลือกไฟล์ APK</string>
-    <string name="home_select_any_apk_description">กดปุ่มด้านล่างเพื่อเลือกไฟล์ APK ของแอปพลิเคชันใด ๆ เพื่อการแพตซ์</string>
+    <string name="home_select_any_apk_description">เลือกไฟล์ APK ของแอปใดก็ได้ หรือเลือกแอปที่ติดตั้งบนอุปกรณ์นี้อยู่แล้ว</string>
+    <string name="home_use_installed_app">ใช้แอปที่ติดตั้งแล้ว</string>
+    <string name="home_installed_app_picker_title">เลือกแอปที่ติดตั้ง</string>
+    <string name="home_installed_app_picker_empty">ไม่พบแอปพลิเคชัน</string>
+    <string name="home_installed_app_picker_filter_all">แอปพลิเคชันทั้งหมด</string>
+    <string name="home_installed_app_picker_filter_user">เฉพาะแอปพลิเคชันของผู้ใช้</string>
+    <string name="home_installed_app_picker_filter_system">เฉพาะแอปพลิเคชันของระบบ</string>
     <string name="home_invalid_apk_unreadable">ไม่สามารถอ่านไฟล์ได้ โปรดตรวจสอบว่า \'หน่วยความจำภายนอก\' ไม่ได้ถูกจำกัดการใช้แบตเตอรี่</string>
     <string name="home_invalid_apk_not_an_apk">ไฟล์ที่เลือกไม่ใช่ไฟล์ APK ที่ถูกต้อง</string>
     <string name="home_invalid_apk_io_error">ไม่สามารถเปิดไฟล์ได้ โปรดลองอีกครั้ง</string>
@@ -368,7 +374,6 @@
     <string name="failed_to_mount">ไม่สามารถติดตั้งใช้งานได้: %s</string>
     <string name="failed_to_unmount">ไม่สามารถยกเลิกการติดตั้งใช้งานได้: %s</string>
     <!-- Patcher Screen - Mini-games -->
-    <string name="mini_game_picker_title">เลือกเกม</string>
     <string name="mini_game_score">คะแนน %d</string>
     <string name="mini_game_best">ดีที่สุด %d</string>
     <string name="mini_game_new_record">บันทึกใหม่!</string>

@@ -130,7 +130,13 @@
     <string name="home_recommended_version">推荐版本</string>
     <string name="home_selected_version">已选版本</string>
     <string name="home_select_apk_title">选择APK</string>
-    <string name="home_select_any_apk_description">点击下方按钮选择任何应用的APK文件进行修补</string>
+    <string name="home_select_any_apk_description">选择任何应用程序的 APK 文件，或选择已安装在此设备上的应用程序</string>
+    <string name="home_use_installed_app">使用已安装的应用程序</string>
+    <string name="home_installed_app_picker_title">选择已安装的应用程序</string>
+    <string name="home_installed_app_picker_empty">未找到应用</string>
+    <string name="home_installed_app_picker_filter_all">所有应用</string>
+    <string name="home_installed_app_picker_filter_user">仅用户应用</string>
+    <string name="home_installed_app_picker_filter_system">仅系统应用</string>
     <string name="home_invalid_apk_unreadable">无法读取文件。请检查“外部存储”是否被限制电池使用</string>
     <string name="home_invalid_apk_not_an_apk">所选文件不是有效的 APK</string>
     <string name="home_invalid_apk_io_error">无法打开文件。请重试</string>
@@ -368,7 +374,6 @@
     <string name="failed_to_mount">挂载失败：%s</string>
     <string name="failed_to_unmount">取消挂载失败：%s</string>
     <!-- Patcher Screen - Mini-games -->
-    <string name="mini_game_picker_title">选择游戏</string>
     <string name="mini_game_score">得分：%d</string>
     <string name="mini_game_best">最佳 %d</string>
     <string name="mini_game_new_record">新的记录！</string>
