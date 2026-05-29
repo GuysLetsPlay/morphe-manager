@@ -130,7 +130,13 @@
     <string name="home_recommended_version">推荐版本</string>
     <string name="home_selected_version">已选版本</string>
     <string name="home_select_apk_title">选择APK</string>
-    <string name="home_select_any_apk_description">点击下方按钮选择任何应用的APK文件进行修补</string>
+    <string name="home_select_any_apk_description">选择任何应用程序的 APK 文件，或选择已安装在此设备上的应用程序</string>
+    <string name="home_use_installed_app">使用已安装的应用程序</string>
+    <string name="home_installed_app_picker_title">选择已安装的应用程序</string>
+    <string name="home_installed_app_picker_empty">未找到应用</string>
+    <string name="home_installed_app_picker_filter_all">所有应用</string>
+    <string name="home_installed_app_picker_filter_user">仅用户应用</string>
+    <string name="home_installed_app_picker_filter_system">仅系统应用</string>
     <string name="home_invalid_apk_unreadable">无法读取文件。请检查“外部存储”是否被限制电池使用</string>
     <string name="home_invalid_apk_not_an_apk">所选文件不是有效的 APK</string>
     <string name="home_invalid_apk_io_error">无法打开文件。请重试</string>
@@ -192,8 +198,6 @@
     <string name="patch_option_enter_value">输入值</string>
     <string name="patch_option_enter_number">输入数字</string>
     <string name="patch_option_enter_decimal">输入小数</string>
-    <string name="patch_option_pick_folder">选择文件夹</string>
-    <string name="patch_option_pick_file">选择文件</string>
     <string name="patch_option_list_duplicate">此值已存在</string>
     <string name="patch_option_list_empty">值不能为空</string>
     <string name="patch_option_list_empty_state">尚未添加任何值</string>
@@ -272,6 +276,8 @@
     <string name="patcher_error_log">错误日志</string>
     <string name="patcher_error_technical">技术细节</string>
     <string name="patcher_error_dialog_app_info">应用信息</string>
+    <string name="patcher_tab_logs">补丁日志</string>
+    <string name="patcher_tab_game">游戏</string>
     <string name="patcher_long_step_warning">此步骤可能需要一段时间。请稍候…</string>
     <string name="patcher_installing_subtitle">准备摇滚！ 🎸</string>
     <string name="patcher_success_title">全部完成！ 🎉</string>
@@ -367,6 +373,21 @@
     <string name="package_name">包名</string>
     <string name="failed_to_mount">挂载失败：%s</string>
     <string name="failed_to_unmount">取消挂载失败：%s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_score">得分：%d</string>
+    <string name="mini_game_best">最佳 %d</string>
+    <string name="mini_game_new_record">新的记录！</string>
+    <string name="mini_game_game_over">游戏结束</string>
+    <string name="mini_game_try_again">重试</string>
+    <string name="mini_game_paused">暂停</string>
+    <string name="mini_game_resume">继续</string>
+    <string name="mini_game_2048_picker_subtitle">滑动方块进行合并</string>
+    <string name="mini_game_flappy_picker_subtitle">点击穿过管道</string>
+    <string name="mini_game_flappy_tap_to_start">点击飞行</string>
+    <string name="mini_game_snake_picker_subtitle">吃食物，不要撞到自己</string>
+    <string name="mini_game_snake_swipe_to_start">滑动开始</string>
+    <string name="mini_game_dino_picker_subtitle">点击跳过仙人掌</string>
+    <string name="mini_game_dino_tap_to_start">点击奔跑</string>
     <!-- Settings -->
     <string name="appearance">外观</string>
     <string name="advanced">高级</string>
@@ -463,14 +484,14 @@
     <string name="settings_advanced_bytecode_mode_full">完整</string>
     <string name="settings_advanced_bytecode_mode_full_description">较慢的修补速度，复制旧版行为。仅当快速模式导致问题时才推荐使用</string>
     <!-- Settings - Advanced Tab - GitHub PAT Settings -->
-    <string name="settings_advanced_github_pat">GitHub PAT</string>
+    <string name="settings_advanced_github_pat">GitHub访问令牌</string>
     <string name="settings_advanced_github_pat_description">用于拉取请求源所需</string>
     <string name="settings_advanced_github_pat_configured">已配置令牌</string>
     <string name="settings_advanced_github_pat_how_to_get">如何获取令牌</string>
     <string name="settings_advanced_github_pat_dialog_title">设置 GitHub 个人访问令牌</string>
     <string name="settings_advanced_github_pat_dialog_description">设置 GitHub 个人访问令牌以能够将 pull 请求添加为外部源。创建具有公共仓库范围的 PAT</string>
     <string name="settings_advanced_github_pat_export_include_label">包含在设置导出中</string>
-    <string name="settings_advanced_github_pat_export_include_supporting">Adds this PAT to exported Morphe settings</string>
+    <string name="settings_advanced_github_pat_export_include_supporting">在导出 Morphe 设置时也导出令牌</string>
     <string name="settings_advanced_github_pat_export_warning">请勿共享您的 PAT。如果您在设置导出中包含它，请将该文件保持为私有，因为它包含令牌</string>
     <!-- Settings - Advanced Tab - Patch Options Section -->
     <string name="settings_advanced_patch_options">补丁选项</string>
@@ -623,8 +644,8 @@ morphe_header_custom_dark.png
     <string name="settings_system_export_debug_logs_export_read_failed">读取日志失败 (退出代码 %s)</string>
     <string name="settings_system_export_debug_logs_export_failed">导出日志失败</string>
     <string name="settings_system_export_debug_logs_export_success">日志已导出</string>
-    <!-- Settings - System Tab - Storage Management Section -->
-    <string name="settings_system_storage_management">存储管理</string>
+    <!-- Settings - System Tab - Files & Storage Section -->
+    <string name="settings_system_files">文件和存储</string>
     <string name="settings_system_apks_size">总大小：%s</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">已修补 APK</string>
@@ -635,14 +656,14 @@ morphe_header_custom_dark.png
     <string name="settings_system_patched_apks_deleted">已成功删除修补 APK</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">原始 APK</string>
-    <string name="settings_system_original_apks_description">已保存以供重新修补。每个应用保留一个版本</string>
+    <string name="settings_system_original_apks_description">保留应用以供重新修补。每个应用只会保留一个版本</string>
     <string name="settings_system_original_apks_empty">尚未存储任何原始 APK</string>
     <string name="settings_system_original_apks_deleted">已成功删除原始 APK</string>
     <string name="settings_system_original_apks_delete_title">是否要删除原始 APK？</string>
     <string name="settings_system_original_apks_delete_confirm">删除 %s 的原始 APK？没有新的 APK，您将无法重新修补</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">补丁选择项</string>
-    <string name="settings_system_patch_selections_description">保存的补丁选择，在卸载后保留</string>
+    <string name="settings_system_patch_selections_description">保存的补丁选择项，在程序卸载后也会保留</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">重置补丁选择?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">重置补丁选择?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">重置补丁选择?</string>
@@ -662,6 +683,21 @@ morphe_header_custom_dark.png
     <string name="settings_system_selected_patches_title">已选择的补丁 (%s)</string>
     <string name="settings_system_patch_options_title">补丁选项 (%s)</string>
     <string name="settings_system_no_patches_or_options">没有保存的补丁或选项</string>
+    <!-- Settings - System Tab - Custom file picker -->
+    <string name="settings_system_custom_file_picker">自定义文件选择器</string>
+    <string name="settings_system_custom_file_picker_description">使用Morphe内置的文件选择器代替系统默认的文件选择器</string>
+    <!-- File Picker -->
+    <string name="file_picker_previous_directory">上一级目录</string>
+    <string name="file_picker_no_files">这里没有文件</string>
+    <string name="file_picker_internal_storage">内部存储空间</string>
+    <string name="file_picker_sd_card">SD卡</string>
+    <string name="file_picker_root">根目录 (/)</string>
+    <string name="file_picker_sort_name_asc">名称 (A–Z)</string>
+    <string name="file_picker_sort_name_desc">名称 (Z–A)</string>
+    <string name="file_picker_sort_size_desc">大小 (从大到小)</string>
+    <string name="file_picker_sort_size_asc">大小 (从小到大)</string>
+    <string name="file_picker_sort_date_desc">日期 (最新到旧)</string>
+    <string name="file_picker_sort_date_asc">日期 (从旧到新)</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">关于</string>
     <string name="settings_system_share_website">分享网站</string>
@@ -672,6 +708,8 @@ morphe_header_custom_dark.png
     <string name="credits_prior_development">先前开发</string>
     <string name="opensource_licenses">开源许可证</string>
     <!-- Shared strings -->
+    <string name="select_file">选择文件</string>
+    <string name="select_folder">选择文件夹</string>
     <string name="patches">补丁</string>
     <string name="home">主页</string>
     <string name="settings">设置</string>

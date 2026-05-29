@@ -19,7 +19,7 @@
         <item quantity="other">%s berkas APK</item>
     </plurals>
     <plurals name="home_app_info_repatch_cleaned_invalid_data">
-        <item quantity="other">Menghapus %s tambalan yang sudah usang dari pemilihan yang disimpan</item>
+        <item quantity="other">Menghapus %s tambalan lama dari pilihan yang tersimpan</item>
     </plurals>
     <plurals name="sources_management_subtitle">
         <item quantity="other">%s sumber terpasang</item>

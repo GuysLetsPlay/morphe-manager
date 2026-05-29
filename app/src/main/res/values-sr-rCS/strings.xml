@@ -130,7 +130,13 @@
     <string name="home_recommended_version">Preporučena verzija</string>
     <string name="home_selected_version">Izabrana verzija</string>
     <string name="home_select_apk_title">Izaberi APK</string>
-    <string name="home_select_any_apk_description">Kliknite dugme ispod da odaberete APK datoteku bilo koje aplikacije za patchiranje</string>
+    <string name="home_select_any_apk_description">Odaberite APK datoteku bilo koje aplikacije ili odaberite aplikaciju koja je već instalirana na ovom uređaju</string>
+    <string name="home_use_installed_app">Koristi instaliranu aplikaciju</string>
+    <string name="home_installed_app_picker_title">Odabir instalirane aplikacije</string>
+    <string name="home_installed_app_picker_empty">Nema pronađenih aplikacija</string>
+    <string name="home_installed_app_picker_filter_all">Sve aplikacije</string>
+    <string name="home_installed_app_picker_filter_user">Samo korisničke aplikacije</string>
+    <string name="home_installed_app_picker_filter_system">Samo sistemske aplikacije</string>
     <string name="home_invalid_apk_unreadable">Nije moguće pročitati datoteku. Proverite da \'Eksternu memoriju\' ne ograničava baterija</string>
     <string name="home_invalid_apk_not_an_apk">Odabrana datoteka nije validan APK</string>
     <string name="home_invalid_apk_io_error">Nije uspelo otvaranje datoteke. Molimo pokušajte ponovo</string>
@@ -192,8 +198,6 @@ Da li ste sigurni da želite nastaviti?"</string>
     <string name="patch_option_enter_value">Unesite vrednost</string>
     <string name="patch_option_enter_number">Unesite broj</string>
     <string name="patch_option_enter_decimal">Unesite decimalni broj</string>
-    <string name="patch_option_pick_folder">Odaberite folder</string>
-    <string name="patch_option_pick_file">Izaberi datoteku</string>
     <string name="patch_option_list_duplicate">Ova vrednost već postoji</string>
     <string name="patch_option_list_empty">Vrednost ne može biti prazna</string>
     <string name="patch_option_list_empty_state">Još nisu dodate vrednosti</string>
@@ -272,6 +276,8 @@ Spoljna zona (isprekidana): može biti isečena maskom pokretača – držite va
     <string name="patcher_error_log">Dnevnik grešaka</string>
     <string name="patcher_error_technical">Tehničke informacije</string>
     <string name="patcher_error_dialog_app_info">Informacije o aplikaciji</string>
+    <string name="patcher_tab_logs">Evidencije zakrpa</string>
+    <string name="patcher_tab_game">Igre</string>
     <string name="patcher_long_step_warning">Ovaj korak može potrajati. Molimo sačekajte…</string>
     <string name="patcher_installing_subtitle">Skoro spremni za akciju! 🎸</string>
     <string name="patcher_success_title">Sve je završeno! 🎉</string>
@@ -367,6 +373,21 @@ Deinstalacija će trajno obrisati sve podatke aplikacije"</string>
     <string name="package_name">Naziv paketa</string>
     <string name="failed_to_mount">Nije moguće montirati: %s</string>
     <string name="failed_to_unmount">Nije moguće demontirati: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_score">Rezultat %d</string>
+    <string name="mini_game_best">Najbolji %d</string>
+    <string name="mini_game_new_record">Novi rekord!</string>
+    <string name="mini_game_game_over">Igra je završena</string>
+    <string name="mini_game_try_again">Pokušaj ponovo</string>
+    <string name="mini_game_paused">Pauza</string>
+    <string name="mini_game_resume">Nastavi</string>
+    <string name="mini_game_2048_picker_subtitle">Kliznite pločicama da biste ih spojili</string>
+    <string name="mini_game_flappy_picker_subtitle">Dodirnite da letite kroz cevi</string>
+    <string name="mini_game_flappy_tap_to_start">Dodirnite da letite</string>
+    <string name="mini_game_snake_picker_subtitle">Jedite hranu, nemojte se udarati</string>
+    <string name="mini_game_snake_swipe_to_start">Prevucite prstom da biste počeli</string>
+    <string name="mini_game_dino_picker_subtitle">Dodirnite da preskočite kaktuse</string>
+    <string name="mini_game_dino_tap_to_start">Dodirnite da trčite</string>
     <!-- Settings -->
     <string name="appearance">Izgled</string>
     <string name="advanced">Napredno</string>
@@ -607,8 +628,8 @@ Opciono, putanja sadrži ikonu obaveštenja u jednom od sledećih formata:
     <string name="settings_system_export_debug_logs_export_read_failed">Neuspeh pri čitanju dnevnika (kôd izlaza %s)</string>
     <string name="settings_system_export_debug_logs_export_failed">Neuspešan izvoz evidencija</string>
     <string name="settings_system_export_debug_logs_export_success">Lozove izvezeno</string>
-    <!-- Settings - System Tab - Storage Management Section -->
-    <string name="settings_system_storage_management">Upravljanje skladištem</string>
+    <!-- Settings - System Tab - Files & Storage Section -->
+    <string name="settings_system_files">Datoteke i skladište</string>
     <string name="settings_system_apks_size">Ukupna veličina: %s</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Patcheirani APK(s)</string>
@@ -646,6 +667,21 @@ Opciono, putanja sadrži ikonu obaveštenja u jednom od sledećih formata:
     <string name="settings_system_selected_patches_title">Izabrane ispravke (%s)</string>
     <string name="settings_system_patch_options_title">Opcije ispravke (%s)</string>
     <string name="settings_system_no_patches_or_options">Nema sačuvanih patch-ova ili opcija</string>
+    <!-- Settings - System Tab - Custom file picker -->
+    <string name="settings_system_custom_file_picker">Prilagođeni odabir datoteka</string>
+    <string name="settings_system_custom_file_picker_description">Koristite ugrađeni odabir datoteka u Morpheu umesto fabričkog sistema</string>
+    <!-- File Picker -->
+    <string name="file_picker_previous_directory">Prethodna direktorijum</string>
+    <string name="file_picker_no_files">Ovde nema datoteka</string>
+    <string name="file_picker_internal_storage">Interna memorija</string>
+    <string name="file_picker_sd_card">SD kartica</string>
+    <string name="file_picker_root">Koren (/)</string>
+    <string name="file_picker_sort_name_asc">Naziv (A–Š)</string>
+    <string name="file_picker_sort_name_desc">Naziv (Š–A)</string>
+    <string name="file_picker_sort_size_desc">Veličina (od najveće)</string>
+    <string name="file_picker_sort_size_asc">Veličina (od najmanje)</string>
+    <string name="file_picker_sort_date_desc">Datum (najnovije prvo)</string>
+    <string name="file_picker_sort_date_asc">Datum (najstarije prvo)</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">O programu</string>
     <string name="settings_system_share_website">Podeli mrežni-sajt</string>
@@ -656,6 +692,8 @@ Opciono, putanja sadrži ikonu obaveštenja u jednom od sledećih formata:
     <string name="credits_prior_development">Претходни развој</string>
     <string name="opensource_licenses">Open-source licence</string>
     <!-- Shared strings -->
+    <string name="select_file">Izaberi datoteku</string>
+    <string name="select_folder">Izaberi folder</string>
     <string name="patches">Zakrpe</string>
     <string name="home">Početna</string>
     <string name="settings">Podešavanja</string>

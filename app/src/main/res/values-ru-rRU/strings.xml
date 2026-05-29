@@ -130,7 +130,13 @@
     <string name="home_recommended_version">Рекомендуемая версия</string>
     <string name="home_selected_version">Выбранная версия</string>
     <string name="home_select_apk_title">Выбрать APK</string>
-    <string name="home_select_any_apk_description">Нажмите кнопку ниже, чтобы выбрать APK файл любого приложения для патчинга</string>
+    <string name="home_select_any_apk_description">Выберите APK-файл любого приложения или выберите приложение, уже установленное на этом устройстве</string>
+    <string name="home_use_installed_app">Использовать установленное приложение</string>
+    <string name="home_installed_app_picker_title">Выберите установленное приложение</string>
+    <string name="home_installed_app_picker_empty">Приложения не найдены</string>
+    <string name="home_installed_app_picker_filter_all">Все приложения</string>
+    <string name="home_installed_app_picker_filter_user">Только пользовательские приложения</string>
+    <string name="home_installed_app_picker_filter_system">Только системные приложения</string>
     <string name="home_invalid_apk_unreadable">Не удалось прочитать файл. Убедитесь, что \'Внешнее хранилище\' не ограничено по энергопотреблению</string>
     <string name="home_invalid_apk_not_an_apk">Выбранный файл не является допустимым APK</string>
     <string name="home_invalid_apk_io_error">Не удалось открыть файл. Пожалуйста, попробуйте еще раз</string>
@@ -192,8 +198,6 @@
     <string name="patch_option_enter_value">Введите значение</string>
     <string name="patch_option_enter_number">Введите число</string>
     <string name="patch_option_enter_decimal">Введите десятичную дробь</string>
-    <string name="patch_option_pick_folder">Выбрать папку</string>
-    <string name="patch_option_pick_file">Выберите файл</string>
     <string name="patch_option_list_duplicate">Это значение уже существует</string>
     <string name="patch_option_list_empty">Значение не может быть пустым</string>
     <string name="patch_option_list_empty_state">Значения еще не добавлены</string>
@@ -272,6 +276,8 @@
     <string name="patcher_error_log">Журнал ошибок</string>
     <string name="patcher_error_technical">Технические детали</string>
     <string name="patcher_error_dialog_app_info">Информация о приложении</string>
+    <string name="patcher_tab_logs">Журналы патчера</string>
+    <string name="patcher_tab_game">Игры</string>
     <string name="patcher_long_step_warning">Этот шаг может занять некоторое время. Пожалуйста, подождите…</string>
     <string name="patcher_installing_subtitle">Почти готово к работе! 🎸</string>
     <string name="patcher_success_title">Все готово! 🎉</string>
@@ -367,6 +373,21 @@
     <string name="package_name">Имя пакета</string>
     <string name="failed_to_mount">Не удалось смонтировать: %s</string>
     <string name="failed_to_unmount">Не удалось размонтировать: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_score">Счет %d</string>
+    <string name="mini_game_best">Лучший %d</string>
+    <string name="mini_game_new_record">Новый рекорд!</string>
+    <string name="mini_game_game_over">Игра окончена</string>
+    <string name="mini_game_try_again">Попробовать снова</string>
+    <string name="mini_game_paused">Пауза</string>
+    <string name="mini_game_resume">Продолжить</string>
+    <string name="mini_game_2048_picker_subtitle">Сдвигайте плитки, чтобы объединять их</string>
+    <string name="mini_game_flappy_picker_subtitle">Касайтесь экрана, чтобы пролетать сквозь трубы</string>
+    <string name="mini_game_flappy_tap_to_start">Касайтесь экрана, чтобы лететь</string>
+    <string name="mini_game_snake_picker_subtitle">Ешьте еду, не ударяйтесь о себя</string>
+    <string name="mini_game_snake_swipe_to_start">Смахните, чтобы начать</string>
+    <string name="mini_game_dino_picker_subtitle">Касайтесь экрана, чтобы перепрыгивать кактусы</string>
+    <string name="mini_game_dino_tap_to_start">Касайтесь экрана, чтобы бежать</string>
     <!-- Settings -->
     <string name="appearance">Внешний вид</string>
     <string name="advanced">Дополнительно</string>
@@ -623,8 +644,8 @@ morphe_header_custom_dark.png
     <string name="settings_system_export_debug_logs_export_read_failed">Не удалось прочитать журналы (код выхода %s)</string>
     <string name="settings_system_export_debug_logs_export_failed">Не удалось экспортировать журналы</string>
     <string name="settings_system_export_debug_logs_export_success">Журналы экспортированы</string>
-    <!-- Settings - System Tab - Storage Management Section -->
-    <string name="settings_system_storage_management">Управление хранилищем</string>
+    <!-- Settings - System Tab - Files & Storage Section -->
+    <string name="settings_system_files">Файлы и хранилище</string>
     <string name="settings_system_apks_size">Общий размер: %s</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Патченые APK</string>
@@ -662,6 +683,21 @@ morphe_header_custom_dark.png
     <string name="settings_system_selected_patches_title">Выбранные патчи (%s)</string>
     <string name="settings_system_patch_options_title">Параметры патчей (%s)</string>
     <string name="settings_system_no_patches_or_options">Нет сохраненных патчей или параметров</string>
+    <!-- Settings - System Tab - Custom file picker -->
+    <string name="settings_system_custom_file_picker">Пользовательский файловый менеджер</string>
+    <string name="settings_system_custom_file_picker_description">Использовать встроенный файловый менеджер Morphe вместо системного по умолчанию</string>
+    <!-- File Picker -->
+    <string name="file_picker_previous_directory">Предыдущий каталог</string>
+    <string name="file_picker_no_files">Здесь нет файлов</string>
+    <string name="file_picker_internal_storage">Внутренняя память</string>
+    <string name="file_picker_sd_card">SD-карта</string>
+    <string name="file_picker_root">Корень (/)</string>
+    <string name="file_picker_sort_name_asc">Имя (A–Z)</string>
+    <string name="file_picker_sort_name_desc">Имя (Z–A)</string>
+    <string name="file_picker_sort_size_desc">Размер (от большего к меньшему)</string>
+    <string name="file_picker_sort_size_asc">Размер (от меньшего к большему)</string>
+    <string name="file_picker_sort_date_desc">Дата (от новых к старым)</string>
+    <string name="file_picker_sort_date_asc">Дата (от старых к новым)</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">Об интеграции</string>
     <string name="settings_system_share_website">Поделиться веб-сайтом</string>
@@ -672,6 +708,8 @@ morphe_header_custom_dark.png
     <string name="credits_prior_development">Предыдущая разработка</string>
     <string name="opensource_licenses">Лицензии открытого кода</string>
     <!-- Shared strings -->
+    <string name="select_file">Выберите файл</string>
+    <string name="select_folder">Выбрать папку</string>
     <string name="patches">Патчи</string>
     <string name="home">Домашняя страница</string>
     <string name="settings">Настройки</string>

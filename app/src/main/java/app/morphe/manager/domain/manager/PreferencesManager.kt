@@ -92,6 +92,7 @@ class PreferencesManager(
 
     val keystoreAlias = stringPreference("keystore_alias", KeystoreManager.DEFAULT)
     val keystorePass = stringPreference("keystore_pass", KeystoreManager.DEFAULT)
+    val keystorePassword = stringPreference("keystore_password", "")
 
     // Other hidden settings
     val gitHubPat = stringPreference("github_pat", "")
@@ -102,6 +103,19 @@ class PreferencesManager(
 
     val installationTime = LongPreference(dataStore, "manager_installation_time", 0L)
     val disablePatchVersionCompatCheck = booleanPreference("disable_patch_version_compatibility_check", false)
+
+    val useCustomFilePicker = booleanPreference("use_custom_file_picker", false)
+    val lastFilePickerPath = stringPreference("last_file_picker_path", "")
+    val filePickerSortMode = stringPreference("file_picker_sort_mode", "NAME_ASC")
+
+    /** Tracks whether the user has explicitly toggled the custom file picker preference. */
+    val customFilePickerUserConfigured = booleanPreference("custom_file_picker_user_configured", false)
+
+    // Mini-game high scores
+    val miniGame2048HighScore  = intPreference("mini_game_2048_high_score", 0)
+    val miniGameFlappyHighScore = intPreference("mini_game_flappy_high_score", 0)
+    val miniGameSnakeHighScore  = intPreference("mini_game_snake_high_score", 0)
+    val miniGameDinoHighScore   = intPreference("mini_game_dino_high_score", 0)
 
     /**  Hidden preference to track if prerelease was auto-enabled. */
     private val prereleaseAutoEnabled = booleanPreference("prerelease_auto_enabled", false)
@@ -121,6 +135,13 @@ class PreferencesManager(
                 )
                 Log.d(tag, "Initializing process memory limit to $adaptive MB (device RAM-based)")
                 patcherProcessMemoryLimit.update(adaptive)
+            }
+
+            // TODO: remove after 1.18.0 stable - migrates expert mode users who upgraded before
+            //  custom file picker toggle existed; without this they'd get the new default (false)
+            //  even though they should have it on.
+            if (useExpertMode.get() && !customFilePickerUserConfigured.get()) {
+                useCustomFilePicker.update(true)
             }
 
             // Auto-enable prereleases for dev versions
@@ -160,6 +181,7 @@ class PreferencesManager(
         val installerHiddenComponents: Set<String>? = null,
         val keystoreAlias: String? = null,
         val keystorePass: String? = null,
+        val keystorePassword: String? = null,
         val firstLaunch: Boolean? = null,
         val showManagerUpdateDialogOnLaunch: Boolean? = null,
         val useManagerPrereleases: Boolean? = null,
@@ -207,6 +229,7 @@ class PreferencesManager(
         installerHiddenComponents = installerHiddenComponents.get(),
         keystoreAlias = keystoreAlias.get(),
         keystorePass = keystorePass.get(),
+        keystorePassword = keystorePassword.get().takeIf { it.isNotEmpty() },
         firstLaunch = firstLaunch.get(),
         useManagerPrereleases = useManagerPrereleases.get(),
         bundlePrereleasesEnabled = bundlePrereleasesEnabled.get(),
@@ -240,6 +263,7 @@ class PreferencesManager(
         snapshot.installerHiddenComponents?.let { installerHiddenComponents.value = it }
         snapshot.keystoreAlias?.let { keystoreAlias.value = it }
         snapshot.keystorePass?.let { keystorePass.value = it }
+        snapshot.keystorePassword?.let { keystorePassword.value = it }
         snapshot.firstLaunch?.let { firstLaunch.value = it }
         snapshot.useManagerPrereleases?.let { useManagerPrereleases.value = it }
         snapshot.bundlePrereleasesEnabled?.let { bundlePrereleasesEnabled.value = it }

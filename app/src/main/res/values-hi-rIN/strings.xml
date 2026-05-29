@@ -130,7 +130,13 @@
     <string name="home_recommended_version">सुझाई गई संस्करण</string>
     <string name="home_selected_version">चयन किया गया संस्करण</string>
     <string name="home_select_apk_title">APK चुनें</string>
-    <string name="home_select_any_apk_description">पैचिंग के लिए किसी भी ऐप के लिए APK फ़ाइल चुनने के लिए नीचे दिए गए बटन पर टैप करें</string>
+    <string name="home_select_any_apk_description">किसी भी ऐप की APK फ़ाइल चुनें, या इस डिवाइस पर पहले से इंस्टॉल किए गए ऐप को चुनें</string>
+    <string name="home_use_installed_app">इंस्टॉल किए गए ऐप का उपयोग करें</string>
+    <string name="home_installed_app_picker_title">इंस्टॉल किया गया ऐप चुनें</string>
+    <string name="home_installed_app_picker_empty">कोई ऐप नहीं मिला</string>
+    <string name="home_installed_app_picker_filter_all">सभी ऐप</string>
+    <string name="home_installed_app_picker_filter_user">केवल उपयोगकर्ता ऐप</string>
+    <string name="home_installed_app_picker_filter_system">केवल सिस्टम ऐप</string>
     <string name="home_invalid_apk_unreadable">फ़ाइल पढ़ने में असमर्थ। जाँच करें कि \'External Storage\' बैटरी द्वारा प्रतिबंधित तो नहीं है</string>
     <string name="home_invalid_apk_not_an_apk">चयनित फ़ाइल एक वैध APK नहीं है</string>
     <string name="home_invalid_apk_io_error">फ़ाइल खोलने में विफल। कृपया फिर से प्रयास करें</string>
@@ -192,8 +198,6 @@
     <string name="patch_option_enter_value">मूल्य दर्ज करें</string>
     <string name="patch_option_enter_number">नंबर दर्ज करें</string>
     <string name="patch_option_enter_decimal">दशमलव दर्ज करें</string>
-    <string name="patch_option_pick_folder">फ़ोल्डर चुनें</string>
-    <string name="patch_option_pick_file">फ़ाइल चुनें</string>
     <string name="patch_option_list_duplicate">यह मान पहले से मौजूद है</string>
     <string name="patch_option_list_empty">मान खाली नहीं हो सकता</string>
     <string name="patch_option_list_empty_state">अभी तक कोई मान नहीं जोड़ा गया है</string>
@@ -272,6 +276,8 @@
     <string name="patcher_error_log">त्रुटि रिपोर्ट</string>
     <string name="patcher_error_technical">तकनीकी विवरण</string>
     <string name="patcher_error_dialog_app_info">ऐप जानकारी</string>
+    <string name="patcher_tab_logs">पैचर लॉग्स</string>
+    <string name="patcher_tab_game">खेल</string>
     <string name="patcher_long_step_warning">This step may take a while. Please wait…</string>
     <string name="patcher_installing_subtitle">Almost ready to rock! 🎸</string>
     <string name="patcher_success_title">All Done! 🎉</string>
@@ -367,6 +373,21 @@
     <string name="package_name">Package name</string>
     <string name="failed_to_mount">%s को माउंट करने में विफल</string>
     <string name="failed_to_unmount">%s को अनमाउंट करने में विफल।</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_score">अंक %d</string>
+    <string name="mini_game_best">सर्वश्रेष्ठ %d</string>
+    <string name="mini_game_new_record">नया रिकॉर्ड!</string>
+    <string name="mini_game_game_over">खेल खत्म</string>
+    <string name="mini_game_try_again">फिर से प्रयास करें</string>
+    <string name="mini_game_paused">विराम</string>
+    <string name="mini_game_resume">जारी रखें</string>
+    <string name="mini_game_2048_picker_subtitle">टाइल्स को मर्ज करने के लिए स्लाइड करें</string>
+    <string name="mini_game_flappy_picker_subtitle">पाइपों के बीच से उड़ने के लिए टैप करें</string>
+    <string name="mini_game_flappy_tap_to_start">उड़ने के लिए टैप करें</string>
+    <string name="mini_game_snake_picker_subtitle">भोजन खाएं, खुद को मत मारें</string>
+    <string name="mini_game_snake_swipe_to_start">शुरू करने के लिए स्वाइप करें</string>
+    <string name="mini_game_dino_picker_subtitle">कैक्टस के ऊपर कूदने के लिए टैप करें</string>
+    <string name="mini_game_dino_tap_to_start">दौड़ने के लिए टैप करें</string>
     <!-- Settings -->
     <string name="appearance">स्वरूप</string>
     <string name="advanced">उन्नत</string>
@@ -623,8 +644,8 @@ morphe_header_custom_dark.png
     <string name="settings_system_export_debug_logs_export_read_failed">लॉग पढ़ने में विफल रहा (अनुक्रमणिका %s)</string>
     <string name="settings_system_export_debug_logs_export_failed">लॉग्स एक्सपोर्ट करने में विफल</string>
     <string name="settings_system_export_debug_logs_export_success">लॉग्स एक्सपोर्ट किए गए</string>
-    <!-- Settings - System Tab - Storage Management Section -->
-    <string name="settings_system_storage_management">स्टोरेज प्रबंधन</string>
+    <!-- Settings - System Tab - Files & Storage Section -->
+    <string name="settings_system_files">फ़ाइलें और संग्रहण</string>
     <string name="settings_system_apks_size">कुल आकार: %s</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">पैच किए गए एपीके</string>
@@ -662,6 +683,21 @@ morphe_header_custom_dark.png
     <string name="settings_system_selected_patches_title">चयनित पट्टियाँ (%s)</string>
     <string name="settings_system_patch_options_title">पट्टी विकल्प (%s)</string>
     <string name="settings_system_no_patches_or_options">कोई पटच या विकल्प सहेजे गए नहीं</string>
+    <!-- Settings - System Tab - Custom file picker -->
+    <string name="settings_system_custom_file_picker">कस्टम फ़ाइल पिकर</string>
+    <string name="settings_system_custom_file_picker_description">सिस्टम डिफ़ॉल्ट के बजाय मोरफे के बिल्ट-इन फ़ाइल पिकर के साथ संग्रहण ब्राउज़ करें</string>
+    <!-- File Picker -->
+    <string name="file_picker_previous_directory">पिछली निर्देशिका</string>
+    <string name="file_picker_no_files">यहां कोई फ़ाइलें नहीं हैं</string>
+    <string name="file_picker_internal_storage">आंतरिक संग्रहण</string>
+    <string name="file_picker_sd_card">एसडी कार्ड</string>
+    <string name="file_picker_root">रूट (/)</string>
+    <string name="file_picker_sort_name_asc">नाम (अ–ज़)</string>
+    <string name="file_picker_sort_name_desc">नाम (ज़–अ)</string>
+    <string name="file_picker_sort_size_desc">आकार (सबसे बड़ा पहले)</string>
+    <string name="file_picker_sort_size_asc">आकार (सबसे छोटा पहले)</string>
+    <string name="file_picker_sort_date_desc">तिथि (नवीनतम पहले)</string>
+    <string name="file_picker_sort_date_asc">तिथि (सबसे पुरानी पहले)</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">मorphe के बारे में</string>
     <string name="settings_system_share_website">वेबसाइट शेयर करें</string>
@@ -672,6 +708,8 @@ morphe_header_custom_dark.png
     <string name="credits_prior_development">पिछला विकास</string>
     <string name="opensource_licenses">ओपन-सोर्स लाइसेंस</string>
     <!-- Shared strings -->
+    <string name="select_file">फ़ाइल चुनें</string>
+    <string name="select_folder">फ़ोल्डर चुनें</string>
     <string name="patches">पैच</string>
     <string name="home">घर</string>
     <string name="settings">सेटिंग्स</string>

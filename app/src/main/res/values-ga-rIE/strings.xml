@@ -130,7 +130,13 @@
     <string name="home_recommended_version">Leagan molta</string>
     <string name="home_selected_version">Leagan roghnaithe</string>
     <string name="home_select_apk_title">Roghnaigh APK</string>
-    <string name="home_select_any_apk_description">Beartaigh an cnaipe thíos chun comhad APK d\'aon aip a roghnú le haghaidh paisteála.</string>
+    <string name="home_select_any_apk_description">Roghnaigh comhad APK d\'aon aip, nó roghnaigh aip atá suiteáilte cheana féin ar an ngléas seo</string>
+    <string name="home_use_installed_app">Bain úsáid as aip suiteáilte</string>
+    <string name="home_installed_app_picker_title">Roghnaigh aip suiteáilte</string>
+    <string name="home_installed_app_picker_empty">Níor aimsíodh aon aipeanna</string>
+    <string name="home_installed_app_picker_filter_all">Gach aip</string>
+    <string name="home_installed_app_picker_filter_user">Aipeanna úsáideora amháin</string>
+    <string name="home_installed_app_picker_filter_system">Aipeanna córais amháin</string>
     <string name="home_invalid_apk_unreadable">Níorbh fhéidir an comhad a léamh. Seiceáil nach bhfuil srian ceallraí ar \'Stóráil Sheachtrach\'</string>
     <string name="home_invalid_apk_not_an_apk">Ní APK bailí an comhad roghnaithe</string>
     <string name="home_invalid_apk_io_error">Theip ar an gcomhad a oscailt. Déan iarracht arís.</string>
@@ -192,8 +198,6 @@ Chun na torthaí is fearr a fháil, molann an aip seo paiste a chur ar &lt;b&gt;
     <string name="patch_option_enter_value">Cuir isteach luach</string>
     <string name="patch_option_enter_number">Cuir isteach uimhir</string>
     <string name="patch_option_enter_decimal">Cuir isteach deachúil</string>
-    <string name="patch_option_pick_folder">Roghnaigh fillteán</string>
-    <string name="patch_option_pick_file">Roghnaigh comhad</string>
     <string name="patch_option_list_duplicate">Tá an luach seo ann cheana féin</string>
     <string name="patch_option_list_empty">Ní féidir luach a fhágáil folamh</string>
     <string name="patch_option_list_empty_state">Níl aon luachanna curtha leis fós</string>
@@ -272,6 +276,8 @@ Crios seachtrach (daite): féadfaidh masc an lainseálaí é a bhearradh - coinn
     <string name="patcher_error_log">Log earráide</string>
     <string name="patcher_error_technical">Sonraí teicniúla</string>
     <string name="patcher_error_dialog_app_info">Eolas faoin aip</string>
+    <string name="patcher_tab_logs">Logaí Paisteora</string>
+    <string name="patcher_tab_game">Cluichí</string>
     <string name="patcher_long_step_warning">D’fhéadfadh sé go dtógfadh an chéim seo tamall. Fan le do thoil…</string>
     <string name="patcher_installing_subtitle">Beagnach réidh le tosú! 🎸</string>
     <string name="patcher_success_title">Gach rud déanta! 🎉</string>
@@ -367,6 +373,21 @@ Scriosfaidh díshuiteáil gach sonraí aip go buan."</string>
     <string name="package_name">Ainm an phacáiste</string>
     <string name="failed_to_mount">Theip ar fheistiú: %s</string>
     <string name="failed_to_unmount">Theip ar dhíshuiteáil: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_score">Scór %d</string>
+    <string name="mini_game_best">Is fearr %d</string>
+    <string name="mini_game_new_record">Taifead nua!</string>
+    <string name="mini_game_game_over">Cluiche Thart</string>
+    <string name="mini_game_try_again">Bain Triail Arís</string>
+    <string name="mini_game_paused">Sosaithe</string>
+    <string name="mini_game_resume">Lean ar aghaidh</string>
+    <string name="mini_game_2048_picker_subtitle">Sleamhnaigh tíleanna le cumasc</string>
+    <string name="mini_game_flappy_picker_subtitle">Beartaigh chun eitilt trí phíopaí</string>
+    <string name="mini_game_flappy_tap_to_start">Beartaigh le heitilt</string>
+    <string name="mini_game_snake_picker_subtitle">Ith bia, ná buail tú féin</string>
+    <string name="mini_game_snake_swipe_to_start">Svaidhpeáil le tosú</string>
+    <string name="mini_game_dino_picker_subtitle">Tapáil chun léim thar cacti</string>
+    <string name="mini_game_dino_tap_to_start">Tapáil le rith</string>
     <!-- Settings -->
     <string name="appearance">Dealramh</string>
     <string name="advanced">Ardleibhéil</string>
@@ -621,8 +642,8 @@ Ní mór toisí na híomhá a bheith mar seo a leanas:
     <string name="settings_system_export_debug_logs_export_read_failed">Theip ar na logaí a léamh (cód scoir %s)</string>
     <string name="settings_system_export_debug_logs_export_failed">Theip ar logaí a onnmhairiú</string>
     <string name="settings_system_export_debug_logs_export_success">Logaí onnmhairithe</string>
-    <!-- Settings - System Tab - Storage Management Section -->
-    <string name="settings_system_storage_management">Bainistíocht stórála</string>
+    <!-- Settings - System Tab - Files & Storage Section -->
+    <string name="settings_system_files">Comhaid &amp; stóras</string>
     <string name="settings_system_apks_size">Méid iomlán: %s</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">APKanna paisteáilte</string>
@@ -660,6 +681,21 @@ Ní mór toisí na híomhá a bheith mar seo a leanas:
     <string name="settings_system_selected_patches_title">Paistí roghnaithe (%s)</string>
     <string name="settings_system_patch_options_title">Roghanna paiste (%s)</string>
     <string name="settings_system_no_patches_or_options">Gan aon phaistí ná roghanna sábháilte</string>
+    <!-- Settings - System Tab - Custom file picker -->
+    <string name="settings_system_custom_file_picker">Roghnóir comhad saincheaptha</string>
+    <string name="settings_system_custom_file_picker_description">Brabhsáil stóras le roghnóir comhad ionsuite Morphe in ionad an roghnóra réamhshocraithe córais</string>
+    <!-- File Picker -->
+    <string name="file_picker_previous_directory">Eolaire roimhe seo</string>
+    <string name="file_picker_no_files">Níl aon chomhaid anseo</string>
+    <string name="file_picker_internal_storage">Stóráil inmheánach</string>
+    <string name="file_picker_sd_card">Cárta SD</string>
+    <string name="file_picker_root">Fréamh (/)</string>
+    <string name="file_picker_sort_name_asc">Ainm (A–Z)</string>
+    <string name="file_picker_sort_name_desc">Ainm (Z–A)</string>
+    <string name="file_picker_sort_size_desc">Méid (an ceann is mó ar dtús)</string>
+    <string name="file_picker_sort_size_asc">Méid (an ceann is lú ar dtús)</string>
+    <string name="file_picker_sort_date_desc">Dáta (an ceann is nuaí ar dtús)</string>
+    <string name="file_picker_sort_date_asc">Dáta (an ceann is sine ar dtús)</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">Maidir</string>
     <string name="settings_system_share_website">Comhroinn suíomh Gréasáin</string>
@@ -670,6 +706,8 @@ Ní mór toisí na híomhá a bheith mar seo a leanas:
     <string name="credits_prior_development">Forbairt roimhe seo</string>
     <string name="opensource_licenses">Ceadúnais foinse oscailte</string>
     <!-- Shared strings -->
+    <string name="select_file">Roghnaigh comhad</string>
+    <string name="select_folder">Roghnaigh fillteán</string>
     <string name="patches">Paistí</string>
     <string name="home">Baile</string>
     <string name="settings">Socruithe</string>

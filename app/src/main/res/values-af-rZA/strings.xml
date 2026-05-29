@@ -130,7 +130,13 @@
     <string name="home_recommended_version">Aanbevole weergawe</string>
     <string name="home_selected_version">Geen opdatering beskikbaar</string>
     <string name="home_select_apk_title">Kies APK</string>
-    <string name="home_select_any_apk_description">Tik op die knoppie hieronder om \'n APK lêer van enige app vir patching te kies</string>
+    <string name="home_select_any_apk_description">Kies \'n APK-lêer van enige toepassing, of kies \'n toepassing wat reeds op hierdie toestel geïnstalleer is</string>
+    <string name="home_use_installed_app">Gebruik geïnstalleerde toepassing</string>
+    <string name="home_installed_app_picker_title">Kies geïnstalleerde toepassing</string>
+    <string name="home_installed_app_picker_empty">Geen toepings gevind</string>
+    <string name="home_installed_app_picker_filter_all">Alle toepings</string>
+    <string name="home_installed_app_picker_filter_user">Slegs gebruikerstoepings</string>
+    <string name="home_installed_app_picker_filter_system">Slegs stelseltoepings</string>
     <string name="home_invalid_apk_unreadable">Kon nie die lêer lees nie. Gaan na of \'Eksterne stoorplek\' nie beperk is vir die battery nie</string>
     <string name="home_invalid_apk_not_an_apk">Die gekose lêer is nie \'n geldige APK nie</string>
     <string name="home_invalid_apk_io_error">Kon die lêer nie oopmaak nie. Probeer weer</string>
@@ -192,8 +198,6 @@ Vir die beste resultate beveel hierdie app aan om 'n &lt;b&gt;volle APK&lt;/b&gt
     <string name="patch_option_enter_value">Gee waarde in</string>
     <string name="patch_option_enter_number">Gee getal in</string>
     <string name="patch_option_enter_decimal">Gee desimaal in</string>
-    <string name="patch_option_pick_folder">Kies vouer</string>
-    <string name="patch_option_pick_file">Kies lêer</string>
     <string name="patch_option_list_duplicate">Hierdie waarde bestaan ​​reeds</string>
     <string name="patch_option_list_empty">Waarde kan nie leeg wees nie</string>
     <string name="patch_option_list_empty_state">Geen waardes bygevoeg nie</string>
@@ -272,6 +276,8 @@ Outerlike sone (gestippel): kan deur die lanseerder masker afgesny word - hou be
     <string name="patcher_error_log">Foutlog</string>
     <string name="patcher_error_technical">Tegniese besonderhede</string>
     <string name="patcher_error_dialog_app_info">App-inligting</string>
+    <string name="patcher_tab_logs">Patcher Logs</string>
+    <string name="patcher_tab_game">Speletjies</string>
     <string name="patcher_long_step_warning">Hierdie stap kan \'n rukkie neem. Wag asseblief…</string>
     <string name="patcher_installing_subtitle">Byna gereed om te rock! 🎸</string>
     <string name="patcher_success_title">Klaar! 🎉</string>
@@ -367,6 +373,21 @@ Deïnstallering sal alle toepassingsdata permanent uitwis."</string>
     <string name="package_name">Pakketnaam</string>
     <string name="failed_to_mount">Kon nie monteer nie: %s</string>
     <string name="failed_to_unmount">Kon nie dedemonteer nie: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_score">Punt %d</string>
+    <string name="mini_game_best">Beste %d</string>
+    <string name="mini_game_new_record">Nuwe rekord!</string>
+    <string name="mini_game_game_over">Speletjie Einde</string>
+    <string name="mini_game_try_again">Probeer weer</string>
+    <string name="mini_game_paused">Pauze</string>
+    <string name="mini_game_resume">Gaan voort</string>
+    <string name="mini_game_2048_picker_subtitle">Skuif teëls om te saamsmelt</string>
+    <string name="mini_game_flappy_picker_subtitle">Tik om deur die pype te vlieg</string>
+    <string name="mini_game_flappy_tap_to_start">Tik om te vlieg</string>
+    <string name="mini_game_snake_picker_subtitle">Eet kos, moenie jouself tref nie</string>
+    <string name="mini_game_snake_swipe_to_start">Swipe om te begin</string>
+    <string name="mini_game_dino_picker_subtitle">Tik om oor kaktusse te spring</string>
+    <string name="mini_game_dino_tap_to_start">Tik om te hardloop</string>
     <!-- Settings -->
     <string name="appearance">Voorkoms</string>
     <string name="advanced">Gevorderd</string>
@@ -623,8 +644,8 @@ Die beeld afmetings moet soos volg wees:
     <string name="settings_system_export_debug_logs_export_read_failed">Kon nie logboeke lees nie (afsluit kode %s)</string>
     <string name="settings_system_export_debug_logs_export_failed">Kon nie logboeke uitvoer nie</string>
     <string name="settings_system_export_debug_logs_export_success">Logboeke uitgevoer</string>
-    <!-- Settings - System Tab - Storage Management Section -->
-    <string name="settings_system_storage_management">Berging bestuur</string>
+    <!-- Settings - System Tab - Files & Storage Section -->
+    <string name="settings_system_files">Lêers &amp; berging</string>
     <string name="settings_system_apks_size">Totale grootte: %s</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Gepatched APK\'s</string>
@@ -662,6 +683,21 @@ Die beeld afmetings moet soos volg wees:
     <string name="settings_system_selected_patches_title">Gekose patches (%s)</string>
     <string name="settings_system_patch_options_title">Patch opsies (%s)</string>
     <string name="settings_system_no_patches_or_options">Geen patches of opsies gered nie</string>
+    <!-- Settings - System Tab - Custom file picker -->
+    <string name="settings_system_custom_file_picker">Pasgemaakte lêerkeurder</string>
+    <string name="settings_system_custom_file_picker_description">Gebruik Morphe se ingeboude lêerkeurder in plaas van die stelsel se verstek</string>
+    <!-- File Picker -->
+    <string name="file_picker_previous_directory">Vorige gids</string>
+    <string name="file_picker_no_files">Geen lêers hier</string>
+    <string name="file_picker_internal_storage">Interne stoorplek</string>
+    <string name="file_picker_sd_card">SD-kaart</string>
+    <string name="file_picker_root">Root (/)</string>
+    <string name="file_picker_sort_name_asc">Naam (A–Z)</string>
+    <string name="file_picker_sort_name_desc">Naam (Z–A)</string>
+    <string name="file_picker_sort_size_desc">Grootte (grootste eerst)</string>
+    <string name="file_picker_sort_size_asc">Grootte (kleinste eerst)</string>
+    <string name="file_picker_sort_date_desc">Datum (nuutste eerst)</string>
+    <string name="file_picker_sort_date_asc">Datum (oudste eerst)</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">Oor</string>
     <string name="settings_system_share_website">Deel webtuiste</string>
@@ -672,6 +708,8 @@ Die beeld afmetings moet soos volg wees:
     <string name="credits_prior_development">Vorige ontwikkeling</string>
     <string name="opensource_licenses">Open-source lisensies</string>
     <!-- Shared strings -->
+    <string name="select_file">Kies lêer</string>
+    <string name="select_folder">Kies vouer</string>
     <string name="patches">Veranderinge</string>
     <string name="home">Tuis</string>
     <string name="settings">Instellings</string>

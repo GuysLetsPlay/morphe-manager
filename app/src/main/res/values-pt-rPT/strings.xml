@@ -130,7 +130,13 @@
     <string name="home_recommended_version">Versão recomendada</string>
     <string name="home_selected_version">Versão selecionada</string>
     <string name="home_select_apk_title">Selecionar APK</string>
-    <string name="home_select_any_apk_description">Toca no botão abaixo para selecionar um ficheiro APK de qualquer aplicação para modificar</string>
+    <string name="home_select_any_apk_description">Selecione um arquivo APK de qualquer aplicativo, ou escolha um aplicativo já instalado neste dispositivo</string>
+    <string name="home_use_installed_app">Usar aplicativo instalado</string>
+    <string name="home_installed_app_picker_title">Selecionar aplicativo instalado</string>
+    <string name="home_installed_app_picker_empty">Nenhum aplicativo encontrado</string>
+    <string name="home_installed_app_picker_filter_all">Todos os aplicativos</string>
+    <string name="home_installed_app_picker_filter_user">Apenas aplicativos do usuário</string>
+    <string name="home_installed_app_picker_filter_system">Apenas aplicativos do sistema</string>
     <string name="home_invalid_apk_unreadable">Não foi possível aceder ao ficheiro. Verifica se o \'Armazenamento Externo\' não está restrito pela bateria</string>
     <string name="home_invalid_apk_not_an_apk">O ficheiro selecionado não é um APK válido</string>
     <string name="home_invalid_apk_io_error">Erro ao abrir o ficheiro. Por favor, tenta de novo</string>
@@ -192,8 +198,6 @@ Para obteres os melhores resultados, este ficheiro recomenda a modificação de 
     <string name="patch_option_enter_value">Inserir valor</string>
     <string name="patch_option_enter_number">Inserir número</string>
     <string name="patch_option_enter_decimal">Inserir decimal</string>
-    <string name="patch_option_pick_folder">Selecionar pasta</string>
-    <string name="patch_option_pick_file">Escolher ficheiro</string>
     <string name="patch_option_list_duplicate">Este valor já existe</string>
     <string name="patch_option_list_empty">Valor não pode estar vazio</string>
     <string name="patch_option_list_empty_state">Ainda não foi adicionado nenhum valor</string>
@@ -272,6 +276,8 @@ Zona externa (tracejada): pode ser cortada pela máscara do iniciador - mantenha
     <string name="patcher_error_log">Log de erros</string>
     <string name="patcher_error_technical">Detalhes técnicos</string>
     <string name="patcher_error_dialog_app_info">Informações da aplicação</string>
+    <string name="patcher_tab_logs">Logs do Patcher</string>
+    <string name="patcher_tab_game">Jogos</string>
     <string name="patcher_long_step_warning">Esta etapa pode levar algum tempo. Por favor, aguarda…</string>
     <string name="patcher_installing_subtitle">Quase pronto para arrasar! 🎸</string>
     <string name="patcher_success_title">Tudo pronto! 🎉</string>
@@ -367,6 +373,21 @@ Desinstalar apagará permanentemente todos os dados do aplicativo."</string>
     <string name="package_name">Nome do pacote</string>
     <string name="failed_to_mount">Erro ao montar: %s</string>
     <string name="failed_to_unmount">Erro ao desmontar: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_score">Pontuação: %d</string>
+    <string name="mini_game_best">Melhor %d</string>
+    <string name="mini_game_new_record">Novo recorde!</string>
+    <string name="mini_game_game_over">Fim de Jogo</string>
+    <string name="mini_game_try_again">Tentar novamente</string>
+    <string name="mini_game_paused">Pausado</string>
+    <string name="mini_game_resume">Continuar</string>
+    <string name="mini_game_2048_picker_subtitle">Deslize os blocos para mesclar</string>
+    <string name="mini_game_flappy_picker_subtitle">Toque para voar entre os canos</string>
+    <string name="mini_game_flappy_tap_to_start">Toque para voar</string>
+    <string name="mini_game_snake_picker_subtitle">Coma a comida, não se bata</string>
+    <string name="mini_game_snake_swipe_to_start">Deslize para começar</string>
+    <string name="mini_game_dino_picker_subtitle">Toque para pular sobre os cactos</string>
+    <string name="mini_game_dino_tap_to_start">Toque para correr</string>
     <!-- Settings -->
     <string name="appearance">Aparência</string>
     <string name="advanced">Avançado</string>
@@ -623,8 +644,8 @@ As dimensões das imagens devem ser as seguintes:
     <string name="settings_system_export_debug_logs_export_read_failed">Erro ao ler logs (código de saída %s)</string>
     <string name="settings_system_export_debug_logs_export_failed">Erro ao exportar registos</string>
     <string name="settings_system_export_debug_logs_export_success">Registos exportados</string>
-    <!-- Settings - System Tab - Storage Management Section -->
-    <string name="settings_system_storage_management">Gestão de armazenamento</string>
+    <!-- Settings - System Tab - Files & Storage Section -->
+    <string name="settings_system_files">Arquivos e armazenamento</string>
     <string name="settings_system_apks_size">Tamanho total: %s</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">APKs modificados</string>
@@ -662,6 +683,21 @@ As dimensões das imagens devem ser as seguintes:
     <string name="settings_system_selected_patches_title">Modificações selecionadas (%s)</string>
     <string name="settings_system_patch_options_title">Opções da modificação (%s)</string>
     <string name="settings_system_no_patches_or_options"> Nenhuma modificação ou opção guardada</string>
+    <!-- Settings - System Tab - Custom file picker -->
+    <string name="settings_system_custom_file_picker">Seletor de arquivos personalizado</string>
+    <string name="settings_system_custom_file_picker_description">Navegue pelo armazenamento com o seletor de arquivos integrado do Morphe, em vez do padrão do sistema</string>
+    <!-- File Picker -->
+    <string name="file_picker_previous_directory">Diretório anterior</string>
+    <string name="file_picker_no_files">Nenhum arquivo aqui</string>
+    <string name="file_picker_internal_storage">Armazenamento interno</string>
+    <string name="file_picker_sd_card">Cartão SD</string>
+    <string name="file_picker_root">Raiz (/)</string>
+    <string name="file_picker_sort_name_asc">Nome (A–Z)</string>
+    <string name="file_picker_sort_name_desc">Nome (Z–A)</string>
+    <string name="file_picker_sort_size_desc">Tamanho (maior primeiro)</string>
+    <string name="file_picker_sort_size_asc">Tamanho (menor primeiro)</string>
+    <string name="file_picker_sort_date_desc">Data (mais recente primeiro)</string>
+    <string name="file_picker_sort_date_asc">Data (mais antiga primeiro)</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">Acerca de</string>
     <string name="settings_system_share_website">Partilhar site</string>
@@ -672,6 +708,8 @@ As dimensões das imagens devem ser as seguintes:
     <string name="credits_prior_development">Desenvolvimento anterior</string>
     <string name="opensource_licenses">Licenças de código aberto</string>
     <!-- Shared strings -->
+    <string name="select_file">Selecionar arquivo</string>
+    <string name="select_folder">Selecionar pasta</string>
     <string name="patches">Modificações</string>
     <string name="home">Ecrã Principal</string>
     <string name="settings">D​efinições</string>

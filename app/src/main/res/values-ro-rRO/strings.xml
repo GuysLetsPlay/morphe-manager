@@ -130,7 +130,13 @@
     <string name="home_recommended_version">Versiune recomandată</string>
     <string name="home_selected_version">Versiune selectată</string>
     <string name="home_select_apk_title">Selectează APK</string>
-    <string name="home_select_any_apk_description">Apasă butonul de mai jos pentru a selecta un fișier APK al oricărei aplicații pentru patch-uire</string>
+    <string name="home_select_any_apk_description">Selectați un fișier APK al oricărei aplicații sau alege o aplicație deja instalată pe acest dispozitiv</string>
+    <string name="home_use_installed_app">Utilizează aplicația instalată</string>
+    <string name="home_installed_app_picker_title">Selectează aplicația instalată</string>
+    <string name="home_installed_app_picker_empty">Nu au fost găsite aplicații</string>
+    <string name="home_installed_app_picker_filter_all">Toate aplicațiile</string>
+    <string name="home_installed_app_picker_filter_user">Doar aplicații de utilizator</string>
+    <string name="home_installed_app_picker_filter_system">Doar aplicații de sistem</string>
     <string name="home_invalid_apk_unreadable">Nu s-a putut citi fișierul. Verificați dacă \'Stocare Externă\' nu este restricționată de baterie</string>
     <string name="home_invalid_apk_not_an_apk">Fișierul selectat nu este un APK valid</string>
     <string name="home_invalid_apk_io_error">Nu s-a putut deschide fișierul. Vă rugăm încercați din nou</string>
@@ -192,8 +198,6 @@ Pentru cele mai bune rezultate, această aplicație recomandă patch-uirea unui 
     <string name="patch_option_enter_value">Introduceți valoarea</string>
     <string name="patch_option_enter_number">Introduceți numărul</string>
     <string name="patch_option_enter_decimal">Introduceți decimal</string>
-    <string name="patch_option_pick_folder">Alege folder</string>
-    <string name="patch_option_pick_file">Alege fișier</string>
     <string name="patch_option_list_duplicate">Această valoare există deja</string>
     <string name="patch_option_list_empty">Valoarea nu poate fi goală</string>
     <string name="patch_option_list_empty_state">Nu au fost adăugate valori încă</string>
@@ -272,6 +276,8 @@ Zona exterioară (întreruptă): poate fi decupată de masca lansatorului - păs
     <string name="patcher_error_log">Jurnal erori</string>
     <string name="patcher_error_technical">Detalii tehnice</string>
     <string name="patcher_error_dialog_app_info">Informații aplicație</string>
+    <string name="patcher_tab_logs">Jurnale patcher</string>
+    <string name="patcher_tab_game">Jocuri</string>
     <string name="patcher_long_step_warning">Acest pas poate dura ceva timp. Vă rugăm să așteptați…</string>
     <string name="patcher_installing_subtitle">Aproape gata de distracție! 🎸</string>
     <string name="patcher_success_title">Totul gata! 🎉</string>
@@ -367,6 +373,21 @@ Dezinstalarea va șterge definitiv toate datele aplicației."</string>
     <string name="package_name">Nume pachet</string>
     <string name="failed_to_mount">Montare eșuată: %s</string>
     <string name="failed_to_unmount">Demontare eșuată: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_score">Punctaj %d</string>
+    <string name="mini_game_best">Cel mai bun %d</string>
+    <string name="mini_game_new_record">Record nou!</string>
+    <string name="mini_game_game_over">Game Over</string>
+    <string name="mini_game_try_again">Încearcă din nou</string>
+    <string name="mini_game_paused">Pauză</string>
+    <string name="mini_game_resume">Continuă</string>
+    <string name="mini_game_2048_picker_subtitle">Glisează plăcile pentru a le îmbina</string>
+    <string name="mini_game_flappy_picker_subtitle">Atinge pentru a zbura printre țevi</string>
+    <string name="mini_game_flappy_tap_to_start">Atinge pentru a zbura</string>
+    <string name="mini_game_snake_picker_subtitle">Mănâncă mâncare, nu te lovi de tine</string>
+    <string name="mini_game_snake_swipe_to_start">Glisează pentru a începe</string>
+    <string name="mini_game_dino_picker_subtitle">Atinge pentru a sări peste cactuși</string>
+    <string name="mini_game_dino_tap_to_start">Atinge pentru a alerga</string>
     <!-- Settings -->
     <string name="appearance">Aspect</string>
     <string name="advanced">Avansat</string>
@@ -623,8 +644,8 @@ Dimensiunile imaginilor trebuie să fie următoarele:
     <string name="settings_system_export_debug_logs_export_read_failed">A eșuat citirea jurnalelor (cod de retur %s)</string>
     <string name="settings_system_export_debug_logs_export_failed">Eșec la exportarea jurnalelor</string>
     <string name="settings_system_export_debug_logs_export_success">Jurnale exportate</string>
-    <!-- Settings - System Tab - Storage Management Section -->
-    <string name="settings_system_storage_management">Gestionarea stocării</string>
+    <!-- Settings - System Tab - Files & Storage Section -->
+    <string name="settings_system_files">Fișiere și stocare</string>
     <string name="settings_system_apks_size">Dimensiune totală: %s</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">APK-uri patch-uite</string>
@@ -662,6 +683,21 @@ Dimensiunile imaginilor trebuie să fie următoarele:
     <string name="settings_system_selected_patches_title">Patch-uri selectate (%s)</string>
     <string name="settings_system_patch_options_title">Opțiuni patch-uri (%s)</string>
     <string name="settings_system_no_patches_or_options">Nicio pachet sau opțiune salvată</string>
+    <!-- Settings - System Tab - Custom file picker -->
+    <string name="settings_system_custom_file_picker">Selector de fișiere personalizat</string>
+    <string name="settings_system_custom_file_picker_description">Răsfoiește stocarea cu selectorul de fișiere integrat Morphe în loc de cel implicit al sistemului</string>
+    <!-- File Picker -->
+    <string name="file_picker_previous_directory">Director anterior</string>
+    <string name="file_picker_no_files">Nu există fișiere aici</string>
+    <string name="file_picker_internal_storage">Stocare internă</string>
+    <string name="file_picker_sd_card">Card SD</string>
+    <string name="file_picker_root">Rădăcină (/)</string>
+    <string name="file_picker_sort_name_asc">Nume (A–Z)</string>
+    <string name="file_picker_sort_name_desc">Nume (Z–A)</string>
+    <string name="file_picker_sort_size_desc">Dimensiune (cea mai mare prima)</string>
+    <string name="file_picker_sort_size_asc">Dimensiune (cea mai mică prima)</string>
+    <string name="file_picker_sort_date_desc">Dată (cea mai recentă prima)</string>
+    <string name="file_picker_sort_date_asc">Dată (cea mai veche prima)</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">Despre</string>
     <string name="settings_system_share_website">Partajează website</string>
@@ -672,6 +708,8 @@ Dimensiunile imaginilor trebuie să fie următoarele:
     <string name="credits_prior_development">Dezvoltare anterioară</string>
     <string name="opensource_licenses">Licențe open-source</string>
     <!-- Shared strings -->
+    <string name="select_file">Selectează fișierul</string>
+    <string name="select_folder">Selecteazã folderul</string>
     <string name="patches">Patch-uri</string>
     <string name="home">Acasă</string>
     <string name="settings">Setări</string>

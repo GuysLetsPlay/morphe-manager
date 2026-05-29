@@ -59,7 +59,7 @@
     <string name="sources_management_failed_to_open_url">Không thể mở URL</string>
     <string name="sources_management_prerelease_toggle">Bản vá phát hành trước</string>
     <string name="sources_management_prerelease_toggle_description">Trải nghiệm sớm các bản vá thử nghiệm mới</string>
-    <string name="sources_management_experimental_versions_toggle">Các phiên bản ứng dụng thử nghiệm</string>
+    <string name="sources_management_experimental_versions_toggle">Phiên bản ứng dụng thử nghiệm</string>
     <string name="sources_management_experimental_versions_toggle_description">Vá phiên bản thử nghiệm (nếu có)</string>
     <string name="sources_management_already_exists">Nguồn này đã được thêm vào rồi</string>
     <string name="sources_management_invalid_url">URL nguồn không hợp lệ. Vui lòng kiểm tra địa chỉ và thử lại</string>
@@ -130,7 +130,13 @@
     <string name="home_recommended_version">Phiên bản đề xuất</string>
     <string name="home_selected_version">Phiên bản đã chọn</string>
     <string name="home_select_apk_title">Chọn APK</string>
-    <string name="home_select_any_apk_description">Bấm nút bên dưới để chọn tệp APK của bất kỳ ứng dụng nào để vá</string>
+    <string name="home_select_any_apk_description">Chọn một tệp APK của bất kỳ ứng dụng nào, hoặc chọn một ứng dụng đã được cài đặt trên máy bạn</string>
+    <string name="home_use_installed_app">Dùng ứng dụng đã cài</string>
+    <string name="home_installed_app_picker_title">Chọn ứng dụng đã cài</string>
+    <string name="home_installed_app_picker_empty">Không tìm thấy ứng dụng nào</string>
+    <string name="home_installed_app_picker_filter_all">Tất cả ứng dụng</string>
+    <string name="home_installed_app_picker_filter_user">Chỉ ứng dụng đã cài</string>
+    <string name="home_installed_app_picker_filter_system">Chỉ ứng dụng hệ thống</string>
     <string name="home_invalid_apk_unreadable">Không thể đọc tệp. Hãy kiểm tra xem \"Bộ nhớ ngoài\" có bị hạn chế pin hay không</string>
     <string name="home_invalid_apk_not_an_apk">Tệp đã chọn không phải là tệp APK hợp lệ</string>
     <string name="home_invalid_apk_io_error">Không thể mở tệp. Vui lòng thử lại</string>
@@ -192,8 +198,6 @@ Tốt nhất bạn nên chuyển sang &lt;b&gt;APK đầy đủ&lt;/b&gt; để 
     <string name="patch_option_enter_value">Nhập giá trị</string>
     <string name="patch_option_enter_number">Nhập số</string>
     <string name="patch_option_enter_decimal">Nhập số thập phân</string>
-    <string name="patch_option_pick_folder">Chọn thư mục</string>
-    <string name="patch_option_pick_file">Chọn tệp</string>
     <string name="patch_option_list_duplicate">Giá trị này đã tồn tại rồi</string>
     <string name="patch_option_list_empty">Không được để trống</string>
     <string name="patch_option_list_empty_state">Chưa thêm giá trị nào</string>
@@ -272,6 +276,8 @@ Vùng ngoài (nét đứt): có thể bị cắt theo hình dạng biểu tượ
     <string name="patcher_error_log">Nhật ký lỗi</string>
     <string name="patcher_error_technical">Chi tiết kỹ thuật</string>
     <string name="patcher_error_dialog_app_info">Thông tin ứng dụng</string>
+    <string name="patcher_tab_logs">Nhật ký trình vá</string>
+    <string name="patcher_tab_game">Trò chơi</string>
     <string name="patcher_long_step_warning">Bước này có thể hơi lâu một chút. Vui lòng chờ…</string>
     <string name="patcher_installing_subtitle">Gần xong rồi, chuẩn bị quẩy thôi! 🎸</string>
     <string name="patcher_success_title">Hoàn tất! 🎉</string>
@@ -367,6 +373,21 @@ Gỡ cài đặt sẽ xóa vĩnh viễn toàn bộ dữ liệu ứng dụng"</st
     <string name="package_name">Tên gói</string>
     <string name="failed_to_mount">Không thể gắn: %s</string>
     <string name="failed_to_unmount">Không thể gỡ gắn: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_score">Điểm: %d</string>
+    <string name="mini_game_best">Cao nhất %d</string>
+    <string name="mini_game_new_record">Kỷ lục mới!</string>
+    <string name="mini_game_game_over">Bạn đã thua</string>
+    <string name="mini_game_try_again">Thử lại</string>
+    <string name="mini_game_paused">Tạm dừng</string>
+    <string name="mini_game_resume">Tiếp tục</string>
+    <string name="mini_game_2048_picker_subtitle">Vuốt các ô để ghép chúng lại</string>
+    <string name="mini_game_flappy_picker_subtitle">Chạm để bay lách qua các ống</string>
+    <string name="mini_game_flappy_tap_to_start">Chạm để bay</string>
+    <string name="mini_game_snake_picker_subtitle">Ăn thức ăn, đừng tự đâm vào mình</string>
+    <string name="mini_game_snake_swipe_to_start">Vuốt để bắt đầu</string>
+    <string name="mini_game_dino_picker_subtitle">Chạm để nhảy qua xương rồng</string>
+    <string name="mini_game_dino_tap_to_start">Chạm để chạy</string>
     <!-- Settings -->
     <string name="appearance">Giao diện</string>
     <string name="advanced">Nâng cao</string>
@@ -624,8 +645,8 @@ Kích thước hình ảnh yêu cầu:
     <string name="settings_system_export_debug_logs_export_read_failed">Không thể đọc nhật ký (mã thoát %s)</string>
     <string name="settings_system_export_debug_logs_export_failed">Không thể xuất nhật ký</string>
     <string name="settings_system_export_debug_logs_export_success">Đã xuất nhật ký</string>
-    <!-- Settings - System Tab - Storage Management Section -->
-    <string name="settings_system_storage_management">Quản lý bộ nhớ</string>
+    <!-- Settings - System Tab - Files & Storage Section -->
+    <string name="settings_system_files">Tệp &amp; bộ nhớ</string>
     <string name="settings_system_apks_size">Tổng kích thước: %s</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">APK đã vá</string>
@@ -663,6 +684,21 @@ Kích thước hình ảnh yêu cầu:
     <string name="settings_system_selected_patches_title">Số bản vá đã chọn (%s)</string>
     <string name="settings_system_patch_options_title">Số bản vá đã chỉnh (%s)</string>
     <string name="settings_system_no_patches_or_options">Không có bản vá hoặc tùy chỉnh được lưu</string>
+    <!-- Settings - System Tab - Custom file picker -->
+    <string name="settings_system_custom_file_picker">Bộ chọn tệp tùy chỉnh</string>
+    <string name="settings_system_custom_file_picker_description">Duyệt bộ nhớ bằng trình chọn tệp tích hợp của Morphe thay vì trình chọn mặc định của hệ thống</string>
+    <!-- File Picker -->
+    <string name="file_picker_previous_directory">Thư mục trước đó</string>
+    <string name="file_picker_no_files">Không có tệp nào ở đây</string>
+    <string name="file_picker_internal_storage">Bộ nhớ trong</string>
+    <string name="file_picker_sd_card">Thẻ SD</string>
+    <string name="file_picker_root">Root (/)</string>
+    <string name="file_picker_sort_name_asc">Tên (A–Z)</string>
+    <string name="file_picker_sort_name_desc">Tên (Z–A)</string>
+    <string name="file_picker_sort_size_desc">Kích thước (lớn nhất trước)</string>
+    <string name="file_picker_sort_size_asc">Kích thước (nhỏ nhất trước)</string>
+    <string name="file_picker_sort_date_desc">Ngày (mới nhất trước)</string>
+    <string name="file_picker_sort_date_asc">Ngày (cũ nhất trước)</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">Giới thiệu</string>
     <string name="settings_system_share_website">Chia sẻ</string>
@@ -673,6 +709,8 @@ Kích thước hình ảnh yêu cầu:
     <string name="credits_prior_development">Trước đây</string>
     <string name="opensource_licenses">Giấy phép mã nguồn mở</string>
     <!-- Shared strings -->
+    <string name="select_file">Chọn tệp</string>
+    <string name="select_folder">Chọn thư mục</string>
     <string name="patches">Số bản vá</string>
     <string name="home">Trang chủ</string>
     <string name="settings">Cài đặt</string>

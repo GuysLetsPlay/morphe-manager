@@ -1,3 +1,152 @@
+# [1.19.0-dev.14](https://github.com/MorpheApp/morphe-manager/compare/v1.19.0-dev.13...v1.19.0-dev.14) (2026-05-27)
+
+
+### Bug Fixes
+
+* Keystore compatibility with CLI ([f8cde49](https://github.com/MorpheApp/morphe-manager/commit/f8cde49a1545a50ee888782d5876f3dfb387ca52))
+* Use SD card and developer mode icons in file picker ([2fb9079](https://github.com/MorpheApp/morphe-manager/commit/2fb9079c33d2d5c122e5cd8f607c5bee557bad88))
+
+# [1.19.0-dev.13](https://github.com/MorpheApp/morphe-manager/compare/v1.19.0-dev.12...v1.19.0-dev.13) (2026-05-27)
+
+
+### Bug Fixes
+
+* Show SD card in file picker and debug logs ([7424cd0](https://github.com/MorpheApp/morphe-manager/commit/7424cd00bc0506c244f385005e85e0fe045d74fe))
+
+# [1.19.0-dev.12](https://github.com/MorpheApp/morphe-manager/compare/v1.19.0-dev.11...v1.19.0-dev.12) (2026-05-27)
+
+
+### Bug Fixes
+
+* Always show saved APK option when versions match installed ([293d2db](https://github.com/MorpheApp/morphe-manager/commit/293d2db7799ebe8ff64b7cd383723333bbdbe235))
+
+
+### Features
+
+* Add installed app picker for universal patch flow ([afdb28d](https://github.com/MorpheApp/morphe-manager/commit/afdb28d438b383f005d4f46f0bbb95eec492233e))
+
+# [1.19.0-dev.11](https://github.com/MorpheApp/morphe-manager/compare/v1.19.0-dev.10...v1.19.0-dev.11) (2026-05-25)
+
+
+### Features
+
+* Persist mini-game high scores across sessions ([510b526](https://github.com/MorpheApp/morphe-manager/commit/510b526560a857311f3cc61bb0da7e2c6ab05d40))
+
+# [1.19.0-dev.10](https://github.com/MorpheApp/morphe-manager/compare/v1.19.0-dev.9...v1.19.0-dev.10) (2026-05-25)
+
+
+### Features
+
+* Add bird rotation, fix accidental restart on game-over tap in Flappy and Dino ([1d3b1ff](https://github.com/MorpheApp/morphe-manager/commit/1d3b1ff1030a29756837385a58b66f0879cea1d7))
+* Add per-session high score to all mini-games; reduce Flappy Bird tap impulse ([d8f2d79](https://github.com/MorpheApp/morphe-manager/commit/d8f2d79f697bc65107d03c1b1a5d0d950b06bcda))
+
+# [1.19.0-dev.9](https://github.com/MorpheApp/morphe-manager/compare/v1.19.0-dev.8...v1.19.0-dev.9) (2026-05-24)
+
+
+### Bug Fixes
+
+* Redraw dino character as Chrome T-Rex pixel art ([e8b2851](https://github.com/MorpheApp/morphe-manager/commit/e8b285172242a7f430543242111fd30f9dddba12))
+* Remove mini-games and logs button from simple mode ([4117875](https://github.com/MorpheApp/morphe-manager/commit/4117875d45cda60412b14acd96e4326eccd944ec))
+
+
+### Features
+
+* Add animated clouds and seagulls to Dino game ([b6da268](https://github.com/MorpheApp/morphe-manager/commit/b6da268fc659b7781c7bd17d3cc5940e3e0bdc8c))
+* Update Snake palette to brand colors ([4399783](https://github.com/MorpheApp/morphe-manager/commit/4399783d8cc46260c5a2fbbbab179831613663a4))
+
+# [1.19.0-dev.8](https://github.com/MorpheApp/morphe-manager/compare/v1.19.0-dev.7...v1.19.0-dev.8) (2026-05-24)
+
+
+### Bug Fixes
+
+* Always restart game on selection to clear game-over state ([0caac2e](https://github.com/MorpheApp/morphe-manager/commit/0caac2ea2668151c22bc405754d772c004b8cab1))
+* Redesign Dino character as a proper T-Rex silhouette ([2472270](https://github.com/MorpheApp/morphe-manager/commit/2472270187871b04e74d8e5e5475073561ce333c))
+* Show back-to-patching button on simple mode success screen ([90543e4](https://github.com/MorpheApp/morphe-manager/commit/90543e4bcf0bf4a719aed1a079015473ad70cff2))
+
+
+### Features
+
+* Add 2048 mini-game on the patcher screen ([18e502d](https://github.com/MorpheApp/morphe-manager/commit/18e502d70f7b11373dd9ae9da3ea5ebcb59dc599))
+* Add Flappy mini-game on the patcher screen ([18ffc75](https://github.com/MorpheApp/morphe-manager/commit/18ffc75641a8cefc148ca17dfc6bd2fb74fe9788))
+* Add game-over haptic feedback ([3127ac6](https://github.com/MorpheApp/morphe-manager/commit/3127ac6e4a5376e87db6ecda34ba52d942cf7154))
+* Add pause screen when leaving game mid-session ([ea50122](https://github.com/MorpheApp/morphe-manager/commit/ea501223cb1b2dace122c555905d1ad792b63df0))
+* Add Snake and Dino mini-games on the patcher screen ([1a6039b](https://github.com/MorpheApp/morphe-manager/commit/1a6039bc5fad7f76885bec31b07cbe3c51dd8c0c))
+* Extract shared `GameScoreRow` to eliminate score row duplication ([5ae8057](https://github.com/MorpheApp/morphe-manager/commit/5ae805736b312c1f71554c31956d93dfa734199d))
+
+# [1.19.0-dev.7](https://github.com/MorpheApp/morphe-manager/compare/v1.19.0-dev.6...v1.19.0-dev.7) (2026-05-24)
+
+
+### Bug Fixes
+
+* Eliminate empty-state flash and clear search query after exit animation ([4e3f30e](https://github.com/MorpheApp/morphe-manager/commit/4e3f30e7c018516bc5d0c2b5592324c9438a7451))
+* Fix search keyboard delay and header crossfade animation in file picker ([43bfc61](https://github.com/MorpheApp/morphe-manager/commit/43bfc6164fed7f8321e7ff22cd5b7d53f3c640e9))
+* Use produceState to eliminate empty-state flash on directory change ([bf30ad7](https://github.com/MorpheApp/morphe-manager/commit/bf30ad7988dbab5d37c170535f5d7a6689f8c034))
+
+# [1.19.0-dev.6](https://github.com/MorpheApp/morphe-manager/compare/v1.19.0-dev.5...v1.19.0-dev.6) (2026-05-24)
+
+
+### Features
+
+* Add `Crossfade` and `AnimatedVisibility` transitions to file picker ([f935e66](https://github.com/MorpheApp/morphe-manager/commit/f935e669c4878d6796e57fe0d27db5f6f13c3ce4))
+* Add root filesystem entry to file picker for rooted devices ([1d928e2](https://github.com/MorpheApp/morphe-manager/commit/1d928e2e2152aee86c208972c0fc3ab008be192b))
+* Replace storage menu with breadcrumb path navigation in file picker ([d60f73b](https://github.com/MorpheApp/morphe-manager/commit/d60f73b75ad25595a555f181f324cb3c6a73f3a4))
+* Show left-truncated breadcrumb path in file picker path bar ([0489850](https://github.com/MorpheApp/morphe-manager/commit/0489850b4128ff4958e7a4cde9d93c5c9676258b))
+
+# [1.19.0-dev.5](https://github.com/MorpheApp/morphe-manager/compare/v1.19.0-dev.4...v1.19.0-dev.5) (2026-05-23)
+
+
+### Bug Fixes
+
+* Align APK and split APK icon sizes in file picker ([29858a8](https://github.com/MorpheApp/morphe-manager/commit/29858a82c3bb193a6e142f2b3f2fc92b42ae2282))
+* Filter only JSON files in patch selections import custom file picker ([248849a](https://github.com/MorpheApp/morphe-manager/commit/248849a08575090daf65a43720badf2e9ca15174))
+
+
+### Features
+
+* Add file-type icons for keystores and JSON in file picker ([0a0ed51](https://github.com/MorpheApp/morphe-manager/commit/0a0ed51d35db010b42429b90e2c32367bec0712b))
+* Select file immediately on tap in file picker ([80070b8](https://github.com/MorpheApp/morphe-manager/commit/80070b85f95ae7026a72b60eea57e17d3026d25c))
+* Show icons for `.apkm` and `.xapk` files in file picker ([b1a6ee2](https://github.com/MorpheApp/morphe-manager/commit/b1a6ee24718b3c1433a0126eb2bb4e2117a75ed9))
+
+# [1.19.0-dev.4](https://github.com/MorpheApp/morphe-manager/compare/v1.19.0-dev.3...v1.19.0-dev.4) (2026-05-23)
+
+
+### Bug Fixes
+
+* Back gesture closes search before navigating in file picker ([2e7b9c1](https://github.com/MorpheApp/morphe-manager/commit/2e7b9c168d003a1347f6a48c2a2f7c9d2ba88408))
+* Delay focus request so keyboard animates smoothly in release builds ([c1f7145](https://github.com/MorpheApp/morphe-manager/commit/c1f7145c8cbc49cb464841b3bb6c3079be84ce31))
+
+# [1.19.0-dev.3](https://github.com/MorpheApp/morphe-manager/compare/v1.19.0-dev.2...v1.19.0-dev.3) (2026-05-23)
+
+
+### Bug Fixes
+
+* Add spacing between file name and detail in file picker ([5f94287](https://github.com/MorpheApp/morphe-manager/commit/5f942876329019ffbb4f249b76fe1d1547fd9330))
+* Remove redundant checkmark from file picker selection ([5222e14](https://github.com/MorpheApp/morphe-manager/commit/5222e1477b80e4843ed875bf6f426daa7c3c20b0))
+
+
+### Features
+
+* Add search to file picker ([e9388ed](https://github.com/MorpheApp/morphe-manager/commit/e9388edfebe6124baaad5fc4d71ef19d130c206e))
+
+# [1.19.0-dev.2](https://github.com/MorpheApp/morphe-manager/compare/v1.19.0-dev.1...v1.19.0-dev.2) (2026-05-23)
+
+
+### Bug Fixes
+
+* Crash on `.mpp` icon load ([6ca5114](https://github.com/MorpheApp/morphe-manager/commit/6ca51147200d50b5a54ce4ccd4b0ed858ddef0c8))
+
+# [1.19.0-dev.1](https://github.com/MorpheApp/morphe-manager/compare/v1.18.0...v1.19.0-dev.1) (2026-05-23)
+
+
+### Bug Fixes
+
+* Remove notification sound feedback on patching completion ([b0b5e94](https://github.com/MorpheApp/morphe-manager/commit/b0b5e9478418ab0e75d518d63c7ac30b0e33d003))
+
+
+### Features
+
+* Add built-in file picker ([#576](https://github.com/MorpheApp/morphe-manager/issues/576)) ([85191a8](https://github.com/MorpheApp/morphe-manager/commit/85191a86a6ba5ac745c63779a3bbd6966bff5434))
+
 # [1.18.0](https://github.com/MorpheApp/morphe-manager/compare/v1.17.1...v1.18.0) (2026-05-22)
 
 

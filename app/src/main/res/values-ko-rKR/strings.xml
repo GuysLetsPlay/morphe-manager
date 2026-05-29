@@ -130,7 +130,13 @@
     <string name="home_recommended_version">권장 버전</string>
     <string name="home_selected_version">선택된 버전</string>
     <string name="home_select_apk_title">APK 선택</string>
-    <string name="home_select_any_apk_description">아래 버튼을 탭하여 패치할 앱의 APK 파일을 선택하세요</string>
+    <string name="home_select_any_apk_description">APK 파일을 선택하거나, 이 기기에 이미 설치된 앱을 선택하세요</string>
+    <string name="home_use_installed_app">설치된 앱 사용</string>
+    <string name="home_installed_app_picker_title">설치된 앱 선택</string>
+    <string name="home_installed_app_picker_empty">앱을 찾을 수 없습니다</string>
+    <string name="home_installed_app_picker_filter_all">모든 앱</string>
+    <string name="home_installed_app_picker_filter_user">사용자 앱만</string>
+    <string name="home_installed_app_picker_filter_system">시스템 앱만</string>
     <string name="home_invalid_apk_unreadable">파일을 읽을 수 없습니다. \'외부 저장소\'가 배터리 제한되어 있는지 확인하세요</string>
     <string name="home_invalid_apk_not_an_apk">선택된 파일이 유효한 APK가 아닙니다</string>
     <string name="home_invalid_apk_io_error">파일을 열 수 없습니다. 다시 시도하세요</string>
@@ -192,8 +198,6 @@
     <string name="patch_option_enter_value">값 입력</string>
     <string name="patch_option_enter_number">숫자 입력</string>
     <string name="patch_option_enter_decimal">소수점 입력</string>
-    <string name="patch_option_pick_folder">폴더 선택</string>
-    <string name="patch_option_pick_file">파일 선택</string>
     <string name="patch_option_list_duplicate">이 값은 이미 존재합니다</string>
     <string name="patch_option_list_empty">값을 비워 둘 수 없습니다</string>
     <string name="patch_option_list_empty_state">아직 값이 추가되지 않았습니다</string>
@@ -272,6 +276,8 @@
     <string name="patcher_error_log">오류 로그</string>
     <string name="patcher_error_technical">기술 세부 정보</string>
     <string name="patcher_error_dialog_app_info">앱 정보</string>
+    <string name="patcher_tab_logs">패처 로그</string>
+    <string name="patcher_tab_game">게임</string>
     <string name="patcher_long_step_warning">이 단계는 시간이 걸릴 수 있습니다. 잠시만 기다려 주세요…</string>
     <string name="patcher_installing_subtitle">신나게 놀 준비가 거의 다 됐어요🎸</string>
     <string name="patcher_success_title">모두 완료! 🎉</string>
@@ -367,6 +373,21 @@
     <string name="package_name">패키지 이름</string>
     <string name="failed_to_mount">마운트할 수 없습니다: %s</string>
     <string name="failed_to_unmount">마운트를 해제할 수 없습니다: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_score">점수 %d</string>
+    <string name="mini_game_best">최고 %d</string>
+    <string name="mini_game_new_record">신기록!</string>
+    <string name="mini_game_game_over">게임 종료</string>
+    <string name="mini_game_try_again">다시 시도</string>
+    <string name="mini_game_paused">일시 중지</string>
+    <string name="mini_game_resume">계속 진행</string>
+    <string name="mini_game_2048_picker_subtitle">타일 밀어서 합치기</string>
+    <string name="mini_game_flappy_picker_subtitle">탭하여 파이프 사이 날아가기</string>
+    <string name="mini_game_flappy_tap_to_start">날아보려면 탭하세요</string>
+    <string name="mini_game_snake_picker_subtitle">부딪히지 않고, 먹이 먹기</string>
+    <string name="mini_game_snake_swipe_to_start">시작하려면 스와이프하세요</string>
+    <string name="mini_game_dino_picker_subtitle">탭하여 선인장 뛰어넘기</string>
+    <string name="mini_game_dino_tap_to_start">달리려면 탭하세요</string>
     <!-- Settings -->
     <string name="appearance">디자인</string>
     <string name="advanced">고급</string>
@@ -624,8 +645,8 @@ morphe_header_custom_dark.png
     <string name="settings_system_export_debug_logs_export_read_failed">로그를 읽을 수 없습니다 (종료 코드 %s)</string>
     <string name="settings_system_export_debug_logs_export_failed">로그를 내보낼 수 없습니다</string>
     <string name="settings_system_export_debug_logs_export_success">로그를 내보냈습니다</string>
-    <!-- Settings - System Tab - Storage Management Section -->
-    <string name="settings_system_storage_management">저장소 관리</string>
+    <!-- Settings - System Tab - Files & Storage Section -->
+    <string name="settings_system_files">파일 &amp; 저장소</string>
     <string name="settings_system_apks_size">전체 용량: %s</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">패치된 APK</string>
@@ -663,6 +684,21 @@ morphe_header_custom_dark.png
     <string name="settings_system_selected_patches_title">선택된 패치 (%s)</string>
     <string name="settings_system_patch_options_title">패치 옵션 (%s)</string>
     <string name="settings_system_no_patches_or_options">저장된 패치 또는 옵션이 없습니다</string>
+    <!-- Settings - System Tab - Custom file picker -->
+    <string name="settings_system_custom_file_picker">사용자 정의 파일 선택기</string>
+    <string name="settings_system_custom_file_picker_description">시스템 기본 파일 선택기가 아닌 Morphe에 내장된 파일 선택기를 사용하여 저장소를 탐색합니다</string>
+    <!-- File Picker -->
+    <string name="file_picker_previous_directory">이전 디렉터리</string>
+    <string name="file_picker_no_files">파일이 없습니다</string>
+    <string name="file_picker_internal_storage">내부 저장소</string>
+    <string name="file_picker_sd_card">SD 카드</string>
+    <string name="file_picker_root">루트 (/)</string>
+    <string name="file_picker_sort_name_asc">이름 (A–Z)</string>
+    <string name="file_picker_sort_name_desc">이름 (Z–A)</string>
+    <string name="file_picker_sort_size_desc">크기 (큰 순)</string>
+    <string name="file_picker_sort_size_asc">크기 (작은 순)</string>
+    <string name="file_picker_sort_date_desc">날짜 (최신순)</string>
+    <string name="file_picker_sort_date_asc">날짜 (오래된 순)</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">정보</string>
     <string name="settings_system_share_website">웹사이트 공유</string>
@@ -673,6 +709,8 @@ morphe_header_custom_dark.png
     <string name="credits_prior_development">이전 개발</string>
     <string name="opensource_licenses">오픈 소스 라이선스</string>
     <!-- Shared strings -->
+    <string name="select_file">파일 선택</string>
+    <string name="select_folder">폴더 선택</string>
     <string name="patches">패치</string>
     <string name="home">홈</string>
     <string name="settings">설정</string>

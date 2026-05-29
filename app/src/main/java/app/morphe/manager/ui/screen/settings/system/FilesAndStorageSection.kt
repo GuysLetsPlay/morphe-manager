@@ -9,32 +9,38 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.Apps
-import androidx.compose.material.icons.outlined.ChevronRight
-import androidx.compose.material.icons.outlined.Storage
-import androidx.compose.material.icons.outlined.Tune
+import androidx.compose.material.icons.outlined.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import app.morphe.manager.R
 import app.morphe.manager.ui.screen.shared.*
 import app.morphe.manager.ui.viewmodel.ImportExportViewModel
 import app.morphe.manager.ui.viewmodel.SettingsViewModel
+import app.morphe.manager.util.isAndroidTv
 
 /**
  * Storage management section.
  */
 @Composable
-fun StorageManagementSection(
+fun FilesAndStorageSection(
     settingsViewModel: SettingsViewModel,
     importExportViewModel: ImportExportViewModel
 ) {
+    val context = LocalContext.current
+    val isTV = remember { context.isAndroidTv() }
     val useExpertMode by settingsViewModel.prefs.useExpertMode.getAsState()
+    val useCustomFilePicker by settingsViewModel.prefs.useCustomFilePicker.getAsState()
+    val enabledState = stringResource(R.string.enabled)
+    val disabledState = stringResource(R.string.disabled)
 
     // Storage counts
     val originalApkCount by settingsViewModel.originalApkCount.collectAsStateWithLifecycle()
@@ -63,7 +69,7 @@ fun StorageManagementSection(
 
     Column(verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ContentPadding)) {
         SectionTitle(
-            text = stringResource(R.string.settings_system_storage_management),
+            text = stringResource(R.string.settings_system_files),
             icon = Icons.Outlined.Storage
         )
 
@@ -149,6 +155,27 @@ fun StorageManagementSection(
                         }
                     )
                 }
+            }
+        }
+
+        // TV always uses the custom picker regardless of this toggle, so hide it to avoid confusion
+        if (!isTV) {
+            SectionCard {
+                RichSettingsItem(
+                    onClick = { settingsViewModel.setUseCustomFilePicker(!useCustomFilePicker) },
+                    leadingContent = { MorpheIcon(icon = Icons.Outlined.FolderOpen) },
+                    title = stringResource(R.string.settings_system_custom_file_picker),
+                    subtitle = stringResource(R.string.settings_system_custom_file_picker_description),
+                    trailingContent = {
+                        MorpheSwitch(
+                            checked = useCustomFilePicker,
+                            onCheckedChange = null,
+                            modifier = androidx.compose.ui.Modifier.semantics {
+                                stateDescription = if (useCustomFilePicker) enabledState else disabledState
+                            }
+                        )
+                    }
+                )
             }
         }
     }

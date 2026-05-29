@@ -180,6 +180,9 @@ class SettingsViewModel(
 
     fun setExpertMode(enabled: Boolean) = viewModelScope.launch {
         prefs.useExpertMode.update(enabled)
+        if (enabled && !prefs.customFilePickerUserConfigured.get()) {
+            prefs.useCustomFilePicker.update(true)
+        }
     }
 
     fun setProcessRuntime(enabled: Boolean) = viewModelScope.launch {
@@ -206,6 +209,11 @@ class SettingsViewModel(
 
     fun setPromptInstallerOnInstall(enabled: Boolean) = viewModelScope.launch {
         prefs.promptInstallerOnInstall.update(enabled)
+    }
+
+    fun setUseCustomFilePicker(enabled: Boolean) = viewModelScope.launch {
+        prefs.useCustomFilePicker.update(enabled)
+        prefs.customFilePickerUserConfigured.update(true)
     }
 
     /**

@@ -130,7 +130,13 @@
     <string name="home_recommended_version">Anbefalet version</string>
     <string name="home_selected_version">Valgt version</string>
     <string name="home_select_apk_title">Vælg APK</string>
-    <string name="home_select_any_apk_description">Tryk på knappen nedenfor for at vælge en APK-fil for en hvilket som helst app for at patche</string>
+    <string name="home_select_any_apk_description">Vælg en APK-fil fra en hvilken som helst app, eller vælg en app, der allerede er installeret på denne enhed</string>
+    <string name="home_use_installed_app">Brug installeret app</string>
+    <string name="home_installed_app_picker_title">Vælg installeret app</string>
+    <string name="home_installed_app_picker_empty">Ingen apps fundet</string>
+    <string name="home_installed_app_picker_filter_all">Alle apps</string>
+    <string name="home_installed_app_picker_filter_user">Kun brugerapps</string>
+    <string name="home_installed_app_picker_filter_system">Kun systemapps</string>
     <string name="home_invalid_apk_unreadable">Kunne ikke læse filen. Tjek at \'Ekstern lagerplads\' ikke er batteribegrænset</string>
     <string name="home_invalid_apk_not_an_apk">Den valgte fil er ikke en gyldig APK</string>
     <string name="home_invalid_apk_io_error">Kunne ikke åbne filen. Prøv igen</string>
@@ -192,8 +198,6 @@ For de bedste resultater anbefaler denne app at patche en &lt;b&gt;fuld APK&lt;/
     <string name="patch_option_enter_value">Angiv værdi</string>
     <string name="patch_option_enter_number">Angiv tal</string>
     <string name="patch_option_enter_decimal">Angiv decimal</string>
-    <string name="patch_option_pick_folder">Vælg mappe</string>
-    <string name="patch_option_pick_file">Vælg fil</string>
     <string name="patch_option_list_duplicate">Denne værdi eksisterer allerede</string>
     <string name="patch_option_list_empty">Værdien må ikke være tom</string>
     <string name="patch_option_list_empty_state">Ingen værdier tilføjet endnu</string>
@@ -272,6 +276,8 @@ Ydre zone (stiplet): Kan blive beskåret af launcher-masken – hold vigtige det
     <string name="patcher_error_log">Fejllog</string>
     <string name="patcher_error_technical">Tekniske oplysninger</string>
     <string name="patcher_error_dialog_app_info">App-oplysninger</string>
+    <string name="patcher_tab_logs">Patcher Logs</string>
+    <string name="patcher_tab_game">Spil</string>
     <string name="patcher_long_step_warning">Dette trin kan tage et stykke tid. Vent venligst...</string>
     <string name="patcher_installing_subtitle">Næsten klar til at rocke! 🎸</string>
     <string name="patcher_success_title">Alt færdigt! 🎉</string>
@@ -367,6 +373,21 @@ Afinstallation sletter permanent alle appdata."</string>
     <string name="package_name">Pakkenavn</string>
     <string name="failed_to_mount">Kunne ikke montere: %s</string>
     <string name="failed_to_unmount">Kunne ikke afmontere: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_score">Score %d</string>
+    <string name="mini_game_best">Bedste %d</string>
+    <string name="mini_game_new_record">Ny rekord!</string>
+    <string name="mini_game_game_over">Game Over</string>
+    <string name="mini_game_try_again">Prøv igen</string>
+    <string name="mini_game_paused">Pauset</string>
+    <string name="mini_game_resume">Fortsæt</string>
+    <string name="mini_game_2048_picker_subtitle">Skub fliser for at sammenlægge</string>
+    <string name="mini_game_flappy_picker_subtitle">Tryk for at flyve gennem rør</string>
+    <string name="mini_game_flappy_tap_to_start">Tryk for at flyve</string>
+    <string name="mini_game_snake_picker_subtitle">Spis mad, ram ikke dig selv</string>
+    <string name="mini_game_snake_swipe_to_start">Stryk for at starte</string>
+    <string name="mini_game_dino_picker_subtitle">Tryk for at hoppe over kaktusser</string>
+    <string name="mini_game_dino_tap_to_start">Tryk for at løbe</string>
     <!-- Settings -->
     <string name="appearance">Udseende</string>
     <string name="advanced">Avanceret</string>
@@ -623,8 +644,8 @@ Størrelsesformatet skal være som følger:
     <string name="settings_system_export_debug_logs_export_read_failed">Kunne ikke læse log (udgangskode %s)</string>
     <string name="settings_system_export_debug_logs_export_failed">Kunne ikke eksportere logge</string>
     <string name="settings_system_export_debug_logs_export_success">Logge blev eksporteret</string>
-    <!-- Settings - System Tab - Storage Management Section -->
-    <string name="settings_system_storage_management">Administration af lager</string>
+    <!-- Settings - System Tab - Files & Storage Section -->
+    <string name="settings_system_files">Filer &amp; lagerplads</string>
     <string name="settings_system_apks_size">Samlet størrelse: %s</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Patchet APK\'er</string>
@@ -662,6 +683,21 @@ Størrelsesformatet skal være som følger:
     <string name="settings_system_selected_patches_title">Valgte patches (%s)</string>
     <string name="settings_system_patch_options_title">Patchvalg (%s)</string>
     <string name="settings_system_no_patches_or_options">Ingen patches eller valg gemt</string>
+    <!-- Settings - System Tab - Custom file picker -->
+    <string name="settings_system_custom_file_picker">Brugerdefineret filvælger</string>
+    <string name="settings_system_custom_file_picker_description">Brug Morphes indbyggede filvælger i stedet for systemstandardindstillingen</string>
+    <!-- File Picker -->
+    <string name="file_picker_previous_directory">Forrige mappe</string>
+    <string name="file_picker_no_files">Ingen filer her</string>
+    <string name="file_picker_internal_storage">Intern lagring</string>
+    <string name="file_picker_sd_card">SD-kort</string>
+    <string name="file_picker_root">Rod (/)</string>
+    <string name="file_picker_sort_name_asc">Navn (A–Z)</string>
+    <string name="file_picker_sort_name_desc">Navn (Z–A)</string>
+    <string name="file_picker_sort_size_desc">Størrelse (størst først)</string>
+    <string name="file_picker_sort_size_asc">Størrelse (mindst først)</string>
+    <string name="file_picker_sort_date_desc">Dato (nyeste først)</string>
+    <string name="file_picker_sort_date_asc">Dato (ældste først)</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">Om</string>
     <string name="settings_system_share_website">Del hjemmeside</string>
@@ -672,6 +708,8 @@ Størrelsesformatet skal være som følger:
     <string name="credits_prior_development">Prior development</string>
     <string name="opensource_licenses">Open-source licenser</string>
     <!-- Shared strings -->
+    <string name="select_file">Vælg fil</string>
+    <string name="select_folder">Vælg mappe</string>
     <string name="patches">Patches</string>
     <string name="home">Hjem</string>
     <string name="settings">Indstillinger</string>

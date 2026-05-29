@@ -130,7 +130,13 @@
     <string name="home_recommended_version">Ajánlott verzió</string>
     <string name="home_selected_version">Kiválasztott verzió</string>
     <string name="home_select_apk_title">APK kiválasztása</string>
-    <string name="home_select_any_apk_description">Koppints az alábbi gombra a módosítani kívánt APK-fájl kiválasztásához.</string>
+    <string name="home_select_any_apk_description">Válasszon egy APK fájlt bármely alkalmazásból, vagy válasszon egy alkalmazást, amely már telepítve van ezen az eszközön</string>
+    <string name="home_use_installed_app">Telepített alkalmazás használata</string>
+    <string name="home_installed_app_picker_title">Telepített alkalmazás kiválasztása</string>
+    <string name="home_installed_app_picker_empty">Nincs alkalmazás található</string>
+    <string name="home_installed_app_picker_filter_all">Összes alkalmazás</string>
+    <string name="home_installed_app_picker_filter_user">Csak felhasználói alkalmazások</string>
+    <string name="home_installed_app_picker_filter_system">Csak rendszeralkalmazások</string>
     <string name="home_invalid_apk_unreadable">Nem sikerült olvasni a fájlt. Ellenőrizd, hogy a \'Külső tároló\' nincs-e akkumulátorkorlátozás alatt</string>
     <string name="home_invalid_apk_not_an_apk">A kiválasztott fájl nem egy érvényes APK</string>
     <string name="home_invalid_apk_io_error">Nem sikerült megnyitni a fájlt. Kérjük, próbáld újra</string>
@@ -192,8 +198,6 @@ A legjobb eredmény érdekében az alkalmazás javasolja a &lt;b&gt;teljes APK&l
     <string name="patch_option_enter_value">Érték megadása</string>
     <string name="patch_option_enter_number">Szám megadása</string>
     <string name="patch_option_enter_decimal">Tizedes megadása</string>
-    <string name="patch_option_pick_folder">Mappa kiválasztása</string>
-    <string name="patch_option_pick_file">Fájl kiválasztása</string>
     <string name="patch_option_list_duplicate">Ez az érték már létezik</string>
     <string name="patch_option_list_empty">Az érték nem lehet üres</string>
     <string name="patch_option_list_empty_state">Még nincsenek hozzáadott értékek</string>
@@ -272,6 +276,8 @@ Külső zóna (szaggatott): az indító maszk levághatja – tartsa a fontos r�
     <string name="patcher_error_log">Hibanapló</string>
     <string name="patcher_error_technical">Technikai részletek</string>
     <string name="patcher_error_dialog_app_info">Alkalmazásinformáció</string>
+    <string name="patcher_tab_logs">Patcher naplók</string>
+    <string name="patcher_tab_game">Játékok</string>
     <string name="patcher_long_step_warning">Ez a lépés eltarthat egy ideig. Kérjük várj…</string>
     <string name="patcher_installing_subtitle">Majdnem készen állunk! 🎸</string>
     <string name="patcher_success_title">Minden kész! 🎉</string>
@@ -367,6 +373,21 @@ Az eltávolítás véglegesen törli az alkalmazás összes adatát."</string>
     <string name="package_name">Csomagnév</string>
     <string name="failed_to_mount">Nem sikerült csatlakoztatni: %s</string>
     <string name="failed_to_unmount">Nem sikerült leválasztani: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_score">Pontszám: %d</string>
+    <string name="mini_game_best">A legjobb %d</string>
+    <string name="mini_game_new_record">Új rekord!</string>
+    <string name="mini_game_game_over">Játék vége</string>
+    <string name="mini_game_try_again">Próbálja újra</string>
+    <string name="mini_game_paused">Szüneteltetve</string>
+    <string name="mini_game_resume">Folytatás</string>
+    <string name="mini_game_2048_picker_subtitle">Húzd a lapkákat összevonáshoz</string>
+    <string name="mini_game_flappy_picker_subtitle">Érintsd meg, hogy átrepülj a csővázakon</string>
+    <string name="mini_game_flappy_tap_to_start">Érintsd meg a repüléshez</string>
+    <string name="mini_game_snake_picker_subtitle">Egyél, és ne ütközz magadba</string>
+    <string name="mini_game_snake_swipe_to_start">Húzd az ujjad a kezdéshez</string>
+    <string name="mini_game_dino_picker_subtitle">Érintsd meg a kaktuszok átugrásához</string>
+    <string name="mini_game_dino_tap_to_start">Érintsd meg a futáshoz</string>
     <!-- Settings -->
     <string name="appearance">Megjelenés</string>
     <string name="advanced">Haladó</string>
@@ -623,8 +644,8 @@ A képek méreteinek a következőknek kell lennie:
     <string name="settings_system_export_debug_logs_export_read_failed">Nem sikerült a naplók olvasása (kilépési kód: %s)</string>
     <string name="settings_system_export_debug_logs_export_failed">Nem sikerült exportálni a naplókat</string>
     <string name="settings_system_export_debug_logs_export_success">Naplók exportálva</string>
-    <!-- Settings - System Tab - Storage Management Section -->
-    <string name="settings_system_storage_management">Tárhelykezelés</string>
+    <!-- Settings - System Tab - Files & Storage Section -->
+    <string name="settings_system_files">Fájlok és tárhely</string>
     <string name="settings_system_apks_size">Teljes méret: %s</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Módosított APK-k</string>
@@ -663,6 +684,21 @@ Forrás: #%2$s</string>
     <string name="settings_system_selected_patches_title">Kiválasztott módosítások (%s)</string>
     <string name="settings_system_patch_options_title">Módosítási opciók (%s)</string>
     <string name="settings_system_no_patches_or_options">Nincsenek mentett módosítások vagy beállítások</string>
+    <!-- Settings - System Tab - Custom file picker -->
+    <string name="settings_system_custom_file_picker">Egyéni fájlválasztó</string>
+    <string name="settings_system_custom_file_picker_description">A Morphe beépített fájlválasztóját használja a rendszer alapértelmezett helyett.</string>
+    <!-- File Picker -->
+    <string name="file_picker_previous_directory">Előző mappa</string>
+    <string name="file_picker_no_files">Nincs itt fájl</string>
+    <string name="file_picker_internal_storage">Belső tárhely</string>
+    <string name="file_picker_sd_card">SD-kártya</string>
+    <string name="file_picker_root">Gyökér (/)</string>
+    <string name="file_picker_sort_name_asc">Név (A–Z)</string>
+    <string name="file_picker_sort_name_desc">Név (Z–A)</string>
+    <string name="file_picker_sort_size_desc">Méret (a legnagyobbtól kezdve)</string>
+    <string name="file_picker_sort_size_asc">Méret (a legkisebbtől kezdve)</string>
+    <string name="file_picker_sort_date_desc">Dátum (a legújabbaktól kezdve)</string>
+    <string name="file_picker_sort_date_asc">Dátum (a legrégebbtől kezdve)</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">Névjegy</string>
     <string name="settings_system_share_website">Webhely megosztása</string>
@@ -673,6 +709,8 @@ Forrás: #%2$s</string>
     <string name="credits_prior_development">Korábbi fejlesztők</string>
     <string name="opensource_licenses">Nyílt forráskódú licencek</string>
     <!-- Shared strings -->
+    <string name="select_file">Fájl kiválasztása</string>
+    <string name="select_folder">Mappa kiválasztása</string>
     <string name="patches">Módosítások</string>
     <string name="home">Főoldal</string>
     <string name="settings">Beállítások</string>

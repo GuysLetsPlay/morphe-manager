@@ -130,7 +130,13 @@
     <string name="home_recommended_version">Versyona ku tê pêşniyar kirin</string>
     <string name="home_selected_version">Versiyona hilbijartî</string>
     <string name="home_select_apk_title">APK safînak</string>
-    <string name="home_select_any_apk_description">Seroki pêşniyar be ku APK entê antî ek şêwaziyê sazkirinê ji her aplikasyonê pêş andazeşîne</string>
+    <string name="home_select_any_apk_description">Hilbijartina dosyeyekê APK yê ji her programê, yan jî programa ku berê li ser vê cîhazê hatiye saz kirin hilbijartin</string>
+    <string name="home_use_installed_app">Programa saz kirî bikar bîne</string>
+    <string name="home_installed_app_picker_title">Programa saz kirî hilbijartin</string>
+    <string name="home_installed_app_picker_empty">Çêbî app nayê dîtin</string>
+    <string name="home_installed_app_picker_filter_all">Hemû app</string>
+    <string name="home_installed_app_picker_filter_user">Tenê app\'ên bikarîner</string>
+    <string name="home_installed_app_picker_filter_system">Tenê app\'ên sîstemê</string>
     <string name="home_invalid_apk_unreadable">İspasara xwêndik nebîn. Çavkanîya \'External Storage\'ê ji bateriyê qedexe nebîn</string>
     <string name="home_invalid_apk_not_an_apk">Pelê ku hilbijartin, APK-ya rast nîne</string>
     <string name="home_invalid_apk_io_error">Rast nakin ku pel vebîn. Ji kerema xwe dîcare biceribîne</string>
@@ -190,8 +196,6 @@ Ji bo mezgînî, ev sepan pêşniyar dike ku paketek &lt;b&gt;full APK&lt;/b&gt;
     <string name="patch_option_enter_value">Qîmet biqîze</string>
     <string name="patch_option_enter_number">Hejmar biqîze</string>
     <string name="patch_option_enter_decimal">Desîmal biqîze</string>
-    <string name="patch_option_pick_folder">Folder safînak</string>
-    <string name="patch_option_pick_file">Pelê hilbijêre</string>
     <string name="patch_option_list_duplicate">Ev nirx e jixye heye</string>
     <string name="patch_option_list_empty">Qîymet nikare boçagî be</string>
     <string name="patch_option_list_empty_state">Heta niha tiştek zêde nabe</string>
@@ -270,6 +274,8 @@ Herêma derveyî (qutkirî): dikare ji aliyê maskeya launcher'ê ve were qutkir
     <string name="patcher_error_log">Log xistina</string>
     <string name="patcher_error_technical">Agahî teknîk</string>
     <string name="patcher_error_dialog_app_info">Agahdariya sepanê</string>
+    <string name="patcher_tab_logs">Logên Patcher</string>
+    <string name="patcher_tab_game">Lîstik</string>
     <string name="patcher_long_step_warning">Ev gav dikare hinekî dem bigire. Heke...</string>
     <string name="patcher_installing_subtitle">Nêzîk e ku hûn şêwaz bin! 🎸</string>
     <string name="patcher_success_title">Hemû tişt qediya! 🎉</string>
@@ -365,6 +371,21 @@ Neqişandin dê hemî daneyên serîlêdanê bi awayê daîmî tune bike"</strin
     <string name="package_name">Navê pakêtê</string>
     <string name="failed_to_mount">Serketina çêkirinê: %s</string>
     <string name="failed_to_unmount">Serketina nebûyîna çêkirinê: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_score">Pêvan %d</string>
+    <string name="mini_game_best">Çêtirîn %d</string>
+    <string name="mini_game_new_record">Rekord nû!</string>
+    <string name="mini_game_game_over">Dawî</string>
+    <string name="mini_game_try_again">Carek din bicûrbîne</string>
+    <string name="mini_game_paused">Seikin</string>
+    <string name="mini_game_resume">Berde dewam bike</string>
+    <string name="mini_game_2048_picker_subtitle">Tile\'an bişîne da ku bikevin hev</string>
+    <string name="mini_game_flappy_picker_subtitle">Têke da ku ji boriyên derbas bî</string>
+    <string name="mini_game_flappy_tap_to_start">Têke da ku firî</string>
+    <string name="mini_game_snake_picker_subtitle">Xwarin bixwe, xwe negre</string>
+    <string name="mini_game_snake_swipe_to_start">Destpêkirinê da ku destpêbikî</string>
+    <string name="mini_game_dino_picker_subtitle">Têke da ku ji kaktûsan derbas bî</string>
+    <string name="mini_game_dino_tap_to_start">Têke da ku bixwe</string>
     <!-- Settings -->
     <string name="appearance">Xwezî</string>
     <string name="advanced">Zor</string>
@@ -598,7 +619,7 @@ Qasîyên wêneyan divê wiha bin:
     <string name="settings_system_import_keystore_dialog_title">Sernameyê (Alias) dafîne</string>
     <string name="settings_system_import_keystore_dialog_description">Hûn dê pêwist be serdanan kredensiyelên keystorê bidin da ku ew sazkirin</string>
     <string name="settings_system_import_keystore_dialog_alias_field">Karanbera (Alias)</string>
-    <string name="settings_system_import_keystore_dialog_password_field">Nexweş</string>
+    <string name="settings_system_import_keystore_dialog_password_field">Parola</string>
     <string name="settings_system_import_keystore_dialog_format_field">Formata kilîdparêzê</string>
     <string name="settings_system_import_keystore_wrong_credentials">Nivîsandina parçehuyê xeṭî ye</string>
     <string name="settings_system_import_keystore_success">Parçehuyê zafortir hate kirin</string>
@@ -619,8 +640,8 @@ Qasîyên wêneyan divê wiha bin:
     <string name="settings_system_export_debug_logs_export_read_failed">Serketina xwendina logan (koda qedandina %s)</string>
     <string name="settings_system_export_debug_logs_export_failed">Logan derxistina xeṭî ye</string>
     <string name="settings_system_export_debug_logs_export_success">Log derxist</string>
-    <!-- Settings - System Tab - Storage Management Section -->
-    <string name="settings_system_storage_management">Dastûra tîr-pêş</string>
+    <!-- Settings - System Tab - Files & Storage Section -->
+    <string name="settings_system_files">Pelên &amp; hilanîn</string>
     <string name="settings_system_apks_size">Mezinahiya giyan: %s</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">APK\'yên veşartin</string>
@@ -658,6 +679,21 @@ Qasîyên wêneyan divê wiha bin:
     <string name="settings_system_selected_patches_title">Patchên betal kirin (%s)</string>
     <string name="settings_system_patch_options_title">Ji bo Patch-an (%s)</string>
     <string name="settings_system_no_patches_or_options">Ke tu bejna yâ bejna diteya ne</string>
+    <!-- Settings - System Tab - Custom file picker -->
+    <string name="settings_system_custom_file_picker">Hilbijêrkê pelan yê xwerû</string>
+    <string name="settings_system_custom_file_picker_description">Li şûna hilbijêrkê pelan yê serî yê sîstemê, hilbijêrkê pelan yê têne çêkirin yê Morphe bikar bîne</string>
+    <!-- File Picker -->
+    <string name="file_picker_previous_directory">Pêşîya rêgehê</string>
+    <string name="file_picker_no_files">Li vir pel nehatine dîtin</string>
+    <string name="file_picker_internal_storage">Hêlîna navî</string>
+    <string name="file_picker_sd_card">Kartê SD</string>
+    <string name="file_picker_root">Koka (/)</string>
+    <string name="file_picker_sort_name_asc">Nav (A–Z)</string>
+    <string name="file_picker_sort_name_desc">Nav (Z–A)</string>
+    <string name="file_picker_sort_size_desc">Mezinahî (ji mezintir heta biçiktir)</string>
+    <string name="file_picker_sort_size_asc">Mezinahî (ji biçiktir heta mezintir)</string>
+    <string name="file_picker_sort_date_desc">Dîrok (ji nûve heta kevn)</string>
+    <string name="file_picker_sort_date_asc">Dîrok (ji kevn heta nûve)</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">Derbarê</string>
     <string name="settings_system_share_website">Malperê parve bike</string>
@@ -668,6 +704,8 @@ Qasîyên wêneyan divê wiha bin:
     <string name="credits_prior_development">Gelişîna berê</string>
     <string name="opensource_licenses">Lîsansên çavkaniyê vekirî</string>
     <!-- Shared strings -->
+    <string name="select_file">Pelê hilbijêre</string>
+    <string name="select_folder">Pêvekê hilbijêre</string>
     <string name="patches">Saxkirin</string>
     <string name="home">Mal</string>
     <string name="settings">Sazî</string>
