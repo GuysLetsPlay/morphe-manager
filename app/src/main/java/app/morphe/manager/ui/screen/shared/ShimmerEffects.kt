@@ -6,7 +6,6 @@
 package app.morphe.manager.ui.screen.shared
 
 import androidx.compose.animation.core.*
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -14,10 +13,11 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
+import androidx.compose.runtime.State
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
@@ -43,17 +43,18 @@ fun ShimmerBox(
 
     val infiniteTransition = rememberInfiniteTransition(label = "shimmer")
 
-    val shimmerProgress by infiniteTransition.animateFloat(
-        initialValue = 0f,
-        targetValue = 1f,
+    // State<Float> (not `by`) so .value in drawBehind is a draw-phase observation - only the draw
+    // lambda re-runs per frame. initialValue=0.5 keeps the band on-screen from frame 1
+    val shimmerProgressState: State<Float> = infiniteTransition.animateFloat(
+        initialValue = 0.5f,
+        targetValue = 1.5f,
         animationSpec = infiniteRepeatable(
             animation = tween(1200, easing = LinearEasing),
             repeatMode = RepeatMode.Restart
         ),
         label = "shimmer_progress"
     )
-
-    val pulseAlpha by infiniteTransition.animateFloat(
+    val pulseAlphaState: State<Float> = infiniteTransition.animateFloat(
         initialValue = baseAlpha,
         targetValue = baseAlpha + 0.1f,
         animationSpec = infiniteRepeatable(
@@ -63,23 +64,25 @@ fun ShimmerBox(
         label = "pulse_alpha"
     )
 
-    BoxWithConstraints(modifier = modifier.clip(shape)) {
-        val width = constraints.maxWidth.toFloat()
-        val bandWidth = width * 0.7f
-        // Sweep from just off-screen left to just off-screen right
-        val startX = shimmerProgress * (width + bandWidth) - bandWidth
+    Box(
+        modifier = modifier
+            .clip(shape)
+            .drawBehind {
+                val progress = shimmerProgressState.value % 1f
+                val alpha = pulseAlphaState.value
+                val bandWidth = size.width * 0.7f
+                val startX = progress * (size.width + bandWidth) - bandWidth
 
-        Box(modifier = Modifier.fillMaxSize().background(resolvedBaseColor.copy(alpha = pulseAlpha)))
-        Box(
-            modifier = Modifier.fillMaxSize().background(
-                brush = Brush.linearGradient(
-                    colors = listOf(Color.Transparent, resolvedShimmerColor, Color.Transparent),
-                    start = Offset(startX, 0f),
-                    end = Offset(startX + bandWidth, 0f)
+                drawRect(color = resolvedBaseColor.copy(alpha = alpha))
+                drawRect(
+                    brush = Brush.linearGradient(
+                        colors = listOf(Color.Transparent, resolvedShimmerColor, Color.Transparent),
+                        start = Offset(startX, 0f),
+                        end = Offset(startX + bandWidth, 0f)
+                    )
                 )
-            )
-        )
-    }
+            }
+    )
 }
 
 /**

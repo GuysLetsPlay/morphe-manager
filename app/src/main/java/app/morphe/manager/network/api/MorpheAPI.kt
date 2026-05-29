@@ -11,6 +11,8 @@ import app.morphe.manager.network.utils.getOrNull
 import app.morphe.manager.util.*
 import io.ktor.client.request.header
 import io.ktor.client.request.url
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import kotlinx.datetime.LocalDateTime
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toLocalDateTime
@@ -431,7 +433,9 @@ class MorpheAPI(
     suspend fun fetchChangelogFromUrl(changelogUrl: String, stopAfterFirstStable: Boolean = false): List<ChangelogEntry> {
         Log.d(tag, "fetchChangelogFromUrl: $changelogUrl")
         return when (val r = client.request<String> { url(changelogUrl) }) {
-            is APIResponse.Success -> ChangelogParser.parse(r.data, stopAfterFirstStable)
+            is APIResponse.Success -> withContext(Dispatchers.Default) {
+                ChangelogParser.parse(r.data, stopAfterFirstStable)
+            }
             is APIResponse.Error, is APIResponse.Failure -> {
                 Log.w(tag, "Failed to fetch changelog from $changelogUrl")
                 emptyList()
@@ -451,7 +455,9 @@ class MorpheAPI(
             url(url)
             header("Cache-Control", "no-cache")
         }) {
-            is APIResponse.Success -> ChangelogParser.parse(r.data, stopAfterFirstStable)
+            is APIResponse.Success -> withContext(Dispatchers.Default) {
+                ChangelogParser.parse(r.data, stopAfterFirstStable)
+            }
             is APIResponse.Error, is APIResponse.Failure -> {
                 Log.w(tag, "Failed to fetch $path for ${config.name}@$branch")
                 emptyList()
