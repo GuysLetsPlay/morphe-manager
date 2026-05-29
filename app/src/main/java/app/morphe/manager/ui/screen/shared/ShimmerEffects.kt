@@ -22,9 +22,26 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+
+// progress in [0, 1]: 0 = band fully off top-left, 1 = band fully off bottom-right
+internal fun DrawScope.drawDiagonalShimmer(progress: Float, color: Color) {
+    val totalDiag = size.width + size.height
+    val bandWidth = totalDiag * 0.4f
+    val cCenter = progress * (totalDiag + bandWidth * 2f) - bandWidth
+    val cStart = cCenter - bandWidth
+    val cEnd = cCenter + bandWidth
+    drawRect(
+        brush = Brush.linearGradient(
+            colors = listOf(Color.Transparent, color, Color.Transparent),
+            start = Offset(cStart / 2f, cStart / 2f),
+            end = Offset(cEnd / 2f, cEnd / 2f)
+        )
+    )
+}
 
 /**
  * Base shimmer box with animated gradient effect.
@@ -77,17 +94,8 @@ fun ShimmerBox(
             .drawBehind {
                 val progress = shimmerProgressState.value % 1f
                 val alpha = pulseAlphaState.value
-                val bandWidth = size.width * 0.7f
-                val startX = progress * (size.width + bandWidth) - bandWidth
-
                 drawRect(color = resolvedBaseColor.copy(alpha = alpha))
-                drawRect(
-                    brush = Brush.linearGradient(
-                        colors = listOf(Color.Transparent, resolvedShimmerColor, Color.Transparent),
-                        start = Offset(startX, 0f),
-                        end = Offset(startX + bandWidth, 0f)
-                    )
-                )
+                drawDiagonalShimmer(progress, resolvedShimmerColor)
             }
     )
 }
