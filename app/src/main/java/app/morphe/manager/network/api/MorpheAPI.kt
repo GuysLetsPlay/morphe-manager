@@ -156,7 +156,7 @@ class MorpheAPI(
             downloadUrl = asset.downloadUrl,
             createdAt = parseTimestamp(timestamp),
             signatureDownloadUrl = findSignatureUrl(release, asset),
-            pageUrl = "${config.htmlUrl}/releases/tag/${release.tagName}",
+            pageUrl = releasePageUrl(config.htmlUrl, release.tagName),
             description = release.body?.ifBlank { release.name.orEmpty() } ?: release.name.orEmpty(),
             version = release.tagName
         )
@@ -171,7 +171,7 @@ class MorpheAPI(
             downloadUrl = releaseInfo.downloadUrl,
             createdAt = parseTimestamp(releaseInfo.createdAt),
             signatureDownloadUrl = releaseInfo.signatureDownloadUrl,
-            pageUrl = "${config.htmlUrl}/releases/tag/$version",
+            pageUrl = releasePageUrl(config.htmlUrl, version),
             description = releaseInfo.description,
             version = version
         )
@@ -187,7 +187,7 @@ class MorpheAPI(
             createdAt = parseTimestamp(releaseInfo.createdAt),
             // Treat empty string the same as absent — some JSON files emit ""
             signatureDownloadUrl = releaseInfo.signatureDownloadUrl?.ifBlank { null },
-            pageUrl = "${config.htmlUrl}/releases/tag/$version",
+            pageUrl = releasePageUrl(config.htmlUrl, version),
             description = releaseInfo.description,
             version = version
         )

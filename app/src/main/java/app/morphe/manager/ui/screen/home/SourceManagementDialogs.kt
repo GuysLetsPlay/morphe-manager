@@ -9,7 +9,9 @@ import android.annotation.SuppressLint
 import android.graphics.Color.argb
 import android.graphics.Color.colorToHSV
 import android.net.Uri
-import androidx.compose.animation.*
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
@@ -1175,9 +1177,7 @@ fun BundleChangelogDialog(
                 else -> RemotePatchBundle.inferPageUrlFromEndpoint(src.endpoint)
             }
             val latestPageUrl = entries.firstOrNull()?.version?.let { version ->
-                val tag = if (version.startsWith("v")) version else "v$version"
-                val url = repoUrl?.let { "$it/releases/tag/$tag" }
-                url
+                repoUrl?.let { releasePageUrl(it, version) }
             }
 
             if (entries.isNotEmpty()) {
