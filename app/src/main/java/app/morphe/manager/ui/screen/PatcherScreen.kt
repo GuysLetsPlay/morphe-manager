@@ -34,9 +34,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import app.morphe.manager.R
 import app.morphe.manager.domain.installer.InstallerManager
+import app.morphe.manager.domain.manager.InstallerPreferenceTokens
 import app.morphe.manager.domain.manager.PreferencesManager
 import app.morphe.manager.ui.model.State
 import app.morphe.manager.ui.screen.patcher.*
+import app.morphe.manager.ui.screen.patcher.game.MiniGameState
 import app.morphe.manager.ui.screen.settings.advanced.NotificationPermissionDialog
 import app.morphe.manager.ui.screen.settings.system.InstallerSelectionDialog
 import app.morphe.manager.ui.screen.shared.MorpheAnimations
@@ -44,12 +46,12 @@ import app.morphe.manager.ui.viewmodel.InstallViewModel
 import app.morphe.manager.ui.viewmodel.PatcherViewModel
 import app.morphe.manager.util.APK_MIMETYPE
 import app.morphe.manager.util.EventEffect
-import app.morphe.manager.ui.screen.patcher.game.MiniGameState
 import app.morphe.manager.util.tag
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.GoogleApiAvailability
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
+import kotlinx.coroutines.launch
 import org.koin.androidx.compose.koinViewModel
 import org.koin.compose.koinInject
 import kotlin.math.exp
@@ -140,6 +142,28 @@ fun PatcherScreen(
 
     // Get output file from viewModel
     val outputFile = patcherViewModel.outputFile
+
+    val autoInstallWithShizuku by prefs.autoInstallWithShizuku.getAsState()
+    val primaryInstallerPref by prefs.installerPrimary.getAsState()
+    val promptInstallerOnInstall by prefs.promptInstallerOnInstall.getAsState()
+
+    // Auto-install: triggers when success screen appears with Shizuku as primary installer.
+    // Skipped when promptInstallerOnInstall is enabled - user gets the manual Install button instead.
+    LaunchedEffect(showSuccessScreen) {
+        if (!showSuccessScreen) return@LaunchedEffect
+        if (!autoInstallWithShizuku) return@LaunchedEffect
+        if (usingMountInstall) return@LaunchedEffect
+        if (patcherSucceeded != true) return@LaunchedEffect
+        if (primaryInstallerPref != InstallerPreferenceTokens.SHIZUKU) return@LaunchedEffect
+        if (promptInstallerOnInstall) return@LaunchedEffect
+        if (installViewModel.installState !is InstallViewModel.InstallState.Ready) return@LaunchedEffect
+        delay(300)
+        installViewModel.install(
+            outputFile = outputFile,
+            originalPackageName = patcherViewModel.packageName,
+            onPersistApp = { pkg, type -> patcherViewModel.persistPatchedApp(pkg, type) }
+        )
+    }
 
     // Progress animation logic: drives displayProgress and showSuccessScreen
     LaunchedEffect(patcherSucceeded) {
@@ -425,7 +449,12 @@ fun PatcherScreen(
             onConfirm = { selectedToken ->
                 installViewModel.proceedWithSelectedInstaller(selectedToken)
             },
-            onOpenShizuku = installerManager::openShizukuApp
+            onOpenShizuku = installerManager::openShizukuApp,
+            autoInstallEnabled = autoInstallWithShizuku,
+            onAutoInstallToggle = { enabled ->
+                scope.launch { prefs.autoInstallWithShizuku.update(enabled) }
+            },
+            installerPromptEnabled = promptInstallerOnInstall
         )
     }
 
@@ -468,8 +497,16 @@ fun PatcherScreen(
                 }
 
                 PatcherState.SUCCESS -> {
+                    val effectiveIsInstalling = isInstalling || (
+                        autoInstallWithShizuku &&
+                        primaryInstallerPref == InstallerPreferenceTokens.SHIZUKU &&
+                        patcherSucceeded == true &&
+                        !usingMountInstall &&
+                        !promptInstallerOnInstall &&
+                        installState is InstallViewModel.InstallState.Ready
+                    )
                     PatchingSuccess(
-                        isInstalling = isInstalling,
+                        isInstalling = effectiveIsInstalling,
                         isInstalled = isInstalled,
                         isError = isError,
                         isConflict = isConflict,

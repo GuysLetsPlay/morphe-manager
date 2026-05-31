@@ -7,9 +7,11 @@ package app.morphe.manager.ui.screen.settings.system
 
 import android.annotation.SuppressLint
 import android.graphics.drawable.Drawable
+import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -129,6 +131,9 @@ fun InstallerSelectionDialogContainer(
         settingsViewModel.getInstallerEntries(installTarget, primaryToken)
     }
 
+    val autoInstallEnabled by settingsViewModel.prefs.autoInstallWithShizuku.getAsState()
+    val promptEnabled by settingsViewModel.prefs.promptInstallerOnInstall.getAsState()
+
     InstallerSelectionDialog(
         title = stringResource(R.string.installer_title),
         options = options,
@@ -138,7 +143,10 @@ fun InstallerSelectionDialogContainer(
             settingsViewModel.confirmInstallerSelection(selection)
             onDismiss()
         },
-        onOpenShizuku = settingsViewModel::openShizukuApp
+        onOpenShizuku = settingsViewModel::openShizukuApp,
+        autoInstallEnabled = autoInstallEnabled,
+        onAutoInstallToggle = settingsViewModel::setAutoInstallWithShizuku,
+        installerPromptEnabled = promptEnabled
     )
 }
 
@@ -193,7 +201,10 @@ fun InstallerSelectionDialog(
     selected: InstallerManager.Token,
     onDismiss: () -> Unit,
     onConfirm: (InstallerManager.Token) -> Unit,
-    onOpenShizuku: (() -> Boolean)?
+    onOpenShizuku: (() -> Boolean)?,
+    autoInstallEnabled: Boolean = false,
+    onAutoInstallToggle: ((Boolean) -> Unit)? = null,
+    installerPromptEnabled: Boolean = false
 ) {
     val shizukuPromptReasons = remember {
         setOf(
@@ -270,6 +281,58 @@ fun InstallerSelectionDialog(
                         Text(
                             text = stringResource(R.string.installer_action_open_shizuku),
                             color = MaterialTheme.colorScheme.primary
+                        )
+                    }
+                }
+            }
+
+            // Auto-install toggle
+            AnimatedVisibility(
+                visible = currentSelection.value == InstallerManager.Token.Shizuku &&
+                        onAutoInstallToggle != null,
+                enter = MorpheAnimations.expandFadeEnter,
+                exit = MorpheAnimations.shrinkFadeExit
+            ) {
+                Column {
+                    HorizontalDivider(modifier = Modifier.padding(top = 4.dp))
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clip(MaterialTheme.shapes.medium)
+                            .clickable { onAutoInstallToggle?.invoke(!autoInstallEnabled) }
+                            .padding(vertical = 12.dp, horizontal = 4.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(16.dp)
+                    ) {
+                        MorpheIcon(icon = Icons.Outlined.Bolt)
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(
+                                text = stringResource(R.string.settings_auto_install_with_shizuku),
+                                style = MaterialTheme.typography.titleSmall,
+                                color = MaterialTheme.colorScheme.onSurface
+                            )
+                            Text(
+                                text = stringResource(R.string.settings_auto_install_with_shizuku_description),
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
+                        MorpheSwitch(
+                            checked = autoInstallEnabled,
+                            onCheckedChange = null
+                        )
+                    }
+
+                    if (installerPromptEnabled) {
+                        InfoBadge(
+                            text = stringResource(
+                                R.string.settings_auto_install_prompt_conflict,
+                                stringResource(R.string.settings_prompt_installer_on_install)
+                            ),
+                            style = InfoBadgeStyle.Warning,
+                            icon = Icons.Outlined.Warning,
+                            isExpanded = true,
+                            modifier = Modifier.padding(top = 4.dp)
                         )
                     }
                 }

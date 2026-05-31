@@ -211,6 +211,10 @@ class SettingsViewModel(
         prefs.promptInstallerOnInstall.update(enabled)
     }
 
+    fun setAutoInstallWithShizuku(enabled: Boolean) = viewModelScope.launch {
+        prefs.autoInstallWithShizuku.update(enabled)
+    }
+
     fun setUseCustomFilePicker(enabled: Boolean) = viewModelScope.launch {
         prefs.useCustomFilePicker.update(enabled)
         prefs.customFilePickerUserConfigured.update(true)
