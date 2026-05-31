@@ -1,3 +1,10 @@
+# [1.21.0-dev.1](https://github.com/MorpheApp/morphe-manager/compare/v1.20.0...v1.21.0-dev.1) (2026-05-31)
+
+
+### Features
+
+* Auto-install patched APK with Shizuku after patching completes ([c43c663](https://github.com/MorpheApp/morphe-manager/commit/c43c66368d175be5d6bfc97ebb98f5880130f833))
+
 # [1.20.0](https://github.com/MorpheApp/morphe-manager/compare/v1.19.1...v1.20.0) (2026-05-29)
 
 
