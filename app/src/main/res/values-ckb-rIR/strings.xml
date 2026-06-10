@@ -197,7 +197,7 @@
     <string name="adaptive_icon_safe_zone_outer">ناوچەی ماسک (لەوانەیە قرتێنرابێت)</string>
     <string name="adaptive_icon_created_success">وێنۆچکەی گونجاندن بە سەرکەوتوویی دروستکرا</string>
     <string name="adaptive_icon_creation_failed">شکستی هێنا لە دروستکردنی وێنۆچکەی گونجاندن</string>
-    <string name="adaptive_icon_monochrome_label">Monochrome</string>
+    <string name="adaptive_icon_monochrome_label">منۆكرۆم</string>
     <string name="adaptive_icon_guide_notification_title">وێنۆکەی ئاگانامە</string>
     <!-- Header Creator -->
     <string name="header_creator_create">دروستکردنی سەرپەڕی تایبەت</string>
@@ -207,7 +207,6 @@
     <string name="header_creator_success">سەرپەڕە بە سەرکەوتوویی دروستکرا</string>
     <string name="header_creator_failed">شکستی هێنا لە دروستکردنی سەرپەڕە</string>
     <!-- Home Screen - App Info Screen -->
-    <string name="home_app_info_uninstall_app_confirmation">Are you sure you want to uninstall this app?</string>
     <string name="home_app_info_remove_app_warning">ئایا تۆ پشتڕاستیت کە دەتەوێت ئەم کاربەرنامەیە لابدەیت؟</string>
     <string name="home_app_info_delete_item_database">داخڵکردنی بنکەدراوە</string>
     <string name="home_app_info_delete_item_patched_apk">فایلی APK پینە کراو</string>
@@ -408,30 +407,30 @@
     <!-- Settings - Advanced Tab - Patch Options Section -->
     <!-- Settings - Advanced Tab - Patch Options Section: Theme Colors -->
     <!-- Settings - Advanced Tab - Patch Options Section: Custom Branding -->
-    <string name="settings_advanced_patch_options_custom_branding_custom_icon_instruction">"Folder with images to use as a custom iconفۆڵدەرێک کە وێنەکانی تێدایە بۆ بەکارهێنان وەک ئایکۆنی تایبەت.
+    <string name="settings_advanced_patch_options_custom_branding_custom_icon_instruction">"فۆڵدەرێک لەگەڵ وێنەکانی کە دەبێت بە وێنەیەکی خۆشکردن. 
 
- فۆڵدەرەکە دەبێت یەکێک یان زیاتر لەم فۆڵدەرانەی خوارەوەی تێدابێت، بەپێی DPI ی ئامێرەکە:
+ئەو فۆڵدەرە دەبێت لە یەکێکێک یاخود زیاتر لە خوارەوەیەکانی بێت، به‌گوێره‌ی DPIی دەستە: 
 - mipmap-mdpi
 - mipmap-hdpi
 - mipmap-xhdpi
 - mipmap-xxhdpi
 - mipmap-xxxhdpi
 
-هەریەک لە فۆڵدەرەکان دەبێت هەموو ئەم فایلانەی خوارەوەی تێدابێت:
+هرگەلێک دەبێت هەمووشيءەکى خوارەوەكانى تێدابێت: 
 morphe_adaptive_background_custom.png
 morphe_adaptive_foreground_custom.png
 
-ڕەهەندەکانی وێنەکە دەبێت بەم شێوەیە بێت:
+ئەو ابعادی وێنەی دەبێت بە میلان دەبت: 
 - mipmap-mdpi: 108x108 px
 - mipmap-hdpi: 162x162 px
 - mipmap-xhdpi: 216x216 px
 - mipmap-xxhdpi: 324x324 px
 - mipmap-xxxhdpi: 432x432 px
 
-بە ئیختیاری، ڕێڕەوەکە فۆڵدەرێکی 'drawable' لەخۆدەگرێت کە فایلێکی ئایکۆنی تاکڕەنگی تێدایە:
+زیاتر، ڕێیەکە دەتوانێت فۆڵدەرێکى 'drawable' یی هەبێت لەگەڵ فایشێک ڕێهە: 
 morphe_adaptive_monochrome_custom.xml
 
-بە ئیختیاری ڕێڕەوەکە ئایکۆنی ئاگادارکردنەوە لەخۆدەگرێت بە یەکێک لەم فۆرماتانەی خوارەوە:
+زیاتر، ڕێیەکە دەتوانێت نیشانەیەکی پێگەی پێکهاتوە لە ڕێکخستەی خوارەوەیەکانی هەبێت: 
 - XML vector drawable in 'drawable':
   morphe_notification_icon_custom.xml
 - PNG raster images in 'drawable-dpi' folders:
@@ -454,4 +453,8 @@ morphe_adaptive_monochrome_custom.xml
     <!-- File Picker -->
     <!-- Settings - System Tab - About Section -->
     <!-- Shared strings -->
+    <!-- Onboarding coach marks -->
+    <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
+    <!-- Translate "System" the same way as the System settings tab -->
+    <!-- Tour prompt dialog shown after first successful patch install -->
 </resources>

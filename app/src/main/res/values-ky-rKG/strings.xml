@@ -69,4 +69,8 @@
     <!-- Shared strings -->
     <string name="enabled">Ишке киргизилген</string>
     <string name="disabled">Иштен чыгарылган</string>
+    <!-- Onboarding coach marks -->
+    <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
+    <!-- Translate "System" the same way as the System settings tab -->
+    <!-- Tour prompt dialog shown after first successful patch install -->
 </resources>

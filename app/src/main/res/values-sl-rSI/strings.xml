@@ -118,6 +118,11 @@
     <string name="home_download_instructions_step1">Pritisnite gumb \"%s\" spodaj</string>
     <string name="home_download_instructions_step2_part1">Podrsajte po spletni strani navzdol in pritisni</string>
     <string name="home_download_instructions_download_button_toast">Pritisnite na gumb za prenos na spletni strani, ne tukaj 😊</string>
+    <string name="home_download_instructions_download_button_toast_2">Super! Sedaj kliknite na gumb \"nadaljuj\" spodaj in obiščite spletno stran 👆</string>
+    <string name="home_download_instructions_download_button_toast_3">Vaja dela mojstra, skoraj si že tam! 💪</string>
+    <string name="home_download_instructions_download_button_toast_4">Ne še tukaj… ne še tukaj… 🙈</string>
+    <string name="home_download_instructions_download_button_toast_5">OK spoštujem predanost 🫡</string>
+    <string name="home_download_instructions_download_button_toast_6">Zdaj ste uradni Morphe preizkuševalec gumbov 🏅</string>
     <string name="home_download_instructions_step3">Počakajte, da se prenos konča, in &lt;b&gt;ne namestite&lt;/b&gt; APK</string>
     <string name="home_download_instructions_step3_mount">Počakaj, da se prenos konča, nato &lt;b&gt;namešči APK&lt;/b&gt;</string>
     <string name="home_download_instructions_step4">Po končanem prenosu se vrnite v Morphe</string>
@@ -602,6 +607,9 @@ Dimenzije slike morajo biti naslednje:
     <string name="installer_use_standard">Uporabite standardno</string>
     <string name="settings_prompt_installer_on_install">Poziv izbire namestitvenega programa</string>
     <string name="settings_prompt_installer_on_install_description">Prikaže pogovorno okno za izbiro namestitvenega programa vsakokrat, ko je nameščena popravljena aplikacija</string>
+    <string name="settings_auto_install_with_shizuku">Samodejna namestitev po popravku</string>
+    <string name="settings_auto_install_with_shizuku_description">Tiho namesti popravljeni APK takoj po končanem popravljanju</string>
+    <string name="settings_auto_install_prompt_conflict">\"%s\" je omogočen - samodejna namestitev bo preskočena</string>
     <!-- Settings - System Tab - Performance Section -->
     <string name="settings_system_battery_optimization">Optimizacija baterije</string>
     <string name="settings_system_battery_optimization_description">Ohranja popravek v teku, ko je aplikacija pomanjšana</string>
@@ -689,7 +697,7 @@ Dimenzije slike morajo biti naslednje:
     <!-- File Picker -->
     <string name="file_picker_previous_directory">Prejšnji imenik</string>
     <string name="file_picker_no_files">Ni datotek tukaj</string>
-    <string name="file_picker_read_error">Ne morem prebrati te mape</string>
+    <string name="file_picker_read_error">Ni mogoče prebrati te mape</string>
     <string name="file_picker_internal_storage">Notranji pomnilnik</string>
     <string name="file_picker_sd_card">SD kartica</string>
     <string name="file_picker_root">Koren (/)</string>
@@ -726,6 +734,10 @@ Dimenzije slike morajo biti naslednje:
     <string name="retry">Poskusite znova</string>
     <string name="add">Dodaj</string>
     <string name="close">Zapri</string>
+    <string name="back">Nazaj</string>
+    <string name="next">Naprej</string>
+    <string name="done">Končano</string>
+    <string name="skip">Preskoči</string>
     <string name="clear">Počisti</string>
     <string name="delete">Izbriši</string>
     <string name="remove">Odstrani</string>
@@ -804,4 +816,29 @@ Dimenzije slike morajo biti naslednje:
     <string name="resume_download">Nadaljuj prenos</string>
     <string name="download_confirmation_metered">"Trenutno ste povezani z omejeno povezavo in se vam lahko zaračunajo stroški ponudnika storitev. Želite nadaljevati?"</string>
     <string name="download_update_confirmation">Prenesem posodobitev?</string>
+    <!-- Onboarding coach marks -->
+    <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
+    <string name="onboarding_step_of">%1$d od %2$d</string>
+    <string name="onboarding_sources_desc">Upravljajte vire popravkov. Vsak vir zagotavlja popravke, ki jih je mogoče uporabiti za vaše aplikacije</string>
+    <string name="onboarding_swipe_title">Gestikulacije z drsenjem</string>
+    <string name="onboarding_swipe_desc">Drgnite v desno po kartici aplikacije, da si ogledate razpoložljive popravke. Drgnite v levo, da skrijete kartico z začetnega zaslona</string>
+    <string name="onboarding_settings_desc">Prilagodite Morphe: videz, napredne možnosti in sistemska orodja</string>
+    <string name="onboarding_sources_patches_desc">Dotaknite se, da si ogledate vse popravke, ki so na voljo iz tega vira</string>
+    <string name="onboarding_sources_version_desc">Dotaknite se različice, da si ogledate celoten seznam sprememb za ta vir</string>
+    <string name="onboarding_sources_prerelease_desc">Omogočite to, da prejemate predizdajne različice popravkov iz tega vira</string>
+    <string name="onboarding_appearance_tab_desc">Prilagodite videz aplikacije: temo, barvo poudarka in ozadje</string>
+    <string name="onboarding_appearance_theme_desc">Izberite med svetlo, temno ali sistemsko temo. Izberete lahko tudi barvo poudarka po meri ali omogočite dinamično barvo</string>
+    <string name="onboarding_expert_mode_desc">Omogočite način strokovnjaka, da odklepate izbor popravkov, možnosti po meri in druge napredne funkcije</string>
+    <!-- Translate "System" the same way as the System settings tab -->
+    <string name="onboarding_system_tab_title">Zavihek Sistem</string>
+    <string name="onboarding_system_tab_desc">Upravljanje shranjenega ključa, orodja za uvoz/izvoz in informacije o aplikaciji</string>
+    <string name="onboarding_system_installer_desc">Izberite, kako se popravljene aplikacije namestijo: standardno, v korenske mape ali s Shizuku</string>
+    <string name="onboarding_system_process_runtime_desc">Zaženite popravljanje v ločenem procesu za izboljšanje stabilnosti in nadzor porabe pomnilnika. Priporočljivo za velike aplikacije</string>
+    <string name="onboarding_system_file_picker_desc">Omogočite uporabo vgrajenega brskalnika datotek namesto sistemskega izbirnika pri izbiri datotek APK ali shranjenih ključev</string>
+    <!-- Tour prompt dialog shown after first successful patch install -->
+    <string name="tour_prompt_title">Hiter pregled funkcij</string>
+    <string name="tour_prompt_desc">Želite hiter pregled ključnih funkcij Morphe?</string>
+    <string name="tour_prompt_confirm">Pokaži mi</string>
+    <string name="onboarding_restart_title">Pregled funkcij</string>
+    <string name="onboarding_restart_desc">Izvedite voden pregled ključnih funkcij Morphe</string>
 </resources>

@@ -4,7 +4,7 @@
         <item quantity="other">%s tampalan</item>
     </plurals>
     <plurals name="option_count">
-        <item quantity="other">%s pilihan</item>
+        <item quantity="other">%s pilihan tampalan</item>
     </plurals>
     <plurals name="source_count">
         <item quantity="other">%s sumber</item>
@@ -12,16 +12,22 @@
     <plurals name="package_count">
         <item quantity="other">%s pakej</item>
     </plurals>
+    <plurals name="patches_executed">
+        <item quantity="other">Laksanakan %s tampalan</item>
+    </plurals>
     <plurals name="settings_system_apks_count">
         <item quantity="other">%s fail APK</item>
     </plurals>
     <plurals name="home_app_info_repatch_cleaned_invalid_data">
-        <item quantity="other">%s tampalan usang telah dialih keluar daripada pilihan yang disimpan</item>
+        <item quantity="other">Keluarkan %s tampalan lapuk daripada pilihan yang disimpan</item>
     </plurals>
     <plurals name="sources_management_subtitle">
         <item quantity="other">%s sumber dipasang</item>
     </plurals>
     <plurals name="patch_selection_total_patches">
         <item quantity="other">%s tampalan dipilih</item>
+    </plurals>
+    <plurals name="home_app_show_hidden_count">
+        <item quantity="other">%s aplikasi tersorok</item>
     </plurals>
 </resources>

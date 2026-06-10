@@ -125,6 +125,11 @@
     <string name="home_download_instructions_step1">Press the \'%s\' button below</string>
     <string name="home_download_instructions_step2_part1">Scroll down the webpage and press</string>
     <string name="home_download_instructions_download_button_toast">Press download on the website, and not here 😊</string>
+    <string name="home_download_instructions_download_button_toast_2">Perfect! Now click continue below and go to the website 👆</string>
+    <string name="home_download_instructions_download_button_toast_3">Practice makes perfect, you\'re getting there! 💪</string>
+    <string name="home_download_instructions_download_button_toast_4">Still not here… still not here… 🙈</string>
+    <string name="home_download_instructions_download_button_toast_5">OK I respect the dedication 🫡</string>
+    <string name="home_download_instructions_download_button_toast_6">You are now an official Morphe button tester 🏅</string>
     <string name="home_download_instructions_step3">Wait for the download to complete, and &lt;b&gt;do not install&lt;/b&gt; the APK</string>
     <string name="home_download_instructions_step3_mount">Wait for the download to complete, then &lt;b&gt;install the APK&lt;/b&gt;</string>
     <string name="home_download_instructions_step4">After the download finishes, return to Morphe</string>
@@ -658,6 +663,9 @@ The image dimensions must be as follows:
     <string name="installer_use_standard">Use standard</string>
     <string name="settings_prompt_installer_on_install">Installer selection prompt</string>
     <string name="settings_prompt_installer_on_install_description">Shows installer selection dialog each time a patched app is installed</string>
+    <string name="settings_auto_install_with_shizuku">Auto-install after patching</string>
+    <string name="settings_auto_install_with_shizuku_description">Silently installs the patched APK as soon as patching completes</string>
+    <string name="settings_auto_install_prompt_conflict">\"%s\" is enabled - auto-install will be skipped</string>
 
     <!-- Settings - System Tab - Performance Section -->
     <string name="settings_system_battery_optimization">Battery optimization</string>
@@ -794,6 +802,10 @@ The image dimensions must be as follows:
     <string name="retry">Retry</string>
     <string name="add">Add</string>
     <string name="close">Close</string>
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+    <string name="done">Done</string>
+    <string name="skip">Skip</string>
     <string name="clear">Clear</string>
     <string name="delete">Delete</string>
     <string name="remove">Remove</string>
@@ -877,4 +889,30 @@ The image dimensions must be as follows:
 
 Do you still want to continue?"</string>
     <string name="download_update_confirmation">Download update?</string>
+
+    <!-- Onboarding coach marks -->
+    <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
+    <string name="onboarding_step_of">%1$d of %2$d</string>
+    <string name="onboarding_sources_desc">Manage your patch sources. Each source provides patches that can be applied to your apps</string>
+    <string name="onboarding_swipe_title">Swipe gestures</string>
+    <string name="onboarding_swipe_desc">Swipe right on an app card to view its available patches. Swipe left to hide the card from the home screen</string>
+    <string name="onboarding_settings_desc">Customize Morphe: appearance, advanced options, and system tools</string>
+    <string name="onboarding_sources_patches_desc">Tap to view all patches available from this source</string>
+    <string name="onboarding_sources_version_desc">Tap the version to view the full changelog for this source</string>
+    <string name="onboarding_sources_prerelease_desc">Enable this to receive pre-release patch versions from this source</string>
+    <string name="onboarding_appearance_tab_desc">Customize the app\'s look: theme, accent color, and background</string>
+    <string name="onboarding_appearance_theme_desc">Choose between light, dark, or system theme. You can also pick a custom accent color or enable Dynamic Color</string>
+    <string name="onboarding_expert_mode_desc">Enable Expert Mode to unlock patch selection, custom options, and other advanced features</string>
+    <!-- Translate "System" the same way as the System settings tab -->
+    <string name="onboarding_system_tab_title">System tab</string>
+    <string name="onboarding_system_tab_desc">Keystore management, import/export tools, and app information</string>
+    <string name="onboarding_system_installer_desc">Choose how patched apps are installed: standard, root mount, or Shizuku</string>
+    <string name="onboarding_system_process_runtime_desc">Run patching in a separate process to improve stability and control memory usage. Recommended for large apps</string>
+    <string name="onboarding_system_file_picker_desc">Enable to use the built-in file browser instead of the system picker when selecting APKs or keystores</string>
+    <!-- Tour prompt dialog shown after first successful patch install -->
+    <string name="tour_prompt_title">Quick feature tour</string>
+    <string name="tour_prompt_desc">Want a quick tour of Morphe\'s key features?</string>
+    <string name="tour_prompt_confirm">Show me around</string>
+    <string name="onboarding_restart_title">Feature tour</string>
+    <string name="onboarding_restart_desc">Take a guided tour of Morphe\'s key features</string>
 </resources>

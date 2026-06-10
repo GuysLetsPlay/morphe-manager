@@ -221,4 +221,8 @@ morphe_header_custom_dark.png
     <string name="settings">સેટિંગ્સ</string>
     <string name="search">શોધો</string>
     <string name="search_no_results">કોઈ પરિણામ મળ્યું નથી.</string>
+    <!-- Onboarding coach marks -->
+    <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
+    <!-- Translate "System" the same way as the System settings tab -->
+    <!-- Tour prompt dialog shown after first successful patch install -->
 </resources>

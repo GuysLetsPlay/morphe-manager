@@ -118,6 +118,11 @@
     <string name="home_download_instructions_step1">Tryk på \'%s\' knappen nedenfor</string>
     <string name="home_download_instructions_step2_part1">Rul ned på websiden og tryk</string>
     <string name="home_download_instructions_download_button_toast">Tryk på download på hjemmesiden, og ikke her 😊</string>
+    <string name="home_download_instructions_download_button_toast_2">Perfekt! Klik nu på fortsæt nedenfor og gå til hjemmesiden 👆</string>
+    <string name="home_download_instructions_download_button_toast_3">Øvelse gør mester, du er ved at være der! 💪</string>
+    <string name="home_download_instructions_download_button_toast_4">Stadig ikke her… stadig ikke her… 🙈</string>
+    <string name="home_download_instructions_download_button_toast_5">OK, jeg respekterer dedikationen 🫡</string>
+    <string name="home_download_instructions_download_button_toast_6">Du er nu en officiel Morphe-knaptester 🏅</string>
     <string name="home_download_instructions_step3">Vent på at downloaden er færdig, og &lt;b&gt;installer ikke&lt;/b&gt; APK\'en</string>
     <string name="home_download_instructions_step3_mount">Vent på at downloaden er færdig, og &lt;b&gt;installer APK\'en&lt;/b&gt;</string>
     <string name="home_download_instructions_step4">Når downloaden er færdigt, vend tilbage til Morphe</string>
@@ -602,6 +607,9 @@ Størrelsesformatet skal være som følger:
     <string name="installer_use_standard">Brug standard</string>
     <string name="settings_prompt_installer_on_install">Installatørvalgsmeddelelse</string>
     <string name="settings_prompt_installer_on_install_description">Vis installer-valgdialog hver gang du installerer en patchet app</string>
+    <string name="settings_auto_install_with_shizuku">Automatisk installation efter patching</string>
+    <string name="settings_auto_install_with_shizuku_description">Installerer automatisk den patched APK, så snart patching er fuldført</string>
+    <string name="settings_auto_install_prompt_conflict">\"%s\" er aktiveret - automatisk installation vil blive sprunget over</string>
     <!-- Settings - System Tab - Performance Section -->
     <string name="settings_system_battery_optimization">Batterioptimering</string>
     <string name="settings_system_battery_optimization_description">Holder patcheren kørende, når appen er minimeret</string>
@@ -726,6 +734,10 @@ Størrelsesformatet skal være som følger:
     <string name="retry">Forsøg igen</string>
     <string name="add">Tilføj</string>
     <string name="close">Luk</string>
+    <string name="back">Tilbage</string>
+    <string name="next">Næste</string>
+    <string name="done">Færdig</string>
+    <string name="skip">Spring over</string>
     <string name="clear">Ryd</string>
     <string name="delete">Slet</string>
     <string name="remove">Fjern</string>
@@ -806,4 +818,29 @@ Størrelsesformatet skal være som følger:
 
 Vil du stadig fortsætte?"</string>
     <string name="download_update_confirmation">Download opdatering?</string>
+    <!-- Onboarding coach marks -->
+    <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
+    <string name="onboarding_step_of">%1$d af %2$d</string>
+    <string name="onboarding_sources_desc">Administrer dine patch-kilder. Hver kilde leverer patches, der kan anvendes på dine apps</string>
+    <string name="onboarding_swipe_title">Swipe-gestusser</string>
+    <string name="onboarding_swipe_desc">Stryg til højre på et app-kort for at se de tilgængelige patches. Stryg til venstre for at skjule kortet fra startskærmen</string>
+    <string name="onboarding_settings_desc">Tilpas Morphe: udseende, avancerede indstillinger og systemværktøjer</string>
+    <string name="onboarding_sources_patches_desc">Tryk for at se alle patches, der er tilgængelige fra denne kilde</string>
+    <string name="onboarding_sources_version_desc">Tryk på versionen for at se den fulde ændringslog for denne kilde</string>
+    <string name="onboarding_sources_prerelease_desc">Aktiver dette for at modtage præ-release patch-versioner fra denne kilde</string>
+    <string name="onboarding_appearance_tab_desc">Tilpas appens udseende: tema, accentfarve og baggrund</string>
+    <string name="onboarding_appearance_theme_desc">Vælg mellem lys, mørkt eller systemtema. Du kan også vælge en brugerdefineret accentfarve eller aktivere Dynamisk farve</string>
+    <string name="onboarding_expert_mode_desc">Aktiver Eksperttilstand for at låse op for patch-valg, brugerdefinerede indstillinger og andre avancerede funktioner</string>
+    <!-- Translate "System" the same way as the System settings tab -->
+    <string name="onboarding_system_tab_title">Systemfane</string>
+    <string name="onboarding_system_tab_desc">Keystore-administration, import-/eksportværktøjer og appoplysninger</string>
+    <string name="onboarding_system_installer_desc">Vælg, hvordan patched apps installeres: standard, root mount eller Shizuku</string>
+    <string name="onboarding_system_process_runtime_desc">Kør patching i en separat proces for at forbedre stabiliteten og kontrollere hukommelsesforbruget. Anbefales til store apps</string>
+    <string name="onboarding_system_file_picker_desc">Aktiver for at bruge den indbyggede filbrowser i stedet for systemvælgeren, når du vælger APK\'er eller keystores</string>
+    <!-- Tour prompt dialog shown after first successful patch install -->
+    <string name="tour_prompt_title">Hurtig rundvisning i funktioner</string>
+    <string name="tour_prompt_desc">Vil du have en hurtig rundvisning i Morph’s vigtigste funktioner?</string>
+    <string name="tour_prompt_confirm">Vis mig rundt</string>
+    <string name="onboarding_restart_title">Funktionstur</string>
+    <string name="onboarding_restart_desc">Tag en guidet rundvisning i Morph’s vigtigste funktioner</string>
 </resources>

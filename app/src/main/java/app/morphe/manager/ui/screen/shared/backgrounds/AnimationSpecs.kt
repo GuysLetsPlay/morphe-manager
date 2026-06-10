@@ -121,7 +121,7 @@ fun rememberParallaxState(
                 }
 
                 val rawTiltX = event.values[0] - baselineX
-                val rawTiltY = event.values[1] - baselineY
+                val rawTiltY = -(event.values[1] - baselineY)
 
                 coroutineScope.launch {
                     smoothTiltX.animateTo(

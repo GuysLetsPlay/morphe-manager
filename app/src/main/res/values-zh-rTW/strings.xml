@@ -118,6 +118,11 @@
     <string name="home_download_instructions_step1">點擊下方的「%s」按鈕</string>
     <string name="home_download_instructions_step2_part1">向下捲動網頁並點擊</string>
     <string name="home_download_instructions_download_button_toast">在網站上按下下載，而不是在這裡 😊</string>
+    <string name="home_download_instructions_download_button_toast_2">太棒了！現在點擊下方「繼續」並前往網站 👆</string>
+    <string name="home_download_instructions_download_button_toast_3">熟能生巧，你快要成功了！ 💪</string>
+    <string name="home_download_instructions_download_button_toast_4">還沒到…還沒到… 🙈</string>
+    <string name="home_download_instructions_download_button_toast_5">好的，我尊重您的奉獻 🫡</string>
+    <string name="home_download_instructions_download_button_toast_6">您現在是 Morphe 官方按鈕測試員 🏅</string>
     <string name="home_download_instructions_step3">等待下載完成，並且 <b>請勿安裝</b> 該 APK</string>
     <string name="home_download_instructions_step3_mount">等待下載完成，然後 <b>安裝該 APK</b></string>
     <string name="home_download_instructions_step4">下載完成後，回到 Morphe</string>
@@ -602,6 +607,9 @@ morphe_header_custom_dark.png
     <string name="installer_use_standard">使用標準</string>
     <string name="settings_prompt_installer_on_install">安裝程式選擇提示</string>
     <string name="settings_prompt_installer_on_install_description">每次安裝修補後的應用程式時顯示安裝程式選取對話方塊</string>
+    <string name="settings_auto_install_with_shizuku">修補完成後自動安裝</string>
+    <string name="settings_auto_install_with_shizuku_description">修補完成後會立即自動安裝 APK</string>
+    <string name="settings_auto_install_prompt_conflict">\"%s\" 已啟用 - 將略過自動安裝</string>
     <!-- Settings - System Tab - Performance Section -->
     <string name="settings_system_battery_optimization">電池最佳化</string>
     <string name="settings_system_battery_optimization_description">即使應用程式被最小化，也會保持修補程式的運行</string>
@@ -726,6 +734,10 @@ morphe_header_custom_dark.png
     <string name="retry">重試</string>
     <string name="add">新增</string>
     <string name="close">關閉</string>
+    <string name="back">返回</string>
+    <string name="next">下一步</string>
+    <string name="done">完成</string>
+    <string name="skip">跳過</string>
     <string name="clear">清除</string>
     <string name="delete">刪除</string>
     <string name="remove">刪除</string>
@@ -806,4 +818,29 @@ morphe_header_custom_dark.png
 
 您仍要繼續嗎？\""</string>
     <string name="download_update_confirmation">要下載更新嗎？</string>
+    <!-- Onboarding coach marks -->
+    <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
+    <string name="onboarding_step_of">%1$d / %2$d</string>
+    <string name="onboarding_sources_desc">管理您的補丁來源。每個來源提供可應用於您的應用程式的補丁</string>
+    <string name="onboarding_swipe_title">手勢</string>
+    <string name="onboarding_swipe_desc">向右滑動應用程式卡片以查看其可用補丁。向左滑動可從主螢幕隱藏卡片</string>
+    <string name="onboarding_settings_desc">自訂 Morphe：外觀、進階選項和系統工具</string>
+    <string name="onboarding_sources_patches_desc">點擊以查看此來源提供的所有補丁</string>
+    <string name="onboarding_sources_version_desc">點擊版本以查看此來源的完整變更日誌</string>
+    <string name="onboarding_sources_prerelease_desc">啟用此選項可從此來源接收預發布補丁版本</string>
+    <string name="onboarding_appearance_tab_desc">自訂應用程式的外觀：主題、重點顏色和背景</string>
+    <string name="onboarding_appearance_theme_desc">在淺色、深色或系統主題之間切換。您還可以選擇自訂重點顏色或啟用動態色彩</string>
+    <string name="onboarding_expert_mode_desc">啟用專家模式以解鎖補丁選擇、自訂選項和其他進階功能</string>
+    <!-- Translate "System" the same way as the System settings tab -->
+    <string name="onboarding_system_tab_title">系統標籤</string>
+    <string name="onboarding_system_tab_desc">金鑰庫管理、匯入/匯出工具和應用程式資訊</string>
+    <string name="onboarding_system_installer_desc">選擇修補應用程式的安裝方式：標準、root mount 或 Shizuku</string>
+    <string name="onboarding_system_process_runtime_desc">以獨立的程序執行修補，以提高穩定性和控制記憶體使用量。建議用於大型應用程式</string>
+    <string name="onboarding_system_file_picker_desc">啟用此選項可在選擇 APK 或金鑰庫時使用內建檔案瀏覽器，而不是系統挑選器</string>
+    <!-- Tour prompt dialog shown after first successful patch install -->
+    <string name="tour_prompt_title">快速功能導覽</string>
+    <string name="tour_prompt_desc">想要快速導覽 Morphe 的主要功能嗎？</string>
+    <string name="tour_prompt_confirm">帶我走一趟</string>
+    <string name="onboarding_restart_title">功能導覽</string>
+    <string name="onboarding_restart_desc">進行 Morphe 主要功能的引導式導覽</string>
 </resources>

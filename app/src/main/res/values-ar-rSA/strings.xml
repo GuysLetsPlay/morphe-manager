@@ -118,6 +118,11 @@
     <string name="home_download_instructions_step1">انقر على زر \'%s\' أدناه</string>
     <string name="home_download_instructions_step2_part1">مرر لأسفل صفحة الويب واضغط</string>
     <string name="home_download_instructions_download_button_toast">اضغط على التنزيل من الموقع الإلكتروني، وليس هنا 😊</string>
+    <string name="home_download_instructions_download_button_toast_2">مثالي! الآن انقر على متابعة أدناه وانتقل إلى الموقع الإلكتروني 👆</string>
+    <string name="home_download_instructions_download_button_toast_3">الممارسة تُؤدي إلى الإتقان، أنت تقترب من ذلك! 💪</string>
+    <string name="home_download_instructions_download_button_toast_4">ليس هنا بعد… ليس هنا بعد… 🙈</string>
+    <string name="home_download_instructions_download_button_toast_5">حسنًا، أنا أحترم هذا التفاني 🫡</string>
+    <string name="home_download_instructions_download_button_toast_6">أنت الآن مختبر رسمي لزر Morphe 🏅</string>
     <string name="home_download_instructions_step3">انتظر حتى يكتمل التنزيل، و&lt;b&gt;لا تقم بتثبيت&lt;/b&gt; ملف APK</string>
     <string name="home_download_instructions_step3_mount">انتظر حتى يكتمل التنزيل، ثم &lt;b&gt;قم بتثبيت ملف APK&lt;/b&gt;</string>
     <string name="home_download_instructions_step4">بعد انتهاء التنزيل، ارجع إلى Morphe</string>
@@ -575,7 +580,7 @@ morphe_adaptive_monochrome_custom.xml
     <string name="settings_advanced_patch_options_hide_shorts_widget_description">يُزيل زر Shorts من Widget الشاشة الرئيسية</string>
     <!-- Settings - System Tab - Installer Section -->
     <string name="installer">أداة التثبيت</string>
-    <string name="installer_title">حدد أداة التثبيت</string>
+    <string name="installer_title">اختر أداة التثبيت</string>
     <string name="installer_internal_name">أداة تثبيت النظام</string>
     <string name="installer_internal_description">يستخدم أداة تثبيت حزم Android</string>
     <string name="installer_auto_saved_name">أداة تثبيت تركيب Rooted</string>
@@ -603,6 +608,9 @@ morphe_adaptive_monochrome_custom.xml
     <string name="installer_use_standard">استخدام القياسي</string>
     <string name="settings_prompt_installer_on_install">نافذة اختيار أداة التثبيت</string>
     <string name="settings_prompt_installer_on_install_description">يعرض نافذة اختيار أداة التثبيت في كل مرة تقوم فيها بتثبيت تطبيق معدل</string>
+    <string name="settings_auto_install_with_shizuku">التثبيت التلقائي بعد التعديل</string>
+    <string name="settings_auto_install_with_shizuku_description">يقوم بتثبيت ملف APK المُعدّل تلقائيًا بمجرد اكتمال عملية التعديل</string>
+    <string name="settings_auto_install_prompt_conflict">\"%s\" مُفعّل - سيتم تخطي التثبيت التلقائي</string>
     <!-- Settings - System Tab - Performance Section -->
     <string name="settings_system_battery_optimization">تحسينات البطارية</string>
     <string name="settings_system_battery_optimization_description">يحافظ على تشغيل أداة التعديل عند تصغير التطبيق</string>
@@ -690,7 +698,7 @@ morphe_adaptive_monochrome_custom.xml
     <!-- File Picker -->
     <string name="file_picker_previous_directory">المجلد السابق</string>
     <string name="file_picker_no_files">لا توجد ملفات هنا</string>
-    <string name="file_picker_read_error">لا يمكننق قراءة هذا المجلد</string>
+    <string name="file_picker_read_error">لا يمكن قراءة هذا المجلد</string>
     <string name="file_picker_internal_storage">التخزين الداخلي</string>
     <string name="file_picker_sd_card">الذاكرة الخارجية SD</string>
     <string name="file_picker_root">Root (/)</string>
@@ -710,8 +718,8 @@ morphe_adaptive_monochrome_custom.xml
     <string name="credits_prior_development">التطوير المسبق</string>
     <string name="opensource_licenses">تراخيص مفتوحة المصدر</string>
     <!-- Shared strings -->
-    <string name="select_file">حدّد ملف</string>
-    <string name="select_folder">حدّد مجلد</string>
+    <string name="select_file">اختر ملف</string>
+    <string name="select_folder">اختر مجلد</string>
     <string name="patches">التعديلات</string>
     <string name="home">الصفحة الرئيسية</string>
     <string name="settings">الإعدادات</string>
@@ -727,6 +735,10 @@ morphe_adaptive_monochrome_custom.xml
     <string name="retry">إعادة المحاولة</string>
     <string name="add">إضافة</string>
     <string name="close">إغلاق</string>
+    <string name="back">رجوع</string>
+    <string name="next">التالي</string>
+    <string name="done">تم</string>
+    <string name="skip">تخطي</string>
     <string name="clear">مسح</string>
     <string name="delete">حذف</string>
     <string name="remove">إزالة</string>
@@ -807,4 +819,30 @@ morphe_adaptive_monochrome_custom.xml
 
 هل لا تزال ترغب في المتابعة؟"</string>
     <string name="download_update_confirmation">تنزيل التحديث؟</string>
+    <!-- Onboarding coach marks -->
+    <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
+    <string name="onboarding_step_of">‎%1$d من %2$d‎</string>
+    <string name="onboarding_sources_desc">إدارة مصادر التعديلات الخاصة بك. يوفر كل مصدر تعديلات يمكن تطبيقها على تطبيقاتك</string>
+    <string name="onboarding_swipe_title">إيماءات التمرير</string>
+    <string name="onboarding_swipe_desc">مرِّر لليمين على بطاقة التطبيق لعرض التعديلات المتاحة له. مرٍّر لليسار لإخفاء البطاقة من الشاشة الرئيسية</string>
+    <string name="onboarding_settings_desc">تخصيص Morphe: المظهر، الخيارات المتقدمة، وأدوات النظام</string>
+    <string name="onboarding_sources_patches_desc">انقر لعرض جميع التعديلات المتاحة من هذا المصدر</string>
+    <string name="onboarding_sources_version_desc">انقر على الإصدار لعرض سجل التغييرات الكامل لهذا المصدر</string>
+    <string name="onboarding_sources_prerelease_desc">قم بتمكين هذا لتلقي إصدارات تعديلات ما قبل الإطلاق من هذا المصدر</string>
+    <string name="onboarding_appearance_tab_desc">تخصيص مظهر التطبيق: السمة، لون التمييز، والخلفية</string>
+    <string name="onboarding_appearance_theme_desc">اختر بين المظهر الفاتح، الداكن، أو مظهر النظام. يمكنك أيضًا اختيار لون تمييز مخصص أو تمكين الألوان الديناميكية</string>
+    <string name="onboarding_expert_mode_desc">قم بتمكين وضع الخبير لفتح اختيار التعديل، الخيارات المخصصة، والميزات المتقدمة الأخرى</string>
+    <!-- Translate "System" the same way as the System settings tab -->
+    <string name="onboarding_system_tab_title">علامة تبويب النظام</string>
+    <string name="onboarding_system_tab_desc">إدارة المفاتيح، أدوات الاستيراد/التصدير، ومعلومات التطبيق</string>
+    <string name="onboarding_system_installer_desc">اختر كيفية تثبيت التطبيقات التي تم تعديلها: قياسي، Root Mount، أو Shizuku</string>
+    <string name="onboarding_system_process_runtime_desc">تشغيل التعديل في عملية منفصلة لتحسين الاستقرار والتحكم في استخدام الذاكرة.
+موصى به للتطبيقات الكبيرة</string>
+    <string name="onboarding_system_file_picker_desc">قم بتمكين هذا لاستخدام متصفح الملفات المدمج بدلًا من منتقي النظام عند تحديد ملفات APK أو المفاتيح</string>
+    <!-- Tour prompt dialog shown after first successful patch install -->
+    <string name="tour_prompt_title">جولة سريعة في الميزات</string>
+    <string name="tour_prompt_desc">هل تريد جولة سريعة في الميزات الرئيسية لـ Morphe؟</string>
+    <string name="tour_prompt_confirm">خذني في جولة</string>
+    <string name="onboarding_restart_title">جولة في الميزات</string>
+    <string name="onboarding_restart_desc">قم بجولة إرشادية في الميزات الرئيسية لـ Morphe</string>
 </resources>

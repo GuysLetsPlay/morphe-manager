@@ -81,6 +81,7 @@ class PreferencesManager(
     val promptInstallerOnInstall = booleanPreference("prompt_installer_on_install", false)
     val installerCustomComponents = stringSetPreference("installer_custom_components", emptySet())
     val installerHiddenComponents = stringSetPreference("installer_hidden_components", emptySet())
+    val autoInstallWithShizuku = booleanPreference("auto_install_with_shizuku", false)
 
     val useProcessRuntime = booleanPreference(
         "process_runtime", // Old key was 'use_process_runtime' and may have the wrong default for some devices.

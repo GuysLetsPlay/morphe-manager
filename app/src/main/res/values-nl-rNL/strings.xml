@@ -115,6 +115,11 @@
     <string name="home_download_instructions_steps_title">Instructies:</string>
     <string name="home_download_instructions_step2_part1">Scroll naar beneden op de webpagina en druk op</string>
     <string name="home_download_instructions_download_button_toast">Druk op de download op de website, en niet hier 😊</string>
+    <string name="home_download_instructions_download_button_toast_2">Perfect! Klik nu op \'verder\' hieronder en ga naar de website 👆</string>
+    <string name="home_download_instructions_download_button_toast_3">Oefening baart kunst, je bent er bijna! 💪</string>
+    <string name="home_download_instructions_download_button_toast_4">Nog steeds niet hier… nog steeds niet hier… 🙈</string>
+    <string name="home_download_instructions_download_button_toast_5">OK, ik respecteer de toewijding 🫡</string>
+    <string name="home_download_instructions_download_button_toast_6">Je bent nu een officiële Morphe knop tester 🏅</string>
     <string name="home_download_instructions_step3">Wacht tot de download is voltooid, en &lt;b&gt;installeer de APK niet&lt;/b&gt;</string>
     <string name="home_download_instructions_step3_mount">Wacht tot de download is voltooid, en &lt;b&gt;installeer de APK&lt;/b&gt;</string>
     <string name="home_download_instructions_step4">Na het downloaden, ga terug naar Morphe</string>
@@ -599,6 +604,9 @@ De afbeelddimensionen moeten als volgt zijn:
     <string name="installer_use_standard">Standaard gebruiken</string>
     <string name="settings_prompt_installer_on_install">Keuze van installer</string>
     <string name="settings_prompt_installer_on_install_description">Toont het dialoogvenster voor het selecteren van de installer bij elke geïnstalleerde gepatchte app</string>
+    <string name="settings_auto_install_with_shizuku">Automatisch installeren na patchen</string>
+    <string name="settings_auto_install_with_shizuku_description">Installeert de gepatchte APK stilzwijgend zodra het patchen is voltooid</string>
+    <string name="settings_auto_install_prompt_conflict">\"%s\" is ingeschakeld - automatische installatie wordt overgeslagen</string>
     <!-- Settings - System Tab - Performance Section -->
     <string name="settings_system_battery_optimization">Batterijoptimalisatie</string>
     <string name="settings_system_battery_optimization_description">Houdt de patcher actief wanneer de app geminimaliseerd is</string>
@@ -723,6 +731,10 @@ De afbeelddimensionen moeten als volgt zijn:
     <string name="retry">Opnieuw proberen</string>
     <string name="add">Toevoegen</string>
     <string name="close">Sluiten</string>
+    <string name="back">Terug</string>
+    <string name="next">Volgende</string>
+    <string name="done">Klaar</string>
+    <string name="skip">Overslaan</string>
     <string name="clear">Leegmaken</string>
     <string name="delete">Verwijderen</string>
     <string name="remove">Verwijderen</string>
@@ -803,4 +815,29 @@ De afbeelddimensionen moeten als volgt zijn:
 
 Wilt u toch doorgaan?"</string>
     <string name="download_update_confirmation">Update downloaden?</string>
+    <!-- Onboarding coach marks -->
+    <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
+    <string name="onboarding_step_of">%1$d van %2$d</string>
+    <string name="onboarding_sources_desc">Beheer uw patchbronnen. Elke bron biedt patches die kunnen worden toegepast op uw apps</string>
+    <string name="onboarding_swipe_title">Veeggebaren</string>
+    <string name="onboarding_swipe_desc">Veeg naar rechts op een app-kaart om de beschikbare patches te bekijken. Veeg naar links om de kaart te verbergen van het startscherm</string>
+    <string name="onboarding_settings_desc">Pas Morphe aan: uiterlijk, geavanceerde opties en systeemtools</string>
+    <string name="onboarding_sources_patches_desc">Tik om alle patches te bekijken die beschikbaar zijn vanuit deze bron</string>
+    <string name="onboarding_sources_version_desc">Tik op de versie om de volledige wijzigingslogboek voor deze bron te bekijken</string>
+    <string name="onboarding_sources_prerelease_desc">Activeer dit om pre-release patchversies van deze bron te ontvangen</string>
+    <string name="onboarding_appearance_tab_desc">Pas het uiterlijk van de app aan: thema, accentkleur en achtergrond</string>
+    <string name="onboarding_appearance_theme_desc">Kies tussen licht, donker of systeemthema. U kunt ook een aangepaste accentkleur kiezen of Dynamic Color inschakelen</string>
+    <string name="onboarding_expert_mode_desc">Schakel Expert Mode in om patchselectie, aangepaste opties en andere geavanceerde functies vrij te geven</string>
+    <!-- Translate "System" the same way as the System settings tab -->
+    <string name="onboarding_system_tab_title">Systeemtabblad</string>
+    <string name="onboarding_system_tab_desc">Beheer van sleutelopslag, import-/exporttools en app-informatie</string>
+    <string name="onboarding_system_installer_desc">Kies hoe gepatchte apps worden geïnstalleerd: standaard, root-mount of Shizuku</string>
+    <string name="onboarding_system_process_runtime_desc">Voer patching uit in een apart proces om de stabiliteit te verbeteren en het geheugengebruik te beheersen. Aanbevolen voor grote apps</string>
+    <string name="onboarding_system_file_picker_desc">Schakel dit in om de ingebouwde bestandsbrowser te gebruiken in plaats van de systeemkiezer wanneer u APK\'s of sleutelopslagen selecteert</string>
+    <!-- Tour prompt dialog shown after first successful patch install -->
+    <string name="tour_prompt_title">Snelle functietour</string>
+    <string name="tour_prompt_desc">Wilt u een snelle rondleiding door de belangrijkste functies van Morphe?</string>
+    <string name="tour_prompt_confirm">Laat me rondleiden</string>
+    <string name="onboarding_restart_title">Functietour</string>
+    <string name="onboarding_restart_desc">Maak een begeleide rondleiding door de belangrijkste functies van Morphe</string>
 </resources>

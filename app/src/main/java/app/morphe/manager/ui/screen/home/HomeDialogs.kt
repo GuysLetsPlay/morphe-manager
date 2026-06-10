@@ -66,7 +66,8 @@ fun HomeDialogs(
     homeViewModel: HomeViewModel,
     storagePickerLauncher: () -> Unit,
     openBundlePicker: () -> Unit,
-    patchesItem: MutableState<HomeAppItem?>
+    patchesItem: MutableState<HomeAppItem?>,
+    globalOnboardingState: GlobalOnboardingState? = null
 ) {
     val uriHandler = LocalUriHandler.current
     val scope = rememberCoroutineScope()
@@ -448,7 +449,8 @@ fun HomeDialogs(
                 scope.launch {
                     homeViewModel.patchBundleRepository.reorderBundles(orderedUids)
                 }
-            }
+            },
+            globalOnboardingState = globalOnboardingState
         )
     }
 
@@ -737,6 +739,7 @@ private fun DownloadInstructionsDialog(
     onContinue: () -> Unit
 ) {
     val context = LocalContext.current
+    var downloadClickCount by remember { mutableIntStateOf(0) }
 
     MorpheDialog(
         onDismissRequest = onDismiss,
@@ -788,10 +791,17 @@ private fun DownloadInstructionsDialog(
                 ) {
                     Surface(
                         onClick = {
+                            downloadClickCount++
+                            val messageRes = when (downloadClickCount) {
+                                1 -> R.string.home_download_instructions_download_button_toast
+                                2 -> R.string.home_download_instructions_download_button_toast_2
+                                3 -> R.string.home_download_instructions_download_button_toast_3
+                                4 -> R.string.home_download_instructions_download_button_toast_4
+                                5 -> R.string.home_download_instructions_download_button_toast_5
+                                else -> R.string.home_download_instructions_download_button_toast_6
+                            }
                             context.toast(
-                                string = context.getString(
-                                    R.string.home_download_instructions_download_button_toast
-                                ),
+                                string = context.getString(messageRes),
                                 duration = Toast.LENGTH_LONG
                             )
                         },

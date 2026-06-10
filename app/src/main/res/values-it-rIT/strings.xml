@@ -118,6 +118,11 @@
     <string name="home_download_instructions_step1">Premi il pulsante \'%s\' qui sotto</string>
     <string name="home_download_instructions_step2_part1">Scorri verso il basso la pagina web e premi</string>
     <string name="home_download_instructions_download_button_toast">Premi scarica sul sito web, e non qui 😊</string>
+    <string name="home_download_instructions_download_button_toast_2">Perfetto! Ora clicca su continua qui sotto e vai al sito web 👆</string>
+    <string name="home_download_instructions_download_button_toast_3">La pratica rende perfetti, ci sei quasi! 💪</string>
+    <string name="home_download_instructions_download_button_toast_4">Ancora non ci sei... ancora non ci sei... 🙈</string>
+    <string name="home_download_instructions_download_button_toast_5">OK, rispetto la dedizione 🫡</string>
+    <string name="home_download_instructions_download_button_toast_6">Ora sei un tester ufficiale del pulsante Morphe 🏅</string>
     <string name="home_download_instructions_step3">Attendi che il download si completi, e &lt;b&gt;non installare&lt;/b&gt; l\'APK</string>
     <string name="home_download_instructions_step3_mount">Attendi che il download si completi, poi &lt;b&gt;installa l\'APK&lt;/b&gt;</string>
     <string name="home_download_instructions_step4">Dopo che il download è terminato, torna a Morphe</string>
@@ -602,6 +607,9 @@ Le dimensioni delle immagini devono essere le seguenti:
     <string name="installer_use_standard">Usa standard</string>
     <string name="settings_prompt_installer_on_install">Richiesta di selezione dell\'installer</string>
     <string name="settings_prompt_installer_on_install_description">Mostra la finestra di dialogo di selezione dell\'installer ogni volta che un\'app patchata viene installata</string>
+    <string name="settings_auto_install_with_shizuku">Installa automaticamente dopo l\'applicazione della patch</string>
+    <string name="settings_auto_install_with_shizuku_description">Installa silenziosamente l\'APK modificato appena completata l\'applicazione della patch</string>
+    <string name="settings_auto_install_prompt_conflict">\"%s\" è abilitato: l\'installazione automatica verrà ignorata</string>
     <!-- Settings - System Tab - Performance Section -->
     <string name="settings_system_battery_optimization">Ottimizzazione batteria</string>
     <string name="settings_system_battery_optimization_description">Mantiene il patcher in esecuzione quando l\'app è minimizzata</string>
@@ -726,6 +734,10 @@ Le dimensioni delle immagini devono essere le seguenti:
     <string name="retry">Riprova</string>
     <string name="add">Aggiungi</string>
     <string name="close">Chiudi</string>
+    <string name="back">Indietro</string>
+    <string name="next">Avanti</string>
+    <string name="done">Fatto</string>
+    <string name="skip">Salta</string>
     <string name="clear">Cancella</string>
     <string name="delete">Elimina</string>
     <string name="remove">Rimuovi</string>
@@ -806,4 +818,29 @@ Le dimensioni delle immagini devono essere le seguenti:
 
 Vuoi comunque continuare?"</string>
     <string name="download_update_confirmation">Scaricare l\'aggiornamento?</string>
+    <!-- Onboarding coach marks -->
+    <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
+    <string name="onboarding_step_of">%1$d di %2$d</string>
+    <string name="onboarding_sources_desc">Gestisci le tue sorgenti di patch. Ogni sorgente fornisce patch che possono essere applicate alle tue app</string>
+    <string name="onboarding_swipe_title">Gesti di scorrimento</string>
+    <string name="onboarding_swipe_desc">Scorri verso destra su una scheda app per visualizzare le patch disponibili. Scorri verso sinistra per nascondere la scheda dalla schermata Home</string>
+    <string name="onboarding_settings_desc">Personalizza Morphe: aspetto, opzioni avanzate e strumenti di sistema</string>
+    <string name="onboarding_sources_patches_desc">Tocca per visualizzare tutte le patch disponibili da questa sorgente</string>
+    <string name="onboarding_sources_version_desc">Tocca la versione per visualizzare il changelog completo per questa sorgente</string>
+    <string name="onboarding_sources_prerelease_desc">Abilita questa opzione per ricevere versioni di patch pre-release da questa sorgente</string>
+    <string name="onboarding_appearance_tab_desc">Personalizza l\'aspetto dell\'app: tema, colore di accento e sfondo</string>
+    <string name="onboarding_appearance_theme_desc">Scegli tra tema chiaro, scuro o di sistema. Puoi anche scegliere un colore di accento personalizzato o abilitare il colore dinamico</string>
+    <string name="onboarding_expert_mode_desc">Abilita la modalità esperto per sbloccare la selezione delle patch, le opzioni personalizzate e altre funzionalità avanzate</string>
+    <!-- Translate "System" the same way as the System settings tab -->
+    <string name="onboarding_system_tab_title">Scheda Sistema</string>
+    <string name="onboarding_system_tab_desc">Gestione della keystore, strumenti di importazione/esportazione e informazioni sull\'app</string>
+    <string name="onboarding_system_installer_desc">Scegli come installare le app con patch: standard, mount root o Shizuku</string>
+    <string name="onboarding_system_process_runtime_desc">Esegui il patching in un processo separato per migliorare la stabilità e controllare l\'utilizzo della memoria. Consigliato per app di grandi dimensioni</string>
+    <string name="onboarding_system_file_picker_desc">Abilita questa opzione per utilizzare il file browser integrato invece del selettore di sistema quando selezioni APK o keystore</string>
+    <!-- Tour prompt dialog shown after first successful patch install -->
+    <string name="tour_prompt_title">Tour rapido delle funzionalità</string>
+    <string name="tour_prompt_desc">Vuoi un tour rapido delle funzionalità chiave di Morphe?</string>
+    <string name="tour_prompt_confirm">Mostrami in giro</string>
+    <string name="onboarding_restart_title">Tour delle funzionalità</string>
+    <string name="onboarding_restart_desc">Fai un tour guidato delle funzionalità chiave di Morphe</string>
 </resources>

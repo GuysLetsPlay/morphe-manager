@@ -1,3 +1,29 @@
+# [1.21.0-dev.3](https://github.com/MorpheApp/morphe-manager/compare/v1.21.0-dev.2...v1.21.0-dev.3) (2026-06-03)
+
+
+### Bug Fixes
+
+* Invert vertical parallax axis ([503e38e](https://github.com/MorpheApp/morphe-manager/commit/503e38ec4461d3f4d6372358bb8b310ac8875f22))
+
+
+### Features
+
+* Add onboarding tour triggered after first patch ([#611](https://github.com/MorpheApp/morphe-manager/issues/611)) ([a7ab6df](https://github.com/MorpheApp/morphe-manager/commit/a7ab6dfb576d20a9ef527ec759ed33ee57189772))
+
+# [1.21.0-dev.2](https://github.com/MorpheApp/morphe-manager/compare/v1.21.0-dev.1...v1.21.0-dev.2) (2026-06-01)
+
+
+### Bug Fixes
+
+* Cancelled install callbacks on some OEM systems ([#598](https://github.com/MorpheApp/morphe-manager/issues/598)) ([6ec8543](https://github.com/MorpheApp/morphe-manager/commit/6ec854345ae6bd59a51de1998a943566fa20db4f))
+
+# [1.21.0-dev.1](https://github.com/MorpheApp/morphe-manager/compare/v1.20.0...v1.21.0-dev.1) (2026-05-31)
+
+
+### Features
+
+* Auto-install patched APK with Shizuku after patching completes ([c43c663](https://github.com/MorpheApp/morphe-manager/commit/c43c66368d175be5d6bfc97ebb98f5880130f833))
+
 # [1.20.0](https://github.com/MorpheApp/morphe-manager/compare/v1.19.1...v1.20.0) (2026-05-29)
 
 

@@ -2,8 +2,8 @@
 <resources>
     <!-- Home Screen -->
     <string name="home_other_apps">Други приложения</string>
-    <string name="home_not_patched_yet">Все още не е патчено</string>
-    <string name="home_no_patches_available">Няма достъпни пачове</string>
+    <string name="home_not_patched_yet">Все още не е патчнато</string>
+    <string name="home_no_patches_available">Няма достъпни патчове</string>
     <string name="home_app_hide_title">Скриване на това приложение?</string>
     <string name="home_app_hide_message">Това приложение ще бъде скрито от началния екран. Можете да го възстановите по-късно от скритите приложения, като използвате бутона в долната част на списъка.</string>
     <string name="home_app_will_be_hidden">Това приложение ще бъде скрито.</string>
@@ -118,6 +118,11 @@
     <string name="home_download_instructions_step1">Натиснете бутона \'%s\' отдолу</string>
     <string name="home_download_instructions_step2_part1">Скролни надолу страницата и натиснете</string>
     <string name="home_download_instructions_download_button_toast">Натиснете \"Изтеглете\" на уебсайта, а не тук 😊</string>
+    <string name="home_download_instructions_download_button_toast_2">Отлично! Кликнете продължи по-долу и отидете на уебсайта 👆</string>
+    <string name="home_download_instructions_download_button_toast_3">Практиката води до съвършенство, напредваш! 💪</string>
+    <string name="home_download_instructions_download_button_toast_4">Все още не е тук… все още не е тук… 🙈</string>
+    <string name="home_download_instructions_download_button_toast_5">Добре, уважавам отдадеността 🫡</string>
+    <string name="home_download_instructions_download_button_toast_6">Вече сте официален тестер на бутона Morphe 🏅</string>
     <string name="home_download_instructions_step3">Чакајте да се завърши изтеглянето и &lt;b&gt;не инсталирайте&lt;/b&gt; APK</string>
     <string name="home_download_instructions_step3_mount">Чакајте да се завърши изтеглянето, след това &lt;b&gt;инсталирайте&lt;/b&gt; APK</string>
     <string name="home_download_instructions_step4">След завършване на свалянето, върнете се в Morphe</string>
@@ -602,6 +607,9 @@ morphe_header_custom_dark.png
     <string name="installer_use_standard">Използвайте стандартен</string>
     <string name="settings_prompt_installer_on_install">Показва се прозорец за избор на инсталатор</string>
     <string name="settings_prompt_installer_on_install_description">Показва диалогов прозорец за избор на инсталатор всеки път, когато се инсталира приложение с пач.</string>
+    <string name="settings_auto_install_with_shizuku">Автоматична инсталация след поправяне</string>
+    <string name="settings_auto_install_with_shizuku_description">Инсталира поправения APK тихо веднага след завършване на поправянето</string>
+    <string name="settings_auto_install_prompt_conflict">\"%s\" е включен - автоматичната инсталация ще бъде пропусната</string>
     <!-- Settings - System Tab - Performance Section -->
     <string name="settings_system_battery_optimization">Оптимизация на батерията</string>
     <string name="settings_system_battery_optimization_description">Поддържа работещ патчър, когато приложението е минимизирано</string>
@@ -726,6 +734,10 @@ morphe_header_custom_dark.png
     <string name="retry">Повтори</string>
     <string name="add">Добави</string>
     <string name="close">Затвори</string>
+    <string name="back">Назад</string>
+    <string name="next">Напред</string>
+    <string name="done">Готово</string>
+    <string name="skip">Пропусни</string>
     <string name="clear">Изчисти</string>
     <string name="delete">Изтриване</string>
     <string name="remove">Премахни</string>
@@ -806,4 +818,29 @@ morphe_header_custom_dark.png
 
 Искате ли да продължите още?"</string>
     <string name="download_update_confirmation">Да сваля обновление?</string>
+    <!-- Onboarding coach marks -->
+    <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
+    <string name="onboarding_step_of">%1$d от %2$d</string>
+    <string name="onboarding_sources_desc">Управлявайте източниците на пакети. Всеки източник предоставя пакети, които могат да бъдат приложени към вашите приложения. </string>
+    <string name="onboarding_swipe_title">Жестове с плъзгане</string>
+    <string name="onboarding_swipe_desc">Плъзнете надясно върху карта на приложение, за да видите наличните пакети. Плъзнете наляво, за да скриете картата от началния екран. </string>
+    <string name="onboarding_settings_desc">Персонализирайте Morphe: външен вид, разширени опции и системни инструменти</string>
+    <string name="onboarding_sources_patches_desc">Докоснете, за да видите всички пакети, налични от този източник</string>
+    <string name="onboarding_sources_version_desc">Докоснете версията, за да видите пълния списък с промени за този източник</string>
+    <string name="onboarding_sources_prerelease_desc">Активирайте това, за да получавате версии на пакети преди тяхното официално пускане от този източник</string>
+    <string name="onboarding_appearance_tab_desc">Персонализирайте външния вид на приложението: тема, цвят на акцента и фон</string>
+    <string name="onboarding_appearance_theme_desc">Изберете между светла, тъмна или системна тема. Можете също да изберете персонализиран цвят на акцента или да активирате Динамичен цвят</string>
+    <string name="onboarding_expert_mode_desc">Активирайте Expert Mode, за да отключите избор на пакети, персонализирани опции и други разширени функции</string>
+    <!-- Translate "System" the same way as the System settings tab -->
+    <string name="onboarding_system_tab_title">Системен таб</string>
+    <string name="onboarding_system_tab_desc">Управление на хранилището на ключове, инструменти за импортиране/експортиране и информация за приложението</string>
+    <string name="onboarding_system_installer_desc">Изберете как ще се инсталират пакетираните приложения: стандартно, root mount или Shizuku</string>
+    <string name="onboarding_system_process_runtime_desc">Изпълнете пакетирането в отделен процес, за да подобрите стабилността и да контролирате използването на паметта. Препоръчително за големи приложения</string>
+    <string name="onboarding_system_file_picker_desc">Активирайте, за да използвате вградения файлов браузър вместо системния селектор при избор на APK или keystores</string>
+    <!-- Tour prompt dialog shown after first successful patch install -->
+    <string name="tour_prompt_title">Бърз обиколен тур</string>
+    <string name="tour_prompt_desc">Искате ли бързо да видите основните функции на Morphe?</string>
+    <string name="tour_prompt_confirm">Покажи ми наоколо</string>
+    <string name="onboarding_restart_title">Обиколен тур на функциите</string>
+    <string name="onboarding_restart_desc">Направете обиколка с напътствия на основните функции на Morphe</string>
 </resources>

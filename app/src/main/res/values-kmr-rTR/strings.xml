@@ -118,6 +118,11 @@
     <string name="home_download_instructions_step1">Butona \'%s\' ya jêr lê deynin.</string>
     <string name="home_download_instructions_step2_part1">Li ser rûbera malperê biqewime û bikşîne</string>
     <string name="home_download_instructions_download_button_toast">Li ser malpera çapa serdest bike, ne ku xwer li vir 😊</string>
+    <string name="home_download_instructions_download_button_toast_2">Bêhtirîn! Naha li ser dewam bike tıklake bike û biçin ser malperê 👆</string>
+    <string name="home_download_instructions_download_button_toast_3">Temaşekirîn çêtir dike, hûn nêzîk dibin! 💪</string>
+    <string name="home_download_instructions_download_button_toast_4">Hê jî li vir nînê... hîş li vir nînê... 🙈</string>
+    <string name="home_download_instructions_download_button_toast_5">Tamam, adaneliğinize saygı duyuyorum 🫡</string>
+    <string name="home_download_instructions_download_button_toast_6">Artık resmi bir Morphe düğme test cihazısın 🏅</string>
     <string name="home_download_instructions_step3">Li benda qedembûna daxistinê bibe, û &lt;b&gt;APK-ê nas neke&lt;/b&gt;</string>
     <string name="home_download_instructions_step3_mount">Binevin destpêkirina daxistnê biqedîne, paşê &lt;b&gt;APKê nas bike&lt;/b&gt;</string>
     <string name="home_download_instructions_step4">Pi serîdana daxistinê bi dawî bû, vegerin ser Morphe</string>
@@ -600,6 +605,9 @@ Qasîyên wêneyan divê wiha bin:
     <string name="installer_use_standard">Standard bikarîne</string>
     <string name="settings_prompt_installer_on_install">Dîyaloga hilbijartina sazkirî</string>
     <string name="settings_prompt_installer_on_install_description">Hîşyarî her carî dema ku app’a girêtî hatî sazkirin, dîyaloga hilbijartina sazkirî nîşan bide</string>
+    <string name="settings_auto_install_with_shizuku">Têxînekî otomatîkî piştî paqijkirinê</string>
+    <string name="settings_auto_install_with_shizuku_description">Bi hesînî APK-ya paqijkirî piştî qedandina paqijkirinê saz dike</string>
+    <string name="settings_auto_install_prompt_conflict">\"%s\" aktîv e - sazkirina otomatîkî dê derbas bibe</string>
     <!-- Settings - System Tab - Performance Section -->
     <string name="settings_system_battery_optimization">Serûşê bateriyê</string>
     <string name="settings_system_battery_optimization_description">Dema ku app hatî biçikînîn, sazkirîn bidomîne</string>
@@ -724,6 +732,10 @@ Qasîyên wêneyan divê wiha bin:
     <string name="retry">Dilo</string>
     <string name="add">Zêde bike</string>
     <string name="close">Vediwere</string>
+    <string name="back">Paşve</string>
+    <string name="next">Pêşî</string>
+    <string name="done">Temam</string>
+    <string name="skip">Derbaz bike</string>
     <string name="clear">Paqij bike</string>
     <string name="delete">Firotin</string>
     <string name="remove">Damezere</string>
@@ -804,4 +816,29 @@ Qasîyên wêneyan divê wiha bin:
 
 Ma hûn hê jî dixwazin dom bikevin?"</string>
     <string name="download_update_confirmation">Nûvekirinê dakêvin?</string>
+    <!-- Onboarding coach marks -->
+    <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
+    <string name="onboarding_step_of">%1$d ji %2$d</string>
+    <string name="onboarding_sources_desc">Çavkaniyên patchên xwe birêve bike. Her çavkanî patchên ku dikarin li ser sepanên we werin bikaranîn peyda dike</string>
+    <string name="onboarding_swipe_title">Hestên swîpê</string>
+    <string name="onboarding_swipe_desc">Ji bo dîtina patchên berdest li ser kartê pêşî biçipe. Ji bo veşartina kartê ji ekranê biçîpe çepê</string>
+    <string name="onboarding_settings_desc">Morphe xweş bike: xuya, vebijarkên pêşkeftî, û amûrên sîstemê</string>
+    <string name="onboarding_sources_patches_desc">Têke bin ku hemû patchên ji vê çavkaniyê bibînin</string>
+    <string name="onboarding_sources_version_desc">Têke bin serî de dîtina guhertoyên vê çavkaniyê</string>
+    <string name="onboarding_sources_prerelease_desc">Vê yekê çalak bike da ku wergîrî patchên berbelav ên vê çavkaniyê bike</string>
+    <string name="onboarding_appearance_tab_desc">Xuyahiya sepan xweş bike: tema, rengê din, û paşnav</string>
+    <string name="onboarding_appearance_theme_desc">Tema sivik, tarî, an sîstemê hilbijêre. Hûn dikarin rengê din yê xwerû jî hilbijêrin an Rengdînamîkî çalak bike</string>
+    <string name="onboarding_expert_mode_desc">Moda Pêşiyan çalak bike da ku vebijarkên patchê, vebijarkên xwerû, û taybetmendiyên pêşkeftî veke</string>
+    <!-- Translate "System" the same way as the System settings tab -->
+    <string name="onboarding_system_tab_title">Tabê Sîstemê</string>
+    <string name="onboarding_system_tab_desc">Birêvekirina anahtorê, amûrên çêkirin/derxistin, û agahiyên sepanê</string>
+    <string name="onboarding_system_installer_desc">Hilbijêre ka çawa sepanên patchkirî werin saz kirin: standard, çîna rihê, an Shizuku</string>
+    <string name="onboarding_system_process_runtime_desc">Bînin bikaranîn patchkirin di pêvajoyek cûda de da ku aramiyê zêde bike û bikaribirina bîranê kontrol bike. Ji bo sepanên mezin hatî pêşnîyar kirin</string>
+    <string name="onboarding_system_file_picker_desc">Çalak bike da ku bikaribîne gerstêrka pelan a bingehîn lê hûn hilbijêrin APKan an anahtorên</string>
+    <!-- Tour prompt dialog shown after first successful patch install -->
+    <string name="tour_prompt_title">Gerîşka taybetmendiyan a bilez</string>
+    <string name="tour_prompt_desc">Dixwazî gerîşka taybetmendiyên sereke yên Morphe bikî?</string>
+    <string name="tour_prompt_confirm">Min li dora te bîne</string>
+    <string name="onboarding_restart_title">Gerîşka taybetmendiyan</string>
+    <string name="onboarding_restart_desc">Gerîşka taybetmendiyên sereke yên Morphe bikî</string>
 </resources>

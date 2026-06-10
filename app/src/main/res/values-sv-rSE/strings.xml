@@ -701,6 +701,7 @@ Bildernas mått ska vara följande:
     <string name="retry">Försök igen</string>
     <string name="add">Lägg till</string>
     <string name="close">Stäng</string>
+    <string name="skip">Hoppa över</string>
     <string name="clear">Rensa</string>
     <string name="delete">Radera</string>
     <string name="remove">Ta bort</string>
@@ -781,4 +782,8 @@ Bildernas mått ska vara följande:
 
 Vill du fortsätta ändå?"</string>
     <string name="download_update_confirmation">Ladda ned uppdatering?</string>
+    <!-- Onboarding coach marks -->
+    <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
+    <!-- Translate "System" the same way as the System settings tab -->
+    <!-- Tour prompt dialog shown after first successful patch install -->
 </resources>

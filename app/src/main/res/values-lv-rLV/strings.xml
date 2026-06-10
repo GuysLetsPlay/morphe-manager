@@ -70,4 +70,8 @@
     <string name="search">Meklēt</string>
     <string name="enabled">Iespējots</string>
     <string name="disabled">Atspējots</string>
+    <!-- Onboarding coach marks -->
+    <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
+    <!-- Translate "System" the same way as the System settings tab -->
+    <!-- Tour prompt dialog shown after first successful patch install -->
 </resources>

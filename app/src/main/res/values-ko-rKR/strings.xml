@@ -118,6 +118,11 @@
     <string name="home_download_instructions_step1">아래 \'%s\' 버튼을 탭하세요</string>
     <string name="home_download_instructions_step2_part1">웹페이지를 아래로 스크롤 한 후에 이 버튼을 탭하세요</string>
     <string name="home_download_instructions_download_button_toast">여기 말고, 웹사이트에서 다운로드 버튼을 탭하세요 😊</string>
+    <string name="home_download_instructions_download_button_toast_2">완벽해요! 이제 아래 이동 버튼을 탭하여 웹사이트로 이동하세요 👆</string>
+    <string name="home_download_instructions_download_button_toast_3">연습이 완벽을 만듭니다. 거의 다 왔어요! 💪</string>
+    <string name="home_download_instructions_download_button_toast_4">여기는 아니예요… 여기는 아니예요… 🙈</string>
+    <string name="home_download_instructions_download_button_toast_5">좋아요, 그 끈기는 인정합니다 🫡</string>
+    <string name="home_download_instructions_download_button_toast_6">이제 당신은 공식 Morphe 버튼 테스터입니다 🏅</string>
     <string name="home_download_instructions_step3">다운로드가 완료될 때까지 기다리세요&lt;br&gt;APK는 &lt;b&gt;설치하지 마세요&lt;/b&gt;</string>
     <string name="home_download_instructions_step3_mount">다운로드가 완료되면, &lt;b&gt;APK 파일을 설치하세요&lt;/b&gt;</string>
     <string name="home_download_instructions_step4">다운로드가 완료되면 Morphe로 돌아오세요</string>
@@ -480,7 +485,7 @@
     <string name="settings_advanced_bytecode_mode_dialog_description">패치 과정에서 바이트코드를 처리하는 방식을 제어합니다. 패치 속도, 메모리 사용량 및 출력 APK 크기에 영향을 줍니다</string>
     <string name="settings_advanced_bytecode_mode_strip_fast_label">빠름 (권장)</string>
     <string name="settings_advanced_bytecode_mode_strip_fast">빠름</string>
-    <string name="settings_advanced_bytecode_mode_strip_fast_description">빠른 패치 속도와 낮은 메모리 사용량을 제공하지만, APK 크기가 커집니다. 저사양 또는 RAM이 적은 기기에 권장됩니다</string>
+    <string name="settings_advanced_bytecode_mode_strip_fast_description">더 빠르게 패치할 수 있고, 메모리 사용량도 줄어들지만, APK 크기가 더 커질 수 있습니다. RAM이 적거나 저사양 기기에서 사용하는 것을 권장합니다</string>
     <string name="settings_advanced_bytecode_mode_full">최대</string>
     <string name="settings_advanced_bytecode_mode_full_description">패치 속도가 느려지지만 기존 동작 방식과 동일하게 작동합니다. 빠름 모드에서 문제가 발생하는 경우에만 사용이 권장됩니다</string>
     <!-- Settings - Advanced Tab - GitHub PAT Settings -->
@@ -603,6 +608,9 @@ morphe_header_custom_dark.png
     <string name="installer_use_standard">표준을 사용합니다</string>
     <string name="settings_prompt_installer_on_install">설치 프로그램 선택 프롬프트</string>
     <string name="settings_prompt_installer_on_install_description">패치된 앱을 설치할 때마다 설치 프로그램 선택 다이얼로그를 표시합니다</string>
+    <string name="settings_auto_install_with_shizuku">패치 후 자동 설치</string>
+    <string name="settings_auto_install_with_shizuku_description">패치가 완료되는 즉시 패치된 APK를 자동으로 설치합니다</string>
+    <string name="settings_auto_install_prompt_conflict">\'%s\'가 활성화됨 - 자동 설치는 건너뜁니다</string>
     <!-- Settings - System Tab - Performance Section -->
     <string name="settings_system_battery_optimization">배터리 최적화</string>
     <string name="settings_system_battery_optimization_description">앱이 최소화되어도 패처가 계속 실행되도록 유지합니다</string>
@@ -661,7 +669,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_original_apks_empty">저장된 원본 APK가 없습니다</string>
     <string name="settings_system_original_apks_deleted">원본 APK를 성공적으로 삭제하였습니다</string>
     <string name="settings_system_original_apks_delete_title">원본 APK 삭제</string>
-    <string name="settings_system_original_apks_delete_confirm">\'%s\'에 대한 원본 APK를 삭제하시겠습니까? 다시 패치할 경우에 새 APK를 제공해야 합니다.</string>
+    <string name="settings_system_original_apks_delete_confirm">\'%s\'에 대한 원본 APK를 삭제하시겠습니까? 다시 패치할 경우에 새 APK를 사용해야 합니다</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">패치 선택 목록</string>
     <string name="settings_system_patch_selections_description">저장된 패치 선택 목록은 앱을 제거한 후에도 유지됩니다</string>
@@ -727,6 +735,10 @@ morphe_header_custom_dark.png
     <string name="retry">다시 시도</string>
     <string name="add">추가</string>
     <string name="close">닫기</string>
+    <string name="back">뒤로</string>
+    <string name="next">다음</string>
+    <string name="done">완료</string>
+    <string name="skip">건너뛰기</string>
     <string name="clear">지우기</string>
     <string name="delete">파일 삭제</string>
     <string name="remove">제거</string>
@@ -807,4 +819,29 @@ morphe_header_custom_dark.png
 
 그래도 계속하시겠습니까?"</string>
     <string name="download_update_confirmation">업데이트를 다운로드하시겠습니까?</string>
+    <!-- Onboarding coach marks -->
+    <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
+    <string name="onboarding_step_of">%2$d 단계 중 %1$d 단계</string>
+    <string name="onboarding_sources_desc">앱에 적용할 패치를 제공하는 패치 소스를 관리할 수 있습니다. 각 소스는 앱에 적용할 수 있는 패치를 제공합니다</string>
+    <string name="onboarding_swipe_title">스와이프 제스처</string>
+    <string name="onboarding_swipe_desc">앱 카드를 오른쪽으로 스와이프하여 사용 가능한 패치를 확인할 수 있고, 왼쪽으로 스와이프하여 홈 화면에서 카드를 숨길 수 있습니다</string>
+    <string name="onboarding_settings_desc">레이아웃, 고급 옵션 및 시스템 도구와 같은 Morphe 설정을 관리할 수 있습니다</string>
+    <string name="onboarding_sources_patches_desc">패치 버튼을 탭하여 이 소스에서 사용할 수 있는 모든 패치를 볼 수 있습니다</string>
+    <string name="onboarding_sources_version_desc">버전 버튼을 탭하여 이 소스의 전체 변경 사항을 볼 수 있습니다</string>
+    <string name="onboarding_sources_prerelease_desc">이 옵션을 활성화하여 이 소스의 Pre-release 패치 버전을 수신할 수 있습니다</string>
+    <string name="onboarding_appearance_tab_desc">테마, 강조 색상 및 배경을 변경하여 앱 디자인을 꾸며 볼 수 있습니다</string>
+    <string name="onboarding_appearance_theme_desc">밝은 테마, 어두운 테마 또는 시스템 테마를 선택할 수 있습니다. 또한 원하는 강조 색상을 지정하거나 동적 색상을 사용할 수 있습니다</string>
+    <string name="onboarding_expert_mode_desc">전문가 모드를 활성화하여 패치 선택, 사용자 정의 패치 옵션 등의 다양한 고급 기능을 사용할 수 있습니다</string>
+    <!-- Translate "System" the same way as the System settings tab -->
+    <string name="onboarding_system_tab_title">시스템 탭</string>
+    <string name="onboarding_system_tab_desc">키스토어 관리, 가져오기/내보내기 도구 및 앱 정보를 사용할 수 있습니다</string>
+    <string name="onboarding_system_installer_desc">일반 설치, 루트 마운트 또는 Shizuku와 같은 패치된 앱의 설치 방식을 선택할 수 있습니다</string>
+    <string name="onboarding_system_process_runtime_desc">안정성을 높이고 메모리 사용량을 관리하기 위해 패치 작업을 별도 프로세스에서 실행할 수 있습니다. 대용량 앱에 권장됩니다</string>
+    <string name="onboarding_system_file_picker_desc">APK 또는 키스토어를 선택 시 시스템 기본 파일 선택기가 아닌 앱에 내장된 파일 선택기를 사용할 수 있습니다</string>
+    <!-- Tour prompt dialog shown after first successful patch install -->
+    <string name="tour_prompt_title">빠른 기능 투어</string>
+    <string name="tour_prompt_desc">Morphe의 주요 기능을 빠르게 둘러보시겠습니까?</string>
+    <string name="tour_prompt_confirm">안내해 드릴게요</string>
+    <string name="onboarding_restart_title">기능 투어</string>
+    <string name="onboarding_restart_desc">Morphe의 주요 기능을 둘러보는 가이드 투어를 시작해 보세요</string>
 </resources>

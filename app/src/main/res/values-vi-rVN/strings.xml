@@ -40,7 +40,7 @@
     <!-- "Buckle up" referring to fastening your vehicle seat belt. A light-hearted joke to build excitement -->
     <string name="home_greeting_3">Hãy chuẩn bị sẵn sàng, đã đến lúc vá rồi</string>
     <!-- Sarcastic joke about blocking ads, intentionally over-the-top -->
-    <string name="home_greeting_4">Ngày mới, kiệt tác chặn quảng cáo mới</string>
+    <string name="home_greeting_4">Ngày mới, với kiệt tác chặn quảng cáo mới</string>
     <!-- "Watch ads" refers to watching video ads in unpatched apps -->
     <string name="home_greeting_5">Bạn thích xem quảng cáo không? Tôi thì không</string>
     <!-- Friendly, slightly mischievous joke about controlling app behavior -->
@@ -118,10 +118,15 @@
     <string name="home_download_instructions_step1">Bấm nút \"%s\" ở bên dưới</string>
     <string name="home_download_instructions_step2_part1">Cuộn xuống trang web và bấm</string>
     <string name="home_download_instructions_download_button_toast">Bấm tải xuống trên trang web ấy, chứ không phải ở đây 😊</string>
-    <string name="home_download_instructions_step3">Đợi tải xong, nhưng &lt;b&gt;không cài&lt;/b&gt; APK</string>
+    <string name="home_download_instructions_download_button_toast_2">Tuyệt! Bây giờ hãy bấm tiếp tục ở bên dưới và truy cập trang web 👆</string>
+    <string name="home_download_instructions_download_button_toast_3">Có công mài sắt, có ngày nên kim. Bạn đang làm rất tốt! 💪</string>
+    <string name="home_download_instructions_download_button_toast_4">Vẫn chưa... vẫn chưa đâu... 🙈</string>
+    <string name="home_download_instructions_download_button_toast_5">Được rồi, phải công nhận là bạn kiên trì thật đấy 🫡</string>
+    <string name="home_download_instructions_download_button_toast_6">Giờ bạn đã là chuyên gia thử nút của Morphe rồi đấy 🏅</string>
+    <string name="home_download_instructions_step3">Đợi tải xong, &lt;b&gt;không cài&lt;/b&gt; APK</string>
     <string name="home_download_instructions_step3_mount">Đợi tải xong, sau đó &lt;b&gt;cài APK&lt;/b&gt;</string>
-    <string name="home_download_instructions_step4">Sau khi tải xong, hãy quay lại Morphe</string>
-    <string name="home_download_instructions_step4_mount">Sau khi cài APK gốc, hãy quay lại Morphe</string>
+    <string name="home_download_instructions_step4">Quay lại Morphe</string>
+    <string name="home_download_instructions_step4_mount">Sau khi cài xong, hãy quay lại Morphe</string>
     <string name="home_download_instructions_continue">Đi đến APKMirror.com</string>
     <!-- Home Screen - Dialog 3: File Picker Prompt -->
     <string name="home_file_picker_prompt_title">Chọn APK đã tải</string>
@@ -381,7 +386,7 @@ Gỡ cài đặt sẽ xóa vĩnh viễn toàn bộ dữ liệu ứng dụng"</st
     <string name="mini_game_try_again">Thử lại</string>
     <string name="mini_game_paused">Tạm dừng</string>
     <string name="mini_game_resume">Tiếp tục</string>
-    <string name="mini_game_2048_picker_subtitle">Vuốt các ô để ghép chúng lại</string>
+    <string name="mini_game_2048_picker_subtitle">Vuốt để ghép các ô lại với nhau</string>
     <string name="mini_game_flappy_picker_subtitle">Chạm để bay lách qua các ống</string>
     <string name="mini_game_flappy_tap_to_start">Chạm để bay</string>
     <string name="mini_game_snake_picker_subtitle">Ăn thức ăn, đừng tự đâm vào mình</string>
@@ -603,6 +608,9 @@ Kích thước hình ảnh yêu cầu:
     <string name="installer_use_standard">Trình cài đặt tiêu chuẩn</string>
     <string name="settings_prompt_installer_on_install">Hỏi chọn trình cài đặt</string>
     <string name="settings_prompt_installer_on_install_description">Luôn hiện hộp thoại chọn trình cài đặt khi cài ứng dụng đã vá</string>
+    <string name="settings_auto_install_with_shizuku">Tự động cài đặt sau khi vá</string>
+    <string name="settings_auto_install_with_shizuku_description">Tự động cài đặt APK đã vá ngay sau khi quá trình vá hoàn tất</string>
+    <string name="settings_auto_install_prompt_conflict">Đã bật \"%s\" - cài đặt tự động sẽ bị bỏ qua</string>
     <!-- Settings - System Tab - Performance Section -->
     <string name="settings_system_battery_optimization">Tối ưu hóa pin</string>
     <string name="settings_system_battery_optimization_description">Duy trì trình vá tiếp tục chạy kể cả khi ứng dụng bị thu nhỏ</string>
@@ -727,6 +735,10 @@ Kích thước hình ảnh yêu cầu:
     <string name="retry">Thử lại</string>
     <string name="add">Thêm</string>
     <string name="close">Đóng</string>
+    <string name="back">Trước</string>
+    <string name="next">Tiếp</string>
+    <string name="done">Xong</string>
+    <string name="skip">Thôi</string>
     <string name="clear">Dọn dẹp</string>
     <string name="delete">Xoá</string>
     <string name="remove">Xóa</string>
@@ -805,4 +817,29 @@ Kích thước hình ảnh yêu cầu:
     <string name="resume_download">Tiếp tục tải</string>
     <string name="download_confirmation_metered">"Bạn đang dùng 4G/5G, tiếp tục có thể phát sinh cước dữ liệu.\n\nBạn vẫn muốn tiếp tục?"</string>
     <string name="download_update_confirmation">Tải bản cập nhật?</string>
+    <!-- Onboarding coach marks -->
+    <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
+    <string name="onboarding_step_of">%1$d / %2$d</string>
+    <string name="onboarding_sources_desc">Quản lý các nguồn vá. Mỗi nguồn cung cấp các bản vá có thể được áp dụng cho ứng dụng của bạn</string>
+    <string name="onboarding_swipe_title">Cử chỉ vuốt</string>
+    <string name="onboarding_swipe_desc">Vuốt phải để xem bản vá. Vuốt trái để ẩn thẻ khỏi màn hình chính</string>
+    <string name="onboarding_settings_desc">Tùy chỉnh Morphe: giao diện, tùy chọn nâng cao và công cụ hệ thống</string>
+    <string name="onboarding_sources_patches_desc">Bấm để xem tất cả các bản vá từ nguồn</string>
+    <string name="onboarding_sources_version_desc">Bấm vào phiên bản để xem chi tiết lịch sử cập nhật của nguồn</string>
+    <string name="onboarding_sources_prerelease_desc">Bật cái này để nhận bản vá được phát hành trước từ nguồn</string>
+    <string name="onboarding_appearance_tab_desc">Tùy chỉnh giao diện của ứng dụng: chủ đề, màu nổi bật và nền</string>
+    <string name="onboarding_appearance_theme_desc">Chọn chủ đề sáng, tối hoặc theo cài đặt hệ thống. Ngoài ra, bạn cũng có thể tùy chỉnh màu nổi bật hoặc bật Dynamic Color</string>
+    <string name="onboarding_expert_mode_desc">Bật chế độ Chuyên gia để mở khóa tính năng tự chọn bản vá, tùy chỉnh bản vá và nhiều tính năng khác</string>
+    <!-- Translate "System" the same way as the System settings tab -->
+    <string name="onboarding_system_tab_title">Tab hệ thống</string>
+    <string name="onboarding_system_tab_desc">Quản lý kho khóa, công cụ nhập xuất và thông tin ứng dụng</string>
+    <string name="onboarding_system_installer_desc">Chọn phương thức cài đặt cho ứng dụng đã vá: tiêu chuẩn, gắn kết root hoặc Shizuku</string>
+    <string name="onboarding_system_process_runtime_desc">Chạy trình vá trong tiến trình riêng để cải thiện độ ổn định và quản lý bộ nhớ hiệu quả hơn. Nên dùng với các ứng dụng có kích thước lớn</string>
+    <string name="onboarding_system_file_picker_desc">Bật để sử dụng trình duyệt tệp tích hợp thay vì trình chọn hệ thống khi chọn APK hoặc kho khóa</string>
+    <!-- Tour prompt dialog shown after first successful patch install -->
+    <string name="tour_prompt_title">Khám phá nhanh</string>
+    <string name="tour_prompt_desc">Bạn muốn xem qua các tính năng nổi bật của Morphe không? Nhanh thôi</string>
+    <string name="tour_prompt_confirm">Cho tôi xem</string>
+    <string name="onboarding_restart_title">Khám phá tính năng</string>
+    <string name="onboarding_restart_desc">Xem hướng dẫn nhanh về các tính năng nổi bật của Morphe</string>
 </resources>

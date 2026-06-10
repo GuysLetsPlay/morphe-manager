@@ -83,7 +83,7 @@
     <string name="sources_dialog_remote_url_formats_title">Приклади:</string>
     <string name="sources_dialog_local">Локальне</string>
     <string name="sources_dialog_local_file">Виберіть файл джерела патчів</string>
-    <string name="sources_dialog_local_file_tap_hint">Торкніться, щоб переглянути сховище</string>
+    <string name="sources_dialog_local_file_tap_hint">Натисніть, щоб переглянути сховище</string>
     <string name="sources_dialog_local_file_description">Виберіть файл джерела патчів .mpp зі сховища</string>
     <string name="sources_dialog_local_invalid_extension">Файл повинен мати розширення .mpp</string>
     <string name="sources_dialog_url_valid">Дійсне посилання на репозиторій або JSON-файл</string>
@@ -118,6 +118,11 @@
     <string name="home_download_instructions_step1">Натисніть кнопку \'%s\' нижче</string>
     <string name="home_download_instructions_step2_part1">Прокрутіть вниз і натисніть</string>
     <string name="home_download_instructions_download_button_toast">Натисніть завантажити на сайті, а не тут 😊</string>
+    <string name="home_download_instructions_download_button_toast_2">Чудово! Тепер натисніть продовжити нижче та перейдіть на сайт 👆</string>
+    <string name="home_download_instructions_download_button_toast_3">Практика веде до досконалості, ви на правильному шляху! 💪</string>
+    <string name="home_download_instructions_download_button_toast_4">Все ще не тут… все ще не тут… 🙈</string>
+    <string name="home_download_instructions_download_button_toast_5">Добре, поважаю наполегливість 🫡</string>
+    <string name="home_download_instructions_download_button_toast_6">Ви тепер офіційний тестувальник кнопок Morphe 🏅</string>
     <string name="home_download_instructions_step3">Дочекайтеся завершення завантаження та &lt;b&gt;не встановлюйте&lt;/b&gt; APK файл</string>
     <string name="home_download_instructions_step3_mount">Дочекайтеся завершення завантаження та &lt;b&gt;встановіть APK файл&lt;/b&gt;</string>
     <string name="home_download_instructions_step4">Після завершення завантаження поверніться до Morphe</string>
@@ -602,6 +607,9 @@ morphe_header_custom_dark.png
     <string name="installer_use_standard">Використати стандартний</string>
     <string name="settings_prompt_installer_on_install">Запит на вибір інсталятора</string>
     <string name="settings_prompt_installer_on_install_description">Показує діалог вибору інсталятора щоразу при встановленні патченого застосунку</string>
+    <string name="settings_auto_install_with_shizuku">Автоматична інсталяція після патчінгу</string>
+    <string name="settings_auto_install_with_shizuku_description">Автоматично встановлює пропатчений APK одразу після завершення патчингу</string>
+    <string name="settings_auto_install_prompt_conflict">«%s» увімкнено - автоматичне встановлення буде пропущено</string>
     <!-- Settings - System Tab - Performance Section -->
     <string name="settings_system_battery_optimization">Оптимізація батареї</string>
     <string name="settings_system_battery_optimization_description">Утримує патчер активним під час згортання застосунку</string>
@@ -726,6 +734,10 @@ morphe_header_custom_dark.png
     <string name="retry">Повторити</string>
     <string name="add">Додати</string>
     <string name="close">Закрити</string>
+    <string name="back">Назад</string>
+    <string name="next">Далі</string>
+    <string name="done">Готово</string>
+    <string name="skip">Пропустити</string>
     <string name="clear">Очистити</string>
     <string name="delete">Видалити</string>
     <string name="remove">Видалити</string>
@@ -806,4 +818,29 @@ morphe_header_custom_dark.png
 
 Ви все ще хочете продовжити?"</string>
     <string name="download_update_confirmation">Завантажити оновлення?</string>
+    <!-- Onboarding coach marks -->
+    <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
+    <string name="onboarding_step_of">%1$d з %2$d</string>
+    <string name="onboarding_sources_desc">Керуйте джерелами патчів. Кожне джерело надає патчі, які можна застосувати до ваших застосунків</string>
+    <string name="onboarding_swipe_title">Жести свайпом</string>
+    <string name="onboarding_swipe_desc">Проведіть праворуч по картці застосунку, щоб переглянути доступні патчі. Проведіть ліворуч, щоб приховати картку з головного екрана</string>
+    <string name="onboarding_settings_desc">Налаштуйте Morphe: зовнішній вигляд, розширені параметри та системні інструменти</string>
+    <string name="onboarding_sources_patches_desc">Натисніть, щоб переглянути всі патчі з цього джерела</string>
+    <string name="onboarding_sources_version_desc">Натисніть на версію, щоб переглянути повний журнал змін для цього джерела</string>
+    <string name="onboarding_sources_prerelease_desc">Увімкніть це, щоб отримувати попередні версії патчів із цього джерела</string>
+    <string name="onboarding_appearance_tab_desc">Налаштуйте вигляд застосунку: тему, акцентний колір та фон</string>
+    <string name="onboarding_appearance_theme_desc">Оберіть світлу, темну або системну тему. Ви також можете вибрати власний акцентний колір або увімкнути динамічний колір</string>
+    <string name="onboarding_expert_mode_desc">Увімкніть експертний режим, щоб розблокувати вибір патчів, власні параметри та інші розширені функції</string>
+    <!-- Translate "System" the same way as the System settings tab -->
+    <string name="onboarding_system_tab_title">Вкладка Система</string>
+    <string name="onboarding_system_tab_desc">Керування сховищем ключів, інструменти імпорту/експорту та інформація про застосунок</string>
+    <string name="onboarding_system_installer_desc">Оберіть спосіб встановлення пропатчених застосунків: стандартний, root монтування або Shizuku</string>
+    <string name="onboarding_system_process_runtime_desc">Запускайте патчинг в окремому процесі для підвищення стабільності та контролю використання пам\'яті. Рекомендовано для великих застосунків</string>
+    <string name="onboarding_system_file_picker_desc">Увімкніть, щоб використовувати вбудований файловий браузер замість системного при виборі APK або сховищ ключів</string>
+    <!-- Tour prompt dialog shown after first successful patch install -->
+    <string name="tour_prompt_title">Швидкий огляд функцій</string>
+    <string name="tour_prompt_desc">Хочете швидкий огляд ключових функцій Morphe?</string>
+    <string name="tour_prompt_confirm">Покажіть мені</string>
+    <string name="onboarding_restart_title">Огляд функцій</string>
+    <string name="onboarding_restart_desc">Пройдіть покроковий огляд ключових функцій Morphe</string>
 </resources>

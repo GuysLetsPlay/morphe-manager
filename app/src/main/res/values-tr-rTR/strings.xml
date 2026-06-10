@@ -52,7 +52,7 @@
     <!-- Playful exaggeration, making patching feel heroic -->
     <string name="home_greeting_9">Bugünden itibaren uygulamaları kendilerinden kurtarıyoruz</string>
     <!-- Light sarcasm, casual and tech-savvy humor -->
-    <string name="home_greeting_10">Gücünü kafein ve iyi yamalardan alır</string>
+    <string name="home_greeting_10">Kafein ve iyi yamalarla güçlendirilmiştir</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Yama kaynakları</string>
     <string name="sources_management_open_in_browser">Tarayıcıda aç</string>
@@ -118,6 +118,11 @@
     <string name="home_download_instructions_step1">Aşağıdaki \"%s\" düğmesine tıklayın</string>
     <string name="home_download_instructions_step2_part1">Web sayfasını aşağı kaydırın ve</string>
     <string name="home_download_instructions_download_button_toast">Web sitesindeki indirme düğmesine basın, buradakine değil 😊</string>
+    <string name="home_download_instructions_download_button_toast_2">Harika! Şimdi aşağıdan devam\'a tıklayın ve web sitesine gidin 👆</string>
+    <string name="home_download_instructions_download_button_toast_3">Pratik mükemmelleştirir, yaklaşıyorsun! 💪</string>
+    <string name="home_download_instructions_download_button_toast_4">Hala ulaşılmadı… hala ulaşılmadı… 🙈</string>
+    <string name="home_download_instructions_download_button_toast_5">Tamam, özveriyi anlıyorum 🫡</string>
+    <string name="home_download_instructions_download_button_toast_6">Artık resmi bir Morphe butonu test kullanıcısısınız 🏅</string>
     <string name="home_download_instructions_step3">İndirme tamamlanana kadar bekleyin ve APK\'yi &lt;b&gt;yüklemeyin&lt;/b&gt;</string>
     <string name="home_download_instructions_step3_mount">İndirmenin tamamlanmasını bekleyin, ardından &lt;b&gt;APK\'yi yükleyin&lt;/b&gt;</string>
     <string name="home_download_instructions_step4">İndirme tamamlandıktan sonra Morphe\'ye geri dönün</string>
@@ -131,7 +136,7 @@
     <string name="home_selected_version">Seçilen sürüm</string>
     <string name="home_select_apk_title">APK seç</string>
     <string name="home_select_any_apk_description">Herhangi bir uygulamanın APK dosyasını seçin veya bu cihazda zaten yüklü olan bir uygulamayı seçin</string>
-    <string name="home_use_installed_app">Yüklenmiş uygulamayı kullan</string>
+    <string name="home_use_installed_app">Yüklü uygulamayı kullan</string>
     <string name="home_installed_app_picker_title">Yüklü uygulamayı seç</string>
     <string name="home_installed_app_picker_empty">Uygulama bulunamadı</string>
     <string name="home_installed_app_picker_filter_all">Tüm uygulamalar</string>
@@ -595,13 +600,16 @@ Resim boyutları şu şekilde olmalıdır:
     <string name="installer_hint_conflict">Bu paket adıyla başka bir uygulama zaten yüklü. Devam etmeden önce onu kaldırın</string>
     <string name="installer_external_launched">%s açılıyor…</string>
     <string name="installer_external_timeout">%s yüklemeyi onaylamadı. Diğer uygulamayı kontrol edin ve tekrar deneyin</string>
-    <string name="installer_external_success">%s başarılı bir şekilde yüklendiğini bildirdi</string>
+    <string name="installer_external_success">%s yüklemenin başarılı olduğunu bildirdi</string>
     <string name="installer_unavailable_title">%s kullanılamıyor</string>
     <string name="installer_unavailable_message">Tercih ettiğiniz yükleyici (%s) şu anda kullanılamıyor. Sorunu çözüp tekrar deneyebilir veya standart yükleyiciyi kullanabilirsiniz</string>
     <string name="installer_unavailable_shizuku_hint">Shizuku\'nun çalıştığından ve ve bu uygulama için izin verildiğinden emin olun</string>
     <string name="installer_use_standard">Standardı kullan</string>
     <string name="settings_prompt_installer_on_install">Yükleyici seçimi istemi</string>
     <string name="settings_prompt_installer_on_install_description">Yamalanmış bir uygulama her yüklendiğinde yükleyici seçim penceresini gösterir</string>
+    <string name="settings_auto_install_with_shizuku">Yamalama sonrası otomatik yükle</string>
+    <string name="settings_auto_install_with_shizuku_description">Yamalama tamamlanır tamamlanmaz yamalanmış APK\'yi sessizce yükler</string>
+    <string name="settings_auto_install_prompt_conflict">\"%s\" etkinleştirildi - otomatik yükleme atlanacak</string>
     <!-- Settings - System Tab - Performance Section -->
     <string name="settings_system_battery_optimization">Pil optimizasyonu</string>
     <string name="settings_system_battery_optimization_description">Uygulama küçültüldüğünde patcher\'ı çalışır durumda tutar</string>
@@ -689,7 +697,7 @@ Resim boyutları şu şekilde olmalıdır:
     <!-- File Picker -->
     <string name="file_picker_previous_directory">Önceki dizin</string>
     <string name="file_picker_no_files">Burada dosya yok</string>
-    <string name="file_picker_read_error">Bu dizini okuyamıyorum</string>
+    <string name="file_picker_read_error">Bu dizin okunamıyor</string>
     <string name="file_picker_internal_storage">Dahili depolama</string>
     <string name="file_picker_sd_card">SD kart</string>
     <string name="file_picker_root">Root (/)</string>
@@ -726,6 +734,10 @@ Resim boyutları şu şekilde olmalıdır:
     <string name="retry">Tekrar deneyin</string>
     <string name="add">Ekle</string>
     <string name="close">Kapat</string>
+    <string name="back">Geri</string>
+    <string name="next">İleri</string>
+    <string name="done">Tamam</string>
+    <string name="skip">Atla</string>
     <string name="clear">Temizle</string>
     <string name="delete">Sil</string>
     <string name="remove">Kaldır</string>
@@ -806,4 +818,29 @@ Resim boyutları şu şekilde olmalıdır:
 
 Devam etmek istiyor musunuz?"</string>
     <string name="download_update_confirmation">Güncelleme indirilsin mi?</string>
+    <!-- Onboarding coach marks -->
+    <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
+    <string name="onboarding_step_of">%1$d / %2$d</string>
+    <string name="onboarding_sources_desc">Yama kaynaklarınızı yönetin. Her kaynak, uygulamalarınıza uygulanabilecek yamalar sağlar</string>
+    <string name="onboarding_swipe_title">Kaydırma hareketleri</string>
+    <string name="onboarding_swipe_desc">Bir uygulama kartında bulunan yamaları görmek için sağa kaydırın. Kartı ana ekranından gizlemek için sola kaydırın</string>
+    <string name="onboarding_settings_desc">Morphe\'yi özelleştirin: görünüm, gelişmiş seçenekler ve sistem araçları</string>
+    <string name="onboarding_sources_patches_desc">Bu kaynaktan mevcut tüm yamaları görmek için dokunun</string>
+    <string name="onboarding_sources_version_desc">Bu kaynağın tam sürüm notlarını görmek için sürüme dokunun</string>
+    <string name="onboarding_sources_prerelease_desc">Bu kaynaktan ön sürüm yama sürümleri almak için bunu etkinleştirin</string>
+    <string name="onboarding_appearance_tab_desc">Uygulamanın görünümünü özelleştirin: tema, vurgu rengi ve arka plan</string>
+    <string name="onboarding_appearance_theme_desc">Açık, koyu veya sistem teması arasında seçim yapın. Ayrıca özel bir vurgu rengi seçebilir veya Dinamik Renk\'i etkinleştirebilirsiniz</string>
+    <string name="onboarding_expert_mode_desc">Yama seçimi, özel seçenekler ve diğer gelişmiş özellikleri açmak için Uzman Modu\'nu etkinleştirin</string>
+    <!-- Translate "System" the same way as the System settings tab -->
+    <string name="onboarding_system_tab_title">Sistem sekmesi</string>
+    <string name="onboarding_system_tab_desc">Anahtar deposu yönetimi, içe/dışa aktarma araçları ve uygulama bilgileri</string>
+    <string name="onboarding_system_installer_desc">Yamalanmış uygulamaların nasıl yükleneceğini seçin: standart, root bağlama veya Shizuku</string>
+    <string name="onboarding_system_process_runtime_desc">Kararlılığı artırmak ve bellek kullanımını kontrol etmek için yamalamayı ayrı bir süreçte gerçekleştirin. Büyük uygulamalar için önerilir</string>
+    <string name="onboarding_system_file_picker_desc">APK veya anahtar depoları seçerken sistem seçici yerine yerleşik dosya tarayıcısını kullanmak için etkinleştirin</string>
+    <!-- Tour prompt dialog shown after first successful patch install -->
+    <string name="tour_prompt_title">Hızlı özellik turu</string>
+    <string name="tour_prompt_desc">Morphe\'nin temel özelliklerine hızlı bir bakış atmak ister misiniz?</string>
+    <string name="tour_prompt_confirm">Bana etrafı göster</string>
+    <string name="onboarding_restart_title">Özellik turu</string>
+    <string name="onboarding_restart_desc">Morphe\'nin temel özelliklerinde rehberli bir tura çıkın</string>
 </resources>

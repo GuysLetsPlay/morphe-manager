@@ -36,7 +36,7 @@
     <!-- Home Screen - Home Greetings -->
     <string name="home_greeting_1">どのアプリにパッチを適用しますか？</string>
     <!-- Humorous hype message with light nostalgia -->
-    <string name="home_greeting_2">再びアプリを伝説にする準備はできましたか？</string>
+    <string name="home_greeting_2">アプリを素晴らしくする準備はOK？</string>
     <!-- "Buckle up" referring to fastening your vehicle seat belt. A light-hearted joke to build excitement -->
     <string name="home_greeting_3">準備はいい？ パッチの時間だ</string>
     <!-- Sarcastic joke about blocking ads, intentionally over-the-top -->
@@ -60,11 +60,11 @@
     <string name="sources_management_prerelease_toggle">プレリリース版のパッチを使用</string>
     <string name="sources_management_prerelease_toggle_description">実験的なバージョンのパッチを取得します</string>
     <string name="sources_management_experimental_versions_toggle">実験的なバージョンのアプリを使用</string>
-    <string name="sources_management_experimental_versions_toggle_description">利用可能な場合は、実験的なバージョンのアプリをパッチ対象にします</string>
+    <string name="sources_management_experimental_versions_toggle_description">利用可能な場合に、実験的なバージョンのアプリをパッチ対象にします</string>
     <string name="sources_management_already_exists">このソースは既に存在します</string>
     <string name="sources_management_invalid_url">無効なソースURLです。アドレスを確認して、もう一度試してください。</string>
-    <string name="sources_management_metadata_unavailable">メタデータなし</string>
-    <string name="sources_management_metadata_unavailable_hint">リモートのメタデータファイルは利用できません。インストール済みのバンドルでのパッチ適用は可能ですが、このソースの自動更新は無効になります。</string>
+    <string name="sources_management_metadata_unavailable">メタデータがありません</string>
+    <string name="sources_management_metadata_unavailable_hint">接続先のメタデータファイルが利用できません。インストール済みバンドルでのパッチ適用は可能ですが、このソースからの自動更新は無効になります。</string>
     <string name="sources_management_metadata_unavailable_hint_missing">パッチバンドルのダウンロードに失敗しました。ソースURLが正しくないか、ファイルが存在しない可能性があります。</string>
     <string name="sources_management_source_enabled">ソースが有効</string>
     <string name="sources_management_source_disabled">ソースが無効</string>
@@ -101,7 +101,7 @@
     <string name="home_apk_availability_dialog_title">オリジナルの APK を探すのにお困りですか？</string>
     <string name="home_apk_availability_dialog_simple">&lt;b&gt;%s&lt;/b&gt; にパッチを適用するには、以下のバージョンの APK (未パッチ) が必要です</string>
     <string name="home_apk_availability_dialog_expert">&lt;b&gt;%s&lt;/b&gt; にパッチを適用するには、以下のバージョンの APK (未パッチ) が必要です</string>
-    <string name="home_apk_availability_recommended_label">推奨</string>
+    <string name="home_apk_availability_recommended_label">おすすめ</string>
     <string name="home_apk_availability_unpatched_label">未パッチ</string>
     <string name="home_apk_availability_incompatible_label">非対応</string>
     <string name="home_apk_availability_yes">はい、 APK を探すのを手伝ってください</string>
@@ -118,6 +118,11 @@
     <string name="home_download_instructions_step1">下の 「%s」 ボタンをタップする</string>
     <string name="home_download_instructions_step2_part1">ウェブページを下にスクロールして、このボタンをタップする</string>
     <string name="home_download_instructions_download_button_toast">ここではなく、ウェブサイトにあるボタンをタップしてください😊</string>
+    <string name="home_download_instructions_download_button_toast_2">それでは、下の「続行」をタップしてウェブサイトへ進んでください👆</string>
+    <string name="home_download_instructions_download_button_toast_3">練習あるのみ！着実に上達していますよ！💪</string>
+    <string name="home_download_instructions_download_button_toast_4">ゴールはまだまだ先です…🙈</string>
+    <string name="home_download_instructions_download_button_toast_5">分かりました。その熱意に敬意を表します🫡</string>
+    <string name="home_download_instructions_download_button_toast_6">これであなたも Morphe の公式「ボタン」テスターです🏅</string>
     <string name="home_download_instructions_step3">ダウンロードが完了するまで待ち、その APK はまだ &lt;b&gt;インストールしない&lt;b&gt;</string>
     <string name="home_download_instructions_step3_mount">ダウンロードが完了するまで待ち、&lt;b&gt;その APK をインストールする&lt;/b&gt;</string>
     <string name="home_download_instructions_step4">ダウンロード完了後、 Morphe に戻る</string>
@@ -130,7 +135,7 @@
     <string name="home_recommended_version">推奨バージョン</string>
     <string name="home_selected_version">選択したバージョン</string>
     <string name="home_select_apk_title">APK を選択</string>
-    <string name="home_select_any_apk_description">任意のアプリの APK ファイルを選択するか、このデバイスに既にインストールされているアプリを選択してください</string>
+    <string name="home_select_any_apk_description">APK ファイルを選択するか、このデバイスにインストールされているアプリを選択してください</string>
     <string name="home_use_installed_app">インストール済みアプリを使用</string>
     <string name="home_installed_app_picker_title">インストール済みアプリを選択</string>
     <string name="home_installed_app_picker_empty">アプリが見つかりません</string>
@@ -324,9 +329,9 @@
     <string name="battery_optimization_dialog_description">一部のデバイスでは、アプリを最小化するとパッチャーが停止する場合があります。確実にパッチ処理を完了するため、Morphe をバッテリー制限の対象外にしてください</string>
     <string name="battery_optimization_not_now">後で</string>
     <!-- Patcher Screen - Patcher Worker -->
-    <string name="patcher_notification_title">パッチ適用中…</string>
-    <string name="patcher_notification_text">パッチ適用プログラムに戻るにはタップ</string>
-    <string name="patcher_stop_confirm_title">パッチ適用プログラムを停止</string>
+    <string name="patcher_notification_title">パッチを適用中…</string>
+    <string name="patcher_notification_text">パッチ画面に戻るにはタップ</string>
+    <string name="patcher_stop_confirm_title">パッチ適用処理を停止</string>
     <string name="patcher_stop_confirm_description">パッチ適用処理を停止してもよろしいですか？</string>
     <!-- Patcher Screen - Patcher Messages -->
     <string name="patcher_message_1">アプリを最高な姿に変身中…</string>
@@ -376,10 +381,10 @@
     <!-- Patcher Screen - Mini-games -->
     <string name="mini_game_score">スコア %d</string>
     <string name="mini_game_best">ベストスコア %d</string>
-    <string name="mini_game_new_record">新しい記録！</string>
+    <string name="mini_game_new_record">新記録！</string>
     <string name="mini_game_game_over">ゲームオーバー</string>
     <string name="mini_game_try_again">リトライ</string>
-    <string name="mini_game_paused">一時停止中</string>
+    <string name="mini_game_paused">ポーズ中</string>
     <string name="mini_game_resume">続行</string>
     <string name="mini_game_2048_picker_subtitle">タイルをスライドして合体させよう</string>
     <string name="mini_game_flappy_picker_subtitle">タップしてパイプの間を飛び抜けよう</string>
@@ -579,7 +584,7 @@ morphe_header_custom_dark.png
     <string name="installer_internal_description">Android パッケージインストーラーを使用します</string>
     <string name="installer_auto_saved_name">root 権限マウント式インストーラー</string>
     <string name="installer_auto_saved_description">パッチ適用済み APK をインストール済みアプリの上にマウントします</string>
-    <string name="installer_shizuku_description">Shizuku または Sui を使用してサイレントインストールします</string>
+    <string name="installer_shizuku_description">Shizuku または Sui を使用して自動インストールします</string>
     <string name="installer_option_none">代替なし</string>
     <string name="installer_none_description">代替インストーラーは未設定です</string>
     <string name="installer_status_requires_root">root 権限が必要です</string>
@@ -602,6 +607,9 @@ morphe_header_custom_dark.png
     <string name="installer_use_standard">標準を使用</string>
     <string name="settings_prompt_installer_on_install">インストーラー選択ダイアログ</string>
     <string name="settings_prompt_installer_on_install_description">パッチ適用済みアプリをインストールする際に、毎回インストーラー選択ダイアログを表示します</string>
+    <string name="settings_auto_install_with_shizuku">パッチ適用後の自動インストール</string>
+    <string name="settings_auto_install_with_shizuku_description">パッチ適用完了後、パッチ適用済み APK を自動的にインストールします</string>
+    <string name="settings_auto_install_prompt_conflict">\"%s\" が有効になっています - 自動インストールはスキップされます</string>
     <!-- Settings - System Tab - Performance Section -->
     <string name="settings_system_battery_optimization">電池の最適化</string>
     <string name="settings_system_battery_optimization_description">アプリを閉じているときでも、パッチャーを実行し続けます</string>
@@ -726,6 +734,10 @@ morphe_header_custom_dark.png
     <string name="retry">再試行</string>
     <string name="add">追加</string>
     <string name="close">閉じる</string>
+    <string name="back">戻る</string>
+    <string name="next">次へ</string>
+    <string name="done">完了</string>
+    <string name="skip">スキップ</string>
     <string name="clear">クリア</string>
     <string name="delete">削除</string>
     <string name="remove">削除</string>
@@ -806,4 +818,29 @@ morphe_header_custom_dark.png
 
 それでも続行しますか？"</string>
     <string name="download_update_confirmation">アップデートをダウンロードしますか？</string>
+    <!-- Onboarding coach marks -->
+    <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
+    <string name="onboarding_step_of">%1$d / %2$d</string>
+    <string name="onboarding_sources_desc">パッチソースを管理できます。各ソースは、アプリに適用できるパッチを提供します</string>
+    <string name="onboarding_swipe_title">ジェスチャー操作</string>
+    <string name="onboarding_swipe_desc">アプリカードを右にスワイプすると、利用可能なパッチを表示できます。左にスワイプすると、ホーム画面からカードを非表示にできます</string>
+    <string name="onboarding_settings_desc">Morphe の外観設定や高度な設定、システムツールをカスタマイズできます</string>
+    <string name="onboarding_sources_patches_desc">タップして、このソースで利用できるパッチ一覧を表示できます</string>
+    <string name="onboarding_sources_version_desc">バージョンをタップすると、このソースの変更履歴を確認できます</string>
+    <string name="onboarding_sources_prerelease_desc">有効にすると、このソースからプレリリース版のパッチを受け取れます</string>
+    <string name="onboarding_appearance_tab_desc">アプリの見た目をカスタマイズできます。テーマ、アクセントカラー、背景を変更できます</string>
+    <string name="onboarding_appearance_theme_desc">ライト、ダーク、またはシステムテーマを選択できます。カスタムアクセントカラーの設定や、ダイナミックカラーの有効化もできます</string>
+    <string name="onboarding_expert_mode_desc">エキスパートモードを有効にすると、パッチ セレクションやカスタムオプションなどの高度な機能を利用できるようになります</string>
+    <!-- Translate "System" the same way as the System settings tab -->
+    <string name="onboarding_system_tab_title">システムタブ</string>
+    <string name="onboarding_system_tab_desc">キーストア管理、インポート/エクスポートツール、アプリ情報を利用できます</string>
+    <string name="onboarding_system_installer_desc">パッチ適用済みアプリのインストール方法を、標準、Root マウント、または Shizuku から選択できます</string>
+    <string name="onboarding_system_process_runtime_desc">安定性を向上させ、メモリ使用量を抑えるためにパッチ処理を別プロセスで実行します。大きなアプリにおすすめです</string>
+    <string name="onboarding_system_file_picker_desc">有効にすると、APK やキーストアを選択する際に、システム標準ではなく内蔵ファイルブラウザーを使用します</string>
+    <!-- Tour prompt dialog shown after first successful patch install -->
+    <string name="tour_prompt_title">かんたん機能ガイド</string>
+    <string name="tour_prompt_desc">Morphe の主要な機能を簡単なツアーで見てみませんか？</string>
+    <string name="tour_prompt_confirm">ガイドを開始</string>
+    <string name="onboarding_restart_title">機能ガイド</string>
+    <string name="onboarding_restart_desc">Morphe の主要な機能をガイド付きで紹介します</string>
 </resources>
