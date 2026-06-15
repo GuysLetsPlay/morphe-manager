@@ -53,6 +53,27 @@
     <string name="home_greeting_9">Σώζουμε εφαρμογές από τον εαυτό τους από σήμερα</string>
     <!-- Light sarcasm, casual and tech-savvy humor -->
     <string name="home_greeting_10">Τροφοδοτούμενοι από καφεΐνη και καλές τροποποιήσεις</string>
+    <!-- Morning greetings (5:00–11:59) -->
+    <string name="home_greeting_morning_1">Ανέβα και κάνε ενημέρωση</string>
+    <string name="home_greeting_morning_2">Καλημέρα! Οι εφαρμογές δεν θα κάνουν ενημερώσεις μόνες τους</string>
+    <!-- Afternoon greetings (12:00–16:59) -->
+    <string name="home_greeting_afternoon_1">Απογευματινή υπνηλία; Κάνε μια ενημέρωση</string>
+    <string name="home_greeting_afternoon_2">Το μεσημεριανό σνακ και μετά οι ενημερώσεις είναι άλλο πράγμα</string>
+    <string name="home_greeting_afternoon_3">Η απογευματινή βάρδια: έκδοση ενημερώσεων</string>
+    <!-- Evening greetings (17:00–21:59) -->
+    <string name="home_greeting_evening_1">Καλησπέρα! Οι ενημερώσεις το βράδυ είναι άλλο πράγμα</string>
+    <string name="home_greeting_evening_2">Χαλαρώνεις; Κάνε πρώτα μια ενημέρωση εφαρμογής</string>
+    <string name="home_greeting_evening_3">Τελειώνεις τη δουλειά; Κάνε μια ενημέρωση πρώτα</string>
+    <!-- Late night greetings (22:00–23:59) -->
+    <string name="home_greeting_late_night_1">Είσαι ακόμα ξύπνιος; Εξίσου ξύπνιες είναι και οι εφαρμογές που χρειάζονται ενημέρωση</string>
+    <string name="home_greeting_late_night_2">Βραδινή συνεδρία ενημερώσεων; Σεβασμός</string>
+    <string name="home_greeting_late_night_3">Λειτουργία νυχτοπούλιου: ενεργοποιημένη</string>
+    <!-- Super late night greetings (0:00–4:59) -->
+    <string name="home_greeting_super_late_1">Ώρα αιχμής για ενημερώσεις… υποτίθεται</string>
+    <string name="home_greeting_super_late_2">Δεν μπορείς να κοιμηθείς; Κάνε μια ενημέρωση</string>
+    <string name="home_greeting_super_late_3">Σε αυτό το σημείο, καλύτερα να μείνεις ξύπνιος και να κάνεις ενημερώσεις</string>
+    <string name="home_greeting_super_late_4">Εσύ και οι servers, και οι δύο ξύπνιοι</string>
+    <string name="home_greeting_super_late_5">Νυχτερινός και παραγωγικός</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Πηγές τροποποιήσεων</string>
     <string name="sources_management_open_in_browser">Άνοιγμα σε πρόγραμμα περιήγησης</string>
@@ -106,8 +127,8 @@
     <string name="home_apk_availability_incompatible_label">Ασύμβατο</string>
     <string name="home_apk_availability_yes">Ναι, βοήθησέ με να βρω ένα APK</string>
     <string name="home_apk_availability_no">Όχι, ήδη έχω ένα APK</string>
-    <string name="home_apk_use_saved_with_version">Χρήση αποθηκευμένου APK (v%s)</string>
-    <string name="home_apk_use_installed_with_version">Χρήση εγκατεστημένου APK (v%s)</string>
+    <string name="home_apk_use_saved">Χρήση αποθηκευμένου APK</string>
+    <string name="home_apk_use_installed">Χρήση εγκατεστημένου APK</string>
     <string name="home_app_info_no_saved_apk">Δεν υπάρχει αποθηκευμένο APK. Η τροποποίηση κώδικα θα απαιτήσει την επιλογή του αρχείου APK ξανά</string>
     <string name="home_version_requires_android">Απαιτείται Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">Δεν υποστηρίζεται σε αυτή τη συσκευή</string>
@@ -184,6 +205,9 @@
     <string name="home_dialog_unsupported_version_dialog_proceed">Συνέχεια παρ’ όλα αυτά</string>
     <string name="home_dialog_unsupported_version_compatible_versions">Συμβατές εκδόσεις:</string>
     <string name="home_dialog_unsupported_version_unsupported_label">Μη υποστηριζόμενο</string>
+    <!-- "Build" here refers to a specific compiled version of the app (versionCode) -->
+    <string name="home_dialog_unsupported_version_build">Build %d</string>
+    <string name="home_dialog_unsupported_version_build_mismatch_description">Αυτή είναι μια διαφορετική έκδοση της ίδιας έκδοσης. Οι ενημερώσεις απαιτούν μια συγκεκριμένη έκδοση</string>
     <string name="home_dialog_wrong_package_title">Επιλέχθηκε λάθος πακέτο</string>
     <string name="home_dialog_wrong_package_description">Το επιλεγμένο APK δεν είναι για την εφαρμογή που επιθυμείτε να τροποποιήσετε</string>
     <string name="home_dialog_expected_package">Αναμενόμενο πακέτο:</string>

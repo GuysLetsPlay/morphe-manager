@@ -53,6 +53,11 @@
     <string name="home_greeting_9">Spašavanje aplikacija od samih sebe od danas</string>
     <!-- Light sarcasm, casual and tech-savvy humor -->
     <string name="home_greeting_10">Pokretano kavom i dobrim patchevima</string>
+    <!-- Morning greetings (5:00–11:59) -->
+    <!-- Afternoon greetings (12:00–16:59) -->
+    <!-- Evening greetings (17:00–21:59) -->
+    <!-- Late night greetings (22:00–23:59) -->
+    <!-- Super late night greetings (0:00–4:59) -->
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Izvori patcheva</string>
     <string name="sources_management_open_in_browser">Otvori u pregledniku</string>
@@ -106,8 +111,6 @@
     <string name="home_apk_availability_incompatible_label">Nekompatibilno</string>
     <string name="home_apk_availability_yes">Da, pomozi mi pronaći aplikaciju</string>
     <string name="home_apk_availability_no">Ne, već imam aplikaciju</string>
-    <string name="home_apk_use_saved_with_version">Koristi spremljenu aplikaciju(v%s)</string>
-    <string name="home_apk_use_installed_with_version">Koristi instaliranu aplikaciju(v%s)</string>
     <string name="home_app_info_no_saved_apk">Nema spremljene aplikacije. Patchanje će zahtijevati ponovni odabir aplikacije</string>
     <string name="home_version_requires_android">Zahtijeva Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">Nije podržano na ovom uređaju</string>
@@ -184,6 +187,7 @@ Za najbolje rezultate,  patchanje ove aplikacija preporučuje &lt;b&gt;cijeli AP
     <string name="home_dialog_unsupported_version_dialog_proceed">Nastavi svejedno</string>
     <string name="home_dialog_unsupported_version_compatible_versions">Kompatibilne verzije:</string>
     <string name="home_dialog_unsupported_version_unsupported_label">Nije podržano</string>
+    <!-- "Build" here refers to a specific compiled version of the app (versionCode) -->
     <string name="home_dialog_wrong_package_title">Pogrešan paket odabran</string>
     <string name="home_dialog_wrong_package_description">Odabrana aplikacija nije namijenjena za aplikaciju koju želite patchati</string>
     <string name="home_dialog_expected_package">Očekivani paket:</string>

@@ -53,6 +53,27 @@
     <string name="home_greeting_9">Redder apps fra dem selv siden i dag</string>
     <!-- Light sarcasm, casual and tech-savvy humor -->
     <string name="home_greeting_10">Drevet af koffein og gode patches</string>
+    <!-- Morning greetings (5:00–11:59) -->
+    <string name="home_greeting_morning_1">Stå op og patc</string>
+    <string name="home_greeting_morning_2">Godmorgen! Apps patcer ikke sig selv</string>
+    <!-- Afternoon greetings (12:00–16:59) -->
+    <string name="home_greeting_afternoon_1">Eftermiddagstræthed? Patch noget</string>
+    <string name="home_greeting_afternoon_2">Eftermiddags-patchning rammer anderledes</string>
+    <string name="home_greeting_afternoon_3">Eftermiddagsskiftet: patch-udgaven</string>
+    <!-- Evening greetings (17:00–21:59) -->
+    <string name="home_greeting_evening_1">God aften! Aften-patchning rammer anderledes</string>
+    <string name="home_greeting_evening_2">Slapper af? Patch en app først</string>
+    <string name="home_greeting_evening_3">Klar til at gå? Patch noget først</string>
+    <!-- Late night greetings (22:00–23:59) -->
+    <string name="home_greeting_late_night_1">Stadig vågen? Det er appsene, der skal patche også</string>
+    <string name="home_greeting_late_night_2">Sen natte-patch-session? Respekt</string>
+    <string name="home_greeting_late_night_3">Natugle-tilstand: aktiveret</string>
+    <!-- Super late night greetings (0:00–4:59) -->
+    <string name="home_greeting_super_late_1">Højtid for patchning… angiveligt</string>
+    <string name="home_greeting_super_late_2">Kan ikke sove? Patch noget</string>
+    <string name="home_greeting_super_late_3">På dette tidspunkt, bare bliv vågen og patch</string>
+    <string name="home_greeting_super_late_4">Dig og serverne, begge vågne</string>
+    <string name="home_greeting_super_late_5">Natlig og produktiv</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Patchkilder</string>
     <string name="sources_management_open_in_browser">Åbn links i browser</string>
@@ -106,8 +127,8 @@
     <string name="home_apk_availability_incompatible_label">Inkompatibel</string>
     <string name="home_apk_availability_yes">Ja, hjælp med at finde en APK</string>
     <string name="home_apk_availability_no">Nej, jeg har allerede en APK</string>
-    <string name="home_apk_use_saved_with_version">Brug gemt APK (v%s)</string>
-    <string name="home_apk_use_installed_with_version">Brug installeret APK (v%s)</string>
+    <string name="home_apk_use_saved">Brug gemt APK</string>
+    <string name="home_apk_use_installed">Brug installeret APK</string>
     <string name="home_app_info_no_saved_apk">Ingen gemt APK. Patchning kræver at du vælger APK-filen igen</string>
     <string name="home_version_requires_android">Kræver Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">Ikke understøttet på denne enhed</string>
@@ -184,6 +205,9 @@ For de bedste resultater anbefaler denne app at patche en &lt;b&gt;fuld APK&lt;/
     <string name="home_dialog_unsupported_version_dialog_proceed">Fortsæt alligevel</string>
     <string name="home_dialog_unsupported_version_compatible_versions">Kompatible versioner:</string>
     <string name="home_dialog_unsupported_version_unsupported_label">Ikke understøttet</string>
+    <!-- "Build" here refers to a specific compiled version of the app (versionCode) -->
+    <string name="home_dialog_unsupported_version_build">Build %d</string>
+    <string name="home_dialog_unsupported_version_build_mismatch_description">Dette er en anden build af den samme version. Patchene kræver en specifik build</string>
     <string name="home_dialog_wrong_package_title">Forkert pakke valgt</string>
     <string name="home_dialog_wrong_package_description">Den valgte APK matcher ikke den app, du tilsigtede at patche</string>
     <string name="home_dialog_expected_package">Forventet pakke:</string>

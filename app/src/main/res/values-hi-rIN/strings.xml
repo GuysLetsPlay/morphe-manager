@@ -53,6 +53,27 @@
     <string name="home_greeting_9">आज से ऐप्स को खुद से बचा रहे हैं</string>
     <!-- Light sarcasm, casual and tech-savvy humor -->
     <string name="home_greeting_10">कैफीन और अच्छे पैच द्वारा संचालित</string>
+    <!-- Morning greetings (5:00–11:59) -->
+    <string name="home_greeting_morning_1">उठो और पैच करो</string>
+    <string name="home_greeting_morning_2">शुभ प्रभात! ऐप्स खुद से पैच नहीं करेंगे</string>
+    <!-- Afternoon greetings (12:00–16:59) -->
+    <string name="home_greeting_afternoon_1">दोपहर में सुस्ती? कुछ पैच करो</string>
+    <string name="home_greeting_afternoon_2">दोपहर के भोजन के बाद पैचिंग अलग ही लगती है</string>
+    <string name="home_greeting_afternoon_3">दोपहर की शिफ्ट: पैच संस्करण</string>
+    <!-- Evening greetings (17:00–21:59) -->
+    <string name="home_greeting_evening_1">शुभ संध्या! शाम के पैच अलग ही लगते हैं</string>
+    <string name="home_greeting_evening_2">शांत हो रहे हैं? पहले किसी ऐप को पैच करें</string>
+    <string name="home_greeting_evening_3">काम खत्म हो गया? पहले कुछ पैच करें</string>
+    <!-- Late night greetings (22:00–23:59) -->
+    <string name="home_greeting_late_night_1">अभी भी जागे हैं? वे ऐप भी हैं जिन्हें पैच करने की आवश्यकता है</string>
+    <string name="home_greeting_late_night_2">देर रात पैच सत्र? सम्मान</string>
+    <string name="home_greeting_late_night_3">नाइट उल्लू मोड: सक्रिय</string>
+    <!-- Super late night greetings (0:00–4:59) -->
+    <string name="home_greeting_super_late_1">पैचिंग का चरम समय… कथित तौर पर</string>
+    <string name="home_greeting_super_late_2">सो नहीं पा रहे? कुछ पैच करें</string>
+    <string name="home_greeting_super_late_3">इस बिंदु पर, बस जागते रहें और पैच करते रहें</string>
+    <string name="home_greeting_super_late_4">आप और सर्वर, दोनों जाग रहे हैं</string>
+    <string name="home_greeting_super_late_5">रात के समय और उत्पादक</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">पैच स्रोत</string>
     <string name="sources_management_open_in_browser">खोल में खोल करना</string>
@@ -106,8 +127,8 @@
     <string name="home_apk_availability_incompatible_label">असंगत</string>
     <string name="home_apk_availability_yes">हाँ, मुझे APK ढूंढने में मदद करें</string>
     <string name="home_apk_availability_no">नहीं, मेरे पास पहले से ही एक एपीके है</string>
-    <string name="home_apk_use_saved_with_version">प्रतिलिपि APK (v%s) का उपयोग करें</string>
-    <string name="home_apk_use_installed_with_version">इंस्टॉल किए गए APK (v%s) का उपयोग करें</string>
+    <string name="home_apk_use_saved">सहेजी गई APK का उपयोग करें</string>
+    <string name="home_apk_use_installed">स्थापित APK का उपयोग करें</string>
     <string name="home_app_info_no_saved_apk">कोई प्रतिलिपि APK नहीं है। पट्च करना पुनः APK फ़ाइल का चयन करना आवश्यक होगा</string>
     <string name="home_version_requires_android">Android %s+ की आवश्यकता है</string>
     <string name="home_apk_no_compatible_versions_title">इस डिवाइस पर समर्थित नहीं है</string>
@@ -184,6 +205,9 @@
     <string name="home_dialog_unsupported_version_dialog_proceed">अब भी आगे बढ़ें</string>
     <string name="home_dialog_unsupported_version_compatible_versions">संगत संस्करण:</string>
     <string name="home_dialog_unsupported_version_unsupported_label">असंगत</string>
+    <!-- "Build" here refers to a specific compiled version of the app (versionCode) -->
+    <string name="home_dialog_unsupported_version_build">निर्माण %d</string>
+    <string name="home_dialog_unsupported_version_build_mismatch_description">यह उसी संस्करण का एक अलग निर्माण है। पैच को एक विशिष्ट निर्माण की आवश्यकता होती है</string>
     <string name="home_dialog_wrong_package_title">गलत पैकेज चुना गया</string>
     <string name="home_dialog_wrong_package_description">चुनी गई APK, आपने पथच करने के लिए इरादत किया गया एप्लिकेशन के लिए नहीं है।</string>
     <string name="home_dialog_expected_package">अनुकूलित पैकेज:</string>

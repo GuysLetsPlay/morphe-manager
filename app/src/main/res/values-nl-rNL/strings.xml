@@ -53,6 +53,27 @@
     <string name="home_greeting_9">Apps beschermen tegen zichzelf, al sinds vandaag</string>
     <!-- Light sarcasm, casual and tech-savvy humor -->
     <string name="home_greeting_10">Aangedreven door cafeïne en goede patches</string>
+    <!-- Morning greetings (5:00–11:59) -->
+    <string name="home_greeting_morning_1">Staat op en patch</string>
+    <string name="home_greeting_morning_2">Goedemorgen! Apps patchen zichzelf niet</string>
+    <!-- Afternoon greetings (12:00–16:59) -->
+    <string name="home_greeting_afternoon_1">Middagdipje? Patch iets</string>
+    <string name="home_greeting_afternoon_2">Patching na de lunch is anders</string>
+    <string name="home_greeting_afternoon_3">De middagdienst: patch-editie</string>
+    <!-- Evening greetings (17:00–21:59) -->
+    <string name="home_greeting_evening_1">Goede avond! Avondpatches zijn anders</string>
+    <string name="home_greeting_evening_2">Even tot rust komen? Patch eerst een app</string>
+    <string name="home_greeting_evening_3">Klok je uit? Patch eerst iets</string>
+    <!-- Late night greetings (22:00–23:59) -->
+    <string name="home_greeting_late_night_1">Nog wakker? De apps die gepatcht moeten worden ook</string>
+    <string name="home_greeting_late_night_2">Late night patch sessie? Respect</string>
+    <string name="home_greeting_late_night_3">Nachtuilmodus: geactiveerd</string>
+    <!-- Super late night greetings (0:00–4:59) -->
+    <string name="home_greeting_super_late_1">Hoogseizoen voor het patchen… zogenaamd</string>
+    <string name="home_greeting_super_late_2">Kun je niet slapen? Patch iets</string>
+    <string name="home_greeting_super_late_3">Blijf gewoon op en patch</string>
+    <string name="home_greeting_super_late_4">Jij en de servers, allebei wakker</string>
+    <string name="home_greeting_super_late_5">Nachtelijk en productief</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Patchbronnen</string>
     <string name="sources_management_open_in_browser">Openen in browser</string>
@@ -104,8 +125,8 @@
     <string name="home_apk_availability_incompatible_label">Incompatibel</string>
     <string name="home_apk_availability_yes">Ja, help me een APK te vinden</string>
     <string name="home_apk_availability_no">Nee, ik heb al een .APK</string>
-    <string name="home_apk_use_saved_with_version">Gebruik opgeslagen .APK-bestand (v%s)</string>
-    <string name="home_apk_use_installed_with_version">Gebruik geïnstalleerde APK (v%s)</string>
+    <string name="home_apk_use_saved">Gebruik opgeslagen APK</string>
+    <string name="home_apk_use_installed">Gebruik geïnstalleerde APK</string>
     <string name="home_app_info_no_saved_apk">Er is geen APK opgeslagen. Om de patch uit te voeren, moet u het APK opnieuw selecteren</string>
     <string name="home_version_requires_android">Vereist Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">Niet ondersteund voor dit apparaat</string>
@@ -181,6 +202,9 @@ Voor de beste resultaten beveelt deze app aan om een &lt;b&gt;volledig APK&lt;/b
     <string name="home_dialog_unsupported_version_dialog_proceed">Toch doorgaan</string>
     <string name="home_dialog_unsupported_version_compatible_versions">Compatibele versies:</string>
     <string name="home_dialog_unsupported_version_unsupported_label">Niet ondersteund</string>
+    <!-- "Build" here refers to a specific compiled version of the app (versionCode) -->
+    <string name="home_dialog_unsupported_version_build">Build %d</string>
+    <string name="home_dialog_unsupported_version_build_mismatch_description">Dit is een andere build van dezelfde versie. De patches vereisen een specifieke build</string>
     <string name="home_dialog_wrong_package_title">Verkeerde package geselecteerd</string>
     <string name="home_dialog_wrong_package_description">Het geselecteerde APK-bestand is niet geschikt voor de applicatie die u wilde patchen</string>
     <string name="home_dialog_expected_package">Verwacht pakket:</string>

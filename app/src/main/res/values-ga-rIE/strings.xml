@@ -53,6 +53,27 @@
     <string name="home_greeting_9">Aipeanna á sábháil uathu féin ó inniu</string>
     <!-- Light sarcasm, casual and tech-savvy humor -->
     <string name="home_greeting_10">Cumhachtaithe ag caiféin agus paistí maithe</string>
+    <!-- Morning greetings (5:00–11:59) -->
+    <string name="home_greeting_morning_1">Éirigh agus patch</string>
+    <string name="home_greeting_morning_2">Maidin mhaith! Ní patchóidh aipeanna iad féin</string>
+    <!-- Afternoon greetings (12:00–16:59) -->
+    <string name="home_greeting_afternoon_1">An mealladh tráthnóna? Patchaigh rud éigin</string>
+    <string name="home_greeting_afternoon_2">Tá comhrá seisiúin lónn ag cur béim ar rud ar leith.</string>
+    <string name="home_greeting_afternoon_3">An caibidil tráchtairní na tráthnóna.</string>
+    <!-- Evening greetings (17:00–21:59) -->
+    <string name="home_greeting_evening_1">Fáilte ar maidin! Tá athruithe cuí ag dul ar aghaidh ag an tráthnóna.</string>
+    <string name="home_greeting_evening_2">Ag sosú? Patcháil aipe ar dtús.</string>
+    <string name="home_greeting_evening_3">Ag dul ar lár? Patcháil rud éigin ar dtús.</string>
+    <!-- Late night greetings (22:00–23:59) -->
+    <string name="home_greeting_late_night_1">An bhfuil tú fós awake? Tá na aipeanna a thar a bheith gá patcháil fós.</string>
+    <string name="home_greeting_late_night_2">Seisiún patchála déanach ar oíche? Meas.</string>
+    <string name="home_greeting_late_night_3">Mód owl oíche: Gníomhaithe.</string>
+    <!-- Super late night greetings (0:00–4:59) -->
+    <string name="home_greeting_super_late_1">Uaireanta ard patchála… go raibh maith agat.</string>
+    <string name="home_greeting_super_late_2">Nó féidir leat codladh? Patcháil rud éigin.</string>
+    <string name="home_greeting_super_late_3">Ag an bpointe seo, fan agus patcháil.</string>
+    <string name="home_greeting_super_late_4">Tú féin agus na freastalaithe, araon awake.</string>
+    <string name="home_greeting_super_late_5">Oícheachtach agus táirgiúil.</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Foinsí paiste</string>
     <string name="sources_management_open_in_browser">Oscail sa bhrabhsálaí</string>
@@ -106,8 +127,8 @@
     <string name="home_apk_availability_incompatible_label">Neamh-chomhoiriúnach</string>
     <string name="home_apk_availability_yes">Sea, cabhraigh liom APK a aimsiú</string>
     <string name="home_apk_availability_no">Níl, tá APK agam cheana féin</string>
-    <string name="home_apk_use_saved_with_version">Úsáid an APK sábháilte (v%s)</string>
-    <string name="home_apk_use_installed_with_version">Úsáid an APK suiteáilte (v%s)</string>
+    <string name="home_apk_use_saved">Úsáid APK sábháilte</string>
+    <string name="home_apk_use_installed">Úsáid APK suiteáilte</string>
     <string name="home_app_info_no_saved_apk">Níl aon APK sábháilte. Beidh ort an comhad APK a roghnú arís le haghaidh paisteála.</string>
     <string name="home_version_requires_android">Éilíonn Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">Ní thacaítear leis ar an ngléas seo</string>
@@ -184,6 +205,9 @@ Chun na torthaí is fearr a fháil, molann an aip seo paiste a chur ar &lt;b&gt;
     <string name="home_dialog_unsupported_version_dialog_proceed">Lean ar aghaidh ar aon nós</string>
     <string name="home_dialog_unsupported_version_compatible_versions">Leaganacha comhoiriúnacha:</string>
     <string name="home_dialog_unsupported_version_unsupported_label">Gan tacaíocht</string>
+    <!-- "Build" here refers to a specific compiled version of the app (versionCode) -->
+    <string name="home_dialog_unsupported_version_build">Tógáil %d</string>
+    <string name="home_dialog_unsupported_version_build_mismatch_description">Is é seo tógáil difriúil den leagan céanna. Teastaíonn patchála leagan áirithe.</string>
     <string name="home_dialog_wrong_package_title">Pacáiste mícheart roghnaithe</string>
     <string name="home_dialog_wrong_package_description">Níl an APK roghnaithe don fheidhmchlár arbh eol duit paiste a chur air</string>
     <string name="home_dialog_expected_package">Pacáiste ionchais:</string>

@@ -40,7 +40,7 @@
     <!-- "Buckle up" referring to fastening your vehicle seat belt. A light-hearted joke to build excitement -->
     <string name="home_greeting_3">Hãy chuẩn bị sẵn sàng, đã đến lúc vá rồi</string>
     <!-- Sarcastic joke about blocking ads, intentionally over-the-top -->
-    <string name="home_greeting_4">Ngày mới, với kiệt tác chặn quảng cáo mới</string>
+    <string name="home_greeting_4">Ngày mới, kiệt tác mới - nói không với quảng cáo</string>
     <!-- "Watch ads" refers to watching video ads in unpatched apps -->
     <string name="home_greeting_5">Bạn thích xem quảng cáo không? Tôi thì không</string>
     <!-- Friendly, slightly mischievous joke about controlling app behavior -->
@@ -53,6 +53,27 @@
     <string name="home_greeting_9">Cứu chúng khỏi chính chúng ngay từ hôm nay</string>
     <!-- Light sarcasm, casual and tech-savvy humor -->
     <string name="home_greeting_10">Nạp caffein có ngay bản vá xịn</string>
+    <!-- Morning greetings (5:00–11:59) -->
+    <string name="home_greeting_morning_1">Chào bình minh và cập nhật</string>
+    <string name="home_greeting_morning_2">Chào buổi sáng! Ứng dụng sẽ không tự động cập nhật đâu nhé</string>
+    <!-- Afternoon greetings (12:00–16:59) -->
+    <string name="home_greeting_afternoon_1">Buổi chiều buồn chán? Cập nhật thôi!</string>
+    <string name="home_greeting_afternoon_2">Vệc vá lỗi sau bữa trưa có gì đó khác biệt</string>
+    <string name="home_greeting_afternoon_3">Ca làm chiều: phiên bản vá lỗi</string>
+    <!-- Evening greetings (17:00–21:59) -->
+    <string name="home_greeting_evening_1">Chào buổi tối! Vá lỗi buổi tối có gì đó khác biệt</string>
+    <string name="home_greeting_evening_2">Đang nghỉ ngơi? Hãy vá ứng dụng trước nhé</string>
+    <string name="home_greeting_evening_3">Sắp hết giờ làm? Vá lỗi một chút đã</string>
+    <!-- Late night greetings (22:00–23:59) -->
+    <string name="home_greeting_late_night_1">Vẫn còn thức? Các ứng dụng cần vá lỗi cũng vậy</string>
+    <string name="home_greeting_late_night_2">Buổi vá lỗi đêm muộn? Quá đỉnh</string>
+    <string name="home_greeting_late_night_3">Chế độ cú đêm: đã kích hoạt</string>
+    <!-- Super late night greetings (0:00–4:59) -->
+    <string name="home_greeting_super_late_1">Giờ vá lỗi cao điểm… theo lời đồn</string>
+    <string name="home_greeting_super_late_2">Không ngủ được? Vá lỗi đi</string>
+    <string name="home_greeting_super_late_3">Đến lúc này, cứ thức dậy và vá lỗi thôi</string>
+    <string name="home_greeting_super_late_4">Bạn và máy chủ, cả hai đều tỉnh táo</string>
+    <string name="home_greeting_super_late_5">Nocturnal và hiệu quả</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Nguồn vá</string>
     <string name="sources_management_open_in_browser">Mở trong trình duyệt</string>
@@ -106,8 +127,8 @@
     <string name="home_apk_availability_incompatible_label">Không tương thích</string>
     <string name="home_apk_availability_yes">Có, giúp tôi vs</string>
     <string name="home_apk_availability_no">Không, tôi có APK rồi</string>
-    <string name="home_apk_use_saved_with_version">Dùng APK đã lưu (v%s)</string>
-    <string name="home_apk_use_installed_with_version">Dùng APK đã cài (v%s)</string>
+    <string name="home_apk_use_saved">Sử dụng APK đã lưu</string>
+    <string name="home_apk_use_installed">Sử dụng APK đã cài đặt</string>
     <string name="home_app_info_no_saved_apk">Chưa lưu APK nào. Bạn sẽ phải chọn lại APK khi vá</string>
     <string name="home_version_requires_android">Yêu cầu Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">Không hỗ trợ trên thiết bị này</string>
@@ -184,6 +205,9 @@ Tốt nhất bạn nên chuyển sang &lt;b&gt;APK đầy đủ&lt;/b&gt; để 
     <string name="home_dialog_unsupported_version_dialog_proceed">Vẫn tiếp tục</string>
     <string name="home_dialog_unsupported_version_compatible_versions">Phiên bản tương thích:</string>
     <string name="home_dialog_unsupported_version_unsupported_label">Không tương thích</string>
+    <!-- "Build" here refers to a specific compiled version of the app (versionCode) -->
+    <string name="home_dialog_unsupported_version_build">Build %d</string>
+    <string name="home_dialog_unsupported_version_build_mismatch_description">Đây là một build khác của cùng một phiên bản. Các bản vá yêu cầu một build cụ thể</string>
     <string name="home_dialog_wrong_package_title">Chọn sai gói rồi</string>
     <string name="home_dialog_wrong_package_description">APK đã chọn không dành cho ứng dụng mà bạn định vá</string>
     <string name="home_dialog_expected_package">Cần gói:</string>

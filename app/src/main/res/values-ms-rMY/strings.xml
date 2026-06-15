@@ -53,6 +53,11 @@
     <string name="home_greeting_9">Menyimpan aplikasi daripada diri mereka sendiri sejak hari ini</string>
     <!-- Light sarcasm, casual and tech-savvy humor -->
     <string name="home_greeting_10">Dikuasakan oleh kafein dan tampalan yang bagus</string>
+    <!-- Morning greetings (5:00–11:59) -->
+    <!-- Afternoon greetings (12:00–16:59) -->
+    <!-- Evening greetings (17:00–21:59) -->
+    <!-- Late night greetings (22:00–23:59) -->
+    <!-- Super late night greetings (0:00–4:59) -->
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Tampalan sumber-sumber</string>
     <string name="sources_management_open_in_browser">Buka dalam pelayar web</string>
@@ -106,8 +111,6 @@
     <string name="home_apk_availability_incompatible_label">Tidak serasi</string>
     <string name="home_apk_availability_yes">Ya, bantu saya mencari APK</string>
     <string name="home_apk_availability_no">Tidak, saya ada APK</string>
-    <string name="home_apk_use_saved_with_version">Guna APK tersimpan (v%s)</string>
-    <string name="home_apk_use_installed_with_version">Guna APK terpasang (v%s)</string>
     <string name="home_app_info_no_saved_apk">Tiada APK tersimpan. Tampalan akan memerlukan fail APK yang dipilih semula</string>
     <string name="home_version_requires_android">Memerlukan Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">Tidak disokong pada peranti ini</string>
@@ -135,6 +138,17 @@
     <string name="home_recommended_version">Versi yang disyorkan</string>
     <string name="home_selected_version">Versi terpilih</string>
     <string name="home_select_apk_title">Pilih APK</string>
+    <string name="home_select_any_apk_description">Memilih mana-mana fail APK atau aplikasi yang telah dipasang pada peranti ini</string>
+    <string name="home_use_installed_app">Gunakan aplikasi terpasang</string>
+    <string name="home_installed_app_picker_title">Pilih aplikasi terpasang</string>
+    <string name="home_installed_app_picker_empty">Tiada aplikasi dijumpai</string>
+    <string name="home_installed_app_picker_filter_all">Semua aplikasi</string>
+    <string name="home_installed_app_picker_filter_user">Aplikasi pengguna sahaja</string>
+    <string name="home_installed_app_picker_filter_system">Aplikasi sistem sahaja</string>
+    <string name="home_invalid_apk_unreadable">Tidak dapat membaca fail. Periksa sama ada \'Storan Luaran\' tidak dihadkan oleh bateri</string>
+    <string name="home_invalid_apk_not_an_apk">Fail yang dipilih bukanlah APK yang sah</string>
+    <string name="home_invalid_apk_io_error">Gagal membuka fail. Sila cuba lagi</string>
+    <string name="home_external_apk_expert_mode_required">Ciri ini hanya tersedia dalam mod Pakar</string>
     <!-- Home Screen - Dialog 4: Expert Mode Dialog -->
     <string name="expert_mode_title">Mod mahir</string>
     <string name="expert_mode_search">Cari tampalan</string>
@@ -144,6 +158,7 @@
     <string name="expert_mode_enable_all">Dayakan semua</string>
     <string name="expert_mode_enable_all_done">Semua tampalan didayakan</string>
     <string name="expert_mode_reset_to_default">Dayakan tampalan yang disyorkan</string>
+    <string name="expert_mode_reset_to_default_done">Tampalan disyorkan digunakan</string>
     <string name="expert_mode_no_results">Tiada tampalan tersedia</string>
     <string name="expert_mode_universal_patches">Tampalan universal</string>
     <string name="expert_mode_multiple_sources_warning_title">Pelbagai sumber tampalan dipilih</string>
@@ -170,6 +185,7 @@ Teruskannya mungkin boleh menyebabkan aplikasi tidak dapat berfungsi</string>
     <string name="home_dialog_unsupported_version_dialog_proceed">Teruskan juga</string>
     <string name="home_dialog_unsupported_version_compatible_versions">Versi-versi bersesuaian:</string>
     <string name="home_dialog_unsupported_version_unsupported_label">Tidak disokong</string>
+    <!-- "Build" here refers to a specific compiled version of the app (versionCode) -->
     <string name="home_dialog_wrong_package_title">Pakej yang dipilih salah</string>
     <string name="home_dialog_wrong_package_description">APK yang dipilih bukan untuk aplikasi yang anda ingin tampal</string>
     <string name="home_dialog_expected_package">Pakej yang dijangkakan:</string>

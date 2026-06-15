@@ -53,6 +53,27 @@
     <string name="home_greeting_9">Besig om programme te red van hulself sedert vandag</string>
     <!-- Light sarcasm, casual and tech-savvy humor -->
     <string name="home_greeting_10">Aangedryf deur kafeeïen en goeie veranderinge</string>
+    <!-- Morning greetings (5:00–11:59) -->
+    <string name="home_greeting_morning_1">Staan op en plak</string>
+    <string name="home_greeting_morning_2">Goeie môre! Programmeer self nie</string>
+    <!-- Afternoon greetings (12:00–16:59) -->
+    <string name="home_greeting_afternoon_1">Middagmoeë? Plak iets</string>
+    <string name="home_greeting_afternoon_2">Nag-ete lappie-vlekke is anders</string>
+    <string name="home_greeting_afternoon_3">Die middagshift: lappie-uitgawe</string>
+    <!-- Evening greetings (17:00–21:59) -->
+    <string name="home_greeting_evening_1">Goeienaand! Naglappies doen dit anders</string>
+    <string name="home_greeting_evening_2">Ontspan? Laai eerste \'n program by</string>
+    <string name="home_greeting_evening_3">Klok uit? Laai eers iets by</string>
+    <!-- Late night greetings (22:00–23:59) -->
+    <string name="home_greeting_late_night_1">Nog wakker? So ook die programme wat \'n lappie nodig het</string>
+    <string name="home_greeting_late_night_2">Nag lappie-sessie? Respek</string>
+    <string name="home_greeting_late_night_3">Nag-uilmodus: geaktiveer</string>
+    <!-- Super late night greetings (0:00–4:59) -->
+    <string name="home_greeting_super_late_1">Piek lappie-ure… so beweer mense</string>
+    <string name="home_greeting_super_late_2">Kan nie slaap nie? Laai iets by</string>
+    <string name="home_greeting_super_late_3">Op hierdie stadium, bly net wakker en laai iets by</string>
+    <string name="home_greeting_super_late_4">Jy en die bedieners, albei wakker</string>
+    <string name="home_greeting_super_late_5">Nagtelike en produktief</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Verandering oorspronge</string>
     <string name="sources_management_open_in_browser">Maak oop in blaaier</string>
@@ -106,8 +127,8 @@
     <string name="home_apk_availability_incompatible_label">Onversoenbaar</string>
     <string name="home_apk_availability_yes">Ja, help my om \'n APK te vind</string>
     <string name="home_apk_availability_no">Nee, ek het reeds \'n APK</string>
-    <string name="home_apk_use_saved_with_version">Gebruik gestoorde APK (v%s)</string>
-    <string name="home_apk_use_installed_with_version">Gebruik geïnstalleerde APK (v%s)</string>
+    <string name="home_apk_use_saved">Gebruik gestoorde APK</string>
+    <string name="home_apk_use_installed">Gebruik geïnstalleerde APK</string>
     <string name="home_app_info_no_saved_apk">Geen gestoorde APK nie. Verandering sal vereis dat jy die APK vyl weer kies</string>
     <string name="home_version_requires_android">Vereis Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">Nie op hierdie toestel ondersteun nie</string>
@@ -184,6 +205,9 @@ Vir die beste resultate beveel hierdie app aan om 'n &lt;b&gt;volle APK&lt;/b&gt
     <string name="home_dialog_unsupported_version_dialog_proceed">Gaan voort tog</string>
     <string name="home_dialog_unsupported_version_compatible_versions">Versoenbare weergawes:</string>
     <string name="home_dialog_unsupported_version_unsupported_label">Nie ondersteun nie</string>
+    <!-- "Build" here refers to a specific compiled version of the app (versionCode) -->
+    <string name="home_dialog_unsupported_version_build">Bou %d</string>
+    <string name="home_dialog_unsupported_version_build_mismatch_description">Dit is \'n ander weergawe van dieselfde weergawe. Die lappies vereis \'n spesifieke weergawe</string>
     <string name="home_dialog_wrong_package_title">Verkeerde pakket gekies</string>
     <string name="home_dialog_wrong_package_description">Die gekose APK is nie vir die aansoek wat jy wou patch nie</string>
     <string name="home_dialog_expected_package">Verwagte pakket:</string>

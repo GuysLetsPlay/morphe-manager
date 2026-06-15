@@ -53,6 +53,27 @@
     <string name="home_greeting_9">Спасавамо апликације од њих самих од данас</string>
     <!-- Light sarcasm, casual and tech-savvy humor -->
     <string name="home_greeting_10">Покренуто кафеином и добрим печовима</string>
+    <!-- Morning greetings (5:00–11:59) -->
+    <string name="home_greeting_morning_1">Устани и закажи</string>
+    <string name="home_greeting_morning_2">Добро јутро! Апликације се неће саме заказивати.</string>
+    <!-- Afternoon greetings (12:00–16:59) -->
+    <string name="home_greeting_afternoon_1">Поподневна малаксалост? Закажи нешто</string>
+    <string name="home_greeting_afternoon_2">После ручка, паковање се другачије осећа</string>
+    <string name="home_greeting_afternoon_3">Поподневна смена: паковање у издању</string>
+    <!-- Evening greetings (17:00–21:59) -->
+    <string name="home_greeting_evening_1">Добро вече! Вечерње паковање се другачије осећа</string>
+    <string name="home_greeting_evening_2">Успут? Прво запакујте апликацију</string>
+    <string name="home_greeting_evening_3">На крају радног времена? Прво запакујте нешто</string>
+    <!-- Late night greetings (22:00–23:59) -->
+    <string name="home_greeting_late_night_1">Још будан? Будне су и апликације којима је потребно паковање</string>
+    <string name="home_greeting_late_night_2">Касна ноћна сесија паковања? Поштовање</string>
+    <string name="home_greeting_late_night_3">Режим ноћне сове: активиран</string>
+    <!-- Super late night greetings (0:00–4:59) -->
+    <string name="home_greeting_super_late_1">Врхунац паковања… наводно</string>
+    <string name="home_greeting_super_late_2">Нисте у стању да заспите? Запакујте нешто</string>
+    <string name="home_greeting_super_late_3">У овом тренутку, останите будни и запакујте</string>
+    <string name="home_greeting_super_late_4">Ти и сервери, обоје будни</string>
+    <string name="home_greeting_super_late_5">Ноћни и продуктивни</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Извор печовања</string>
     <string name="sources_management_open_in_browser">Отвори у прегледачу</string>
@@ -106,8 +127,8 @@
     <string name="home_apk_availability_incompatible_label">Некомпатибилан</string>
     <string name="home_apk_availability_yes">Да, помози ми да нађем АПК</string>
     <string name="home_apk_availability_no">Ne, već imam APK</string>
-    <string name="home_apk_use_saved_with_version">Koristišć saćuvani APK (v%s)</string>
-    <string name="home_apk_use_installed_with_version">Koristite instalovanu APK datoteku (v%s)</string>
+    <string name="home_apk_use_saved">Користи сачувани APK</string>
+    <string name="home_apk_use_installed">Користи инсталирани APK</string>
     <string name="home_app_info_no_saved_apk">Nema saćuvanog APK-a. Patching zahtijeva ponovno odabir APK datoteke</string>
     <string name="home_version_requires_android">Захтева Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">Није подржано на овом уређају</string>
@@ -184,6 +205,9 @@
     <string name="home_dialog_unsupported_version_dialog_proceed">Ипак настави</string>
     <string name="home_dialog_unsupported_version_compatible_versions">Дозвољене верзије:</string>
     <string name="home_dialog_unsupported_version_unsupported_label">Недозвољен</string>
+    <!-- "Build" here refers to a specific compiled version of the app (versionCode) -->
+    <string name="home_dialog_unsupported_version_build">Изградња %d</string>
+    <string name="home_dialog_unsupported_version_build_mismatch_description">Ово је другачија изградња исте верзије. Пакети захтевају специфичну изградњу</string>
     <string name="home_dialog_wrong_package_title">Изабран је погрешан пакет</string>
     <string name="home_dialog_wrong_package_description">Изабрани APK није за апликацију коју сте намеравали да печујете</string>
     <string name="home_dialog_expected_package">Очекивани пакет:</string>

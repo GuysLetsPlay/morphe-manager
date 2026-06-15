@@ -53,6 +53,27 @@
     <string name="home_greeting_9">Запазваме приложения за самите себе от днес</string>
     <!-- Light sarcasm, casual and tech-savvy humor -->
     <string name="home_greeting_10">Захранва се от кофеин и добри кръпки</string>
+    <!-- Morning greetings (5:00–11:59) -->
+    <string name="home_greeting_morning_1">Събуди се и закърпи</string>
+    <string name="home_greeting_morning_2">Добро утро! Приложенията няма сами да се закърпят</string>
+    <!-- Afternoon greetings (12:00–16:59) -->
+    <string name="home_greeting_afternoon_1">Следобеден застой? Закърпи нещо</string>
+    <string name="home_greeting_afternoon_2">След обядските ъпдейти са различни</string>
+    <string name="home_greeting_afternoon_3">Следобедна смяна: издание за ъпдейти</string>
+    <!-- Evening greetings (17:00–21:59) -->
+    <string name="home_greeting_evening_1">Добър вечер! Вечерните ъпдейти са различни</string>
+    <string name="home_greeting_evening_2">Отпускате ли? Първо направете ъпдейт на приложение</string>
+    <string name="home_greeting_evening_3">Напускате ли? Първо направете ъпдейт на нещо</string>
+    <!-- Late night greetings (22:00–23:59) -->
+    <string name="home_greeting_late_night_1">Все още буден/будна? Също и приложенията, които трябва да се ъпдейтнат</string>
+    <string name="home_greeting_late_night_2">Вечерна сесия за ъпдейти? Респект</string>
+    <string name="home_greeting_late_night_3">Нощен режим: активиран</string>
+    <!-- Super late night greetings (0:00–4:59) -->
+    <string name="home_greeting_super_late_1">Върхово време за ъпдейти… уж</string>
+    <string name="home_greeting_super_late_2">Не можете да спите? Направете ъпдейт на нещо</string>
+    <string name="home_greeting_super_late_3">В този момент, просто останете будни и направете ъпдейти</string>
+    <string name="home_greeting_super_late_4">Вие и сървърите, и двамата сте будни</string>
+    <string name="home_greeting_super_late_5">Нощни птици и продуктивни</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Източници за поправки</string>
     <string name="sources_management_open_in_browser">Отваряне в браузър</string>
@@ -106,8 +127,8 @@
     <string name="home_apk_availability_incompatible_label">Несъвместим</string>
     <string name="home_apk_availability_yes">Да, помогнете ми да намира APK</string>
     <string name="home_apk_availability_no">Не, вече имам APK</string>
-    <string name="home_apk_use_saved_with_version">Използвайте запазеното APK (в%с)</string>
-    <string name="home_apk_use_installed_with_version">Използвайте инсталиран APK (v%s)</string>
+    <string name="home_apk_use_saved">Използвайте запазен APK</string>
+    <string name="home_apk_use_installed">Използвайте инсталиран APK</string>
     <string name="home_app_info_no_saved_apk">Няма запазено APK. Пatching ще изисква отново да изберете APK файл.</string>
     <string name="home_version_requires_android">Изисква Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">Не се поддържа на това устройство</string>
@@ -184,6 +205,9 @@
     <string name="home_dialog_unsupported_version_dialog_proceed">Продължаване въпреки това</string>
     <string name="home_dialog_unsupported_version_compatible_versions">Съвместими версии:</string>
     <string name="home_dialog_unsupported_version_unsupported_label">Несъвместим</string>
+    <!-- "Build" here refers to a specific compiled version of the app (versionCode) -->
+    <string name="home_dialog_unsupported_version_build">Версия %d</string>
+    <string name="home_dialog_unsupported_version_build_mismatch_description">Това е различна версия на същата версия. Пачовете изискват определена версия</string>
     <string name="home_dialog_wrong_package_title">Грешно избрано пакети</string>
     <string name="home_dialog_wrong_package_description">Избраното APK не е за приложението, което искате да поправите</string>
     <string name="home_dialog_expected_package">Очакван пакет:</string>

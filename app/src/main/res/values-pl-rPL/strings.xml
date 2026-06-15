@@ -53,6 +53,27 @@
     <string name="home_greeting_9">Od dziś ratujemy aplikacje przed nimi samymi</string>
     <!-- Light sarcasm, casual and tech-savvy humor -->
     <string name="home_greeting_10">Napędzane kawą i dobrymi modyfikacjami</string>
+    <!-- Morning greetings (5:00–11:59) -->
+    <string name="home_greeting_morning_1">Wstawaj i modyfikuj</string>
+    <string name="home_greeting_morning_2">Dzień dobry! Aplikacje same się nie zmodyfikują</string>
+    <!-- Afternoon greetings (12:00–16:59) -->
+    <string name="home_greeting_afternoon_1">Popołudniowy zjazd? Zmodyfikuj coś</string>
+    <string name="home_greeting_afternoon_2">Modyfikowanie po obiedzie wchodzi inaczej</string>
+    <string name="home_greeting_afternoon_3">Popołudniowa zmiana: czas na modyfikacje</string>
+    <!-- Evening greetings (17:00–21:59) -->
+    <string name="home_greeting_evening_1">Dobry wieczór! Wieczorne modyfikacje wchodzą inaczej</string>
+    <string name="home_greeting_evening_2">Czas na relaks? Zmodyfikuj najpierw jakąś apkę</string>
+    <string name="home_greeting_evening_3">Fajrant? Zmodyfikuj coś najpierw</string>
+    <!-- Late night greetings (22:00–23:59) -->
+    <string name="home_greeting_late_night_1">Jeszcze nie śpisz? Aplikacje też czekają na modyfikacje</string>
+    <string name="home_greeting_late_night_2">Nocna sesja modyfikowania? Szanuję</string>
+    <string name="home_greeting_late_night_3">Tryb nocnego marka: aktywowany</string>
+    <!-- Super late night greetings (0:00–4:59) -->
+    <string name="home_greeting_super_late_1">Godziny szczytu na modyfikowanie… podobno</string>
+    <string name="home_greeting_super_late_2">Nie możesz spać? Zmodyfikuj coś</string>
+    <string name="home_greeting_super_late_3">Na tym etapie po prostu nie idź spać i modyfikuj</string>
+    <string name="home_greeting_super_late_4">Tylko ty i serwery nie śpicie</string>
+    <string name="home_greeting_super_late_5">Nocny, ale produktywny</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Źródła modyfikacji</string>
     <string name="sources_management_open_in_browser">Otwórz w przeglądarce</string>
@@ -106,8 +127,8 @@
     <string name="home_apk_availability_incompatible_label">Niezgodna</string>
     <string name="home_apk_availability_yes">Tak, pomóż mi znaleźć plik APK</string>
     <string name="home_apk_availability_no">Nie, mam już plik APK</string>
-    <string name="home_apk_use_saved_with_version">Użyj zapisanego pliku APK (v%s)</string>
-    <string name="home_apk_use_installed_with_version">Użyj zainstalowanego pliku APK (v%s)</string>
+    <string name="home_apk_use_saved">Użyj zapisanego pliku APK</string>
+    <string name="home_apk_use_installed">Użyj zainstalowanego pliku APK</string>
     <string name="home_app_info_no_saved_apk">Brak zapisanego pliku APK. Modyfikacja będzie wymagać ponownego wybrania pliku</string>
     <string name="home_version_requires_android">Wymaga Androida %s+</string>
     <string name="home_apk_no_compatible_versions_title">Niewspierane na tym urządzeniu</string>
@@ -184,6 +205,9 @@ Aby uzyskać najlepszy efekt, zalecamy zmodyfikowanie &lt;b&gt;pełnego pliku AP
     <string name="home_dialog_unsupported_version_dialog_proceed">Kontynuuj mimo to</string>
     <string name="home_dialog_unsupported_version_compatible_versions">Zgodne wersje:</string>
     <string name="home_dialog_unsupported_version_unsupported_label">Niewspierana</string>
+    <!-- "Build" here refers to a specific compiled version of the app (versionCode) -->
+    <string name="home_dialog_unsupported_version_build">Kompilacja %d</string>
+    <string name="home_dialog_unsupported_version_build_mismatch_description">To inna kompilacja tej samej wersji. Te modyfikacje wymagają konkretnej kompilacji</string>
     <string name="home_dialog_wrong_package_title">Wybrano nieprawidłowy pakiet</string>
     <string name="home_dialog_wrong_package_description">Wybrany plik APK nie jest przeznaczony dla modyfikowanej aplikacji</string>
     <string name="home_dialog_expected_package">Oczekiwany pakiet:</string>

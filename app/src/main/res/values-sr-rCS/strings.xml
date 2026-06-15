@@ -53,6 +53,27 @@
     <string name="home_greeting_9">Spašavamo aplikacije od njih samih od danas</string>
     <!-- Light sarcasm, casual and tech-savvy humor -->
     <string name="home_greeting_10">Pokrenut kofeinom i dobrim zakrpama</string>
+    <!-- Morning greetings (5:00–11:59) -->
+    <string name="home_greeting_morning_1">Ustani i zakrpi</string>
+    <string name="home_greeting_morning_2">Dobro jutro! Aplikacije se same ne zakrpljuju</string>
+    <!-- Afternoon greetings (12:00–16:59) -->
+    <string name="home_greeting_afternoon_1">Poslepodnevni pad koncentracije? Zakrpi nešto</string>
+    <string name="home_greeting_afternoon_2">Popravka nakon ručka ima drugačiji utisak</string>
+    <string name="home_greeting_afternoon_3">Popodnevna smena: izdanje za popravke</string>
+    <!-- Evening greetings (17:00–21:59) -->
+    <string name="home_greeting_evening_1">Dobra večernja! Večernje popravke je drugačije raditi</string>
+    <string name="home_greeting_evening_2">Opustate se? Prvo popravite aplikaciju</string>
+    <string name="home_greeting_evening_3">Izlazite sa posla? Prvo popravite nešto</string>
+    <!-- Late night greetings (22:00–23:59) -->
+    <string name="home_greeting_late_night_1">Još budni? I aplikacije kojima je potrebna popravka su budne</string>
+    <string name="home_greeting_late_night_2">Kasno noćna sesija popravki? Respekt</string>
+    <string name="home_greeting_late_night_3">Noćni sovac mod: aktiviran</string>
+    <!-- Super late night greetings (0:00–4:59) -->
+    <string name="home_greeting_super_late_1">Vrhunac sati za popravke… navodno</string>
+    <string name="home_greeting_super_late_2">Ne možete da zaspite? Popravite nešto</string>
+    <string name="home_greeting_super_late_3">U ovom trenutku, samo ostanite budni i popravite</string>
+    <string name="home_greeting_super_late_4">Ti i serveri, oboje budni</string>
+    <string name="home_greeting_super_late_5">Noćni i produktivan</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Izvori zakrpe</string>
     <string name="sources_management_open_in_browser">Otvori u pregledaču</string>
@@ -106,8 +127,8 @@
     <string name="home_apk_availability_incompatible_label">Nekompatibilan</string>
     <string name="home_apk_availability_yes">Da, pomozi mi da pronađem APK</string>
     <string name="home_apk_availability_no">Ne, već imam APK</string>
-    <string name="home_apk_use_saved_with_version">Koristišć saćuvani APK (v%s)</string>
-    <string name="home_apk_use_installed_with_version">Koristite instalovanu APK datoteku (v%s)</string>
+    <string name="home_apk_use_saved">Koristi sačuvani APK</string>
+    <string name="home_apk_use_installed">Koristi instalirani APK</string>
     <string name="home_app_info_no_saved_apk">Nema sačuvanog APK-a. Krpljenje će zahtevati ponovni odabir APK datoteke</string>
     <string name="home_version_requires_android">Zahteva Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">Nije podržano na ovom uređaju</string>
@@ -184,6 +205,9 @@ Da li ste sigurni da želite nastaviti?"</string>
     <string name="home_dialog_unsupported_version_dialog_proceed">Pogrešni izvor</string>
     <string name="home_dialog_unsupported_version_compatible_versions">Kompatibilni verzije:</string>
     <string name="home_dialog_unsupported_version_unsupported_label">Nepodržano</string>
+    <!-- "Build" here refers to a specific compiled version of the app (versionCode) -->
+    <string name="home_dialog_unsupported_version_build">Izgradi %d</string>
+    <string name="home_dialog_unsupported_version_build_mismatch_description">Ovo je različita verzija iste verzije. Popravke zahteva specifična verzija</string>
     <string name="home_dialog_wrong_package_title">Izabrani APK nije za aplikaciju koju ste hteli patchirati.</string>
     <string name="home_dialog_wrong_package_description">Odabrani APK nije za aplikaciju koju ste željeli patchirati</string>
     <string name="home_dialog_expected_package">Očekivan paket:</string>

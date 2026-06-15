@@ -53,6 +53,27 @@
     <string name="home_greeting_9">ช่วยแอปพลิเคชันปรับปรุงให้ดีขึ้นตั้งแต่วันนี้</string>
     <!-- Light sarcasm, casual and tech-savvy humor -->
     <string name="home_greeting_10">สนับสนุนโดยกาแฟหนึ่งแก้วกับแพตซ์ที่มีคุณภาพ</string>
+    <!-- Morning greetings (5:00–11:59) -->
+    <string name="home_greeting_morning_1">ตื่นเช้าและอัปเดต</string>
+    <string name="home_greeting_morning_2">อรุณสวัสดิ์! แอปจะไม่ทำการอัปเดตเองได้</string>
+    <!-- Afternoon greetings (12:00–16:59) -->
+    <string name="home_greeting_afternoon_1">ช่วงบ่ายง่วงๆ? อัปเดตอะไรสักอย่างหน่อยสิ</string>
+    <string name="home_greeting_afternoon_2">หลังอาหารกลางวันก็อัปเดตแอปแบบนี้แหละ</string>
+    <string name="home_greeting_afternoon_3">กะกลางวัน: อัปเดตแอป</string>
+    <!-- Evening greetings (17:00–21:59) -->
+    <string name="home_greeting_evening_1">สวัสดีตอนเย็น! การอัปเดตแอปตอนเย็นให้ความรู้สึกที่แตกต่าง</string>
+    <string name="home_greeting_evening_2">กำลังพักผ่อน? อัปเดตแอปก่อนเลย</string>
+    <string name="home_greeting_evening_3">เลิกงานแล้ว? อัปเดตอะไรก่อนก็ได้</string>
+    <!-- Late night greetings (22:00–23:59) -->
+    <string name="home_greeting_late_night_1">ยังไม่นอนเหรอ? แอปที่ต้องอัปเดตก็ยังรออยู่</string>
+    <string name="home_greeting_late_night_2">ช่วงดึกมาอัปเดตแอป? นับถือ</string>
+    <string name="home_greeting_late_night_3">โหมดนกกลางคืน: เปิดใช้งานแล้ว</string>
+    <!-- Super late night greetings (0:00–4:59) -->
+    <string name="home_greeting_super_late_1">ช่วงเวลาอัปเดตแอปสูงสุด… ว่ากันว่านะ</string>
+    <string name="home_greeting_super_late_2">นอนไม่หลับ? อัปเดตอะไรสักอย่างสิ</string>
+    <string name="home_greeting_super_late_3">ตอนนี้ก็อยู่ตื่นแล้วอัปเดตแอปเลยก็ได้</string>
+    <string name="home_greeting_super_late_4">คุณกับเซิร์ฟเวอร์ต่างก็ยังตื่นอยู่</string>
+    <string name="home_greeting_super_late_5">ตื่นตอนกลางคืนและยังทำงานได้</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">จัดการแหล่งที่มา</string>
     <string name="sources_management_open_in_browser">เปิดในเบราว์เซอร์</string>
@@ -106,8 +127,8 @@
     <string name="home_apk_availability_incompatible_label">ไม่รองรับ</string>
     <string name="home_apk_availability_yes">ใช่, ช่วยฉันค้นหา APK</string>
     <string name="home_apk_availability_no">ไม่, ฉันมี APK แล้ว</string>
-    <string name="home_apk_use_saved_with_version">ใช้ APK ที่ถูกบันทึก (เวอร์ชัน %s)</string>
-    <string name="home_apk_use_installed_with_version">ใช้ APK ที่ติดตั้งไว้ (v%s)</string>
+    <string name="home_apk_use_saved">ใช้ APK ที่บันทึกไว้</string>
+    <string name="home_apk_use_installed">ใช้ APK ที่ติดตั้งไว้</string>
     <string name="home_app_info_no_saved_apk">ไม่มี APK ที่ถูกบันทึก การแพตซ์จะต้องเลือกไฟล์ APK อีกครั้ง</string>
     <string name="home_version_requires_android">ต้องใช้ Android %s ขึ้นไป</string>
     <string name="home_apk_no_compatible_versions_title">ไม่รองรับบนอุปกรณ์นี้</string>
@@ -184,6 +205,9 @@
     <string name="home_dialog_unsupported_version_dialog_proceed">ดำเนินต่อไป</string>
     <string name="home_dialog_unsupported_version_compatible_versions">เวอร์ชันที่เข้ากันได้:</string>
     <string name="home_dialog_unsupported_version_unsupported_label">ไม่รองรับ</string>
+    <!-- "Build" here refers to a specific compiled version of the app (versionCode) -->
+    <string name="home_dialog_unsupported_version_build">บิลด์ %d</string>
+    <string name="home_dialog_unsupported_version_build_mismatch_description">นี่เป็นบิลด์ที่แตกต่างของเวอร์ชันเดียวกัน การอัปเดตต้องการบิลด์ที่เฉพาะเจาะจง</string>
     <string name="home_dialog_wrong_package_title">แพ็กเกจที่เลือกไม่ถูกต้อง</string>
     <string name="home_dialog_wrong_package_description">ไฟล์ APK ที่เลือกไว้ ไม่ใช่แอปพลิเคชันสำหรับทำการแพตซ์</string>
     <string name="home_dialog_expected_package">แพคเกจที่คาดหวัง:</string>

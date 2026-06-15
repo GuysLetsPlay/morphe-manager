@@ -53,6 +53,11 @@
     <string name="home_greeting_9">Bu gündən etibarən tətbiqlər özlərindən azad olunur</string>
     <!-- Light sarcasm, casual and tech-savvy humor -->
     <string name="home_greeting_10">Kofein və yaxşı yamaqlar ilə gücləndirilib</string>
+    <!-- Morning greetings (5:00–11:59) -->
+    <!-- Afternoon greetings (12:00–16:59) -->
+    <!-- Evening greetings (17:00–21:59) -->
+    <!-- Late night greetings (22:00–23:59) -->
+    <!-- Super late night greetings (0:00–4:59) -->
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Yamaq mənbələri</string>
     <string name="sources_management_open_in_browser">Brauzerdə açın</string>
@@ -106,8 +111,6 @@
     <string name="home_apk_availability_incompatible_label">Uyuşmaz</string>
     <string name="home_apk_availability_yes">Bəli, APK tapmağa mənə kömək et</string>
     <string name="home_apk_availability_no">Xeyr, Mənim artıq APK-m var</string>
-    <string name="home_apk_use_saved_with_version">Saxlanılan APK-nı istifadə et (v%s)</string>
-    <string name="home_apk_use_installed_with_version">Quraşdırılan APK-nı istifadə et (v%s)</string>
     <string name="home_app_info_no_saved_apk">Saxlanılan APK yoxdur. Yamaqlanma APK faylını təkrar seçmək istəyəcək</string>
     <string name="home_version_requires_android">Android %s+ tələb olunur</string>
     <string name="home_apk_no_compatible_versions_title">Bu cihazda dəstəklənmir</string>
@@ -184,6 +187,7 @@ Davam etmək istədiyinizə əminsiniz?"</string>
     <string name="home_dialog_unsupported_version_dialog_proceed">Yenə də davam edilsin?</string>
     <string name="home_dialog_unsupported_version_compatible_versions">Uyuşan versiyalar:</string>
     <string name="home_dialog_unsupported_version_unsupported_label">Dəstəklənməyən</string>
+    <!-- "Build" here refers to a specific compiled version of the app (versionCode) -->
     <string name="home_dialog_wrong_package_title">Yanlış paket seçildi</string>
     <string name="home_dialog_wrong_package_description">Seçilən APK, yamaq üçün təyin etdiyiniz tətbiq üçün deyil</string>
     <string name="home_dialog_expected_package">Gözlənilən paket:</string>

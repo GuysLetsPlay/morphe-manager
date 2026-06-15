@@ -53,6 +53,27 @@
     <string name="home_greeting_9">Hefur bjargað appum frá sjálfum sér frá þessu degi</string>
     <!-- Light sarcasm, casual and tech-savvy humor -->
     <string name="home_greeting_10">Knúin af koffeini og góðum breytistillingum</string>
+    <!-- Morning greetings (5:00–11:59) -->
+    <string name="home_greeting_morning_1">Rísa og flíkja</string>
+    <string name="home_greeting_morning_2">Góðan daginn! Forrit flíkja sig ekki sjálf</string>
+    <!-- Afternoon greetings (12:00–16:59) -->
+    <string name="home_greeting_afternoon_1">Hálfsvefn á eftir hádegi? Flíkja eitthvað</string>
+    <string name="home_greeting_afternoon_2">Eftir hádegi viðgerðir eru öðruvísi</string>
+    <string name="home_greeting_afternoon_3">Eftirmiðdagsvaktin: viðgerðarútgáfa</string>
+    <!-- Evening greetings (17:00–21:59) -->
+    <string name="home_greeting_evening_1">Gott kvöld! Kvöldviðgerðir eru öðruvísi</string>
+    <string name="home_greeting_evening_2">Er búið að slappa af? Viðgerðu app fyrst</string>
+    <string name="home_greeting_evening_3">Hættir að vinna? Viðgerðu eitthvað fyrst</string>
+    <!-- Late night greetings (22:00–23:59) -->
+    <string name="home_greeting_late_night_1">Vaknar enn? Svo eru þau forrit sem þurfa að vera viðgerð</string>
+    <string name="home_greeting_late_night_2">Sein kvölds viðgerðarhlaup? Virkilega vel</string>
+    <string name="home_greeting_late_night_3">Náttúrufuglhamur: virkjaður</string>
+    <!-- Super late night greetings (0:00–4:59) -->
+    <string name="home_greeting_super_late_1">Hámark viðgerðartími… sagt er</string>
+    <string name="home_greeting_super_late_2">Gat ekki sofnað? Viðgerðu eitthvað</string>
+    <string name="home_greeting_super_late_3">Á þessum tíma, bara vertu vökur og gerðu við</string>
+    <string name="home_greeting_super_late_4">Þú og netþjónarnir, báðir vakin</string>
+    <string name="home_greeting_super_late_5">Næturhægur og afkastamikill</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Heimildir breytistillinga</string>
     <string name="sources_management_open_in_browser">Opna í vafra</string>
@@ -106,8 +127,8 @@
     <string name="home_apk_availability_incompatible_label">Ósamhæft</string>
     <string name="home_apk_availability_yes">Já, hjálpaðu mér að finna APK</string>
     <string name="home_apk_availability_no">Nei, ég á nú þegar APK</string>
-    <string name="home_apk_use_saved_with_version">Nota geymda APK (%s)</string>
-    <string name="home_apk_use_installed_with_version">Nota installaða APK (v%s)</string>
+    <string name="home_apk_use_saved">Nota vistað APK</string>
+    <string name="home_apk_use_installed">Nota upphætt APK</string>
     <string name="home_app_info_no_saved_apk">Engin geymd APK. Pökkun mun þurfa að velja APK skrá aftur</string>
     <string name="home_version_requires_android">Krefst Android %s+</string>
     <string name="home_apk_no_compatible_versions_title">Ekki studd á þessari tæki</string>
@@ -183,6 +204,9 @@ Fyrir bestu niðurstöður mælt er með því að breyta &lt;b&gt;fullu APK&lt;
     <string name="home_dialog_unsupported_version_dialog_proceed">Halda áfram samt sem áður</string>
     <string name="home_dialog_unsupported_version_compatible_versions">Samhæfar útgáfur:</string>
     <string name="home_dialog_unsupported_version_unsupported_label">Stuðlað er við</string>
+    <!-- "Build" here refers to a specific compiled version of the app (versionCode) -->
+    <string name="home_dialog_unsupported_version_build">Gerð %d</string>
+    <string name="home_dialog_unsupported_version_build_mismatch_description">Þetta er önnur gerð af sömu útgáfu. Viðgerðirnar krefjast sérstakrar gerðar</string>
     <string name="home_dialog_wrong_package_title">Rangur pakki valinn</string>
     <string name="home_dialog_wrong_package_description">Valin pakkning er ekki fyrir það app sem þú ætlaðir að patta</string>
     <string name="home_dialog_expected_package">Vænt pakkning:</string>
