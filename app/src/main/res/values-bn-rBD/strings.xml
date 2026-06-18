@@ -773,11 +773,11 @@ morphe_adaptive_monochrome_custom.xml
     <string name="select_all_done">সব নির্বাচন করা হয়েছে</string>
     <string name="deselect_all">সবগুলি নির্বাচন বাতিল করুন</string>
     <string name="deselect_all_done">সব ডি-সিলেক্ট করা হয়েছে</string>
-    <string name="reorder_list">তালিকা পুনর্বিন্যাস করুন</string>
-    <string name="reorder_list_hint">পুনর্বিন্যাস করতে ড্র্যাগ করুন</string>
-    <string name="reorder_done">ক্রম সংরক্ষণ করা হয়েছে</string>
-    <string name="reset_order">ক্রম রিসেট করুন</string>
-    <string name="reset_order_done">অর্ডার রিসেট করা হয়েছে</string>
+    <string name="reorder_list">তালিকাটি নতুন করে সাজান</string>
+    <string name="reorder_list_hint">নতুন করে সাজাতে টেনে আনুন</string>
+    <string name="reorder_done">নতুন ক্রমটি সেভ করা হয়েছে</string>
+    <string name="reset_order">পূর্বের ক্রমে ফিরে যান</string>
+    <string name="reset_order_done">পূর্বের ক্রমে ফিরে যাওয়া হয়েছে</string>
     <string name="rename">রেনেম করুন</string>
     <string name="import_">আমদানি করুন</string>
     <string name="export">এক্সপোর্ট করুন</string>
@@ -812,7 +812,7 @@ morphe_adaptive_monochrome_custom.xml
     <string name="hide">গোপন রাখুন</string>
     <string name="hidden">লুকানো</string>
     <string name="unhide">আনলুকানো</string>
-    <string name="unhide_done"> দেখানো হয়েছে</string>
+    <string name="unhide_done">দেখানো হচ্ছে</string>
     <string name="logs">লগসমূহ</string>
     <string name="sources">\"সোর্স\"</string>
     <string name="installing_ellipsis">ইনস্টল হচ্ছে…</string>

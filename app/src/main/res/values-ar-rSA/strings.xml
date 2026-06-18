@@ -786,7 +786,7 @@ morphe_adaptive_monochrome_custom.xml
     <string name="reorder_list_hint">اسحب لإعادة الترتيب</string>
     <string name="reorder_done">تم حفظ الترتيب</string>
     <string name="reset_order">إعادة تعيين الترتيب</string>
-    <string name="reset_order_done">تم إعادة تعيين الطلب</string>
+    <string name="reset_order_done">تم إعادة تعيين الترتيب</string>
     <string name="rename">إعادة تسمية</string>
     <string name="import_">استيراد</string>
     <string name="export">تصدير</string>

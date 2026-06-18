@@ -779,11 +779,11 @@ Ní mór toisí na híomhá a bheith mar seo a leanas:
     <string name="select_all_done">Gach ceann roghnaithe</string>
     <string name="deselect_all">Díroghnaigh gach rud</string>
     <string name="deselect_all_done">Gach rud díroghnaithe</string>
-    <string name="reorder_list">Athordú liosta</string>
+    <string name="reorder_list">Athordú an liosta</string>
     <string name="reorder_list_hint">Tarraing chun athordú</string>
     <string name="reorder_done">Ordú sábháilte</string>
-    <string name="reset_order">Athshocraigh ord</string>
-    <string name="reset_order_done">Ordú athshocraithe</string>
+    <string name="reset_order">Athshocraigh an t-ordú</string>
+    <string name="reset_order_done">Athshocrú ordaithe</string>
     <string name="rename">Athainmnigh</string>
     <string name="import_">Iompórtáil</string>
     <string name="export">Easpórtáil</string>
@@ -818,7 +818,7 @@ Ní mór toisí na híomhá a bheith mar seo a leanas:
     <string name="hide">Folaigh</string>
     <string name="hidden">I bhfolach</string>
     <string name="unhide">Nochtadh</string>
-    <string name="unhide_done">Taispeántar</string>
+    <string name="unhide_done">Taispeánta</string>
     <string name="logs">Logaí</string>
     <string name="sources">Foinsí</string>
     <string name="installing_ellipsis">Ag suiteáil…</string>

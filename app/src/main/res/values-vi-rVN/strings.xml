@@ -786,7 +786,7 @@ Kích thước hình ảnh yêu cầu:
     <string name="reorder_list_hint">Kéo để sắp xếp lại</string>
     <string name="reorder_done">Đã lưu thứ tự</string>
     <string name="reset_order">Đặt lại thứ tự</string>
-    <string name="reset_order_done">Đơn hàng đã được hoàn tác</string>
+    <string name="reset_order_done">Đặt lại thứ tự</string>
     <string name="rename">Đổi tên</string>
     <string name="import_">Nhập</string>
     <string name="export">Xuất</string>

@@ -21,7 +21,7 @@
     <string name="home_update_error">Yenilənmə uğursuz oldu</string>
     <string name="home_update_error_subtitle">İnternet bağlantınızı yoxlayın və təkrar cəhd edin</string>
     <string name="home_update_skipped_metered">Yenilənmələr ötürüldü</string>
-    <string name="home_update_skipped_metered_subtitle">Mobil məlumat işləkdir</string>
+    <string name="home_update_skipped_metered_subtitle">Mobil data işləkdir</string>
     <string name="home_updating_sources">Mənbələr yenilənir…</string>
     <string name="home_update_progress_format">%s emal olundu</string>
     <string name="home_update_success">Mənbələri yeniləmə tamamlandı</string>
@@ -213,7 +213,7 @@ Davam etmək istədiyinizə əminsiniz?"</string>
     <string name="home_dialog_expected_package">Gözlənilən paket:</string>
     <string name="home_dialog_selected_package">Seçilən paket:</string>
     <string name="home_outdated_patches_dialog_title">Yamaqlar köhnəlmiş ola bilər</string>
-    <string name="home_outdated_patches_dialog_message">Mobil məlumat işləkdir və yamaq yeniləmələri qapalıdır</string>
+    <string name="home_outdated_patches_dialog_message">Mobil data işləkdir və yamaq yeniləmələri qapalıdır</string>
     <string name="home_outdated_patches_dialog_warning">Köhnə yamaqlarla yamaqlanma tətbiq pozulmasına səbəb ola bilər</string>
     <string name="home_outdated_patches_dialog_update_and_patch">Yenilənmə &amp; yamaq</string>
     <string name="home_low_disk_space_dialog_title">Az disk yaddaşı</string>
@@ -470,8 +470,8 @@ Quraşdırma ləğvi bütün tətbiq məlumatını qalıcı siləcək"</string>
     <!-- Settings - Advanced Tab - Updates Section -->
     <string name="settings_advanced_updates">Yenilənmələr</string>
     <string name="settings_advanced_updates_use_prereleases">İlkin-buraxılış yeniləmələri</string>
-    <string name="settings_advanced_updates_use_prereleases_description">Yeni Morphe tətbiq versiyalarına erkən keçid. Yamaq mənbələrində hər mənbənin ilkin buraxılışın aktivləşdir</string>
-    <string name="settings_advanced_updates_allow_metered">Mobil məlumat yenilənmələri</string>
+    <string name="settings_advanced_updates_use_prereleases_description">Yeni Morphe tətbiq versiyalarına erkən keçid. Hər mənbənin ilkin buraxılışın yamaq mənbələrində aktivləşdir</string>
+    <string name="settings_advanced_updates_allow_metered">Mobil data yenilənmələri</string>
     <string name="settings_advanced_updates_allow_metered_description">Morphe və yamaq yeniləmələrini mobil məlumat üzərindən yükləməyə icazə verilir</string>
     <string name="settings_advanced_updates_background_notifications">Fon yenilənmə bildirişləri</string>
     <string name="settings_advanced_updates_background_notifications_description">Fonda yeniləmələri dövri yoxla və əlçatandırsa elan et</string>
@@ -780,6 +780,11 @@ morphe_header_custom_light.png morphe_header_custom_dark.png
     <string name="select_all_done">Hamısı seçilib</string>
     <string name="deselect_all">Hamısın seçməyin</string>
     <string name="deselect_all_done">Hamısı seçilməyib</string>
+    <string name="reorder_list">Siyahını yenidən sırala</string>
+    <string name="reorder_list_hint">Yenidən sıralamaq üçün sürüklə</string>
+    <string name="reorder_done">Düzülüş saxlanıldı</string>
+    <string name="reset_order">Düzülüşü sıfırla</string>
+    <string name="reset_order_done">Düzülüş sıfırlandı</string>
     <string name="rename">Təkrar adlandır</string>
     <string name="import_">İdxal et</string>
     <string name="export">Köçür</string>
@@ -812,8 +817,9 @@ morphe_header_custom_light.png morphe_header_custom_dark.png
     <string name="allow">İcazə verin</string>
     <string name="details">Təfərrüatlar</string>
     <string name="hide">Gizlət</string>
-    <string name="hidden">Gizlədilən</string>
+    <string name="hidden">Gizlədildi</string>
     <string name="unhide">Göstər</string>
+    <string name="unhide_done">Göründü</string>
     <string name="logs">Jurnallar</string>
     <string name="sources">Mənbələr</string>
     <string name="installing_ellipsis">Quraşdırılır…</string>

@@ -785,7 +785,7 @@ Resim boyutları şu şekilde olmalıdır:
     <string name="reorder_list_hint">Yeniden sıralamak için sürükle</string>
     <string name="reorder_done">Sıra kaydedildi</string>
     <string name="reset_order">Sırayı sıfırla</string>
-    <string name="reset_order_done">Sipariş sıfırlandı</string>
+    <string name="reset_order_done">Sıra sıfırlandı</string>
     <string name="rename">Yeniden adlandır</string>
     <string name="import_">İçe aktar</string>
     <string name="export">Dışa aktar</string>

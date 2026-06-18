@@ -786,7 +786,7 @@ Les dimensions des images doivent respecter les valeurs suivantes :
     <string name="reorder_list_hint">Faites glisser pour réorganiser</string>
     <string name="reorder_done">Ordre enregistré</string>
     <string name="reset_order">Réinitialiser l\'ordre</string>
-    <string name="reset_order_done">Réinitialisation de la commande</string>
+    <string name="reset_order_done">Réinitialisation de l’ordre</string>
     <string name="rename">Renommer</string>
     <string name="import_">Importer</string>
     <string name="export">Exporter</string>
