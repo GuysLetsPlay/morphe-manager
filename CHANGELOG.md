@@ -1,3 +1,21 @@
+# [1.22.0-dev.4](https://github.com/MorpheApp/morphe-manager/compare/v1.22.0-dev.3...v1.22.0-dev.4) (2026-06-20)
+
+
+### Bug Fixes
+
+* Expose swipe actions and improve accessibility for screen readers ([e913918](https://github.com/MorpheApp/morphe-manager/commit/e913918a9e4814bf80e5f4045e714752dc97d2dc))
+* Improve accessibility with screen reader actions and labeled buttons ([9753c49](https://github.com/MorpheApp/morphe-manager/commit/9753c49624859dbe81ba1747693ecb4edb9341b8))
+* Improve system tab icon ([d2c5926](https://github.com/MorpheApp/morphe-manager/commit/d2c5926b349176f322f91771ef868589437251c3))
+* Prevent text compression in headers on tablet portrait ([#651](https://github.com/MorpheApp/morphe-manager/issues/651)) ([b1783fc](https://github.com/MorpheApp/morphe-manager/commit/b1783fc5e844d256dc79c664ce8c6889d9327ca3))
+* Reduce patcher action bar button spacing on tablet portrait ([0a8b79b](https://github.com/MorpheApp/morphe-manager/commit/0a8b79b4cb1a017cb1701f6e59b4b0c108b7e70f))
+* Use `LinearEasing` for settings exit fade to keep slide visible ([f9be268](https://github.com/MorpheApp/morphe-manager/commit/f9be268e6f3af929418998633ddf615249b48279))
+
+
+### Features
+
+* Add slide-up push transition for settings screen ([d5d8fc9](https://github.com/MorpheApp/morphe-manager/commit/d5d8fc9204c1c0bb4dcca59088489e20e5a8e501))
+* Improve adaptive layout for tablet and landscape mode ([7f997ae](https://github.com/MorpheApp/morphe-manager/commit/7f997aeb122b67d27e34283fb54c0884451ae789))
+
 # [1.22.0-dev.3](https://github.com/MorpheApp/morphe-manager/compare/v1.22.0-dev.2...v1.22.0-dev.3) (2026-06-18)
 
 
