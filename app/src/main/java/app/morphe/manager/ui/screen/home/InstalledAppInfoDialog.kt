@@ -365,11 +365,13 @@ fun InstalledAppInfoDialog(
                                         )
                                     }
                                 }
-                                MorpheDialogOutlinedButton(
-                                    text = stringResource(R.string.close),
-                                    onClick = onDismiss,
-                                    modifier = Modifier.fillMaxWidth()
-                                )
+                                StaggeredItem(entered = entered.value, index = 1) {
+                                    MorpheDialogOutlinedButton(
+                                        text = stringResource(R.string.close),
+                                        onClick = onDismiss,
+                                        modifier = Modifier.fillMaxWidth()
+                                    )
+                                }
                             }
                         }
                     }
@@ -590,15 +592,17 @@ fun InstalledAppInfoDialog(
                             }
                         }
                     }
-                    MorpheDialogOutlinedButton(
-                        text = stringResource(R.string.close),
-                        onClick = onDismiss,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .navigationBarsPadding()
-                            .padding(horizontal = 20.dp)
-                            .padding(vertical = 12.dp)
-                    )
+                    StaggeredItem(entered = entered.value, index = 3) {
+                        MorpheDialogOutlinedButton(
+                            text = stringResource(R.string.close),
+                            onClick = onDismiss,
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .navigationBarsPadding()
+                                .padding(horizontal = 20.dp)
+                                .padding(vertical = 12.dp)
+                        )
+                    }
                 }
             }
         }
@@ -609,7 +613,7 @@ fun InstalledAppInfoDialog(
 private fun Color.accentContentColor(alpha: Float): Color =
     if (isExtremeAccent()) MaterialTheme.colorScheme.onSurfaceVariant
     else if (compositeOver(MaterialTheme.colorScheme.surface, alpha)
-        .requiresLightContent()) Color.White else Color.Black
+            .requiresLightContent()) Color.White else Color.Black
 
 /**
  * Unified banner component for warnings and updates.
