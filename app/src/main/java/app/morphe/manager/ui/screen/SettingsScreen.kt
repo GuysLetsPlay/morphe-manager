@@ -6,6 +6,7 @@
 package app.morphe.manager.ui.screen
 
 import android.annotation.SuppressLint
+import androidx.activity.compose.LocalOnBackPressedDispatcherOwner
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.AnimatedContent
@@ -18,6 +19,7 @@ import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.outlined.ArrowBack
 import androidx.compose.material.icons.outlined.Palette
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.outlined.Tune
@@ -34,10 +36,7 @@ import androidx.compose.ui.layout.boundsInWindow
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.semantics.Role
-import androidx.compose.ui.semantics.role
-import androidx.compose.ui.semantics.selected
-import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.*
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -297,7 +296,22 @@ fun SettingsScreen(
         }
     }
 
+    val backPressedDispatcher = LocalOnBackPressedDispatcherOwner.current?.onBackPressedDispatcher
+    val backLabel = stringResource(R.string.back)
+
     Box(modifier = Modifier.fillMaxSize()) {
+        // Portrait only: invisible back button for TalkBack (landscape has a visible Back in the sidebar)
+        if (!landscape) {
+            Box(
+                modifier = Modifier
+                    .size(1.dp)
+                    .semantics {
+                        contentDescription = backLabel
+                        onClick(action = { backPressedDispatcher?.onBackPressed(); true })
+                    }
+            )
+        }
+
         if (landscape) {
             // Landscape: sidebar navigation + content panel
             Row(
@@ -308,15 +322,16 @@ fun SettingsScreen(
                 LandscapeNavPanel(
                     currentTab = currentTab,
                     onTabSelected = { tab -> selectedTabIndex = tab.ordinal },
+                    onBack = { backPressedDispatcher?.onBackPressed() },
                     onAppearanceTabPositioned = { globalOnboardingState?.appearanceTabBounds = it },
                     onSystemTabPositioned = { globalOnboardingState?.systemTabBounds = it }
                 )
-                VerticalDivider()
+                VerticalDivider(modifier = Modifier.navigationBarsPadding())
                 AnimatedContent(
                     targetState = currentTab,
                     transitionSpec = MorpheAnimations.fadeCrossfade(200),
                     label = "settings_tab_landscape",
-                    modifier = Modifier.weight(1f).fillMaxHeight()
+                    modifier = Modifier.weight(1f).fillMaxHeight().navigationBarsPadding()
                 ) { tab -> TabContent(tab) }
             }
         } else {
@@ -353,33 +368,47 @@ fun SettingsScreen(
 private fun LandscapeNavPanel(
     currentTab: SettingsTab,
     onTabSelected: (SettingsTab) -> Unit,
+    onBack: () -> Unit,
     modifier: Modifier = Modifier,
     onAppearanceTabPositioned: ((Rect) -> Unit)? = null,
     onSystemTabPositioned: ((Rect) -> Unit)? = null
 ) {
-    Column(
+    Box(
         modifier = modifier
             .width(220.dp)
             .fillMaxHeight()
             .navigationBarsPadding()
-            .padding(horizontal = 12.dp, vertical = 24.dp),
-        verticalArrangement = Arrangement.spacedBy(4.dp, Alignment.CenterVertically)
+            .padding(horizontal = 12.dp, vertical = 24.dp)
     ) {
-        SettingsTab.entries.forEach { tab ->
-            val positionedModifier = when (tab) {
-                SettingsTab.APPEARANCE if onAppearanceTabPositioned != null ->
-                    Modifier.onGloballyPositioned { onAppearanceTabPositioned(it.boundsInWindow()) }
-                SettingsTab.SYSTEM if onSystemTabPositioned != null ->
-                    Modifier.onGloballyPositioned { onSystemTabPositioned(it.boundsInWindow()) }
-                else -> Modifier
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .wrapContentHeight()
+                .align(Alignment.Center),
+            verticalArrangement = Arrangement.spacedBy(4.dp)
+        ) {
+            SettingsTab.entries.forEach { tab ->
+                val positionedModifier = when (tab) {
+                    SettingsTab.APPEARANCE if onAppearanceTabPositioned != null ->
+                        Modifier.onGloballyPositioned { onAppearanceTabPositioned(it.boundsInWindow()) }
+                    SettingsTab.SYSTEM if onSystemTabPositioned != null ->
+                        Modifier.onGloballyPositioned { onSystemTabPositioned(it.boundsInWindow()) }
+                    else -> Modifier
+                }
+                LandscapeNavItem(
+                    tab = tab,
+                    isSelected = currentTab == tab,
+                    onClick = { onTabSelected(tab) },
+                    modifier = Modifier.fillMaxWidth().then(positionedModifier)
+                )
             }
-            LandscapeNavItem(
-                tab = tab,
-                isSelected = currentTab == tab,
-                onClick = { onTabSelected(tab) },
-                modifier = Modifier.fillMaxWidth().then(positionedModifier)
-            )
         }
+        LandscapeNavItem(
+            icon = Icons.AutoMirrored.Outlined.ArrowBack,
+            label = stringResource(R.string.back),
+            onClick = onBack,
+            modifier = Modifier.fillMaxWidth().align(Alignment.BottomCenter)
+        )
     }
 }
 
@@ -432,6 +461,44 @@ private fun LandscapeNavItem(
                 style = MaterialTheme.typography.labelLarge,
                 fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
                 color = contentColor,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis
+            )
+        }
+    }
+}
+
+@Composable
+private fun LandscapeNavItem(
+    icon: ImageVector,
+    label: String,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    Surface(
+        onClick = onClick,
+        modifier = modifier.height(52.dp),
+        color = Color.Transparent,
+        shape = RoundedCornerShape(16.dp)
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(horizontal = 16.dp),
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Icon(
+                imageVector = icon,
+                contentDescription = null,
+                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.size(22.dp)
+            )
+            Text(
+                text = label,
+                style = MaterialTheme.typography.labelLarge,
+                fontWeight = FontWeight.Normal,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )

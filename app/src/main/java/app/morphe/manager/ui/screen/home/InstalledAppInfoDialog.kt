@@ -15,6 +15,8 @@ import androidx.compose.animation.core.*
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.Launch
@@ -312,44 +314,60 @@ fun InstalledAppInfoDialog(
             if (isLandscape()) {
                 // Landscape layout: left sidebar has actions, right panel has header + info
                 Row(modifier = Modifier.fillMaxSize()) {
-                    // Left sidebar: action buttons as vertical full-width list
+                    // Left sidebar: centered buttons (scrollable when height is small)
                     Column(
                         modifier = Modifier
                             .width(220.dp)
                             .fillMaxHeight()
+                            .statusBarsPadding()
                             .navigationBarsPadding()
-                            .padding(horizontal = 16.dp, vertical = 20.dp),
-                        verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ItemSpacing, Alignment.CenterVertically)
+                            .padding(horizontal = 16.dp)
                     ) {
-                        StaggeredItem(entered = entered.value, index = 1) {
-                            ActionsSection(
-                                viewModel = viewModel,
-                                installViewModel = installViewModel,
-                                installedApp = installedApp,
-                                availablePatches = availablePatches,
-                                isInstalling = isInstalling,
-                                mountOperation = mountOperation,
-                                hasUpdate = hasUpdate,
-                                accentColor = appAccentColor,
-                                onPatchClick = { handlePatchClick() },
-                                onUninstall = { showUninstallConfirm.value = true },
-                                onDelete = { showDeleteDialog.value = true },
-                                onExport = { exportSavedLauncher.launch(exportFileName) },
-                                onShowMountWarning = { action ->
-                                    pendingMountWarningAction.value = action
-                                    showMountWarningDialog.value = true
-                                },
-                                singleColumn = true,
-                                modifier = Modifier.fillMaxWidth()
-                            )
-                        }
-                        if (!viewModel.hasOriginalApk) {
-                            StaggeredItem(entered = entered.value, index = 2) {
-                                InfoBadge(
-                                    text = stringResource(R.string.home_app_info_no_saved_apk),
-                                    style = InfoBadgeStyle.Warning,
-                                    icon = Icons.Outlined.Info,
-                                    isExpanded = true,
+                        BoxWithConstraints(modifier = Modifier.fillMaxWidth().weight(1f)) {
+                            val availableHeight = maxHeight
+                            Column(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .heightIn(min = availableHeight)
+                                    .verticalScroll(rememberScrollState()),
+                                verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ItemSpacing, Alignment.CenterVertically)
+                            ) {
+                                StaggeredItem(entered = entered.value, index = 1) {
+                                    ActionsSection(
+                                        viewModel = viewModel,
+                                        installViewModel = installViewModel,
+                                        installedApp = installedApp,
+                                        availablePatches = availablePatches,
+                                        isInstalling = isInstalling,
+                                        mountOperation = mountOperation,
+                                        hasUpdate = hasUpdate,
+                                        accentColor = appAccentColor,
+                                        onPatchClick = { handlePatchClick() },
+                                        onUninstall = { showUninstallConfirm.value = true },
+                                        onDelete = { showDeleteDialog.value = true },
+                                        onExport = { exportSavedLauncher.launch(exportFileName) },
+                                        onShowMountWarning = { action ->
+                                            pendingMountWarningAction.value = action
+                                            showMountWarningDialog.value = true
+                                        },
+                                        singleColumn = true,
+                                        modifier = Modifier.fillMaxWidth()
+                                    )
+                                }
+                                if (!viewModel.hasOriginalApk) {
+                                    StaggeredItem(entered = entered.value, index = 2) {
+                                        InfoBadge(
+                                            text = stringResource(R.string.home_app_info_no_saved_apk),
+                                            style = InfoBadgeStyle.Warning,
+                                            icon = Icons.Outlined.Info,
+                                            isExpanded = true,
+                                            modifier = Modifier.fillMaxWidth()
+                                        )
+                                    }
+                                }
+                                MorpheDialogOutlinedButton(
+                                    text = stringResource(R.string.close),
+                                    onClick = onDismiss,
                                     modifier = Modifier.fillMaxWidth()
                                 )
                             }
@@ -363,6 +381,7 @@ fun InstalledAppInfoDialog(
                         modifier = Modifier
                             .weight(1f)
                             .fillMaxHeight()
+                            .navigationBarsPadding()
                             .padding(start = 20.dp),
                         contentPadding = PaddingValues(bottom = 24.dp),
                         verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ItemSpacing)
@@ -428,151 +447,158 @@ fun InstalledAppInfoDialog(
                                 )
                             }
                         }
-                        item { Spacer(Modifier.navigationBarsPadding()) }
                     }
                 }
             } else {
                 // Single-column layout for phones
-                LazyColumn(
-                    modifier = Modifier.fillMaxSize(),
-                    contentPadding = PaddingValues(bottom = 24.dp),
-                ) {
-                    // Hero header
-                    item(contentType = "hero") {
-                        AppHeroHeader(
-                            appInfo = appInfo,
-                            packageName = packageName,
-                            installedApp = installedApp,
-                            accentColor = appAccentColor,
-                            modifier = Modifier.clip(RoundedCornerShape(bottomStart = 16.dp, bottomEnd = 16.dp))
-                        )
-                    }
-
-                    // Stagger index counter: hero header is index 0 (animated independently).
-                    // Banner item always occupies index 1 (permanent item, AnimatedVisibility
-                    // controls visibility) so subsequent indices are stable regardless of
-                    // banner state - avoiding LazyColumn position-key conflicts
-                    var staggerIndex = 2
-
-                    // Warning banners (deleted / update)
-                    item(key = "banner") {
-                        Column {
-                            androidx.compose.animation.AnimatedVisibility(
-                                visible = viewModel.isAppDeleted,
-                                enter = MorpheAnimations.expandFadeEnter,
-                                exit = MorpheAnimations.shrinkFadeExit
-                            ) {
-                                Column {
-                                    Spacer(Modifier.height(12.dp))
-                                    StaggeredItem(entered = entered.value, index = 1) {
-                                        WarningBanner(
-                                            icon = Icons.Outlined.Warning,
-                                            title = stringResource(R.string.home_app_info_app_deleted_warning),
-                                            description = stringResource(R.string.home_app_info_app_deleted_description),
-                                            buttonText = stringResource(R.string.patch),
-                                            buttonIcon = Icons.Outlined.AutoFixHigh,
-                                            onClick = {
-                                                onTriggerPatchFlow(installedApp.originalPackageName)
-                                            },
-                                            accentColor = appAccentColor,
-                                            isError = true,
-                                            modifier = Modifier.padding(horizontal = 20.dp)
-                                        )
-                                    }
-                                }
-                            }
-                            androidx.compose.animation.AnimatedVisibility(
-                                visible = hasUpdate && !viewModel.isAppDeleted,
-                                enter = MorpheAnimations.expandFadeEnter,
-                                exit = MorpheAnimations.shrinkFadeExit
-                            ) {
-                                Column {
-                                    Spacer(Modifier.height(12.dp))
-                                    StaggeredItem(entered = entered.value, index = 1) {
-                                        WarningBanner(
-                                            icon = Icons.Outlined.Update,
-                                            title = stringResource(R.string.home_app_info_patch_update_available),
-                                            description = stringResource(R.string.home_app_info_patch_update_available_description),
-                                            buttonText = stringResource(R.string.patch),
-                                            buttonIcon = Icons.Outlined.AutoFixHigh,
-                                            onClick = {
-                                                onTriggerPatchFlow(installedApp.originalPackageName)
-                                            },
-                                            accentColor = appAccentColor,
-                                            isError = false,
-                                            modifier = Modifier.padding(horizontal = 20.dp)
-                                        )
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    // Info Section
-                    val infoIdx = staggerIndex++
-                    item {
-                        Box(modifier = Modifier.padding(top = 12.dp)) {
-                            StaggeredItem(entered = entered.value, index = infoIdx) {
-                                InfoSection(
-                                    installedApp = installedApp,
-                                    appliedPatches = appliedPatches,
-                                    bundlesUsedSummary = bundlesUsedSummary,
-                                    onShowPatches = { showAppliedPatchesDialog.value = true },
-                                    accentColor = appAccentColor
-                                )
-                            }
-                        }
-                    }
-
-                    // Actions Section
-                    val actionsIdx = staggerIndex++
-                    item {
-                        StaggeredItem(entered = entered.value, index = actionsIdx) {
-                            ActionsSection(
-                                viewModel = viewModel,
-                                installViewModel = installViewModel,
+                Column(modifier = Modifier.fillMaxSize()) {
+                    LazyColumn(
+                        modifier = Modifier.weight(1f).fillMaxWidth(),
+                        contentPadding = PaddingValues(bottom = 24.dp)
+                    ) {
+                        // Hero header
+                        item(contentType = "hero") {
+                            AppHeroHeader(
+                                appInfo = appInfo,
+                                packageName = packageName,
                                 installedApp = installedApp,
-                                availablePatches = availablePatches,
-                                isInstalling = isInstalling,
-                                mountOperation = mountOperation,
-                                hasUpdate = hasUpdate,
                                 accentColor = appAccentColor,
-                                onPatchClick = { handlePatchClick() },
-                                onUninstall = { showUninstallConfirm.value = true },
-                                onDelete = { showDeleteDialog.value = true },
-                                onExport = { exportSavedLauncher.launch(exportFileName) },
-                                onShowMountWarning = { action ->
-                                    pendingMountWarningAction.value = action
-                                    showMountWarningDialog.value = true
-                                },
-                                modifier = Modifier
-                                    .padding(horizontal = 20.dp)
-                                    .padding(top = 12.dp)
+                                modifier = Modifier.clip(RoundedCornerShape(bottomStart = 16.dp, bottomEnd = 16.dp))
                             )
                         }
-                    }
 
-                    // Info about saved APK availability
-                    if (!viewModel.hasOriginalApk) {
-                        val idx = staggerIndex
+                        // Stagger index counter: hero header is index 0 (animated independently).
+                        // Banner item always occupies index 1 (permanent item, AnimatedVisibility
+                        // controls visibility) so subsequent indices are stable regardless of
+                        // banner state - avoiding LazyColumn position-key conflicts
+                        var staggerIndex = 2
+
+                        // Warning banners (deleted / update)
+                        item(key = "banner") {
+                            Column {
+                                androidx.compose.animation.AnimatedVisibility(
+                                    visible = viewModel.isAppDeleted,
+                                    enter = MorpheAnimations.expandFadeEnter,
+                                    exit = MorpheAnimations.shrinkFadeExit
+                                ) {
+                                    Column {
+                                        Spacer(Modifier.height(12.dp))
+                                        StaggeredItem(entered = entered.value, index = 1) {
+                                            WarningBanner(
+                                                icon = Icons.Outlined.Warning,
+                                                title = stringResource(R.string.home_app_info_app_deleted_warning),
+                                                description = stringResource(R.string.home_app_info_app_deleted_description),
+                                                buttonText = stringResource(R.string.patch),
+                                                buttonIcon = Icons.Outlined.AutoFixHigh,
+                                                onClick = {
+                                                    onTriggerPatchFlow(installedApp.originalPackageName)
+                                                },
+                                                accentColor = appAccentColor,
+                                                isError = true,
+                                                modifier = Modifier.padding(horizontal = 20.dp)
+                                            )
+                                        }
+                                    }
+                                }
+                                androidx.compose.animation.AnimatedVisibility(
+                                    visible = hasUpdate && !viewModel.isAppDeleted,
+                                    enter = MorpheAnimations.expandFadeEnter,
+                                    exit = MorpheAnimations.shrinkFadeExit
+                                ) {
+                                    Column {
+                                        Spacer(Modifier.height(12.dp))
+                                        StaggeredItem(entered = entered.value, index = 1) {
+                                            WarningBanner(
+                                                icon = Icons.Outlined.Update,
+                                                title = stringResource(R.string.home_app_info_patch_update_available),
+                                                description = stringResource(R.string.home_app_info_patch_update_available_description),
+                                                buttonText = stringResource(R.string.patch),
+                                                buttonIcon = Icons.Outlined.AutoFixHigh,
+                                                onClick = {
+                                                    onTriggerPatchFlow(installedApp.originalPackageName)
+                                                },
+                                                accentColor = appAccentColor,
+                                                isError = false,
+                                                modifier = Modifier.padding(horizontal = 20.dp)
+                                            )
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        // Info Section
+                        val infoIdx = staggerIndex++
                         item {
-                            StaggeredItem(entered = entered.value, index = idx) {
-                                InfoBadge(
-                                    text = stringResource(R.string.home_app_info_no_saved_apk),
-                                    style = InfoBadgeStyle.Warning,
-                                    icon = Icons.Outlined.Info,
-                                    isExpanded = true,
+                            Box(modifier = Modifier.padding(top = 12.dp)) {
+                                StaggeredItem(entered = entered.value, index = infoIdx) {
+                                    InfoSection(
+                                        installedApp = installedApp,
+                                        appliedPatches = appliedPatches,
+                                        bundlesUsedSummary = bundlesUsedSummary,
+                                        onShowPatches = { showAppliedPatchesDialog.value = true },
+                                        accentColor = appAccentColor
+                                    )
+                                }
+                            }
+                        }
+
+                        // Actions Section
+                        val actionsIdx = staggerIndex++
+                        item {
+                            StaggeredItem(entered = entered.value, index = actionsIdx) {
+                                ActionsSection(
+                                    viewModel = viewModel,
+                                    installViewModel = installViewModel,
+                                    installedApp = installedApp,
+                                    availablePatches = availablePatches,
+                                    isInstalling = isInstalling,
+                                    mountOperation = mountOperation,
+                                    hasUpdate = hasUpdate,
+                                    accentColor = appAccentColor,
+                                    onPatchClick = { handlePatchClick() },
+                                    onUninstall = { showUninstallConfirm.value = true },
+                                    onDelete = { showDeleteDialog.value = true },
+                                    onExport = { exportSavedLauncher.launch(exportFileName) },
+                                    onShowMountWarning = { action ->
+                                        pendingMountWarningAction.value = action
+                                        showMountWarningDialog.value = true
+                                    },
                                     modifier = Modifier
-                                        .fillMaxWidth()
                                         .padding(horizontal = 20.dp)
                                         .padding(top = 12.dp)
                                 )
                             }
                         }
-                    }
 
-                    // Bottom nav bar padding
-                    item { Spacer(Modifier.navigationBarsPadding()) }
+                        // Info about saved APK availability
+                        if (!viewModel.hasOriginalApk) {
+                            val idx = staggerIndex
+                            item {
+                                StaggeredItem(entered = entered.value, index = idx) {
+                                    InfoBadge(
+                                        text = stringResource(R.string.home_app_info_no_saved_apk),
+                                        style = InfoBadgeStyle.Warning,
+                                        icon = Icons.Outlined.Info,
+                                        isExpanded = true,
+                                        modifier = Modifier
+                                            .fillMaxWidth()
+                                            .padding(horizontal = 20.dp)
+                                            .padding(top = 12.dp)
+                                    )
+                                }
+                            }
+                        }
+                    }
+                    MorpheDialogOutlinedButton(
+                        text = stringResource(R.string.close),
+                        onClick = onDismiss,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .navigationBarsPadding()
+                            .padding(horizontal = 20.dp)
+                            .padding(vertical = 12.dp)
+                    )
                 }
             }
         }
