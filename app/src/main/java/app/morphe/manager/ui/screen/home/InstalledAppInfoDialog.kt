@@ -731,11 +731,15 @@ private fun AppHeroHeader(
 
     Box(modifier = modifier.fillMaxWidth()) {
         // Flat tinted background
+        val heroBg = if (accentColor.isExtremeAccent())
+            MaterialTheme.colorScheme.onBackground.copy(alpha = 0.06f)
+        else
+            accentColor.copy(alpha = 0.15f)
         Box(
             modifier = Modifier
                 .fillMaxWidth()
                 .matchParentSize()
-                .background(accentColor.copy(alpha = 0.15f))
+                .background(heroBg)
         )
 
         Column(
