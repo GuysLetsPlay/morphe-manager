@@ -62,7 +62,6 @@ import kotlin.time.Duration.Companion.milliseconds
 /**
  * Container for all MorpheHomeScreen dialogs.
  */
-@SuppressLint("LocalContextGetResourceValueCall")
 @Composable
 fun HomeDialogs(
     homeViewModel: HomeViewModel,
@@ -511,6 +510,8 @@ fun HomeDialogs(
     // Rename bundle dialog
     if (homeViewModel.showRenameBundleDialog && homeViewModel.bundleToRename != null) {
         val bundle = homeViewModel.bundleToRename!!
+        val duplicateNameError = stringResource(R.string.sources_dialog_duplicate_name_error)
+        val missingBundleError = stringResource(R.string.sources_dialog_missing_error)
 
         RenameBundleDialog(
             initialValue = bundle.displayTitle,
@@ -531,10 +532,10 @@ fun HomeDialogs(
                             homeViewModel.bundleToRename = null
                         }
                         PatchBundleRepository.DisplayNameUpdateResult.DUPLICATE -> {
-                            context.toast(context.getString(R.string.sources_dialog_duplicate_name_error))
+                            context.toast(duplicateNameError)
                         }
                         PatchBundleRepository.DisplayNameUpdateResult.NOT_FOUND -> {
-                            context.toast(context.getString(R.string.sources_dialog_missing_error))
+                            context.toast(missingBundleError)
                         }
                     }
                 }
@@ -738,7 +739,6 @@ private fun ApkAvailabilityDialog(
 /**
  * Dialog 2: Download instructions dialog.
  */
-@SuppressLint("LocalContextGetResourceValueCall")
 @Composable
 private fun DownloadInstructionsDialog(
     usingMountInstall: Boolean,
@@ -749,6 +749,14 @@ private fun DownloadInstructionsDialog(
     onContinue: () -> Unit
 ) {
     val context = LocalContext.current
+    val downloadButtonToasts = listOf(
+        stringResource(R.string.home_download_instructions_download_button_toast),
+        stringResource(R.string.home_download_instructions_download_button_toast_2),
+        stringResource(R.string.home_download_instructions_download_button_toast_3),
+        stringResource(R.string.home_download_instructions_download_button_toast_4),
+        stringResource(R.string.home_download_instructions_download_button_toast_5),
+        stringResource(R.string.home_download_instructions_download_button_toast_6),
+    )
     var downloadClickCount by remember { mutableIntStateOf(0) }
 
     MorpheDialog(
@@ -802,16 +810,8 @@ private fun DownloadInstructionsDialog(
                     Surface(
                         onClick = {
                             downloadClickCount++
-                            val messageRes = when (downloadClickCount) {
-                                1 -> R.string.home_download_instructions_download_button_toast
-                                2 -> R.string.home_download_instructions_download_button_toast_2
-                                3 -> R.string.home_download_instructions_download_button_toast_3
-                                4 -> R.string.home_download_instructions_download_button_toast_4
-                                5 -> R.string.home_download_instructions_download_button_toast_5
-                                else -> R.string.home_download_instructions_download_button_toast_6
-                            }
                             context.toast(
-                                string = context.getString(messageRes),
+                                string = downloadButtonToasts.getOrElse(downloadClickCount - 1) { downloadButtonToasts.last() },
                                 duration = Toast.LENGTH_LONG
                             )
                         },

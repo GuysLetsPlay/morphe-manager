@@ -5,7 +5,6 @@
 
 package app.morphe.manager.ui.screen.home
 
-import android.annotation.SuppressLint
 import android.graphics.Color.argb
 import android.graphics.Color.colorToHSV
 import android.net.Uri
@@ -527,7 +526,6 @@ fun RenameBundleDialog(
 /**
  * Dialog displaying patches from a bundle with search field and chips.
  */
-@SuppressLint("LocalContextGetResourceValueCall")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun BundlePatchesDialog(
@@ -808,13 +806,14 @@ fun BundlePatchesDialog(
                     }
                 ) { patch ->
                     val context = LocalContext.current
+                    val expertBadgeTooltip = stringResource(R.string.sources_patch_expert_badge_tooltip)
                     val accentColor = patchAccentColors[patch.name]
                         ?.takeIf { it != Color.Unspecified }
                     PatchItemCard(
                         patch = patch,
                         saveStateKey = "bundle_${src.uid}",
                         onExpertBadgeClick = if (!patch.include) {
-                            { context.toast(context.getString(R.string.sources_patch_expert_badge_tooltip)) }
+                            { context.toast(expertBadgeTooltip) }
                         } else null,
                         accentColor = accentColor,
                         modifier = Modifier.animateItem(

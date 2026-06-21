@@ -5,18 +5,17 @@
 
 package app.morphe.manager.ui.screen
 
-import android.annotation.SuppressLint
 import android.view.HapticFeedbackConstants
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.statusBarsPadding
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
+import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import app.morphe.manager.R
 import app.morphe.manager.domain.manager.PreferencesManager
@@ -39,8 +38,6 @@ import kotlin.time.Duration.Companion.milliseconds
 /**
  * Home Screen with 5-section layout.
  */
-@OptIn(ExperimentalMaterial3Api::class)
-@SuppressLint("LocalContextGetResourceValueCall")
 @Composable
 fun HomeScreen(
     onSettingsClick: () -> Unit,
@@ -57,6 +54,8 @@ fun HomeScreen(
     val context = LocalContext.current
     val view = LocalView.current
     val scope = rememberCoroutineScope()
+    val sourcesLoadingText = stringResource(R.string.home_sources_are_loading)
+    val otherAppsText = stringResource(R.string.home_other_apps)
 
     // Dialog states
     val showUpdateDetailsDialog = remember { mutableStateOf(false) }
@@ -71,11 +70,10 @@ fun HomeScreen(
     val showGreetingPhrases by prefs.showGreetingPhrases.getAsState()
 
     // Re-evaluated whenever showPatchingPhrases changes
-    var greetingMessage by remember(showGreetingPhrases) {
-        mutableStateOf(
-            if (showGreetingPhrases) context.getString(HomeAndPatcherMessages.getHomeMessage(context)) else null
-        )
+    var greetingResId by remember(showGreetingPhrases) {
+        mutableStateOf(if (showGreetingPhrases) HomeAndPatcherMessages.getHomeMessage(context) else null)
     }
+    val greetingMessage = greetingResId?.let { stringResource(it) }
 
     // Handle refresh with haptic feedback.
     // showPatchingPhrases is read from the reactive state captured in the
@@ -83,7 +81,7 @@ fun HomeScreen(
     val onRefresh: () -> Unit = {
         view.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS)
         HomeAndPatcherMessages.resetHomeMessage()
-        greetingMessage = if (showGreetingPhrases) context.getString(HomeAndPatcherMessages.getHomeMessage(context)) else null
+        greetingResId = if (showGreetingPhrases) HomeAndPatcherMessages.getHomeMessage(context) else null
         homeViewModel.refresh()
     }
 
@@ -248,11 +246,11 @@ fun HomeScreen(
                 // Other apps button
                 onOtherAppsClick = {
                     if (availablePatches <= 0) {
-                        context.toast(context.getString(R.string.home_sources_are_loading))
+                        context.toast(sourcesLoadingText)
                         return@SectionsLayout
                     }
                     homeViewModel.pendingPackageName = null
-                    homeViewModel.pendingAppName = context.getString(R.string.home_other_apps)
+                    homeViewModel.pendingAppName = otherAppsText
                     homeViewModel.pendingRecommendedVersion = null
                     homeViewModel.showFilePickerPromptDialog = true
                 },

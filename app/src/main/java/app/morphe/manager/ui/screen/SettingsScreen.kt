@@ -5,7 +5,6 @@
 
 package app.morphe.manager.ui.screen
 
-import android.annotation.SuppressLint
 import androidx.activity.compose.LocalOnBackPressedDispatcherOwner
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -70,7 +69,6 @@ private enum class SettingsTab(
 /**
  * Settings screen with bottom navigation and swipeable tabs.
  */
-@SuppressLint("LocalContextGetResourceValueCall")
 @Composable
 fun SettingsScreen(
     homeViewModel: HomeViewModel,
@@ -87,6 +85,7 @@ fun SettingsScreen(
     val context = LocalContext.current
     val coroutineScope = rememberCoroutineScope()
     val isTV = remember { context.isAndroidTv() }
+    val wrongCredentialsText = stringResource(R.string.settings_system_import_keystore_wrong_credentials)
 
     // Pager state for swipeable tabs
     val pagerState = rememberPagerState(
@@ -220,7 +219,7 @@ fun SettingsScreen(
                 coroutineScope.launch {
                     val result = importExportViewModel.tryKeystoreImport(alias, pass, storePass, format)
                     if (!result) {
-                        context.toast(context.getString(R.string.settings_system_import_keystore_wrong_credentials))
+                        context.toast(wrongCredentialsText)
                     }
                 }
             }

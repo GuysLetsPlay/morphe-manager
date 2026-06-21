@@ -20,6 +20,10 @@ import androidx.compose.ui.unit.dp
 import app.morphe.manager.R
 import com.google.accompanist.drawablepainter.rememberDrawablePainter
 
+/**
+ * Branded loading animation that pulses the Morphe logo icon.
+ * Use instead of [androidx.compose.material3.CircularProgressIndicator] for in-app loading states.
+ */
 @Composable
 fun PulsingLogoIndicator(
     modifier: Modifier = Modifier,

@@ -5,7 +5,6 @@
 
 package app.morphe.manager.ui.screen
 
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.util.Log
 import android.view.HapticFeedbackConstants
@@ -21,7 +20,10 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.statusBarsPadding
-import androidx.compose.material3.*
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.*
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -65,8 +67,6 @@ import kotlin.time.Duration.Companion.milliseconds
  * Patcher screen with progress tracking.
  * Shows patching progress, handles installation with pre-conflict detection, and provides export functionality.
  */
-@SuppressLint("LocalContextGetResourceValueCall", "AutoboxingStateCreation")
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PatcherScreen(
     onBackClick: () -> Unit,
@@ -220,6 +220,7 @@ fun PatcherScreen(
     }
 
     val patchesProgress = patcherViewModel.patchesProgress
+    val unknownErrorText = stringResource(R.string.patcher_unknown_error)
 
     // Monitor for patching errors (not installation errors)
     LaunchedEffect(patcherSucceeded) {
@@ -228,7 +229,7 @@ fun PatcherScreen(
             val steps = patcherViewModel.steps
             val failedStep = steps.firstOrNull { it.state == State.FAILED }
             state.errorMessage = failedStep?.message
-                ?: context.getString(R.string.patcher_unknown_error)
+                ?: unknownErrorText
             state.errorInfo = patcherViewModel.buildErrorInfo()
             state.showErrorDialog = true
         }
