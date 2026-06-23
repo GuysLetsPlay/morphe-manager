@@ -414,7 +414,7 @@ class PatcherWorker(
             if (!patchedApk.delete() && patchedApk.exists()) {
                 Log.w(tag, "Failed to delete temporary patched APK: ${patchedApk.absolutePath}".logFmt())
             }
-            showCompletionNotification(succeeded)
+            if (!isStopped) showCompletionNotification(succeeded)
         }
     }
 
