@@ -1,3 +1,14 @@
+# [1.22.0-dev.11](https://github.com/MorpheApp/morphe-manager/compare/v1.22.0-dev.10...v1.22.0-dev.11) (2026-06-23)
+
+
+### Bug Fixes
+
+* Add missing license metadata for JitPack libraries and embed offline license texts ([858aa8f](https://github.com/MorpheApp/morphe-manager/commit/858aa8fbf5c456e4336b5dc294c77f6f76f6ab0a))
+* Make split APK preparation step labels translatable via string resources ([6d6d444](https://github.com/MorpheApp/morphe-manager/commit/6d6d4443cb528e930577f06966c4bdcb24f40173))
+* Show patching log in error dialog instead of generic placeholder when no failed step message ([bcc5f50](https://github.com/MorpheApp/morphe-manager/commit/bcc5f501fc1ded0c13a11301de5577510decf3d6))
+* Suppress completion notification when patching is canceled by the user ([5cd4509](https://github.com/MorpheApp/morphe-manager/commit/5cd4509b628f57bbde8bb88015fc9d9d6cd6b86b))
+* Truncate version text with ellipsis to prevent update badge from being pushed off-screen ([ee85cb2](https://github.com/MorpheApp/morphe-manager/commit/ee85cb2891d41b206ccb5375ccac9c410d20b9cc))
+
 # [1.22.0-dev.10](https://github.com/MorpheApp/morphe-manager/compare/v1.22.0-dev.9...v1.22.0-dev.10) (2026-06-22)
 
 
