@@ -14,10 +14,12 @@ import androidx.work.ForegroundInfo
 import androidx.work.WorkerParameters
 import androidx.work.workDataOf
 import app.morphe.manager.MainActivity
+import app.morphe.manager.ManagerApplication
 import app.morphe.manager.R
 import app.morphe.manager.data.platform.Filesystem
 import app.morphe.manager.data.room.apps.installed.InstallType
 import app.morphe.manager.domain.installer.RootInstaller
+import app.morphe.manager.domain.manager.InstallerPreferenceTokens
 import app.morphe.manager.domain.manager.KeystoreManager
 import app.morphe.manager.domain.manager.PreferencesManager
 import app.morphe.manager.domain.repository.InstalledAppRepository
@@ -129,7 +131,11 @@ class PatcherWorker(
         notificationManager.notify(NOTIFICATION_ID, createNotification(stepName, patchProgress, contentText))
     }
 
-    private fun showCompletionNotification(succeeded: Boolean) {
+    private fun showCompletionNotification(succeeded: Boolean, autoInstallPending: Boolean) {
+        // Don't notify when the app is in the foreground - user sees the result on screen
+        if (isAppInForeground()) return
+        // Don't show "patching complete" when Shizuku auto-install will immediately follow
+        if (succeeded && autoInstallPending) return
         val notification = Notification.Builder(applicationContext, "morphe-patcher-patching")
             .setContentTitle(
                 applicationContext.getString(
@@ -144,6 +150,9 @@ class PatcherWorker(
         applicationContext.getSystemService(NotificationManager::class.java)
             .notify(COMPLETION_NOTIFICATION_ID, notification)
     }
+
+    private fun isAppInForeground(): Boolean =
+        ManagerApplication.startedActivityCount > 0
 
     override suspend fun doWork(): Result {
         if (runAttemptCount > 0) {
@@ -234,6 +243,7 @@ class PatcherWorker(
 
         val patchedApk = fs.tempDir.resolve("patched.apk")
         var succeeded = false
+        var autoInstallPending = false
 
         return try {
             val startTime = System.currentTimeMillis()
@@ -374,6 +384,9 @@ class PatcherWorker(
             )
 
             Log.i(tag, "Patching succeeded".logFmt())
+            autoInstallPending = prefs.autoInstallWithShizuku.get() &&
+                prefs.installerPrimary.get() == InstallerPreferenceTokens.SHIZUKU &&
+                !prefs.promptInstallerOnInstall.get()
             succeeded = true
             Result.success()
         } catch (e: ProcessRuntime.ProcessExitException) {
@@ -414,7 +427,7 @@ class PatcherWorker(
             if (!patchedApk.delete() && patchedApk.exists()) {
                 Log.w(tag, "Failed to delete temporary patched APK: ${patchedApk.absolutePath}".logFmt())
             }
-            if (!isStopped) showCompletionNotification(succeeded)
+            if (!isStopped) showCompletionNotification(succeeded, autoInstallPending)
         }
     }
 
