@@ -15,6 +15,7 @@ import app.morphe.manager.R
 import app.morphe.manager.data.room.apps.installed.InstallType
 import app.morphe.manager.domain.installer.*
 import app.morphe.manager.domain.manager.PreferencesManager
+import app.morphe.manager.util.AppCoroutineScope
 import app.morphe.manager.util.AppDataResolver
 import app.morphe.manager.util.PM
 import app.morphe.manager.util.sha256OrNull
@@ -40,6 +41,7 @@ class InstallViewModel : ViewModel(), KoinComponent {
     private val installerManager: InstallerManager by inject()
     private val prefs: PreferencesManager by inject()
     private val appDataResolver: AppDataResolver by inject()
+    private val applicationScope: AppCoroutineScope by inject()
 
     /**
      * Current installation state.
@@ -147,7 +149,6 @@ class InstallViewModel : ViewModel(), KoinComponent {
     }
 
     override fun onCleared() {
-        super.onCleared()
         try {
             app.unregisterReceiver(packageReceiver)
         } catch (e: Exception) {
@@ -558,8 +559,11 @@ class InstallViewModel : ViewModel(), KoinComponent {
         externalInstallStartTime = null
         externalPackageWasPresentAtStart = false
         pendingPersistCallback?.let { callback ->
-            viewModelScope.launch {
+            // Detached from viewModelScope: the broadcast may arrive after the VM is
+            // cleared, so persistence must run on a scope that outlives it
+            applicationScope.launch {
                 runCatching { callback(packageName, InstallType.DEFAULT) }
+                    .onFailure { Log.e(TAG, "Failed to persist app data", it) }
             }
         }
         handleInstallSuccess(packageName)
@@ -599,9 +603,9 @@ class InstallViewModel : ViewModel(), KoinComponent {
             InstallType.DEFAULT
         }
 
-        // Persist app data
+        // Detached from viewModelScope: the broadcast may arrive after the VM is cleared
         pendingPersistCallback?.let { callback ->
-            viewModelScope.launch {
+            applicationScope.launch {
                 try {
                     callback(packageName, installType)
                 } catch (e: Exception) {

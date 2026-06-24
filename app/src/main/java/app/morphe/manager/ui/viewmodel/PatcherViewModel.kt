@@ -577,7 +577,9 @@ class PatcherViewModel(
     suspend fun persistPatchedApp(
         currentPackageName: String?,
         installType: InstallType
-    ): Boolean = withContext(Dispatchers.IO) {
+    ): Boolean = withContext(NonCancellable + Dispatchers.IO) {
+        // NonCancellable: this body must run to completion even if the caller's scope is
+        // cancelled mid-way, so the DB row never diverges from the installed APK
         val installedPackageInfo = currentPackageName?.let(pm::getPackageInfo)
         val patchedPackageInfo = pm.getPackageInfo(outputFile)
         val packageInfo = patchedPackageInfo ?: installedPackageInfo
@@ -1128,7 +1130,6 @@ class PatcherViewModel(
     }
 
     override fun onCleared() {
-        super.onCleared()
         patcherWorkerId?.uuid?.let(workManager::cancelWorkById)
         cleanupTemporaryInput()
 

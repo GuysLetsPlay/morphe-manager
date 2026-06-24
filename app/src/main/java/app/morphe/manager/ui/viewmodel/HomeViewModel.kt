@@ -1126,6 +1126,14 @@ class HomeViewModel(
                 if (app.originalPackageName != app.currentPackageName) {
                     appDataResolver.invalidate(app.originalPackageName)
                 }
+                // Reconcile DB version with the actually-installed version.
+                // Skipped for MOUNT (PM reports the stock APK) and SAVED (no live install)
+                if (app.installType != InstallType.MOUNT && app.installType != InstallType.SAVED) {
+                    val liveVersion = pm.getPackageInfo(app.currentPackageName)?.versionName
+                    if (!liveVersion.isNullOrBlank() && liveVersion != app.version) {
+                        installedAppRepository.updateInstalledVersion(app, liveVersion)
+                    }
+                }
             }
         },
         _appUpdatesAvailable,
@@ -2731,7 +2739,6 @@ class HomeViewModel(
      * the ViewModel while a temporary APK file is still held in pendingSelectedApp.
      */
     override fun onCleared() {
-        super.onCleared()
         val pending = pendingSelectedApp
         if (pending is SelectedApp.Local && pending.temporary) {
             pending.file.delete()
