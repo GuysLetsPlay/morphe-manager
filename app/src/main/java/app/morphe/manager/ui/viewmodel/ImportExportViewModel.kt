@@ -212,8 +212,11 @@ class ImportExportViewModel(
 
             preferencesManager.importSettings(exportFile.settings)
 
-            // Keep SharedPreferences in sync so the imported language applies on next cold start
-            exportFile.settings.appLanguage?.let { saveLanguageToPrefs(app, it) }
+            // Apply the imported language immediately and persist it for the next cold start
+            exportFile.settings.appLanguage?.let {
+                saveLanguageToPrefs(app, it)
+                applyAppLanguage(it)
+            }
 
             val bundles = exportFile.settings.customBundles
             if (!bundles.isNullOrEmpty()) {
