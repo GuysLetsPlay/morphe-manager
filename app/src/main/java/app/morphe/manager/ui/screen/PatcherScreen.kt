@@ -542,7 +542,8 @@ fun PatcherScreen(
                 PatcherState.SUCCESS -> {
                     val effectiveIsInstalling = isInstalling || (
                         autoInstallWithShizuku &&
-                        primaryInstallerPref == InstallerPreferenceTokens.SHIZUKU &&
+                        (primaryInstallerPref == InstallerPreferenceTokens.SHIZUKU ||
+                                primaryInstallerPref == InstallerPreferenceTokens.SHIZUKU_PLAY_STORE) &&
                         patcherSucceeded == true &&
                         !usingMountInstall &&
                         !promptInstallerOnInstall &&
