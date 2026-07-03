@@ -1,3 +1,10 @@
+# [1.23.0-dev.6](https://github.com/MorpheApp/morphe-manager/compare/v1.23.0-dev.5...v1.23.0-dev.6) (2026-07-03)
+
+
+### Bug Fixes
+
+* Shizuku auto-install hang ([#686](https://github.com/MorpheApp/morphe-manager/issues/686)) ([f2ed496](https://github.com/MorpheApp/morphe-manager/commit/f2ed496178f223753867bc18dac921c7b9642120))
+
 # [1.23.0-dev.5](https://github.com/MorpheApp/morphe-manager/compare/v1.23.0-dev.4...v1.23.0-dev.5) (2026-07-03)
 
 
