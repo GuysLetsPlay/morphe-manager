@@ -834,7 +834,7 @@ fun MainAppsSection(
 ) {
     // Multi-select state - set of packageNames chosen for bulk hide
     val isMultiSelectMode = remember { mutableStateOf(false) }
-    val selectedPackages = remember { mutableStateOf(emptySet<String>()) }
+    val selectedPackages = rememberSelectionState<String>()
 
     // Reorder state
     val isReorderMode = remember { mutableStateOf(false) }
@@ -847,7 +847,7 @@ fun MainAppsSection(
     // Back gesture/button cancels multi-select instead of navigating back
     BackHandler(enabled = isMultiSelectMode.value) {
         isMultiSelectMode.value = false
-        selectedPackages.value = emptySet()
+        selectedPackages.clear()
     }
 
     // Back gesture/button exits reorder mode without saving
@@ -858,11 +858,9 @@ fun MainAppsSection(
 
     // Sync selection and local order with current item list
     LaunchedEffect(homeAppItems) {
-        val filtered = selectedPackages.value.filter { pkg ->
-            homeAppItems.any { it.packageName == pkg }
-        }.toSet()
-        selectedPackages.value = filtered
-        if (filtered.isEmpty()) isMultiSelectMode.value = false
+        val currentPackages = homeAppItems.mapTo(mutableSetOf()) { it.packageName }
+        selectedPackages.retain { it in currentPackages }
+        if (selectedPackages.isEmpty) isMultiSelectMode.value = false
 
         if (!isReorderMode.value) {
             localOrder = homeAppItems.map { it.packageName }
@@ -1082,7 +1080,7 @@ fun MainAppsSection(
                                         items = filteredItems,
                                         key = { _, item -> item.packageName }
                                     ) { index, item ->
-                                        val isSelected = item.packageName in selectedPackages.value
+                                        val isSelected = selectedPackages.contains(item.packageName)
                                         DynamicAppCard(
                                             item = item,
                                             isLoading = stableLoadingState.value,
@@ -1090,10 +1088,7 @@ fun MainAppsSection(
                                             onAppClick = {
                                                 if (isMultiSelectMode.value) {
                                                     // In multi-select mode taps toggle selection
-                                                    selectedPackages.value = if (isSelected)
-                                                        selectedPackages.value - item.packageName
-                                                    else
-                                                        selectedPackages.value + item.packageName
+                                                    selectedPackages.toggle(item.packageName)
                                                 } else {
                                                     onAppClick(item)
                                                 }
@@ -1108,10 +1103,7 @@ fun MainAppsSection(
                                             onLongPress = {
                                                 // Long-press enters multi-select and toggles this card
                                                 isMultiSelectMode.value = true
-                                                selectedPackages.value = if (isSelected)
-                                                    selectedPackages.value - item.packageName
-                                                else
-                                                    selectedPackages.value + item.packageName
+                                                selectedPackages.toggle(item.packageName)
                                             },
                                             onMoveUp = if (directReorderAllowed && index > 0) {
                                                 {
@@ -1283,29 +1275,29 @@ fun MainAppsSection(
 
                     // Multi-select / reorder bar - slides up from bottom
                     MultiSelectBar(
-                        selectedCount = selectedPackages.value.size,
+                        selectedCount = selectedPackages.size,
                         totalCount = homeAppItems.size,
                         visible = isMultibarVisible,
                         isReorderMode = isReorderMode.value,
                         onSelectAll = {
-                            selectedPackages.value = homeAppItems.map { it.packageName }.toSet()
+                            selectedPackages.setAll(homeAppItems.map { it.packageName })
                         },
-                        onDeselectAll = { selectedPackages.value = emptySet() },
+                        onDeselectAll = { selectedPackages.clear() },
                         onAction = {
-                            onHideMultiple(selectedPackages.value)
+                            onHideMultiple(selectedPackages.keys.toSet())
                             isMultiSelectMode.value = false
-                            selectedPackages.value = emptySet()
+                            selectedPackages.clear()
                         },
                         actionIcon = Icons.Outlined.VisibilityOff,
                         actionContentDescription = stringResource(R.string.hide),
                         actionDoneMessage = stringResource(R.string.hidden),
                         onCancel = {
                             isMultiSelectMode.value = false
-                            selectedPackages.value = emptySet()
+                            selectedPackages.clear()
                         },
                         onEnterReorder = {
                             isMultiSelectMode.value = false
-                            selectedPackages.value = emptySet()
+                            selectedPackages.clear()
                             isReorderMode.value = true
                         },
                         onSaveOrder = {
@@ -1447,63 +1439,6 @@ private fun HomeSearchTextField(
 }
 
 /**
- * App card with optional selection overlay - shared between [DynamicAppCard] and [HiddenAppsDialog].
- *
- * Renders [AppCardLayout] with the given [content], and overlays an animated checkmark badge
- * when [isSelected] is true. Dims the card when [isMultiSelectMode] is active but this card
- * is not selected.
- */
-@Composable
-private fun SelectableAppCard(
-    modifier: Modifier = Modifier,
-    isSelected: Boolean,
-    isMultiSelectMode: Boolean,
-    content: @Composable () -> Unit
-) {
-    val checkScale by animateFloatAsState(
-        targetValue = if (isSelected) 1f else 0f,
-        animationSpec = spring(dampingRatio = Spring.DampingRatioMediumBouncy, stiffness = Spring.StiffnessMedium),
-        label = "check_scale"
-    )
-    val cardAlpha by animateFloatAsState(
-        targetValue = if (isMultiSelectMode && !isSelected) 0.55f else 1f,
-        animationSpec = tween(200),
-        label = "card_alpha"
-    )
-
-    Box(modifier = modifier) {
-        Box(modifier = Modifier.graphicsLayer { alpha = cardAlpha }) {
-            content()
-        }
-
-        // Animated checkmark badge - top-right corner
-        if (checkScale > 0f) {
-            Box(
-                modifier = Modifier
-                    .align(Alignment.TopEnd)
-                    .padding(top = 8.dp, end = 8.dp)
-                    .graphicsLayer { scaleX = checkScale; scaleY = checkScale }
-            ) {
-                Surface(
-                    shape = CircleShape,
-                    color = MaterialTheme.colorScheme.primary,
-                    modifier = Modifier.size(28.dp)
-                ) {
-                    Box(contentAlignment = Alignment.Center) {
-                        Icon(
-                            imageVector = Icons.Outlined.Check,
-                            contentDescription = null,
-                            tint = MaterialTheme.colorScheme.onPrimary,
-                            modifier = Modifier.size(16.dp)
-                        )
-                    }
-                }
-            }
-        }
-    }
-}
-
-/**
  * Single dynamic app card with horizontal swipe gestures:
  * - Swipe LEFT  → reveal hide action
  * - Swipe RIGHT → reveal patches dialog
@@ -1612,9 +1547,9 @@ private fun DynamicAppCard(
                 )
             }
         ) {
-            SelectableAppCard(
+            SelectableCard(
                 isSelected = isSelected,
-                isMultiSelectMode = isMultiSelectMode
+                isSelectionMode = isMultiSelectMode
             ) {
                 Crossfade(
                     targetState = isLoading,
@@ -1722,10 +1657,6 @@ private fun MultiSelectBar(
         action()
     }
 
-    val selectAllLabel = stringResource(R.string.select_all)
-    val selectAllDone = stringResource(R.string.select_all_done)
-    val deselectAllLabel = stringResource(R.string.deselect_all)
-    val deselectAllDone = stringResource(R.string.deselect_all_done)
     val cancelLabel = stringResource(android.R.string.cancel)
     val reorderListLabel = stringResource(R.string.reorder_list)
     val reorderListHint = stringResource(R.string.reorder_list_hint)
@@ -1734,118 +1665,70 @@ private fun MultiSelectBar(
     val resetOrderDone = stringResource(R.string.reset_order_done)
     val doneLabel = stringResource(R.string.done)
 
-    AnimatedVisibility(
-        visible = visible,
-        enter = MorpheAnimations.springSlideUpEnter,
-        exit = MorpheAnimations.springSlideDownExit,
-        modifier = modifier
-    ) {
-        Surface(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(vertical = 8.dp),
-            shape = RoundedCornerShape(16.dp),
-            color = MaterialTheme.colorScheme.surfaceContainerHigh,
-            shadowElevation = 8.dp,
-            tonalElevation = 4.dp
-        ) {
-            AnimatedContent(
-                targetState = effectiveReorderMode,
-                transitionSpec = MorpheAnimations.fadeCrossfade(200),
-                label = "multibar_mode"
-            ) { inReorder ->
-                if (inReorder) {
-                    Column(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = 16.dp, vertical = 12.dp),
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                        verticalArrangement = Arrangement.spacedBy(8.dp)
-                    ) {
-                        Text(
-                            text = reorderListHint,
-                            style = MaterialTheme.typography.labelMedium,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
+    MultiSelectShell(visible = visible, modifier = modifier) {
+        AnimatedContent(
+            targetState = effectiveReorderMode,
+            transitionSpec = MorpheAnimations.fadeCrossfade(200),
+            label = "multibar_mode"
+        ) { inReorder ->
+            if (inReorder) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp, vertical = 12.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    Text(
+                        text = reorderListHint,
+                        style = MaterialTheme.typography.labelMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                    ActionPillRow {
+                        ActionPillButton(
+                            onClick = withToast(resetOrderDone, onResetOrder),
+                            icon = Icons.Outlined.Restore,
+                            contentDescription = resetOrderLabel,
+                            tooltip = resetOrderLabel
                         )
-                        ActionPillRow {
-                            ActionPillButton(
-                                onClick = withToast(resetOrderDone, onResetOrder),
-                                icon = Icons.Outlined.Restore,
-                                contentDescription = resetOrderLabel,
-                                tooltip = resetOrderLabel
-                            )
-                            ActionPillButton(
-                                onClick = onCancelReorder,
-                                icon = Icons.Outlined.Close,
-                                contentDescription = cancelLabel,
-                                tooltip = cancelLabel
-                            )
-                            ActionPillButton(
-                                onClick = withToast(reorderDone, onSaveOrder),
-                                icon = Icons.Outlined.Check,
-                                contentDescription = doneLabel,
-                                tooltip = doneLabel
-                            )
-                        }
+                        ActionPillButton(
+                            onClick = onCancelReorder,
+                            icon = Icons.Outlined.Close,
+                            contentDescription = cancelLabel,
+                            tooltip = cancelLabel
+                        )
+                        ActionPillButton(
+                            onClick = withToast(reorderDone, onSaveOrder),
+                            icon = Icons.Outlined.Check,
+                            contentDescription = doneLabel,
+                            tooltip = doneLabel
+                        )
                     }
-                } else {
-                    Column(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = 16.dp, vertical = 12.dp),
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                        verticalArrangement = Arrangement.spacedBy(8.dp)
-                    ) {
-                        AnimatedContent(
-                            targetState = selectedCount,
-                            transitionSpec = MorpheAnimations.compactCounterTransitionSpec,
-                            label = "selected_count"
-                        ) { count ->
-                            Text(
-                                text = "$count ${stringResource(R.string.selected).lowercase()}",
-                                style = MaterialTheme.typography.labelMedium,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant
-                            )
-                        }
-
-                        ActionPillRow {
-                            ActionPillButton(
-                                onClick = withToast(selectAllDone, onSelectAll),
-                                icon = Icons.Outlined.DoneAll,
-                                contentDescription = selectAllLabel,
-                                tooltip = selectAllLabel,
-                                enabled = selectedCount < totalCount
-                            )
-                            ActionPillButton(
-                                onClick = withToast(deselectAllDone, onDeselectAll),
-                                icon = Icons.Outlined.RemoveDone,
-                                contentDescription = deselectAllLabel,
-                                tooltip = deselectAllLabel,
-                                enabled = selectedCount > 0
-                            )
-                            ActionPillButton(
-                                onClick = onCancel,
-                                icon = Icons.Outlined.Close,
-                                contentDescription = cancelLabel,
-                                tooltip = cancelLabel
-                            )
-                            ActionPillButton(
-                                onClick = withToast(actionDoneMessage, onAction),
-                                icon = actionIcon,
-                                contentDescription = actionContentDescription,
-                                tooltip = actionContentDescription,
-                                enabled = selectedCount > 0,
-                                colors = actionColors
-                            )
-                            if (showReorderButton) {
-                                ActionPillButton(
-                                    onClick = onEnterReorder,
-                                    icon = Icons.Outlined.Reorder,
-                                    contentDescription = reorderListLabel,
-                                    tooltip = reorderListLabel
-                                )
-                            }
-                        }
+                }
+            } else {
+                SelectionActionBar(
+                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp),
+                    selectedCount = selectedCount,
+                    totalCount = totalCount,
+                    onSelectAll = onSelectAll,
+                    onDeselectAll = onDeselectAll,
+                    onCancel = onCancel
+                ) {
+                    ActionPillButton(
+                        onClick = withToast(actionDoneMessage, onAction),
+                        icon = actionIcon,
+                        contentDescription = actionContentDescription,
+                        tooltip = actionContentDescription,
+                        enabled = selectedCount > 0,
+                        colors = actionColors
+                    )
+                    if (showReorderButton) {
+                        ActionPillButton(
+                            onClick = onEnterReorder,
+                            icon = Icons.Outlined.Reorder,
+                            contentDescription = reorderListLabel,
+                            tooltip = reorderListLabel
+                        )
                     }
                 }
             }
@@ -2611,15 +2494,13 @@ internal fun HiddenAppsDialog(
 ) {
     val itemSpacing = rememberWindowSize().itemSpacing
     val isMultiSelectMode = remember { mutableStateOf(false) }
-    val selectedPackages = remember { mutableStateOf(emptySet<String>()) }
+    val selectedPackages = rememberSelectionState<String>()
 
     // Sync selection with current item list; exit mode if no items remain
     LaunchedEffect(hiddenAppItems) {
-        val filtered = selectedPackages.value.filter { pkg ->
-            hiddenAppItems.any { it.packageName == pkg }
-        }.toSet()
-        selectedPackages.value = filtered
-        if (filtered.isEmpty()) isMultiSelectMode.value = false
+        val currentPackages = hiddenAppItems.mapTo(mutableSetOf()) { it.packageName }
+        selectedPackages.retain { it in currentPackages }
+        if (selectedPackages.isEmpty) isMultiSelectMode.value = false
     }
 
     val view = LocalView.current
@@ -2654,7 +2535,7 @@ internal fun HiddenAppsDialog(
         onDismissRequest = {
             if (isMultiSelectMode.value) {
                 isMultiSelectMode.value = false
-                selectedPackages.value = emptySet()
+                selectedPackages.clear()
             } else {
                 onDismiss()
             }
@@ -2664,18 +2545,18 @@ internal fun HiddenAppsDialog(
         footer = {
             if (isMultiSelectMode.value) {
                 MultiSelectBar(
-                    selectedCount = selectedPackages.value.size,
+                    selectedCount = selectedPackages.size,
                     totalCount = hiddenAppItems.size,
                     visible = true,
                     showReorderButton = false,
                     onSelectAll = {
-                        selectedPackages.value = hiddenAppItems.map { it.packageName }.toSet()
+                        selectedPackages.setAll(hiddenAppItems.map { it.packageName })
                     },
-                    onDeselectAll = { selectedPackages.value = emptySet() },
+                    onDeselectAll = { selectedPackages.clear() },
                     onAction = {
-                        onUnhideMultiple(selectedPackages.value)
+                        onUnhideMultiple(selectedPackages.keys.toSet())
                         isMultiSelectMode.value = false
-                        selectedPackages.value = emptySet()
+                        selectedPackages.clear()
                     },
                     actionIcon = Icons.Outlined.Visibility,
                     actionContentDescription = stringResource(R.string.unhide),
@@ -2686,7 +2567,7 @@ internal fun HiddenAppsDialog(
                     ),
                     onCancel = {
                         isMultiSelectMode.value = false
-                        selectedPackages.value = emptySet()
+                        selectedPackages.clear()
                     },
                     onEnterReorder = {},
                     onSaveOrder = {},
@@ -2718,7 +2599,7 @@ internal fun HiddenAppsDialog(
                     items = hiddenAppItems,
                     key = { it.packageName }
                 ) { item ->
-                    val isSelected = item.packageName in selectedPackages.value
+                    val isSelected = selectedPackages.contains(item.packageName)
                     val offsetX = remember(item.packageName) { Animatable(0f) }
 
                     // Snap card back when entering multi-select
@@ -2726,14 +2607,14 @@ internal fun HiddenAppsDialog(
                         if (isMultiSelectMode.value) offsetX.animateTo(0f, tween(200))
                     }
 
-                    SelectableAppCard(
+                    SelectableCard(
                         modifier = Modifier.animateItem(
                             fadeInSpec = tween(MorpheDefaults.ANIMATION_DURATION),
                             fadeOutSpec = tween(MorpheDefaults.ANIMATION_DURATION_SHORT),
                             placementSpec = spring(stiffness = 400f, dampingRatio = 0.8f)
                         ),
                         isSelected = isSelected,
-                        isMultiSelectMode = isMultiSelectMode.value
+                        isSelectionMode = isMultiSelectMode.value
                     ) {
                         SwipeableCardContainer(
                             offsetX = offsetX,
@@ -2760,10 +2641,7 @@ internal fun HiddenAppsDialog(
                                 enabled = true,
                                 onClick = {
                                     if (isMultiSelectMode.value) {
-                                        selectedPackages.value = if (isSelected)
-                                            selectedPackages.value - item.packageName
-                                        else
-                                            selectedPackages.value + item.packageName
+                                        selectedPackages.toggle(item.packageName)
                                     } else {
                                         onUnhide(item.packageName)
                                     }
@@ -2771,10 +2649,7 @@ internal fun HiddenAppsDialog(
                                 onLongClick = {
                                     view.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS)
                                     isMultiSelectMode.value = true
-                                    selectedPackages.value = if (isSelected)
-                                        selectedPackages.value - item.packageName
-                                    else
-                                        selectedPackages.value + item.packageName
+                                    selectedPackages.toggle(item.packageName)
                                 },
                                 modifier = Modifier.fillMaxWidth()
                             ) {
