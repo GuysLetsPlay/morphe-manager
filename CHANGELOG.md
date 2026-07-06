@@ -1,3 +1,15 @@
+# [1.23.0-dev.7](https://github.com/MorpheApp/morphe-manager/compare/v1.23.0-dev.6...v1.23.0-dev.7) (2026-07-06)
+
+
+### Bug Fixes
+
+* Match changelog scopes via bundle Compatibility name ([086f15e](https://github.com/MorpheApp/morphe-manager/commit/086f15e50093edd5395859ca5ac579988745d505))
+
+
+### Features
+
+* Multi-select bulk actions for saved APKs and patch selections ([#689](https://github.com/MorpheApp/morphe-manager/issues/689)) ([4a16278](https://github.com/MorpheApp/morphe-manager/commit/4a16278206d128b09197245f75963d0db5b5e4ff))
+
 # [1.23.0-dev.6](https://github.com/MorpheApp/morphe-manager/compare/v1.23.0-dev.5...v1.23.0-dev.6) (2026-07-03)
 
 

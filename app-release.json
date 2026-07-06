@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-07-03T07:34:34",
-  "description": "# [1.23.0-dev.6](https://github.com/MorpheApp/morphe-manager/compare/v1.23.0-dev.5...v1.23.0-dev.6) (2026-07-03)\n\n\n### Bug Fixes\n\n* Shizuku auto-install hang ([#686](https://github.com/MorpheApp/morphe-manager/issues/686)) ([f2ed496](https://github.com/MorpheApp/morphe-manager/commit/f2ed496178f223753867bc18dac921c7b9642120))",
-  "download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.23.0-dev.6/morphe-manager-1.23.0-dev.6.apk",
-  "signature_download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.23.0-dev.6/morphe-manager-1.23.0-dev.6.apk.asc",
-  "version": "1.23.0-dev.6"
+  "created_at": "2026-07-06T06:22:06",
+  "description": "# [1.23.0-dev.7](https://github.com/MorpheApp/morphe-manager/compare/v1.23.0-dev.6...v1.23.0-dev.7) (2026-07-06)\n\n\n### Bug Fixes\n\n* Match changelog scopes via bundle Compatibility name ([086f15e](https://github.com/MorpheApp/morphe-manager/commit/086f15e50093edd5395859ca5ac579988745d505))\n\n\n### Features\n\n* Multi-select bulk actions for saved APKs and patch selections ([#689](https://github.com/MorpheApp/morphe-manager/issues/689)) ([4a16278](https://github.com/MorpheApp/morphe-manager/commit/4a16278206d128b09197245f75963d0db5b5e4ff))",
+  "download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.23.0-dev.7/morphe-manager-1.23.0-dev.7.apk",
+  "signature_download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.23.0-dev.7/morphe-manager-1.23.0-dev.7.apk.asc",
+  "version": "1.23.0-dev.7"
 }
