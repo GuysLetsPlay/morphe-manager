@@ -15,6 +15,7 @@ import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.*
@@ -359,58 +360,73 @@ private fun SelectionList(
     onEnterSelection: (String) -> Unit,
     onToggleSelection: (String) -> Unit
 ) {
-    LazyColumn(
-        modifier = Modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ItemSpacing)
-    ) {
-        // Summary box
-        item(key = "summary") {
-            InfoBox(
-                title = pluralStringResource(
-                    R.plurals.package_count,
-                    selections.size,
-                    selections.size
-                ),
-                containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f),
-                titleColor = MaterialTheme.colorScheme.primary,
-                icon = Icons.Outlined.Tune
-            ) {
-                Text(
-                    text = pluralStringResource(
-                        R.plurals.patch_selection_total_patches,
-                        totalSelections,
-                        totalSelections
+    val listState = rememberLazyListState()
+    val expandedPackages = remember { mutableStateOf<Set<String>>(emptySet()) }
+    Box(modifier = Modifier.fillMaxWidth()) {
+        LazyColumn(
+            state = listState,
+            modifier = Modifier.fillMaxWidth(),
+            verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ItemSpacing)
+        ) {
+            // Summary box
+            item(key = "summary") {
+                InfoBox(
+                    title = pluralStringResource(
+                        R.plurals.package_count,
+                        selections.size,
+                        selections.size
                     ),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = LocalDialogSecondaryTextColor.current
+                    containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f),
+                    titleColor = MaterialTheme.colorScheme.primary,
+                    icon = Icons.Outlined.Tune
+                ) {
+                    Text(
+                        text = pluralStringResource(
+                            R.plurals.patch_selection_total_patches,
+                            totalSelections,
+                            totalSelections
+                        ),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = LocalDialogSecondaryTextColor.current
+                    )
+                }
+            }
+
+            // List of packages with selections
+            items(
+                items = selections.entries.toList(),
+                key = { it.key }
+            ) { (packageName, bundleMap) ->
+                PackageSelectionItem(
+                    packageName = packageName,
+                    bundleMap = bundleMap,
+                    bundleNames = bundleNames,
+                    settingsViewModel = settingsViewModel,
+                    importExportViewModel = importExportViewModel,
+                    onResetPackage = {
+                        onSetResetTarget(ResetTarget.Package(packageName))
+                    },
+                    onResetPackageBundle = { bundleUid ->
+                        onSetResetTarget(ResetTarget.PackageBundle(packageName, bundleUid))
+                    },
+                    onShowPatchDetails = onShowPatchDetails,
+                    isSelected = selectedPackages.contains(packageName),
+                    isSelectionMode = isSelectionMode,
+                    onEnterSelection = { onEnterSelection(packageName) },
+                    onToggleSelection = { onToggleSelection(packageName) },
+                    expanded = packageName in expandedPackages.value,
+                    onToggleExpanded = {
+                        expandedPackages.value = if (packageName in expandedPackages.value) {
+                            expandedPackages.value - packageName
+                        } else {
+                            expandedPackages.value + packageName
+                        }
+                    }
                 )
             }
         }
 
-        // List of packages with selections
-        items(
-            items = selections.entries.toList(),
-            key = { it.key }
-        ) { (packageName, bundleMap) ->
-            PackageSelectionItem(
-                packageName = packageName,
-                bundleMap = bundleMap,
-                bundleNames = bundleNames,
-                settingsViewModel = settingsViewModel,
-                importExportViewModel = importExportViewModel,
-                onResetPackage = {
-                    onSetResetTarget(ResetTarget.Package(packageName))
-                },
-                onResetPackageBundle = { bundleUid ->
-                    onSetResetTarget(ResetTarget.PackageBundle(packageName, bundleUid))
-                },
-                onShowPatchDetails = onShowPatchDetails,
-                isSelected = selectedPackages.contains(packageName),
-                isSelectionMode = isSelectionMode,
-                onEnterSelection = { onEnterSelection(packageName) },
-                onToggleSelection = { onToggleSelection(packageName) }
-            )
-        }
+        ScrollToTopButton(listState = listState)
     }
 }
 
@@ -430,9 +446,10 @@ private fun PackageSelectionItem(
     isSelected: Boolean,
     isSelectionMode: Boolean,
     onEnterSelection: () -> Unit,
-    onToggleSelection: () -> Unit
+    onToggleSelection: () -> Unit,
+    expanded: Boolean,
+    onToggleExpanded: () -> Unit
 ) {
-    var expanded by remember { mutableStateOf(false) }
     var displayName by remember { mutableStateOf(packageName) }
     var appDataSource by remember { mutableStateOf(AppDataSource.INSTALLED) }
     val view = LocalView.current
@@ -465,7 +482,7 @@ private fun PackageSelectionItem(
                         .fillMaxWidth()
                         .combinedClickable(
                             onClick = {
-                                if (isSelectionMode) onToggleSelection() else expanded = !expanded
+                                if (isSelectionMode) onToggleSelection() else onToggleExpanded()
                             },
                             onLongClick = {
                                 view.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS)

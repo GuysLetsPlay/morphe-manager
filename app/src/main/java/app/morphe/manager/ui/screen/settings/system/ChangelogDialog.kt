@@ -5,8 +5,10 @@
 
 package app.morphe.manager.ui.screen.settings.system
 
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.NewReleases
 import androidx.compose.runtime.Composable
@@ -60,26 +62,34 @@ fun ChangelogDialog(
             }
         }
     ) {
-        LazyColumn(modifier = Modifier.fillMaxWidth()) {
-            if (entry == null) {
-                item("changelog_loading") { ChangelogSectionLoading() }
-            } else {
-                item("changelog_installed_${entry.version}") {
-                    ChangelogEntrySection(
-                        entry = entry,
-                        headerIcon = Icons.Outlined.NewReleases,
+        val listState = rememberLazyListState()
+        Box(modifier = Modifier.fillMaxWidth()) {
+            LazyColumn(
+                state = listState,
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                if (entry == null) {
+                    item("changelog_loading") { ChangelogSectionLoading() }
+                } else {
+                    item("changelog_installed_${entry.version}") {
+                        ChangelogEntrySection(
+                            entry = entry,
+                            headerIcon = Icons.Outlined.NewReleases,
+                            textColor = textColor
+                        )
+                    }
+                    changelogOlderItems(
+                        entries = updateViewModel.olderManagerEntries,
+                        isLoading = updateViewModel.isLoadingOlderEntries,
+                        onExpand = {
+                            updateViewModel.loadOlderManagerEntries(exclude = setOf(installedVersion))
+                        },
                         textColor = textColor
                     )
                 }
-                changelogOlderItems(
-                    entries = updateViewModel.olderManagerEntries,
-                    isLoading = updateViewModel.isLoadingOlderEntries,
-                    onExpand = {
-                        updateViewModel.loadOlderManagerEntries(exclude = setOf(installedVersion))
-                    },
-                    textColor = textColor
-                )
             }
+
+            ScrollToTopButton(listState = listState)
         }
     }
 

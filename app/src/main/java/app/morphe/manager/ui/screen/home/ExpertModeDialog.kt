@@ -263,22 +263,30 @@ fun ExpertModeDialog(
                             .weight(1f)
                     )
                 } else {
-                    Column(
+                    val singleBundleScroll = rememberScrollState()
+                    Box(
                         modifier = Modifier
                             .fillMaxWidth()
                             .weight(1f)
-                            .verticalScroll(rememberScrollState()),
-                        verticalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
-                        PatchListWithUniversalSection(
-                            patches = filteredPatches,
-                            newPatchNames = newPatches[bundle.uid] ?: emptySet(),
-                            missingRequiredOptions = patchesWithMissingRequired,
-                            onToggle = { onPatchToggle(bundle.uid, it) },
-                            onConfigureOptions = {
-                                if (!it.options.isNullOrEmpty()) selectedPatchForOptions.value = bundle.uid to it
-                            }
-                        )
+                        Column(
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .verticalScroll(singleBundleScroll),
+                            verticalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            PatchListWithUniversalSection(
+                                patches = filteredPatches,
+                                newPatchNames = newPatches[bundle.uid] ?: emptySet(),
+                                missingRequiredOptions = patchesWithMissingRequired,
+                                onToggle = { onPatchToggle(bundle.uid, it) },
+                                onConfigureOptions = {
+                                    if (!it.options.isNullOrEmpty()) selectedPatchForOptions.value = bundle.uid to it
+                                }
+                            )
+                        }
+
+                        ScrollToTopButton(scrollState = singleBundleScroll)
                     }
                 }
             } else {
@@ -384,21 +392,25 @@ fun ExpertModeDialog(
                                     .fillMaxHeight()
                             )
                         } else {
-                            Column(
-                                modifier = Modifier
-                                    .fillMaxSize()
-                                    .verticalScroll(rememberScrollState()),
-                                verticalArrangement = Arrangement.spacedBy(8.dp)
-                            ) {
-                                PatchListWithUniversalSection(
-                                    patches = patches,
-                                    newPatchNames = newPatches[bundle.uid] ?: emptySet(),
-                                    missingRequiredOptions = patchesWithMissingRequired,
-                                    onToggle = { onPatchToggle(bundle.uid, it) },
-                                    onConfigureOptions = {
-                                        if (!it.options.isNullOrEmpty()) selectedPatchForOptions.value = bundle.uid to it
-                                    }
-                                )
+                            val pageScroll = rememberScrollState()
+                            Box(modifier = Modifier.fillMaxSize()) {
+                                Column(
+                                    modifier = Modifier
+                                        .fillMaxSize()
+                                        .verticalScroll(pageScroll),
+                                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                                ) {
+                                    PatchListWithUniversalSection(
+                                        patches = patches,
+                                        newPatchNames = newPatches[bundle.uid] ?: emptySet(),
+                                        missingRequiredOptions = patchesWithMissingRequired,
+                                        onToggle = { onPatchToggle(bundle.uid, it) },
+                                        onConfigureOptions = {
+                                            if (!it.options.isNullOrEmpty()) selectedPatchForOptions.value = bundle.uid to it
+                                        }
+                                    )
+                                }
+                                ScrollToTopButton(scrollState = pageScroll)
                             }
                         }
                     }

@@ -146,6 +146,12 @@ object MorpheAnimations {
     val fadeScaleIn = fadeIn + scaleIn(defaultTween(), initialScale = MorpheDefaults.DIALOG_SCALE)
     val fadeScaleOut = fadeOut + scaleOut(defaultTween(), targetScale = MorpheDefaults.DIALOG_SCALE)
 
+    // Floating Button (FAB / scroll-to-top). Pops in from below with a stronger scale.
+    val fabEnter = fadeIn + scaleIn(defaultTween(), initialScale = 0.85f) +
+            slideInVertically(defaultTween()) { it / 2 }
+    val fabExit = fadeOut + scaleOut(defaultTween(), targetScale = 0.85f) +
+            slideOutVertically(defaultTween()) { it / 2 }
+
     // Alignment-based Transitions
     val expandTopFadeIn = fadeIn + expandVertically(defaultTween(), expandFrom = Alignment.Top)
     val shrinkTopFadeOut = fadeOut + shrinkVertically(defaultTween(), shrinkTowards = Alignment.Top)

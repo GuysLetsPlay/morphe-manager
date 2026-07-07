@@ -24,6 +24,7 @@ import app.morphe.manager.R
 import app.morphe.manager.ui.screen.shared.LocalDialogTextColor
 import app.morphe.manager.ui.screen.shared.MorpheDialog
 import app.morphe.manager.ui.screen.shared.MorpheDialogOutlinedButton
+import app.morphe.manager.ui.screen.shared.ScrollToTopButton
 import com.mikepenz.aboutlibraries.entity.Library
 import com.mikepenz.aboutlibraries.ui.compose.LibraryColors
 import com.mikepenz.aboutlibraries.ui.compose.LibraryDefaults
@@ -119,6 +120,8 @@ fun LicensesDialog(onDismiss: () -> Unit) {
                     }
                 }
             )
+
+            ScrollToTopButton(listState = lazyListState)
         }
     }
 }

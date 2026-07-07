@@ -16,6 +16,7 @@ import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.*
 import androidx.compose.material3.*
@@ -567,49 +568,55 @@ private fun ApkManagementDialogContent(
         scrollable = false,
         compactPadding = true
     ) {
-        LazyColumn(
-            modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ItemSpacing)
-        ) {
-            // Summary box
-            item(key = "summary") {
-                InfoBox(
-                    title = pluralStringResource(
-                        R.plurals.settings_system_apks_count,
-                        count,
-                        count
-                    ),
-                    containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f),
-                    titleColor = MaterialTheme.colorScheme.primary,
-                    icon = icon
-                ) {
-                    Text(
-                        text = stringResource(R.string.settings_system_apks_size, formatBytes(totalSize)),
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = LocalDialogSecondaryTextColor.current
-                    )
+        val listState = rememberLazyListState()
+        Box(modifier = Modifier.fillMaxWidth()) {
+            LazyColumn(
+                state = listState,
+                modifier = Modifier.fillMaxWidth(),
+                verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ItemSpacing)
+            ) {
+                // Summary box
+                item(key = "summary") {
+                    InfoBox(
+                        title = pluralStringResource(
+                            R.plurals.settings_system_apks_count,
+                            count,
+                            count
+                        ),
+                        containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f),
+                        titleColor = MaterialTheme.colorScheme.primary,
+                        icon = icon
+                    ) {
+                        Text(
+                            text = stringResource(R.string.settings_system_apks_size, formatBytes(totalSize)),
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = LocalDialogSecondaryTextColor.current
+                        )
+                    }
+                }
+
+                // List of APKs or loading state
+                when {
+                    // Show shimmer while loading
+                    isLoading -> items(3) { ShimmerApkItem() }
+                    isEmpty -> item { EmptyState(message = emptyMessage) }
+                    else -> items(items = items, key = { it.selectionKey }) { item ->
+                        val selected = selection.contains(item.selectionKey)
+                        ApkItemCard(
+                            data = item,
+                            selected = selected,
+                            selectionMode = selectedItems.isNotEmpty(),
+                            onToggleSelection = { selection.toggle(item.selectionKey) },
+                            onShare = if (item.file != null) { { onShare?.invoke(item) } } else null,
+                            onExport = if (item.file != null) { { onExport?.invoke(item) } } else null,
+                            onInstall = if (item.file != null && onInstall != null) { { onInstall(item) } } else null,
+                            onDelete = { onDelete(item) }
+                        )
+                    }
                 }
             }
 
-            // List of APKs or loading state
-            when {
-                // Show shimmer while loading
-                isLoading -> items(3) { ShimmerApkItem() }
-                isEmpty -> item { EmptyState(message = emptyMessage) }
-                else -> items(items = items, key = { it.selectionKey }) { item ->
-                    val selected = selection.contains(item.selectionKey)
-                    ApkItemCard(
-                        data = item,
-                        selected = selected,
-                        selectionMode = selectedItems.isNotEmpty(),
-                        onToggleSelection = { selection.toggle(item.selectionKey) },
-                        onShare = if (item.file != null) { { onShare?.invoke(item) } } else null,
-                        onExport = if (item.file != null) { { onExport?.invoke(item) } } else null,
-                        onInstall = if (item.file != null && onInstall != null) { { onInstall(item) } } else null,
-                        onDelete = { onDelete(item) }
-                    )
-                }
-            }
+            ScrollToTopButton(listState = listState)
         }
     }
 

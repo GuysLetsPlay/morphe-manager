@@ -20,6 +20,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
@@ -603,230 +604,236 @@ fun BundlePatchesDialog(
                 PulsingLogoIndicator()
             }
         } else {
-            LazyColumn(
-                modifier = Modifier.fillMaxWidth(),
-                verticalArrangement = Arrangement.spacedBy(8.dp)
-            ) {
-                // Bundle header
-                item {
-                    Surface(
-                        modifier = Modifier.fillMaxWidth(),
-                        shape = RoundedCornerShape(16.dp),
-                        color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f)
-                    ) {
-                        Row(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(16.dp),
-                            horizontalArrangement = Arrangement.spacedBy(14.dp),
-                            verticalAlignment = Alignment.CenterVertically
+            val listState = rememberLazyListState()
+            Box(modifier = Modifier.fillMaxWidth()) {
+                LazyColumn(
+                    state = listState,
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    // Bundle header
+                    item {
+                        Surface(
+                            modifier = Modifier.fillMaxWidth(),
+                            shape = RoundedCornerShape(16.dp),
+                            color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f)
                         ) {
-                            Surface(
-                                shape = CircleShape,
-                                color = MaterialTheme.colorScheme.primary.copy(alpha = 0.25f),
-                                modifier = Modifier.size(56.dp)
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(16.dp),
+                                horizontalArrangement = Arrangement.spacedBy(14.dp),
+                                verticalAlignment = Alignment.CenterVertically
                             ) {
-                                Box(contentAlignment = Alignment.Center) {
-                                    Icon(
-                                        imageVector = Icons.Outlined.Extension,
-                                        contentDescription = null,
-                                        tint = MaterialTheme.colorScheme.primary,
-                                        modifier = Modifier.size(28.dp)
+                                Surface(
+                                    shape = CircleShape,
+                                    color = MaterialTheme.colorScheme.primary.copy(alpha = 0.25f),
+                                    modifier = Modifier.size(56.dp)
+                                ) {
+                                    Box(contentAlignment = Alignment.Center) {
+                                        Icon(
+                                            imageVector = Icons.Outlined.Extension,
+                                            contentDescription = null,
+                                            tint = MaterialTheme.colorScheme.primary,
+                                            modifier = Modifier.size(28.dp)
+                                        )
+                                    }
+                                }
+
+                                Column(
+                                    modifier = Modifier.weight(1f),
+                                    verticalArrangement = Arrangement.spacedBy(4.dp)
+                                ) {
+                                    Text(
+                                        text = src.displayTitle,
+                                        style = MaterialTheme.typography.titleLarge,
+                                        fontWeight = FontWeight.Bold,
+                                        color = LocalDialogTextColor.current,
+                                        maxLines = 1,
+                                        overflow = TextOverflow.Ellipsis
                                     )
+
+                                    Row(
+                                        horizontalArrangement = Arrangement.spacedBy(6.dp),
+                                        verticalAlignment = Alignment.CenterVertically
+                                    ) {
+                                        Icon(
+                                            imageVector = Icons.Outlined.Widgets,
+                                            contentDescription = null,
+                                            tint = MaterialTheme.colorScheme.primary,
+                                            modifier = Modifier.size(16.dp)
+                                        )
+                                        val patchCountLabel = pluralStringResource(
+                                            R.plurals.patch_count,
+                                            patches.size,
+                                            patches.size
+                                        )
+                                        val countText = if (isFiltering)
+                                            "${filteredPatches.size}/${patchCountLabel}"
+                                        else
+                                            patchCountLabel
+                                        AnimatedContent(
+                                            targetState = countText,
+                                            transitionSpec = MorpheAnimations.counterTransitionSpec,
+                                            label = "patch_count"
+                                        ) { count ->
+                                            Text(
+                                                text = count,
+                                                style = MaterialTheme.typography.bodySmall,
+                                                color = MaterialTheme.colorScheme.primary,
+                                                fontWeight = FontWeight.Medium
+                                            )
+                                        }
+                                    }
                                 }
                             }
+                        }
+                    }
 
-                            Column(
-                                modifier = Modifier.weight(1f),
-                                verticalArrangement = Arrangement.spacedBy(4.dp)
+                    // Search + filter button row
+                    stickyHeader {
+                        Surface(
+                            modifier = Modifier.fillMaxWidth(),
+                            color = MaterialTheme.colorScheme.surface
+                        ) {
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(bottom = 4.dp),
+                                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                                verticalAlignment = Alignment.Bottom
                             ) {
-                                Text(
-                                    text = src.displayTitle,
-                                    style = MaterialTheme.typography.titleLarge,
-                                    fontWeight = FontWeight.Bold,
-                                    color = LocalDialogTextColor.current,
-                                    maxLines = 1,
-                                    overflow = TextOverflow.Ellipsis
+                                MorpheDialogTextField(
+                                    value = searchQuery,
+                                    onValueChange = { searchQuery = it },
+                                    label = { Text(stringResource(R.string.expert_mode_search)) },
+                                    leadingIcon = {
+                                        Icon(
+                                            imageVector = Icons.Outlined.Search,
+                                            contentDescription = null
+                                        )
+                                    },
+                                    showClearButton = true,
+                                    modifier = Modifier.weight(1f)
                                 )
 
-                                Row(
-                                    horizontalArrangement = Arrangement.spacedBy(6.dp),
-                                    verticalAlignment = Alignment.CenterVertically
-                                ) {
-                                    Icon(
-                                        imageVector = Icons.Outlined.Widgets,
-                                        contentDescription = null,
-                                        tint = MaterialTheme.colorScheme.primary,
-                                        modifier = Modifier.size(16.dp)
-                                    )
-                                    val patchCountLabel = pluralStringResource(
-                                        R.plurals.patch_count,
-                                        patches.size,
-                                        patches.size
-                                    )
-                                    val countText = if (isFiltering)
-                                        "${filteredPatches.size}/${patchCountLabel}"
-                                    else
-                                        patchCountLabel
-                                    AnimatedContent(
-                                        targetState = countText,
-                                        transitionSpec = MorpheAnimations.counterTransitionSpec,
-                                        label = "patch_count"
-                                    ) { count ->
-                                        Text(
-                                            text = count,
-                                            style = MaterialTheme.typography.bodySmall,
-                                            color = MaterialTheme.colorScheme.primary,
-                                            fontWeight = FontWeight.Medium
+                                if (hasMultiplePackages) {
+                                    FilledTonalIconButton(
+                                        onClick = { showFilterSheet.value = true },
+                                        modifier = Modifier.padding(bottom = 4.dp),
+                                        colors = IconButtonDefaults.filledTonalIconButtonColors(
+                                            containerColor = if (selectedPackages.isNotEmpty())
+                                                MaterialTheme.colorScheme.primaryContainer
+                                            else
+                                                MaterialTheme.colorScheme.surfaceVariant,
+                                            contentColor = if (selectedPackages.isNotEmpty())
+                                                MaterialTheme.colorScheme.onPrimaryContainer
+                                            else
+                                                MaterialTheme.colorScheme.onSurfaceVariant
+                                        )
+                                    ) {
+                                        Icon(
+                                            imageVector = Icons.Outlined.FilterList,
+                                            contentDescription = stringResource(R.string.filter),
+                                            modifier = Modifier.size(20.dp)
                                         )
                                     }
                                 }
                             }
                         }
                     }
-                }
 
-                // Search + filter button row
-                stickyHeader {
-                    Surface(
-                        modifier = Modifier.fillMaxWidth(),
-                        color = MaterialTheme.colorScheme.surface
-                    ) {
-                        Row(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(bottom = 4.dp),
-                            horizontalArrangement = Arrangement.spacedBy(8.dp),
-                            verticalAlignment = Alignment.Bottom
-                        ) {
-                            MorpheDialogTextField(
-                                value = searchQuery,
-                                onValueChange = { searchQuery = it },
-                                label = { Text(stringResource(R.string.expert_mode_search)) },
-                                leadingIcon = {
-                                    Icon(
-                                        imageVector = Icons.Outlined.Search,
-                                        contentDescription = null
-                                    )
-                                },
-                                showClearButton = true,
-                                modifier = Modifier.weight(1f)
-                            )
-
-                            if (hasMultiplePackages) {
-                                FilledTonalIconButton(
-                                    onClick = { showFilterSheet.value = true },
+                    // Active filter badges + empty state
+                    item(key = "filter_badges_and_empty_state") {
+                        Column {
+                            AnimatedVisibility(
+                                visible = selectedPackages.isNotEmpty(),
+                                enter = MorpheAnimations.expandFadeEnter,
+                                exit = MorpheAnimations.shrinkFadeExit
+                            ) {
+                                FlowRow(
                                     modifier = Modifier.padding(bottom = 4.dp),
-                                    colors = IconButtonDefaults.filledTonalIconButtonColors(
-                                        containerColor = if (selectedPackages.isNotEmpty())
-                                            MaterialTheme.colorScheme.primaryContainer
-                                        else
-                                            MaterialTheme.colorScheme.surfaceVariant,
-                                        contentColor = if (selectedPackages.isNotEmpty())
-                                            MaterialTheme.colorScheme.onPrimaryContainer
-                                        else
-                                            MaterialTheme.colorScheme.onSurfaceVariant
-                                    )
+                                    horizontalArrangement = Arrangement.spacedBy(8.dp)
                                 ) {
-                                    Icon(
-                                        imageVector = Icons.Outlined.FilterList,
-                                        contentDescription = stringResource(R.string.filter),
-                                        modifier = Modifier.size(20.dp)
-                                    )
+                                    selectedPackages.forEach { pkg ->
+                                        val label = appLabels[pkg] ?: pkg
+                                        InputChip(
+                                            selected = true,
+                                            onClick = { selectedPackages = selectedPackages - pkg },
+                                            label = { Text(label) },
+                                            trailingIcon = {
+                                                Icon(
+                                                    imageVector = Icons.Outlined.Close,
+                                                    contentDescription = stringResource(R.string.remove),
+                                                    modifier = Modifier.size(16.dp)
+                                                )
+                                            }
+                                        )
+                                    }
                                 }
                             }
-                        }
-                    }
-                }
 
-                // Active filter badges + empty state
-                item(key = "filter_badges_and_empty_state") {
-                    Column {
-                        AnimatedVisibility(
-                            visible = selectedPackages.isNotEmpty(),
-                            enter = MorpheAnimations.expandFadeEnter,
-                            exit = MorpheAnimations.shrinkFadeExit
-                        ) {
-                            FlowRow(
-                                modifier = Modifier.padding(bottom = 4.dp),
-                                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                            AnimatedVisibility(
+                                visible = filteredPatches.isEmpty(),
+                                enter = MorpheAnimations.fadeScaleIn,
+                                exit = MorpheAnimations.fadeScaleOut
                             ) {
-                                selectedPackages.forEach { pkg ->
-                                    val label = appLabels[pkg] ?: pkg
-                                    InputChip(
-                                        selected = true,
-                                        onClick = { selectedPackages = selectedPackages - pkg },
-                                        label = { Text(label) },
-                                        trailingIcon = {
-                                            Icon(
-                                                imageVector = Icons.Outlined.Close,
-                                                contentDescription = stringResource(R.string.remove),
-                                                modifier = Modifier.size(16.dp)
-                                            )
-                                        }
-                                    )
-                                }
-                            }
-                        }
-
-                        AnimatedVisibility(
-                            visible = filteredPatches.isEmpty(),
-                            enter = MorpheAnimations.fadeScaleIn,
-                            exit = MorpheAnimations.fadeScaleOut
-                        ) {
-                            Box(
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .fillParentMaxHeight(0.5f),
-                                contentAlignment = Alignment.Center
-                            ) {
-                                Column(
-                                    horizontalAlignment = Alignment.CenterHorizontally,
-                                    verticalArrangement = Arrangement.spacedBy(12.dp)
+                                Box(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .fillParentMaxHeight(0.5f),
+                                    contentAlignment = Alignment.Center
                                 ) {
-                                    Icon(
-                                        imageVector = Icons.Outlined.SearchOff,
-                                        contentDescription = null,
-                                        modifier = Modifier.size(48.dp),
-                                        tint = MaterialTheme.colorScheme.onSurfaceVariant
-                                    )
-                                    Text(
-                                        text = stringResource(R.string.expert_mode_no_results),
-                                        style = MaterialTheme.typography.bodyLarge,
-                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                        textAlign = TextAlign.Center
-                                    )
+                                    Column(
+                                        horizontalAlignment = Alignment.CenterHorizontally,
+                                        verticalArrangement = Arrangement.spacedBy(12.dp)
+                                    ) {
+                                        Icon(
+                                            imageVector = Icons.Outlined.SearchOff,
+                                            contentDescription = null,
+                                            modifier = Modifier.size(48.dp),
+                                            tint = MaterialTheme.colorScheme.onSurfaceVariant
+                                        )
+                                        Text(
+                                            text = stringResource(R.string.expert_mode_no_results),
+                                            style = MaterialTheme.typography.bodyLarge,
+                                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                            textAlign = TextAlign.Center
+                                        )
+                                    }
                                 }
                             }
                         }
                     }
-                }
 
-                // Filtered patches list
-                items(
-                    filteredPatches,
-                    key = { patch ->
-                        patch.name + (patch.compatiblePackages?.joinToString { it.packageName.orEmpty() }.orEmpty())
-                    }
-                ) { patch ->
-                    val context = LocalContext.current
-                    val expertBadgeTooltip = stringResource(R.string.sources_patch_expert_badge_tooltip)
-                    val accentColor = patchAccentColors[patch.name]
-                        ?.takeIf { it != Color.Unspecified }
-                    PatchItemCard(
-                        patch = patch,
-                        saveStateKey = "bundle_${src.uid}",
-                        onExpertBadgeClick = if (!patch.include) {
-                            { context.toast(expertBadgeTooltip) }
-                        } else null,
-                        accentColor = accentColor,
-                        modifier = Modifier.animateItem(
-                            fadeInSpec = tween(MorpheDefaults.ANIMATION_DURATION),
-                            fadeOutSpec = tween(MorpheDefaults.ANIMATION_DURATION_SHORT),
-                            placementSpec = spring(stiffness = 400f, dampingRatio = 0.8f)
+                    // Filtered patches list
+                    items(
+                        filteredPatches,
+                        key = { patch ->
+                            patch.name + (patch.compatiblePackages?.joinToString { it.packageName.orEmpty() }.orEmpty())
+                        }
+                    ) { patch ->
+                        val context = LocalContext.current
+                        val expertBadgeTooltip = stringResource(R.string.sources_patch_expert_badge_tooltip)
+                        val accentColor = patchAccentColors[patch.name]
+                            ?.takeIf { it != Color.Unspecified }
+                        PatchItemCard(
+                            patch = patch,
+                            saveStateKey = "bundle_${src.uid}",
+                            onExpertBadgeClick = if (!patch.include) {
+                                { context.toast(expertBadgeTooltip) }
+                            } else null,
+                            accentColor = accentColor,
+                            modifier = Modifier.animateItem(
+                                fadeInSpec = tween(MorpheDefaults.ANIMATION_DURATION),
+                                fadeOutSpec = tween(MorpheDefaults.ANIMATION_DURATION_SHORT),
+                                placementSpec = spring(stiffness = 400f, dampingRatio = 0.8f)
+                            )
                         )
-                    )
+                    }
                 }
+
+                ScrollToTopButton(listState = listState)
             }
         }
     }
@@ -1326,30 +1333,38 @@ private fun BundleChangelogContent(
                     )
                 } else {
                     val textColor = LocalDialogTextColor.current
-                    LazyColumn(modifier = Modifier.fillMaxWidth()) {
-                        itemsIndexed(current.entries) { index, entry ->
-                            if (index > 0) {
-                                HorizontalDivider(
-                                    modifier = Modifier.padding(
-                                        top = MorpheDefaults.ContentPaddingSmall,
-                                        bottom = MorpheDefaults.ContentPadding
-                                    ),
-                                    color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.4f)
+                    val listState = rememberLazyListState()
+                    Box(modifier = Modifier.fillMaxWidth()) {
+                        LazyColumn(
+                            state = listState,
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            itemsIndexed(current.entries) { index, entry ->
+                                if (index > 0) {
+                                    HorizontalDivider(
+                                        modifier = Modifier.padding(
+                                            top = MorpheDefaults.ContentPaddingSmall,
+                                            bottom = MorpheDefaults.ContentPadding
+                                        ),
+                                        color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.4f)
+                                    )
+                                }
+                                ChangelogEntrySection(
+                                    entry = entry,
+                                    headerIcon = Icons.Outlined.History,
+                                    textColor = textColor,
+                                    precomputedMarkdown = current.parsedMarkdown.getOrNull(index)
                                 )
                             }
-                            ChangelogEntrySection(
-                                entry = entry,
-                                headerIcon = Icons.Outlined.History,
-                                textColor = textColor,
-                                precomputedMarkdown = current.parsedMarkdown.getOrNull(index)
+                            changelogOlderItems(
+                                entries = (olderState as? OlderBundleState.Loaded)?.entries,
+                                isLoading = olderState is OlderBundleState.Loading,
+                                onExpand = onExpandOlder,
+                                textColor = textColor
                             )
                         }
-                        changelogOlderItems(
-                            entries = (olderState as? OlderBundleState.Loaded)?.entries,
-                            isLoading = olderState is OlderBundleState.Loading,
-                            onExpand = onExpandOlder,
-                            textColor = textColor
-                        )
+
+                        ScrollToTopButton(listState = listState)
                     }
                 }
             }
