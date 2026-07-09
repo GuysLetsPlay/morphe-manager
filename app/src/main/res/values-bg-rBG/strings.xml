@@ -28,6 +28,14 @@
     <string name="home_update_success_subtitle">Вашите източници са актуални</string>
     <string name="home_sources_are_loading">Зареждане на източниците, моля изчакайте…</string>
     <string name="home_search_apps">Търсене на приложения</string>
+    <string name="home_app_sort_title">Сортиране на приложения</string>
+    <string name="home_app_sort_manual_description">Натиснете и задръжте приложение, след което докоснете бутона за пренареждане</string>
+    <string name="home_app_sort_recommended">Препоръчителен ред</string>
+    <string name="home_app_sort_recommended_description">Инсталирани и закрепени приложения първо</string>
+    <string name="home_app_sort_name_asc_description">Азбучен ред, от А до Я</string>
+    <string name="home_app_sort_name_desc_description">Обратно по азбучен ред, от Я до А</string>
+    <string name="home_app_sort_updates_first">Първо актуализации за поправки</string>
+    <string name="home_app_sort_updates_first_description">Приложения с икони за актуализация първо, след това в препоръчителен ред</string>
     <string name="home_no_apps_title">Няма налични приложения</string>
     <string name="home_no_apps_subtitle">Добавете източник на корекция или активирайте съществуващ в %s</string>
     <string name="home_no_apps_search_subtitle">Няма приложения, които отговарят на \"%s\"</string>
@@ -52,7 +60,8 @@
     <!-- Playful exaggeration, making patching feel heroic -->
     <string name="home_greeting_9">Запазваме приложения за самите себе от днес</string>
     <!-- Light sarcasm, casual and tech-savvy humor -->
-    <string name="home_greeting_10">Захранва се от кофеин и добри кръпки</string>
+    <string name="home_greeting_10">Захранва се от кофеин и добри кръпки
+</string>
     <!-- Morning greetings (5:00–11:59) -->
     <string name="home_greeting_morning_1">Събуди се и закърпи</string>
     <string name="home_greeting_morning_2">Добро утро! Приложенията няма сами да се закърпят</string>
@@ -76,9 +85,13 @@
     <string name="home_greeting_super_late_5">Нощни птици и продуктивни</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Източници за поправки</string>
+    <string name="sources_sort_title">Сортиране на източници на поправки</string>
     <string name="sources_sort_manual">Ръчна подредба</string>
     <string name="sources_sort_manual_hint">Натиснете и задръжте източник, за да го пренаредите</string>
     <string name="sources_sort_last_updated">Последна актуализация</string>
+    <string name="sources_sort_last_updated_description">Най-новите актуализации на източници първо</string>
+    <string name="sources_sort_enabled_first">Първо включените</string>
+    <string name="sources_sort_enabled_first_description">Показване на активни източници преди деактивирани източници</string>
     <string name="sources_management_open_in_browser">Отваряне в браузър</string>
     <string name="sources_management_failed_to_open_url">Неуспешно отваряне на URL</string>
     <string name="sources_management_prerelease_toggle">Предварителни пачове</string>
@@ -764,6 +777,7 @@ morphe_header_custom_dark.png
     <string name="file_picker_sort_size_asc">Размер (от най-малък към най-голям)</string>
     <string name="file_picker_sort_date_desc">Дата (най-нова към най-стара)</string>
     <string name="file_picker_sort_date_asc">Дата (най-стара към най-нова)</string>
+    <string name="file_picker_show_hidden_files">Покажи скрити файлове</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">Относно</string>
     <string name="settings_system_share_website">Споделяне на уебсайт</string>

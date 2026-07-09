@@ -28,6 +28,14 @@
     <string name="home_update_success_subtitle">Vos sources sont à jour</string>
     <string name="home_sources_are_loading">Les sources sont en cours de chargement, veuillez patienter…</string>
     <string name="home_search_apps">Rechercher des applications</string>
+    <string name="home_app_sort_title">Trier les applications</string>
+    <string name="home_app_sort_manual_description">Appuyez longuement sur une application, puis appuyez sur le bouton de réorganisation</string>
+    <string name="home_app_sort_recommended">Ordre recommandé</string>
+    <string name="home_app_sort_recommended_description">Applications installées et épinglées en premier</string>
+    <string name="home_app_sort_name_asc_description">Alphabétique, de A à Z</string>
+    <string name="home_app_sort_name_desc_description">Tri alphabétique inversé, de Z à A</string>
+    <string name="home_app_sort_updates_first">Mises à jour des correctifs en premier</string>
+    <string name="home_app_sort_updates_first_description">Applications avec badges de mise à jour en premier, puis par ordre recommandé</string>
     <string name="home_no_apps_title">Aucune application disponible</string>
     <string name="home_no_apps_subtitle">Ajoutez une source de patchs ou activez-en une existante dans %s</string>
     <string name="home_no_apps_search_subtitle">Aucune application ne correspond à \"%s\"</string>
@@ -76,9 +84,13 @@
     <string name="home_greeting_super_late_5">Nocturne et productif</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Sources de patchs</string>
+    <string name="sources_sort_title">Trier les sources de correctifs</string>
     <string name="sources_sort_manual">Ordre manuel</string>
     <string name="sources_sort_manual_hint">Appuyez longuement sur une source pour la réorganiser</string>
     <string name="sources_sort_last_updated">Dernière mise à jour</string>
+    <string name="sources_sort_last_updated_description">Mises à jour des sources les plus récentes en premier</string>
+    <string name="sources_sort_enabled_first">Activé en premier</string>
+    <string name="sources_sort_enabled_first_description">Afficher les sources actives avant les sources désactivées</string>
     <string name="sources_management_open_in_browser">Ouvrir dans le navigateur</string>
     <string name="sources_management_failed_to_open_url">Échec de l\'ouverture de l\'URL</string>
     <string name="sources_management_prerelease_toggle">Préversion de patchs</string>
@@ -120,9 +132,11 @@
     <string name="sources_download_fail_named">\'%s\' n\'a pas pu être mis à jour. Vérifiez votre connexion internet et réessayez</string>
     <string name="sources_download_endpoint_not_found">\'%s\' : métadonnées de patch introuvables</string>
     <string name="sources_patch_expert_badge">Expert</string>
-    <string name="sources_patch_expert_badge_tooltip">Activer le mode Expert dans les Paramètres pour inclure ce patch manuellement</string>
+    <string name="sources_patch_expert_badge_tooltip">Activer le mode Expert dans les Paramètres pour inclure ce patch manuellement
+</string>
     <!-- Home Screen - Dialog 1: APK Availability -->
-    <string name="home_apk_availability_dialog_title">Besoin d’aide pour trouver un APK d\'origine non patché ?</string>
+    <string name="home_apk_availability_dialog_title">Besoin d’aide pour trouver un APK d\'origine non patché ?
+</string>
     <string name="home_apk_availability_dialog_simple">Pour patcher &lt;b&gt;%s&lt;/b&gt;, vous avez besoin de la version APK non patchée :</string>
     <string name="home_apk_availability_dialog_expert">Pour patcher &lt;b&gt;%s&lt;/b&gt;, vous avez besoin d’un APK non patché des versions :</string>
     <string name="home_apk_availability_recommended_label">Recommandé</string>
@@ -219,7 +233,8 @@ Pour de meilleurs résultats, cette application recommande de patcher un &lt;b&g
     <string name="home_outdated_patches_dialog_warning">Appliquer des patchs obsolètes peut entraîner une application défectueuse</string>
     <string name="home_outdated_patches_dialog_update_and_patch">Mise à jour &amp; patch</string>
     <string name="home_low_disk_space_dialog_title">Espace libre faible</string>
-    <string name="home_low_disk_space_dialog_message">Seulement %1$.2f Go d\'espace de stockage libre disponible. Le patchage nécessite au moins %2$.2f Go d\'espace libre pour fonctionner correctement</string>
+    <string name="home_low_disk_space_dialog_message">Seulement %1$.2f Go d\'espace de stockage libre disponible. Le patchage nécessite au moins %2$.2f Go d\'espace libre pour fonctionner correctement
+</string>
     <string name="home_low_disk_space_dialog_warning">Continuer peut entraîner une erreur \"fichier introuvable\" ou un APK corrompu</string>
     <string name="home_simple_bundle_select_title">Sélectionner une source de patchs</string>
     <!-- Patch Options -->
@@ -293,7 +308,8 @@ Zone extérieure (pointillée) : peut être rognée par le masque du lanceur - g
     <string name="home_app_info_patch_update_available">Mise à jour de patch disponible</string>
     <string name="home_app_info_patch_update_available_description">Une version plus récente des patchs est disponible. Repatchez votre application pour bénéficier des dernières améliorations et corrections</string>
     <string name="home_app_info_app_deleted_warning">L\'application a été désinstallée</string>
-    <string name="home_app_info_app_deleted_description">Cette application a été désinstallée en dehors de Morphe. Repatchez-la pour restaurer les fonctionnalités</string>
+    <string name="home_app_info_app_deleted_description">Cette application a été désinstallée en dehors de Morphe. Repatchez-la pour restaurer les fonctionnalités
+</string>
     <string name="home_app_info_apk_size">Taille de l\'APK</string>
     <!-- Home Screen - Root Mode -->
     <string name="root_install_apk_required">Le mode root nécessite que l\'APK d’origine soit installé sur votre appareil avant le patchage</string>
@@ -697,7 +713,8 @@ Les dimensions des images doivent respecter les valeurs suivantes :
     <string name="settings_system_export_manager_settings_fail">Échec de l\'exportation des paramètres de Morphe : %s</string>
     <string name="settings_system_export_manager_settings_success">Paramètres de Morphe exportés</string>
     <string name="settings_system_debug">Débogage</string>
-    <string name="settings_system_export_debug_logs_description">Enregistre les journaux système pour le dépannage</string>
+    <string name="settings_system_export_debug_logs_description">Enregistre les journaux système pour le dépannage
+</string>
     <string name="settings_system_export_debug_logs_export_read_failed">Échec de la lecture des journaux (code de sortie %s)</string>
     <string name="settings_system_export_debug_logs_export_failed">Échec de l\'exportation des journaux </string>
     <string name="settings_system_export_debug_logs_export_success">Journaux exportés</string>
@@ -715,7 +732,8 @@ Les dimensions des images doivent respecter les valeurs suivantes :
     <string name="settings_system_patched_apks_description">Gère les fichiers d\'applications patchées enregistrés</string>
     <string name="settings_system_patched_apks_empty">Aucun APK patchés enregistrés pour l\'instant</string>
     <string name="settings_system_patched_apks_delete_title">Supprimer l\'APK patché ?</string>
-    <string name="settings_system_patched_apks_delete_confirm">Êtes-vous sûr de vouloir supprimer l\'APK patché enregistré pour %s ?</string>
+    <string name="settings_system_patched_apks_delete_confirm">Êtes-vous sûr de vouloir supprimer l\'APK patché enregistré pour %s ?
+</string>
     <string name="settings_system_patched_apks_deleted">L\'APK patché supprimé avec succès</string>
     <string name="settings_system_patched_apks_delete_all_title">Supprimer tous les APK patchés ?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
@@ -765,6 +783,7 @@ Les dimensions des images doivent respecter les valeurs suivantes :
     <string name="file_picker_sort_size_asc">Taille (du plus petit au plus grand)</string>
     <string name="file_picker_sort_date_desc">Date (du plus récent au plus ancien)</string>
     <string name="file_picker_sort_date_asc">Date (du plus ancien au plus récent)</string>
+    <string name="file_picker_show_hidden_files">Afficher les fichiers masqués</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">À propos</string>
     <string name="settings_system_share_website">Partager le site web</string>

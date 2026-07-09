@@ -28,6 +28,14 @@
     <string name="home_update_success_subtitle">Sursele tale sunt actualizate</string>
     <string name="home_sources_are_loading">Se încarcă sursele…</string>
     <string name="home_search_apps">Caută aplicații</string>
+    <string name="home_app_sort_title">Sortați aplicațiile</string>
+    <string name="home_app_sort_manual_description">Apăsați lung pe o aplicație, apoi atingeți butonul de reordonare</string>
+    <string name="home_app_sort_recommended">Ordinare recomandată</string>
+    <string name="home_app_sort_recommended_description">Aplicațiile instalate și fixate primele</string>
+    <string name="home_app_sort_name_asc_description">Alfabetic, de la A la Z</string>
+    <string name="home_app_sort_name_desc_description">În ordine alfabetică inversă, de la Z la A</string>
+    <string name="home_app_sort_updates_first">Actualizări de patch-uri mai întâi</string>
+    <string name="home_app_sort_updates_first_description">Aplicațiile cu badge-uri de actualizare mai întâi, apoi în ordinea recomandată</string>
     <string name="home_no_apps_title">Nicio aplicație disponibilă</string>
     <string name="home_no_apps_subtitle">Adaugă o sursă de patch sau activează una existentă în %s</string>
     <string name="home_no_apps_search_subtitle">Nici o aplicație nu corespunde cu \"%s\"</string>
@@ -76,9 +84,13 @@
     <string name="home_greeting_super_late_5">Nocturn și productiv</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Surse de patch-uri</string>
+    <string name="sources_sort_title">Sortare surse de patch-uri</string>
     <string name="sources_sort_manual">Comandă manuală</string>
     <string name="sources_sort_manual_hint">Țineți apăsat pe o sursă pentru a reordona</string>
     <string name="sources_sort_last_updated">Ultima actualizare</string>
+    <string name="sources_sort_last_updated_description">Actualizări ale surselor cele mai recente mai întâi</string>
+    <string name="sources_sort_enabled_first">Activat mai întâi</string>
+    <string name="sources_sort_enabled_first_description">Afișează sursele active înainte de sursele dezactivate</string>
     <string name="sources_management_open_in_browser">Deschide în browser</string>
     <string name="sources_management_failed_to_open_url">Eroarea la deschiderea URL-ului</string>
     <string name="sources_management_prerelease_toggle">Patch-uri pre-lansare</string>
@@ -764,6 +776,7 @@ Dimensiunile imaginilor trebuie să fie următoarele:
     <string name="file_picker_sort_size_asc">Dimensiune (cea mai mică prima)</string>
     <string name="file_picker_sort_date_desc">Dată (cea mai recentă prima)</string>
     <string name="file_picker_sort_date_asc">Dată (cea mai veche prima)</string>
+    <string name="file_picker_show_hidden_files">Arată fișierele ascunse</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">Despre</string>
     <string name="settings_system_share_website">Partajează website</string>

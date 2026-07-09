@@ -28,6 +28,14 @@
     <string name="home_update_success_subtitle">Napapanahon ang iyong mga mapagkukunan</string>
     <string name="home_sources_are_loading">Naglo-load ang iyong mga mapagkukunan, mangyaring maghintay…</string>
     <string name="home_search_apps">Maghanap ng mga app</string>
+    <string name="home_app_sort_title">Pagbukud-bukurin ang mga app</string>
+    <string name="home_app_sort_manual_description">Pindutin nang matagal ang isang app, pagkatapos ay i-tap ang button na muling ayusin</string>
+    <string name="home_app_sort_recommended">Inirerekomendang bersyon</string>
+    <string name="home_app_sort_recommended_description">Mga naka-install at naka-pin na app muna</string>
+    <string name="home_app_sort_name_asc_description">Alpabetiko, A hanggang Z</string>
+    <string name="home_app_sort_name_desc_description">Pabaliktad na alpabetiko, Z hanggang A</string>
+    <string name="home_app_sort_updates_first">Mga pag-update ng patch muna</string>
+    <string name="home_app_sort_updates_first_description">Mga app na may badge ng pag-update muna, pagkatapos ay inirerekomendang pagkakasunud-sunod</string>
     <string name="home_no_apps_title">Walang available na mga app</string>
     <string name="home_no_apps_subtitle">Magdagdag ng pinagmulan ng patch o paganahin ang isang umiiral na isa sa %s</string>
     <string name="home_no_apps_search_subtitle">Walang app na tumutugma sa \"%s\"</string>
@@ -76,9 +84,13 @@
     <string name="home_greeting_super_late_5">Pang-gabi at produktibo</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">I-patch ang mapagkukunan</string>
+    <string name="sources_sort_title">Idagdag ang mapagkukunan ng patch</string>
     <string name="sources_sort_manual">Manu-manong pagkakasunud-sunod</string>
     <string name="sources_sort_manual_hint">Pindutin nang matagal ang isang pinagmulan upang muling ayusin</string>
     <string name="sources_sort_last_updated">Huling in-update</string>
+    <string name="sources_sort_last_updated_description">Pinakabagong mga pag-update ng mapagkukunan muna</string>
+    <string name="sources_sort_enabled_first">Naka-enable muna</string>
+    <string name="sources_sort_enabled_first_description">Ipakita ang mga aktibong mapagkukunan bago ang mga hindi naka-enable</string>
     <string name="sources_management_open_in_browser">Buksan sa browser</string>
     <string name="sources_management_failed_to_open_url">Nabigong buksan ang URL</string>
     <string name="sources_management_prerelease_toggle">Mga patch na pre-release</string>
@@ -760,6 +772,7 @@ Dapat ang mga sumusunod na sukat ng larawan ay:
     <string name="file_picker_sort_size_asc">Laki (pinakamaliit muna)</string>
     <string name="file_picker_sort_date_desc">Petsa (pinakabago muna)</string>
     <string name="file_picker_sort_date_asc">Petsa (pinakaluma muna)</string>
+    <string name="file_picker_show_hidden_files">Ipakita ang mga nakatagong file</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">Tungkol sa</string>
     <string name="settings_system_share_website">Ibahagi ang website</string>

@@ -28,6 +28,14 @@
     <string name="home_update_success_subtitle">مصادرك محدثة</string>
     <string name="home_sources_are_loading">جارٍ تحميل المصادر، يرجى الانتظار…</string>
     <string name="home_search_apps">البحث عن التطبيقات</string>
+    <string name="home_app_sort_title">ترتيب التطبيقات</string>
+    <string name="home_app_sort_manual_description">اضغط مطولاً على تطبيق، ثم اضغط على زر إعادة الترتيب</string>
+    <string name="home_app_sort_recommended">الترتيب الموصى به</string>
+    <string name="home_app_sort_recommended_description">التطبيقات المثبتة والمثبتة أولاً</string>
+    <string name="home_app_sort_name_asc_description">أبجديًا، من الألف إلى الياء</string>
+    <string name="home_app_sort_name_desc_description">عكس أبجدي، من ي إلى أ</string>
+    <string name="home_app_sort_updates_first">تحديثات التصحيح أولاً</string>
+    <string name="home_app_sort_updates_first_description">تطبيقات بعلامات تحديث أولاً، ثم بالترتيب الموصى به</string>
     <string name="home_no_apps_title">لا توجد تطبيقات متاحة</string>
     <string name="home_no_apps_subtitle">أضِف مصدرًا للتعديل أو قم بتمكين مصدر موجود في %s</string>
     <string name="home_no_apps_search_subtitle">لا يوجد تطبيقات تطابق \"%s\"</string>
@@ -76,9 +84,13 @@
     <string name="home_greeting_super_late_5">ليلي ومنتج</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">مصادر التعديل</string>
+    <string name="sources_sort_title">فرز مصادر التصحيح</string>
     <string name="sources_sort_manual">ترتيب يدوي</string>
     <string name="sources_sort_manual_hint">اضغط مطولًا على مصدر لإعادة الترتيب</string>
     <string name="sources_sort_last_updated">آخر تحديث</string>
+    <string name="sources_sort_last_updated_description">أحدث تحديثات المصادر أولاً</string>
+    <string name="sources_sort_enabled_first">مُمَكّن أولاً</string>
+    <string name="sources_sort_enabled_first_description">إظهار المصادر النشطة قبل المصادر المعطلة</string>
     <string name="sources_management_open_in_browser">فتح في المتصفح</string>
     <string name="sources_management_failed_to_open_url">فشل في فتح الرابط</string>
     <string name="sources_management_prerelease_toggle">إصدارات ما قبل الإطلاق</string>
@@ -766,6 +778,7 @@ morphe_adaptive_monochrome_custom.xml
     <string name="file_picker_sort_size_asc">الحجم (الأصغر أولًا)</string>
     <string name="file_picker_sort_date_desc">التاريخ (الأحدث أولًا)</string>
     <string name="file_picker_sort_date_asc">التاريخ (الأقدم أولًا)</string>
+    <string name="file_picker_show_hidden_files">إظهار الملفات المخفية</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">لمحة</string>
     <string name="settings_system_share_website">مشاركة الموقع الإلكتروني</string>

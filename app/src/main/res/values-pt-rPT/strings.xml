@@ -28,6 +28,14 @@
     <string name="home_update_success_subtitle">As tuas fontes estão atualizadas</string>
     <string name="home_sources_are_loading">A carregar fontes, por favor aguarda…</string>
     <string name="home_search_apps">Pesquisar aplicações</string>
+    <string name="home_app_sort_title">Ordenar aplicativos</string>
+    <string name="home_app_sort_manual_description">Pressione e segure um aplicativo, depois toque no botão de reordenar</string>
+    <string name="home_app_sort_recommended">Ordem recomendada</string>
+    <string name="home_app_sort_recommended_description">Aplicativos instalados e fixados primeiro</string>
+    <string name="home_app_sort_name_asc_description">Alfabética, de A a Z</string>
+    <string name="home_app_sort_name_desc_description">Ordem alfabética inversa, de Z a A</string>
+    <string name="home_app_sort_updates_first">Atualizações de patch primeiro</string>
+    <string name="home_app_sort_updates_first_description">Aplicativos com emblemas de atualização primeiro, depois na ordem recomendada</string>
     <string name="home_no_apps_title">Nenhuma aplicação disponível</string>
     <string name="home_no_apps_subtitle">Adiciona uma fonte de modificações ou ativa uma já existente em %s</string>
     <string name="home_no_apps_search_subtitle">Nenhuma aplicação corresponde a \"%s\"</string>
@@ -76,9 +84,13 @@
     <string name="home_greeting_super_late_5">Noturno e produtivo</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Fontes de modificações</string>
+    <string name="sources_sort_title">Ordenar fontes de patch</string>
     <string name="sources_sort_manual">Ordem manual</string>
     <string name="sources_sort_manual_hint">Mantenha pressionado uma fonte para reorganizar</string>
     <string name="sources_sort_last_updated">Última atualização</string>
+    <string name="sources_sort_last_updated_description">Atualizações de fontes mais recentes primeiro</string>
+    <string name="sources_sort_enabled_first">Habilitados primeiro</string>
+    <string name="sources_sort_enabled_first_description">Mostrar fontes ativas antes das desabilitadas</string>
     <string name="sources_management_open_in_browser">Abrir links no navegador</string>
     <string name="sources_management_failed_to_open_url">Erro ao abrir URL</string>
     <string name="sources_management_prerelease_toggle">Modificações pré-lançamento</string>
@@ -764,6 +776,7 @@ As dimensões das imagens devem ser as seguintes:
     <string name="file_picker_sort_size_asc">Tamanho (menor primeiro)</string>
     <string name="file_picker_sort_date_desc">Data (mais recente primeiro)</string>
     <string name="file_picker_sort_date_asc">Data (mais antiga primeiro)</string>
+    <string name="file_picker_show_hidden_files">Mostrar ficheiros ocultos</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">Acerca de</string>
     <string name="settings_system_share_website">Partilhar site</string>

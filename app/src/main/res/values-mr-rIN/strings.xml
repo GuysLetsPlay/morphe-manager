@@ -28,6 +28,14 @@
     <string name="home_update_success_subtitle">तुमची मुळे आधीच नवीन आहेत.</string>
     <string name="home_sources_are_loading">मुळे लोड होत आहेत, कृपया वाट पहा</string>
     <string name="home_search_apps">ॲप्स शोधा</string>
+    <string name="home_app_sort_title">ॲप्स सॉर्ट करा</string>
+    <string name="home_app_sort_manual_description">एका ॲपला लांब दाबा, मग पुन्हा क्रमवारी लावा बटणावर टॅप करा</string>
+    <string name="home_app_sort_recommended">सुचवलेला क्रम</string>
+    <string name="home_app_sort_recommended_description">इंस्टॉल केलेले आणि पिन केलेले ॲप्स प्रथम</string>
+    <string name="home_app_sort_name_asc_description">वर्णक्रमानुसार, A ते Z</string>
+    <string name="home_app_sort_name_desc_description">अक्षरांनुसार उतरत्या क्रमाने, Z ते A</string>
+    <string name="home_app_sort_updates_first">पॅच अपडेट्स प्रथम</string>
+    <string name="home_app_sort_updates_first_description">अपडेट बॅज असलेले ॲप्स प्रथम, नंतर शिफारस केलेले क्रमाने</string>
     <string name="home_no_apps_title">ॲप्स उपलब्ध नाहीत</string>
     <string name="home_no_apps_subtitle">पॅच स्रोत जोडा किंवा %s मध्ये বিদ্যমান सक्षम करा</string>
     <string name="home_no_apps_search_subtitle">\"%s\" शी जुळणारे कोणतेही ॲप्स नाहीत</string>
@@ -76,9 +84,13 @@
     <string name="home_greeting_super_late_5">रात्रीचे आणि productive</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">सुधारणांची मुळे</string>
+    <string name="sources_sort_title">सुधारणा स्रोत क्रमवारी लावा</string>
     <string name="sources_sort_manual">मॅन्युअल ऑर्डर</string>
     <string name="sources_sort_manual_hint">पुन्हा क्रमवारी लावण्यासाठी स्रोतावर दाबून ठेवा</string>
     <string name="sources_sort_last_updated">शेवटची अपडेट</string>
+    <string name="sources_sort_last_updated_description">नवीनतम स्रोत अद्यतने प्रथम</string>
+    <string name="sources_sort_enabled_first">सक्षम केलेले प्रथम</string>
+    <string name="sources_sort_enabled_first_description">अक्षम स्त्रोतांपूर्वी सक्रिय स्रोत दर्शवा</string>
     <string name="sources_management_open_in_browser">लिंक बाहेर नेटवर उघडा</string>
     <string name="sources_management_failed_to_open_url">लिंक उघडता आली नाही</string>
     <string name="sources_management_prerelease_toggle">प्री-रिलीझ पॅचेस</string>
@@ -763,6 +775,7 @@ morphe_header_custom_dark.png
     <string name="file_picker_sort_size_asc">आकार (सर्वात लहान प्रथम)</string>
     <string name="file_picker_sort_date_desc">दिनांक (नवीनतम प्रथम)</string>
     <string name="file_picker_sort_date_asc">दिनांक (जुने प्रथम)</string>
+    <string name="file_picker_show_hidden_files">लपवलेल्या फाईल्स दाखवा</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">बद्दल</string>
     <string name="settings_system_share_website">वेबसाइट शेअर करा</string>

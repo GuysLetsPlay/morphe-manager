@@ -28,6 +28,11 @@
     <string name="home_update_success_subtitle">แหล่งทีมาของคุณเป็นเวอร์ชันล่าสุดแล้ว</string>
     <string name="home_sources_are_loading">กำลังโหลดแหล่งที่มา กรุณารอสักครู่…</string>
     <string name="home_search_apps">ค้นหาแอป</string>
+    <string name="home_app_sort_title">จัดเรียงแอป</string>
+    <string name="home_app_sort_manual_description">แตะแอปค้างไว้ แล้วแตะปุ่มจัดเรียงใหม่</string>
+    <string name="home_app_sort_recommended">เรียงตามที่แนะนำ</string>
+    <string name="home_app_sort_recommended_description">แอปที่ติดตั้งและตรึงไว้ก่อน</string>
+    <string name="home_app_sort_name_asc_description">ตามลำดับตัวอักษร A ถึง Z</string>
     <string name="home_no_apps_title">ไม่มีแอปที่ใช้ได้</string>
     <string name="home_no_apps_subtitle">เพิ่มแหล่งที่มาของแพตช์หรือเปิดใช้งานแหล่งที่มาที่มีอยู่แล้วใน %s</string>
     <string name="home_no_apps_search_subtitle">ไม่พบแอปที่ตรงกับ \"%s\"</string>
@@ -764,6 +769,7 @@ morphe_header_custom_dark.png
     <string name="file_picker_sort_size_asc">ขนาด (เล็กที่สุดก่อน)</string>
     <string name="file_picker_sort_date_desc">วันที่ (ใหม่ล่าสุดก่อน)</string>
     <string name="file_picker_sort_date_asc">วันที่ (เก่าแก่ที่สุดก่อน)</string>
+    <string name="file_picker_show_hidden_files">แสดงไฟล์ที่ซ่อนไว้</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">เกี่ยวกับ</string>
     <string name="settings_system_share_website">ไม่พบผลลัพธ์สำหรับ</string>

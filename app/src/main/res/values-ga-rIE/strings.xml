@@ -28,6 +28,14 @@
     <string name="home_update_success_subtitle">Tá do foinsí suas chun dáta</string>
     <string name="home_sources_are_loading">Tá na foinsí ag lódáil, fan le do thoil…</string>
     <string name="home_search_apps">Cuardaigh aipeanna</string>
+    <string name="home_app_sort_title">Aipeanna a shórtáil</string>
+    <string name="home_app_sort_manual_description">Coinnigh app faoi bhrú ar fhad, ansin tapa ar an gcnaip cóimeála</string>
+    <string name="home_app_sort_recommended">Ordú molta</string>
+    <string name="home_app_sort_recommended_description">Aipeanna suiteáilte agus greanta ar dtús</string>
+    <string name="home_app_sort_name_asc_description">Aibítir, ó A go Z</string>
+    <string name="home_app_sort_name_desc_description">Ailmhnéalfabhair comhthairis, ó Z go A</string>
+    <string name="home_app_sort_updates_first">Nuashonruithe paiste ar dtús</string>
+    <string name="home_app_sort_updates_first_description">Aipeanna le badgeanna nuashonraithe ar dtús, ansin de réir an ordú molta</string>
     <string name="home_no_apps_title">Níl aon aipeanna ar fáil</string>
     <string name="home_no_apps_subtitle">Cuir foinse paiste leis nó cumasaigh ceann atá ann cheana féin i %s</string>
     <string name="home_no_apps_search_subtitle">Níl aon aip ag teacht le \"%s\"</string>
@@ -76,9 +84,13 @@
     <string name="home_greeting_super_late_5">Oícheanta agus táirgiúil</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Foinsí paiste</string>
+    <string name="sources_sort_title">Roghnaigh foinse paiste</string>
     <string name="sources_sort_manual">Ordú láimhe</string>
     <string name="sources_sort_manual_hint">Brúigh suas le foinse le hathordú</string>
     <string name="sources_sort_last_updated">Nuashonraithe is déanaí</string>
+    <string name="sources_sort_last_updated_description">Nuashonruithe foinse is déanaí ar dtús</string>
+    <string name="sources_sort_enabled_first">Cumasaithe ar dtús</string>
+    <string name="sources_sort_enabled_first_description">Taispeáin foinseacha gníomhacha roimh foinseacha dí-chumasaithe</string>
     <string name="sources_management_open_in_browser">Oscail sa bhrabhsálaí</string>
     <string name="sources_management_failed_to_open_url">Teip ar URL a oscailt</string>
     <string name="sources_management_prerelease_toggle">Paistí réamh-eisiúna</string>
@@ -701,12 +713,12 @@ Ní mór toisí na híomhá a bheith mar seo a leanas:
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">Comhaid &amp; stóras</string>
     <string name="settings_system_apks_size">Méid iomlán: %s</string>
-    <string name="settings_system_apks_delete_all_confirm">Scriosfaidh sé seo go buan na comhaid APK sábháilte a thaispeántar anseo</string>
-    <string name="settings_system_apks_delete_selected_title">Scrios APKanna roghnaithe?</string>
-    <string name="settings_system_apks_delete_selected_confirm">Scriosfaidh sé seo go buan na comhaid APK roghnaithe</string>
-    <string name="settings_system_apks_deleted_all">Scriosadh APKanna go rathúil</string>
-    <string name="settings_system_apks_export_zip_success">APKanna roghnaithe onnmhaithe</string>
-    <string name="settings_system_apks_export_zip_failed">Theip ar APKanna roghnaithe a onnmháil</string>
+    <string name="settings_system_apks_delete_all_confirm">Scriosfaidh sé seo na comhaid APK sábháilte a thaispeántar anseo go buan</string>
+    <string name="settings_system_apks_delete_selected_title">Scrios na APKanna roghnaithe?</string>
+    <string name="settings_system_apks_delete_selected_confirm">Scriosfaidh sé seo na comhaid APK roghnaithe go buan</string>
+    <string name="settings_system_apks_deleted_all">APKanna scriosta go rathúil</string>
+    <string name="settings_system_apks_export_zip_success">APKanna roghnaithe easpórtáilte</string>
+    <string name="settings_system_apks_export_zip_failed">Theip ar na APKanna roghnaithe a onnmhairiú</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">APKanna paisteáilte</string>
     <string name="settings_system_patched_apks_description">Bainistíonn comhaid iarratais phaisteáilte sábháilte</string>
@@ -722,13 +734,13 @@ Ní mór toisí na híomhá a bheith mar seo a leanas:
     <string name="settings_system_original_apks_deleted">Scriosadh an APK bunaidh go rathúil</string>
     <string name="settings_system_original_apks_delete_title">Scrios an APK bunaidh?</string>
     <string name="settings_system_original_apks_delete_confirm">Scrios an APK bunaidh le haghaidh %s? Ní bheidh tú in ann athphaisteáil gan APK nua a sholáthar.</string>
-    <string name="settings_system_original_apks_delete_all_title">Scrios gach APK bunaidh?</string>
+    <string name="settings_system_original_apks_delete_all_title">Scrios na APKanna bunaidh go léir?</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">Roghanna paiste</string>
     <string name="settings_system_patch_selections_description">Sábháil roghanna paisteála, coimeádta tar éis díchómhdaigh</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">Athshocraigh gach rogha?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">Athshocraigh roghanna pacáiste?</string>
-    <string name="settings_system_patch_selection_reset_selected_confirm_title">Atosaigh pacáistí roghnaithe?</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">Athshocraigh na pacáistí roghnaithe?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">Athshocraigh an rogha foinse?</string>
     <string name="settings_system_patch_selection_no_saved">Gan aon roghanna paiste sábháilte</string>
     <string name="settings_system_patch_selection_total_summary_format">%1$s trasna %2$s</string>
@@ -762,6 +774,7 @@ Ní mór toisí na híomhá a bheith mar seo a leanas:
     <string name="file_picker_sort_size_asc">Méid (an ceann is lú ar dtús)</string>
     <string name="file_picker_sort_date_desc">Dáta (an ceann is nuaí ar dtús)</string>
     <string name="file_picker_sort_date_asc">Dáta (an ceann is sine ar dtús)</string>
+    <string name="file_picker_show_hidden_files">Taispeáin comhaid fholaithe</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">Maidir</string>
     <string name="settings_system_share_website">Comhroinn suíomh Gréasáin</string>
@@ -801,10 +814,10 @@ Ní mór toisí na híomhá a bheith mar seo a leanas:
     <string name="disable">Díchumasaigh</string>
     <string name="enable">Os comhad</string>
     <string name="loading">Ag lódáil…</string>
-    <string name="loading_older_releases">Eisiúintí níos sine á luchtú…</string>
-    <string name="creating">Cruthaithe…</string>
-    <string name="processing_apk">Próiseáil APK…</string>
-    <string name="exporting_apks">APKanna á onnmháil…</string>
+    <string name="loading_older_releases">Ag lódáil eisiúintí níos sine…</string>
+    <string name="creating">Ag cruthú…</string>
+    <string name="processing_apk">APK á phróiseáil…</string>
+    <string name="exporting_apks">Ag easpórtáil APKanna…</string>
     <string name="not_installed">Gan suiteáil</string>
     <string name="view">Amharc</string>
     <string name="search">Cuardaigh</string>
@@ -827,7 +840,7 @@ Ní mór toisí na híomhá a bheith mar seo a leanas:
     <string name="accessibility_move_up">Bog suas</string>
     <string name="accessibility_move_down">Bog síos</string>
     <string name="accessibility_app_moved_announcement">%1$s bogtha go suíomh %2$d de %3$d</string>
-    <string name="accessibility_scroll_to_top">Scroladh go dtí barr an liosta</string>
+    <string name="accessibility_scroll_to_top">Scrollaigh go barr an liosta</string>
     <string name="rename">Athainmnigh</string>
     <string name="import_">Iompórtáil</string>
     <string name="export">Easpórtáil</string>

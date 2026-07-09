@@ -28,6 +28,14 @@
     <string name="home_update_success_subtitle">Ihre Quellen sind auf dem neuesten Stand</string>
     <string name="home_sources_are_loading"> Quellen werden geladen, bitte warten…</string>
     <string name="home_search_apps">Apps suchen</string>
+    <string name="home_app_sort_title">Apps sortieren</string>
+    <string name="home_app_sort_manual_description">Halten Sie eine App lange gedrückt, und tippen Sie dann auf die Schaltfläche zum Sortieren</string>
+    <string name="home_app_sort_recommended">Empfohlene Reihenfolge</string>
+    <string name="home_app_sort_recommended_description">Installierte und angeheftete Apps zuerst</string>
+    <string name="home_app_sort_name_asc_description">Alphabetisch, A bis Z</string>
+    <string name="home_app_sort_name_desc_description">Umgekehrte alphabetische Reihenfolge, Z bis A</string>
+    <string name="home_app_sort_updates_first">Patches zuerst aktualisieren</string>
+    <string name="home_app_sort_updates_first_description">Apps mit Update-Badges zuerst, dann in empfohlener Reihenfolge</string>
     <string name="home_no_apps_title">Keine Apps verfügbar</string>
     <string name="home_no_apps_subtitle">Eine Patch-Quelle hinzufügen oder eine vorhandene in %s aktivieren</string>
     <string name="home_no_apps_search_subtitle">Keine Apps passen zu \"%s\"</string>
@@ -76,9 +84,13 @@
     <string name="home_greeting_super_late_5">Nachtaktiv und produktiv</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Patch-Quellen</string>
+    <string name="sources_sort_title">Patch-Quellen sortieren</string>
     <string name="sources_sort_manual">Manuelle Reihenfolge</string>
     <string name="sources_sort_manual_hint">Halten Sie eine Quelle gedrückt, um sie neu anzuordnen</string>
     <string name="sources_sort_last_updated">Zuletzt aktualisiert</string>
+    <string name="sources_sort_last_updated_description">Neueste Quellenaktualisierungen zuerst</string>
+    <string name="sources_sort_enabled_first">Aktivierte zuerst</string>
+    <string name="sources_sort_enabled_first_description">Aktive Quellen vor deaktivierten Quellen anzeigen</string>
     <string name="sources_management_open_in_browser">Im Browser öffnen</string>
     <string name="sources_management_failed_to_open_url">Öffnen der URL fehlgeschlagen</string>
     <string name="sources_management_prerelease_toggle">Vorab-Patches</string>
@@ -764,6 +776,7 @@ Die Bildgrößen müssen wie folgt sein:
     <string name="file_picker_sort_size_asc">Größe (kleinste zuerst)</string>
     <string name="file_picker_sort_date_desc">Datum (neueste zuerst)</string>
     <string name="file_picker_sort_date_asc">Datum (älteste zuerst)</string>
+    <string name="file_picker_show_hidden_files">Zeige ausgeblendete Dateien</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">Über</string>
     <string name="settings_system_share_website">Website teilen</string>

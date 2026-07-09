@@ -28,6 +28,14 @@
     <string name="home_update_success_subtitle">Jou oorspronge is opgedateer</string>
     <string name="home_sources_are_loading">Oorsprong word gelaai, wag asseblief…</string>
     <string name="home_search_apps">Soek programme</string>
+    <string name="home_app_sort_title">Sorteer programme</string>
+    <string name="home_app_sort_manual_description">Druk lank op \'n program, en tik dan op die herordeneer knoppie</string>
+    <string name="home_app_sort_recommended">Aanbevole volgorde</string>
+    <string name="home_app_sort_recommended_description">Geïnstalleerde en vasgestelde programme eerste</string>
+    <string name="home_app_sort_name_asc_description">Alfabeties, A tot Z</string>
+    <string name="home_app_sort_name_desc_description">Omgekeerde alfabetiese volgorde, van Z tot A</string>
+    <string name="home_app_sort_updates_first">Eerstens foutopdaterings</string>
+    <string name="home_app_sort_updates_first_description">Eerstens toepassings met opdateringsikone, dan aanbevole volgorde</string>
     <string name="home_no_apps_title">Geen programme beskikbaar nie</string>
     <string name="home_no_apps_subtitle">Voeg \'n verandering oorsprong by of aktiveer \'n bestaande een in %s</string>
     <string name="home_no_apps_search_subtitle">Geen programme gelyk aan \"%s\" nie</string>
@@ -76,9 +84,13 @@
     <string name="home_greeting_super_late_5">Nagtelike en produktief</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Verandering oorspronge</string>
+    <string name="sources_sort_title">Sorteer foutbronne</string>
     <string name="sources_sort_manual">Handmatige volgorde</string>
     <string name="sources_sort_manual_hint">Druk lank op \'n bron om te herschik</string>
     <string name="sources_sort_last_updated">Laaste opgedateer</string>
+    <string name="sources_sort_last_updated_description">Nuutste bronopdaterings eerste</string>
+    <string name="sources_sort_enabled_first">Eerstens geaktiveer</string>
+    <string name="sources_sort_enabled_first_description">Wys aktiewe bronne voor gedeaktiveerde bronne</string>
     <string name="sources_management_open_in_browser">Maak oop in blaaier</string>
     <string name="sources_management_failed_to_open_url">Mislukking om URL oop te maak</string>
     <string name="sources_management_prerelease_toggle">Voorvrystellings-veranderinge</string>
@@ -764,6 +776,7 @@ Die beeld afmetings moet soos volg wees:
     <string name="file_picker_sort_size_asc">Grootte (kleinste eerst)</string>
     <string name="file_picker_sort_date_desc">Datum (nuutste eerst)</string>
     <string name="file_picker_sort_date_asc">Datum (oudste eerst)</string>
+    <string name="file_picker_show_hidden_files">Wys versteekte lêers</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">Oor</string>
     <string name="settings_system_share_website">Deel webtuiste</string>

@@ -28,6 +28,14 @@
     <string name="home_update_success_subtitle">A forrásaid naprakészek</string>
     <string name="home_sources_are_loading">Források betöltése...</string>
     <string name="home_search_apps">Alkalmazások keresése</string>
+    <string name="home_app_sort_title">Alkalmazások rendezése</string>
+    <string name="home_app_sort_manual_description">Nyomja meg hosszan az alkalmazást, majd érintse meg a sorrend módosítása gombot</string>
+    <string name="home_app_sort_recommended">Ajánlott sorrend</string>
+    <string name="home_app_sort_recommended_description">Először a telepített és rögzített alkalmazások</string>
+    <string name="home_app_sort_name_asc_description">Betűrendben, A-tól Z-ig</string>
+    <string name="home_app_sort_name_desc_description">Fordított betűrend, Z-től A-ig</string>
+    <string name="home_app_sort_updates_first">Először a javítások</string>
+    <string name="home_app_sort_updates_first_description">Az alkalmazások frissítési jelzéssel először, majd a javasolt sorrendben</string>
     <string name="home_no_apps_title">Nincsenek elérhető alkalmazások</string>
     <string name="home_no_apps_subtitle">Adj hozzá egy módosításforrást, vagy kapcsolj be egyet itt: %s</string>
     <string name="home_no_apps_search_subtitle">Nincs találat erre: „%s”</string>
@@ -76,9 +84,13 @@
     <string name="home_greeting_super_late_5">Éjszakai és produktív</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Módosításforrások</string>
+    <string name="sources_sort_title">Javításforrások rendezése</string>
     <string name="sources_sort_manual">Kézi sorrend</string>
     <string name="sources_sort_manual_hint">Nyomja meg hosszan egy forrást a sorrend megváltoztatásához.</string>
     <string name="sources_sort_last_updated">Utolsó frissítés</string>
+    <string name="sources_sort_last_updated_description">A legújabb forrásfrissítések először</string>
+    <string name="sources_sort_enabled_first">Először az engedélyezettek</string>
+    <string name="sources_sort_enabled_first_description">Az aktív forrásokat mutassa először a letiltott forrásokkal szemben</string>
     <string name="sources_management_open_in_browser">Megnyitás böngészőben</string>
     <string name="sources_management_failed_to_open_url">Hiba történt az URL megnyitásakor</string>
     <string name="sources_management_prerelease_toggle">Kiadás előtti javítások</string>
@@ -765,6 +777,7 @@ Forrás: #%2$s</string>
     <string name="file_picker_sort_size_asc">Méret (a legkisebbtől kezdve)</string>
     <string name="file_picker_sort_date_desc">Dátum (a legújabbaktól kezdve)</string>
     <string name="file_picker_sort_date_asc">Dátum (a legrégebbtől kezdve)</string>
+    <string name="file_picker_show_hidden_files">Rejtett fájlok megjelenítése</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">Névjegy</string>
     <string name="settings_system_share_website">Webhely megosztása</string>

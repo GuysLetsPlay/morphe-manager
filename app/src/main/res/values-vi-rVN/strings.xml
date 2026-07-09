@@ -28,6 +28,11 @@
     <string name="home_update_success_subtitle">Đã cập nhật tất cả nguồn lên mới nhất</string>
     <string name="home_sources_are_loading">Đang tải nguồn, vui lòng chờ…</string>
     <string name="home_search_apps">Tìm ứng dụng</string>
+    <string name="home_app_sort_title">Sắp xếp ứng dụng</string>
+    <string name="home_app_sort_manual_description">Nhấn và giữ một ứng dụng, sau đó chạm vào nút sắp xếp lại</string>
+    <string name="home_app_sort_recommended">Thứ tự đề xuất</string>
+    <string name="home_app_sort_recommended_description">Ưu tiên ứng dụng đã cài đặt và ghim</string>
+    <string name="home_app_sort_name_asc_description">Theo thứ tự bảng chữ cái, A đến Z</string>
     <string name="home_no_apps_title">Không có ứng dụng nào có sẵn</string>
     <string name="home_no_apps_subtitle">Thêm nguồn vá mới hoặc bật nguồn có sẵn trong %s</string>
     <string name="home_no_apps_search_subtitle">Không có ứng dụng nào khớp với \"%s\"</string>
@@ -765,6 +770,7 @@ Kích thước hình ảnh yêu cầu:
     <string name="file_picker_sort_size_asc">Kích thước (nhỏ nhất trước)</string>
     <string name="file_picker_sort_date_desc">Ngày (mới nhất trước)</string>
     <string name="file_picker_sort_date_asc">Ngày (cũ nhất trước)</string>
+    <string name="file_picker_show_hidden_files">Hiển thị tệp ẩn</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">Giới thiệu</string>
     <string name="settings_system_share_website">Chia sẻ</string>
@@ -830,7 +836,7 @@ Kích thước hình ảnh yêu cầu:
     <string name="accessibility_move_up">Di chuyển lên</string>
     <string name="accessibility_move_down">Di chuyển xuống</string>
     <string name="accessibility_app_moved_announcement">%1$s đã được di chuyển đến vị trí %2$d trong %3$d</string>
-    <string name="accessibility_scroll_to_top">Cuộn đến đầu danh sách</string>
+    <string name="accessibility_scroll_to_top">Về đầu danh sách</string>
     <string name="rename">Đổi tên</string>
     <string name="import_">Nhập</string>
     <string name="export">Xuất</string>

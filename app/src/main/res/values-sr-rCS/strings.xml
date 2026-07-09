@@ -28,6 +28,14 @@
     <string name="home_update_success_subtitle">Vaši izvori su ažurirani</string>
     <string name="home_sources_are_loading">Izvori se učitavaju, molimo sačekajte…</string>
     <string name="home_search_apps">Pretraživanje aplikacija</string>
+    <string name="home_app_sort_title">Sortiraj aplikacije</string>
+    <string name="home_app_sort_manual_description">Pritisnite i zadržite aplikaciju, zatim dodirnite dugme za promenu reda</string>
+    <string name="home_app_sort_recommended">Preporučeni redosled</string>
+    <string name="home_app_sort_recommended_description">Instalirane i pričvršćene aplikacije prvo</string>
+    <string name="home_app_sort_name_asc_description">Abecedni redosled, A do Š</string>
+    <string name="home_app_sort_name_desc_description">Obrnuti abecedni redosled, od Z do A</string>
+    <string name="home_app_sort_updates_first">Prvo ažuriranja zakrpa</string>
+    <string name="home_app_sort_updates_first_description">Aplikacije sa oznakama ažuriranja prvo, pa preporučeni redosled</string>
     <string name="home_no_apps_title">Nema dostupnih aplikacija</string>
     <string name="home_no_apps_subtitle">Dodajte izvor aplikacije ili omogućite postojeći u %s</string>
     <string name="home_no_apps_search_subtitle">Nijedna aplikacija ne odgovara na \"%s\"</string>
@@ -76,9 +84,13 @@
     <string name="home_greeting_super_late_5">Noćni i produktivan</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Izvori zakrpe</string>
+    <string name="sources_sort_title">Sortiraj izvore zakrpa</string>
     <string name="sources_sort_manual">Ručna postavka</string>
     <string name="sources_sort_manual_hint">Pritisnite i zadržite izvor da biste ga preuredili</string>
     <string name="sources_sort_last_updated">Zadnje ažuriranje</string>
+    <string name="sources_sort_last_updated_description">Prvo najnovija ažuriranja izvora</string>
+    <string name="sources_sort_enabled_first">Omogućeni prvo</string>
+    <string name="sources_sort_enabled_first_description">Prikaži aktivne izvore pre onemogućenih izvora</string>
     <string name="sources_management_open_in_browser">Otvori u pregledaču</string>
     <string name="sources_management_failed_to_open_url">Otvaranje URL-a nije uspelo</string>
     <string name="sources_management_prerelease_toggle">Zakrpe u predprodukciji</string>
@@ -748,6 +760,7 @@ Opciono, putanja sadrži ikonu obaveštenja u jednom od sledećih formata:
     <string name="file_picker_sort_size_asc">Veličina (od najmanje)</string>
     <string name="file_picker_sort_date_desc">Datum (najnovije prvo)</string>
     <string name="file_picker_sort_date_asc">Datum (najstarije prvo)</string>
+    <string name="file_picker_show_hidden_files">Prikaži skrivene datoteke</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">O programu</string>
     <string name="settings_system_share_website">Podeli mrežni-sajt</string>

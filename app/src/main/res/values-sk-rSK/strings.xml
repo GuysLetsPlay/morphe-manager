@@ -28,6 +28,14 @@
     <string name="home_update_success_subtitle">Vaše zdroje sú aktuálne</string>
     <string name="home_sources_are_loading">Zdroje sa načítavajú, prosím počkajte…</string>
     <string name="home_search_apps">Vyhľadávanie aplikácií</string>
+    <string name="home_app_sort_title">Zoradiť aplikácie</string>
+    <string name="home_app_sort_manual_description">Dlhým stlačením aplikácie a potom klepnutím na tlačidlo zoradiť</string>
+    <string name="home_app_sort_recommended">Odporúčaná verzia</string>
+    <string name="home_app_sort_recommended_description">Najprv nainštalované a pripnuté aplikácie</string>
+    <string name="home_app_sort_name_asc_description">Abecedne, od A po Z</string>
+    <string name="home_app_sort_name_desc_description">Abecedne zotriedené, od Z po A</string>
+    <string name="home_app_sort_updates_first">Najprv opravy</string>
+    <string name="home_app_sort_updates_first_description">Aplikácie so zobrazenými aktualizáciami najprv, potom v odporúčanej poradí</string>
     <string name="home_no_apps_title">Nedostupné žiadne aplikácie</string>
     <string name="home_no_apps_subtitle">Pridajte zdroj záplaty alebo povoľte existujúci v %s</string>
     <string name="home_no_apps_search_subtitle">Žiadne aplikácie sa nezhodujú s \"%s\"</string>
@@ -76,9 +84,13 @@
     <string name="home_greeting_super_late_5">Nočný a produktívny</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Zdroje záplat</string>
+    <string name="sources_sort_title">Zoradiť zdroje záplat</string>
     <string name="sources_sort_manual">Manuálne zoradenie</string>
     <string name="sources_sort_manual_hint">Dlhým stlačením položky zdroja ju môžete presunúť</string>
     <string name="sources_sort_last_updated">Posledná aktualizácia</string>
+    <string name="sources_sort_last_updated_description">Najnovšie aktualizácie zdrojov najprv</string>
+    <string name="sources_sort_enabled_first">Najprv povolené</string>
+    <string name="sources_sort_enabled_first_description">Zobraziť aktívne zdroje pred zakázanými zdrojmi</string>
     <string name="sources_management_open_in_browser">Otvoriť v prehliadači</string>
     <string name="sources_management_failed_to_open_url">Nepodarilo sa otvoriť URL</string>
     <string name="sources_management_prerelease_toggle">Použiť predbežne vydané záplaty</string>
@@ -764,6 +776,7 @@ Rozmery obrázka musia byť nasledovné:
     <string name="file_picker_sort_size_asc">Veľkosť (najmenšie najprv)</string>
     <string name="file_picker_sort_date_desc">Dátum (najnovšie najprv)</string>
     <string name="file_picker_sort_date_asc">Dátum (najstaršie najprv)</string>
+    <string name="file_picker_show_hidden_files">Zobraziť skryté súbory</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">O aplikácii</string>
     <string name="settings_system_share_website">Zdieľať webstránku</string>

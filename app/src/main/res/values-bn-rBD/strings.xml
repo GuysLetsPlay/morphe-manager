@@ -28,6 +28,14 @@
     <string name="home_update_success_subtitle">আপনার সোর্সগুলি আপ-টু-ডেট আছে</string>
     <string name="home_sources_are_loading">সোর্স লোড হচ্ছে, অনুগ্রহ করে অপেক্ষা করুন…</string>
     <string name="home_search_apps">অ্যাপস অনুসন্ধান করুন</string>
+    <string name="home_app_sort_title">অ্যাপস সাজান</string>
+    <string name="home_app_sort_manual_description">কোনো অ্যাপ দীর্ঘক্ষণ চাপুন, তারপর পুনর্বিন্যাস বোতামে আলতো চাপুন</string>
+    <string name="home_app_sort_recommended">সুপারিশকৃত ক্রম</string>
+    <string name="home_app_sort_recommended_description">ইনস্টল করা এবং পিন করা অ্যাপগুলি প্রথমে</string>
+    <string name="home_app_sort_name_asc_description">বর্ণানুক্রমিকভাবে, A থেকে Z</string>
+    <string name="home_app_sort_name_desc_description">বিপরীত বর্ণানুক্রমিক, Z থেকে A</string>
+    <string name="home_app_sort_updates_first">প্রথমে প্যাচ আপডেট</string>
+    <string name="home_app_sort_updates_first_description">আপডেট ব্যাজ সহ অ্যাপ্লিকেশনগুলি প্রথমে, তারপর প্রস্তাবিত ক্রম</string>
     <string name="home_no_apps_title">কোনো অ্যাপস পাওয়া যায়নি</string>
     <string name="home_no_apps_subtitle">একটি প্যাচ উৎস যোগ করুন অথবা %s-এ বিদ্যমান একটি সক্ষম করুন</string>
     <string name="home_no_apps_search_subtitle">\"%s\" এর সাথে মেলে এমন কোনো অ্যাপ নেই</string>
@@ -76,9 +84,13 @@
     <string name="home_greeting_super_late_5">রাতও জাগছেন, আবার কাজের কাজও করে ফেলছেন</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">প্যাচ সোর্সগুলো</string>
+    <string name="sources_sort_title">প্যাচ সোর্স সাজান</string>
     <string name="sources_sort_manual">ম্যানুয়াল অর্ডার</string>
     <string name="sources_sort_manual_hint">পুনরায় সাজানোর জন্য একটি উৎসের উপর দীর্ঘক্ষণ চাপুন</string>
     <string name="sources_sort_last_updated">সর্বশেষ আপডেট করা হয়েছে</string>
+    <string name="sources_sort_last_updated_description">সর্বশেষ সোর্স আপডেট প্রথমে</string>
+    <string name="sources_sort_enabled_first">প্রথমে সক্ষম</string>
+    <string name="sources_sort_enabled_first_description">অক্ষম সোর্সের আগে সক্রিয় সোর্স দেখান</string>
     <string name="sources_management_open_in_browser">ব্রাউজারে ওপেন করুন</string>
     <string name="sources_management_failed_to_open_url">URL খুলতে ব্যর্থ হয়েছে</string>
     <string name="sources_management_prerelease_toggle">প্রি-রিলিজ প্যাচ</string>
@@ -756,6 +768,7 @@ morphe_adaptive_monochrome_custom.xml
     <string name="file_picker_sort_size_asc">সাইজ (ক্ষুদ্রতম প্রথমে)</string>
     <string name="file_picker_sort_date_desc">তারিখ (নতুনতম প্রথমে)</string>
     <string name="file_picker_sort_date_asc">তারিখ (পুরানো প্রথমে)</string>
+    <string name="file_picker_show_hidden_files">লুকানো ফাইল দেখান</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">মর্ফ সম্পর্কে</string>
     <string name="settings_system_share_website">ওয়েবসাইট শেয়ার করুন</string>

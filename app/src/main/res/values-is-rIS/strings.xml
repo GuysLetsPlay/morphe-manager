@@ -28,6 +28,14 @@
     <string name="home_update_success_subtitle">Heimildir þínar eru upp til daglegt</string>
     <string name="home_sources_are_loading">Heimildir eru að hlaða, vinsamlegast bíðu…</string>
     <string name="home_search_apps">Leita að forritum</string>
+    <string name="home_app_sort_title">Raða forritum</string>
+    <string name="home_app_sort_manual_description">Langt ýta á forrit, þá smelltu á endurraða hnappinn</string>
+    <string name="home_app_sort_recommended">Rækt ráðlagður röð</string>
+    <string name="home_app_sort_recommended_description">Uppsett og fest forrit fyrst</string>
+    <string name="home_app_sort_name_asc_description">Stafrófsröð, A til Ö</string>
+    <string name="home_app_sort_name_desc_description">Omreverse alfabetískt, Z til A</string>
+    <string name="home_app_sort_updates_first">Pætingar fyrst</string>
+    <string name="home_app_sort_updates_first_description">Forrit með uppfærslumerki fyrst, svo í mæltu lagi</string>
     <string name="home_no_apps_title">Engin forrit í boði</string>
     <string name="home_no_apps_subtitle">Bættu við heimild eða virkjaðu núverandi í %s</string>
     <string name="home_no_apps_search_subtitle">Engin forrit passa við \"%s\"</string>
@@ -76,9 +84,13 @@
     <string name="home_greeting_super_late_5">Næturhægur og afkastamikill</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Heimildir breytistillinga</string>
+    <string name="sources_sort_title">Flokka uppfærslujöfn</string>
     <string name="sources_sort_manual">Handvirkuð pöntun</string>
     <string name="sources_sort_manual_hint">Halðu lengi á uppspretta til að raða á ný</string>
     <string name="sources_sort_last_updated">Síðast uppfært</string>
+    <string name="sources_sort_last_updated_description">Nýjustu uppfærslur frá uppruna fyrst</string>
+    <string name="sources_sort_enabled_first">Gerilt fyrst</string>
+    <string name="sources_sort_enabled_first_description">Sýna virka uppruna á undan óvirkuppruna</string>
     <string name="sources_management_open_in_browser">Opna í vafra</string>
     <string name="sources_management_failed_to_open_url">Ekki tókst að opna vefslóð</string>
     <string name="sources_management_prerelease_toggle">For úgáfur</string>
@@ -759,6 +771,7 @@ Myndastærðin verður að vera sem hér segir:
     <string name="file_picker_sort_size_asc">Stærð (minnst fyrst)</string>
     <string name="file_picker_sort_date_desc">Dagsetning (nýjasta fyrst)</string>
     <string name="file_picker_sort_date_asc">Dagsetning (fljótfyrst)</string>
+    <string name="file_picker_show_hidden_files">Sýna falin skrá</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">Um</string>
     <string name="settings_system_share_website">Deila vefsíðu</string>

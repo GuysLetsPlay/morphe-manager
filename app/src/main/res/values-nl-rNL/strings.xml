@@ -28,6 +28,14 @@
     <string name="home_update_success_subtitle">Uw bronnen zijn up-to-date</string>
     <string name="home_sources_are_loading">Bronnen worden geladen, even geduld…</string>
     <string name="home_search_apps">Apps zoeken</string>
+    <string name="home_app_sort_title">Sorteer apps</string>
+    <string name="home_app_sort_manual_description">Houd een app ingedrukt en tik vervolgens op de herordenen-knop</string>
+    <string name="home_app_sort_recommended">Aanbevolen volgorde</string>
+    <string name="home_app_sort_recommended_description">Geïnstalleerde en vastgezette apps eerst</string>
+    <string name="home_app_sort_name_asc_description">Alfabetisch, A tot Z</string>
+    <string name="home_app_sort_name_desc_description">Omgekeerd alfabetisch, Z tot A</string>
+    <string name="home_app_sort_updates_first">Eerst patches bijwerken</string>
+    <string name="home_app_sort_updates_first_description">Apps met update-badges eerst, daarna in aanbevolen volgorde</string>
     <string name="home_no_apps_title">Geen apps beschikbaar</string>
     <string name="home_no_apps_subtitle">Voeg een patchbron toe of schakel een bestaande in %s</string>
     <string name="home_no_apps_search_subtitle">Er zijn geen apps die overeenkomen met \"%s\"</string>
@@ -54,7 +62,7 @@
     <!-- Light sarcasm, casual and tech-savvy humor -->
     <string name="home_greeting_10">Aangedreven door cafeïne en goede patches</string>
     <!-- Morning greetings (5:00–11:59) -->
-    <string name="home_greeting_morning_1">Staat op en patch</string>
+    <string name="home_greeting_morning_1">Sta op en patch</string>
     <string name="home_greeting_morning_2">Goedemorgen! Apps patchen zichzelf niet</string>
     <!-- Afternoon greetings (12:00–16:59) -->
     <string name="home_greeting_afternoon_1">Middagdipje? Patch iets</string>
@@ -76,9 +84,13 @@
     <string name="home_greeting_super_late_5">Nachtelijk en productief</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Patchbronnen</string>
+    <string name="sources_sort_title">Patchbronnen sorteren</string>
     <string name="sources_sort_manual">Handmatige volgorde</string>
     <string name="sources_sort_manual_hint">Houd een bron ingedrukt om de volgorde te wijzigen</string>
     <string name="sources_sort_last_updated">Laatst bijgewerkt</string>
+    <string name="sources_sort_last_updated_description">Nieuwste bronupdates eerst</string>
+    <string name="sources_sort_enabled_first">Eerst ingeschakeld</string>
+    <string name="sources_sort_enabled_first_description">Toon actieve bronnen voor uitgeschakelde bronnen</string>
     <string name="sources_management_open_in_browser">Openen in browser</string>
     <string name="sources_management_failed_to_open_url">Kan URL niet openen</string>
     <string name="sources_management_prerelease_toggle">Patches van vóór de release</string>
@@ -764,6 +776,7 @@ De afbeelddimensionen moeten als volgt zijn:
     <string name="file_picker_sort_size_asc">Grootte (kleinste eerst)</string>
     <string name="file_picker_sort_date_desc">Datum (nieuwste eerst)</string>
     <string name="file_picker_sort_date_asc">Datum (oudste eerst)</string>
+    <string name="file_picker_show_hidden_files">Verborgen bestanden tonen</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">Over</string>
     <string name="settings_system_share_website">Website delen</string>

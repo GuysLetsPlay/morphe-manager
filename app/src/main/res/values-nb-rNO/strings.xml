@@ -28,6 +28,14 @@
     <string name="home_update_success_subtitle">Kildene dine er oppdatert</string>
     <string name="home_sources_are_loading">Kilder lastes, vennligst vent…</string>
     <string name="home_search_apps">Søk etter apper</string>
+    <string name="home_app_sort_title">Sorter apper</string>
+    <string name="home_app_sort_manual_description">Trykk og hold på en app, og trykk deretter på sorter-knappen</string>
+    <string name="home_app_sort_recommended">Anbefalt rekkefølge</string>
+    <string name="home_app_sort_recommended_description">Installerte og fastsatte apper først</string>
+    <string name="home_app_sort_name_asc_description">Alfabetisk, A til Å</string>
+    <string name="home_app_sort_name_desc_description">Omvendt alfabetisk, Z til A</string>
+    <string name="home_app_sort_updates_first">Først oppdateringer</string>
+    <string name="home_app_sort_updates_first_description">Apper med oppdateringsmerker først, deretter anbefalt rekkefølge</string>
     <string name="home_no_apps_title">Ingen apper tilgjengelig</string>
     <string name="home_no_apps_subtitle">Legg til en patch-kilde eller aktiver en eksisterende i %s</string>
     <string name="home_no_apps_search_subtitle">Ingen apper samsvarer med \"%s\"</string>
@@ -76,9 +84,13 @@
     <string name="home_greeting_super_late_5">Nattaktiv og produktiv</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Patchkilder</string>
+    <string name="sources_sort_title">Sorter oppdateringskilder</string>
     <string name="sources_sort_manual">Manuell rekkefølge</string>
     <string name="sources_sort_manual_hint">Trykk og hold nede en kilde for å endre rekkefølgen</string>
     <string name="sources_sort_last_updated">Sist oppdatert</string>
+    <string name="sources_sort_last_updated_description">Nyeste oppdateringer først</string>
+    <string name="sources_sort_enabled_first">Aktiverte først</string>
+    <string name="sources_sort_enabled_first_description">Vis aktive kilder før deaktiverte kilder</string>
     <string name="sources_management_open_in_browser">Åpne i nettleser</string>
     <string name="sources_management_failed_to_open_url">Kunne ikke åpne URL</string>
     <string name="sources_management_prerelease_toggle">Forhåndsutgitte oppdateringer</string>
@@ -764,6 +776,7 @@ morphe_header_custom_dark.png
     <string name="file_picker_sort_size_asc">Størrelse (minst først)</string>
     <string name="file_picker_sort_date_desc">Dato (nyeste først)</string>
     <string name="file_picker_sort_date_asc">Dato (eldste først)</string>
+    <string name="file_picker_show_hidden_files">Vis skjulte filer</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">Om</string>
     <string name="settings_system_share_website">Del nettsiden</string>

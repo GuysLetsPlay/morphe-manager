@@ -28,6 +28,14 @@
     <string name="home_update_success_subtitle">Dine kilder er opdaterede</string>
     <string name="home_sources_are_loading">Kilder hentes, vent venligst…</string>
     <string name="home_search_apps">Søg apps</string>
+    <string name="home_app_sort_title">Sortér apps</string>
+    <string name="home_app_sort_manual_description">Hold en app nede, og tryk derefter på omdør knappen</string>
+    <string name="home_app_sort_recommended">Anbefalet rækkefølge</string>
+    <string name="home_app_sort_recommended_description">Installerede og fastgjorte apps først</string>
+    <string name="home_app_sort_name_asc_description">Alfabetisk, A til Z</string>
+    <string name="home_app_sort_name_desc_description">Omvendt alfabetisk, fra Z til A</string>
+    <string name="home_app_sort_updates_first">Patch-opdateringer først</string>
+    <string name="home_app_sort_updates_first_description">Apps med opdateringsmærker først, derefter i anbefalet rækkefølge</string>
     <string name="home_no_apps_title">Ingen apps tilgængelige</string>
     <string name="home_no_apps_subtitle">Tilføj en patchkilde eller aktiver en eksisterende i %s</string>
     <string name="home_no_apps_search_subtitle">Ingen apps matcher \"%s\"</string>
@@ -76,9 +84,13 @@
     <string name="home_greeting_super_late_5">Natlig og produktiv</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Patchkilder</string>
+    <string name="sources_sort_title">Sortér patch-kilder</string>
     <string name="sources_sort_manual">Manuel orden</string>
     <string name="sources_sort_manual_hint">Tryk og hold på en kilde for at ændre rækkefølgen</string>
     <string name="sources_sort_last_updated">Sidst opdateret</string>
+    <string name="sources_sort_last_updated_description">Seneste kildeopdateringer først</string>
+    <string name="sources_sort_enabled_first">Aktiveret først</string>
+    <string name="sources_sort_enabled_first_description">Vis aktive kilder før deaktiverede kilder</string>
     <string name="sources_management_open_in_browser">Åbn links i browser</string>
     <string name="sources_management_failed_to_open_url">Kunne ikke åbne URL</string>
     <string name="sources_management_prerelease_toggle">Pre-release patches</string>
@@ -764,6 +776,7 @@ Størrelsesformatet skal være som følger:
     <string name="file_picker_sort_size_asc">Størrelse (mindst først)</string>
     <string name="file_picker_sort_date_desc">Dato (nyeste først)</string>
     <string name="file_picker_sort_date_asc">Dato (ældste først)</string>
+    <string name="file_picker_show_hidden_files">Vis skjulte filer</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">Om</string>
     <string name="settings_system_share_website">Del hjemmeside</string>

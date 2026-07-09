@@ -28,6 +28,14 @@
     <string name="home_update_success_subtitle">आपके स्रोत अप टू डेट हैं</string>
     <string name="home_sources_are_loading">स्रोत लोड हो रहे हैं, कृपया प्रतीक्षा करें…</string>
     <string name="home_search_apps">ऐप्स खोजें</string>
+    <string name="home_app_sort_title">ऐप्स को क्रमबद्ध करें</string>
+    <string name="home_app_sort_manual_description">किसी ऐप को देर तक दबाएं, फिर पुन: व्यवस्थित करें बटन पर टैप करें</string>
+    <string name="home_app_sort_recommended">अनुशंसित क्रम</string>
+    <string name="home_app_sort_recommended_description">स्थापित और पिन किए गए ऐप्स पहले</string>
+    <string name="home_app_sort_name_asc_description">वर्णमाला क्रम में, A से Z तक</string>
+    <string name="home_app_sort_name_desc_description">वर्णानुक्रम उल्टे, Z से A</string>
+    <string name="home_app_sort_updates_first">पैच अपडेट पहले</string>
+    <string name="home_app_sort_updates_first_description">अपडेट बैज वाले ऐप्स पहले, फिर अनुशंसित क्रम में</string>
     <string name="home_no_apps_title">कोई ऐप्स उपलब्ध नहीं हैं</string>
     <string name="home_no_apps_subtitle">पैच स्रोत जोड़ें या %s में मौजूदा स्रोत सक्षम करें</string>
     <string name="home_no_apps_search_subtitle">\"%s\" से मेल खाने वाला कोई ऐप नहीं है</string>
@@ -76,9 +84,13 @@
     <string name="home_greeting_super_late_5">रात के समय और उत्पादक</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">पैच स्रोत</string>
+    <string name="sources_sort_title">पैच स्रोत क्रमबद्ध करें</string>
     <string name="sources_sort_manual">मैन्युअल ऑर्डर</string>
     <string name="sources_sort_manual_hint">पुन:क्रमित करने के लिए किसी स्रोत को देर तक दबाएं</string>
     <string name="sources_sort_last_updated">अंतिम अपडेट किया गया</string>
+    <string name="sources_sort_last_updated_description">नवीनतम स्रोत अपडेट पहले</string>
+    <string name="sources_sort_enabled_first">सक्षम पहले</string>
+    <string name="sources_sort_enabled_first_description">अक्षम स्रोतों से पहले सक्रिय स्रोत दिखाएं</string>
     <string name="sources_management_open_in_browser">खोल में खोल करना</string>
     <string name="sources_management_failed_to_open_url">URL खोलने में विफल रहा</string>
     <string name="sources_management_prerelease_toggle">प्री-रिलीज़ पैच</string>
@@ -764,6 +776,7 @@ morphe_header_custom_dark.png
     <string name="file_picker_sort_size_asc">आकार (सबसे छोटा पहले)</string>
     <string name="file_picker_sort_date_desc">तिथि (नवीनतम पहले)</string>
     <string name="file_picker_sort_date_asc">तिथि (सबसे पुरानी पहले)</string>
+    <string name="file_picker_show_hidden_files">छिपी हुई फ़ाइलें दिखाएं</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">मorphe के बारे में</string>
     <string name="settings_system_share_website">वेबसाइट शेयर करें</string>

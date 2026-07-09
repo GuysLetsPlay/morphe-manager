@@ -28,6 +28,14 @@
     <string name="home_update_success_subtitle">Ваши источники обновлены</string>
     <string name="home_sources_are_loading">Загрузка источников, пожалуйста, подождите…</string>
     <string name="home_search_apps">Поиск приложений</string>
+    <string name="home_app_sort_title">Сортировка приложений</string>
+    <string name="home_app_sort_manual_description">Нажмите и удерживайте значок приложения, затем нажмите кнопку изменения порядка</string>
+    <string name="home_app_sort_recommended">Рекомендуемый порядок</string>
+    <string name="home_app_sort_recommended_description">Сначала установленные и закреплённые приложения</string>
+    <string name="home_app_sort_name_asc_description">По алфавиту, от А до Я</string>
+    <string name="home_app_sort_name_desc_description">В обратном алфавитном порядке, от Я до А</string>
+    <string name="home_app_sort_updates_first">Сначала обновления патчей</string>
+    <string name="home_app_sort_updates_first_description">Приложения с значками обновлений сначала, затем в рекомендуемом порядке</string>
     <string name="home_no_apps_title">Нет доступных приложений</string>
     <string name="home_no_apps_subtitle">Добавить источник патчей или включить существующий в %s</string>
     <string name="home_no_apps_search_subtitle">Нет соответствующих приложений \"%s\"</string>
@@ -76,9 +84,13 @@
     <string name="home_greeting_super_late_5">Ночной и продуктивный</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Источники патчей</string>
+    <string name="sources_sort_title">Сортировка источников патчей</string>
     <string name="sources_sort_manual">Ручная сортировка</string>
     <string name="sources_sort_manual_hint">Нажмите и удерживайте источник, чтобы изменить порядок</string>
     <string name="sources_sort_last_updated">Последнее обновление</string>
+    <string name="sources_sort_last_updated_description">Сначала новые обновления источников</string>
+    <string name="sources_sort_enabled_first">Сначала включенные</string>
+    <string name="sources_sort_enabled_first_description">Показывать активные источники перед отключенными источниками</string>
     <string name="sources_management_open_in_browser">Открыть в браузере</string>
     <string name="sources_management_failed_to_open_url">Не удалось открыть URL</string>
     <string name="sources_management_prerelease_toggle">Предрелизные патчи</string>
@@ -764,6 +776,7 @@ morphe_header_custom_dark.png
     <string name="file_picker_sort_size_asc">Размер (от меньшего к большему)</string>
     <string name="file_picker_sort_date_desc">Дата (от новых к старым)</string>
     <string name="file_picker_sort_date_asc">Дата (от старых к новым)</string>
+    <string name="file_picker_show_hidden_files">Показать скрытые файлы</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">Об интеграции</string>
     <string name="settings_system_share_website">Поделиться веб-сайтом</string>

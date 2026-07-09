@@ -28,6 +28,14 @@
     <string name="home_update_success_subtitle">來源已是最新狀態</string>
     <string name="home_sources_are_loading">正在載入來源，請稍候…</string>
     <string name="home_search_apps">搜尋應用程式</string>
+    <string name="home_app_sort_title">排序應用程式</string>
+    <string name="home_app_sort_manual_description">長按應用程式，然後點選重新排序按鈕</string>
+    <string name="home_app_sort_recommended">推薦順序</string>
+    <string name="home_app_sort_recommended_description">優先顯示已安裝和固定應用程式</string>
+    <string name="home_app_sort_name_asc_description">依字母順序，A 到 Z</string>
+    <string name="home_app_sort_name_desc_description">反向字母順序，Z 到 A</string>
+    <string name="home_app_sort_updates_first">先更新修補程式</string>
+    <string name="home_app_sort_updates_first_description">優先顯示有更新標記的應用程式，然後依照建議順序</string>
     <string name="home_no_apps_title">沒有可用的應用程式</string>
     <string name="home_no_apps_subtitle">在 %s 新增修補程式來源，或啟用現有來源</string>
     <string name="home_no_apps_search_subtitle">沒有符合「%s」的應用程式</string>
@@ -57,7 +65,7 @@
     <string name="home_greeting_morning_1">起床並修補</string>
     <string name="home_greeting_morning_2">早安！應用程式不會自行修補</string>
     <!-- Afternoon greetings (12:00–16:59) -->
-    <string name="home_greeting_afternoon_1">午后疲怠？修補一下吧</string>
+    <string name="home_greeting_afternoon_1">下午昏昏欲睡？修補一下吧</string>
     <string name="home_greeting_afternoon_2">午餐後的修補程式就是不一樣</string>
     <string name="home_greeting_afternoon_3">下午班段：修補程式版本</string>
     <!-- Evening greetings (17:00–21:59) -->
@@ -76,9 +84,13 @@
     <string name="home_greeting_super_late_5">夜間且有效率</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">修補來源</string>
+    <string name="sources_sort_title">排序修補來源</string>
     <string name="sources_sort_manual">手動排序</string>
     <string name="sources_sort_manual_hint">長按來源以重新排序</string>
     <string name="sources_sort_last_updated">上次更新</string>
+    <string name="sources_sort_last_updated_description">先顯示最新的來源更新</string>
+    <string name="sources_sort_enabled_first">優先顯示已啟用</string>
+    <string name="sources_sort_enabled_first_description">在已停用的來源之前顯示已啟用來源</string>
     <string name="sources_management_open_in_browser">在瀏覽器中開啟</string>
     <string name="sources_management_failed_to_open_url">無法開啟網址</string>
     <string name="sources_management_prerelease_toggle">預先發布版修補程式</string>
@@ -652,12 +664,12 @@ morphe_header_custom_dark.png
     <string name="settings_auto_install_prompt_conflict">\"%s\" 已啟用 - 將略過自動安裝</string>
     <!-- Settings - System Tab - Performance Section -->
     <string name="settings_system_battery_optimization">電池最佳化</string>
-    <string name="settings_system_battery_optimization_description">即使應用程式被最小化，也會保持修補程式的運行</string>
+    <string name="settings_system_battery_optimization_description">即使應用程式被最小化，也會保持修補程式的執行</string>
     <string name="settings_system_performance">效能</string>
     <string name="settings_system_process_runtime">執行階段程序</string>
     <string name="settings_system_process_runtime_description">在獨立的程序中執行修補以獲得更好的穩定性</string>
     <string name="settings_system_process_runtime_memory_limit">記憶體限制</string>
-    <string name="settings_system_process_runtime_memory_limit_description">更高的限制可以加快在兼容設備上的修補速度</string>
+    <string name="settings_system_process_runtime_memory_limit_description">更高的限制可以加快在相容裝置上的修補速度</string>
     <string name="settings_system_process_runtime_enable">啟用程序執行階段</string>
     <string name="settings_system_memory_limit_subtitle">可用於修補的記憶體</string>
     <string name="settings_system_memory_limit_warning">記憶體限制過低可能會導致修補較大型應用程式時失敗</string>
@@ -688,7 +700,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_import_manager_settings_mode_title">匯入 Morphe 設定</string>
     <string name="settings_system_import_manager_settings_mode_description">選擇如何套用匯入的設定和來源</string>
     <string name="settings_system_import_selections_mode_title">匯入修補選擇</string>
-    <string name="settings_system_import_selections_mode_description">選擇如何應用導入的選取項目及修補選項</string>
+    <string name="settings_system_import_selections_mode_description">選擇如何套用匯入的選取範圍和修補選項</string>
     <string name="import_mode_replace_title">取代現有項目</string>
     <string name="import_mode_replace_description">完全符合備份。若備份中缺少項目，將會移除</string>
     <string name="import_mode_merge_title">與現有項目合併</string>
@@ -764,6 +776,7 @@ morphe_header_custom_dark.png
     <string name="file_picker_sort_size_asc">大小 (由小到大)</string>
     <string name="file_picker_sort_date_desc">日期 (最新到舊)</string>
     <string name="file_picker_sort_date_asc">日期 (由舊到新)</string>
+    <string name="file_picker_show_hidden_files">顯示隱藏的檔案</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">關於</string>
     <string name="settings_system_share_website">分享網站</string>
@@ -825,7 +838,7 @@ morphe_header_custom_dark.png
     <string name="reorder_list_hint">拖曳以重新排序</string>
     <string name="reorder_done">排序已儲存</string>
     <string name="reset_order">重設排序</string>
-    <string name="reset_order_done">訂單已重置</string>
+    <string name="reset_order_done">訂單已重設</string>
     <string name="accessibility_move_up">向上移動</string>
     <string name="accessibility_move_down">向下移動</string>
     <string name="accessibility_app_moved_announcement">%1$s 已移動至 %3$d 的第 %2$d 個位置</string>

@@ -28,6 +28,14 @@
     <string name="home_update_success_subtitle">Οι πηγές σας είναι ενημερωμένες</string>
     <string name="home_sources_are_loading">Οι πηγές φορτώνονται, παρακαλώ περιμένετε…</string>
     <string name="home_search_apps">Αναζήτηση εφαρμογών</string>
+    <string name="home_app_sort_title">Ταξινόμηση εφαρμογών</string>
+    <string name="home_app_sort_manual_description">Πατήστε παρατεταμένα μια εφαρμογή, στη συνέχεια πατήστε το κουμπί αναδιάταξης</string>
+    <string name="home_app_sort_recommended">Προτεινόμενη έκδοση</string>
+    <string name="home_app_sort_recommended_description">Εγκατεστημένες και закрепленные εφαρμογές πρώτα</string>
+    <string name="home_app_sort_name_asc_description">Αλφαβητικά, από το Α έως το Ω</string>
+    <string name="home_app_sort_name_desc_description">Αλφαβητικά αντίστροφα, από Ζ έως Α</string>
+    <string name="home_app_sort_updates_first">Ενημερώσεις διαχειριστή πρώτα</string>
+    <string name="home_app_sort_updates_first_description">Εφαρμογές με σήματα ενημέρωσης πρώτα, μετά με προτεινόμενη σειρά</string>
     <string name="home_no_apps_title">Καμία διαθέσιμη εφαρμογή</string>
     <string name="home_no_apps_subtitle">Προσθέστε μια πηγή τροποποιήσεων ή ενεργοποιήστε μια υπάρχουσα στο %s</string>
     <string name="home_no_apps_search_subtitle">Καμία εφαρμογή δεν ταιριάζει με το \"%s\"</string>
@@ -76,9 +84,13 @@
     <string name="home_greeting_super_late_5">Νυχτερινός και παραγωγικός</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Πηγές τροποποιήσεων</string>
+    <string name="sources_sort_title">Ταξινόμηση πηγών ενημερώσεων</string>
     <string name="sources_sort_manual">Χειροκίνητη ταξινόμηση</string>
     <string name="sources_sort_manual_hint">Πατήστε παρατεταμένα μια πηγή για να την αναδιατάξετε</string>
     <string name="sources_sort_last_updated">Τελευταία ενημέρωση</string>
+    <string name="sources_sort_last_updated_description">Νεότερες ενημερώσεις πηγών πρώτα</string>
+    <string name="sources_sort_enabled_first">Ενεργοποιημένες πρώτα</string>
+    <string name="sources_sort_enabled_first_description">Εμφάνιση ενεργών πηγών πριν από τις απενεργοποιημένες</string>
     <string name="sources_management_open_in_browser">Άνοιγμα σε πρόγραμμα περιήγησης</string>
     <string name="sources_management_failed_to_open_url">Απέτυχε το άνοιγμα της διεύθυνσης URL</string>
     <string name="sources_management_prerelease_toggle">Ενημερώσεις πριν την κυκλοφορία</string>
@@ -764,6 +776,7 @@ morphe_header_custom_dark.png
     <string name="file_picker_sort_size_asc">Μέγεθος (μικρότερο πρώτο)</string>
     <string name="file_picker_sort_date_desc">Ημερομηνία (πιο πρόσφατο πρώτο)</string>
     <string name="file_picker_sort_date_asc">Ημερομηνία (πιο παλιό πρώτο)</string>
+    <string name="file_picker_show_hidden_files">Εμφάνιση κρυφών αρχείων</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">Πληροφορίες</string>
     <string name="settings_system_share_website">Κοινοποίηση ιστότοπου</string>

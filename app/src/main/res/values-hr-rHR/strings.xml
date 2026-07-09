@@ -159,7 +159,9 @@
     <string name="home_select_any_apk_description">Odaberite APK datoteku bilo koje aplikacije ili odaberite aplikaciju koja je već instalirana na ovom uređaju</string>
     <string name="home_use_installed_app">Koristi instaliranu aplikaciju</string>
     <string name="home_installed_app_picker_title">Odaberi instaliranu aplikaciju</string>
-    <string name="home_installed_app_picker_empty">Nema pronađenih aplikacija</string>
+    <string name="home_installed_app_picker_empty">
+		Nema pronađenih aplikacija
+	</string>
     <string name="home_installed_app_picker_filter_all">Sve aplikacije</string>
     <string name="home_installed_app_picker_filter_user">Samo aplikacije korisnika</string>
     <string name="home_installed_app_picker_filter_system">Samo aplikacije sustava</string>
@@ -286,7 +288,8 @@ Vanjska zona (isprekidana): može biti odrezana maskom pokretača - važne detal
     <string name="home_app_info_install_type_custom_installer">Vlastiti program</string>
     <string name="home_app_info_install_type_system_installer">Sustav</string>
     <string name="home_app_info_patch_update_available">Dostupno je ažuriranje patcheva</string>
-    <string name="home_app_info_patch_update_available_description">Dostupna je novija verzija patcheva. Ponovno instalirajte patch za aplikaciju kako biste dobili najnovija poboljšanja i ispravke.</string>
+    <string name="home_app_info_patch_update_available_description">Dostupna je novija verzija patcheva. Ponovno instalirajte patch za aplikaciju kako biste dobili najnovija poboljšanja i ispravke.
+</string>
     <string name="home_app_info_app_deleted_warning">Aplikacija je deinstalirana</string>
     <string name="home_app_info_app_deleted_description">Ova je aplikacija deinstalirana izvan Morphea. Ponovno je patchajte kako biste vratili funkcionalnost</string>
     <string name="home_app_info_apk_size">Veličina APK datoteke</string>

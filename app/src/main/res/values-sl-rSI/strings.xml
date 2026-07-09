@@ -28,6 +28,14 @@
     <string name="home_update_success_subtitle">Viri so posodobljeni</string>
     <string name="home_sources_are_loading">Viri se nalagajo, počakajte…</string>
     <string name="home_search_apps">Poišči aplikacije</string>
+    <string name="home_app_sort_title">Razvrsti aplikacije</string>
+    <string name="home_app_sort_manual_description">Dolgo pritisnite aplikacijo, nato pa tapnite gumb za ponovno razvrstitev</string>
+    <string name="home_app_sort_recommended">Priporočeni vrstni red</string>
+    <string name="home_app_sort_recommended_description">Nameščene in pripete aplikacije naj bodo prve</string>
+    <string name="home_app_sort_name_asc_description">Abecedni vrstni red, od A do Ž</string>
+    <string name="home_app_sort_name_desc_description">Obrnuti abecedni red, od Z do A</string>
+    <string name="home_app_sort_updates_first">Najprej popravki</string>
+    <string name="home_app_sort_updates_first_description">Aplikacije z oznakami posodobitve najprej, nato pa v priporocenem vrstnem redu</string>
     <string name="home_no_apps_title">Nobena aplikacija ni na voljo</string>
     <string name="home_no_apps_subtitle">Dodaj vir popravkov ali omogoči že obstoječega v %s</string>
     <string name="home_no_apps_search_subtitle">Nobena aplikacija se ne ujema z \"%s\"</string>
@@ -76,9 +84,13 @@
     <string name="home_greeting_super_late_5">Nočni in produktivni</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Popravi vire</string>
+    <string name="sources_sort_title">Sortiraj vire popravkov</string>
     <string name="sources_sort_manual">Ročno urejanje</string>
     <string name="sources_sort_manual_hint">Dolgo pritisnite vir, da ga ponovno uredite</string>
     <string name="sources_sort_last_updated">Zadnja posodobitev</string>
+    <string name="sources_sort_last_updated_description">Najprej najnovejše posodobitve virov</string>
+    <string name="sources_sort_enabled_first">Omogočeni najprej</string>
+    <string name="sources_sort_enabled_first_description">Prikaži aktivne vire pred onemogočenimi viri</string>
     <string name="sources_management_open_in_browser">Odpri v brskalniku</string>
     <string name="sources_management_failed_to_open_url">Ni mogoče odpreti URL</string>
     <string name="sources_management_prerelease_toggle">Pred-popravki</string>
@@ -764,6 +776,7 @@ Dimenzije slike morajo biti naslednje:
     <string name="file_picker_sort_size_asc">Velikost (najmanjša naprej)</string>
     <string name="file_picker_sort_date_desc">Datum (najnovejši naprej)</string>
     <string name="file_picker_sort_date_asc">Datum (najstarejši naprej)</string>
+    <string name="file_picker_show_hidden_files">Pokaži skrite datoteke</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">O aplikaciji</string>
     <string name="settings_system_share_website">Delite spletno mesto</string>

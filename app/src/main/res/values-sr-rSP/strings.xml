@@ -28,6 +28,14 @@
     <string name="home_update_success_subtitle">Ваши извори су ажурни</string>
     <string name="home_sources_are_loading">Извори се учитавају, молимо сачекајте…</string>
     <string name="home_search_apps">Претрага апликација</string>
+    <string name="home_app_sort_title">Сортирај апликације</string>
+    <string name="home_app_sort_manual_description">Притисните и задржите апликацију, затим додирните дугме за поредање</string>
+    <string name="home_app_sort_recommended">Препоручени поредак</string>
+    <string name="home_app_sort_recommended_description">Инсталиране и причвршћене апликације прво</string>
+    <string name="home_app_sort_name_asc_description">Абецедно, од А до Ш</string>
+    <string name="home_app_sort_name_desc_description">Упадна абецеда, од З до А</string>
+    <string name="home_app_sort_updates_first">Прво ажурирања закрпа</string>
+    <string name="home_app_sort_updates_first_description">Апликације са ознакама за ажурирање прво, затим препоручени редослед</string>
     <string name="home_no_apps_title">Нисe доступни апликације</string>
     <string name="home_no_apps_subtitle">Додај извор пача или омогући постојећи у %s</string>
     <string name="home_no_apps_search_subtitle">Нема апликација које одговарају на \"%s\"</string>
@@ -76,9 +84,13 @@
     <string name="home_greeting_super_late_5">Ноћни и продуктивни</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Извор печовања</string>
+    <string name="sources_sort_title">Сортирај изворе закрпа</string>
     <string name="sources_sort_manual">Ручно поређање</string>
     <string name="sources_sort_manual_hint">Притисните и задржите извор да бисте променили редослед</string>
     <string name="sources_sort_last_updated">Последње ажурирање</string>
+    <string name="sources_sort_last_updated_description">Прво најновија ажурирања извора</string>
+    <string name="sources_sort_enabled_first">Омогућени први</string>
+    <string name="sources_sort_enabled_first_description">Прикажи активне изворе пре онемогућених извора</string>
     <string name="sources_management_open_in_browser">Отвори у прегледачу</string>
     <string name="sources_management_failed_to_open_url">Неуспешно отварање URL адресе</string>
     <string name="sources_management_prerelease_toggle">Предвершајуће закрпе</string>
@@ -764,6 +776,7 @@ morphe_header_custom_dark.png
     <string name="file_picker_sort_size_asc">Величина (најмања прва)</string>
     <string name="file_picker_sort_date_desc">Датум (најновији први)</string>
     <string name="file_picker_sort_date_asc">Датум (најстарији први)</string>
+    <string name="file_picker_show_hidden_files">Прикажи скривене датотеке</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">О програму</string>
     <string name="settings_system_share_website">Дели веб-сајт</string>

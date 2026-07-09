@@ -3,7 +3,8 @@
     <!-- Home Screen -->
     <string name="home_other_apps">Altre app</string>
     <string name="home_not_patched_yet">Non ancora patchato</string>
-    <string name="home_no_patches_available">Nessuna patch disponibile</string>
+    <string name="home_no_patches_available">
+Nessuna patch disponibile</string>
     <string name="home_app_hide_title">Nascondere questa app?</string>
     <string name="home_app_hide_message">Questa app verrà nascosta dalla schermata iniziale. Puoi ripristinarla in seguito dalle app nascoste utilizzando il pulsante in fondo all\'elenco</string>
     <string name="home_app_will_be_hidden">Questa app verrà nascosta</string>
@@ -28,6 +29,14 @@
     <string name="home_update_success_subtitle">Le tue fonti sono aggiornate</string>
     <string name="home_sources_are_loading">Le fonti si stanno caricando, si prega di attendere…</string>
     <string name="home_search_apps">Cerca app</string>
+    <string name="home_app_sort_title">Ordina app</string>
+    <string name="home_app_sort_manual_description">Tieni premuta un\'app, quindi tocca il pulsante di riordino</string>
+    <string name="home_app_sort_recommended">Ordine consigliato</string>
+    <string name="home_app_sort_recommended_description">App installate e fissate per prime</string>
+    <string name="home_app_sort_name_asc_description">Alfabetico, da A a Z</string>
+    <string name="home_app_sort_name_desc_description">Alfabetico inverso, da Z ad A</string>
+    <string name="home_app_sort_updates_first">Aggiornamenti patch per primi</string>
+    <string name="home_app_sort_updates_first_description">App con badge di aggiornamento per prime, poi in ordine consigliato</string>
     <string name="home_no_apps_title">Nessuna app disponibile</string>
     <string name="home_no_apps_subtitle">Aggiungi una sorgente delle patch o abilitane una esistente in %s</string>
     <string name="home_no_apps_search_subtitle">Nessuna app corrisponde a \"%s\"</string>
@@ -76,9 +85,13 @@
     <string name="home_greeting_super_late_5">Notturno e produttivo/a</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Fonti delle patch</string>
+    <string name="sources_sort_title">Ordina fonti patch</string>
     <string name="sources_sort_manual">Ordine manuale</string>
     <string name="sources_sort_manual_hint">Tieni premuto un elemento per riordinarlo</string>
     <string name="sources_sort_last_updated">Ultimo aggiornamento</string>
+    <string name="sources_sort_last_updated_description">Aggiornamenti della fonte più recenti per primi</string>
+    <string name="sources_sort_enabled_first">Abilitate per prime</string>
+    <string name="sources_sort_enabled_first_description">Mostra fonti attive prima di quelle disabilitate</string>
     <string name="sources_management_open_in_browser">Apri nel browser</string>
     <string name="sources_management_failed_to_open_url">Impossibile aprire l’URL</string>
     <string name="sources_management_prerelease_toggle">Patch di pre-rilascio</string>
@@ -764,6 +777,7 @@ Le dimensioni delle immagini devono essere le seguenti:
     <string name="file_picker_sort_size_asc">Dimensione (la più piccola prima)</string>
     <string name="file_picker_sort_date_desc">Data (la più recente prima)</string>
     <string name="file_picker_sort_date_asc">Data (la più vecchia prima)</string>
+    <string name="file_picker_show_hidden_files">Mostra file nascosti</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">A proposito di</string>
     <string name="settings_system_share_website">Condividi il sito</string>

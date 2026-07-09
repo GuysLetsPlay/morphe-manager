@@ -9,7 +9,8 @@
     <string name="home_app_will_be_hidden">האפליקציה הזאת תהיה מוסתרת</string>
     <string name="home_app_no_hidden">אין אפליקציות מוסתרות</string>
     <string name="home_app_hidden_apps_title">אפליקציות מוסתרות</string>
-    <string name="home_app_hidden_apps_hint">הקישו כדי להציג</string>
+    <string name="home_app_hidden_apps_hint">
+הקישו כדי להציג</string>
     <string name="android_11_bug_dialog_title">באג ב-Android 11</string>
     <string name="android_11_bug_dialog_description">ההרשאה להתקין את האפליקציה צריכה להיות מאושרת מראש כדי להימנע מבאג במערכת Android 11 שיפגע בחוויית המשתמש</string>
     <string name="deep_link_add_source_title">הוסף מקור</string>
@@ -28,6 +29,14 @@
     <string name="home_update_success_subtitle">המקורות שלך מעודכנים</string>
     <string name="home_sources_are_loading">המקורות נטענים, נא להמתין…</string>
     <string name="home_search_apps">חיפוש אפליקציות</string>
+    <string name="home_app_sort_title">מיין אפליקציות</string>
+    <string name="home_app_sort_manual_description">החזק לחיצה ארוכה על אפליקציה, ולאחר מכן הקש על כפתור הסדר מחדש</string>
+    <string name="home_app_sort_recommended">סדר מומלץ</string>
+    <string name="home_app_sort_recommended_description">אפליקציות מותקנות ומעוגנות ראשונות</string>
+    <string name="home_app_sort_name_asc_description">לפי סדר אלפביתי, מ-א\' עד ת\'</string>
+    <string name="home_app_sort_name_desc_description">הפוך אלפביתי, מ-Z ל-A</string>
+    <string name="home_app_sort_updates_first">עדכוני טלאים קודם</string>
+    <string name="home_app_sort_updates_first_description">אפליקציות עם סמני עדכון קודם, ואז לפי סדר מומלץ</string>
     <string name="home_no_apps_title">אין אפליקציות זמינות</string>
     <string name="home_no_apps_subtitle">הוסף מקור לאפליקציה או הפעל מקור קיים ב-\"%s\"</string>
     <string name="home_no_apps_search_subtitle">אף אפליקציה לא תואמת ל-\"%s\"</string>
@@ -76,9 +85,13 @@
     <string name="home_greeting_super_late_5">ליליים ופרודוקטיביים</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">מקורות תיקונים</string>
+    <string name="sources_sort_title">מקורות תיקונים</string>
     <string name="sources_sort_manual">הזמנה ידנית</string>
     <string name="sources_sort_manual_hint">לחץ לחיצה ארוכה על מקור כדי לשנות את הסדר</string>
     <string name="sources_sort_last_updated">עודכן לאחרונה</string>
+    <string name="sources_sort_last_updated_description">עדכוני המקור החדשים ביותר קודם</string>
+    <string name="sources_sort_enabled_first">מופעלים קודם</string>
+    <string name="sources_sort_enabled_first_description">הצג מקורות פעילים לפני מקורות מושבתים</string>
     <string name="sources_management_open_in_browser">פתח בדפדפן</string>
     <string name="sources_management_failed_to_open_url">כישלון בפתיחת כתובת אינטרנט</string>
     <string name="sources_management_prerelease_toggle">תיקונים לפני הפצה</string>
@@ -748,6 +761,7 @@ morphe_adaptive_monochrome_custom.xml
     <string name="file_picker_sort_size_asc">גודל (מהקטן לגדול)</string>
     <string name="file_picker_sort_date_desc">תאריך (מהחדש לישן)</string>
     <string name="file_picker_sort_date_asc">תאריך (מהישן לחדש)</string>
+    <string name="file_picker_show_hidden_files">הצג קבצים מוסתרים</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">אודות</string>
     <string name="settings_system_share_website">שתף אתר</string>

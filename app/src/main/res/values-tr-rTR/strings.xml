@@ -28,6 +28,11 @@
     <string name="home_update_success_subtitle">Kaynaklarınız güncel</string>
     <string name="home_sources_are_loading">Kaynaklar yükleniyor, lütfen bekleyin…</string>
     <string name="home_search_apps">Uygulamaları ara</string>
+    <string name="home_app_sort_title">Uygulamaları sırala</string>
+    <string name="home_app_sort_manual_description">Bir uygulamaya uzun basın, ardından yeniden sıralama düğmesine dokunun</string>
+    <string name="home_app_sort_recommended">Önerilen sıra</string>
+    <string name="home_app_sort_recommended_description">Yüklenen ve sabitlenen uygulamalar önce</string>
+    <string name="home_app_sort_name_asc_description">Alfabetik, A\'dan Z\'ye</string>
     <string name="home_no_apps_title">Uygulama bulunamadı</string>
     <string name="home_no_apps_subtitle">Bir yama kaynağı ekleyin veya %s içinde mevcut olanı etkinleştirin</string>
     <string name="home_no_apps_search_subtitle">\"%s\" ile eşleşen uygulama yok</string>
@@ -764,6 +769,7 @@ Resim boyutları şu şekilde olmalıdır:
     <string name="file_picker_sort_size_asc">Boyut (en küçüğü önce)</string>
     <string name="file_picker_sort_date_desc">Tarih (en yenisi önce)</string>
     <string name="file_picker_sort_date_asc">Tarih (en eskisi önce)</string>
+    <string name="file_picker_show_hidden_files">Gizli dosyaları göster</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">Hakkında</string>
     <string name="settings_system_share_website">Web sitesini paylaş</string>
@@ -829,7 +835,7 @@ Resim boyutları şu şekilde olmalıdır:
     <string name="accessibility_move_up">Yukarı taşı</string>
     <string name="accessibility_move_down">Aşağı taşı</string>
     <string name="accessibility_app_moved_announcement">%1$s, %3$d\'nin %2$d konumuna taşındı</string>
-    <string name="accessibility_scroll_to_top">Listeyi en üste kaydır</string>
+    <string name="accessibility_scroll_to_top">Listenin en üstüne kaydır</string>
     <string name="rename">Yeniden adlandır</string>
     <string name="import_">İçe aktar</string>
     <string name="export">Dışa aktar</string>

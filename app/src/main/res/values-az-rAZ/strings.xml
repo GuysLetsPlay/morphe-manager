@@ -763,6 +763,7 @@ morphe_header_custom_light.png morphe_header_custom_dark.png
     <string name="file_picker_sort_size_asc">Həcm (əvvəlcə ən az)</string>
     <string name="file_picker_sort_date_desc">Tarix (öncə ən yeni)</string>
     <string name="file_picker_sort_date_asc">Tarix (öncə ən köhnə)</string>
+    <string name="file_picker_show_hidden_files">Gizli faylları göstər</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">Haqqında</string>
     <string name="settings_system_share_website">Veb saytı paylaş</string>
