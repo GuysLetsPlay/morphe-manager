@@ -33,6 +33,9 @@
     <string name="home_app_sort_recommended">Thứ tự đề xuất</string>
     <string name="home_app_sort_recommended_description">Ưu tiên ứng dụng đã cài đặt và ghim</string>
     <string name="home_app_sort_name_asc_description">Theo thứ tự bảng chữ cái, A đến Z</string>
+    <string name="home_app_sort_name_desc_description">Đảo ngược theo thứ tự bảng chữ cái, Z đến A</string>
+    <string name="home_app_sort_updates_first">Ưu tiên cập nhật vá lỗi</string>
+    <string name="home_app_sort_updates_first_description">Ưu tiên các ứng dụng có huy hiệu cập nhật, sau đó theo thứ tự đề xuất</string>
     <string name="home_no_apps_title">Không có ứng dụng nào có sẵn</string>
     <string name="home_no_apps_subtitle">Thêm nguồn vá mới hoặc bật nguồn có sẵn trong %s</string>
     <string name="home_no_apps_search_subtitle">Không có ứng dụng nào khớp với \"%s\"</string>
@@ -81,9 +84,13 @@
     <string name="home_greeting_super_late_5">Cú đêm năng suất thật đấy</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Nguồn vá</string>
+    <string name="sources_sort_title">Sắp xếp các nguồn vá lỗi</string>
     <string name="sources_sort_manual">Sắp xếp thủ công</string>
     <string name="sources_sort_manual_hint">Bấm giữ một nguồn để sắp xếp lại</string>
     <string name="sources_sort_last_updated">Cập nhật lần cuối</string>
+    <string name="sources_sort_last_updated_description">Ưu tiên cập nhật nguồn mới nhất</string>
+    <string name="sources_sort_enabled_first">Bật trước</string>
+    <string name="sources_sort_enabled_first_description">Hiển thị các nguồn đang hoạt động trước các nguồn đã tắt</string>
     <string name="sources_management_open_in_browser">Mở trong trình duyệt</string>
     <string name="sources_management_failed_to_open_url">Không thể mở URL</string>
     <string name="sources_management_prerelease_toggle">Bản vá phát hành trước</string>

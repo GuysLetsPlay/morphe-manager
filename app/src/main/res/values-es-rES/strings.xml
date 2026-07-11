@@ -29,12 +29,12 @@
     <string name="home_sources_are_loading">Cargando fuentes, por favor espera…</string>
     <string name="home_search_apps">Buscar aplicaciones</string>
     <string name="home_app_sort_title">Ordenar aplicaciones</string>
-    <string name="home_app_sort_manual_description">Mantén pulsada una aplicación y, luego, toca el botón de reordenar</string>
+    <string name="home_app_sort_manual_description">Mantén pulsada una aplicación, luego toca el botón de reordenar</string>
     <string name="home_app_sort_recommended">Orden recomendado</string>
     <string name="home_app_sort_recommended_description">Aplicaciones instaladas y fijadas primero</string>
     <string name="home_app_sort_name_asc_description">Alfabético, de la A a la Z</string>
-    <string name="home_app_sort_name_desc_description">Inversa alfabética, de la Z a la A</string>
-    <string name="home_app_sort_updates_first">Actualizaciones de parche primero</string>
+    <string name="home_app_sort_name_desc_description">Alfabético inverso, de la Z a la A</string>
+    <string name="home_app_sort_updates_first">Actualizaciones de parches primero</string>
     <string name="home_app_sort_updates_first_description">Aplicaciones con insignias de actualización primero, luego en orden recomendado</string>
     <string name="home_no_apps_title">No hay aplicaciones disponibles</string>
     <string name="home_no_apps_subtitle">Añadir una fuente de parche o habilitar una existente en %s</string>
@@ -84,12 +84,12 @@
     <string name="home_greeting_super_late_5">Nocturno y productivo</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Fuentes de parches</string>
-    <string name="sources_sort_title">Seleccionar fuente de parche</string>
+    <string name="sources_sort_title">Ordenar fuentes de parches</string>
     <string name="sources_sort_manual">Orden manual</string>
     <string name="sources_sort_manual_hint">Mantén pulsada una fuente para cambiar el orden</string>
     <string name="sources_sort_last_updated">Última actualización</string>
     <string name="sources_sort_last_updated_description">Actualizaciones de fuente más recientes primero</string>
-    <string name="sources_sort_enabled_first">fuente activada</string>
+    <string name="sources_sort_enabled_first">Activadas primero</string>
     <string name="sources_sort_enabled_first_description">Mostrar fuentes activas antes que las desactivadas</string>
     <string name="sources_management_open_in_browser">Abrir en el navegador</string>
     <string name="sources_management_failed_to_open_url">No se pudo abrir la URL</string>

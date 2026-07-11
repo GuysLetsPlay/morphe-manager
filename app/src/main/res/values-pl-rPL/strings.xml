@@ -31,11 +31,11 @@
     <string name="home_app_sort_title">Sortuj aplikacje</string>
     <string name="home_app_sort_manual_description">Przytrzymaj aplikację, a następnie dotknij przycisku zmiany kolejności</string>
     <string name="home_app_sort_recommended">Zalecana kolejność</string>
-    <string name="home_app_sort_recommended_description">Zainstalowane i przypięte aplikacje na początku</string>
+    <string name="home_app_sort_recommended_description">Najpierw zainstalowane i przypięte aplikacje</string>
     <string name="home_app_sort_name_asc_description">Alfabetycznie, od A do Z</string>
-    <string name="home_app_sort_name_desc_description">Odwrócona kolejnosc alfabetyczna, od Z do A</string>
-    <string name="home_app_sort_updates_first">Najpierw aktualizacje poprawek</string>
-    <string name="home_app_sort_updates_first_description">Aplikacje z oznaczeniami aktualizacji najpierw, a nastepnie w kolejnosci rekomendowanej</string>
+    <string name="home_app_sort_name_desc_description">Odwrotnie alfabetycznie, od Z do A</string>
+    <string name="home_app_sort_updates_first">Najpierw aktualizacje modyfikacji</string>
+    <string name="home_app_sort_updates_first_description">Najpierw aplikacje z plakietkami aktualizacji, następnie zalecana kolejność</string>
     <string name="home_no_apps_title">Brak dostępnych aplikacji</string>
     <string name="home_no_apps_subtitle">Dodaj źródło modyfikacji lub włącz istniejące w %s</string>
     <string name="home_no_apps_search_subtitle">Brak aplikacji pasujących do \"%s\"</string>
@@ -84,13 +84,13 @@
     <string name="home_greeting_super_late_5">Nocny, ale produktywny</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Źródła modyfikacji</string>
-    <string name="sources_sort_title">Sortuj źródła poprawek</string>
+    <string name="sources_sort_title">Sortuj źródła modyfikacji</string>
     <string name="sources_sort_manual">Ręczna kolejność</string>
     <string name="sources_sort_manual_hint">Przytrzymaj źródło, aby zmienić kolejność</string>
     <string name="sources_sort_last_updated">Ostatnia aktualizacja</string>
-    <string name="sources_sort_last_updated_description">Najpierw najnowsze aktualizacje źródła</string>
-    <string name="sources_sort_enabled_first">Włączone najpierw</string>
-    <string name="sources_sort_enabled_first_description">Pokaż aktywne źródła przed wyłączonymi źródłami</string>
+    <string name="sources_sort_last_updated_description">Najpierw najnowsze aktualizacje źródeł</string>
+    <string name="sources_sort_enabled_first">Najpierw włączone</string>
+    <string name="sources_sort_enabled_first_description">Pokaż aktywne źródła przed wyłączonymi</string>
     <string name="sources_management_open_in_browser">Otwórz w przeglądarce</string>
     <string name="sources_management_failed_to_open_url">Nie udało się otworzyć strony</string>
     <string name="sources_management_prerelease_toggle">Przedpremierowe modyfikacje</string>

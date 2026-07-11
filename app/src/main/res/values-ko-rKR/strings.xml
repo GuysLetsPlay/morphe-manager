@@ -29,13 +29,13 @@
     <string name="home_sources_are_loading">소스를 불러오는 중, 잠시만 기다려 주세요…</string>
     <string name="home_search_apps">앱 검색</string>
     <string name="home_app_sort_title">앱 정렬</string>
-    <string name="home_app_sort_manual_description">앱을 길게 누른 다음 재정렬 버튼을 탭하세요.</string>
+    <string name="home_app_sort_manual_description">앱을 길게 탭한 후에 정렬 버튼을 탭하면 순서를 변경할 수 있습니다</string>
     <string name="home_app_sort_recommended">권장 순서</string>
-    <string name="home_app_sort_recommended_description">설치된 앱 및 고정된 앱을 우선적으로 표시</string>
-    <string name="home_app_sort_name_asc_description">알파벳순(A-Z)</string>
-    <string name="home_app_sort_name_desc_description">알파벳 역순, Z부터 A까지</string>
+    <string name="home_app_sort_recommended_description">설치된 앱 및 고정된 앱을 먼저 표시</string>
+    <string name="home_app_sort_name_asc_description">알파벳 오름차순으로 표시</string>
+    <string name="home_app_sort_name_desc_description">알파벳 내림차순으로 표시</string>
     <string name="home_app_sort_updates_first">패치 업데이트 우선</string>
-    <string name="home_app_sort_updates_first_description">업데이트 배지가 있는 앱을 먼저, 그 다음 권장 순서대로</string>
+    <string name="home_app_sort_updates_first_description">업데이트 배지가 있는 앱을 먼저, 그 다음 권장 순서대로 표시</string>
     <string name="home_no_apps_title">사용 가능한 앱이 없습니다</string>
     <string name="home_no_apps_subtitle">%s에 패치 소스를 추가하거나 기존 패치 소스를 활성화하세요</string>
     <string name="home_no_apps_search_subtitle">\'%s\'와 일치하는 앱이 없습니다</string>
@@ -84,13 +84,13 @@
     <string name="home_greeting_super_late_5">야행성이면서 생산적이네요</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">패치 소스</string>
-    <string name="sources_sort_title">패치 소스 선택</string>
+    <string name="sources_sort_title">패치 소스 정렬</string>
     <string name="sources_sort_manual">수동 정렬</string>
     <string name="sources_sort_manual_hint">소스를 길게 탭하여 순서를 변경하세요</string>
-    <string name="sources_sort_last_updated">최근 업데이트순 정렬</string>
-    <string name="sources_sort_last_updated_description">가장 새로운 소스 업데이트 우선</string>
+    <string name="sources_sort_last_updated">최근 업데이트 우선</string>
+    <string name="sources_sort_last_updated_description">최근 업데이트된 소스부터 먼저 표시</string>
     <string name="sources_sort_enabled_first">활성화된 소스 우선</string>
-    <string name="sources_sort_enabled_first_description">비활성화된 소스보다 활성 소스 먼저 표시</string>
+    <string name="sources_sort_enabled_first_description">비활성화된 소스보다 활성화된 소스를 먼저 표시</string>
     <string name="sources_management_open_in_browser">브라우저에서 열기</string>
     <string name="sources_management_failed_to_open_url">URL을 열 수 없습니다</string>
     <string name="sources_management_prerelease_toggle">Pre-release 패치</string>
@@ -836,7 +836,7 @@ morphe_header_custom_dark.png
     <string name="deselect_all">모두 선택 해제</string>
     <string name="deselect_all_done">모두 선택 해제하였습니다</string>
     <string name="reorder_list">목록 다시 정렬</string>
-    <string name="reorder_list_hint">다시 정렬하려면 드래그하세요</string>
+    <string name="reorder_list_hint">앱을 드래그하여 순서를 변경하세요</string>
     <string name="reorder_done">순서를 저장하였습니다</string>
     <string name="reset_order">순서 초기화</string>
     <string name="reset_order_done">순서를 초기화하였습니다</string>

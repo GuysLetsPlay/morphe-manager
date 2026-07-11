@@ -32,10 +32,10 @@
     <string name="home_app_sort_manual_description">Appuyez longuement sur une application, puis appuyez sur le bouton de réorganisation</string>
     <string name="home_app_sort_recommended">Ordre recommandé</string>
     <string name="home_app_sort_recommended_description">Applications installées et épinglées en premier</string>
-    <string name="home_app_sort_name_asc_description">Alphabétique, de A à Z</string>
-    <string name="home_app_sort_name_desc_description">Tri alphabétique inversé, de Z à A</string>
-    <string name="home_app_sort_updates_first">Mises à jour des correctifs en premier</string>
-    <string name="home_app_sort_updates_first_description">Applications avec badges de mise à jour en premier, puis par ordre recommandé</string>
+    <string name="home_app_sort_name_asc_description">Ordre alphabétique A à Z</string>
+    <string name="home_app_sort_name_desc_description">Ordre alphabétique inversé, Z à A</string>
+    <string name="home_app_sort_updates_first">Mises à jour de patchs en premier</string>
+    <string name="home_app_sort_updates_first_description">Applications avec badge de mise à jour en premier, puis ordre recommandé</string>
     <string name="home_no_apps_title">Aucune application disponible</string>
     <string name="home_no_apps_subtitle">Ajoutez une source de patchs ou activez-en une existante dans %s</string>
     <string name="home_no_apps_search_subtitle">Aucune application ne correspond à \"%s\"</string>
@@ -84,12 +84,12 @@
     <string name="home_greeting_super_late_5">Nocturne et productif</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Sources de patchs</string>
-    <string name="sources_sort_title">Trier les sources de correctifs</string>
+    <string name="sources_sort_title">Trier les sources de patchs</string>
     <string name="sources_sort_manual">Ordre manuel</string>
     <string name="sources_sort_manual_hint">Appuyez longuement sur une source pour la réorganiser</string>
     <string name="sources_sort_last_updated">Dernière mise à jour</string>
     <string name="sources_sort_last_updated_description">Mises à jour des sources les plus récentes en premier</string>
-    <string name="sources_sort_enabled_first">Activé en premier</string>
+    <string name="sources_sort_enabled_first">Activées en premier</string>
     <string name="sources_sort_enabled_first_description">Afficher les sources actives avant les sources désactivées</string>
     <string name="sources_management_open_in_browser">Ouvrir dans le navigateur</string>
     <string name="sources_management_failed_to_open_url">Échec de l\'ouverture de l\'URL</string>

@@ -33,6 +33,9 @@
     <string name="home_app_sort_recommended">เรียงตามที่แนะนำ</string>
     <string name="home_app_sort_recommended_description">แอปที่ติดตั้งและตรึงไว้ก่อน</string>
     <string name="home_app_sort_name_asc_description">ตามลำดับตัวอักษร A ถึง Z</string>
+    <string name="home_app_sort_name_desc_description">เรียงตามลำดับตัวอักษรย้อนกลับ Z ถึง A</string>
+    <string name="home_app_sort_updates_first">อัปเดตแพตช์ก่อน</string>
+    <string name="home_app_sort_updates_first_description">แอปที่มีแบทจ์อัปเดตก่อน จากนั้นตามลำดับที่แนะนำ</string>
     <string name="home_no_apps_title">ไม่มีแอปที่ใช้ได้</string>
     <string name="home_no_apps_subtitle">เพิ่มแหล่งที่มาของแพตช์หรือเปิดใช้งานแหล่งที่มาที่มีอยู่แล้วใน %s</string>
     <string name="home_no_apps_search_subtitle">ไม่พบแอปที่ตรงกับ \"%s\"</string>
@@ -81,9 +84,13 @@
     <string name="home_greeting_super_late_5">ตื่นตอนกลางคืนและยังทำงานได้</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">จัดการแหล่งที่มา</string>
+    <string name="sources_sort_title">เรียงลำดับแหล่งที่มาของแพตช์</string>
     <string name="sources_sort_manual">คำสั่งซื้อด้วยตนเอง</string>
     <string name="sources_sort_manual_hint">แตะค้างที่แหล่งข้อมูลเพื่อจัดเรียงใหม่</string>
     <string name="sources_sort_last_updated">ปรับปรุงล่าสุด</string>
+    <string name="sources_sort_last_updated_description">อัปเดตแหล่งที่มาล่าสุดก่อน</string>
+    <string name="sources_sort_enabled_first">เปิดใช้งานก่อน</string>
+    <string name="sources_sort_enabled_first_description">แสดงแหล่งที่มาที่ใช้งานอยู่ก่อนแหล่งที่มาที่ปิดใช้งาน</string>
     <string name="sources_management_open_in_browser">เปิดในเบราว์เซอร์</string>
     <string name="sources_management_failed_to_open_url">ไม่สามารถเปิด URL ได้</string>
     <string name="sources_management_prerelease_toggle">แพตช์ก่อนเปิดตัว</string>

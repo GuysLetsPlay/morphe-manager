@@ -28,6 +28,14 @@
     <string name="home_update_success_subtitle">Mənbələriniz yenilənib</string>
     <string name="home_sources_are_loading">Mənbələr yüklənilir, xahiş olunur gözləyin...</string>
     <string name="home_search_apps">Tətbiqləri axtar</string>
+    <string name="home_app_sort_title">Tətbiqləri sırala</string>
+    <string name="home_app_sort_manual_description">Tətbiqə uzun bas, sonra yenidən sıralama düyməsinə toxun</string>
+    <string name="home_app_sort_recommended">Tövsiyə olunan düzülüş</string>
+    <string name="home_app_sort_recommended_description">Əvvəlcə quraşdırılmış və nişanlanmış tətbiqlər</string>
+    <string name="home_app_sort_name_asc_description">Əlifbaya uyğun, A-dan Z-yə</string>
+    <string name="home_app_sort_name_desc_description">Əlifbanın əksinə uyğun, Z-dən A-ya</string>
+    <string name="home_app_sort_updates_first">Əvvəlcə yamaq yeniləmələri olan</string>
+    <string name="home_app_sort_updates_first_description">Əvvəlcə yeniləmə nişanları, sonra tövsiyə olunan düzülüşü olan tətbiqlər</string>
     <string name="home_no_apps_title">Mövcud tətbiq yoxdur</string>
     <string name="home_no_apps_subtitle">%s bölməsində yamaq mənbəyi əlavə edin və ya mövcud olanı aktivləşdir</string>
     <string name="home_no_apps_search_subtitle">\"%s\" ilə uyuşan tətbiq yoxdur</string>
@@ -76,9 +84,13 @@
     <string name="home_greeting_super_late_5">Gecəcil və səmərəli</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Yamaq mənbələri</string>
+    <string name="sources_sort_title">Yamaq mənbələrini sırala</string>
     <string name="sources_sort_manual">Əl ilə sıralama</string>
     <string name="sources_sort_manual_hint">Təkrar sıralamaq üçün mənbəyə uzun bas</string>
     <string name="sources_sort_last_updated">Axırıncı dəfə yeniləndi</string>
+    <string name="sources_sort_last_updated_description">Əvvəlcə ən yeni mənbə yeniləmələri</string>
+    <string name="sources_sort_enabled_first">Əvvəlcə aktivləşdirilmiş</string>
+    <string name="sources_sort_enabled_first_description">İşlək mənbələri qapalı mənbələrdən əvvəl göstər</string>
     <string name="sources_management_open_in_browser">Brauzerdə açın</string>
     <string name="sources_management_failed_to_open_url">URL açmaq uğursuzdu</string>
     <string name="sources_management_prerelease_toggle">İlkin-buraxılış yamaqları</string>

@@ -33,6 +33,9 @@
     <string name="home_app_sort_recommended">Önerilen sıra</string>
     <string name="home_app_sort_recommended_description">Yüklenen ve sabitlenen uygulamalar önce</string>
     <string name="home_app_sort_name_asc_description">Alfabetik, A\'dan Z\'ye</string>
+    <string name="home_app_sort_name_desc_description">Ters alfabetik, Z\'den A\'ya</string>
+    <string name="home_app_sort_updates_first">Önce yama güncellemeleri</string>
+    <string name="home_app_sort_updates_first_description">Güncelleme rozeti olan uygulamalar önce, ardından önerilen sıra</string>
     <string name="home_no_apps_title">Uygulama bulunamadı</string>
     <string name="home_no_apps_subtitle">Bir yama kaynağı ekleyin veya %s içinde mevcut olanı etkinleştirin</string>
     <string name="home_no_apps_search_subtitle">\"%s\" ile eşleşen uygulama yok</string>
@@ -81,9 +84,13 @@
     <string name="home_greeting_super_late_5">Gececi ve üretken</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Yama kaynakları</string>
+    <string name="sources_sort_title">Yama kaynaklarını sırala</string>
     <string name="sources_sort_manual">Manuel sıra</string>
     <string name="sources_sort_manual_hint">Yeniden sıralamak için bir kaynağa uzun basın</string>
     <string name="sources_sort_last_updated">Son güncelleme</string>
+    <string name="sources_sort_last_updated_description">En yeni kaynak güncellemeleri önce</string>
+    <string name="sources_sort_enabled_first">Etkin olanlar önce</string>
+    <string name="sources_sort_enabled_first_description">Devre dışı kaynaklardan önce etkin kaynakları göster</string>
     <string name="sources_management_open_in_browser">Tarayıcıda aç</string>
     <string name="sources_management_failed_to_open_url">URL açılamadı</string>
     <string name="sources_management_prerelease_toggle">Ön sürüm yamalar</string>
