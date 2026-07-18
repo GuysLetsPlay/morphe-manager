@@ -29,7 +29,10 @@ jobs:
         run: git clone --depth 1 --branch v1.6.0 https://github.com/MorpheApp/morphe-patcher.git ../morphe-patcher
 
       - name: Checkout Morphe library source
-        run: git clone --depth 1 --branch v1.3.0 https://github.com/MorpheApp/morphe-library.git ../morphe-library
+        run: |
+          git clone --depth 1 --branch v1.3.0 https://github.com/MorpheApp/morphe-library.git ../morphe-library
+          # Keep the composite build compatible with this manager's AGP version.
+          sed -i 's/android = "8.5.2"/android = "9.2.1"/' ../morphe-library/gradle/libs.versions.toml
 
       # This workflow intentionally creates a debug APK for every pull request.
       # It works both for branches in this repository and for external forks,
