@@ -1973,9 +1973,9 @@ private fun VersionListCard(
                 val buildCode = versionCodes[version]?.firstOrNull()
                 val localApk = availableLocalApks.firstOrNull { apk ->
                     apk.versionName == version &&
-                        (versionCodes[version].isNullOrEmpty() || versionCodes[version].any {
+                        (versionCodes[version].isNullOrEmpty() || versionCodes[version]?.any {
                             it.toLong() == apk.versionCode
-                        })
+                        } == true)
                 }
 
                 // Resolve badge once - drives both the badge composable and version text color
