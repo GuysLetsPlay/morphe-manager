@@ -28,6 +28,9 @@ jobs:
       - name: Checkout Morphe patcher source
         run: git clone --depth 1 --branch v1.6.0 https://github.com/MorpheApp/morphe-patcher.git ../morphe-patcher
 
+      - name: Checkout Morphe library source
+        run: git clone --depth 1 --branch v1.3.0 https://github.com/MorpheApp/morphe-library.git ../morphe-library
+
       # This workflow intentionally creates a debug APK for every pull request.
       # It works both for branches in this repository and for external forks,
       # without requiring release-signing secrets. Releases are built separately
