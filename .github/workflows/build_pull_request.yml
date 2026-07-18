@@ -40,7 +40,7 @@ jobs:
           sed -i 's/gradle-8.9-bin.zip/gradle-9.4.1-bin.zip/' ../morphe-library/gradle/wrapper/gradle-wrapper.properties
           sed -i 's/^distributionSha256Sum=.*/distributionSha256Sum=2ab2958f2a1e51120c326cad6f385153bb11ee93b3c216c5fccebfdfbb7ec6cb/' ../morphe-library/gradle/wrapper/gradle-wrapper.properties
           (cd ../morphe-library && ./gradlew publishToMavenLocal --no-daemon --stacktrace \
-            -x signKotlinMultiplatformPublication -x signAndroidReleasePublication -x signAndroidDebugPublication)
+            -x signKotlinMultiplatformPublication -x signAndroidReleasePublication)
 
       # This workflow intentionally creates a debug APK for every pull request.
       # It works both for branches in this repository and for external forks,
