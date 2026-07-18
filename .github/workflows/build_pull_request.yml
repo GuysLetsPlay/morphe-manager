@@ -29,6 +29,9 @@ jobs:
         run: git clone --depth 1 --branch v1.6.0 https://github.com/MorpheApp/morphe-patcher.git ../morphe-patcher
 
       - name: Checkout Morphe library source
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_ACTOR: ${{ github.actor }}
         run: |
           git clone --depth 1 --branch v1.3.0 https://github.com/MorpheApp/morphe-library.git ../morphe-library
           chmod +x ../morphe-library/gradlew
