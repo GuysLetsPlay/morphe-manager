@@ -6,6 +6,7 @@
 package app.morphe.manager.ui.screen.home
 
 import android.os.Build
+import android.net.Uri
 import android.widget.Toast
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.BorderStroke
@@ -54,8 +55,11 @@ import app.morphe.manager.ui.viewmodel.*
 import app.morphe.manager.util.*
 import app.morphe.patcher.patch.AppTarget
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import org.koin.androidx.compose.koinViewModel
+import org.koin.compose.koinInject
 import org.koin.core.parameter.parametersOf
 import java.net.URI
 import kotlin.time.Duration.Companion.milliseconds
@@ -74,6 +78,7 @@ fun HomeDialogs(
     val uriHandler = LocalUriHandler.current
     val scope = rememberCoroutineScope()
     val context = LocalContext.current
+    val apkFolderScanner: ApkFolderScanner = koinInject()
 
     // APK selection processing overlay - blocks interaction while APK is loaded/validated in background
     MorpheOverlay(visible = homeViewModel.processingApkSelection) {
@@ -98,6 +103,32 @@ fun HomeDialogs(
         val savedApkInfo = homeViewModel.pendingSavedApkInfo
         val installedApkInfo = homeViewModel.pendingInstalledApkInfo
         val targetAppInstalled = homeViewModel.pendingTargetAppInstalled == true
+        val autoApkFolderDiscovery by homeViewModel.prefs.autoApkFolderDiscovery.getAsState()
+        val autoApkFolderPath by homeViewModel.prefs.autoApkFolderPath.getAsState()
+        val autoApkFolderIncludeSubdirectories by homeViewModel.prefs.autoApkFolderIncludeSubdirectories.getAsState()
+        val localApks by produceState(
+            initialValue = emptyList<DiscoveredApk>(),
+            key1 = listOf(
+                isExpertMode,
+                autoApkFolderDiscovery,
+                autoApkFolderPath,
+                autoApkFolderIncludeSubdirectories,
+                homeViewModel.pendingPackageName
+            )
+        ) {
+            val packageName = homeViewModel.pendingPackageName
+            value = if (isExpertMode && autoApkFolderDiscovery && packageName != null) {
+                withContext(Dispatchers.IO) {
+                    apkFolderScanner.scan(
+                        folderPath = autoApkFolderPath,
+                        includeSubdirectories = autoApkFolderIncludeSubdirectories,
+                        packageName = packageName
+                    )
+                }
+            } else {
+                emptyList()
+            }
+        }
 
         ApkAvailabilityDialog(
             appName = appName,
@@ -106,6 +137,11 @@ fun HomeDialogs(
             recommendedBundleVersions = recommendedBundleVersions,
             selectedDownloadVersion = selectedDownloadVersion,
             onVersionSelect = { homeViewModel.pendingSelectedDownloadVersion = it },
+            availableLocalApks = localApks,
+            onUseLocalApk = { file ->
+                homeViewModel.showApkAvailabilityDialog = false
+                homeViewModel.handleApkSelection(Uri.fromFile(file))
+            },
             usingMountInstall = usingMountInstall,
             targetAppInstalled = targetAppInstalled,
             isExpertMode = isExpertMode,
@@ -593,6 +629,8 @@ private fun ApkAvailabilityDialog(
     recommendedBundleVersions: Map<Int, AppTarget>,
     selectedDownloadVersion: AppTarget?,
     onVersionSelect: (AppTarget) -> Unit,
+    availableLocalApks: List<DiscoveredApk>,
+    onUseLocalApk: (java.io.File) -> Unit,
     usingMountInstall: Boolean,
     targetAppInstalled: Boolean,
     isExpertMode: Boolean,
@@ -694,6 +732,8 @@ private fun ApkAvailabilityDialog(
                         anyString = anyString,
                         hasMultipleBundles = compatibleVersions.map { it.bundleUid }.distinct().size > 1,
                         incompatibleSdkVersions = incompatibleSdkVersions,
+                        availableLocalApks = availableLocalApks,
+                        onUseLocalApk = onUseLocalApk,
                     )
                 } else {
                     VersionListCard(
@@ -713,6 +753,8 @@ private fun ApkAvailabilityDialog(
                                 v to codes
                             }
                             .toMap(),
+                        availableLocalApks = availableLocalApks,
+                        onUseLocalApk = onUseLocalApk,
                     )
                 }
             } else {
@@ -1681,7 +1723,9 @@ private fun SelectableVersionListCard(
     onVersionSelect: (AppTarget) -> Unit,
     anyString: String,
     hasMultipleBundles: Boolean,
-    incompatibleSdkVersions: Set<String> = emptySet()
+    incompatibleSdkVersions: Set<String> = emptySet(),
+    availableLocalApks: List<DiscoveredApk> = emptyList(),
+    onUseLocalApk: (java.io.File) -> Unit = {}
 ) {
     if (versions.isEmpty()) return
 
@@ -1706,6 +1750,12 @@ private fun SelectableVersionListCard(
                 val selectedLabel = stringResource(R.string.home_selected_version)
                 val requiresAndroidLabel = target.minSdk?.let { sdk ->
                     stringResource(R.string.home_version_requires_android, sdk.androidVersionName())
+                }
+                val localApk = availableLocalApks.firstOrNull { apk ->
+                    apk.versionName == target.version &&
+                        (bundled.buildCodes.isNullOrEmpty() || bundled.buildCodes.any {
+                            it.toLong() == apk.versionCode
+                        })
                 }
 
                 // Bundle section header - only when multiple bundles are present and uid changes
@@ -1835,6 +1885,20 @@ private fun SelectableVersionListCard(
                                 maxLines = 1,
                             )
                             badge?.invoke()
+                            if (localApk != null) {
+                                IconButton(
+                                    onClick = { onUseLocalApk(localApk.file) }
+                                ) {
+                                    Icon(
+                                        imageVector = Icons.Outlined.FolderOpen,
+                                        contentDescription = stringResource(
+                                            R.string.home_apk_available_locally,
+                                            versionString
+                                        ),
+                                        tint = MaterialTheme.colorScheme.primary
+                                    )
+                                }
+                            }
                         }
                         val description = target.description
                         if (description != null) {
@@ -1872,7 +1936,9 @@ private fun VersionListCard(
     experimentalVersions: Set<String> = emptySet(),
     descriptions: Map<String, String> = emptyMap(),
     incompatibleSdkVersions: Set<String> = emptySet(),
-    versionCodes: Map<String, Set<Int>> = emptyMap()
+    versionCodes: Map<String, Set<Int>> = emptyMap(),
+    availableLocalApks: List<DiscoveredApk> = emptyList(),
+    onUseLocalApk: (java.io.File) -> Unit = {}
 ) {
     if (versions.isEmpty()) return
 
@@ -1905,6 +1971,12 @@ private fun VersionListCard(
                 val isIncompatibleSdk = version in incompatibleSdkVersions
                 val versionDescription = descriptions[version]
                 val buildCode = versionCodes[version]?.firstOrNull()
+                val localApk = availableLocalApks.firstOrNull { apk ->
+                    apk.versionName == version &&
+                        (versionCodes[version].isNullOrEmpty() || versionCodes[version].any {
+                            it.toLong() == apk.versionCode
+                        })
+                }
 
                 // Resolve badge once - drives both the badge composable and version text color
                 val badge: @Composable (() -> Unit)? = when {
@@ -1964,6 +2036,18 @@ private fun VersionListCard(
                             overflow = TextOverflow.Ellipsis
                         )
                         badge?.invoke()
+                        if (localApk != null) {
+                            IconButton(onClick = { onUseLocalApk(localApk.file) }) {
+                                Icon(
+                                    imageVector = Icons.Outlined.FolderOpen,
+                                    contentDescription = stringResource(
+                                        R.string.home_apk_available_locally,
+                                        version
+                                    ),
+                                    tint = MaterialTheme.colorScheme.primary
+                                )
+                            }
+                        }
                     }
 
                     // Build number

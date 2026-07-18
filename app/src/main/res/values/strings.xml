@@ -830,6 +830,12 @@ The image dimensions must be as follows:
     <!-- Settings - System Tab - Custom file picker -->
     <string name="settings_system_custom_file_picker">Custom file picker</string>
     <string name="settings_system_custom_file_picker_description">Browse storage with Morphe\'s built-in file picker instead of the system default</string>
+    <string name="settings_system_apk_folder_discovery">Find downloaded APKs</string>
+    <string name="settings_system_apk_folder_discovery_description">Show matching source APKs beside compatible versions in Expert mode</string>
+    <string name="settings_system_apk_folder">APK search folder</string>
+    <string name="settings_system_apk_folder_subdirectories">Search subfolders</string>
+    <string name="settings_system_apk_folder_subdirectories_description">Also look for APKs in folders inside the selected folder</string>
+    <string name="home_apk_available_locally">Use downloaded APK %1$s</string>
 
     <!-- File Picker -->
     <string name="file_picker_previous_directory">Previous directory</string>

@@ -220,6 +220,18 @@ class SettingsViewModel(
         prefs.customFilePickerUserConfigured.update(true)
     }
 
+    fun setAutoApkFolderDiscovery(enabled: Boolean) = viewModelScope.launch {
+        prefs.autoApkFolderDiscovery.update(enabled)
+    }
+
+    fun setAutoApkFolderPath(path: String) = viewModelScope.launch {
+        prefs.autoApkFolderPath.update(path)
+    }
+
+    fun setAutoApkFolderIncludeSubdirectories(enabled: Boolean) = viewModelScope.launch {
+        prefs.autoApkFolderIncludeSubdirectories.update(enabled)
+    }
+
     /**
      * Requests root access when the AutoSaved (root-mount) installer is chosen,
      * then persists the selection.
