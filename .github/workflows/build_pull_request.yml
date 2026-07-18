@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
   pull_request:
     branches:
+      - main
       - dev
 
 concurrency:
@@ -18,31 +19,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v6
 
-      # Fork PRs cannot access repository secrets by design, so we detect them
-      # here and fall back to an unsigned debug build instead of a signed release.
-      - name: Determine if PR is from a fork
-        id: fork_check
+      # This workflow intentionally creates a debug APK for every pull request.
+      # It works both for branches in this repository and for external forks,
+      # without requiring release-signing secrets. Releases are built separately
+      # by release.yml.
+      - name: Configure debug APK build
+        id: build_config
         run: |
-          if [ "${{ github.event_name }}" = "pull_request" ] \
-             && [ "${{ github.event.pull_request.head.repo.fork }}" = "true" ]; then
-            echo "is_fork=true" >> "$GITHUB_OUTPUT"
-            echo "gradle_task=assembleDebug" >> "$GITHUB_OUTPUT"
-            echo "apk_dir=app/build/outputs/apk/debug" >> "$GITHUB_OUTPUT"
-            echo "apk_suffix=-debug" >> "$GITHUB_OUTPUT"
-            echo "PR from fork detected: building unsigned debug APK"
-          else
-            echo "is_fork=false" >> "$GITHUB_OUTPUT"
-            echo "gradle_task=assembleRelease" >> "$GITHUB_OUTPUT"
-            echo "apk_dir=app/build/outputs/apk/release" >> "$GITHUB_OUTPUT"
-            echo "apk_suffix=-release" >> "$GITHUB_OUTPUT"
-            echo "Trusted PR/dispatch: building signed release APK"
-          fi
-
-      - name: Restore release keystore
-        if: steps.fork_check.outputs.is_fork == 'false'
-        run: |
-          echo "${{ secrets.KEYSTORE_B64 }}" | base64 -d > app/keystore.jks
-          ls -la app/keystore.jks
+          echo "gradle_task=assembleDebug" >> "$GITHUB_OUTPUT"
+          echo "apk_dir=app/build/outputs/apk/debug" >> "$GITHUB_OUTPUT"
+          echo "apk_suffix=-debug" >> "$GITHUB_OUTPUT"
+          echo "Building unsigned debug APK"
 
       - name: Setup Java
         uses: actions/setup-java@v5
@@ -62,12 +49,12 @@ jobs:
           _JAVA_OPTIONS: "-Djava.awt.headless=true"
         run: |
           chmod +x ./gradlew
-          ./gradlew ${{ steps.fork_check.outputs.gradle_task }} --stacktrace
+          ./gradlew ${{ steps.build_config.outputs.gradle_task }} --stacktrace
 
       - name: Rename APK
         run: |
-          suffix="${{ steps.fork_check.outputs.apk_suffix }}"
-          for f in ${{ steps.fork_check.outputs.apk_dir }}/*${suffix}.apk; do
+          suffix="${{ steps.build_config.outputs.apk_suffix }}"
+          for f in ${{ steps.build_config.outputs.apk_dir }}/*${suffix}.apk; do
             [ -e "$f" ] || continue
             mv "$f" "${f/${suffix}/}"
           done
@@ -76,4 +63,4 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           archive: false
-          path: ${{ steps.fork_check.outputs.apk_dir }}/*.apk
+          path: ${{ steps.build_config.outputs.apk_dir }}/*.apk
