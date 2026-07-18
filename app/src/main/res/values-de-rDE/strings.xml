@@ -763,6 +763,12 @@ Die Bildgrößen müssen wie folgt sein:
     <!-- Settings - System Tab - Custom file picker -->
     <string name="settings_system_custom_file_picker">Benutzerdefinierter Dateiauswahldialog</string>
     <string name="settings_system_custom_file_picker_description">Durchsuchen Sie den Speicher mit dem integrierten Dateiauswahldialog von Morphe anstelle der systemspezifischen Standardeinstellung</string>
+    <string name="settings_system_apk_folder_discovery">Heruntergeladene APKs finden</string>
+    <string name="settings_system_apk_folder_discovery_description">Passende Original-APKs neben kompatiblen Versionen im Expertenmodus anzeigen</string>
+    <string name="settings_system_apk_folder">APK-Suchordner</string>
+    <string name="settings_system_apk_folder_subdirectories">Unterordner durchsuchen</string>
+    <string name="settings_system_apk_folder_subdirectories_description">Auch in Unterordnern des ausgewählten Ordners nach APKs suchen</string>
+    <string name="home_apk_available_locally">Heruntergeladene APK %1$s verwenden</string>
     <!-- File Picker -->
     <string name="file_picker_previous_directory">Vorheriges Verzeichnis</string>
     <string name="file_picker_no_files">Keine Dateien hier</string>

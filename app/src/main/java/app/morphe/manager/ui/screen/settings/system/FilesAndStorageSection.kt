@@ -14,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Rect
@@ -30,6 +31,10 @@ import app.morphe.manager.ui.screen.shared.*
 import app.morphe.manager.ui.viewmodel.ImportExportViewModel
 import app.morphe.manager.ui.viewmodel.SettingsViewModel
 import app.morphe.manager.util.isAndroidTv
+import app.morphe.manager.util.rememberFolderPickerWithPermission
+import app.morphe.manager.util.toFilePath
+import app.morphe.manager.data.platform.Filesystem
+import org.koin.compose.koinInject
 
 /**
  * Storage management section.
@@ -44,8 +49,19 @@ fun FilesAndStorageSection(
     val isTV = remember { context.isAndroidTv() }
     val useExpertMode by settingsViewModel.prefs.useExpertMode.getAsState()
     val useCustomFilePicker by settingsViewModel.prefs.useCustomFilePicker.getAsState()
+    val autoApkFolderDiscovery by settingsViewModel.prefs.autoApkFolderDiscovery.getAsState()
+    val autoApkFolderPath by settingsViewModel.prefs.autoApkFolderPath.getAsState()
+    val autoApkFolderIncludeSubdirectories by settingsViewModel.prefs.autoApkFolderIncludeSubdirectories.getAsState()
     val enabledState = stringResource(R.string.enabled)
     val disabledState = stringResource(R.string.disabled)
+    val filesystem: Filesystem = koinInject()
+    val (storagePermissionContract, storagePermissionName) = remember { filesystem.permissionContract() }
+    val storagePermissionLauncher = rememberLauncherForActivityResult(storagePermissionContract) { granted ->
+        if (granted) settingsViewModel.setAutoApkFolderDiscovery(true)
+    }
+    val chooseApkFolder = rememberFolderPickerWithPermission { uri ->
+        settingsViewModel.setAutoApkFolderPath(uri.toFilePath())
+    }
 
     // Storage counts
     val originalApkCount by settingsViewModel.originalApkCount.collectAsStateWithLifecycle()
@@ -185,6 +201,68 @@ fun FilesAndStorageSection(
                         )
                     }
                 )
+            }
+        }
+
+        // The discovery scan is intentionally Expert-only because it exposes source APK choices.
+        if (useExpertMode) {
+            SectionCard {
+                Column {
+                    RichSettingsItem(
+                        onClick = {
+                            if (autoApkFolderDiscovery) {
+                                settingsViewModel.setAutoApkFolderDiscovery(false)
+                            } else if (filesystem.hasStoragePermission()) {
+                                settingsViewModel.setAutoApkFolderDiscovery(true)
+                            } else {
+                                storagePermissionLauncher.launch(storagePermissionName)
+                            }
+                        },
+                        leadingContent = { MorpheIcon(icon = Icons.Outlined.FindInPage) },
+                        title = stringResource(R.string.settings_system_apk_folder_discovery),
+                        subtitle = stringResource(R.string.settings_system_apk_folder_discovery_description),
+                        trailingContent = {
+                            MorpheSwitch(
+                                checked = autoApkFolderDiscovery,
+                                onCheckedChange = null,
+                                modifier = Modifier.semantics {
+                                    stateDescription = if (autoApkFolderDiscovery) enabledState else disabledState
+                                }
+                            )
+                        }
+                    )
+
+                    if (autoApkFolderDiscovery) {
+                        MorpheSettingsDivider()
+                        RichSettingsItem(
+                            onClick = chooseApkFolder,
+                            leadingContent = { MorpheIcon(icon = Icons.Outlined.FolderOpen) },
+                            title = stringResource(R.string.settings_system_apk_folder),
+                            subtitle = autoApkFolderPath,
+                            trailingContent = { MorpheIcon(icon = Icons.Outlined.ChevronRight) }
+                        )
+                        MorpheSettingsDivider()
+                        RichSettingsItem(
+                            onClick = {
+                                settingsViewModel.setAutoApkFolderIncludeSubdirectories(
+                                    !autoApkFolderIncludeSubdirectories
+                                )
+                            },
+                            leadingContent = { MorpheIcon(icon = Icons.Outlined.AccountTree) },
+                            title = stringResource(R.string.settings_system_apk_folder_subdirectories),
+                            subtitle = stringResource(R.string.settings_system_apk_folder_subdirectories_description),
+                            trailingContent = {
+                                MorpheSwitch(
+                                    checked = autoApkFolderIncludeSubdirectories,
+                                    onCheckedChange = null,
+                                    modifier = Modifier.semantics {
+                                        stateDescription = if (autoApkFolderIncludeSubdirectories) enabledState else disabledState
+                                    }
+                                )
+                            }
+                        )
+                    }
+                }
             }
         }
     }

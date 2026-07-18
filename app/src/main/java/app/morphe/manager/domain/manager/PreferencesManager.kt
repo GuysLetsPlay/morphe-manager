@@ -7,6 +7,7 @@ import app.morphe.manager.BuildConfig
 import app.morphe.manager.domain.manager.base.BasePreferencesManager
 import app.morphe.manager.domain.manager.base.IntPreference
 import app.morphe.manager.domain.manager.base.LongPreference
+import android.os.Environment
 import app.morphe.manager.domain.repository.PatchBundleRepository.Companion.DEFAULT_SOURCE_UID
 import app.morphe.manager.patcher.runtime.PROCESS_RUNTIME_MEMORY_MAX_LIMIT_INITIALIZATION
 import app.morphe.manager.patcher.runtime.PROCESS_RUNTIME_MEMORY_NOT_SET
@@ -116,6 +117,17 @@ class PreferencesManager(
     /** Tracks whether the user has explicitly toggled the custom file picker preference. */
     val customFilePickerUserConfigured = booleanPreference("custom_file_picker_user_configured", false)
 
+    // Expert mode: look for plain source APKs before asking the user to browse for one.
+    val autoApkFolderDiscovery = booleanPreference("auto_apk_folder_discovery", false)
+    val autoApkFolderPath = stringPreference(
+        "auto_apk_folder_path",
+        Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).absolutePath
+    )
+    val autoApkFolderIncludeSubdirectories = booleanPreference(
+        "auto_apk_folder_include_subdirectories",
+        false
+    )
+
     // Mini-game high scores
     val miniGame2048HighScore  = intPreference("mini_game_2048_high_score", 0)
     val miniGameFlappyHighScore = intPreference("mini_game_flappy_high_score", 0)
@@ -209,6 +221,9 @@ class PreferencesManager(
         val filePickerShowHiddenFiles: Boolean? = null,
         val useCustomFilePicker: Boolean? = null,
         val customFilePickerUserConfigured: Boolean? = null,
+        val autoApkFolderDiscovery: Boolean? = null,
+        val autoApkFolderPath: String? = null,
+        val autoApkFolderIncludeSubdirectories: Boolean? = null,
         val sourceBundleSortMode: String? = null
     )
 
@@ -248,6 +263,9 @@ class PreferencesManager(
         filePickerShowHiddenFiles = filePickerShowHiddenFiles.get(),
         useCustomFilePicker = useCustomFilePicker.get(),
         customFilePickerUserConfigured = customFilePickerUserConfigured.get(),
+        autoApkFolderDiscovery = autoApkFolderDiscovery.get(),
+        autoApkFolderPath = autoApkFolderPath.get(),
+        autoApkFolderIncludeSubdirectories = autoApkFolderIncludeSubdirectories.get(),
         sourceBundleSortMode = sourceBundleSortMode.get()
     )
 
@@ -287,6 +305,9 @@ class PreferencesManager(
         snapshot.filePickerShowHiddenFiles?.let { filePickerShowHiddenFiles.value = it }
         snapshot.useCustomFilePicker?.let { useCustomFilePicker.value = it }
         snapshot.customFilePickerUserConfigured?.let { customFilePickerUserConfigured.value = it }
+        snapshot.autoApkFolderDiscovery?.let { autoApkFolderDiscovery.value = it }
+        snapshot.autoApkFolderPath?.let { autoApkFolderPath.value = it }
+        snapshot.autoApkFolderIncludeSubdirectories?.let { autoApkFolderIncludeSubdirectories.value = it }
         snapshot.sourceBundleSortMode?.let { sourceBundleSortMode.value = it }
     }
 
