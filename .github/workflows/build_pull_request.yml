@@ -33,6 +33,7 @@ jobs:
           git clone --depth 1 --branch v1.3.0 https://github.com/MorpheApp/morphe-library.git ../morphe-library
           chmod +x ../morphe-library/gradlew
           sed -i 's/gradle-8.9-bin.zip/gradle-9.4.1-bin.zip/' ../morphe-library/gradle/wrapper/gradle-wrapper.properties
+          sed -i 's/^distributionSha256Sum=.*/distributionSha256Sum=2ab2958f2a1e51120c326cad6f385153bb11ee93b3c216c5fccebfdfbb7ec6cb/' ../morphe-library/gradle/wrapper/gradle-wrapper.properties
           ../morphe-library/gradlew publishToMavenLocal --no-daemon --stacktrace
 
       # This workflow intentionally creates a debug APK for every pull request.
